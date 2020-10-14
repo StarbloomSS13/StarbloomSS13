@@ -19,11 +19,17 @@
 #define SOUND_DEFAULT_FALLOFF_DISTANCE 1 //For a normal sound this would be 1 tile of no falloff
 ///The default exponent of sound falloff
 #define SOUND_FALLOFF_EXPONENT 6
+#define CHANNEL_JUSTICAR_ARK 1020
+#define CHANNEL_HEARTBEAT 1019 //sound channel for heartbeats
+#define CHANNEL_AMBIENT_EFFECTS 1018
+#define CHANNEL_AMBIENT_MUSIC 1017
+#define CHANNEL_AMBIENT_BUZZ 1016
+#define CHANNEL_REACTOR_ALERT 1015 //austation -- reactor sounds
 
 //THIS SHOULD ALWAYS BE THE LOWEST ONE!
 //KEEP IT UPDATED
 
-#define CHANNEL_HIGHEST_AVAILABLE 1015
+#define CHANNEL_HIGHEST_AVAILABLE 1014 //austation -- reactor sounds
 
 #define MAX_INSTRUMENT_CHANNELS (128 * 6)
 
