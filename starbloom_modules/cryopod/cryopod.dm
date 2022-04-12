@@ -47,13 +47,6 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	GLOB.cryopod_computers -= src
 	..()
 
-/obj/machinery/computer/cryopod/update_icon_state()
-	if(machine_stat & (NOPOWER|BROKEN))
-		icon_state = "cellconsole"
-		return ..()
-	icon_state = "cellconsole_1"
-	return ..()
-
 /obj/machinery/computer/cryopod/ui_interact(mob/user, datum/tgui/ui)
 	if(machine_stat & (NOPOWER|BROKEN))
 		return
@@ -133,12 +126,15 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 // Cryopods themselves.
 /obj/machinery/cryopod
 	name = "cryogenic freezer"
-	desc = "Suited for Cyborgs and Humanoids, the pod is a safe place for personnel affected by the Space Sleep Disorder to get some rest."
+	desc = "Keeps crew frozen in cryostasis until they are needed in order to cut down on supply usage."
 	icon = 'starbloom_modules/icons/obj/machines/cryopod.dmi'
 	icon_state = "cryopod-open"
 	density = TRUE
 	anchored = TRUE
 	state_open = TRUE
+
+	var/open_state = "cryopod-open"
+	var/close_state = "cryopod"
 
 	var/on_store_message = "has entered long-term storage."
 	var/on_store_name = "Cryogenic Oversight"
@@ -191,21 +187,31 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	SSjob.latejoin_trackers -= src
 	. = ..()
 
-/obj/machinery/cryopod/close_machine(atom/movable/target)
+/obj/machinery/cryopod/close_machine(atom/movable/target, exiting = FALSE)
 	if(!control_computer)
 		find_control_computer(TRUE)
 	if((isnull(target) || isliving(target)) && state_open && !panel_open)
 		..(target)
+		if(exiting && istype(target, /mob/living/carbon))
+			var/mob/living/carbon/podded = target
+			apply_effects_to_mob(podded)
+			icon_state = close_state
+			playsound(src, 'sound/machines/hiss.ogg', 30, 1)
+			return
 		var/mob/living/mob_occupant = occupant
 		if(mob_occupant && mob_occupant.stat != DEAD)
 			to_chat(occupant, "<span class='notice'><b>You feel cool air surround you. You go numb as your senses turn inward.</b></span>")
 
 		COOLDOWN_START(src, despawn_world_time, time_till_despawn)
-	icon_state = "cryopod"
+	icon_state = close_state
+
+/obj/machinery/cryopod/proc/apply_effects_to_mob(mob/living/carbon/sleepyhead)
+	sleepyhead.SetSleeping(50)
+	to_chat(sleepyhead, "<span class='boldnotice'>You begin to wake from cryosleep...</span>")
 
 /obj/machinery/cryopod/open_machine()
 	..()
-	icon_state = "cryopod-open"
+	icon_state = open_state
 	density = TRUE
 	name = initial(name)
 
@@ -289,7 +295,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 
 	if(mob_occupant.mind && mob_occupant.mind.assigned_role)
 		// Handle job slot/tater cleanup.
-		var/job = mob_occupant.mind.assigned_role
+		var/job = mob_occupant.mind.assigned_role.title
 		crew_member["job"] = job
 		SSjob.FreeRole(job)
 		if(LAZYLEN(mob_occupant.mind.objectives))
@@ -406,5 +412,15 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 // Attacks/effects.
 /obj/machinery/cryopod/blob_act()
 	return // Sorta gamey, but we don't really want these to be destroyed.
+
+/obj/machinery/cryopod/poor
+	name = "low quality cryogenic freezer"
+	desc = "Keeps crew frozen in cryostasis until they are needed in order to cut down on supply usage. This one seems cheaply made."
+
+/obj/machinery/cryopod/poor/apply_effects_to_mob(mob/living/carbon/sleepyhead)
+	sleepyhead.SetSleeping(50)
+	sleepyhead.set_disgust(60)
+	sleepyhead.set_nutrition(160)
+	to_chat(sleepyhead, "<span class='bolddanger'>A very bad headache wakes you up from cryosleep...</span>")
 
 #undef AHELP_FIRST_MESSAGE
