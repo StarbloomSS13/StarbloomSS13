@@ -86,6 +86,10 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 		message = CompileText(arrival, user, rank)
 	else if(message_type == "NEWHEAD" && newheadToggle)
 		message = CompileText(newhead, user, rank)
+	//STARBUG EDDIT
+	else if(message_type == "CRYOSTORAGE")
+		message = "[user][rank ? ", [rank]" : ""] has been moved to cryo storage."
+	//STARBUG END
 	else if(message_type == "ARRIVALS_BROKEN")
 		message = "The arrivals shuttle has been damaged. Docking for repairs..."
 
