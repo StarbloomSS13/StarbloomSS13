@@ -949,8 +949,7 @@
 		"quadultra_micro_laser",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
-	discount_experiments = list(/datum/experiment/scanning/points/machinery_pinpoint_scan/tier3_microlaser = 4000)
-	required_experiments = list(/datum/experiment/ordnance/gaseous/noblium)
+	discount_experiments = list(/datum/experiment/scanning/points/machinery_pinpoint_scan/tier3_microlaser = 2000, /datum/experiment/ordnance/gaseous/noblium = 3000)
 
 /////////////////////////Clown tech/////////////////////////
 /datum/techweb_node/clown
@@ -1185,7 +1184,6 @@
 		"cybernetic_stomach_tier3",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1500)
-	required_experiments = list(/datum/experiment/ordnance/gaseous/bz)
 
 /datum/techweb_node/cyber_implants
 	id = "cyber_implants"
@@ -1215,7 +1213,7 @@
 		"ci-toolset",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-	required_experiments = list(/datum/experiment/ordnance/gaseous/nitrium)
+	discount_experiments = list(/datum/experiment/ordnance/gaseous/nitrium = 2500)
 
 /datum/techweb_node/combat_cyber_implants
 	id = "combat_cyber_implants"
@@ -1378,7 +1376,8 @@
 		"pin_loyalty",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
-	required_experiments = list(/datum/experiment/ordnance/explosive/highyieldbomb)
+//	required_experiments = list(/datum/experiment/ordnance/explosive/highyieldbomb)
+//Extra testing will have to be done on balancing for ordnance before weapons can be locked behind it.
 
 /datum/techweb_node/electric_weapons
 	id = "electronic_weapons"
