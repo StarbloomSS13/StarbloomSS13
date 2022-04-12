@@ -23232,20 +23232,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible,
 /turf/open/floor/iron/dark,
 /area/engineering/supermatter/room)
-"deQ" = (
-/obj/structure/sink{
-	pixel_y = 24
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/red{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/showroomfloor,
-/area/commons/toilet/restrooms)
 "deT" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/loading_area{
@@ -26741,10 +26727,6 @@
 /area/science/robotics/mechbay)
 "esi" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "Shower_2Privacy";
-	name = "Shower 2 Privacy Shutter"
-	},
 /turf/open/floor/plating,
 /area/commons/toilet/restrooms)
 "ess" = (
@@ -29940,14 +29922,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
-"fvV" = (
-/obj/machinery/door/airlock/medical{
-	id_tag = "Shower_1";
-	name = "Shower 1"
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
-/area/commons/toilet/restrooms)
 "fwh" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
@@ -30713,31 +30687,6 @@
 	},
 /turf/open/floor/glass/reinforced,
 /area/service/chapel/monastery)
-"fIY" = (
-/obj/effect/turf_decal/box,
-/obj/machinery/shower{
-	dir = 8
-	},
-/obj/machinery/light/small/directional/west,
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
-/obj/item/bikehorn/rubberducky,
-/obj/machinery/newscaster/directional/west,
-/obj/effect/landmark/start/assistant,
-/obj/effect/landmark/start/hangover,
-/obj/machinery/button/door/directional/east{
-	id = "Shower_1";
-	name = "Shower 1 Privacy Lock";
-	normaldoorcontrol = 1;
-	pixel_y = 8;
-	specialfunctions = 4
-	},
-/obj/machinery/button/door/directional/east{
-	id = "Shower_1Privacy";
-	name = "Shower 1 Privacy Toggle";
-	pixel_y = -8
-	},
-/turf/open/floor/iron/showroomfloor,
-/area/commons/toilet/restrooms)
 "fJz" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -53149,14 +53098,6 @@
 /obj/effect/landmark/start/assistant,
 /turf/open/floor/iron,
 /area/commons/fitness/recreation)
-"nez" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "Shower_1Privacy";
-	name = "Shower 1 Privacy Shutter"
-	},
-/turf/open/floor/plating,
-/area/commons/toilet/restrooms)
 "neK" = (
 /obj/structure/table/wood,
 /obj/machinery/firealarm/directional/north,
@@ -69877,13 +69818,9 @@
 /turf/open/floor/iron/dark,
 /area/security/prison)
 "syD" = (
-/obj/machinery/door/airlock/medical{
-	id_tag = "Shower_2";
-	name = "Shower 2"
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
-/area/commons/toilet/restrooms)
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/dark/textured_half,
+/area/commons/dorms)
 "syI" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/machinery/chem_dispenser/drinks{
@@ -81814,29 +81751,8 @@
 /turf/closed/wall,
 /area/service/bar)
 "wAW" = (
-/obj/effect/turf_decal/box,
-/obj/machinery/shower{
-	dir = 4
-	},
-/obj/machinery/light/small/directional/east,
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
-/obj/item/soap/nanotrasen,
-/obj/machinery/newscaster/directional/west,
-/obj/effect/landmark/xeno_spawn,
-/obj/effect/landmark/start/hangover,
-/obj/machinery/button/door/directional/east{
-	id = "Shower_2";
-	name = "Shower 2 Privacy Lock";
-	normaldoorcontrol = 1;
-	pixel_y = 8;
-	specialfunctions = 4
-	},
-/obj/machinery/button/door/directional/east{
-	id = "Shower_2Privacy";
-	name = "Shower 2 Privacy Toggle";
-	pixel_y = -8
-	},
-/turf/open/floor/iron/showroomfloor,
+/obj/machinery/cryopod,
+/turf/open/floor/iron/dark/textured_half,
 /area/commons/toilet/restrooms)
 "wBn" = (
 /obj/machinery/vending/engivend,
@@ -106313,10 +106229,10 @@ ecF
 dyu
 bKl
 add
-lSH
-fuK
-fuK
-deQ
+esi
+wAW
+syD
+kvx
 fJK
 uMr
 fuK
@@ -106570,9 +106486,9 @@ aUJ
 afe
 acZ
 adf
-nez
-fIY
-fvV
+esi
+wAW
+syD
 jQo
 osw
 jXa

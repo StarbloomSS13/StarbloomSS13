@@ -12891,6 +12891,11 @@
 "doV" = (
 /turf/open/floor/iron/goonplaque,
 /area/hallway/secondary/entry)
+"dpl" = (
+/obj/item/kirbyplants/random,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/turf/open/floor/iron,
+/area/commons/dorms)
 "dpw" = (
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 5
@@ -18270,8 +18275,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
-	name = "tunnel access blast door";
-	id = "right_tram_lower"
+	id = "right_tram_lower";
+	name = "tunnel access blast door"
 	},
 /obj/machinery/door/airlock/hatch,
 /turf/open/floor/plating,
@@ -19493,6 +19498,10 @@
 "fDM" = (
 /turf/open/floor/iron/stairs/medium,
 /area/cargo/miningdock)
+"fDN" = (
+/obj/machinery/vending/cola/blue,
+/turf/open/floor/iron,
+/area/commons/dorms)
 "fDP" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -19947,6 +19956,12 @@
 	},
 /turf/open/floor/iron,
 /area/commons/fitness/recreation)
+"fLw" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/commons/dorms)
 "fLF" = (
 /obj/effect/landmark/start/cook,
 /turf/open/floor/iron/white,
@@ -24507,6 +24522,10 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/science/robotics/lab)
+"hsH" = (
+/obj/machinery/vending/cigarette,
+/turf/open/floor/iron,
+/area/commons/dorms)
 "hsL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/delivery,
@@ -26296,6 +26315,12 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/maintenance/tram/left)
+"icC" = (
+/obj/machinery/door/airlock,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron,
+/area/commons/dorms)
 "icP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/food_packaging,
@@ -30407,8 +30432,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
-	name = "tunnel access blast door";
-	id = "right_tram_lower"
+	id = "right_tram_lower";
+	name = "tunnel access blast door"
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -35168,8 +35193,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
-	name = "tunnel access blast door";
-	id = "right_tram_lower"
+	id = "right_tram_lower";
+	name = "tunnel access blast door"
 	},
 /obj/machinery/door/airlock/hatch,
 /turf/open/floor/plating,
@@ -44912,10 +44937,10 @@
 	network = list("ss13","minisat")
 	},
 /obj/machinery/button/door/directional/south{
-	pixel_x = 8;
-	req_access_txt = "17;65";
 	id = "teledoor";
-	name = "MiniSat Shutter Control"
+	name = "MiniSat Shutter Control";
+	pixel_x = 8;
+	req_access_txt = "17;65"
 	},
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
@@ -46571,6 +46596,10 @@
 	},
 /turf/open/floor/iron,
 /area/service/hydroponics/garden)
+"puo" = (
+/obj/machinery/vending/snack,
+/turf/open/floor/iron,
+/area/commons/dorms)
 "puq" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/effect/turf_decal/siding/wideplating{
@@ -48060,8 +48089,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
-	name = "tunnel access blast door";
-	id = "right_tram_lower"
+	id = "right_tram_lower";
+	name = "tunnel access blast door"
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -60151,6 +60180,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/closed/wall/r_wall,
 /area/science/xenobiology)
+"ura" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron,
+/area/commons/dorms)
 "urj" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -62018,6 +62051,15 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/service/lawoffice)
+"vep" = (
+/obj/effect/turf_decal/trimline/neutral/filled/line{
+	dir = 4
+	},
+/obj/machinery/light/directional/east,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron,
+/area/commons/dorms)
 "ves" = (
 /obj/machinery/suit_storage_unit/hos,
 /obj/machinery/keycard_auth/directional/east,
@@ -62200,6 +62242,12 @@
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor,
 /area/maintenance/starboard/lesser)
+"vhW" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron/dark/textured_half,
+/area/commons/dorms)
 "via" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -68736,6 +68784,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/dark/visible,
 /turf/open/floor/iron,
 /area/engineering/atmos)
+"xCy" = (
+/obj/machinery/cryopod{
+	dir = 8
+	},
+/turf/open/floor/iron/dark/textured_half,
+/area/commons/dorms)
 "xCB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/cigbutt,
@@ -92743,8 +92797,8 @@ aNY
 aOH
 aEc
 plS
-awm
-aXA
+ddc
+vep
 sqO
 aUL
 aXn
@@ -93000,7 +93054,7 @@ qrV
 asY
 aEc
 akE
-akE
+icC
 akE
 aVu
 awm
@@ -93256,8 +93310,8 @@ gwU
 beZ
 aEc
 aEc
-dhe
-dhe
+fDN
+ddc
 akE
 akE
 akE
@@ -93513,8 +93567,8 @@ gwU
 rbJ
 tTA
 aEc
-dhe
-dhe
+hsH
+ddc
 akE
 azz
 aui
@@ -93770,8 +93824,8 @@ gwU
 uHL
 aEc
 aEc
-dhe
-dhe
+puo
+ddc
 akE
 adJ
 uOs
@@ -94026,9 +94080,9 @@ aMK
 gwU
 yhH
 aEc
-dhe
-dhe
-dhe
+dpl
+ura
+ddc
 akE
 akE
 akE
@@ -94283,11 +94337,11 @@ aMK
 gwU
 tMs
 aEc
-dhe
-dhe
-dhe
-dhe
-dhe
+aSq
+aSq
+fLw
+aSq
+akE
 dhe
 dhe
 dhe
@@ -94540,11 +94594,11 @@ aMK
 gwU
 tMs
 aEc
-dhe
-dhe
-dhe
-dhe
-dhe
+vhW
+vhW
+vhW
+vhW
+akE
 dhe
 dhe
 dhe
@@ -94797,11 +94851,11 @@ aMK
 gwU
 tMs
 aEc
-dhe
-dhe
-dhe
-dhe
-dhe
+xCy
+xCy
+xCy
+xCy
+akE
 dhe
 dhe
 dhe
@@ -95054,11 +95108,11 @@ aMK
 gwU
 efe
 aEc
-dhe
-dhe
-dhe
-dhe
-dhe
+akE
+akE
+akE
+akE
+akE
 dhe
 dhe
 dhe

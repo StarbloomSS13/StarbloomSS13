@@ -5033,6 +5033,12 @@
 	},
 /turf/open/floor/iron/freezer,
 /area/commons/toilet)
+"bOD" = (
+/obj/machinery/cryopod{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/textured_half,
+/area/commons/dorms)
 "bOJ" = (
 /obj/item/target,
 /obj/structure/window/reinforced{
@@ -10623,6 +10629,9 @@
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
+"efP" = (
+/turf/open/floor/iron/dark/textured_half,
+/area/commons/dorms)
 "efZ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -46787,8 +46796,10 @@
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "vXm" = (
-/obj/effect/spawner/structure/window,
-/turf/open/floor/plating,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/textured_half,
 /area/commons/dorms)
 "vXv" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -81368,9 +81379,9 @@ hTM
 puW
 rLo
 hTM
-jnk
-jnk
-jnk
+bOD
+bOD
+bOD
 aJn
 aJq
 ucu
@@ -81625,9 +81636,9 @@ hTM
 pLQ
 vjL
 hTM
-jnk
-jnk
-jnk
+efP
+efP
+efP
 aJn
 aLY
 hrR
@@ -81882,8 +81893,8 @@ hTM
 kxw
 sko
 hTM
-jnk
-aJw
+efP
+hTM
 aJw
 aJw
 beX
