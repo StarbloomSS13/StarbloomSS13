@@ -3448,9 +3448,8 @@
 /turf/open/floor/iron,
 /area/service/abandoned_gambling_den/gaming)
 "aSr" = (
-/obj/effect/turf_decal/bot_white,
-/obj/machinery/vending/cigarette,
-/turf/open/floor/iron/white,
+/obj/machinery/cryopod,
+/turf/open/floor/iron/dark/textured_half,
 /area/commons/fitness/recreation)
 "aSD" = (
 /turf/open/floor/iron/white,
@@ -5519,11 +5518,10 @@
 /turf/open/floor/iron,
 /area/cargo/storage)
 "btX" = (
-/obj/machinery/door/window{
-	dir = 8;
-	name = "Smoking Room"
+/obj/effect/turf_decal/stripes{
+	dir = 1
 	},
-/turf/open/floor/iron/white,
+/turf/open/floor/iron/dark/textured_half,
 /area/commons/fitness/recreation)
 "bug" = (
 /obj/effect/turf_decal/tile/yellow{
@@ -39963,13 +39961,8 @@
 /turf/open/floor/iron,
 /area/cargo/lobby)
 "joT" = (
-/obj/structure/table/wood,
-/obj/item/trash/candle,
-/obj/item/cigbutt{
-	pixel_y = 7
-	},
-/obj/item/razor,
-/turf/open/floor/iron/white,
+/obj/effect/spawner/random/vending/colavend,
+/turf/open/floor/iron/dark/textured_half,
 /area/commons/fitness/recreation)
 "jpd" = (
 /obj/machinery/modular_computer/console/preset/id{
@@ -59963,14 +59956,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/sign/warning/yessmoking/circle{
-	pixel_y = -32
-	},
 /obj/machinery/light/small/directional/south,
-/obj/item/kirbyplants/dead{
-	name = "Lungie"
-	},
-/turf/open/floor/iron/white,
+/obj/item/kirbyplants/photosynthetic,
+/turf/open/floor/iron/dark/textured_half,
 /area/commons/fitness/recreation)
 "pmU" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible{
@@ -62836,10 +62824,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/science/xenobiology)
-"qeN" = (
-/obj/structure/chair/stool/directional/west,
-/turf/open/floor/iron/white,
-/area/commons/fitness/recreation)
 "qeR" = (
 /obj/machinery/camera/directional/east{
 	c_tag = "Engineering - Supermatter";
@@ -67036,11 +67020,6 @@
 	dir = 1
 	},
 /area/service/bar)
-"rsp" = (
-/obj/effect/turf_decal/bot_white/left,
-/obj/effect/spawner/random/vending/colavend,
-/turf/open/floor/iron/white,
-/area/commons/fitness/recreation)
 "rsA" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/hidden,
 /obj/machinery/computer/security/telescreen{
@@ -69060,10 +69039,6 @@
 	},
 /turf/open/floor/iron,
 /area/maintenance/fore)
-"rVJ" = (
-/obj/effect/landmark/start/hangover,
-/turf/open/floor/iron/white,
-/area/commons/fitness/recreation)
 "rVM" = (
 /obj/structure/table/reinforced,
 /obj/item/stack/sheet/iron{
@@ -84045,12 +84020,11 @@
 /turf/open/floor/iron,
 /area/cargo/storage)
 "wzk" = (
+/obj/machinery/cryopod,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/effect/spawner/random/vending/snackvend,
-/obj/effect/turf_decal/bot_white/right,
-/turf/open/floor/iron/white,
+/turf/open/floor/iron/dark/textured_half,
 /area/commons/fitness/recreation)
 "wzp" = (
 /obj/machinery/hydroponics/constructable,
@@ -145489,7 +145463,7 @@ qYo
 aaa
 wZU
 aSr
-rVJ
+btX
 joT
 wZU
 qYo
@@ -145745,9 +145719,9 @@ sip
 sip
 aad
 wZU
-rsp
-vnv
-qeN
+aSr
+btX
+joT
 wZU
 qYo
 aaa
