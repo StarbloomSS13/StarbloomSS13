@@ -125,6 +125,8 @@
 	else
 		lights_overlay = ""
 
+	update_vis_overlays(lights_overlay)
+
 	if(panel_open)
 		. += get_airlock_overlay("panel_[frame_state][security_level ? "_protected" : null]", overlays_file, em_block = TRUE)
 	if(frame_state == AIRLOCK_FRAME_CLOSED && welded)
