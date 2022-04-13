@@ -148,6 +148,19 @@
 
 /obj/machinery/door/airlock/Initialize(mapload)
 	. = ..()
+		//SKYRAT EDIT ADDITION BEGIN
+	//overlay2
+	vis_overlay1 = new()
+	vis_overlay1.icon = overlays_file
+	//overlay1
+	vis_overlay2 = new()
+	vis_overlay2.icon = overlays_file
+	vis_overlay2.layer = layer
+	vis_overlay2.plane = 1
+	vis_contents += vis_overlay1
+	vis_contents += vis_overlay2
+	update_overlays()
+	//SKYRAT EDIT END
 	wires = set_wires()
 	if(frequency)
 		set_frequency(frequency)
@@ -453,12 +466,12 @@
 	airlock_state = state
 
 	. = ..()
-
+	/* SKYRAT EDIT REMOVAL
 	if(hasPower() && unres_sides)
 		set_light(2, 1)
 	else
 		set_light(0)
-
+	*/
 /obj/machinery/door/airlock/update_icon_state()
 	. = ..()
 	switch(airlock_state)
@@ -466,10 +479,9 @@
 			icon_state = ""
 		if(AIRLOCK_DENY, AIRLOCK_OPENING, AIRLOCK_CLOSING, AIRLOCK_EMAG)
 			icon_state = "nonexistenticonstate" //MADNESS
-
+/* SKYRAT EDIT MOVED TO AIRLOCK.DM IN AESTHETICS MODULE
 /obj/machinery/door/airlock/update_overlays()
 	. = ..()
-
 	var/frame_state
 	var/light_state
 	switch(airlock_state)
@@ -492,24 +504,19 @@
 		if(AIRLOCK_OPENING)
 			frame_state = AIRLOCK_FRAME_OPENING
 			light_state = AIRLOCK_LIGHT_OPENING
-
 	. += get_airlock_overlay(frame_state, icon, em_block = TRUE)
 	if(airlock_material)
 		. += get_airlock_overlay("[airlock_material]_[frame_state]", overlays_file, em_block = TRUE)
 	else
 		. += get_airlock_overlay("fill_[frame_state]", icon, em_block = TRUE)
-
 	if(lights && hasPower())
 		. += get_airlock_overlay("lights_[light_state]", overlays_file, em_block = FALSE)
-
 	if(panel_open)
 		. += get_airlock_overlay("panel_[frame_state][security_level ? "_protected" : null]", overlays_file, em_block = TRUE)
 	if(frame_state == AIRLOCK_FRAME_CLOSED && welded)
 		. += get_airlock_overlay("welded", overlays_file, em_block = TRUE)
-
 	if(airlock_state == AIRLOCK_EMAG)
 		. += get_airlock_overlay("sparks", overlays_file, em_block = FALSE)
-
 	if(hasPower())
 		if(frame_state == AIRLOCK_FRAME_CLOSED)
 			if(atom_integrity < integrity_failure * max_integrity)
@@ -519,13 +526,10 @@
 		else if(frame_state == AIRLOCK_FRAME_OPEN)
 			if(atom_integrity < (0.75 * max_integrity))
 				. += get_airlock_overlay("sparks_open", overlays_file, em_block = FALSE)
-
 	if(note)
 		. += get_airlock_overlay(get_note_state(frame_state), note_overlay_file, em_block = TRUE)
-
 	if(frame_state == AIRLOCK_FRAME_CLOSED && seal)
 		. += get_airlock_overlay("sealed", overlays_file, em_block = TRUE)
-
 	if(hasPower() && unres_sides)
 		if(unres_sides & NORTH)
 			var/image/I = image(icon='icons/obj/doors/airlocks/station/overlays.dmi', icon_state="unres_n")
@@ -543,6 +547,7 @@
 			var/image/I = image(icon='icons/obj/doors/airlocks/station/overlays.dmi', icon_state="unres_w")
 			I.pixel_x = -32
 			. += I
+*/
 
 /obj/machinery/door/airlock/do_animate(animation)
 	switch(animation)
@@ -1149,7 +1154,8 @@
 		use_power(50)
 		playsound(src, doorOpen, 30, TRUE)
 	else
-		playsound(src, 'sound/machines/airlockforced.ogg', 30, TRUE)
+		//playsound(src, 'sound/machines/airlockforced.ogg', 30, TRUE) - ORIGINAL
+		playsound(src, forcedOpen, 30, TRUE) //SKYRAT EDIT CHANGE - AESTHETICS
 
 	if(autoclose)
 		autoclose_in(normalspeed ? 8 SECONDS : 1.5 SECONDS)
@@ -1217,7 +1223,9 @@
 		playsound(src, doorClose, 30, TRUE)
 
 	else
-		playsound(src, 'sound/machines/airlockforced.ogg', 30, TRUE)
+		//playsound(src, 'sound/machines/airlockforced.ogg', 30, TRUE) //ORIGINAL
+		playsound(src, forcedClosed, 30, TRUE) //SKYRAT EDIT ADDITION - AESTHETICS
+
 
 	var/obj/structure/window/killthis = (locate(/obj/structure/window) in get_turf(src))
 	if(killthis)
