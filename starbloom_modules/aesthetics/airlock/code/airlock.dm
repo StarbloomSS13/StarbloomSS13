@@ -17,7 +17,7 @@
 
 /obj/machinery/door/airlock
 	var/obj/effect/overlay/vis_airlock/vis_overlay1
-	var/obj/effect/overlay/vis_airlock/vis_overlay2starbloom_modules
+	var/obj/effect/overlay/vis_airlock/vis_overlay2
 	doorOpen = 'starbloom_modules/aesthetics/airlock/sound/open.ogg'
 	doorClose = 'starbloom_modules/aesthetics/airlock/sound/close.ogg'
 	doorDeni = 'starbloom_modules/aesthetics/airlock/sound/access_denied.ogg'
@@ -52,7 +52,9 @@
 /obj/machinery/door/airlock/Destroy()
 	. = ..()
 	vis_contents -= vis_overlay1
+	vis_contents -= vis_overlay2
 	QDEL_NULL(vis_overlay1)
+	QDEL_NULL(vis_overlay2)
 
 /obj/machinery/door/airlock/power_change()
 	..()
@@ -173,6 +175,7 @@
 	if(QDELETED(src))
 		return
 	vis_overlay1.icon_state = overlay_state
+	vis_overlay2.icon_state = overlay_state
 
 //STATION AIRLOCKS
 /obj/machinery/door/airlock
