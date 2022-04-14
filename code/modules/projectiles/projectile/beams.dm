@@ -86,8 +86,8 @@
 
 /obj/projectile/beam/disabler
 	name = "disabler beam"
-	icon_state = "omnilaser"
-	damage = 30
+	icon_state = "disabler"
+	damage = 20
 	damage_type = STAMINA
 	armor_flag = ENERGY
 	hitsound = 'sound/weapons/tap.ogg'
@@ -97,6 +97,7 @@
 	tracer_type = /obj/effect/projectile/tracer/disabler
 	muzzle_type = /obj/effect/projectile/muzzle/disabler
 	impact_type = /obj/effect/projectile/impact/disabler
+	speed = 0.8
 
 /obj/projectile/beam/pulse
 	name = "pulse"
