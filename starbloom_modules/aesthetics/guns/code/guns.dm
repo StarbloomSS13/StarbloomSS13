@@ -103,6 +103,9 @@
 /obj/item/gun/ballistic/automatic/pistol
 	icon = 'starbloom_modules/aesthetics/guns/icons/guns.dmi'
 
+/obj/item/gun/ballistic/automatic/pistol/deagle
+	icon = 'icons/obj/guns/ballistic.dmi'
+
 /obj/item/gun/energy/e_gun/nuclear
 	icon = 'starbloom_modules/aesthetics/guns/icons/nucgun.dmi'
 	ammo_x_offset = 2
