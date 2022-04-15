@@ -30,7 +30,10 @@
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
 		/datum/language/terrum,
-		/datum/language/nekomimetic
+		/datum/language/nekomimetic,
+		/datum/language/eurocom,
+		/datum/language/neareastern,
+		/datum/language/kixhosa,
 	))
 
 /obj/item/organ/tongue/Initialize(mapload)
