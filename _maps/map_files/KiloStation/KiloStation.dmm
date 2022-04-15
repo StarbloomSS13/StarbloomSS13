@@ -32438,6 +32438,11 @@
 	icon_state = "platingdmg1"
 	},
 /area/maintenance/starboard)
+"gsE" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/iron/dark/textured_half,
+/area/commons/toilet/restrooms)
 "gsY" = (
 /obj/machinery/door/airlock/engineering/glass/critical{
 	heat_proof = 1;
@@ -69819,8 +69824,12 @@
 /area/security/prison)
 "syD" = (
 /obj/effect/turf_decal/stripes/line,
+/obj/machinery/computer/cryopod{
+	dir = 4;
+	pixel_x = -24
+	},
 /turf/open/floor/iron/dark/textured_half,
-/area/commons/dorms)
+/area/commons/toilet/restrooms)
 "syI" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/machinery/chem_dispenser/drinks{
@@ -70823,9 +70832,6 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
-/obj/structure/sign/departments/restroom{
-	pixel_x = 32
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/iron/dark,
@@ -71145,6 +71151,10 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/iron/dark,
 /area/service/chapel/monastery)
+"sWj" = (
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/dark/textured_half,
+/area/commons/toilet/restrooms)
 "sWr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -106231,7 +106241,7 @@ bKl
 add
 esi
 wAW
-syD
+sWj
 kvx
 fJK
 uMr
@@ -106488,7 +106498,7 @@ acZ
 adf
 esi
 wAW
-syD
+gsE
 jQo
 osw
 jXa
