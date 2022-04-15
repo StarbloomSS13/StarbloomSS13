@@ -39,13 +39,13 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	icon_state = "wallconsole_old"
 	icon_screen = "wallconsole_old_cryo"
 
-/obj/machinery/computer/cryopod/Initialize()
+/obj/machinery/computer/cryopod/Initialize(mapload)
 	. = ..()
 	GLOB.cryopod_computers += src
 
 /obj/machinery/computer/cryopod/Destroy()
 	GLOB.cryopod_computers -= src
-	..()
+	return ..()
 
 /obj/machinery/computer/cryopod/ui_interact(mob/user, datum/tgui/ui)
 	if(machine_stat & (NOPOWER|BROKEN))
@@ -147,7 +147,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	var/obj/machinery/computer/cryopod/control_computer
 	COOLDOWN_DECLARE(last_no_computer_message)
 
-/obj/machinery/cryopod/Initialize()
+/obj/machinery/cryopod/Initialize(mapload)
 	..()
 	return INITIALIZE_HINT_LATELOAD //Gotta populate the cryopod computer GLOB first
 
