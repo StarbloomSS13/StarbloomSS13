@@ -4,9 +4,7 @@
 	key = "a"
 	flags = TONGUELESS_SPEECH
 	syllables = list(
-"sanah", "'ala", "taqw", "ayyam", "haqqa", "sahr", "wahi", "qabla", "mahat", "min", "'ah", "tasi", "mar", "lah", "gurub", "qabi",
- "kuch", "pra", "diya", "bhara", "apti", "iske", "bhi", "vadam", "val", "thva", "vish", "akti", "akash", "ilye", "adi", "arya", "ni",
-  "rooz", "hafte", "saa'at", "mard", "dorost", "zesht", "sefr", "sin", "hasht", "mirizad", "gosht", "kaalai", "mulu", "kammi", "velai", "konda", "malai", "naadu", "velai", "keela", "chandi", "koopi"
+"sanah", "'ala", "taqw", "ayyam", "haqqa", "sahr", "wahi", "qabla", "mahat", "min", "'ah", "tasi", "mar", "lah", "gurub", "qabi", "kuch", "pra", "diya", "bhara", "apti", "iske", "bhi", "vadam", "val", "thva", "vish", "akti", "akash", "ilye", "adi", "arya", "ni", "rooz", "hafte", "saa'at", "mard", "dorost", "zesht", "sefr", "sin", "hasht", "mirizad", "gosht", "kaalai", "mulu", "kammi", "velai", "konda", "malai", "naadu", "velai", "keela", "chandi", "koopi"
 	)
 	icon_state = "neareastern"
 	default_priority = 90

@@ -18,6 +18,5 @@
 	http://www.chinahighlights.com/travelguide/learning-chinese/pinyin-syllables.htm
 */
 /datum/language/common/syllables = list(
-"ao", "bei", "cang", "dao", "er", "fei", "guang", "hong", "jie", "kuai", "lian", "miao", "nang", "ping", "quan", "rong", "sheng", "tiao", "wen", "xiang", "yuan", "zhuai",
- "jju", "yeol", "nyeo", "yuk", "seum", "geolli", "kkaji", "pal", "bun", "meo", "wol", "ato", "naka", "jikan", "ashi", "getsu", "toshi", "kuru", "mono", "suko", "shi", "tabe", "sono"
+"ao", "bei", "cang", "dao", "er", "fei", "guang", "hong", "jie", "kuai", "lian", "miao", "nang", "ping", "quan", "rong", "sheng", "tiao", "wen", "xiang", "yuan", "zhuai", "jju", "yeol", "nyeo", "yuk", "seum", "geolli", "kkaji", "pal", "bun", "meo", "wol", "ato", "naka", "jikan", "ashi", "getsu", "toshi", "kuru", "mono", "suko", "shi", "tabe", "sono"
 )
