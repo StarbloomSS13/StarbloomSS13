@@ -236,3 +236,14 @@
 		user.emote("scream")
 		user.drop_all_held_items()
 		user.Paralyze(80)
+
+/obj/item/gun/ballistic/revolver/revolution
+	name = ".38 Revolution"
+	desc = "An ancient-patterned handgun used all over Old Earth. Uses .38 Special rounds."
+	fire_sound = 'sound/weapons/gun/revolver/shot.ogg'
+	icon_state = "revolution"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
+	initial_caliber = CALIBER_38
+	initial_fire_sound = 'sound/weapons/gun/revolver/shot.ogg'
+	w_class = WEIGHT_CLASS_NORMAL
+	can_suppress = FALSE
