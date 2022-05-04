@@ -67,6 +67,8 @@
 	visual = TRUE
 	damage_multiplier = 2
 
+//SKYRAT EDIT REMOVAL BEGIN - CUSTOMIZATION
+/*
 /obj/item/organ/ears/cat/Insert(mob/living/carbon/human/ear_owner, special = 0, drop_if_replaced = TRUE)
 	..()
 	if(istype(ear_owner))
@@ -81,6 +83,8 @@
 		color = ear_owner.hair_color
 		ear_owner.dna.species.mutant_bodyparts -= "ears"
 		ear_owner.update_body()
+*/
+//SKYRAT EDIT REMOVAL END
 
 /obj/item/organ/ears/penguin
 	name = "penguin ears"

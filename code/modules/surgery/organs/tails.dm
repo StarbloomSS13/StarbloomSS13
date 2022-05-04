@@ -23,6 +23,8 @@
 	desc = "A severed cat tail. Who's wagging now?"
 	tail_type = "Cat"
 
+//SKYRAT EDIT REMOVAL BEGIN - CUSTOMIZATION
+/*
 /obj/item/organ/tail/cat/Insert(mob/living/carbon/human/tail_owner, special = FALSE, drop_if_replaced = TRUE)
 	..()
 	if(istype(tail_owner))
@@ -41,6 +43,8 @@
 		tail_owner.dna.species.mutant_bodyparts -= "tail_human"
 		color = tail_owner.hair_color
 		tail_owner.update_body()
+*/
+//SKYRAT EDIT REMOVAL END
 
 /obj/item/organ/tail/lizard
 	name = "lizard tail"
@@ -50,8 +54,10 @@
 	/// The sprite accessory this tail gives to the human it's attached to. If null, it will inherit its value from the human's DNA once attached.
 	var/spines = "None"
 
+//SKYRAT EDIT REMOVAL BEGIN - CUSTOMIZATION
+/*
 /obj/item/organ/tail/lizard/Initialize(mapload)
-	. = ..()
+	..()
 	color = "#"+ random_color()
 
 /obj/item/organ/tail/lizard/Insert(mob/living/carbon/human/tail_owner, special = FALSE, drop_if_replaced = TRUE)
@@ -93,6 +99,8 @@
 
 	new_tail.tail_type = tail_type
 	new_tail.spines = spines
+*/
+//SKYRAT EDIT REMOVAL END
 
 /obj/item/organ/tail/lizard/fake
 	name = "fabricated lizard tail"
@@ -106,6 +114,8 @@
 	tail_type = "Monkey"
 	icon_state = "severedmonkeytail"
 
+//SKYRAT EDIT REMOVAL BEGIN - CUSTOMIZATION
+/*
 /obj/item/organ/tail/monkey/Insert(mob/living/carbon/human/tail_owner, special = FALSE, drop_if_replaced = TRUE)
 	..()
 	if(istype(tail_owner))
@@ -121,3 +131,5 @@
 	if(istype(tail_owner))
 		tail_owner.dna.species.mutant_bodyparts -= "tail_monkey"
 		tail_owner.update_body()
+*/
+//SKYRAT EDIT REMOVAL END

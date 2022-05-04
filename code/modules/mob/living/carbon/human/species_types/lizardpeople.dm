@@ -22,6 +22,7 @@
 	heatmod = 0.67
 	payday_modifier = 0.75
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
+	species_cookie = /obj/item/food/meat/slab
 	attack_verb = "slash"
 	attack_effect = ATTACK_EFFECT_CLAW
 	attack_sound = 'sound/weapons/slash.ogg'
@@ -67,7 +68,9 @@
 
 	return randname
 
-//I wag in death
+//SKYRAT EDIT REMOVAL BEGIN - CUSTOMIZATION (moved to modular)
+/*
+//I wag in death SKYRAT EDIT - customization
 /datum/species/lizard/spec_death(gibbed, mob/living/carbon/human/H)
 	if(H)
 		stop_wagging_tail(H)
@@ -120,12 +123,18 @@
 		// organ.Insert will qdel any existing organs in the same slot, so
 		// we don't need to manage that.
 		new_tail.Insert(C, TRUE, FALSE)
+*/
+//SKYRAT EDIT REMOVAL END
 
+//SKYRAT EDIT REMOVAL BEGIN
+/*
 /datum/species/lizard/randomize_main_appearance_element(mob/living/carbon/human/human_mob)
 	var/tail = pick(GLOB.tails_list_lizard)
 	human_mob.dna.features["tail_lizard"] = tail
 	mutant_bodyparts["tail_lizard"] = tail
 	human_mob.update_body()
+*/
+//SKYRAT EDIT REMOVAL END
 
 /datum/species/lizard/get_scream_sound(mob/living/carbon/human/lizard)
 	return pick(
@@ -209,8 +218,8 @@ Lizard subspecies: SILVER SCALED
 		TRAIT_VIRUSIMMUNE,
 		TRAIT_WINE_TASTER,
 	)
-	species_language_holder = /datum/language_holder/lizard/silver
-	mutanttongue = /obj/item/organ/tongue/lizard/silver
+	species_language_holder = /datum/language_holder/lizard //SKYRAT EDIT CHANGE
+	mutanttongue = /obj/item/organ/tongue/lizard //SKYRAT EDIT CHANGE
 	armor = 10 //very light silvery scales soften blows
 	changesource_flags = MIRROR_BADMIN | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN
 	examine_limb_id = SPECIES_LIZARD

@@ -1,3 +1,4 @@
+/* SKYRAT EDIT REMOVAL
 /proc/generate_lizard_side_shots(list/sprite_accessories, key, include_snout = TRUE)
 	var/list/values = list()
 
@@ -138,3 +139,4 @@
 
 /datum/preference/choiced/lizard_tail/apply_to_human(mob/living/carbon/human/target, value)
 	target.dna.features["tail_lizard"] = value
+*/

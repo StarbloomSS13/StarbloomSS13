@@ -331,6 +331,31 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	all_quirks = SSquirks.filter_invalid_quirks(SANITIZE_LIST(all_quirks))
 	validate_quirks()
 
+	READ_FILE(S["augments"] , augments)
+	READ_FILE(S["augment_limb_styles"] , augment_limb_styles)
+
+	augments = SANITIZE_LIST(augments)
+	//validating augments
+	for(var/aug_slot in augments)
+		var/datum/augment_item/aug = GLOB.augment_items[augments[aug_slot]]
+		if(!aug)
+			augments -= aug_slot
+	augment_limb_styles = SANITIZE_LIST(augment_limb_styles)
+	//validating limb styles
+	for(var/key in augment_limb_styles)
+		if(!GLOB.robotic_styles_list[augment_limb_styles[key]])
+			augment_limb_styles -= key
+
+	READ_FILE(S["languages"], languages)
+	languages = SANITIZE_LIST(languages)
+
+	READ_FILE(S["body_markings"], body_markings)
+	body_markings = SANITIZE_LIST(body_markings)
+	body_markings = update_markings(body_markings)
+
+	READ_FILE(S["mutant_bodyparts"], mutant_bodyparts)
+	mutant_bodyparts = SANITIZE_LIST(mutant_bodyparts)
+
 	return TRUE
 
 /datum/preferences/proc/save_character()
@@ -370,9 +395,52 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["job_preferences"] , job_preferences)
 
 	//Quirks
-	WRITE_FILE(S["all_quirks"] , all_quirks)
+	WRITE_FILE(S["all_quirks"], all_quirks)
+
+	WRITE_FILE(S["augments"], augments)
+	WRITE_FILE(S["augment_limb_styles"], augment_limb_styles)
+
+	WRITE_FILE(S["languages"], languages)
+
+	WRITE_FILE(S["body_markings"], body_markings)
+
+	WRITE_FILE(S["mutant_bodyparts"], mutant_bodyparts)
 
 	return TRUE
+
+/datum/preferences/proc/update_mutant_bodyparts(datum/preference/preference)
+	if (!preference.relevant_mutant_bodypart)
+		return
+	var/part = preference.relevant_mutant_bodypart
+	var/value = read_preference(preference.type)
+	if (isnull(value))
+		return
+	if (istype(preference, /datum/preference/toggle))
+		if (!value)
+			if (part in mutant_bodyparts)
+				mutant_bodyparts -= part
+		else
+			var/datum/preference/choiced/name = GLOB.preference_entries_by_key["feature_[part]"]
+			var/datum/preference/tri_color/color = GLOB.preference_entries_by_key["[part]_color"]
+			if (isnull(name) || isnull(color))
+				return
+			mutant_bodyparts[part] = list()
+			mutant_bodyparts[part][MUTANT_INDEX_NAME] = read_preference(name.type)
+			mutant_bodyparts[part][MUTANT_INDEX_COLOR_LIST] = read_preference(color.type)
+	if (istype(preference, /datum/preference/choiced))
+		if (part in mutant_bodyparts)
+			mutant_bodyparts[part][MUTANT_INDEX_NAME] = value
+	if (istype(preference, /datum/preference/tri_color))
+		if (part in mutant_bodyparts)
+			mutant_bodyparts[part][MUTANT_INDEX_COLOR_LIST] = value
+
+/datum/preferences/proc/update_markings(list/markings)
+	if (islist(markings))
+		for (var/marking in markings)
+			for (var/title in markings[marking])
+				if (!islist(markings[marking][title]))
+					markings[marking][title] = list(sanitize_hexcolor(markings[marking][title]), FALSE)
+	return markings
 
 /datum/preferences/proc/sanitize_be_special(list/input_be_special)
 	var/list/output = list()

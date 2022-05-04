@@ -56,6 +56,7 @@ GLOBAL_LIST_EMPTY(current_observers_list)
 GLOBAL_LIST_EMPTY(narcd_underages)
 
 GLOBAL_LIST_EMPTY(language_datum_instances)
+GLOBAL_LIST_EMPTY(language_path_by_name)
 GLOBAL_LIST_EMPTY(all_languages)
 
 GLOBAL_LIST_EMPTY(sentient_disease_instances)

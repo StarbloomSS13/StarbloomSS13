@@ -26,8 +26,12 @@
 
 	return values
 
-/datum/preference/choiced/species/apply_to_human(mob/living/carbon/human/target, value)
-	target.set_species(value, icon_update = FALSE, pref_load = TRUE)
+/datum/preference/choiced/species/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/prefs)
+	target.set_species(value, FALSE, TRUE, prefs?.features.Copy(), prefs?.mutant_bodyparts.Copy(), prefs?.body_markings.Copy()) // SKYRAT EDIT - Customization
+	if(prefs && length(prefs.augments))
+		for(var/key in prefs.augments)
+			var/datum/augment_item/aug = GLOB.augment_items[prefs.augments[key]]
+			aug.apply(target, prefs = prefs)
 
 /datum/preference/choiced/species/compile_constant_data()
 	var/list/data = list()
