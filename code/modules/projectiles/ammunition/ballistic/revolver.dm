@@ -56,3 +56,16 @@
 	name = ".38 Iceblox bullet casing"
 	desc = "A .38 Iceblox bullet casing."
 	projectile_type = /obj/projectile/bullet/c38/iceblox
+
+// .44 (Revolution)
+
+/obj/item/ammo_casing/a44
+	name = ".44 rubber bullet casing"
+	desc = "A .44 rubber bullet casing."
+	caliber = CALIBER_44
+	projectile_type = /obj/projectile/bullet/a44/rubber
+
+/obj/item/ammo_casing/a44/fmj
+	name = ".44 FMJ bullet casing"
+	desc = "A .44 bullet casing."
+	projectile_type = /obj/projectile/bullet/a44

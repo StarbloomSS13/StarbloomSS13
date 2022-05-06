@@ -1,10 +1,10 @@
 // .45 (M1911 & C20r)
 
 /obj/projectile/bullet/c45
-	name = ".45 bullet"
-	damage = 30
-	wound_bonus = -10
-	wound_falloff_tile = -10
+	name = ".45 rubber bullet"
+	damage = 10
+	stamina = 30
+	weak_against_armour = TRUE
 
 /obj/projectile/bullet/c45/ap
 	name = ".45 armor-piercing bullet"
@@ -14,6 +14,13 @@
 	name = ".45 incendiary bullet"
 	damage = 15
 	fire_stacks = 2
+
+/obj/projectile/bullet/c45/fmj
+	name = ".45 FMJ bullet"
+	damage = 30
+	wound_bonus = -10
+	wound_falloff_tile = -10
+
 
 // 4.6x30mm (Autorifles)
 

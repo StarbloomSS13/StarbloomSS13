@@ -24,10 +24,16 @@
 // 9mm (Makarov, Stechkin APS, PP-95)
 
 /obj/item/ammo_casing/c9mm
-	name = "9mm bullet casing"
-	desc = "A 9mm bullet casing."
+	name = "9mm rubber bullet casing"
+	desc = "A 9mm rubber bullet casing."
 	caliber = CALIBER_9MM
 	projectile_type = /obj/projectile/bullet/c9mm
+
+/obj/item/ammo_casing/c9mm/fmj
+	name = "9mm FMJ bullet casing"
+	desc = "A 9mm FMJ bullet casing."
+	caliber = CALIBER_9MM
+	projectile_type = /obj/projectile/bullet/c9mm/fmj
 
 /obj/item/ammo_casing/c9mm/ap
 	name = "9mm armor-piercing bullet casing"
@@ -43,7 +49,6 @@
 	name = "9mm incendiary bullet casing"
 	desc = "A 9mm incendiary bullet casing."
 	projectile_type = /obj/projectile/bullet/incendiary/c9mm
-
 
 // .50AE (Desert Eagle)
 

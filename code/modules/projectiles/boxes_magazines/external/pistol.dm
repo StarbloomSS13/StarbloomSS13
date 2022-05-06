@@ -8,9 +8,10 @@
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
 /obj/item/ammo_box/magazine/m45
-	name = "handgun magazine (.45)"
+	name = "handgun magazine (.45 Rubber)"
 	icon_state = "45-8"
 	base_icon_state = "45"
+	desc = "A gun magazine. Loaded with less-lethal rubber rounds."
 	ammo_type = /obj/item/ammo_casing/c45
 	caliber = CALIBER_45
 	max_ammo = 8
@@ -19,8 +20,22 @@
 	. = ..()
 	icon_state = "[base_icon_state]-[min(ammo_count(), 8)]"
 
+/obj/item/ammo_box/magazine/m45/fmj
+	name = "handgun magazine (.45 FMJ)"
+	icon_state = "45-8"
+	base_icon_state = "45"
+	desc = "A gun magazine loaded with standard lethal rounds."
+	ammo_type = /obj/item/ammo_casing/c45/fmj
+	caliber = CALIBER_45
+	max_ammo = 8
+
+/obj/item/ammo_box/magazine/m45/fmj/update_icon_state()
+	. = ..()
+	icon_state = "[base_icon_state]-[min(ammo_count(), 8)]"
+
 /obj/item/ammo_box/magazine/m9mm
-	name = "pistol magazine (9mm)"
+	name = "pistol magazine (9mm Rubber)"
+	desc= "A gun magazine. Loaded with less-lethal rubber rounds."
 	icon_state = "9x19p-8"
 	base_icon_state = "9x19p"
 	ammo_type = /obj/item/ammo_casing/c9mm
@@ -48,6 +63,11 @@
 	icon_state = "9x19pA"
 	desc= "A gun magazine. Loaded with rounds which penetrate armour, but are less effective against normal targets."
 	ammo_type = /obj/item/ammo_casing/c9mm/ap
+
+/obj/item/ammo_box/magazine/m9mm/fmj
+	name = "pistol magazine (9mm FMJ)"
+	desc = "A gun magazine loaded with standard lethal rounds."
+	ammo_type = /obj/item/ammo_casing/c9mm/fmj
 
 /obj/item/ammo_box/magazine/m9mm_aps
 	name = "stechkin pistol magazine (9mm)"

@@ -1,9 +1,10 @@
 // 9mm (Makarov and Stechkin APS)
 
 /obj/projectile/bullet/c9mm
-	name = "9mm bullet"
-	damage = 30
-	embedding = list(embed_chance=15, fall_chance=3, jostle_chance=4, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=5, jostle_pain_mult=6, rip_time=10)
+	name = "9mm rubber bullet"
+	damage = 10
+	stamina = 30
+	weak_against_armour = TRUE
 
 /obj/projectile/bullet/c9mm/ap
 	name = "9mm armor-piercing bullet"
@@ -21,6 +22,13 @@
 	name = "9mm incendiary bullet"
 	damage = 15
 	fire_stacks = 2
+
+/obj/projectile/bullet/c9mm/fmj
+	name = "9mm FMJ bullet"
+	damage = 30
+	embedding = list(embed_chance=15, fall_chance=3, jostle_chance=4, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=5, jostle_pain_mult=6, rip_time=10)
+
+
 
 // 10mm
 

@@ -49,6 +49,66 @@
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/a44
+	name = "Speed Loader (.44 Rubber)"
+	desc = "Designed to quickly reload revolvers. Rubber bullets are bouncy and less-than-lethal."
+	id = "a44"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 20000)
+	build_path = /obj/item/ammo_box/a44
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/a44_fmj
+	name = "Speed Loader (.44 FMJ)"
+	desc = "Designed to quickly reload revolvers."
+	id = "a44_fmj"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 30000)
+	build_path = /obj/item/ammo_box/a44/fmj
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/m45
+	name = "Speed Loader (.45 Rubber)"
+	desc = "Designed to quickly reload the Liberator handgun. Rubber bullets are bouncy and less-than-lethal."
+	id = "m45"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 20000)
+	build_path = /obj/item/ammo_box/magazine/m45
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/m45_fmj
+	name = "Speed Loader (.45 FMJ)"
+	desc = "Designed to quickly reload the Liberator handgun.."
+	id = "m45_fmj"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 30000)
+	build_path = /obj/item/ammo_box/magazine/m45/fmj
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/m9mm
+	name = "Speed Loader (9mm Rubber)"
+	desc = "Designed to quickly reload the Equalizer handgun. Rubber bullets are bouncy and less-than-lethal."
+	id = "m9mm"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 20000)
+	build_path = /obj/item/ammo_box/magazine/m9mm
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/m9mm_fmj
+	name = "Speed Loader (9mm FMJ)"
+	desc = "Designed to quickly reload the Equalizer handgun."
+	id = "m9mm_fmj"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 30000)
+	build_path = /obj/item/ammo_box/magazine/m9mm/fmj
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
 /datum/design/rubbershot/sec
 	id = "sec_rshot"
 	build_type = PROTOLATHE | AWAY_LATHE

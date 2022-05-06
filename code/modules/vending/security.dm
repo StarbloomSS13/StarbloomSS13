@@ -15,7 +15,11 @@
 		/obj/item/food/donut/plain = 12,
 		/obj/item/storage/box/evidence = 6,
 		/obj/item/flashlight/seclite = 4,
-		/obj/item/restraints/legcuffs/bola/energy = 7
+		/obj/item/restraints/legcuffs/bola/energy = 7,
+		/obj/item/gun/ballistic/revolver/revolution = 3,
+		/obj/item/gun/ballistic/automatic/pistol/liberator = 3,
+		/obj/item/gun/ballistic/automatic/pistol/equalizer = 3
+
 	)
 	contraband = list(
 		/obj/item/clothing/glasses/sunglasses = 2,
