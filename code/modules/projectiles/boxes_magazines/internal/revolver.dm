@@ -26,3 +26,4 @@
 	ammo_type = /obj/item/ammo_casing/a44
 	caliber = CALIBER_44
 	max_ammo = 7
+	
