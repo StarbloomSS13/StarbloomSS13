@@ -19,10 +19,15 @@
 // .45 (M1911 + C20r)
 
 /obj/item/ammo_casing/c45
-	name = ".45 bullet casing"
-	desc = "A .45 bullet casing."
-	caliber = CALIBER_45
+	name = ".45 rubber bullet casing"
+	desc = "A .45 rubber bullet casing."
 	projectile_type = /obj/projectile/bullet/c45
+
+/obj/item/ammo_casing/c45/fmj
+	name = ".45 FMJ bullet casing"
+	desc = "A .45 FMJ bullet casing."
+	caliber = CALIBER_45
+	projectile_type = /obj/projectile/bullet/c45/fmj
 
 /obj/item/ammo_casing/c45/ap
 	name = ".45 armor-piercing bullet casing"
@@ -33,3 +38,5 @@
 	name = ".45 incendiary bullet casing"
 	desc = "A .45 bullet casing."
 	projectile_type = /obj/projectile/bullet/incendiary/c45
+
+

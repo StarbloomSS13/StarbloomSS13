@@ -12,6 +12,24 @@
 	desc = "Designed to quickly reload revolvers. These rounds are manufactured within extremely tight tolerances, making them easy to show off trickshots with."
 	ammo_type = /obj/item/ammo_casing/a357/match
 
+/obj/item/ammo_box/a44
+	name = "speed loader (.44 Rubber)"
+	desc = "Designed to quickly reload revolvers. Loaded with less-lethal rubber rounds."
+	icon_state = "44"
+	ammo_type = /obj/item/ammo_casing/a44
+	max_ammo = 7
+	multiple_sprites = AMMO_BOX_PER_BULLET
+	item_flags = NO_MAT_REDEMPTION
+
+/obj/item/ammo_box/a44/fmj
+	name = "speed loader (.44 FMJ)"
+	desc = "Designed to quickly reload revolvers."
+	icon_state = "357"
+	ammo_type = /obj/item/ammo_casing/a44/fmj
+	max_ammo = 7
+	multiple_sprites = AMMO_BOX_PER_BULLET
+	item_flags = NO_MAT_REDEMPTION
+
 /obj/item/ammo_box/c38
 	name = "speed loader (.38)"
 	desc = "Designed to quickly reload revolvers."

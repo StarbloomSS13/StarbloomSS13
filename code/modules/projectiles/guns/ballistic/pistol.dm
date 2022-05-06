@@ -100,3 +100,29 @@
 	else
 		to_chat(user, span_notice("..and falls into view. Whew, that was a close one."))
 		user.dropItemToGround(src)
+
+/obj/item/gun/ballistic/automatic/pistol/equalizer
+	name = "9mm Equalizer"
+	desc = "A European classic 9mm handgun."
+	icon_state = "equalizer"
+	w_class = WEIGHT_CLASS_NORMAL
+	mag_type = /obj/item/ammo_box/magazine/m9mm
+	can_suppress = FALSE
+	mag_display = TRUE
+	fire_sound = 'sound/weapons/gun/pistol/starbloom_9mm.ogg'
+	rack_sound = 'sound/weapons/gun/pistol/rack.ogg'
+	lock_back_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
+	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
+
+/obj/item/gun/ballistic/automatic/pistol/liberator
+	name = ".45 Liberator"
+	desc = "A North American classic .45 handgun."
+	icon_state = "liberator"
+	w_class = WEIGHT_CLASS_NORMAL
+	mag_type = /obj/item/ammo_box/magazine/m45
+	can_suppress = FALSE
+	mag_display = TRUE
+	fire_sound = 'sound/weapons/gun/pistol/starbloom_45.ogg'
+	rack_sound = 'sound/weapons/gun/pistol/rack.ogg'
+	lock_back_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
+	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'

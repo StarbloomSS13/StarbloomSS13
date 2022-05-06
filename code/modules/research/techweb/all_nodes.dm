@@ -64,6 +64,12 @@
 		"turbine_part_compressor",
 		"turbine_part_rotor",
 		"turbine_part_stator",
+		"a44",
+		"a44_fmj",
+		"m45",
+		"m45_fmj",
+		"m9mm",
+		"m9mm_fmj"
 	)
 
 /datum/techweb_node/mmi

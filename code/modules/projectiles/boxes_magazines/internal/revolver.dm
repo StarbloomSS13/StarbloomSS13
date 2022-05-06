@@ -20,3 +20,10 @@
 /obj/item/ammo_box/magazine/internal/rus357/Initialize(mapload)
 	stored_ammo += new ammo_type(src)
 	. = ..()
+
+/obj/item/ammo_box/magazine/internal/cylinder/a44
+	name = "revolution cylinder"
+	ammo_type = /obj/item/ammo_casing/a44
+	caliber = CALIBER_44
+	max_ammo = 7
+	

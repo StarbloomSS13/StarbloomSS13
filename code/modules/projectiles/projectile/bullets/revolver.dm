@@ -118,3 +118,27 @@
 	ricochet_auto_aim_range = 6
 	ricochet_incidence_leeway = 80
 	ricochet_decay_chance = 1
+
+/obj/projectile/bullet/c38/match/bouncy
+	name = ".38 Rubber bullet"
+	damage = 10
+	stamina = 30
+	weak_against_armour = TRUE
+	ricochets_max = 6
+	ricochet_incidence_leeway = 0
+	ricochet_chance = 130
+	ricochet_decay_damage = 0.8
+	shrapnel_type = null
+	sharpness = NONE
+	embedding = null
+
+
+/obj/projectile/bullet/a44
+	name = ".44 FMJ bullet"
+	damage = 30
+
+/obj/projectile/bullet/a44/rubber
+	name = ".45 rubber bullet"
+	damage = 15
+	stamina = 35
+	weak_against_armour = TRUE
