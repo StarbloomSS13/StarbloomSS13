@@ -236,7 +236,7 @@
 	name = "ice cup"
 	desc = "Careful, cold ice, do not chew."
 	custom_price = PAYCHECK_PRISONER * 0.6
-	icon_state = "coffee"
+	icon_state = "icecup"
 	list_reagents = list(/datum/reagent/consumable/ice = 30)
 	spillable = TRUE
 	isGlass = FALSE
@@ -580,6 +580,14 @@
 	amount_per_transfer_from_this = 10
 	volume = 100
 	isGlass = FALSE
+
+/obj/item/reagent_containers/food/drinks/shaker/Initialize(mapload)
+	. = ..()
+	if(prob(10))
+		name = "\improper NanoTrasen 20th Anniversary Shaker"
+		desc += " It has an emblazoned NanoTrasen logo on it."
+		icon_state = "shaker_n"
+
 
 /obj/item/reagent_containers/food/drinks/flask
 	name = "flask"
