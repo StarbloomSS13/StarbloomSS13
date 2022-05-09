@@ -312,7 +312,7 @@
 		name = "horrific mothsicle"
 		desc += " This particular one looks like it didn't follow safety protocols!."
 		icon_state = "mothsicle_void"
-		tastes = list("comforting sugar, and a hint of a swirling abyss of distortion and hate")
+		tastes = list("a swirling abyss of distortion and hate")
 
 /obj/item/food/cornuto
 	name = "cornuto"
