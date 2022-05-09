@@ -322,3 +322,4 @@
 	)
 	result = /obj/item/food/mothsicle
 	subcategory = CAT_ICE
+	
