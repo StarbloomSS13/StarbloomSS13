@@ -308,7 +308,7 @@
 
 /obj/item/food/mothsicle/Initialize(mapload)
 	. = ..()
-	if(prob(15))
+	if(prob(5))
 		name = "horrific mothsicle"
 		desc += " This particular one looks like it didn't follow safety protocols!."
 		icon_state = "mothsicle_void"
