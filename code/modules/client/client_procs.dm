@@ -264,37 +264,38 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 
 	var/alert_mob_dupe_login = FALSE
 	var/alert_admin_multikey = FALSE
-	if(CONFIG_GET(flag/log_access))
-		var/list/joined_players = list()
-		for(var/player_ckey in GLOB.joined_player_list)
-			joined_players[player_ckey] = 1
+	
+	//STARBLOOM EDIT
+	//if(CONFIG_GET(flag/log_access))
+	//	var/list/joined_players = list()
+	//	for(var/player_ckey in GLOB.joined_player_list)
+	//		joined_players[player_ckey] = 1
 
-		for(var/joined_player_ckey in (GLOB.directory | joined_players))
-			if (!joined_player_ckey || joined_player_ckey == ckey)
-				continue
+	//	for(var/joined_player_ckey in (GLOB.directory | joined_players))
+	//		if (!joined_player_ckey || joined_player_ckey == ckey)
+	//			continue
 
-			var/datum/preferences/joined_player_preferences = GLOB.preferences_datums[joined_player_ckey]
-			if(!joined_player_preferences)
-				continue //this shouldn't happen.
+	//		var/datum/preferences/joined_player_preferences = GLOB.preferences_datums[joined_player_ckey]
+	//		if(!joined_player_preferences)
+	//			continue //this shouldn't happen.
 
-			var/client/C = GLOB.directory[joined_player_ckey]
-			var/in_round = ""
-			if (joined_players[joined_player_ckey])
-				in_round = " who has played in the current round"
-			var/message_type = "Notice"
+	//		var/client/C = GLOB.directory[joined_player_ckey]
+	//		var/in_round = ""
+	//		if (joined_players[joined_player_ckey])
+	//			in_round = " who has played in the current round"
+	//		var/message_type = "Notice"
 
-			var/matches
-			if(joined_player_preferences.last_ip == address)
-				matches += "IP ([address])"
-			if(joined_player_preferences.last_id == computer_id)
-				if(matches)
-					matches = "BOTH [matches] and "
-					alert_admin_multikey = TRUE
-					message_type = "MULTIKEY"
-				matches += "Computer ID ([computer_id])"
-				alert_mob_dupe_login = TRUE
+	//		var/matches
+	//		if(joined_player_preferences.last_ip == address)
+	//			matches += "IP ([address])"
+	//		if(joined_player_preferences.last_id == computer_id)
+	//			if(matches)
+	//				matches = "BOTH [matches] and "
+	//				alert_admin_multikey = TRUE
+	//				message_type = "MULTIKEY"
+	//			matches += "Computer ID ([computer_id])"
+	//			alert_mob_dupe_login = TRUE
 
-			//STARBLOOM EDIT
 			//if(matches)
 				//if(C)
 					//message_admins(span_danger("<B>[message_type]: </B></span><span class='notice'>Connecting player [key_name_admin(src)] has the same [matches] as [key_name_admin(C)]<b>[in_round]</b>."))
