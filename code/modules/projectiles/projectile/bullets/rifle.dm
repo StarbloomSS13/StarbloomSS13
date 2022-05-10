@@ -2,9 +2,31 @@
 
 /obj/projectile/bullet/a556
 	name = "5.56mm bullet"
-	damage = 35
+	damage = 30
+
+/obj/projectile/bullet/a556/ap
+	name = "5.56mm armour-piercing bullet"
+	damage = 25
 	armour_penetration = 30
-	wound_bonus = -40
+	wound_bonus = -30
+
+/obj/projectile/bullet/a556/hp
+	name = "5.56mm hollowpoint bullet"
+	damage = 35
+	armour_penetration = -30
+	wound_bonus = 30
+
+/obj/projectile/bullet/a556/i
+	name = "5.56mm incendiary bullet"
+	damage = 25
+	armour_penetration = -50
+
+/obj/projectile/bullet/a556/i/on_hit(atom/target, blocked = FALSE)
+	. = ..()
+	if(iscarbon(target))
+		var/mob/living/carbon/M = target
+		M.adjust_fire_stacks(6)
+		M.IgniteMob()
 
 /obj/projectile/bullet/a556/phasic
 	name = "5.56mm phasic bullet"
@@ -18,9 +40,30 @@
 /obj/projectile/bullet/a762
 	name = "7.62 bullet"
 	damage = 60
-	armour_penetration = 10
-	wound_bonus = -45
-	wound_falloff_tile = 0
+
+/obj/projectile/bullet/a762/ap
+	name = "7.62 armour-piercing bullet"
+	damage = 50
+	armour_penetration = 50
+	wound_bonus = -30
+
+/obj/projectile/bullet/a762/hp
+	name = "7.62 hollowpoint bullet"
+	damage = 70
+	armour_penetration = -50
+	wound_bonus = 30
+
+/obj/projectile/bullet/a762/i
+	name = "7.62 incendiary bullet"
+	damage = 50
+	armour_penetration = -50
+
+/obj/projectile/bullet/a762/i/on_hit(atom/target, blocked = FALSE)
+	. = ..()
+	if(iscarbon(target))
+		var/mob/living/carbon/M = target
+		M.adjust_fire_stacks(6)
+		M.IgniteMob()
 
 /obj/projectile/bullet/a762/enchanted
 	name = "enchanted 7.62 bullet"

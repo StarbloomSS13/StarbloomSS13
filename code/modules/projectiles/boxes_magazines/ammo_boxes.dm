@@ -95,10 +95,34 @@
 	multiple_sprites = AMMO_BOX_PER_BULLET
 
 /obj/item/ammo_box/a762
-	name = "stripper clip (7.62mm)"
+	name = "stripper clip (7.62mm FMJ)"
 	desc = "A stripper clip."
 	icon_state = "762"
 	ammo_type = /obj/item/ammo_casing/a762
+	max_ammo = 5
+	multiple_sprites = AMMO_BOX_PER_BULLET
+
+/obj/item/ammo_box/a762/ap
+	name = "stripper clip (7.62mm AP)"
+	desc = "A stripper clip. Contains armour-piercing rounds."
+	icon_state = "762"
+	ammo_type = /obj/item/ammo_casing/a762/ap
+	max_ammo = 5
+	multiple_sprites = AMMO_BOX_PER_BULLET
+
+/obj/item/ammo_box/a762/hp
+	name = "stripper clip (7.62mm HP)"
+	desc = "A stripper clip. Contains hollowpoint rounds."
+	icon_state = "762"
+	ammo_type = /obj/item/ammo_casing/a762/hp
+	max_ammo = 5
+	multiple_sprites = AMMO_BOX_PER_BULLET
+
+/obj/item/ammo_box/a762/i
+	name = "stripper clip (7.62mm Incendiary)"
+	desc = "A stripper clip. Contains incendiary rounds."
+	icon_state = "762"
+	ammo_type = /obj/item/ammo_casing/a762/i
 	max_ammo = 5
 	multiple_sprites = AMMO_BOX_PER_BULLET
 

@@ -75,10 +75,10 @@
 	ammo_type = /obj/item/ammo_casing/c9mm/fire
 
 /obj/item/ammo_box/magazine/smgm45
-	name = "SMG magazine (.45)"
+	name = "SMG magazine (.45 FMJ)"
 	icon_state = "c20r45-24"
 	base_icon_state = "c20r45"
-	ammo_type = /obj/item/ammo_casing/c45
+	ammo_type = /obj/item/ammo_casing/c45/fmj
 	caliber = CALIBER_45
 	max_ammo = 24
 
@@ -87,8 +87,40 @@
 	icon_state = "[base_icon_state]-[round(ammo_count(), 2)]"
 
 /obj/item/ammo_box/magazine/smgm45/ap
-	name = "SMG magazine (Armour Piercing .45)"
+	name = "SMG magazine (.45 AP)"
+	icon_state = "c20r45-24"
+	base_icon_state = "c20r45"
 	ammo_type = /obj/item/ammo_casing/c45/ap
+	caliber = CALIBER_45
+	max_ammo = 24
+
+/obj/item/ammo_box/magazine/smgm45/ap/update_icon_state()
+	. = ..()
+	icon_state = "[base_icon_state]-[round(ammo_count(), 2)]"
+
+/obj/item/ammo_box/magazine/smgm45/hp
+	name = "SMG magazine (.45 HP)"
+	icon_state = "c20r45-24"
+	base_icon_state = "c20r45"
+	ammo_type = /obj/item/ammo_casing/c45/hp
+	caliber = CALIBER_45
+	max_ammo = 24
+
+/obj/item/ammo_box/magazine/smgm45/hp/update_icon_state()
+	. = ..()
+	icon_state = "[base_icon_state]-[round(ammo_count(), 2)]"
+
+/obj/item/ammo_box/magazine/smgm45/i
+	name = "SMG magazine (.45 Incendiary)"
+	icon_state = "c20r45-24"
+	base_icon_state = "c20r45"
+	ammo_type = /obj/item/ammo_casing/c45/i
+	caliber = CALIBER_45
+	max_ammo = 24
+
+/obj/item/ammo_box/magazine/smgm45/i/update_icon_state()
+	. = ..()
+	icon_state = "[base_icon_state]-[round(ammo_count(), 2)]"
 
 /obj/item/ammo_box/magazine/smgm45/incen
 	name = "SMG magazine (Incendiary .45)"

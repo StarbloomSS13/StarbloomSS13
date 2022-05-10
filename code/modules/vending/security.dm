@@ -18,8 +18,10 @@
 		/obj/item/restraints/legcuffs/bola/energy = 7,
 		/obj/item/gun/ballistic/revolver/revolution = 3,
 		/obj/item/gun/ballistic/automatic/pistol/liberator = 3,
-		/obj/item/gun/ballistic/automatic/pistol/equalizer = 3
-
+		/obj/item/gun/ballistic/automatic/pistol/equalizer = 3,
+		/obj/item/gun/ballistic/rifle/boltaction/brand_new = 3,
+		/obj/item/gun/ballistic/automatic/ar/modular = 3,
+		/obj/item/gun/ballistic/automatic/c20r/unrestricted/cmg1 = 3
 	)
 	contraband = list(
 		/obj/item/clothing/glasses/sunglasses = 2,

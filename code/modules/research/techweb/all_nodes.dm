@@ -69,7 +69,10 @@
 		"m45",
 		"m45_fmj",
 		"m9mm",
-		"m9mm_fmj"
+		"m9mm_fmj",
+		"smgm45",
+		"a762",
+		"m556"
 	)
 
 /datum/techweb_node/mmi
@@ -1370,6 +1373,15 @@
 	design_ids = list(
 		"pin_testing",
 		"tele_shield",
+		"m556ap",
+		"m556hp",
+		"m556i",
+		"a762ap",
+		"a762hp",
+		"a762i",
+		"smgm45ap",
+		"smgm45hp",
+		"smgm45i"
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 
