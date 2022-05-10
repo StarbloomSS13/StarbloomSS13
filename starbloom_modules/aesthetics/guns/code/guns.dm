@@ -239,11 +239,12 @@
 	zoom_out_amt = 5
 	slot_flags = ITEM_SLOT_BACK
 	mag_display = TRUE
-
+// Sec Assault Rifle
 /obj/item/gun/ballistic/automatic/ar/modular
-	name = "NT ARG-63"
-	desc = "Nanotrasen's prime ballistic option based on the Stoner design, fitted with a light polymer frame and other tactical furniture - nicknamed 'Boarder' by Special Operations teams."
+	name = "5.56 Valiant"
+	desc = "A modern, advanced Security-issue rifle fitted with a light polymer frame and other tactical furniture."
 	icon = 'starbloom_modules/aesthetics/guns/icons/guns_gubman2.dmi'
+	fire_sound = 'sound/weapons/gun/pistol/starbloom_9mm.ogg'
 	icon_state = "arg"
 	inhand_icon_state = "arg"
 	can_suppress = FALSE
@@ -272,9 +273,11 @@
 	sawn_desc = "An extremely sawn-off Mosin Nagant, popularly known as an \"obrez\". There was probably a reason it wasn't manufactured this short to begin with."
 	icon = 'starbloom_modules/aesthetics/guns/icons/guns.dmi'
 
+// Sec Bolt Action
 /obj/item/gun/ballistic/rifle/boltaction/brand_new
-	name = "\improper Mosin Nagant M39"
-	desc = "A freshly-produced Mosin Nagant variant issued by Nanotrasen for their interns. You would rather not damage it."
+	name = "7.62 Memoria"
+	desc = "A classic variant of an old Earth rifle. Dated, but powerful."
+	fire_sound = 'sound/weapons/gun/revolver/starbloom_revolver.ogg'
 	icon = 'starbloom_modules/aesthetics/guns/icons/guns.dmi'
 
 /obj/item/gun/ballistic/rifle/boltaction/brand_new/quartermaster
@@ -299,11 +302,12 @@
 	name = "\improper Type-69 surplus rifle"
 	desc = "One of countless obsolete ballistic rifles that still sees use as a cheap deterrent. Uses 10mm ammo and its bulky frame prevents one-hand firing."
 	icon = 'starbloom_modules/aesthetics/guns/icons/guns.dmi'
-
+// Sec PDW
 /obj/item/gun/ballistic/automatic/c20r/unrestricted/cmg1
-	name = "\improper NT CMG-1"
-	desc = "A bullpup three-round burst .45 PDW with an eerily familiar design. It has a foldable stock and a dot sight."
+	name = ".45 Helios"
+	desc = "A bullpup three-round burst .45 PDW. It has a foldable stock and a dot sight."
 	icon_state = "cmg1"
+	fire_sound = 'sound/weapons/gun/pistol/starbloom_45.ogg'
 	icon = 'starbloom_modules/aesthetics/guns/icons/guns.dmi'
 
 /obj/item/gun/ballistic/automatic/ar/modular/model75

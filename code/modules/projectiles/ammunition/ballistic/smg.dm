@@ -23,16 +23,26 @@
 	desc = "A .45 rubber bullet casing."
 	projectile_type = /obj/projectile/bullet/c45
 
+/obj/item/ammo_casing/c45/ap
+	name = ".45 AP bullet casing"
+	desc = "A .45 armour-piercing bullet casing."
+	projectile_type = /obj/projectile/bullet/c45/ap
+
+/obj/item/ammo_casing/c45/hp
+	name = ".45 HP casing"
+	desc = "A .45 hollowpoint casing."
+	projectile_type = /obj/projectile/bullet/c45/hp
+
+/obj/item/ammo_casing/c45/i
+	name = ".45 incendiary casing"
+	desc = "A .45 incendiary casing."
+	projectile_type = /obj/projectile/bullet/c45/i
+
 /obj/item/ammo_casing/c45/fmj
 	name = ".45 FMJ bullet casing"
 	desc = "A .45 FMJ bullet casing."
 	caliber = CALIBER_45
 	projectile_type = /obj/projectile/bullet/c45/fmj
-
-/obj/item/ammo_casing/c45/ap
-	name = ".45 armor-piercing bullet casing"
-	desc = "A .45 bullet casing."
-	projectile_type = /obj/projectile/bullet/c45/ap
 
 /obj/item/ammo_casing/c45/inc
 	name = ".45 incendiary bullet casing"

@@ -11,9 +11,33 @@
 	icon_state = "[base_icon_state]-[ammo_count() ? "8" : "0"]"
 
 /obj/item/ammo_box/magazine/m556
-	name = "toploader magazine (5.56mm)"
+	name = "toploader magazine (5.56mm FMJ)"
 	icon_state = "5.56m"
 	ammo_type = /obj/item/ammo_casing/a556
+	caliber = CALIBER_A556
+	max_ammo = 30
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+
+/obj/item/ammo_box/magazine/m556/ap
+	name = "toploader magazine (5.56mm AP)"
+	icon_state = "5.56m"
+	ammo_type = /obj/item/ammo_casing/a556/ap
+	caliber = CALIBER_A556
+	max_ammo = 30
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+
+/obj/item/ammo_box/magazine/m556/hp
+	name = "toploader magazine (5.56mm HP)"
+	icon_state = "5.56m"
+	ammo_type = /obj/item/ammo_casing/a556/hp
+	caliber = CALIBER_A556
+	max_ammo = 30
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+
+/obj/item/ammo_box/magazine/m556/i
+	name = "toploader magazine (5.56mm Incendiary)"
+	icon_state = "5.56m"
+	ammo_type = /obj/item/ammo_casing/a556/i
 	caliber = CALIBER_A556
 	max_ammo = 30
 	multiple_sprites = AMMO_BOX_FULL_EMPTY

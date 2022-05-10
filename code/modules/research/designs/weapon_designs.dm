@@ -70,7 +70,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/m45
-	name = "Speed Loader (.45 Rubber)"
+	name = "Magazine (.45 Rubber - Handgun)"
 	desc = "Designed to quickly reload the Liberator handgun. Rubber bullets are bouncy and less-than-lethal."
 	id = "m45"
 	build_type = PROTOLATHE | AWAY_LATHE
@@ -80,7 +80,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/m45_fmj
-	name = "Speed Loader (.45 FMJ)"
+	name = "Magazine (.45 FMJ - Handgun)"
 	desc = "Designed to quickly reload the Liberator handgun.."
 	id = "m45_fmj"
 	build_type = PROTOLATHE | AWAY_LATHE
@@ -90,7 +90,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/m9mm
-	name = "Speed Loader (9mm Rubber)"
+	name = "Magazine (9mm Rubber)"
 	desc = "Designed to quickly reload the Equalizer handgun. Rubber bullets are bouncy and less-than-lethal."
 	id = "m9mm"
 	build_type = PROTOLATHE | AWAY_LATHE
@@ -100,12 +100,132 @@
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/m9mm_fmj
-	name = "Speed Loader (9mm FMJ)"
+	name = "Magazine (9mm FMJ)"
 	desc = "Designed to quickly reload the Equalizer handgun."
 	id = "m9mm_fmj"
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/iron = 30000)
 	build_path = /obj/item/ammo_box/magazine/m9mm/fmj
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/m556
+	name = "Magazine (5.56 FMJ)"
+	desc = "Designed to quickly reload the Valiant assault rifle."
+	id = "m556"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 30000)
+	build_path = /obj/item/ammo_box/magazine/m556
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/m556ap
+	name = "Magazine (5.56 AP)"
+	desc = "Designed to quickly reload the Valiant assault rifle. Armour-piercing rounds cut through armour, but cause less trauma on impact."
+	id = "m556ap"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 40000, /datum/material/uranium = 5000)
+	build_path = /obj/item/ammo_box/magazine/m556/ap
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/m556hp
+	name = "Magazine (5.56 HP)"
+	desc = "Designed to quickly reload the Valiant assault rifle. Hollowpoints expand on impact, but are stopped easily by armour."
+	id = "m556hp"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 40000, /datum/material/gold = 5000)
+	build_path = /obj/item/ammo_box/magazine/m556/hp
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/m556i
+	name = "Magazine (5.56 Incendiary)"
+	desc = "Designed to quickly reload the Valiant assault rifle. Incendiaries cause minimal damage, but cause fires on impact."
+	id = "m556i"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 40000, /datum/material/plasma = 5000)
+	build_path = /obj/item/ammo_box/magazine/m556/i
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/a762
+	name = "Stripper Clip (7.62 FMJ)"
+	desc = "Designed to quickly reload the Memoria bolt-action rifle."
+	id = "a762"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 30000)
+	build_path = /obj/item/ammo_box/a762
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/a762ap
+	name = "Stripper Clip (7.62 AP)"
+	desc = "Designed to quickly reload the Memoria bolt-action rifle. Armour-piercing rounds cut through armour, but cause less trauma on impact."
+	id = "a762ap"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 40000, /datum/material/uranium = 5000)
+	build_path = /obj/item/ammo_box/a762/ap
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/a762hp
+	name = "Stripper Clip (7.62 HP)"
+	desc = "Designed to quickly reload the Memoria bolt-action rifle. Hollowpoints expand on impact, but are stopped easily by armour."
+	id = "a762hp"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 40000, /datum/material/gold = 5000)
+	build_path = /obj/item/ammo_box/a762/hp
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/a762i
+	name = "Stripper Clip (7.62 Incendiary)"
+	desc = "Designed to quickly reload the Memoria bolt-action rifle. Incendiaries cause minimal damage, but cause fires on impact."
+	id = "a762i"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 40000, /datum/material/plasma = 5000)
+	build_path = /obj/item/ammo_box/a762/i
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/smgm45
+	name = "Magazine (.45 FMJ - SMG)"
+	desc = "Designed to quickly reload the Helios PDW."
+	id = "smgm45"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 30000)
+	build_path = /obj/item/ammo_box/magazine/smgm45
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/smgm45ap
+	name = "Magazine (.45 AP - SMG)"
+	desc = "Designed to quickly reload the Helios PDW. Armour-piercing rounds cut through armour, but cause less trauma on impact."
+	id = "smgm45ap"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 40000, /datum/material/uranium = 5000)
+	build_path = /obj/item/ammo_box/magazine/smgm45/ap
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/smgm45hp
+	name = "Magazine (.45 HP - SMG)"
+	desc = "Designed to quickly reload the Helios PDW. Hollowpoints expand on impact, but are stopped easily by armour."
+	id = "smgm45hp"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 40000, /datum/material/gold = 5000)
+	build_path = /obj/item/ammo_box/magazine/smgm45/hp
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/smgm45i
+	name = "Magazine (.45 Incendiary - SMG)"
+	desc = "Designed to quickly reload the Helios PDW. Incendiaries cause minimal damage, but cause fires on impact."
+	id = "smgm45i"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 40000, /datum/material/plasma = 5000)
+	build_path = /obj/item/ammo_box/magazine/smgm45/i
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
