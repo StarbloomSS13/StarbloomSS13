@@ -1356,3 +1356,7 @@
 	set name = "View Skills"
 
 	mind?.print_levels(src)
+
+/// Used for typing indicator, relevant on /living level
+/mob/proc/set_typing_indicator(state)
+	return

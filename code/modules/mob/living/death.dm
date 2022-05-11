@@ -1,3 +1,4 @@
+
 /**
  * Blow up the mob into giblets
  *
@@ -94,6 +95,9 @@
 
 	SEND_SIGNAL(src, COMSIG_LIVING_DEATH, gibbed)
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOB_DEATH, src, gibbed)
+
+	if(typing_indicator)
+		set_typing_indicator(FALSE)
 
 	if (client)
 		client.move_delay = initial(client.move_delay)

@@ -43,6 +43,9 @@
 		else if (secondary_result != SECONDARY_ATTACK_CALL_NORMAL)
 			CRASH("attack_robot_secondary did not return a SECONDARY_ATTACK_* define.")
 
+	if(typing_indicator)
+		set_typing_indicator(FALSE)
+
 	if(next_move >= world.time)
 		return
 
