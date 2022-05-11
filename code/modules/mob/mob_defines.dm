@@ -240,3 +240,6 @@
 	var/datum/client_interface/mock_client
 
 	var/interaction_range = 0 //how far a mob has to be to interact with something without caring about obsctruction, defaulted to 0 tiles
+
+	/// Whether the typing indicator is on. Not on /living level because of verbs
+	var/typing_indicator = FALSE
