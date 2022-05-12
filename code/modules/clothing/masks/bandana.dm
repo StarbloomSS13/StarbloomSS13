@@ -6,7 +6,6 @@
 	visor_flags_cover = MASKCOVERSMOUTH | PEPPERPROOF
 	slot_flags = ITEM_SLOT_MASK
 	adjusted_flags = ITEM_SLOT_HEAD
-	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/mask/bandana/attack_self(mob/user)
 	adjustmask(user)

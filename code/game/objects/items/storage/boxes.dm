@@ -1034,17 +1034,6 @@
 	for(var/i in 1 to 7)
 		new /obj/item/emptysandbag(src)
 
-/obj/item/storage/box/rndboards
-	name = "\proper the liberator's legacy"
-	desc = "A box containing a gift for worthy golems."
-	illustration = "scicircuit"
-
-/obj/item/storage/box/rndboards/PopulateContents()
-	new /obj/item/circuitboard/machine/protolathe/offstation(src)
-	new /obj/item/circuitboard/machine/destructive_analyzer(src)
-	new /obj/item/circuitboard/machine/circuit_imprinter/offstation(src)
-	new /obj/item/circuitboard/computer/rdconsole(src)
-
 /obj/item/storage/box/silver_sulf
 	name = "box of silver sulfadiazine patches"
 	desc = "Contains patches used to treat burns."

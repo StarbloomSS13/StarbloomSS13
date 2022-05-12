@@ -4,7 +4,6 @@
 	icon_state = "fake-moustache"
 	w_class = WEIGHT_CLASS_TINY
 	flags_inv = HIDEFACE
-	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/mask/fakemoustache/italian
 	name = "italian moustache"

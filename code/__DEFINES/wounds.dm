@@ -101,7 +101,7 @@ GLOBAL_LIST_INIT(global_all_wound_types, list(/datum/wound/blunt/critical, /datu
 
 // ~biology defines
 // What kind of biology we have, and what wounds we can suffer, mostly relies on the HAS_FLESH and HAS_BONE species traits on human species
-/// golems and androids, cannot suffer any wounds
+/// androids and such cannot suffer any wounds
 #define BIO_INORGANIC 0
 /// skeletons and plasmemes, can only suffer bone wounds, only needs mangled bone to be able to dismember
 #define BIO_JUST_BONE 1

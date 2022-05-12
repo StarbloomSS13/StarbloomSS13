@@ -19,7 +19,6 @@
 	icon_state = "pirate"
 	inhand_icon_state = "pirate"
 	allowed = list(/obj/item/melee/energy/sword/pirate, /obj/item/clothing/glasses/eyepatch, /obj/item/reagent_containers/food/drinks/bottle/rum)
-	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/pirate/armored
 	armor = list(MELEE = 30, BULLET = 50, LASER = 30,ENERGY = 40, BOMB = 30, BIO = 30, FIRE = 60, ACID = 75)
@@ -69,7 +68,6 @@
 	icon_state = "overalls"
 	inhand_icon_state = "overalls"
 	body_parts_covered = CHEST|GROIN|LEGS
-	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/apron/purple_bartender
 	name = "purple bartender apron"
@@ -180,7 +178,6 @@
 	desc = "Your classic, non-racist poncho."
 	icon_state = "classicponcho"
 	inhand_icon_state = "classicponcho"
-	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/poncho/green
 	name = "green poncho"
@@ -331,8 +328,6 @@
 	allowed = list()
 	actions_types = list(/datum/action/item_action/toggle_human_head)
 	hoodtype = /obj/item/clothing/head/hooded/human_head
-	species_exception = list(/datum/species/golem) //Finally, flesh
-
 
 /obj/item/clothing/head/hooded/human_head
 	name = "bloated human head"
@@ -462,7 +457,6 @@
 	desc = "A cool shirt for chilling on the beach."
 	icon_state = "hawaiian_blue"
 	inhand_icon_state = "hawaiian_blue"
-	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/yakuza
 	name = "tojo clan jacket"

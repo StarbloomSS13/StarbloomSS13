@@ -243,68 +243,6 @@
 		return FALSE
 	return TRUE
 
-/obj/effect/proc_holder/spell/pointed/dominate
-	name = "Dominate"
-	desc = "This spell dominates the mind of a lesser creature to the will of Nar'Sie, allying it only to her direct followers."
-	charge_max = 1 MINUTES
-	range = 7
-	stat_allowed = FALSE
-	school = SCHOOL_EVOCATION
-	clothes_req = FALSE
-	invocation = "none"
-	invocation_type = INVOCATION_NONE
-	ranged_mousepointer = 'icons/effects/mouse_pointers/cult_target.dmi'
-	action_icon = 'icons/mob/actions/actions_cult.dmi'
-	action_background_icon_state = "bg_demon"
-	action_icon_state = "dominate"
-	active_msg = "You prepare to dominate the mind of a target..."
-
-/obj/effect/proc_holder/spell/pointed/dominate/cast(list/targets, mob/user)
-	if(!LAZYLEN(targets))
-		to_chat(user, span_notice("No target found in range."))
-		return FALSE
-	if(!can_target(targets[1], user))
-		return FALSE
-
-	var/mob/living/simple_animal/S = targets[1]
-	S.add_atom_colour("#990000", FIXED_COLOUR_PRIORITY)
-	S.faction = list("cult")
-	playsound(get_turf(S), 'sound/effects/ghost.ogg', 100, TRUE)
-	new /obj/effect/temp_visual/cult/sac(get_turf(S))
-
-/obj/effect/proc_holder/spell/pointed/dominate/can_target(atom/target, mob/user, silent)
-	. = ..()
-	if(!.)
-		return FALSE
-	if(!isanimal(target))
-		if(!silent)
-			to_chat(user, span_warning("Target is not a lesser creature!"))
-		return FALSE
-
-	var/mob/living/simple_animal/S = target
-	if(S.mind)
-		if(!silent)
-			to_chat(user, span_warning("[S] is too intelligent to dominate!"))
-		return FALSE
-	if(S.stat)
-		if(!silent)
-			to_chat(user, span_warning("[S] is dead!"))
-		return FALSE
-	if(S.sentience_type != SENTIENCE_ORGANIC)
-		if(!silent)
-			to_chat(user, span_warning("[S] cannot be dominated!"))
-		return FALSE
-	if("cult" in S.faction)
-		if(!silent)
-			to_chat(user, span_warning("[S] is already serving Nar'Sie!"))
-		return FALSE
-	return TRUE
-
-/obj/effect/proc_holder/spell/targeted/ethereal_jaunt/shift/golem
-	charge_max = 80 SECONDS
-	jaunt_in_type = /obj/effect/temp_visual/dir_setting/cult/phase
-	jaunt_out_type = /obj/effect/temp_visual/dir_setting/cult/phase/out
-
 /obj/effect/proc_holder/spell/targeted/projectile/dumbfire/juggernaut
 	name = "Gauntlet Echo"
 	desc = "Channels energy into your gauntlet - firing its essence forward in a slow moving, yet devastating, attack."

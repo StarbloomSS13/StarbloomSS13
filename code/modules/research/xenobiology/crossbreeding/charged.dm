@@ -259,11 +259,11 @@ Charged extracts:
 
 /obj/item/slimecross/charged/adamantine
 	colour = "adamantine"
-	effect_desc = "Creates a completed golem shell."
+	effect_desc = "Creates around 20 adamantine at once. A true bargain."
 
 /obj/item/slimecross/charged/adamantine/do_effect(mob/user)
-	user.visible_message(span_notice("[src] produces a fully formed golem shell!"))
-	new /obj/effect/mob_spawn/ghost_role/human/golem/servant(get_turf(src), /datum/species/golem/adamantine, user)
+	user.visible_message(span_notice("[src] produces a lot of green ingots!"))
+	new /obj/item/stack/sheet/mineral/adamantine/twenty(get_turf(src))
 	..()
 
 /obj/item/slimecross/charged/rainbow

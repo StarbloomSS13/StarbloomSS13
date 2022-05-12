@@ -124,14 +124,6 @@
 	description = "Into the jaws of the beast."
 	suffix = "icemoon_underground_wendigo_cave.dmm"
 
-/datum/map_template/ruin/icemoon/underground/free_golem
-	name = "Free Golem Ship"
-	id = "golem-ship"
-	description = "Lumbering humanoids, made out of precious metals, move inside this ship. They frequently leave to mine more minerals, which they somehow turn into more of them. \
-	Seem very intent on research and individual liberty, and also geology-based naming?"
-	prefix = "_maps/RandomRuins/AnywhereRuins/"
-	suffix = "golem_ship.dmm"
-
 /datum/map_template/ruin/icemoon/underground/mailroom
 	name = "Frozen-over Post Office"
 	id = "mailroom"

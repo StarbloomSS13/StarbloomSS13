@@ -360,10 +360,6 @@ GLOBAL_LIST_INIT(snow_recipes, list ( \
  * Adamantine
 */
 
-
-GLOBAL_LIST_INIT(adamantine_recipes, list(
-	))
-
 /obj/item/stack/sheet/mineral/adamantine
 	name = "adamantine"
 	icon_state = "sheet-adamantine"
@@ -372,9 +368,8 @@ GLOBAL_LIST_INIT(adamantine_recipes, list(
 	mats_per_unit = list(/datum/material/adamantine=MINERAL_MATERIAL_AMOUNT)
 	merge_type = /obj/item/stack/sheet/mineral/adamantine
 
-/obj/item/stack/sheet/mineral/adamantine/get_main_recipes()
-	. = ..()
-	. += GLOB.adamantine_recipes
+/obj/item/stack/sheet/mineral/adamantine/twenty
+	amount = 20
 
 /*
  * Runite
@@ -389,7 +384,6 @@ GLOBAL_LIST_INIT(adamantine_recipes, list(
 	mats_per_unit = list(/datum/material/runite=MINERAL_MATERIAL_AMOUNT)
 	merge_type = /obj/item/stack/sheet/mineral/runite
 	material_type = /datum/material/runite
-
 
 /*
  * Mythril
