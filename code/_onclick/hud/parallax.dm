@@ -306,19 +306,19 @@
 	layer = 30
 
 /atom/movable/screen/parallax_layer/planet/icemoon
-   icon_state = "icemoon"
+	icon_state = "icemoon"
 
 /atom/movable/screen/parallax_layer/planet/earthmoon
-   icon_state = "earthmoon"
+	icon_state = "earthmoon"
 
 /atom/movable/screen/parallax_layer/planet/dunemoon
-   icon_state = "dunemoon"
+	icon_state = "dunemoon"
 
 /atom/movable/screen/parallax_layer/planet/bloodmoon
-   icon_state = "bloodmoon"
+	icon_state = "bloodmoon"
 
 /atom/movable/screen/parallax_layer/planet/voidmoon
-   icon_state = "voidmoon"
+	icon_state = "voidmoon"
 
 /atom/movable/screen/parallax_layer/planet/update_status(mob/M)
 	var/client/C = M.client
