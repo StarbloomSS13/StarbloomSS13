@@ -2,6 +2,7 @@
 /datum/hud/proc/create_parallax(mob/viewmob)
 	var/mob/screenmob = viewmob || mymob
 	var/client/C = screenmob.client
+	var/static/moontype = pick(subtypesof(/atom/movable/screen/parallax_layer/planet))
 	if (!apply_parallax_pref(viewmob)) //don't want shit computers to crash when specing someone with insane parallax, so use the viewer's pref
 		return
 
@@ -9,7 +10,7 @@
 		C.parallax_layers_cached = list()
 		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_1(null, C.view)
 		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_2(null, C.view)
-		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/planet(null, C.view)
+		C.parallax_layers_cached += new moontype(null, C.view)
 		if(SSparallax.random_layer)
 			C.parallax_layers_cached += new SSparallax.random_layer
 		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_3(null, C.view)
@@ -299,11 +300,25 @@
 	icon_state = "asteroids"
 
 /atom/movable/screen/parallax_layer/planet
-	icon_state = "planet"
 	blend_mode = BLEND_OVERLAY
 	absolute = TRUE //Status of seperation
 	speed = 3
 	layer = 30
+
+/atom/movable/screen/parallax_layer/planet/icemoon
+	icon_state = "icemoon"
+
+/atom/movable/screen/parallax_layer/planet/earthmoon
+	icon_state = "earthmoon"
+
+/atom/movable/screen/parallax_layer/planet/dunemoon
+	icon_state = "dunemoon"
+
+/atom/movable/screen/parallax_layer/planet/bloodmoon
+	icon_state = "bloodmoon"
+
+/atom/movable/screen/parallax_layer/planet/voidmoon
+	icon_state = "voidmoon"
 
 /atom/movable/screen/parallax_layer/planet/update_status(mob/M)
 	var/client/C = M.client
