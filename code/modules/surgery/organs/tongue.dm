@@ -29,7 +29,6 @@
 		/datum/language/moffic,
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
-		/datum/language/terrum,
 		/datum/language/nekomimetic,
 		/datum/language/eurocom,
 		/datum/language/neareastern,
@@ -205,7 +204,6 @@
 		/datum/language/moffic,
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
-		/datum/language/terrum,
 		/datum/language/nekomimetic,
 		/datum/language/buzzwords
 	))
@@ -346,7 +344,6 @@
 		/datum/language/moffic,
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
-		/datum/language/terrum,
 		/datum/language/nekomimetic,
 		/datum/language/calcic
 	))
@@ -425,7 +422,6 @@
 		/datum/language/moffic,
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
-		/datum/language/terrum,
 		/datum/language/nekomimetic,
 		/datum/language/voltaic
 	))

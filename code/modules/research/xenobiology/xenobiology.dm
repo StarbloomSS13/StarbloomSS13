@@ -481,10 +481,10 @@
 			return 450
 
 		if(SLIME_ACTIVATE_MAJOR)
-			to_chat(user, span_warning("You feel your body rapidly crystallizing..."))
+			to_chat(user, span_warning("You feel your body rapidly solidifying..."))
 			if(do_after(user, 120, target = user))
-				to_chat(user, span_warning("You feel solid."))
-				user.set_species(pick(/datum/species/golem/adamantine))
+				to_chat(user, span_warning("You feel mechanical."))
+				user.set_species(pick(/datum/species/android)) //Used to be the now non-existant adamantine golem, but now adamantine slimes are going to be more of a mechanical thing
 				return
 			to_chat(user, span_notice("You stop feeding [src], and your body returns to its slimelike state."))
 

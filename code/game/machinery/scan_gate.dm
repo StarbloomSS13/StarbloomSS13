@@ -14,7 +14,6 @@
 #define SCANGATE_MOTH "moth"
 #define SCANGATE_JELLY "jelly"
 #define SCANGATE_POD "pod"
-#define SCANGATE_GOLEM "golem"
 #define SCANGATE_ZOMBIE "zombie"
 
 /obj/machinery/scanner_gate
@@ -155,8 +154,6 @@
 						scan_species = /datum/species/jelly
 					if(SCANGATE_POD)
 						scan_species = /datum/species/pod
-					if(SCANGATE_GOLEM)
-						scan_species = /datum/species/golem
 					if(SCANGATE_ZOMBIE)
 						scan_species = /datum/species/zombie
 				if(is_species(H, scan_species))
@@ -279,5 +276,4 @@
 #undef SCANGATE_MOTH
 #undef SCANGATE_JELLY
 #undef SCANGATE_POD
-#undef SCANGATE_GOLEM
 #undef SCANGATE_ZOMBIE

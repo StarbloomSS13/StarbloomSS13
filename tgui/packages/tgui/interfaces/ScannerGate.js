@@ -47,10 +47,6 @@ const TARGET_SPECIES_LIST = [
     value: 'pod',
   },
   {
-    name: 'Golem',
-    value: 'golem',
-  },
-  {
     name: 'Zombie',
     value: 'zombie',
   },

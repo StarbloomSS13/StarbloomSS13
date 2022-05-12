@@ -63,16 +63,6 @@
 	cost = 20
 	allow_duplicates = FALSE
 
-/datum/map_template/ruin/lavaland/free_golem
-	name = "Free Golem Ship"
-	id = "golem-ship"
-	description = "Lumbering humanoids, made out of precious metals, move inside this ship. They frequently leave to mine more minerals, which they somehow turn into more of them. \
-	Seem very intent on research and individual liberty, and also geology-based naming?"
-	cost = 20
-	prefix = "_maps/RandomRuins/AnywhereRuins/"
-	suffix = "golem_ship.dmm"
-	allow_duplicates = FALSE
-
 /datum/map_template/ruin/lavaland/gaia
 	name = "Patch of Eden"
 	id = "gaia"

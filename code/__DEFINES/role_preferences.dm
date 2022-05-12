@@ -65,8 +65,6 @@
 #define ROLE_LAVALAND "Lavaland"
 
 #define ROLE_POSITRONIC_BRAIN "Positronic Brain"
-#define ROLE_FREE_GOLEM "Free Golem"
-#define ROLE_SERVANT_GOLEM "Servant Golem"
 #define ROLE_NUCLEAR_OPERATIVE "Nuclear Operative"
 #define ROLE_CLOWN_OPERATIVE "Clown Operative"
 #define ROLE_WIZARD_APPRENTICE "apprentice"

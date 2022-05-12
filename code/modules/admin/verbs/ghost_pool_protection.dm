@@ -17,7 +17,7 @@
 	//these are the same comments as the ones in admin.dm defines, please update those if you change them here
 	/*
 	var/events_or_midrounds = TRUE //ie fugitives, space dragon, etc. also includes dynamic midrounds as it's the same deal
-	var/spawners = TRUE //ie ashwalkers, free golems, beach bums
+	var/spawners = TRUE //ie ashwalkers, beach bums
 	var/station_sentience = TRUE //ie posibrains, mind monkeys, sentience potion, etc.
 	var/minigames = TRUE //ie mafia, ctf
 	var/misc = TRUE //oddities like split personality and any animal ones like spiders, xenos
