@@ -24,6 +24,9 @@
 
 	var/datum/species/pref_species
 
+	///A photo of the character, visible on close examine
+	var/headshot = ""
+
 /datum/preferences/proc/species_updated(species_type)
 	all_quirks = list()
 	//Reset cultural stuff

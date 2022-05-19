@@ -1,4 +1,4 @@
-import { FeatureChoiced, FeatureDropdownInput, Feature, FeatureColorInput, CheckboxInput, FeatureTriColorInput, FeatureTriBoolInput, FeatureToggle } from "./base";
+import { FeatureChoiced, FeatureDropdownInput, Feature, FeatureColorInput, CheckboxInput, FeatureTriColorInput, FeatureTriBoolInput, FeatureToggle, FeatureTextInput, FeatureShortTextInput } from "./base";
 
 export const eye_color: Feature<string> = {
   name: "Eye color",
@@ -165,4 +165,22 @@ export const wings_emissive: Feature<boolean[]> = {
   name: "Wings Emissives",
   description: "Want to have a fancy species name? Put it here, or leave it blank.",
   component: FeatureTriBoolInput,
+};
+
+export const flavor_text: Feature<string> = {
+  name: "Flavor Text",
+  description: "Describe your character!",
+  component: FeatureTextInput,
+};
+
+export const silicon_flavor_text: Feature<string> = {
+  name: "Flavor Text (Silicon)",
+  description: "Describe your cyborg/AI shell!",
+  component: FeatureTextInput,
+};
+
+export const headshot: Feature<string> = {
+  name: "Headshot",
+  description: "Add an image to your character, visible on close examination. Requires it be formatted properly.",
+  component: FeatureShortTextInput,
 };

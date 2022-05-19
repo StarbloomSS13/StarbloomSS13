@@ -7,5 +7,7 @@
 	var/mutant_renderkey = ""
 	///Whether the human is trying to hide their mutant bodyparts under their clothes intentially
 	var/try_hide_mutant_parts = FALSE
+	///The Examine Panel TGUI.
+	var/datum/examine_panel/tgui = new
 	//Whether or not the human has emissive eyes
 	var/emissive_eyes

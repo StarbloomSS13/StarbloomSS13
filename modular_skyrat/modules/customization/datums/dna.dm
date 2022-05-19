@@ -195,7 +195,8 @@ GLOBAL_LIST_EMPTY(total_uf_len_by_block)
 			dna.species.body_markings = override_markings.Copy()
 
 		if(override_features)
-			dna.features = override_features.Copy()
+			for(var/override in override_features)
+				dna.features[override] = override_features[override]
 		//END OF BODYPARTS AND FEATURES
 
 		apply_customizable_dna_features_to_species()

@@ -93,6 +93,9 @@
 #define MAX_CHARTER_LEN 80
 #define MAX_FLAVOR_LEN 4096
 
+/// How many characters will be displayed in the flavor text preview before we cut it off?
+#define FLAVOR_PREVIEW_LIMIT 110
+
 // Audio/Visual Flags. Used to determine what sense are required to notice a message.
 #define MSG_VISUAL (1<<0)
 #define MSG_AUDIBLE (1<<1)
