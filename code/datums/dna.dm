@@ -129,10 +129,10 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	destination.dna.unique_enzymes = unique_enzymes
 	destination.dna.unique_identity = unique_identity
 	destination.dna.blood_type = blood_type
-	//destination.set_species(species.type, icon_update=0) //ORIGINAL
-	destination.set_species(species.type, TRUE, null, features.Copy(), mutant_bodyparts.Copy(), body_markings.Copy()) //SKYRAT EDIT CHANGE - CUSTOMIZATION
-	destination.dna.unique_features = unique_features
 	destination.dna.features = features.Copy()
+	//destination.set_species(species.type, icon_update=0) //ORIGINAL
+	destination.set_species(species.type, TRUE, null, mutant_bodyparts.Copy(), body_markings.Copy()) //SKYRAT EDIT CHANGE - CUSTOMIZATION
+	destination.dna.unique_features = unique_features
 	destination.dna.real_name = real_name
 	destination.dna.temporary_mutations = temporary_mutations.Copy()
 	if(transfer_SE)

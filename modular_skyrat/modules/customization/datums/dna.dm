@@ -170,7 +170,7 @@ GLOBAL_LIST_EMPTY(total_uf_len_by_block)
 					var/list/marking_list = GLOB.body_markings_per_limb[zone]
 					set_uni_feature_block(blocknumber, construct_block(marking_list.Find(marking), marking_list.len))
 
-/mob/living/carbon/set_species(datum/species/mrace, icon_update = TRUE, pref_load = FALSE, list/override_features, list/override_mutantparts, list/override_markings, retain_features = FALSE, retain_mutantparts = FALSE)
+/mob/living/carbon/set_species(datum/species/mrace, icon_update = TRUE, pref_load = FALSE, list/override_mutantparts, list/override_markings)
 	if(QDELETED(src))
 		CRASH("You're trying to change your species post deletion, this is a recipe for madness")
 	if(mrace && has_dna())
@@ -193,10 +193,6 @@ GLOBAL_LIST_EMPTY(total_uf_len_by_block)
 		if(override_markings)
 			dna.body_markings = override_markings.Copy()
 			dna.species.body_markings = override_markings.Copy()
-
-		if(override_features)
-			for(var/override in override_features)
-				dna.features[override] = override_features[override]
 		//END OF BODYPARTS AND FEATURES
 
 		apply_customizable_dna_features_to_species()

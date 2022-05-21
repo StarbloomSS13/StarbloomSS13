@@ -23,24 +23,8 @@
 	if(!default_color)
 		default_color = "#FFFFFF"
 
-/datum/body_marking/proc/get_default_color(var/list/features, var/datum/species/pref_species) //Needs features for the color information
-	var/list/colors
-	switch(default_color)
-		if(DEFAULT_PRIMARY)
-			colors = features["mcolor"]
-		if(DEFAULT_SECONDARY)
-			colors = features["mcolor2"]
-		if(DEFAULT_TERTIARY)
-			colors = features["mcolor3"]
-		if(DEFAULT_SKIN_OR_PRIMARY)
-			if(pref_species && pref_species.use_skintones)
-				colors = features["skin_color"]
-			else
-				colors = features["mcolor"]
-		else
-			colors = default_color
-
-	return colors
+/datum/body_marking/proc/get_default_color(var/datum/species/pref_species)
+	return default_color
 
 //Use this one for things with pre-set default colors, I guess
 /datum/body_marking/other

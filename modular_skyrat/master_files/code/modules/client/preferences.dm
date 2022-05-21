@@ -9,8 +9,6 @@
 	var/augment_limb_styles = list()
 	/// Which augment slot we currently have chosen, this is for UI display
 	var/chosen_augment_slot
-	/// Has to include all information that extra organs from mutant bodyparts would need.
-	var/list/features = list() // TODO
 	/// A list containing all of our mutant bodparts
 	var/list/list/mutant_bodyparts = list()
 	/// A list of all bodymarkings
@@ -23,9 +21,6 @@
 	var/allow_advanced_colors = FALSE
 
 	var/datum/species/pref_species
-
-	///A photo of the character, visible on close examine
-	var/headshot = ""
 
 /datum/preferences/proc/species_updated(species_type)
 	all_quirks = list()
@@ -67,7 +62,7 @@
 		var/list/bml = body_markings[zone]
 		for(var/key in bml)
 			var/datum/body_marking/BM = GLOB.body_markings[key]
-			bml[key] = BM.get_default_color(features, pref_species)
+			bml[key] = BM.get_default_color(pref_species)
 
 /datum/preferences/proc/get_linguistic_points()
 	var/points

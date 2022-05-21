@@ -38,6 +38,8 @@
 	*/
 	//SKYRAT EDIT REMOVAL END
 
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/pod_hair, GLOB.pod_hair_list)
+
 	//Species
 	for(var/spath in subtypesof(/datum/species))
 		var/datum/species/S = new spath()
