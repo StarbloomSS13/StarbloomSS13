@@ -95,6 +95,12 @@ export const mutant_colors_color: Feature<string[]> = {
   component: FeatureTriColorInput,
 };
 
+export const eye_emissives: FeatureToggle = {
+  name: "Eye Emissives",
+  description: "Turn your eyes into sparklers.",
+  component: CheckboxInput,
+};
+
 export const tail_toggle: FeatureToggle = {
   name: "Tail",
   description: "Add some lore for your species! Won't show up if there's no custom species.",
