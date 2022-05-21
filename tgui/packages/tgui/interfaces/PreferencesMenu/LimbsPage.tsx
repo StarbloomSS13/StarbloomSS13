@@ -166,20 +166,11 @@ export const OrganPage = (props, context) => {
 export const LimbsPage = (props, context) => {
   const { data } = useBackend<PreferencesMenuData>(context);
   const { act } = useBackend<PreferencesMenuData>(context);
-  const markings = data.marking_presets ? data.marking_presets : [];
   let balance = -data.quirks_balance;
   return (
     <Stack minHeight="100%">
       <Stack.Item minWidth="33%" minHeight="100%">
         <Section fill scrollable title="Markings" height="237%">
-          <div>
-            <Dropdown grow
-              width="100%"
-              options={Object.values(markings)}
-              displayText="Pick a preset:"
-              onSelected={(value) => act("set_preset", { preset: value })}
-            />
-          </div>
           <div>
             {data.limbs_data.map(val => (
               <LimbPage
@@ -193,6 +184,13 @@ export const LimbsPage = (props, context) => {
       </Stack.Item>
       <Stack.Item minWidth="33%">
         <Section title="Character Preview" fill align="center" height="237%">
+          <Button
+            onClick={() => act("rotate")}
+            fontSize="22px"
+            icon="undo"
+            tooltip="Rotate"
+            tooltipPosition="top"
+          />
           <CharacterPreview
             id={data.character_preview_view}
             height="25%"

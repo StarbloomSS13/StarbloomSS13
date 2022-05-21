@@ -13,8 +13,7 @@ export const KnownLanguage = (props, context) => {
           color="bad"
           onClick={() => act("remove_language",
             { language_name: props.language.name })}
-
-        >
+          >
           Forget <Box className={'languages16x16 ' + props.language.icon} />
         </Button>
       </Section>
@@ -34,7 +33,6 @@ export const UnknownLanguage = (props, context) => {
           color="good"
           onClick={() => act("give_language",
             { language_name: props.language.name })}
-
         >
           Learn <Box className={'languages16x16 ' + props.language.icon} />
         </Button>
@@ -61,9 +59,9 @@ export const LanguagesPage = (props, context) => {
         </Section>
       </Stack.Item>
       <Stack.Item minWidth="33%">
-        <Section title={"Points: " + data.selected_languages.length + "/" + data.total_language_points}>
-          Here, you can purchase languages using a point buy system.
-          Each Language is worth 1 point.
+        <Section title={"Summary: " + data.selected_languages.length + "/" + data.total_language_points}>
+          You currently know {data.selected_languages.length} languages.{<br/>}
+          You can learn up to {data.total_language_points} languages.
         </Section>
       </Stack.Item>
       <Stack.Item minWidth="33%">

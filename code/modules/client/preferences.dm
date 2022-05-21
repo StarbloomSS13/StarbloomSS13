@@ -157,6 +157,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		data["character_profiles"] = create_character_profiles()
 		tainted_character_profiles = FALSE
 
+	//SKYRAT EDIT BEGIN
+	data["quirks_balance"] = GetQuirkBalance()
+	data["positive_quirk_count"] = GetPositiveQuirkCount()
+	//SKYRAT EDIT END
+
 	data["character_preferences"] = compile_character_preferences(user)
 
 	data["active_slot"] = default_slot
@@ -501,6 +506,11 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 	for(var/V in all_quirks)
 		var/datum/quirk/T = SSquirks.quirks[V]
 		bal -= initial(T.value)
+	//SKYRAT EDIT ADDITION
+	for(var/key in augments)
+		var/datum/augment_item/aug = GLOB.augment_items[augments[key]]
+		bal -= aug.cost
+	//SKYRAT EDIT END
 	return bal
 
 /datum/preferences/proc/GetPositiveQuirkCount()

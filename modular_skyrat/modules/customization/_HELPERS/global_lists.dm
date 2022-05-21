@@ -1,6 +1,5 @@
 /proc/make_skyrat_datum_references()
 	make_sprite_accessory_references()
-	make_body_marking_set_references()
 	make_body_marking_dna_block_references()
 	populate_total_ui_len_by_block()
 	populate_total_uf_len_by_block()
@@ -44,14 +43,6 @@
 					if(!GLOB.body_markings_per_limb[marking_zone])
 						GLOB.body_markings_per_limb[marking_zone] = list()
 					GLOB.body_markings_per_limb[marking_zone] += BM.name
-
-/proc/make_body_marking_set_references()
-	// Here we build the global list for all body markings sets
-	for(var/path in subtypesof(/datum/body_marking_set))
-		var/datum/body_marking_set/BM = path
-		if(initial(BM.name))
-			BM = new path()
-			GLOB.body_marking_sets[BM.name] = BM
 
 /proc/make_body_marking_dna_block_references()
 	for(var/marking_zone in GLOB.marking_zones)
