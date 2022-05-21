@@ -537,7 +537,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 			continue
 
 		preference.apply_to_human(character, read_preference(preference.type), src)
-		//to_chat(world, "after [preference.type] [json_encode(character.dna.features)]")
+
 	for (var/datum/preference_middleware/preference_middleware as anything in middleware)
 		preference_middleware.apply_to_human(character, src)
 	// SKYRAT EDIT END
