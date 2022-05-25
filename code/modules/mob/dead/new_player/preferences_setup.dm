@@ -105,5 +105,6 @@
 		mannequin.job = preview_job.title
 		mannequin.dress_up_as_job(preview_job, TRUE, src) // NON-MODULE CHANGE
 
+	mannequin.update_body()
 	COMPILE_OVERLAYS(mannequin)
 	return mannequin.appearance

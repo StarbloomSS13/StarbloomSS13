@@ -35,9 +35,10 @@
 #define DNA_SKIN_TONE_BLOCK 3
 #define DNA_UNI_IDENTITY_BLOCKS 7
 
+//SKYRAT EDIT REMOVAL BEGIN - CUSTOMIZATION (moved to modular_skyrat/modules/customization/_DEFINES/DNA.dm)
+/*
 /// This number needs to equal the total number of DNA blocks
 #define DNA_FEATURE_BLOCKS 16
-
 #define DNA_MUTANT_COLOR_BLOCK 1
 #define DNA_ETHEREAL_COLOR_BLOCK 2
 #define DNA_LIZARD_MARKINGS_BLOCK 3
@@ -53,6 +54,18 @@
 #define DNA_MOTH_MARKINGS_BLOCK 13
 #define DNA_MUSHROOM_CAPS_BLOCK 14
 #define DNA_MONKEY_TAIL_BLOCK 15
+*/ //SKYRAT EDIT CHANGE - ORIGINAL
+#define DNA_FEATURE_BLOCKS GLOB.dna_total_feature_blocks
+
+#define DNA_MANDATORY_COLOR_BLOCKS 5
+#define DNA_MUTANT_COLOR_BLOCK 1
+#define DNA_MUTANT_COLOR_2_BLOCK 2
+#define DNA_MUTANT_COLOR_3_BLOCK 3
+#define DNA_ETHEREAL_COLOR_BLOCK 4
+#define DNA_SKIN_COLOR_BLOCK 5
+
+// SKYRAT EDIT CHANGE END
+
 #define DNA_POD_HAIR_BLOCK 16
 
 #define DNA_SEQUENCE_LENGTH 4
@@ -115,6 +128,7 @@
 #define ORGAN_SLOT_TONGUE "tongue"
 #define ORGAN_SLOT_VOICE "vocal_cords"
 #define ORGAN_SLOT_ZOMBIE "zombie_infection"
+#define ORGAN_SLOT_WINGS "wings"
 
 /// Organ slot external
 #define ORGAN_SLOT_EXTERNAL_TAIL "tail"

@@ -28,7 +28,23 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	///A bitfield of "bodytypes", updated by /datum/obj/item/bodypart/proc/synchronize_bodytypes()
 	var/bodytype = BODYTYPE_HUMANOID | BODYTYPE_ORGANIC
 	///Clothing offsets. If a species has a different body than other species, you can offset clothing so they look less weird.
-	var/list/offset_features = list(OFFSET_UNIFORM = list(0,0), OFFSET_ID = list(0,0), OFFSET_GLOVES = list(0,0), OFFSET_GLASSES = list(0,0), OFFSET_EARS = list(0,0), OFFSET_SHOES = list(0,0), OFFSET_S_STORE = list(0,0), OFFSET_FACEMASK = list(0,0), OFFSET_HEAD = list(0,0), OFFSET_FACE = list(0,0), OFFSET_BELT = list(0,0), OFFSET_BACK = list(0,0), OFFSET_SUIT = list(0,0), OFFSET_NECK = list(0,0))
+	var/list/offset_features = list(
+		OFFSET_UNIFORM = list(0,0),
+		OFFSET_ID = list(0,0),
+		OFFSET_GLOVES = list(0,0),
+		OFFSET_GLASSES = list(0,0),
+		OFFSET_EARS = list(0,0),
+		OFFSET_SHOES = list(0,0),
+		OFFSET_S_STORE = list(0,0),
+		OFFSET_FACEMASK = list(0,0),
+		OFFSET_HEAD = list(0,0),
+		OFFSET_FACE = list(0,0),
+		OFFSET_BELT = list(0,0),
+		OFFSET_BACK = list(0,0),
+		OFFSET_SUIT = list(0,0),
+		OFFSET_NECK = list(0,0),
+		OFFSET_ACCESSORY = list(0, 0), // SKYRAT EDIT ADDITION
+	)
 
 	///The maximum number of bodyparts this species can have.
 	var/max_bodypart_count = 6
@@ -74,7 +90,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	  * They also allow for faster '[]' list access versus 'in'. Other than that, they are useless right now.
 	  * Layer hiding is handled by [/datum/species/proc/handle_mutant_bodyparts] below.
 	  */
-	var/list/mutant_bodyparts = list()
+	//var/list/mutant_bodyparts = list() //ORIGINAL
+	var/list/list/mutant_bodyparts = list() //SKYRAT EDIT CHANGE - CUSTOMIZATION (typed list)
 	///Internal organs that are unique to this race, like a tail.
 	var/list/mutant_organs = list()
 	///The bodyparts this species uses. assoc of bodypart string - bodypart type. Make sure all the fucking entries are in or I'll skin you alive.
@@ -89,7 +106,6 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	///List of external organs to generate like horns, frills, wings, etc. list(typepath of organ = "Round Beautiful BDSM Snout"). Still WIP
 	var/list/external_organs = list()
-
 	///Multiplier for the race's speed. Positive numbers make it move slower, negative numbers make it move faster.
 	var/speedmod = 0
 	///Percentage modifier for overall defense of the race, or less defense, if it's negative.
@@ -117,7 +133,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	///Base electrocution coefficient.  Basically a multiplier for damage from electrocutions.
 	var/siemens_coeff = 1
 	///What kind of damage overlays (if any) appear on our species when wounded? If this is "", does not add an overlay.
-	var/damage_overlay_type = "human"
+	var/damage_overlay_type = SPECIES_HUMAN
 	///To use MUTCOLOR with a fixed color that's independent of the mcolor feature in DNA.
 	var/fixed_mut_color = ""
 	///Special mutation that can be found in the genepool exclusively in this species. Dont leave empty or changing species will be a headache
@@ -206,10 +222,11 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	///Forces an item into this species' hands. Only an honorary mutantthing because this is not an organ and not loaded in the same way, you've been warned to do your research.
 	var/obj/item/mutanthands
 
-
-
 	///Bitflag that controls what in game ways something can select this species as a spawnable source, such as magic mirrors. See [mob defines][code/__DEFINES/mobs.dm] for possible sources.
 	var/changesource_flags = NONE
+
+	///Unique cookie given by admins through prayers
+	var/species_cookie = /obj/item/food/cookie
 
 	///For custom overrides for species ass images
 	var/icon/ass_image
@@ -463,6 +480,11 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	if(TRAIT_TOXIMMUNE in inherent_traits)
 		C.setToxLoss(0, TRUE, TRUE)
 
+	// SKYRAT EDIT ADDITION
+	for(var/obj/item/bodypart/limb in C.bodyparts)
+		limb.alpha = specific_alpha
+	// SKYRAT EDIT END
+
 	if(TRAIT_NOMETABOLISM in inherent_traits)
 		C.reagents.end_metabolization(C, keep_liverless = TRUE)
 
@@ -530,6 +552,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
  * Arguments:
  * * species_human - Human, whoever we're handling the body for
  */
+//SKYRAT EDIT REMOVAL BEGIN - CUSTOMIZATION (moved to modular)
+/*
 /datum/species/proc/handle_body(mob/living/carbon/human/species_human)
 	species_human.remove_overlay(BODY_LAYER)
 	if(HAS_TRAIT(species_human, TRAIT_INVISIBLE_MAN))
@@ -550,6 +574,18 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 		// eyes
 		if(!(NOEYESPRITES in species_traits))
+			var/obj/item/organ/eyes/E = H.getorganslot(ORGAN_SLOT_EYES)
+			var/mutable_appearance/eye_overlay
+			if(!E)
+				eye_overlay = mutable_appearance('icons/mob/human_face.dmi', "eyes_missing", -BODY_LAYER)
+			else
+				eye_overlay = mutable_appearance('icons/mob/human_face.dmi', E.eye_icon_state, -BODY_LAYER)
+			if((EYECOLOR in species_traits) && E)
+				eye_overlay.color = "#" + H.eye_color
+			if(OFFSET_FACE in H.dna.species.offset_features)
+				eye_overlay.pixel_x += H.dna.species.offset_features[OFFSET_FACE][1]
+				eye_overlay.pixel_y += H.dna.species.offset_features[OFFSET_FACE][2]
+			standing += eye_overlay
 			var/obj/item/organ/eyes/eye_organ = species_human.getorganslot(ORGAN_SLOT_EYES)
 			var/mutable_appearance/no_eyeslay
 			var/mutable_appearance/eye_overlay
@@ -577,6 +613,12 @@ GLOBAL_LIST_EMPTY(features_by_species)
 				if((EYECOLOR in species_traits) && eye_organ)
 					eye_overlay.color = species_human.eye_color
 				standing += eye_overlay
+
+		// blush
+		if (HAS_TRAIT(species_human, TRAIT_BLUSHING)) // Caused by either the *blush emote or the "drunk" mood event
+			var/mutable_appearance/blush_overlay = mutable_appearance('icons/mob/human_face.dmi', "blush", -BODY_ADJ_LAYER) //should appear behind the eyes
+			blush_overlay.color = COLOR_BLUSH_PINK
+			standing += blush_overlay
 
 	// organic body markings
 	if(HAS_MARKINGS in species_traits)
@@ -644,6 +686,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	species_human.apply_overlay(BODY_LAYER)
 	handle_mutant_bodyparts(species_human)
+*/
+//SKYRAT EDIT REMOVAL END
 
 /**
  * Handles the mutant bodyparts of a human
@@ -654,6 +698,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
  * * H - Human, whoever we're handling the body for
  * * forced_colour - The forced color of an accessory. Leave null to use mutant color.
  */
+//SKYRAT EDIT REMOVAL BEGIN - CUSTOMIZATION (moved to modular)
+/*
 /datum/species/proc/handle_mutant_bodyparts(mob/living/carbon/human/source, forced_colour)
 	var/list/bodyparts_to_add = mutant_bodyparts.Copy()
 	var/list/relevent_layers = list(BODY_BEHIND_LAYER, BODY_ADJ_LAYER, BODY_FRONT_LAYER)
@@ -685,6 +731,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	if("tail_monkey" in mutant_bodyparts)
 		if(source.wear_suit && (source.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "tail_monkey"
+
 
 	if(mutant_bodyparts["waggingtail_human"])
 		if(source.wear_suit && (source.wear_suit.flags_inv & HIDEJUMPSUIT))
@@ -729,12 +776,26 @@ GLOBAL_LIST_EMPTY(features_by_species)
 					accessory = GLOB.spines_list[source.dna.features["spines"]]
 				if("waggingspines")
 					accessory = GLOB.animated_spines_list[source.dna.features["spines"]]
+				if("snout")
+					accessory = GLOB.snouts_list[source.dna.features["snout"]]
+				if("frills")
+					accessory = GLOB.frills_list[source.dna.features["frills"]]
+				if("horns")
+					accessory = GLOB.horns_list[source.dna.features["horns"]]
 				if("ears")
 					accessory = GLOB.ears_list[source.dna.features["ears"]]
 				if("body_markings")
 					accessory = GLOB.body_markings_list[source.dna.features["body_markings"]]
+				if("wings")
+					accessory = GLOB.wings_list[source.dna.features["wings"]]
+				if("wingsopen")
+					accessory = GLOB.wings_open_list[source.dna.features["wings"]]
 				if("legs")
 					accessory = GLOB.legs_list[source.dna.features["legs"]]
+				if("moth_wings")
+					accessory = GLOB.moth_wings_list[source.dna.features["moth_wings"]]
+				if("moth_antennae")
+					accessory = GLOB.moth_antennae_list[source.dna.features["moth_antennae"]]
 				if("caps")
 					accessory = GLOB.caps_list[source.dna.features["caps"]]
 				if("tail_monkey")
@@ -803,6 +864,9 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	source.apply_overlay(BODY_BEHIND_LAYER)
 	source.apply_overlay(BODY_ADJ_LAYER)
 	source.apply_overlay(BODY_FRONT_LAYER)
+*/
+//SKYRAT EDIT REMOVAL END
+
 
 //This exists so sprite accessories can still be per-layer without having to include that layer's
 //number in their sprite name, which causes issues when those numbers change.
@@ -814,9 +878,23 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			return "ADJ"
 		if(BODY_FRONT_LAYER)
 			return "FRONT"
+		//SKYRAT EDIT ADDITION BEGIN
+		if(BODY_FRONT_UNDER_CLOTHES)
+			return "FRONT"
+		//SKYRAT EDIT ADDITION END
 
 ///Proc that will randomise the hair, or primary appearance element (i.e. for moths wings) of a species' associated mob
 /datum/species/proc/randomize_main_appearance_element(mob/living/carbon/human/human_mob)
+	//SKYRAT EDIT ADDITION BEGIN
+	for(var/key in mutant_bodyparts) //Randomize currently attached mutant bodyparts, organs should update when they need to (detachment)
+		var/datum/sprite_accessory/SP = random_accessory_of_key_for_species(key, src)
+		var/list/color_list = SP.get_default_color(human_mob.dna.features, src)
+		var/list/final_list = list()
+		final_list[MUTANT_INDEX_NAME] = SP.name
+		final_list[MUTANT_INDEX_COLOR_LIST] = color_list
+		mutant_bodyparts[key] = final_list
+	human_mob.update_mutant_bodyparts()
+	//SKYRAT EDIT ADDITION END
 	human_mob.hairstyle = random_hairstyle(human_mob.gender)
 	human_mob.update_hair()
 
@@ -1783,11 +1861,6 @@ GLOBAL_LIST_EMPTY(features_by_species)
 //Tail Wagging//
 ////////////////
 
-/datum/species/proc/can_wag_tail(mob/living/carbon/human/H)
-	return FALSE
-
-/datum/species/proc/is_wagging_tail(mob/living/carbon/human/H)
-	return FALSE
 
 /*
  * This proc is called when a mob loses their tail.
@@ -1805,8 +1878,14 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	if(on_species_init)
 		return
 	// If we don't have a set tail, don't bother adding moodlets
+	//SKYRAT EDIT CHANGE BEGIN
+	/*
 	if(!mutant_organs.len)
 		return
+	*/
+	if(!tail_owner.dna.mutant_bodyparts["tail"])
+		return
+	//SKYRAT EDIT CHANGE END
 
 	SEND_SIGNAL(tail_owner, COMSIG_ADD_MOOD_EVENT, "tail_lost", /datum/mood_event/tail_lost)
 	SEND_SIGNAL(tail_owner, COMSIG_ADD_MOOD_EVENT, "tail_balance_lost", /datum/mood_event/tail_balance_lost)
@@ -1826,13 +1905,31 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	if(on_species_init)
 		return
 	// If we don't have a set tail, don't add moodlets
+	//SKYRAT EDIT CHANGE BEGIN
+	/*
 	if(!mutant_organs.len)
 		return
+	*/
+	if(!tail_owner.dna.mutant_bodyparts["tail"])
+		return
+	//SKYRAT EDIT CHANGE END
 
+	//SKYRAT EDIT CHANGE BEGIN
+	/*
 	if(found_tail.type in mutant_organs)
 		SEND_SIGNAL(tail_owner, COMSIG_ADD_MOOD_EVENT, "right_tail_regained", /datum/mood_event/tail_regained_right)
 	else
 		SEND_SIGNAL(tail_owner, COMSIG_ADD_MOOD_EVENT, "wrong_tail_regained", /datum/mood_event/tail_regained_wrong)
+	*/
+	//SKYRAT EDIT TAIL TRAUMA BEGIN
+	/* Temporarily disabling until fixed upon player spawm
+	if(tail_owner.dna.mutant_bodyparts["tail"][MUTANT_INDEX_NAME] == mutant_bodyparts["tail"][MUTANT_INDEX_NAME]) //mutant_bodyparts["tail"] should exist here
+		SEND_SIGNAL(tail_owner, COMSIG_ADD_MOOD_EVENT, "right_tail_regained", /datum/mood_event/tail_regained_right)
+	else
+		SEND_SIGNAL(tail_owner, COMSIG_ADD_MOOD_EVENT, "wrong_tail_regained", /datum/mood_event/tail_regained_wrong)
+	*/
+	//SKYRAT EDIT TAIL TRAUMA END
+	//SKYRAT EDIT CHANGE END
 
 /*
  * Clears all tail related moodlets when they lose their species.
@@ -1846,9 +1943,19 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	SEND_SIGNAL(former_tail_owner, COMSIG_CLEAR_MOOD_EVENT, "wrong_tail_regained")
 	stop_wagging_tail(former_tail_owner)
 
+
+//SKYRAT EDIT REMOVAL BEGIN - CUSTOMIZATION (moved to modular)
+/*
+/datum/species/proc/can_wag_tail(mob/living/carbon/human/H)
+	return FALSE
+
+/datum/species/proc/is_wagging_tail(mob/living/carbon/human/H)
+	return FALSE
 /datum/species/proc/start_wagging_tail(mob/living/carbon/human/H)
 
 /datum/species/proc/stop_wagging_tail(mob/living/carbon/human/H)
+*/
+//SKYRAT EDIT REMOVAL END
 
 ///////////////
 //FLIGHT SHIT//
@@ -1865,8 +1972,9 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		else
 			var/list/wings = list()
 			for(var/W in wings_icons)
-				var/datum/sprite_accessory/S = GLOB.wings_list[W] //Gets the datum for every wing this species has, then prompts user with a radial menu
-				var/image/img = image(icon = 'icons/mob/clothing/wings.dmi', icon_state = "m_wingsopen_[S.icon_state]_BEHIND") //Process the HUD elements
+				//var/datum/sprite_accessory/S = GLOB.wings_list[W]	//Gets the datum for every wing this species has, then prompts user with a radial menu //ORIGINAL
+				var/datum/sprite_accessory/S = GLOB.sprite_accessories["wings"][W] //SKYRAT EDIT CHANGE
+				var/image/img = image(icon = 'icons/mob/clothing/wings.dmi', icon_state = "m_wingsopen_[S.icon_state]_BEHIND")	//Process the HUD elements
 				img.transform *= 0.5
 				img.pixel_x = -32
 				if(wings[S.name])
@@ -1880,9 +1988,12 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		wings_icon = wings_icons[1]
 
 	var/obj/item/organ/external/wings/functional/wings = new(null, wings_icon, H.physique)
+	// SKYRAT EDIT START - Fixes the loss of wings to just run the insert twice
+	if(H.getorganslot(ORGAN_SLOT_EXTERNAL_WINGS))
+		wings.Insert(H)
+	// SKYRAT EDIT END
 	wings.Insert(H)
 	handle_mutant_bodyparts(H)
-
 /**
  * The human species version of [/mob/living/carbon/proc/get_biological_state]. Depends on the HAS_FLESH and HAS_BONE species traits, having bones lets you have bone wounds, having flesh lets you have burn, slash, and piercing wounds
  */
@@ -1897,6 +2008,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 /datum/species/proc/spec_unarmedattack(mob/living/carbon/human/user, atom/target, modifiers)
 	return FALSE
 
+/* SKYRAT EDIT REMOVAL - MOVED TO MODULAR
 /// Returns a list of strings representing features this species has.
 /// Used by the preferences UI to know what buttons to show.
 /datum/species/proc/get_features()
@@ -1923,6 +2035,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	GLOB.features_by_species[type] = features
 
 	return features
+*/
 
 /// Given a human, will adjust it before taking a picture for the preferences UI.
 /// This should create a CONSISTENT result, so the icons don't randomly change.

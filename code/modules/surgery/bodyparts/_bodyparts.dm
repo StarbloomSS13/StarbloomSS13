@@ -16,6 +16,8 @@
 	var/husk_type = "humanoid"
 	layer = BELOW_MOB_LAYER //so it isn't hidden behind objects when on the floor
 	grind_results = list(/datum/reagent/bone_dust = 10, /datum/reagent/liquidgibs = 5) // robotic bodyparts and chests/heads cannot be ground
+	/// The mob that "owns" this limb
+	/// DO NOT MODIFY DIRECTLY. Use set_owner()
 	var/mob/living/carbon/owner
 
 	///A bitfield of bodytypes for clothing, surgery, and misc information
@@ -41,6 +43,7 @@
 	var/aux_layer
 	/// bitflag used to check which clothes cover this bodypart
 	var/body_part
+	/// List of obj/item's embedded inside us. Managed by embedded components, do not modify directly
 	var/list/embedded_objects = list()
 	/// are we a hand? if so, which one!
 	var/held_index = 0
@@ -656,6 +659,13 @@
 
 		dmg_overlay_type = owner_species.damage_overlay_type
 
+		// SKYRAT EDIT ADDITION
+		markings = LAZYCOPY(owner_species.body_markings[body_zone])
+		if(aux_zone)
+			aux_zone_markings = LAZYCOPY(owner_species.body_markings[aux_zone])
+		markings_alpha = owner_species.markings_alpha
+		// SKYRAT EDIT END
+
 	else if(animal_origin == MONKEY_BODYPART) //currently monkeys are the only non human mob to have damage overlays.
 		dmg_overlay_type = animal_origin
 
@@ -749,9 +759,11 @@
 		draw_color ||= (species_color) || (skin_tone && skintone2hex(skin_tone))
 
 	if(draw_color)
-		limb.color = "[draw_color]"
+		//SKYRAT EDIT BEGIN - Alpha values on limbs //We check if the limb is attached and if the owner has an alpha value to append
+		limb.color = owner?.dna.species ? "[draw_color][num2hex(owner.dna.species.specific_alpha, 2)]" : "[draw_color]"
 		if(aux_zone)
-			aux.color = "[draw_color]"
+			aux.color = owner?.dna.species ? "[draw_color][num2hex(owner.dna.species.specific_alpha, 2)]" : "[draw_color]"
+		//SKYRAT EDIT END
 
 	//EMISSIVE CODE START
 	if(blocks_emissive)
@@ -771,12 +783,72 @@
 			continue
 		//Some externals have multiple layers for background, foreground and between
 		for(var/external_layer in external_organ.all_layers)
-			if(istype(external_organ, /obj/item/organ/external/pod_hair))
-				var/rgb_list = rgb2num(draw_color, COLORSPACE_RGB)
-				// Invert the colour of the pod hair's flower
-				draw_color = rgb(255 - rgb_list[1], 255 - rgb_list[2], 255 - rgb_list[3])
 			if(external_organ.layers & external_layer)
-				external_organ.get_overlays(., image_dir, external_organ.bitflag_to_layer(external_layer), limb_gender, draw_color)
+				external_organ.get_overlays(
+					.,
+					image_dir,
+					external_organ.bitflag_to_layer(external_layer),
+					limb_gender,
+					external_organ.overrides_color ? external_organ.override_color(draw_color) : draw_color
+				)
+
+	// SKYRAT EDIT ADDITION BEGIN - MARKINGS CODE
+	var/override_color
+	// First, check to see if this bodypart is husked. If so, we don't want to apply our sparkledog colors to the limb.
+	if(is_husked)
+		override_color = "#888888"
+	// We need to check that the owner exists(could be a placed bodypart) and that it's not a chainsawhand and that they're a human with usable DNA.
+	if(!is_pseudopart)
+		for(var/key in markings) // Cycle through all of our currently selected markings.
+			var/datum/body_marking/body_marking = GLOB.body_markings[key]
+			if (!body_marking) // Edge case prevention.
+				continue
+
+			var/render_limb_string = limb_id == "digitigrade" ? ("digitigrade_1_" + body_zone) : body_zone // I am not sure why there are _1 and _2 versions of digi, so, it's staying like this.
+
+			var/gender_modifier = ""
+			if(body_zone == BODY_ZONE_CHEST) // Chest markings have male and female versions.
+				if(is_dimorphic)
+					gender_modifier = "_[limb_gender]"
+				else
+					gender_modifier = "_m" // Again, why we don't define if a marking can have male/female is byond me.
+
+			var/mutable_appearance/accessory_overlay
+			var/mutable_appearance/emissive
+			accessory_overlay = mutable_appearance(body_marking.icon, "[body_marking.icon_state]_[render_limb_string][gender_modifier]", -BODYPARTS_LAYER)
+			accessory_overlay.alpha = markings_alpha
+			if(markings[key][2])
+				emissive = emissive_appearance_copy(accessory_overlay)
+			if(override_color)
+				accessory_overlay.color = override_color
+			else
+				accessory_overlay.color = markings[key][1]
+			. += accessory_overlay
+			if (emissive)
+				. += emissive
+
+		if(aux_zone)
+			for(var/key in aux_zone_markings)
+				var/datum/body_marking/body_marking = GLOB.body_markings[key]
+				if (!body_marking) // Edge case prevention.
+					continue
+
+				var/render_limb_string = aux_zone
+
+				var/mutable_appearance/emissive
+				var/mutable_appearance/accessory_overlay
+				accessory_overlay = mutable_appearance(body_marking.icon, "[body_marking.icon_state]_[render_limb_string]", -aux_layer)
+				accessory_overlay.alpha = markings_alpha
+				if (aux_zone_markings[key][2])
+					emissive = emissive_appearance_copy(accessory_overlay)
+				if(override_color)
+					accessory_overlay.color = override_color
+				else
+					accessory_overlay.color = aux_zone_markings[key][1]
+				. += accessory_overlay
+				if (emissive)
+					. += emissive
+	// SKYRAT EDIT END - MARKINGS CODE END
 
 /obj/item/bodypart/deconstruct(disassembled = TRUE)
 	SHOULD_CALL_PARENT(TRUE)

@@ -1,3 +1,4 @@
+/* SKYRAT EDIT REMOVAL
 /datum/preference/choiced/tail_human
 	savefile_key = "feature_human_tail"
 	savefile_identifier = PREFERENCE_CHARACTER
@@ -6,7 +7,7 @@
 	relevant_mutant_bodypart = "tail_human"
 
 /datum/preference/choiced/tail_human/init_possible_values()
-	return assoc_to_keys(GLOB.tails_list_human)
+	return assoc_to_keys(GLOB.sprite_accessories["tail"])
 
 /datum/preference/choiced/tail_human/apply_to_human(mob/living/carbon/human/target, value)
 	target.dna.features["tail_human"] = value
@@ -23,7 +24,7 @@
 	relevant_mutant_bodypart = "ears"
 
 /datum/preference/choiced/ears/init_possible_values()
-	return assoc_to_keys(GLOB.ears_list)
+	return GLOB.sprite_accessories["ears"]
 
 /datum/preference/choiced/ears/apply_to_human(mob/living/carbon/human/target, value)
 	target.dna.features["ears"] = value
@@ -31,3 +32,4 @@
 /datum/preference/choiced/ears/create_default_value()
 	var/datum/sprite_accessory/ears/cat/ears = /datum/sprite_accessory/ears/cat
 	return initial(ears.name)
+*/

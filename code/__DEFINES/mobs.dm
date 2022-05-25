@@ -579,6 +579,10 @@
 #define FRONT_MUTATIONS_LAYER 27
 /// Damage indicators (cuts and burns)
 #define DAMAGE_LAYER 26
+//SKYRAT EDIT ADDITION BEGIN.
+/// This layer is used for things that shouldn't be over clothes, but should be over mutations.
+#define BODY_FRONT_UNDER_CLOTHES 25.5
+//SKYRAT EDIT ADDITION END
 /// Jumpsuit clothing layer
 #define UNIFORM_LAYER 25
 /// ID card layer (might be deprecated)
