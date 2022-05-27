@@ -60,10 +60,10 @@ export const CharacterPreferenceWindow = (props, context) => {
       pageContents = <JobsPage />;
       break;
     case Page.Limbs:
-      pageContents = <LimbsPage />
+      pageContents = <LimbsPage />;
       break;
     case Page.Languages:
-      pageContents = <LanguagesPage />
+      pageContents = <LanguagesPage />;
       break;
     case Page.Main:
       pageContents = (<MainPage
