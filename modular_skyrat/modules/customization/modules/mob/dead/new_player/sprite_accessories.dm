@@ -304,12 +304,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	gender = FEMALE
 	use_static = TRUE
 
-/datum/sprite_accessory/underwear/female_kinky
-	name = "Panties - Kinky Black"
-	icon_state = "panties_kinky"
-	gender = FEMALE
-	use_static = TRUE
-
 /datum/sprite_accessory/underwear/panties_uk
 	name = "Panties - UK"
 	icon_state = "panties_uk"
@@ -375,16 +369,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	icon_state = "thong_babydoll"
 	gender = FEMALE
 
-/datum/sprite_accessory/underwear/chastbelt
-	name = "Chastity Belt"
-	icon_state = "chastbelt"
-	use_static = TRUE
-
-/datum/sprite_accessory/underwear/chastcage
-	name = "Chastity Cage"
-	icon_state = "chastcage"
-	use_static = null
-
 /datum/sprite_accessory/underwear/lizared
 	name = "LIZARED Underwear"
 	icon_state = "lizared"
@@ -420,7 +404,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 
 /datum/sprite_accessory/underwear/male_uk
 	has_digitigrade = TRUE
-
 
 /datum/sprite_accessory/undershirt
 	icon = 'modular_skyrat/master_files/icons/mob/clothing/underwear.dmi'
@@ -476,12 +459,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	icon_state = "bra_thin"
 	gender = FEMALE
 	use_static = null
-
-/datum/sprite_accessory/undershirt/bra_kinky
-	name = "Bra - Kinky Black"
-	icon_state = "bra_kinky"
-	gender = FEMALE
-	use_static = TRUE
 
 /datum/sprite_accessory/undershirt/bra_freedom
 	name = "Bra - Freedom"
@@ -582,36 +559,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 /datum/sprite_accessory/undershirt/tubetop
 	name = "Tube Top"
 	icon_state = "tubetop"
-	gender = FEMALE
-	use_static = null
-
-/datum/sprite_accessory/undershirt/chastbra
-	name = "Chastity Bra"
-	icon_state = "chastbra"
-	gender = FEMALE
-	use_static = TRUE
-
-/datum/sprite_accessory/undershirt/pasties
-	name = "Pasties"
-	icon_state = "pasties"
-	gender = FEMALE
-	use_static = null
-
-/datum/sprite_accessory/undershirt/pasties_alt
-	name = "Pasties - Alt"
-	icon_state = "pasties_alt"
-	gender = FEMALE
-	use_static = null
-
-/datum/sprite_accessory/undershirt/shibari
-	name = "Shibari"
-	icon_state = "shibari"
-	gender = FEMALE
-	use_static = null
-
-/datum/sprite_accessory/undershirt/shibari_sleeves
-	name = "Shibari Sleeves"
-	icon_state = "shibari_sleeves"
 	gender = FEMALE
 	use_static = null
 
