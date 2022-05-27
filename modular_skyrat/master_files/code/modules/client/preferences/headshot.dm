@@ -15,6 +15,8 @@
 	target?.dna.features["headshot"] = value
 
 /datum/preference/text/headshot/is_valid(value)
+	if(value == "")
+		return TRUE
 	if(!length(value)) //Just to get blank ones out of the way
 		return FALSE
 	if(!findtext(value, "https://", 1, 9))
