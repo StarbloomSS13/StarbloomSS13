@@ -52,7 +52,7 @@
 	icon_state = "none"
 	recommended_species = list(SPECIES_SYNTHMAMMAL, SPECIES_MAMMAL,SPECIES_HUMAN, SPECIES_SYNTHHUMAN, SPECIES_HUMANOID, SPECIES_GHOUL)
 	icon = 'modular_skyrat/master_files/icons/mob/sprite_accessory/tails.dmi'
-	organ_type = /obj/item/organ/tail/fluffy/no_wag
+	organ_type = /obj/item/organ/tail/fluffy
 	color_src = USE_MATRIXED_COLORS
 
 /datum/sprite_accessory/tails/mammal/wagging
@@ -219,7 +219,7 @@
 	general_type = "marine"
 
 /datum/sprite_accessory/tails/mammal/wagging/otie
-	name = "Otusian"
+	name = "Stubby Tail"
 	icon_state = "otie"
 	general_type = "straighttail"
 
@@ -241,7 +241,7 @@
 	icon_state = "pede"
 
 /datum/sprite_accessory/tails/mammal/wagging/sergal
-	name = "Sergal"
+	name = "Double Fluffy Tail"
 	icon_state = "sergal"
 	general_type = "shepherdlike"
 
@@ -295,7 +295,7 @@
 	general_type = "shepherdlike"
 
 /datum/sprite_accessory/tails/mammal/wagging/guilmon
-	name = "Guilmon"
+	name = "Smooth Lizard Tail"
 	icon_state = "guilmon"
 	general_type = SPECIES_LIZARD
 
@@ -309,12 +309,12 @@
     icon_state = "raptor"
 
 /datum/sprite_accessory/tails/mammal/wagging/lunasune
-	name = "Lunasune"
+	name = "Hundred Kitsune Tails"
 	icon_state = "lunasune"
 	color_src = USE_ONE_COLOR
 
 /datum/sprite_accessory/tails/mammal/wagging/spade
-	name = "Succubus Spade Tail"
+	name = "Demon Tail"
 	icon_state = "spade"
 
 /datum/sprite_accessory/tails/mammal/wagging/plugtail
@@ -322,18 +322,8 @@
 	icon_state = "plugtail"
 
 /datum/sprite_accessory/tails/mammal/wagging/zorgoia
-	name = "Zorgoia tail"
+	name = "Stinger tail"
 	icon_state = "zorgoia"
-
-/datum/sprite_accessory/tails/mammal/wagging/tailmawwag
-	name = "Tailmaw (wag)"
-	icon_state = "tailmawwag"
-	color_src = USE_ONE_COLOR
-
-/datum/sprite_accessory/tails/mammal/wagging/tailmaw
-	name = "Tailmaw"
-	icon_state = "tailmaw"
-	color_src = USE_ONE_COLOR
 
 /datum/sprite_accessory/tails/mammal/wagging/snake
 	name = "Snake"
@@ -345,14 +335,14 @@
 	general_type = "teshari"
 
 /datum/sprite_accessory/tails/mammal/teshari/default
-	name = "Teshari Default Tail"
+	name = "Horse Tail"
 	icon_state = "teshari_default"
 
 /datum/sprite_accessory/tails/mammal/teshari/fluffy
-	name = "Teshari Fluffy Tail"
+	name = "Fluffy Horse Tail"
 	icon_state = "teshari_fluffy"
 /datum/sprite_accessory/tails/mammal/teshari/thin
-	name = "Teshari Thin Tail"
+	name = "Thin Horse Tail"
 	icon_state = "teshari_thin"
 
 /datum/sprite_accessory/tails/mammal/wagging/snakestripe
