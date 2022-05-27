@@ -321,3 +321,27 @@
 	name = "Deer 2"
 	icon_state = "deer2"
 	color_src = USE_ONE_COLOR
+
+/datum/sprite_accessory/ears/mutant/elf/wide
+	name = "Wide Elf"
+	icon_state = "elfwide"
+
+/datum/sprite_accessory/ears/mutant/elf/broad
+	name = "Broad Elf"
+	icon_state = "elfbroad"
+
+/datum/sprite_accessory/ears/mutant/elf/longer
+	name = "Longer Elf"
+	icon_state = "elflonger"
+
+/datum/sprite_accessory/ears/mutant/horns
+    color_src = USE_MATRIXED_COLORS
+    default_color = DEFAULT_SKIN_OR_PRIMARY
+
+/datum/sprite_accessory/ears/mutant/horns/drake
+	name = "Drake Horns"
+	icon_state = "drake"
+
+/datum/sprite_accessory/ears/mutant/horns/lifted
+	name = "Lifted Horns"
+	icon_state = "liftedhorns"
