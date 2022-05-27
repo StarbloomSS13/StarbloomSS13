@@ -42,8 +42,8 @@ GLOBAL_LIST_EMPTY(ec_glass) //Global list of all EC Glass windows, used in signa
 /obj/machinery/button/ec_glass
 	name = "electrochromic glass switch"
 	desc = "A remote control switch for an array of electrochromic panes."
-	icon_state = "launcher"
-	skin = "launcher"
+	icon_state = "doorctrl"
+	skin = "doorctrl"
 	device_type = /obj/item/assembly/control/ec_glass
 
 ///Assembly used in ec glass buttons
