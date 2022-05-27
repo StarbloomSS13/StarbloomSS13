@@ -13,7 +13,7 @@ export const KnownLanguage = (props, context) => {
           color="bad"
           onClick={() => act("remove_language",
             { language_name: props.language.name })}
-          >
+        >
           Forget <Box className={'languages16x16 ' + props.language.icon} />
         </Button>
       </Section>
@@ -60,7 +60,7 @@ export const LanguagesPage = (props, context) => {
       </Stack.Item>
       <Stack.Item minWidth="33%">
         <Section title={"Summary: " + data.selected_languages.length + "/" + data.total_language_points}>
-          You currently know {data.selected_languages.length} languages.{<br/>}
+          You currently know {data.selected_languages.length} languages.{<br />}
           You can learn up to {data.total_language_points} languages.
         </Section>
       </Stack.Item>
