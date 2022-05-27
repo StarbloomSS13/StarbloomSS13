@@ -334,13 +334,13 @@
 	name = "Longer Elf"
 	icon_state = "elflonger"
 
+/datum/sprite_accessory/ears/mutant/horns
+    color_src = USE_MATRIXED_COLORS
+    default_color = DEFAULT_SKIN_OR_PRIMARY
+
 /datum/sprite_accessory/ears/mutant/horns/drake
 	name = "Drake Horns"
 	icon_state = "drake"
-
-/datum/sprite_accessory/ears/mutant/horns/dragon
-	name = "Dragon Horns"
-	icon_state = "dragon"
 
 /datum/sprite_accessory/ears/mutant/horns/lifted
 	name = "Lifted Horns"
