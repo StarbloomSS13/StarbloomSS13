@@ -622,3 +622,19 @@
 		icon_state = initial(icon_state)
 		desc = initial(desc)
 		bigshot.update_inv_glasses()
+
+/obj/item/clothing/glasses/thin
+	name = "thin glasses"
+	desc = "Often seen staring down at someone taking a book."
+	worn_icon = 'icons/mob/clothing/eyes.dmi'
+	icon = 'icons/obj/clothing/glasses.dmi'
+	icon_state = "glasses_thin"
+	vision_correction = TRUE
+
+/obj/item/clothing/glasses/modern
+	name = "modern glasses"
+	desc = "After Nerd. Co went bankrupt for tax evasion and invasion, they were bought out by Dork.Co, who revamped their classic design."
+	worn_icon = 'icons/mob/clothing/eyes.dmi'
+	icon = 'icons/obj/clothing/glasses.dmi'
+	icon_state = "glasses_alt"
+	vision_correction = TRUE

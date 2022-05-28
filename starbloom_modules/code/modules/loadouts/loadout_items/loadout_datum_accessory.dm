@@ -74,3 +74,7 @@ GLOBAL_LIST_INIT(loadout_accessory, generate_loadout_items(/datum/loadout_item/a
 	name = "Heirloom Skull Codpiece"
 	item_path = /obj/item/clothing/accessory/armorless_skullcodpiece
 	additional_tooltip_contents = list(TOOLTIP_NO_ARMOR)
+
+/datum/loadout_item/accessory/pride_pin
+	name = "Pride Pin"
+	item_path = /obj/item/clothing/accessory/pride

@@ -21,6 +21,17 @@
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
+/obj/item/clothing/under/syndicate/crew
+	name = "non-tactical turtleneck"
+	desc = "A normal looking turtleneck with cargo pants. Its tacticool operator magic appears not to be present."
+	icon_state = "syndicate"
+	inhand_icon_state = "bl_suit"
+	has_sensor = HAS_SENSORS
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
+	alt_covers_chest = TRUE
+	icon = 'icons/obj/clothing/under/syndicate.dmi'
+	worn_icon = 'icons/mob/clothing/under/syndicate.dmi'
+
 /obj/item/clothing/under/syndicate/bloodred
 	name = "blood-red sneaksuit"
 	desc = "It still counts as stealth if there are no witnesses."
