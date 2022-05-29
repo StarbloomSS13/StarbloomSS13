@@ -190,3 +190,21 @@ export const headshot: Feature<string> = {
   description: "Add an image to your character, visible on close examination. Requires it be formatted properly.",
   component: FeatureShortTextInput,
 };
+
+export const hide_synth_identity: FeatureToggle = {
+  name: "Hide Synthetic Identity",
+  description: "Do you want your identity to show up as human on things like medical scanners?",
+  component: CheckboxInput,
+};
+
+export const synth_can_metabolize: FeatureToggle = {
+  name: "Chemical Metabolizing",
+  description: "Do you want to be able to metabolize and process chemicals?",
+  component: CheckboxInput,
+};
+
+export const synth_hunger: FeatureToggle = {
+  name: "Hunger",
+  description: "Do you want to become hungry? Just like one of those regular organics?",
+  component: CheckboxInput,
+};

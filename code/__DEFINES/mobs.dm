@@ -103,6 +103,7 @@
 #define SPECIES_SHADOW "shadow"
 #define SPECIES_SKELETON "skeleton"
 #define SPECIES_SNAIL "snail"
+#define SPECIES_SYNTHETIC "synthetic"
 #define SPECIES_VAMPIRE "vampire"
 #define SPECIES_ZOMBIE "zombie"
 #define SPECIES_ZOMBIE_INFECTIOUS "memezombie"
