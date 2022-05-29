@@ -33,6 +33,7 @@
 		/datum/language/eurocom,
 		/datum/language/neareastern,
 		/datum/language/kixhosa,
+		/datum/language/machine,
 	))
 
 /obj/item/organ/tongue/Initialize(mapload)
