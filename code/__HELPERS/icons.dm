@@ -1,22 +1,14 @@
 /*
 IconProcs README
-
 A BYOND library for manipulating icons and colors
-
 by Lummox JR
-
 version 1.0
-
 The IconProcs library was made to make a lot of common icon operations much easier. BYOND's icon manipulation
 routines are very capable but some of the advanced capabilities like using alpha transparency can be unintuitive to beginners.
-
 CHANGING ICONS
-
 Several new procs have been added to the /icon datum to simplify working with icons. To use them,
 remember you first need to setup an /icon var like so:
-
 GLOBAL_DATUM_INIT(my_icon, /icon, new('iconfile.dmi'))
-
 icon/ChangeOpacity(amount = 1)
 	A very common operation in DM is to try to make an icon more or less transparent. Making an icon more
 	transparent is usually much easier than making it less so, however. This proc basically is a frontend
@@ -48,35 +40,26 @@ icon/UseAlphaMask(mask, mode)
 	Sometimes you may want to take the alpha values from one icon and use them on a different icon.
 	This proc will do that. Just supply the icon whose alpha mask you want to use, and src will change
 	so it has the same colors as before but uses the mask for opacity.
-
 COLOR MANAGEMENT AND HSV
-
 RGB isn't the only way to represent color. Sometimes it's more useful to work with a model called HSV, which stands for hue, saturation, and value.
-
 	* The hue of a color describes where it is along the color wheel. It goes from red to yellow to green to
 	cyan to blue to magenta and back to red.
 	* The saturation of a color is how much color is in it. A color with low saturation will be more gray,
 	and with no saturation at all it is a shade of gray.
 	* The value of a color determines how bright it is. A high-value color is vivid, moderate value is dark,
 	and no value at all is black.
-
 Just as BYOND uses "#rrggbb" to represent RGB values, a similar format is used for HSV: "#hhhssvv". The hue is three
 hex digits because it ranges from 0 to 0x5FF.
-
 	* 0 to 0xFF - red to yellow
 	* 0x100 to 0x1FF - yellow to green
 	* 0x200 to 0x2FF - green to cyan
 	* 0x300 to 0x3FF - cyan to blue
 	* 0x400 to 0x4FF - blue to magenta
 	* 0x500 to 0x5FF - magenta to red
-
 Knowing this, you can figure out that red is "#000ffff" in HSV format, which is hue 0 (red), saturation 255 (as colorful as possible),
 value 255 (as bright as possible). Green is "#200ffff" and blue is "#400ffff".
-
 More than one HSV color can match the same RGB color.
-
 Here are some procs you can use for color management:
-
 ReadRGB(rgb)
 	Takes an RGB string like "#ffaa55" and converts it to a list such as list(255,170,85). If an RGBA format is used
 	that includes alpha, the list will have a fourth item for the alpha value.
@@ -118,42 +101,33 @@ ColorTone(rgb, tone)
 
 /*
 Get Flat Icon DEMO by DarkCampainger
-
 This is a test for the get flat icon proc, modified approprietly for icons and their states.
 Probably not a good idea to run this unless you want to see how the proc works in detail.
 mob
 	icon = 'old_or_unused.dmi'
 	icon_state = "green"
-
 	Login()
 		// Testing image underlays
 		underlays += image(icon='old_or_unused.dmi',icon_state="red")
 		underlays += image(icon='old_or_unused.dmi',icon_state="red", pixel_x = 32)
 		underlays += image(icon='old_or_unused.dmi',icon_state="red", pixel_x = -32)
-
 		// Testing image overlays
 		add_overlay(image(icon='old_or_unused.dmi',icon_state="green", pixel_x = 32, pixel_y = -32))
 		add_overlay(image(icon='old_or_unused.dmi',icon_state="green", pixel_x = 32, pixel_y = 32))
 		add_overlay(image(icon='old_or_unused.dmi',icon_state="green", pixel_x = -32, pixel_y = -32))
-
 		// Testing icon file overlays (defaults to mob's state)
 		add_overlay('_flat_demoIcons2.dmi')
-
 		// Testing icon_state overlays (defaults to mob's icon)
 		add_overlay("white")
-
 		// Testing dynamic icon overlays
 		var/icon/I = icon('old_or_unused.dmi', icon_state="aqua")
 		I.Shift(NORTH,16,1)
 		add_overlay(I)
-
 		// Testing dynamic image overlays
 		I=image(icon=I,pixel_x = -32, pixel_y = 32)
 		add_overlay(I)
-
 		// Testing object types (and layers)
 		add_overlay(/obj/effect/overlay_test)
-
 		loc = locate (10,10,1)
 	verb
 		Browse_Icon()
@@ -164,11 +138,9 @@ mob
 			src<<browse_rsc(getFlatIcon(src), iconName)
 			// Display the icon in their browser
 			src<<browse("<body bgcolor='#000000'><p><img src='[iconName]'></p></body>")
-
 		Output_Icon()
 			set name = "2. Output Icon"
 			to_chat(src, "Icon is: [icon2base64html(getFlatIcon(src))]")
-
 		Label_Icon()
 			set name = "3. Label Icon"
 			// Give it a name for the cache
@@ -179,11 +151,9 @@ mob
 			src<<browse_rsc(I, iconName)
 			// Update the label to show it
 			winset(src,"imageLabel","image='[REF(I)]'");
-
 		Add_Overlay()
 			set name = "4. Add Overlay"
 			add_overlay(image(icon='old_or_unused.dmi',icon_state="yellow",pixel_x = rand(-64,32), pixel_y = rand(-64,32))
-
 		Stress_Test()
 			set name = "5. Stress Test"
 			for(var/i = 0 to 1000)
@@ -192,20 +162,17 @@ mob
 				if(prob(5))
 					Add_Overlay()
 			Browse_Icon()
-
 		Cache_Test()
 			set name = "6. Cache Test"
 			for(var/i = 0 to 1000)
 				getFlatIcon(src)
 			Browse_Icon()
-
 /obj/effect/overlay_test
 	icon = 'old_or_unused.dmi'
 	icon_state = "blue"
 	pixel_x = -24
 	pixel_y = 24
 	layer = TURF_LAYER // Should appear below the rest of the overlays
-
 world
 	view = "7x7"
 	maxx = 20
@@ -287,23 +254,17 @@ world
 
 /*
 	HSV format is represented as "#hhhssvv" or "#hhhssvvaa"
-
 	Hue ranges from 0 to 0x5ff (1535)
-
 		0x000 = red
 		0x100 = yellow
 		0x200 = green
 		0x300 = cyan
 		0x400 = blue
 		0x500 = magenta
-
 	Saturation is from 0 to 0xff (255)
-
 		More saturation = more color
 		Less saturation = more gray
-
 	Value ranges from 0 to 0xff (255)
-
 		Higher value means brighter color
  */
 
@@ -524,11 +485,9 @@ world
 
 /*
 	Smooth blend between HSV colors
-
 	amount=0 is the first color
 	amount=1 is the second color
 	amount=0.5 is directly between the two colors
-
 	amount<0 or amount>1 are allowed
  */
 /proc/BlendHSV(hsv1, hsv2, amount)
@@ -592,11 +551,9 @@ world
 
 /*
 	Smooth blend between RGB colors
-
 	amount=0 is the first color
 	amount=1 is the second color
 	amount=0.5 is directly between the two colors
-
 	amount<0 or amount>1 are allowed
  */
 /proc/BlendRGB(rgb1, rgb2, amount)
@@ -896,6 +853,37 @@ world
 		//Also, icons cannot directly set icon_state. Slower than changing variables but whatever.
 		alpha_mask.Blend(image_overlay,ICON_OR)//OR so they are lumped together in a nice overlay.
 	return alpha_mask//And now return the mask.
+
+/**
+ * Helper proc to generate a cutout alpha mask out of an icon.
+ *
+ * Why is it a helper if it's so simple?
+ *
+ * Because BYOND's documentation is hot garbage and I don't trust anyone to actually
+ * figure this out on their own without sinking countless hours into it. Yes, it's that
+ * simple, now enjoy.
+ *
+ * But why not use filters?
+ *
+ * Filters do not allow for masks that are not the exact same on every dir. An example of a
+ * need for that can be found in [/proc/generate_left_leg_mask()].
+ *
+ * Arguments:
+ * * icon_to_mask - The icon file you want to generate an alpha mask out of.
+ * * icon_state_to_mask - The specific icon_state you want to generate an alpha mask out of.
+ *
+ * Returns an `/icon` that is the alpha mask of the provided icon and icon_state.
+ */
+/proc/generate_icon_alpha_mask(icon_to_mask, icon_state_to_mask)
+	var/icon/mask_icon = icon(icon_to_mask, icon_state_to_mask)
+	// I hate the MapColors documentation, so I'll explain what happens here.
+	// Basically, what we do here is that we invert the mask by using none of the original
+	// colors, and then the fourth group of number arguments is actually the alpha values of
+	// each of the original colors, which we multiply by 255 and subtract a value of 255 to the
+	// result for the matching pixels, while starting with a base color of white everywhere.
+	mask_icon.MapColors(0,0,0,0, 0,0,0,0, 0,0,0,0, 255,255,255,-255, 1,1,1,1)
+	return mask_icon
+
 
 /mob/proc/AddCamoOverlay(atom/A)//A is the atom which we are using as the overlay.
 	var/icon/opacity_icon = new(A.icon, A.icon_state)//Don't really care for overlays/underlays.
