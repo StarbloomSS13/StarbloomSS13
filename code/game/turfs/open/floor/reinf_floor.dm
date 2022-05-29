@@ -223,3 +223,6 @@
 
 /turf/open/floor/engine/telecomms
 	initial_gas_mix = TCOMMS_ATMOS
+
+/turf/open/floor/engine/beacon
+	name = "scrap beacon floor"
