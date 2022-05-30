@@ -4528,14 +4528,14 @@
 /obj/machinery/keycard_auth/directional/south{
 	pixel_x = 6
 	},
-/obj/machinery/button/door/directional/south{
-	id = "cmoprivacy";
-	name = "CMO Privacy Shutters";
-	pixel_x = -8;
-	req_access_txt = "40"
-	},
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 8
+	},
+/obj/machinery/button/ec_glass{
+	id = "cmoprivacy";
+	name = "CMO Privacy Switch";
+	pixel_x = -8;
+	pixel_y = -24
 	},
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/cmo)
@@ -10875,9 +10875,10 @@
 /obj/item/lighter,
 /obj/item/clothing/glasses/meson,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/machinery/button/door/directional/south{
+/obj/machinery/button/ec_glass{
 	id = "ceprivacy";
-	name = "Privacy Shutters Control"
+	name = "CE Privacy Switch";
+	pixel_y = -26
 	},
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/ce)
@@ -13097,17 +13098,17 @@
 	pixel_y = -34
 	},
 /obj/machinery/button/door/directional/south{
-	id = "hop";
-	name = "Privacy Shutters Control";
-	pixel_x = -6;
-	req_access_txt = "57"
-	},
-/obj/machinery/button/door/directional/south{
 	id = "hopqueue";
 	name = "Queue Shutters Control";
 	pixel_x = -6;
 	pixel_y = -34;
 	req_access_txt = "57"
+	},
+/obj/machinery/button/ec_glass{
+	id = "hop";
+	name = "HoP Privacy Switch";
+	pixel_x = -6;
+	pixel_y = -22
 	},
 /turf/open/floor/wood,
 /area/command/heads_quarters/hop)
@@ -18177,12 +18178,11 @@
 /turf/open/floor/engine,
 /area/engineering/atmospherics_engine)
 "fnU" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/preopen{
-	id = "ceprivacy";
-	name = "privacy shutter"
+/obj/structure/window/reinforced/fulltile/ec_glass{
+	id = "ceprivacy"
 	},
 /obj/structure/cable,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/command/heads_quarters/ce)
 "fnZ" = (
@@ -21474,6 +21474,10 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/command/heads_quarters/hop)
+"gzh" = (
+/obj/machinery/light/directional/west,
+/turf/open/floor/iron,
+/area/commons/fitness/recreation)
 "gzx" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
@@ -28084,12 +28088,11 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard/greater)
 "jcC" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/preopen{
-	id = "council blast";
-	name = "Council Blast Doors"
-	},
 /obj/structure/cable,
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile/ec_glass{
+	id = "council blast"
+	},
 /turf/open/floor/plating,
 /area/command/bridge)
 "jcD" = (
@@ -28924,11 +28927,6 @@
 	},
 /turf/open/floor/iron,
 /area/engineering/main)
-"jrQ" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/command/heads_quarters/ce)
 "jrW" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/maintenance{
@@ -31227,6 +31225,14 @@
 "kkO" = (
 /turf/open/floor/plating,
 /area/maintenance/aft/lesser)
+"kli" = (
+/obj/structure/window/reinforced/fulltile/ec_glass{
+	id = "hop"
+	},
+/obj/structure/cable,
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/command/heads_quarters/hop)
 "klo" = (
 /obj/machinery/light/directional/east,
 /obj/effect/turf_decal/stripes/corner{
@@ -35932,15 +35938,14 @@
 	pixel_x = 6;
 	req_access_txt = "30"
 	},
-/obj/machinery/button/door/directional/north{
-	id = "rdoffice";
-	name = "Privacy Control";
-	pixel_y = 34;
-	req_access_txt = "30"
-	},
 /obj/machinery/computer/security/telescreen/rd{
 	pixel_x = 31;
 	pixel_y = 30
+	},
+/obj/machinery/button/ec_glass{
+	id = "rdoffice";
+	name = "RD Privacy Switch";
+	pixel_y = 36
 	},
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/rd)
@@ -36407,12 +36412,11 @@
 /turf/open/floor/iron/dark,
 /area/science/genetics)
 "mdV" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable,
-/obj/machinery/door/poddoor/preopen{
-	id = "hosprivacy";
-	name = "privacy shutters"
+/obj/structure/window/reinforced/fulltile/ec_glass{
+	id = "hosprivacy"
 	},
+/obj/structure/cable,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/command/heads_quarters/hos)
 "mee" = (
@@ -39875,12 +39879,11 @@
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "nhL" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/preopen{
-	id = "rdoffice";
-	name = "Research Director's Shutters"
+/obj/structure/window/reinforced/fulltile/ec_glass{
+	id = "rdoffice"
 	},
 /obj/structure/cable,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/command/heads_quarters/rd)
 "nhM" = (
@@ -41846,14 +41849,6 @@
 	},
 /turf/open/floor/iron,
 /area/cargo/sorting)
-"nUy" = (
-/obj/structure/sign/warning/electricshock{
-	pixel_y = 32
-	},
-/obj/effect/turf_decal/bot,
-/obj/effect/landmark/start/hangover,
-/turf/open/floor/iron,
-/area/hallway/secondary/command)
 "nUG" = (
 /obj/effect/spawner/random/maintenance,
 /obj/structure/cable,
@@ -43710,12 +43705,11 @@
 /turf/open/floor/carpet,
 /area/command/corporate_showroom)
 "oEG" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/preopen{
-	id = "cmoprivacy";
-	name = "privacy shutter"
+/obj/structure/window/reinforced/fulltile/ec_glass{
+	id = "cmoprivacy"
 	},
 /obj/structure/cable,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/command/heads_quarters/cmo)
 "oEO" = (
@@ -50738,9 +50732,10 @@
 	dir = 1
 	},
 /obj/machinery/light/small/directional/west,
-/obj/machinery/button/door/directional/west{
+/obj/machinery/button/ec_glass{
 	id = "hosprivacy";
-	name = "Privacy Shutters Control"
+	name = "HoS Privacy Switch";
+	pixel_x = -25
 	},
 /turf/open/floor/wood,
 /area/command/heads_quarters/hos)
@@ -62786,11 +62781,10 @@
 	name = "Bridge Access Blast Door Control";
 	req_access_txt = "19"
 	},
-/obj/machinery/button/door/directional/south{
+/obj/machinery/button/ec_glass{
 	id = "council blast";
-	name = "Council Chamber Blast Door Control";
-	pixel_y = -34;
-	req_access_txt = "19"
+	name = "Council Privacy Switch";
+	pixel_y = -36
 	},
 /turf/open/floor/carpet,
 /area/command/bridge)
@@ -92321,7 +92315,7 @@ gzb
 sEx
 hyz
 poI
-dNC
+kli
 bzL
 bBA
 var
@@ -92579,7 +92573,7 @@ fFD
 hyz
 qnZ
 nxX
-nUy
+bzL
 bBz
 mBh
 bEG
@@ -93349,7 +93343,7 @@ rFq
 iCB
 gDh
 mpv
-dNC
+kli
 bzL
 bBz
 var
@@ -103830,7 +103824,7 @@ aaa
 aaa
 aaa
 tdI
-dUA
+gzh
 aSF
 dUA
 dUA
@@ -108753,7 +108747,7 @@ coi
 iHd
 dBo
 rQv
-jrQ
+fnU
 ehA
 ePE
 uAf
