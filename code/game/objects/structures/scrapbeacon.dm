@@ -47,7 +47,7 @@
 
 /obj/structure/scrap_beacon
 	name = "Scrap Beacon"
-	desc = "This machine generates directional gravity rays which catch trash orbiting around."
+	desc = "This giant electromagnet is capable of catching various trash and space debris floating around in the void."
 	icon = 'icons/obj/scrap_beacon.dmi'
 	icon_state = "beacon0"
 	anchored = TRUE
@@ -63,7 +63,7 @@
 /obj/structure/scrap_beacon/attack_hand(mob/user)
 	.=..()
 	if((last_summon + summon_cooldown) >= world.time)
-		to_chat(user, "<span class='notice'>[name] not charged yet.</span>")
+		to_chat(user, "<span class='notice'>The beacon's heat sinks are still dissipating the heat from its last use... It'll take around 20 minutes to cool off fully.</span>")
 		return
 	last_summon = world.time
 	if(!active)
@@ -91,9 +91,6 @@
 		sleep(impact_speed)
 		var/turf/newloc = pick(flooring_near_beacon)
 		flooring_near_beacon -= newloc
-		if(prob(80))
-			new /obj/effect/falling_effect(newloc, /obj/structure/scrap)
-		else
-			new /obj/effect/falling_effect(newloc, /obj/structure/scrap/plasma)
+		new /obj/effect/falling_effect(newloc, /obj/structure/scrap)
 	active = FALSE
 	icon_state = "beacon0"
