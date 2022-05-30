@@ -11383,7 +11383,11 @@
 /turf/open/floor/plating,
 /area/construction/mining/aux_base)
 "cWM" = (
-/turf/open/floor/engine/beacon,
+/obj/machinery/door/airlock/external{
+	name = "Construction Zone"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/turf/open/floor/plating,
 /area/construction/mining/aux_base)
 "cWP" = (
 /obj/item/radio/intercom/directional/north,
@@ -35157,6 +35161,10 @@
 	},
 /turf/open/floor/iron,
 /area/security/prison)
+"lGS" = (
+/obj/docking_port/stationary/public_mining_dock,
+/turf/open/floor/plating,
+/area/construction/mining/aux_base)
 "lHb" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating,
@@ -42274,8 +42282,16 @@
 /turf/open/floor/iron/white,
 /area/security/medical)
 "obX" = (
-/obj/structure/scrap_beacon,
-/turf/open/floor/engine/beacon,
+/obj/docking_port/stationary{
+	dheight = 4;
+	dwidth = 4;
+	height = 9;
+	id = "aux_base_zone";
+	name = "aux base zone";
+	roundstart_template = /datum/map_template/shuttle/aux_base/default;
+	width = 9
+	},
+/turf/open/floor/plating,
 /area/construction/mining/aux_base)
 "oci" = (
 /obj/structure/bed,
@@ -58507,6 +58523,13 @@
 /turf/open/floor/iron,
 /area/hallway/primary/fore)
 "uqi" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/obj/machinery/door/airlock/engineering{
+	name = "Auxiliary Base Construction";
+	req_one_access_txt = "72"
+	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -80192,11 +80215,11 @@ aaa
 aDb
 aDa
 aDa
-cWM
-cWM
-cWM
-cWM
-cWM
+aDa
+aDa
+aDa
+aDa
+aDa
 aDa
 aDa
 cWK
@@ -80449,11 +80472,11 @@ aaa
 aDb
 aDa
 aDa
-cWM
-cWM
-cWM
-cWM
-cWM
+aDa
+aDa
+aDa
+aDa
+aDa
 aDa
 aDa
 cWK
@@ -80706,14 +80729,14 @@ aaa
 aDb
 aDa
 aDa
-cWM
-cWM
+aDa
+aDa
 obX
-cWM
-cWM
 aDa
 aDa
-kFg
+aDa
+lGS
+cWM
 ilJ
 tra
 uqi
@@ -80963,11 +80986,11 @@ aaa
 aDb
 aDa
 aDa
-cWM
-cWM
-cWM
-cWM
-cWM
+aDa
+aDa
+aDa
+aDa
+aDa
 aDa
 aDa
 cWK
@@ -81220,11 +81243,11 @@ aaa
 aDb
 aDa
 aDa
-cWM
-cWM
-cWM
-cWM
-cWM
+aDa
+aDa
+aDa
+aDa
+aDa
 aDa
 aDa
 cWK
