@@ -248,3 +248,104 @@
 	name = "horrific necktie"
 	icon_state = "eldritch_tie"
 	desc = "The necktie is adorned with a garish pattern. It's disturbingly vivid. Somehow you feel as if it would be wrong to ever take it off. It's your friend now. You will betray it if you change it for some boring scarf."
+
+/obj/item/clothing/neck/bombcollar
+	name = "bomb collar"
+	icon_state = "bomb_collar"
+	desc = "A heavy bomb collar made from a solid piece of machined steel."
+	var/on = TRUE
+	var/code = 2
+	var/frequency = FREQ_ELECTROPACK
+	var/shock_cooldown = FALSE
+
+/obj/item/clothing/neck/bombcollar/Initialize(mapload)
+	. = ..()
+	set_frequency(frequency)
+
+/obj/item/clothing/neck/bombcollar/Destroy()
+	SSradio.remove_object(src, frequency)
+	return ..()
+
+/obj/item/clothing/neck/bombcollar/attack_hand(mob/user, list/modifiers)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		if(src == C.wear_neck)
+			to_chat(user, span_warning("There's no way you're getting this off without help."))
+			return
+	return ..()
+
+/obj/item/clothing/neck/bombcollar/proc/explode()
+	var/turf/T = get_turf(src.loc)
+
+	message_admins("[ADMIN_LOOKUPFLW(usr)] has triggered a bomb collar at [AREACOORD(T)].")
+	log_game("[key_name(usr)] has triggered a bomb collar at [AREACOORD(T)].")
+
+	explosion(src, 0, 1, 1, 0)
+	qdel(src)
+
+/obj/item/clothing/neck/bombcollar/receive_signal(datum/signal/signal)
+	if(!signal || signal.data["code"] != code)
+		return
+	if(isliving(loc) && on)
+		var/mob/living/L = loc
+
+		to_chat(L, span_danger("You hear your collar begin to beep. That's... probably not g-"))
+		explode()
+
+	if(master)
+		if(isassembly(master))
+			var/obj/item/assembly/master_as_assembly = master
+			master_as_assembly.pulsed()
+		master.receive_signal()
+
+/obj/item/clothing/neck/bombcollar/proc/set_frequency(new_frequency)
+	SSradio.remove_object(src, frequency)
+	frequency = new_frequency
+	SSradio.add_object(src, frequency, RADIO_SIGNALER)
+
+/obj/item/clothing/neck/bombcollar/ui_state(mob/user)
+	return GLOB.hands_state
+
+/obj/item/clothing/neck/bombcollar/ui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "Electropack", name)
+		ui.open()
+
+/obj/item/clothing/neck/bombcollar/ui_data(mob/user)
+	var/list/data = list()
+	data["power"] = on
+	data["frequency"] = frequency
+	data["code"] = code
+	data["minFrequency"] = MIN_FREE_FREQ
+	data["maxFrequency"] = MAX_FREE_FREQ
+	return data
+
+/obj/item/clothing/neck/bombcollar/ui_act(action, params)
+	. = ..()
+	if(.)
+		return
+
+	switch(action)
+		if("power")
+			on = !on
+			. = TRUE
+		if("freq")
+			var/value = unformat_frequency(params["freq"])
+			if(value)
+				frequency = sanitize_frequency(value, TRUE)
+				set_frequency(frequency)
+				. = TRUE
+		if("code")
+			var/value = text2num(params["code"])
+			if(value)
+				value = round(value)
+				code = clamp(value, 1, 100)
+				. = TRUE
+		if("reset")
+			if(params["reset"] == "freq")
+				frequency = initial(frequency)
+				. = TRUE
+			else if(params["reset"] == "code")
+				code = initial(code)
+				. = TRUE
