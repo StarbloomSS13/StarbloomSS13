@@ -5,7 +5,7 @@
 	icon_state = "off"
 	var/list/sprites = list("space", "soviet", "cooking", "nature", "anime")
 
-/obj/structure/tv/examine(var/mob/user)
+/obj/structure/tv/examine(mob/user)
 	.=..()
 	if (isliving(user))
 		to_chat(user, "You notice that the off button has the letters 'CTRL' on it. And the channel change button reads 'ALT'. Huh.")
