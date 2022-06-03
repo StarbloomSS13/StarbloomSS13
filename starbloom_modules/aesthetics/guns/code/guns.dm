@@ -247,6 +247,7 @@
 	fire_sound = 'sound/weapons/gun/pistol/starbloom_9mm.ogg'
 	icon_state = "arg"
 	inhand_icon_state = "arg"
+	burst_size = 2
 	can_suppress = FALSE
 
 /obj/item/gun/ballistic/automatic/ar/modular/solrifle
@@ -305,9 +306,10 @@
 // Sec PDW
 /obj/item/gun/ballistic/automatic/c20r/unrestricted/cmg1
 	name = ".45 Helios"
-	desc = "A bullpup three-round burst .45 PDW. It has a foldable stock and a dot sight."
+	desc = "A bullpup two-round burst .45 PDW. It has a foldable stock and a dot sight."
 	icon_state = "cmg1"
 	fire_sound = 'sound/weapons/gun/pistol/starbloom_45.ogg'
+	burst_size = 2
 	icon = 'starbloom_modules/aesthetics/guns/icons/guns.dmi'
 
 /obj/item/gun/ballistic/automatic/ar/modular/model75

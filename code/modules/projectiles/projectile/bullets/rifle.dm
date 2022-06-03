@@ -2,24 +2,24 @@
 
 /obj/projectile/bullet/a556
 	name = "5.56mm bullet"
-	damage = 30
+	damage = 20
 
 /obj/projectile/bullet/a556/ap
 	name = "5.56mm armour-piercing bullet"
-	damage = 25
-	armour_penetration = 30
+	damage = 15
+	armour_penetration = 50
 	wound_bonus = -30
 
 /obj/projectile/bullet/a556/hp
 	name = "5.56mm hollowpoint bullet"
-	damage = 35
-	armour_penetration = -30
+	damage = 30
+	weak_against_armour = TRUE
 	wound_bonus = 30
 
 /obj/projectile/bullet/a556/i
 	name = "5.56mm incendiary bullet"
-	damage = 25
-	armour_penetration = -50
+	damage = 10
+	weak_against_armour = TRUE
 
 /obj/projectile/bullet/a556/i/on_hit(atom/target, blocked = FALSE)
 	. = ..()
@@ -32,31 +32,31 @@
 	name = "5.56mm phasic bullet"
 	icon_state = "gaussphase"
 	damage = 20
-	armour_penetration = 70
+	armour_penetration = 100
 	projectile_phasing =  PASSTABLE | PASSGLASS | PASSGRILLE | PASSCLOSEDTURF | PASSMACHINE | PASSSTRUCTURE | PASSDOORS
 
 // 7.62 (Nagant Rifle)
 
 /obj/projectile/bullet/a762
 	name = "7.62 bullet"
-	damage = 60
+	damage = 50
 
 /obj/projectile/bullet/a762/ap
 	name = "7.62 armour-piercing bullet"
-	damage = 50
+	damage = 40
 	armour_penetration = 50
 	wound_bonus = -30
 
 /obj/projectile/bullet/a762/hp
 	name = "7.62 hollowpoint bullet"
-	damage = 70
-	armour_penetration = -50
+	damage = 60
+	weak_against_armour = TRUE
 	wound_bonus = 30
 
 /obj/projectile/bullet/a762/i
 	name = "7.62 incendiary bullet"
-	damage = 50
-	armour_penetration = -50
+	damage = 40
+	weak_against_armour = TRUE
 
 /obj/projectile/bullet/a762/i/on_hit(atom/target, blocked = FALSE)
 	. = ..()
