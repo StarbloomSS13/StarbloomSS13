@@ -4,7 +4,7 @@
 
 /obj/machinery/chem_mass_spec
 	name = "High-performance liquid chromatography machine"
-	desc = "This machine will accurately read out detected reagents and their masses in a batch. It can also detect if the reagent is inverted."
+	desc = "This machine will accurately read out detected reagents and their masses in a batch. It can also detect if a reagent is inverted."
 	density = TRUE
 	layer = BELOW_OBJ_LAYER
 	icon = 'icons/obj/chemical.dmi'
