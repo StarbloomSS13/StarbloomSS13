@@ -242,7 +242,7 @@ Primarily used in reagents/reaction_agents
 	if(!normalise_num_to)
 		normalise_num_to = initial(purity)
 	if(!creation_purity)
-		creation_purity = src.creation_purity
+		creation_purity = 1 // lets see if this is true or rubbish
 	return creation_purity / normalise_num_to
 
 /proc/pretty_string_from_reagent_list(list/reagent_list)
