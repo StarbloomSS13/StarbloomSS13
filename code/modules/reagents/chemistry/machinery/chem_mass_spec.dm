@@ -4,10 +4,7 @@
 
 /obj/machinery/chem_mass_spec
 	name = "High-performance liquid chromatography machine"
-	desc = {"This machine can separate reagents based on charge.
-By selecting a range in the mass spectrograph certain reagents will be transferred from one beaker to another, which will clean it of any impurities up to a certain amount.
-This will not clean any inverted reagents. Inverted reagents will still be correctly detected and displayed on the scanner, however.
-\nLeft click with a beaker to add it to the input slot, Right click with a beaker to add it to the output slot. Alt + left/right click can let you quickly remove the corresponding beaker."}
+	desc = "This machine will accurately read out detected reagents and their masses in a batch. It can also detect if the reagent is inverted."
 	density = TRUE
 	layer = BELOW_OBJ_LAYER
 	icon = 'icons/obj/chemical.dmi'
@@ -29,6 +26,9 @@ This will not clean any inverted reagents. Inverted reagents will still be corre
 /obj/machinery/chem_mass_spec/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, DO_NOT_SPLASH, src.type)
+
+/obj/machinery/chem_mass_spec/examine()
+	. += span_notice("Left-Click on the machine with a beaker to insert. Alt-Left-Click to remove.")
 
 /obj/machinery/chem_mass_spec/Destroy()
 	QDEL_NULL(beaker1)
