@@ -63,6 +63,8 @@ export const DmTarget = new Juke.Target({
     get(DefineParameter).includes('ALL_MAPS') && DmMapsIncludeTarget,
   ],
   inputs: [
+    'modular_skyrat/**',
+    'starbloom_modules',
     '_maps/map_files/generic/**',
     'code/**',
     'goon/**',

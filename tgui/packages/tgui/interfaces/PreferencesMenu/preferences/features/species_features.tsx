@@ -190,3 +190,111 @@ export const headshot: Feature<string> = {
   description: "Add an image to your character, visible on close examination. Requires it be formatted properly.",
   component: FeatureShortTextInput,
 };
+
+export const digitigrade_legs: FeatureChoiced = {
+  name: "Legs",
+  component: FeatureDropdownInput,
+};
+
+export const body_markings_toggle: FeatureToggle = {
+  name: "Body Markings",
+  description: "Add some lore for your species! Won't show up if there's no custom species.",
+  component: CheckboxInput,
+};
+
+export const horns_toggle: FeatureToggle = {
+  name: "Horns",
+  description: "Add some lore for your species! Won't show up if there's no custom species.",
+  component: CheckboxInput,
+};
+
+export const feature_horns: Feature<string> = {
+  name: "Horns Selection",
+  description: "Want to have a fancy species name? Put it here, or leave it blank.",
+  component: FeatureDropdownInput,
+};
+
+export const horns_color: Feature<string[]> = {
+  name: "Horns Colors",
+  description: "Want to have a fancy species name? Put it here, or leave it blank.",
+  component: FeatureTriColorInput,
+};
+
+export const horns_emissive: Feature<boolean[]> = {
+  name: "Horns Emissives",
+  description: "Want to have a fancy species name? Put it here, or leave it blank.",
+  component: FeatureTriBoolInput,
+};
+
+
+export const spines_toggle: FeatureToggle = {
+  name: "Spines",
+  description: "Add some lore for your species! Won't show up if there's no custom species.",
+  component: CheckboxInput,
+};
+
+export const feature_spines: Feature<string> = {
+  name: "Spines Selection",
+  description: "Want to have a fancy species name? Put it here, or leave it blank.",
+  component: FeatureDropdownInput,
+};
+
+export const spines_color: Feature<string[]> = {
+  name: "Spines Colors",
+  description: "Want to have a fancy species name? Put it here, or leave it blank.",
+  component: FeatureTriColorInput,
+};
+
+export const spines_emissive: Feature<boolean[]> = {
+  name: "Spines Emissives",
+  description: "Want to have a fancy species name? Put it here, or leave it blank.",
+  component: FeatureTriBoolInput,
+};
+
+export const snout_toggle: FeatureToggle = {
+  name: "Snout",
+  description: "Add some lore for your species! Won't show up if there's no custom species.",
+  component: CheckboxInput,
+};
+
+export const feature_snout: Feature<string> = {
+  name: "Snout Selection",
+  description: "Want to have a fancy species name? Put it here, or leave it blank.",
+  component: FeatureDropdownInput,
+};
+
+export const snout_color: Feature<string[]> = {
+  name: "Snout Colors",
+  description: "Want to have a fancy species name? Put it here, or leave it blank.",
+  component: FeatureTriColorInput,
+};
+
+export const snout_emissive: Feature<boolean[]> = {
+  name: "Snout Emissives",
+  description: "Want to have a fancy species name? Put it here, or leave it blank.",
+  component: FeatureTriBoolInput,
+};
+
+export const frills_toggle: FeatureToggle = {
+  name: "Frills",
+  description: "Add some lore for your species! Won't show up if there's no custom species.",
+  component: CheckboxInput,
+};
+
+export const feature_frills: Feature<string> = {
+  name: "Frills Selection",
+  description: "Want to have a fancy species name? Put it here, or leave it blank.",
+  component: FeatureDropdownInput,
+};
+
+export const frills_color: Feature<string[]> = {
+  name: "Frills Colors",
+  description: "Want to have a fancy species name? Put it here, or leave it blank.",
+  component: FeatureTriColorInput,
+};
+
+export const frills_emissive: Feature<boolean[]> = {
+  name: "Frills Emissives",
+  description: "Want to have a fancy species name? Put it here, or leave it blank.",
+  component: FeatureTriBoolInput,
+};
