@@ -1,6 +1,6 @@
 /obj/structure/shelf
 	name = "shelf"
-	icon = 'icons/obj/fluff.dmi'
+	icon = "icons/obj/fluff.dmi"
 	density = TRUE
 	anchored = TRUE
 
