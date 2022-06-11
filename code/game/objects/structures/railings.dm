@@ -1,7 +1,7 @@
 /obj/structure/railing
 	name = "railing"
 	desc = "Basic railing meant to protect idiots like you from falling."
-	icon = 'icons/obj/fluff.dmi'
+	icon = "icons/obj/fluff.dmi"
 	icon_state = "railing"
 	flags_1 = ON_BORDER_1
 	density = TRUE
@@ -121,7 +121,7 @@
 /obj/structure/railing/stone
 	name = "stone wall"
 	desc = "Cobbled stone wall. This is pretty strong."
-	icon = 'icons/obj/fluff.dmi'
+	icon = "icons/obj/fluff.dmi"
 	icon_state = "cobble-wall"
 	max_integrity = 100
 	density = TRUE
