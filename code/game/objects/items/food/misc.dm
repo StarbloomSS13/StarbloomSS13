@@ -455,6 +455,56 @@
 /obj/item/food/lollipop/cyborg
 	food_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/iron = 10, /datum/reagent/consumable/sugar = 5, /datum/reagent/medicine/psicodine = 2) //psicodine instead of omnizine, because the latter was making coders freak out
 
+/obj/item/food/medpop
+	name = "medicated lollipop"
+	desc = "A strange medicated lollipop. You feel like your eyes were never meant to see this..."
+	icon = 'icons/obj/lollipop.dmi'
+	icon_state = "lollipop"
+	worn_icon = 'icons/mob/clothing/mask.dmi'
+	worn_icon_state = "candyoff"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/iron = 10, /datum/reagent/consumable/sugar = 5, /datum/reagent/medicine/omnizine = 2) //Honk
+	tastes = list("candy" = 1)
+	foodtypes = JUNKFOOD | SUGAR
+	food_flags = FOOD_FINGER_FOOD
+	slot_flags = ITEM_SLOT_MASK
+	w_class = WEIGHT_CLASS_TINY
+	venue_value = FOOD_PRICE_WORTHLESS
+
+/obj/item/food/medpop/libital
+	name = "lemon lollipop"
+	desc = "A tart lemon lollipop containing a low dose of a bruise-healing chemical."
+	icon_state = "libital"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/sugar = 5, /datum/reagent/medicine/c2/libital = 5)
+	tastes = list("lemon" = 1)
+
+/obj/item/food/medpop/aiuri
+	name = "blueberry lollipop"
+	desc = "A sweet blueberry lollipop containing a low dose of a burn-healing chemical."
+	icon_state = "aiuri"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/sugar = 5, /datum/reagent/medicine/c2/aiuri = 5)
+	tastes = list("blueberry" = 1)
+
+/obj/item/food/medpop/syriniver
+	name = "lime lollipop"
+	desc = "A tangy lime lollipop containing a low dose of a toxin-healing chemical."
+	icon_state = "syriniver"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/sugar = 5, /datum/reagent/medicine/c2/syriniver = 5)
+	tastes = list("lime" = 1)
+
+/obj/item/food/medpop/convermol
+	name = "strawberry lollipop"
+	desc = "A fruity strawberry lollipop containing a low dose of a suffocation-healing chemical."
+	icon_state = "convermol"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/sugar = 5, /datum/reagent/medicine/c2/convermol = 5)
+	tastes = list("strawberry" = 1)
+
+/obj/item/food/medpop/morphine
+	name = "cotton candy lollipop"
+	desc = "A sweet cotton candy lollipop containing a low dose of a painkiller."
+	icon_state = "morphine"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/sugar = 5, /datum/reagent/medicine/morphine = 5)
+	tastes = list("cotton candy" = 1)
+
 /obj/item/food/bubblegum
 	name = "bubblegum"
 	desc = "A rubbery strip of gum. Not exactly filling, but it keeps you busy."

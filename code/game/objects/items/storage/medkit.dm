@@ -632,3 +632,27 @@
 	user.adjust_bodytemperature(-300)
 	user.apply_status_effect(/datum/status_effect/freon)
 	return FIRELOSS
+
+/obj/item/storage/medkit/medpops
+	name = "bowl of medicated lollipops"
+	desc = "A bowl of sugary treats for good patients."
+	icon = 'icons/obj/storage.dmi'
+	icon_state = "lollijar"
+
+/obj/item/storage/medkit/medpops/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/food/medpop/libital = 2,
+		/obj/item/food/medpop/aiuri = 2,
+		/obj/item/food/medpop/syriniver = 1,
+		/obj/item/food/medpop/convermol = 1,
+		/obj/item/food/medpop/morphine = 1)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/medpops/update_icon_state()
+	if(contents.len == 0)
+		icon_state = "lollijar_empty"
+	else
+		icon_state = "lollijar"
+	return ..()
