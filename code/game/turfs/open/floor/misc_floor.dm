@@ -279,4 +279,3 @@
 	name = "hot spring tile floor"
 	icon = "icons/obj/fluff.dmi"
 	icon_state = "hotspring_tile"
-	
