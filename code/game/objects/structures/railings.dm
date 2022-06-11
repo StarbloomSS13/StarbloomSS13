@@ -141,3 +141,4 @@
 	icon_state = "cobble-wall-right"
 	density = FALSE
 	climbable = FALSE
+	
