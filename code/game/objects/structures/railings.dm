@@ -117,3 +117,28 @@
 /obj/structure/railing/proc/check_anchored(checked_anchored)
 	if(anchored == checked_anchored)
 		return TRUE
+
+/obj/structure/railing/stone
+	name = "stone wall"
+	desc = "Cobbled stone wall. This is pretty strong."
+	icon = 'icons/obj/fluff.dmi'
+	icon_state = "cobble-wall"
+	max_integrity = 100
+	density = TRUE
+	anchored = TRUE
+	climbable = TRUE
+
+/obj/structure/railing/stone/attackby(obj/item/wrench, mob/living/user, params)
+	to_chat(user, span_notice("You frown as you realise this wall is in fact made of stone, and cannot be uprooted from the ground and dragged along with a mere wrench."))
+	return
+
+/obj/structure/railing/stone/left
+	icon_state = "cobble-wall-left"
+	density = FALSE
+	climbable = FALSE
+
+/obj/structure/railing/stone/right
+	icon_state = "cobble-wall-right"
+	density = FALSE
+	climbable = FALSE
+	
