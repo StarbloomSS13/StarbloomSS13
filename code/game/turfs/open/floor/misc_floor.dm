@@ -267,15 +267,15 @@
 
 /turf/open/floor/hotspring
 	name = "hot spring floor"
-	icon = "icons/obj/fluff.dmi"
+	icon = 'icons/obj/fluff.dmi'
 	icon_state = "hotspring"
 
 /turf/open/floor/pool_tile
 	name = "pool tile floor"
-	icon = "icons/obj/fluff.dmi"
+	icon = 'icons/obj/fluff.dmi'
 	icon_state = "pool_tile"
 
 /turf/open/floor/hotspring_tile
 	name = "hot spring tile floor"
-	icon = "icons/obj/fluff.dmi"
+	icon = 'icons/obj/fluff.dmi'
 	icon_state = "hotspring_tile"
