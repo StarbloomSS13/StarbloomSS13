@@ -96,6 +96,10 @@ GLOBAL_LIST_INIT(loadout_pocket_items, generate_loadout_items(/datum/loadout_ite
 	name = "Lighter"
 	item_path = /obj/item/lighter
 
+/datum/loadout_item/pocket_items/flask
+	name = "Flask"
+	item_path = /obj/item/reagent_containers/food/drinks/flask
+
 /datum/loadout_item/pocket_items/plush
 	can_be_named = TRUE
 
