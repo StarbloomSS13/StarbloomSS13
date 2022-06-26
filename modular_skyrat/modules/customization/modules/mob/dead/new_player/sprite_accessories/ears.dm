@@ -280,3 +280,89 @@
 /datum/sprite_accessory/ears/mutant/horns/lifted
 	name = "Lifted Horns"
 	icon_state = "liftedhorns"
+
+/datum/sprite_accessory/ears/moth_antennae
+	name = "Antennae"
+	icon = 'modular_skyrat/master_files/icons/mob/sprite_accessory/moth_antennae.dmi'
+	organ_type = /obj/item/organ/external/antennae
+	recommended_species = list(SPECIES_MOTH, SPECIES_SYNTHMAMMAL, SPECIES_MAMMAL, SPECIES_INSECT)
+
+/datum/sprite_accessory/ears/moth_antennae/plain
+	name = "Plain"
+	icon_state = "plain"
+
+/datum/sprite_accessory/ears/moth_antennae/reddish
+	name = "Reddish"
+	icon_state = "reddish"
+
+/datum/sprite_accessory/ears/moth_antennae/royal
+	name = "Royal"
+	icon_state = "royal"
+
+/datum/sprite_accessory/ears/moth_antennae/gothic
+	name = "Gothic"
+	icon_state = "gothic"
+
+/datum/sprite_accessory/ears/moth_antennae/whitefly
+	name = "White Fly"
+	icon_state = "whitefly"
+
+/datum/sprite_accessory/ears/moth_antennae/lovers
+	name = "Lovers"
+	icon_state = "lovers"
+
+/datum/sprite_accessory/ears/moth_antennae/burnt_off
+	name = "Burnt Off"
+	icon_state = "burnt_off"
+	locked = TRUE
+
+/datum/sprite_accessory/ears/moth_antennae/firewatch
+	name = "Firewatch"
+	icon_state = "firewatch"
+
+/datum/sprite_accessory/ears/moth_antennae/deathhead
+	name = "Deathshead"
+	icon_state = "deathhead"
+
+/datum/sprite_accessory/ears/moth_antennae/poison
+	name = "Poison"
+	icon_state = "poison"
+
+/datum/sprite_accessory/ears/moth_antennae/ragged
+	name = "Ragged"
+	icon_state = "ragged"
+
+/datum/sprite_accessory/ears/moth_antennae/moonfly
+	name = "Moon Fly"
+	icon_state = "moonfly"
+
+/datum/sprite_accessory/ears/moth_antennae/oakworm
+	name = "Oak Worm"
+	icon_state = "oakworm"
+
+/datum/sprite_accessory/ears/moth_antennae/jungle
+	name = "Jungle"
+	icon_state = "jungle"
+
+/datum/sprite_accessory/ears/moth_antennae/witchwing
+	name = "Witch Wing"
+	icon_state = "witchwing"
+
+/datum/sprite_accessory/ears/moth_antennae/regal
+	name = "Regal"
+	icon_state = "regal"
+/datum/sprite_accessory/ears/moth_antennae/rosy
+	name = "Rosy"
+	icon_state = "rosy"
+
+/datum/sprite_accessory/ears/moth_antennae/feathery
+	name = "Feathery"
+	icon_state = "feathery"
+
+/datum/sprite_accessory/ears/moth_antennae/brown
+	name = "Brown"
+	icon_state = "brown"
+
+/datum/sprite_accessory/ears/moth_antennae/plasmafire
+	name = "Plasmafire"
+	icon_state = "plasmafire"
