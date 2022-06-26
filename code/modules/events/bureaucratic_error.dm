@@ -2,7 +2,7 @@
 	name = "Bureaucratic Error"
 	typepath = /datum/round_event/bureaucratic_error
 	max_occurrences = 1
-	weight = 5
+	weight = 0
 
 /datum/round_event/bureaucratic_error
 	announceWhen = 1
