@@ -818,7 +818,7 @@
 			var/render_limb_string = limb_id == "digitigrade" ? ("digitigrade_1_" + body_zone) : body_zone // I am not sure why there are _1 and _2 versions of digi, so, it's staying like this.
 
 			var/gender_modifier = ""
-			if(body_zone == BODY_ZONE_CHEST) // Chest markings have male and female versions.
+			if(body_zone == BODY_ZONE_CHEST && body_marking.gendered) // Chest markings have male and female versions.
 				if(is_dimorphic)
 					gender_modifier = "_[limb_gender]"
 				else

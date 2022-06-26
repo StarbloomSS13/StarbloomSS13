@@ -510,3 +510,69 @@
 	name = "Tattoo - Tiger (Foot)"
 	icon_state = "tat_tiger_foot"
 	affected_bodyparts = LEG_RIGHT | LEG_LEFT
+
+/datum/body_marking/moth_markings // praying this works
+	icon = 'icons/mob/moth_markings.dmi'
+	recommended_species = list(SPECIES_MOTH)
+	affected_bodyparts = CHEST | HEAD | ARMS | LEGS
+	gendered = FALSE
+
+/datum/body_marking/moth_markings/none
+	name = "None"
+	icon_state = "none"
+
+/datum/body_marking/moth_markings/reddish
+	name = "Reddish"
+	icon_state = "reddish"
+
+/datum/body_marking/moth_markings/royal
+	name = "Royal"
+	icon_state = "royal"
+
+/datum/body_marking/moth_markings/gothic
+	name = "Gothic"
+	icon_state = "gothic"
+
+/datum/body_marking/moth_markings/whitefly
+	name = "White Fly"
+	icon_state = "whitefly"
+
+/datum/body_marking/moth_markings/lovers
+	name = "Lovers"
+	icon_state = "lovers"
+
+/datum/body_marking/moth_markings/burnt_off
+	name = "Burnt Off"
+	icon_state = "burnt_off"
+
+/datum/body_marking/moth_markings/firewatch
+	name = "Firewatch"
+	icon_state = "firewatch"
+
+/datum/body_marking/moth_markings/deathhead
+	name = "Deathshead"
+	icon_state = "deathhead"
+
+/datum/body_marking/moth_markings/poison
+	name = "Poison"
+	icon_state = "poison"
+
+/datum/body_marking/moth_markings/ragged
+	name = "Ragged"
+	icon_state = "ragged"
+
+/datum/body_marking/moth_markings/moonfly
+	name = "Moon Fly"
+	icon_state = "moonfly"
+
+/datum/body_marking/moth_markings/oakworm
+	name = "Oak Worm"
+	icon_state = "oakworm"
+
+/datum/body_marking/moth_markings/jungle
+	name = "Jungle"
+	icon_state = "jungle"
+
+/datum/body_marking/moth_markings/witchwing
+	name = "Witch Wing"
+	icon_state = "witchwing"
