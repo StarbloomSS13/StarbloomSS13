@@ -225,7 +225,8 @@
 	layers = EXTERNAL_FRONT | EXTERNAL_BEHIND
 
 	feature_key = "moth_antennae"
-	preference = "feature_moth_antennae"
+	mutantpart_key = "moth_antennae"
+	mutantpart_info = list(MUTANT_INDEX_NAME = "None", MUTANT_INDEX_COLOR_LIST = list("#ffffff"))
 
 	///Are we burned?
 	var/burnt = FALSE
