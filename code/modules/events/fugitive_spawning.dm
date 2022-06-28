@@ -2,6 +2,7 @@
 	name = "Spawn Fugitives"
 	typepath = /datum/round_event/ghost_role/fugitives
 	max_occurrences = 1
+	weight = 0
 	min_players = 20
 	earliest_start = 30 MINUTES //deadchat sink, lets not even consider it early on.
 

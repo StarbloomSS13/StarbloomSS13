@@ -19,8 +19,7 @@ GLOBAL_LIST_INIT(high_priority_sentience, typecacheof(list(
 /datum/round_event_control/sentience
 	name = "Random Human-level Intelligence"
 	typepath = /datum/round_event/ghost_role/sentience
-	weight = 10
-
+	weight = 0
 
 /datum/round_event/ghost_role/sentience
 	minimum_required = 1
