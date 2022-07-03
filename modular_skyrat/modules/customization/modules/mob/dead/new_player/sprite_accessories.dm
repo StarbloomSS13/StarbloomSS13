@@ -369,11 +369,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	icon_state = "thong_babydoll"
 	gender = FEMALE
 
-/datum/sprite_accessory/underwear/lizared
-	name = "LIZARED Underwear"
-	icon_state = "lizared"
-	use_static = TRUE
-
 /datum/sprite_accessory/underwear/digibriefs
 	name = "Digi Briefs"
 	icon_state = "briefs_d"
