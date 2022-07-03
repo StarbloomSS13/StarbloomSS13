@@ -3,7 +3,7 @@
 	typepath = /datum/round_event/disease_outbreak
 	max_occurrences = 1
 	min_players = 25
-	weight = 5
+	weight = 0
 
 /datum/round_event/disease_outbreak
 	announceWhen = 15
