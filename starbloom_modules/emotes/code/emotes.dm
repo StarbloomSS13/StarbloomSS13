@@ -99,9 +99,8 @@
 
 /datum/emote/living/sigh/get_sound(mob/living/user)
 	if(iscarbon(user))
-		if(user.gender == MALE)
-			return 'starbloom_modules/emotes/sound/emotes/male/male_sigh.ogg'
-		return 'starbloom_modules/emotes/sound/emotes/female/female_sigh.ogg'
+		if(user.gender == FEMALE)
+			return 'starbloom_modules/emotes/sound/emotes/female/female_sigh.ogg' //Only female has a sound because the male one didn't fit.
 	return
 
 /datum/emote/living/sniff
