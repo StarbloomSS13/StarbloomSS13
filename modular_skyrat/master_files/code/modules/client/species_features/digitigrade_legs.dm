@@ -15,3 +15,8 @@
 	var/passed_initial_check = ..(preferences)
 	var/allowed = preferences.read_preference(/datum/preference/toggle/allow_mismatched_parts)
 	return passed_initial_check || allowed
+
+/datum/preference/choiced/digitigrade_legs/create_informed_default_value(datum/preferences/preferences)
+	var/species_type = preferences.read_preference(/datum/preference/choiced/species)
+
+	return islizard(species_type) ? "Digitigrade Legs" : "Normal Legs"
