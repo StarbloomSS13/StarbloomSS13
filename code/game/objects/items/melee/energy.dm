@@ -323,7 +323,7 @@
 	throw_range = 5
 	active_force = 20
 	armour_penetration = 75
-	block_chance = 50
+	block_chance = 10
 	embedding = list("embed_chance" = 75, "impact_pain_mult" = 10)
 
 /obj/item/melee/energy/sword/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
