@@ -309,3 +309,23 @@
 	desc = "An extremely sharp blade made out of hard light. Packs quite a punch."
 	icon_state = "lightblade"
 	inhand_icon_state = "lightblade"
+
+/obj/item/melee/energy/sword/dragonstooth
+	name = "dragon's tooth sword"
+	desc = "An advanced weapon of unknown origin. Its blade is dynamically forged on activation and kept sharp at nanoscale by a swarm of nanites."
+	icon_state = "dragonstooth"
+	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	active_hitsound = 'sound/weapons/dtshit.ogg'
+	force = 3
+	throwforce = 5
+	throw_speed = 3
+	throw_range = 5
+	armour_penetration = 35
+	block_chance = 50
+	embedding = list("embed_chance" = 75, "impact_pain_mult" = 10)
+
+/obj/item/melee/energy/sword/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	if(blade_active)
+		return ..()
+	return FALSE
