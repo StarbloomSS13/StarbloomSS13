@@ -44,11 +44,13 @@
 	name = "\improper Secret Base"
 	icon_state = "dk_yellow"
 	ambience_index = AMBIENCE_DANGER
+	ambient_buzz = 'sound/ambience/magma.ogg'
 
 /area/ruin/unpowered/cultaltar
 	name = "\improper Cult Altar"
 	area_flags = CULT_PERMITTED
 	ambience_index = AMBIENCE_SPOOKY
+	ambient_buzz = 'sound/ambience/magma.ogg'
 
 //Syndicate lavaland base
 
@@ -96,7 +98,9 @@
 //ash walker nest
 /area/ruin/unpowered/ash_walkers
 	icon_state = "red"
+	ambient_buzz = 'sound/ambience/magma.ogg'
 
 /area/ruin/unpowered/ratvar
 	icon_state = "dk_yellow"
 	outdoors = TRUE
+	ambient_buzz = 'sound/ambience/magma.ogg'

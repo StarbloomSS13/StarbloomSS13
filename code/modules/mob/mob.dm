@@ -1101,6 +1101,10 @@
 		return
 	return TRUE
 
+/mob/proc/has_light_nearby(light_amount = LIGHTING_TILE_IS_DARK)
+	var/turf/mob_location = get_turf(src)
+	return mob_location.get_lumcount() > light_amount
+
 /**
  * Get the mob VV dropdown extras
  */
