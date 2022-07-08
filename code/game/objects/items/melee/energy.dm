@@ -329,3 +329,4 @@
 	if(blade_active)
 		return ..()
 	return FALSE
+	
