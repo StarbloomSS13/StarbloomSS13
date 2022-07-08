@@ -490,3 +490,22 @@
 	savefile_key = "frills_emissive"
 	relevant_mutant_bodypart = "frills"
 	type_to_check = /datum/preference/toggle/frills
+
+/datum/preference/toggle/skintone_toggle
+	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
+	priority = PREFERENCE_PRIORITY_GENDER //Priority is set to be higher than the species pref.
+	savefile_identifier = PREFERENCE_CHARACTER
+	savefile_key = "skintone_toggle"
+
+/datum/preference/toggle/skintone_toggle/apply_to_human(mob/living/carbon/human/target, value)
+	if(value)
+		target.dna.species.species_traits -= MUTCOLORS
+		target.dna.species.use_skintones = TRUE
+		target.update_body_parts()
+	else
+		target.dna.species.species_traits |= MUTCOLORS
+		target.dna.species.use_skintones = FALSE
+		target.update_body_parts()
+
+/datum/preference/toggle/skintone_toggle/create_informed_default_value(datum/preferences/preferences)
+	return ispath(preferences.read_preference(/datum/preference/choiced/species), /datum/species/human)

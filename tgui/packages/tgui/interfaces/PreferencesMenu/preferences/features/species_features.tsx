@@ -298,3 +298,9 @@ export const frills_emissive: Feature<boolean[]> = {
   description: "Want to have a fancy species name? Put it here, or leave it blank.",
   component: FeatureTriBoolInput,
 };
+
+export const skintone_toggle: FeatureToggle = {
+  name: "Skintones Toggle",
+  description: "Change between using skintones or mutant colors.",
+  component: CheckboxInput,
+};
