@@ -4,6 +4,7 @@
 	icon_state = "mining"
 	has_gravity = STANDARD_GRAVITY
 	area_flags = VALID_TERRITORY | UNIQUE_AREA | FLORA_ALLOWED | CULT_PERMITTED
+	ambient_buzz = 'sound/ambience/magma.ogg'
 
 /area/mine/explored
 	name = "Mine"
@@ -98,6 +99,12 @@
 	flags_1 = NONE
 	area_flags = VALID_TERRITORY | UNIQUE_AREA | FLORA_ALLOWED
 	sound_environment = SOUND_AREA_LAVALAND
+	ambient_buzz = 'sound/ambience/magma.ogg'
+
+/area/lavaland/play_ambience(mob/M, sound/override_sound, volume)
+	if(prob(1))
+		return ..(M, 'sound/ambience/Cave1.ogg')
+	return ..()
 
 /area/lavaland/surface
 	name = "Lavaland"
@@ -152,6 +159,7 @@
 	flags_1 = NONE
 	area_flags = UNIQUE_AREA | FLORA_ALLOWED
 	sound_environment = SOUND_AREA_ICEMOON
+	ambient_buzz = 'sound/ambience/magma.ogg'
 
 /area/icemoon/surface
 	name = "Icemoon"
