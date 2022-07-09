@@ -2,6 +2,7 @@
 /datum/language/common
 	name = "Neo-Mandarin"
 	desc = "The common tongue spoken aboard Arx. A descendant of Chinese, Korean, and Japanese."
+	secret = FALSE
 	key = "0"
 	flags = TONGUELESS_SPEECH | LANGUAGE_HIDE_ICON_IF_UNDERSTOOD
 	default_priority = 100

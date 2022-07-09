@@ -22,7 +22,7 @@
 	var/icon_state = "popcorn"
 	//SKYRAT EDIT
 	/// Should this be hidden on the language buy menu?
-	var/secret = FALSE
+	var/secret = TRUE
 	//SKYRAT EDIT END
 
 /datum/language/proc/display_icon(atom/movable/hearer)
