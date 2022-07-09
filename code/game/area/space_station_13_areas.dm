@@ -192,7 +192,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 //		'sound/ambience/Cave1.ogg',
 //	)
 
-///area/maintenance/play_ambience(mob/M, sound/override_sound, volume)
+//  /area/maintenance/play_ambience(mob/M, sound/override_sound, volume)
 //	if(!M.has_light_nearby() && prob(0.5))
 //		return ..(M, pick(minecraft_cave_noises))
 //	return ..()
