@@ -12,7 +12,7 @@
 #define ROBOTIC_DNA_ORGANS	35
 //Also.. yes for some reason specie traits and accessory defines are together
 
-//Defines for processing reagents, for synths, IPC's and Vox
+//Defines for processing reagents for synths and ipcs
 #define PROCESS_ORGANIC 1		//Only processes reagents with "ORGANIC" or "ORGANIC | SYNTHETIC"
 #define PROCESS_SYNTHETIC 2		//Only processes reagents with "SYNTHETIC" or "ORGANIC | SYNTHETIC"
 

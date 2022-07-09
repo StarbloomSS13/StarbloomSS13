@@ -20,12 +20,12 @@
 	hair_alpha = 210
 	sexes = FALSE
 	bodypart_overrides = list(
-		BODY_ZONE_HEAD = /obj/item/bodypart/head/robot/mutant/ipc,
-		BODY_ZONE_CHEST = /obj/item/bodypart/chest/robot/mutant/ipc,
-		BODY_ZONE_L_ARM = /obj/item/bodypart/l_arm/robot/mutant/ipc,
-		BODY_ZONE_R_ARM = /obj/item/bodypart/r_arm/robot/mutant/ipc,
-		BODY_ZONE_L_LEG = /obj/item/bodypart/l_leg/robot/mutant/ipc,
-		BODY_ZONE_R_LEG = /obj/item/bodypart/r_leg/robot/mutant/ipc,
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/robot/ipc,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/robot/ipc,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/l_arm/robot/ipc,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/r_arm/robot/ipc,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/l_leg/robot/ipc,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/r_leg/robot/ipc,
 	)
 	var/datum/action/innate/monitor_change/screen
 	var/saved_screen = "Blank"
