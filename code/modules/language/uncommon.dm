@@ -1,6 +1,7 @@
 /datum/language/uncommon
 	name = "North American Common"
 	desc = "The second-most spoken language aboard Arx. A descendant of English, Spanish, and various indigenous languages commonly spoken in the Americas before the collapse of Earth."
+	secret = FALSE
 	key = "!"
 	flags = TONGUELESS_SPEECH
 	space_chance = 40

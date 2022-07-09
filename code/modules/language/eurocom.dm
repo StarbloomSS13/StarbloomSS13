@@ -1,6 +1,7 @@
 /datum/language/eurocom
 	name = "Eurocommon"
 	desc = "One of the minority languages aboard Arx. A descendant of the European languages before the collapse of Earth."
+	secret = FALSE
 	key = "e"
 	flags = TONGUELESS_SPEECH
 	syllables = list(

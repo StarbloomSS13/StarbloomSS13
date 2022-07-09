@@ -1,6 +1,7 @@
 /datum/language/machine
 	name = "Encoded Audio Language"
 	desc = "An efficient language of encoded tones developed by synthetics and cyborgs."
+	secret = FALSE
 	spans = list(SPAN_ROBOT)
 	key = "6"
 	flags = NO_STUTTER
