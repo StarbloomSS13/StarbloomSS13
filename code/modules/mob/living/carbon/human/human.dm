@@ -1077,3 +1077,6 @@
 
 /mob/living/carbon/human/species/zombie/infectious
 	race = /datum/species/zombie/infectious
+
+/mob/living/carbon/human/species/ipc
+	race = /datum/species/robotic/ipc
