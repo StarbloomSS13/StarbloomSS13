@@ -174,28 +174,28 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	airlock_wires = /datum/wires/airlock/maint
 	sound_environment = SOUND_AREA_TUNNEL_ENCLOSED
 	forced_ambience = TRUE
-	ambient_buzz = 'sound/ambience/source_corridor2.ogg'
-	ambient_buzz_vol = 20
-	min_ambience_cooldown = 20 SECONDS
-	max_ambience_cooldown = 35 SECONDS
+	ambient_buzz = 'sound/ambience/maintambience.ogg'
+	ambient_buzz_vol = 60
+	min_ambience_cooldown = 60 SECONDS
+	max_ambience_cooldown = 90 SECONDS
 
-	var/static/list/minecraft_cave_noises = list(
-		'sound/machines/airlock.ogg',
-		'sound/effects/clownstep1.ogg',
-		'sound/effects/clownstep2.ogg',
-		'sound/items/welder.ogg',
-		'sound/items/welder2.ogg',
-		'sound/items/crowbar.ogg',
-		'sound/items/deconstruct.ogg',
-		'sound/ambience/source_holehit3.ogg',
-		'sound/ambience/cavesound3.ogg',
-		'sound/ambience/Cave1.ogg',
-	)
+//	var/static/list/minecraft_cave_noises = list(
+//		'sound/machines/airlock.ogg',
+//		'sound/effects/clownstep1.ogg',
+//		'sound/effects/clownstep2.ogg',
+//		'sound/items/welder.ogg',
+//		'sound/items/welder2.ogg',
+//		'sound/items/crowbar.ogg',
+//		'sound/items/deconstruct.ogg',
+//		'sound/ambience/source_holehit3.ogg',
+//		'sound/ambience/cavesound3.ogg',
+//		'sound/ambience/Cave1.ogg',
+//	)
 
-/area/maintenance/play_ambience(mob/M, sound/override_sound, volume)
-	if(!M.has_light_nearby() && prob(0.5))
-		return ..(M, pick(minecraft_cave_noises))
-	return ..()
+///area/maintenance/play_ambience(mob/M, sound/override_sound, volume)
+//	if(!M.has_light_nearby() && prob(0.5))
+//		return ..(M, pick(minecraft_cave_noises))
+//	return ..()
 
 //Maintenance - Departmental
 
