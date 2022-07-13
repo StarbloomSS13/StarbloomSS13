@@ -103,3 +103,8 @@
 	desc = "A crisp, clean set of boots for working long hours on the beat."
 	icon_state = "aerostatic_boots"
 	inhand_icon_state = "aerostatic_boots"
+
+/obj/item/clothing/shoes/jackboots/homeguard
+	name = "home guard boots"
+	desc = "Worn leather boots used by the Home Guard."
+	icon_state = "boots_homeguard"

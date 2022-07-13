@@ -371,3 +371,9 @@
 /obj/item/clothing/suit/armor/centcom_formal/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/toggle_icon)
+
+/obj/item/clothing/suit/armor/vest/homeguard
+	name = "home guard jacket"
+	desc = "A military jacket of shaky construction used by the Home Guard. Steel plates have been attached to it, offering a small measure of protection."
+	icon_state = "suit_homeguard"
+	armor = list(MELEE = 15, BULLET = 20, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, FIRE = 20, ACID = 50, WOUND = 10)
