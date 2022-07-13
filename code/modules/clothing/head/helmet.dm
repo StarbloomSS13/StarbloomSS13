@@ -601,3 +601,13 @@
 		update_appearance()
 
 	update_action_buttons()
+
+/obj/item/clothing/head/helmet/unity
+	name = "blue helmet"
+	desc = "A member of the Unity's helmet. Treasured by all its members, this is a status symbol and an heirloom."
+	icon_state = "helmet_unity"
+
+/obj/item/clothing/head/helmet/homeguard
+	name = "home guard helmet"
+	desc = "A Home Guardsman's helmet. Cheaply made, but enough to stop a few bullets."
+	icon_state = "helmet_homeguard"
