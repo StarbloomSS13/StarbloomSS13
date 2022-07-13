@@ -1080,3 +1080,6 @@
 
 /mob/living/carbon/human/species/ipc
 	race = /datum/species/robotic/ipc
+
+/mob/living/carbon/human/species/synthhuman
+	race = /datum/species/robotic/synthetic
