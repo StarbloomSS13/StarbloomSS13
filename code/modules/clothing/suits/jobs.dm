@@ -230,3 +230,8 @@
 	icon_state = "jamrock_blazer"
 	inhand_icon_state = "jamrock_blazer"
 
+/obj/item/clothing/suit/unity
+	name = "unity coat"
+	desc = "A heavy coat, lined with fur - the height of luxury, aboard the North Star. ."
+	icon_state = "coat_unity"
+	inhand_icon_state = "coat_unity"
