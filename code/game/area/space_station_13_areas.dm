@@ -410,6 +410,15 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/maintenance/space_hut/observatory
 	name = "\improper Space Observatory"
 
+//Maintenance - North Point
+/area/maintenance/oxygen_recycling
+	name = "\improper Oxygen Recycling"
+	icon_state = "oxy_recycling"
+
+/area/maintenance/club
+	name = "\improper Nightclub"
+	icon_state = "club"
+
 //Radation storm shelter
 /area/maintenance/radshelter
 	name = "\improper Radstorm Shelter"
@@ -516,6 +525,9 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Service Hallway"
 	icon_state = "hall_service"
 
+/area/hallway/secondary/service/upper
+	name = "\improper Upper Service Hallway"
+	icon_state = "upper_service"
 //Command
 
 /area/command
@@ -567,6 +579,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/command/heads_quarters/hop
 	name = "\improper Head of Personnel's Office"
 	icon_state = "hop_office"
+
+/area/command/heads_quarters/hop/private
+	name = "\improper Head of Personnel's Quarters"
+	icon_state = "hop_private"
 
 /area/command/heads_quarters/hos
 	name = "\improper Head of Security's Office"
@@ -630,6 +646,30 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Laundry Room"
 	icon_state = "laundry_room"
 
+/area/commons/dorms/room1
+	name = "\improper Dorms Room 1"
+	icon_state = "room1"
+
+/area/commons/dorms/room2
+	name = "\improper Dorms Room 2"
+	icon_state = "room2"
+
+/area/commons/dorms/room3
+	name = "\improper Dorms Room 3"
+	icon_state = "room3"
+
+/area/commons/dorms/room4
+	name = "\improper Dorms Room 4"
+	icon_state = "room4"
+
+/area/commons/dorms/apartment1
+	name = "\improper Dorms Apartment 1"
+	icon_state = "apartment1"
+
+/area/commons/dorms/apartment2
+	name = "\improper Dorms Apartment 2"
+	icon_state = "apartment2"
+
 /area/commons/toilet
 	name = "\improper Dormitory Toilets"
 	icon_state = "toilet"
@@ -682,6 +722,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/commons/fitness/recreation/entertainment
 	name = "\improper Entertainment Center"
 	icon_state = "entertainment"
+
+/area/commons/cryo_storage
+	name = "\improper Cryogenic Storage"
+	icon_state = "cryo_storage"
 
 // Commons - Vacant Rooms
 /area/commons/vacant_room
@@ -824,6 +868,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Abandoned Library"
 	icon_state = "abandoned_library"
 
+/area/service/library/garden
+	name = "\improper Library Garden"
+	icon_state = "library_garden"
+
 /area/service/chapel
 	name = "\improper Chapel"
 	icon_state = "chapel"
@@ -894,6 +942,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/service/hydroponics/garden/monastery
 	name = "\improper Monastery Garden"
 	icon_state = "hydro"
+
+/area/service/dining
+	name = "\improper Dining Room"
+	icon_state = "dining"
 
 //Engineering
 
@@ -1220,6 +1272,9 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	mood_message = "I feel at ease here."
 	ambientsounds = list('sound/ambience/aurora_caelus_short.ogg')
 
+/area/medical/psychology/ward
+	name = "\improper Mental Health Ward"
+	icon_state = "psychology_ward"
 //Security
 ///When adding a new area to the security areas, make sure to add it to /datum/bounty/item/security/paperwork as well!
 
@@ -1389,6 +1444,18 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Aft Customs"
 	icon_state = "customs_point_aft"
 
+/area/security/checkpoint/first
+	name = "Security Post - First Floor"
+	icon_state = "checkpoint_1"
+
+/area/security/checkpoint/second
+	name = "Security Post - Second Floor"
+	icon_state = "checkpoint_2"
+
+/area/security/checkpoint/third
+	name = "Security Post - Third Floor"
+	icon_state = "checkpoint_3"
+
 //Security - AI Monitored
 /area/ai_monitored/security/armory
 	name = "\improper Armory"
@@ -1457,6 +1524,9 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Mining Office"
 	icon_state = "mining"
 
+/area/cargo/scrapbeacon
+	name = "\improper Scrap Beacon"
+	icon_state = "scrap_beacon"
 //Science
 
 /area/science
@@ -1492,6 +1562,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/science/cytology
 	name = "\improper Cytology Lab"
 	icon_state = "cytology"
+
+/area/science/cytology/lower
+	name = "\improper Lower Cytology Lab"
+	icon_state = "cytology_lower"
 
 /area/science/storage
 	name = "Ordnance Storage"
@@ -1530,6 +1604,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/science/misc_lab/range
 	name = "\improper Research Testing Range"
 	icon_state = "ord_range"
+
+/area/science/workshop
+	name = "\improper Research Workshop"
+	icon_state = "sci_shop"
 
 /area/science/server
 	name = "\improper Research Division Server Room"
@@ -1605,3 +1683,167 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/maintenance/external/port/bow
 	name = "\improper Port Bow External Hull Access"
+
+//Starbloom Hallways
+//1
+/area/hallway/floor1
+	name = "\improper First Floor Hallway"
+
+/area/hallway/floor1/aft
+	name = "\improper First Floor Aft Hallway"
+	icon_state = "1_aft"
+
+/area/hallway/floor1/fore
+	name = "\improper First Floor Fore Hallway"
+	icon_state = "1_fore"
+//2
+/area/hallway/floor2
+	name = "\improper Second Floor Hallway"
+
+/area/hallway/floor2/aft
+	name = "\improper Second Floor Aft Hallway"
+	icon_state = "2_aft"
+
+/area/hallway/floor2/fore
+	name = "\improper Second Floor Fore Hallway"
+	icon_state = "2_fore"
+//3
+/area/hallway/floor3
+	name = "\improper Third Floor Hallway"
+
+/area/hallway/floor3/aft
+	name = "\improper Third Floor Aft Hallway"
+	icon_state = "3_aft"
+
+/area/hallway/floor3/fore
+	name = "\improper Third Floor Fore Hallway"
+	icon_state = "3_fore"
+//4
+/area/hallway/floor4
+	name = "\improper Fourth Floor Hallway"
+
+/area/hallway/floor4/aft
+	name = "\improper Fourth Floor Aft Hallway"
+	icon_state = "4_aft"
+
+/area/hallway/floor4/fore
+	name = "\improper Fourth Floor Fore Hallway"
+	icon_state = "4_fore"
+
+//Faction Offices
+/area/faction
+	sound_environment = SOUND_AREA_STANDARD_STATION
+/area/faction/unity
+	name = "\improper Unity Meeting Room"
+	icon_state = "unity"
+/area/faction/homeguard
+	name = "\improper Home Guard Bunker"
+	icon_state = "homeguard"
+/area/faction/conserve_recycling
+	name = "\improper Conservator Recycling Facility"
+	icon_state = "conservator_rec"
+/area/faction/conserve_sci
+	name = "\improper Convservator Science Wing"
+	icon_state = "conservator_sci"
+/area/faction/chiron_hq
+	name = "\improper Chiron Biolabs Headquarters"
+	icon_state = "chiron"
+/area/faction/mekhane_workshop
+	name = "\improper Mekhane Workshop"
+	icon_state = "mekhane_workshop"
+/area/faction/survey_wings
+	name = "\improper Survey Wings Base"
+	icon_state = "survey_w"
+/area/faction/last_edict
+	name = "\improper Last Edict Stronghold"
+	icon_state = "last_edict"
+
+//Starbloom Maint
+//1
+/area/maintenance/floor1
+	name = "\improper 1st Floor Maint"
+/area/maintenance/floor1/port
+	name = "\improper 1st Floor Central Port Maint"
+	icon_state = "maintcentral"
+/area/maintenance/floor1/port/fore
+	name = "\improper 1st Floor Fore Port Maint"
+	icon_state = "maintfore"
+/area/maintenance/floor1/port/aft
+	name = "\improper 1st Floor Aft Port Maint"
+	icon_state = "maintaft"
+
+/area/maintenance/floor1/starboard
+	name = "\improper 1st Floor Central Starboard Maint"
+	icon_state = "maintcentral"
+/area/maintenance/floor1/starboard/fore
+	name = "\improper 1st Floor Fore Starboard Maint"
+	icon_state = "maintfore"
+/area/maintenance/floor1/starboard/aft
+	name = "\improper 1st Floor Aft Starboard Maint"
+	icon_state = "maintaft"
+//2
+/area/maintenance/floor2
+	name = "\improper 2nd Floor Maint"
+/area/maintenance/floor2/port
+	name = "\improper 2nd Floor Central Port Maint"
+	icon_state = "maintcentral"
+/area/maintenance/floor2/port/fore
+	name = "\improper 2nd Floor Fore Port Maint"
+	icon_state = "maintfore"
+/area/maintenance/floor2/port/aft
+	name = "\improper 2nd Floor Aft Port Maint"
+	icon_state = "maintaft"
+
+/area/maintenance/floor2/starboard
+	name = "\improper 2nd Floor Central Starboard Maint"
+	icon_state = "maintcentral"
+/area/maintenance/floor2/starboard/fore
+	name = "\improper 2nd Floor Fore Starboard Maint"
+	icon_state = "maintfore"
+/area/maintenance/floor2/starboard/aft
+	name = "\improper 2nd Floor Aft Starboard Maint"
+	icon_state = "maintaft"
+//3
+/area/maintenance/floor3
+	name = "\improper 3rd Floor Maint"
+/area/maintenance/floor3/port
+	name = "\improper 3rd Floor Central Port Maint"
+	icon_state = "maintcentral"
+/area/maintenance/floor3/port/fore
+	name = "\improper 3rd Floor Fore Port Maint"
+	icon_state = "maintfore"
+/area/maintenance/floor3/port/aft
+	name = "\improper 3rd Floor Aft Port Maint"
+	icon_state = "maintaft"
+
+/area/maintenance/floor3/starboard
+	name = "\improper 3rd Floor Central Starboard Maint"
+	icon_state = "maintcentral"
+/area/maintenance/floor3/starboard/fore
+	name = "\improper 3rd Floor Fore Starboard Maint"
+	icon_state = "maintfore"
+/area/maintenance/floor3/starboard/aft
+	name = "\improper 3rd Floor Aft Starboard Maint"
+	icon_state = "maintaft"
+//4
+/area/maintenance/floor4
+	name = "\improper 4th Floor Maint"
+/area/maintenance/floor4/port
+	name = "\improper 4th Floor Central Port Maint"
+	icon_state = "maintcentral"
+/area/maintenance/floor4/port/fore
+	name = "\improper 4th Floor Fore Port Maint"
+	icon_state = "maintfore"
+/area/maintenance/floor4/port/aft
+	name = "\improper 4th Floor Aft Port Maint"
+	icon_state = "maintaft"
+
+/area/maintenance/floor2/starboard
+	name = "\improper 4th Floor Central Starboard Maint"
+	icon_state = "maintcentral"
+/area/maintenance/floor4/starboard/fore
+	name = "\improper 4th Floor Fore Starboard Maint"
+	icon_state = "maintfore"
+/area/maintenance/floor4/starboard/aft
+	name = "\improper 4th Floor Aft Starboard Maint"
+	icon_state = "maintaft"
