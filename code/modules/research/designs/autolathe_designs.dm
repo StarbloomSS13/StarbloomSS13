@@ -872,6 +872,14 @@
 	build_path = /obj/item/ammo_casing/shotgun/incendiary
 	category = list("hacked", "Security")
 
+/datum/design/buckshot
+	name = "Buckshot Shell"
+	id = "buckshot"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = 4000)
+	build_path = /obj/item/ammo_casing/shotgun/buckshot
+	category = list("hacked", "Security")
+
 /datum/design/riot_dart
 	name = "Foam Riot Dart"
 	id = "riot_dart"
