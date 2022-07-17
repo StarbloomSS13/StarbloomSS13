@@ -407,8 +407,11 @@
 		spawn_instance = new spawn_type(get_turf(spawn_point), null, player_client.mob)
 	else
 		spawn_instance = new spawn_type(player_client.mob.loc)
-		spawn_point.JoinPlayerHere(spawn_instance, TRUE)
 	spawn_instance.apply_prefs_job(player_client, src)
+	// due to extreme spaghetti code, JoinPlayerHere may *not* happen before applying player prefs
+	// enjoy this snowflake patch as a result
+	if(!ispath(spawn_type, /mob/living/silicon/ai))
+		spawn_point.JoinPlayerHere(spawn_instance, TRUE)
 	if(!player_client)
 		qdel(spawn_instance)
 		return // Disconnected while checking for the appearance ban.
