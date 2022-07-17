@@ -229,6 +229,15 @@
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/buckshot/sec
+	id = "sec_bshot"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 4000)
+	build_path = /obj/item/ammo_casing/shotgun/buckshot //I'll be fully honest I probably did this wrong. It looks nothing like the rubbershot one. If this bothers you please fucking fix it aaaa
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+	autolathe_exportable = FALSE
+
 /datum/design/rubbershot/sec
 	id = "sec_rshot"
 	build_type = PROTOLATHE | AWAY_LATHE
