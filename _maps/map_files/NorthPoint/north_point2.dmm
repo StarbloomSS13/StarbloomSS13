@@ -17773,7 +17773,7 @@
 "gqz" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/left/directional/north{
-	name = "Cargo Desk;
+	name = "Cargo Desk";
 	req_access_txt = "50"
 	},
 /turf/open/floor/iron/dark,
@@ -21605,7 +21605,7 @@
 "hNe" = (
 /obj/structure/table_frame,
 /obj/item/paper/crumpled{
-	desc = "A old note, it looks charred, yet you can still read some of its contents..;
+	desc = "A old note, it looks charred, yet you can still read some of its contents..";
 	info = "The strange crystal we found while making exotic gasses is exciting, and I cant wait to see what we use this strange material for. It gives me bad feeling looking at it though.. -J";
 	name = "burnt note"
 	},
@@ -24542,7 +24542,6 @@
 "iQX" = (
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,
@@ -29510,7 +29509,6 @@
 /obj/machinery/door/airlock/engineering/glass{
 	name = "Supermatter Engine Room"
 	},
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,
@@ -29567,10 +29565,12 @@
 	},
 /area/hallway/floor3/fore)
 "kKZ" = (
-/obj/machinery/door/airlock/mining,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/airlock/mining{
+	name = "Cargo Office"
+	},
 /turf/open/floor/iron,
 /area/cargo/lobby)
 "kLb" = (
@@ -30468,7 +30468,7 @@
 /obj/structure/cable,
 /obj/structure/table/reinforced/plastitaniumglass,
 /obj/item/paper/fluff{
-	info = "Note:<br>Pending conflicts relating to the ZH-75 tests, we're going to put<br>mutagenic tests on hold for now until the controversy<br>surrounding the "insect" incident die down.<br>Look into further tests with ZH-76 and ZH-77.";
+	info = "Note:<br>Pending conflicts relating to the ZH-75 tests, we're going to put<br>mutagenic tests on hold for now until the controversy<br>surrounding the insect incident die down.<br>Look into further tests with ZH-76 and ZH-77.";
 	name = "Chiron Research Note"
 	},
 /turf/open/floor/iron/dark/smooth_large,
@@ -40560,10 +40560,6 @@
 "oCF" = (
 /turf/open/openspace,
 /area/hallway/floor3/aft)
-"oDa" = (
-/obj/machinery/door/airlock/mining,
-/turf/open/floor/iron,
-/area/cargo/lobby)
 "oDd" = (
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron/dark/side,
@@ -57104,7 +57100,7 @@
 "vau" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/left/directional/north{
-	name = "Cargo Desk;
+	name = "Cargo Desk";
 	req_access_txt = "50"
 	},
 /turf/open/floor/iron,
@@ -89089,7 +89085,7 @@ eYY
 pOP
 dJc
 eXd
-oDa
+eXd
 eXd
 eXd
 lvY
