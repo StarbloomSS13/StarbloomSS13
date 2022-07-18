@@ -1838,7 +1838,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper 4th Floor Aft Port Maint"
 	icon_state = "maintaft"
 
-/area/maintenance/floor2/starboard
+/area/maintenance/floor4/starboard
 	name = "\improper 4th Floor Central Starboard Maint"
 	icon_state = "maintcentral"
 /area/maintenance/floor4/starboard/fore
