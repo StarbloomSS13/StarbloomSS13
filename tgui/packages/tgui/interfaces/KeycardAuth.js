@@ -7,7 +7,7 @@ export const KeycardAuth = (props, context) => {
   return (
     <Window
       width={375}
-      height={125}>
+      height={145}>
       <Window.Content>
         <Section>
           <Box>
@@ -47,6 +47,12 @@ export const KeycardAuth = (props, context) => {
                       fluid
                       onClick={() => act('bsa_unlock')}
                       content="Bluespace Artillery Unlock" />
+                    <Button
+                      color="red"
+                      icon="exclamation-triangle"
+                      fluid
+                      onClick={() => act('neutron_purge')} // hopefully this UI code is so fucking terrible I am never allowed to write UI code again!
+                      content="Neutron Purge [WARNING]" />
                   </>
                 )}
               </>
