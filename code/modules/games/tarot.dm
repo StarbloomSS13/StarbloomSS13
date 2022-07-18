@@ -10,7 +10,7 @@
 	for(var/suit in list("Swords", "Wands", "Coins", "Cups"))
 		for(var/i in 1 to 10)
 			cards += generate_card("[i] of [suit]")
-		for(var/person in list("Page", "Chevalier", "Dame", "Roi"))
+		for(var/person in list("Page", "Knight", "Queen", "King"))
 			cards += generate_card("[person] of [suit]")
 	for(var/trump in list("The Magician", "The High Priestess", "The Empress", "The Emperor", "The Hierophant", "The Lover", "The Chariot", "Justice", "The Hermit", "The Wheel of Fortune", "Strength", "The Hanged Man", "Death", "Temperance", "The Devil", "The Tower", "The Star", "The Moon", "The Sun", "Judgement", "The World", "The Fool"))
 		cards += generate_card("[trump]")
