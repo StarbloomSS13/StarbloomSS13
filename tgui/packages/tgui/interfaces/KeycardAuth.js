@@ -52,7 +52,7 @@ export const KeycardAuth = (props, context) => {
                       icon="exclamation-triangle"
                       fluid
                       onClick={() => act('neutron_purge')} // hopefully this UI code is so fucking terrible I am never allowed to write UI code again!
-                      content="Neutron Purge [WARNING]" />
+                      content="Activate Neutron Purge [Warning]" />
                   </>
                 )}
               </>
