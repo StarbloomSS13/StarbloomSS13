@@ -56,6 +56,7 @@
 		"sec_beanbag_slug",
 		"sec_dart",
 		"sec_rshot",
+		"sec_bshot",
 		"space_heater",
 		"tech_disk",
 		"titaniumglass",

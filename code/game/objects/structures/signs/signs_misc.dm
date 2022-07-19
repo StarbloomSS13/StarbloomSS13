@@ -44,3 +44,38 @@
 
 /obj/structure/sign/deck4/right
 	icon_state = "operationsdeck-right"
+
+/obj/structure/sign/directions/engi
+	name = "engineering directions"
+	desc = "A sign pointing to Engineering."
+	icon_state = "dir_eng"
+
+/obj/structure/sign/directions/cargo
+	name = "cargo directions"
+	desc = "A sign pointing to Cargo."
+	icon_state = "dir_crg"
+
+/obj/structure/sign/directions/med
+	name = "medical directions"
+	desc = "A sign pointing to Medical."
+	icon_state = "dir_med"
+
+/obj/structure/sign/directions/sci
+	name = "science directions"
+	desc = "A sign pointing to Science."
+	icon_state = "dir_sci"
+
+/obj/structure/sign/directions/service
+	name = "service directions"
+	desc = "A sign pointing to Service."
+	icon_state = "dir_ser"
+
+/obj/structure/sign/directions/sec
+	name = "security directions"
+	desc = "A sign pointing to Security."
+	icon_state = "dir_sec"
+
+/obj/structure/sign/directions/cmd
+	name = "command directions"
+	desc = "A sign pointing to Command."
+	icon_state = "dir_cmd"
