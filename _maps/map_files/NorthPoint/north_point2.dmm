@@ -939,6 +939,16 @@
 	},
 /turf/open/floor/wood/large,
 /area/service/library/artgallery)
+"apu" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4;
+	name = "jump seat"
+	},
+/obj/machinery/camera/directional/west{
+	c_tag = "Science - Radshelter"
+	},
+/turf/open/floor/catwalk_floor,
+/area/maintenance/radshelter/sci)
 "apy" = (
 /obj/structure/chair/comfy/brown{
 	dir = 8
@@ -5106,8 +5116,8 @@
 /area/medical/pharmacy)
 "byY" = (
 /obj/structure/dresser,
-/obj/machinery/camera/autoname/directional/west{
-	c_tag = "command_RD_quarters_2"
+/obj/machinery/camera/directional/west{
+	c_tag = "Command - Research Director's Quarters #2"
 	},
 /turf/open/floor/carpet/green,
 /area/command/heads_quarters/rd)
@@ -6045,8 +6055,8 @@
 	pixel_y = 12
 	},
 /obj/structure/mirror/directional/north,
-/obj/machinery/camera/autoname/directional/west{
-	c_tag = "science_equipment_closet"
+/obj/machinery/camera/directional/west{
+	c_tag = "Science - Equipment Closet"
 	},
 /turf/open/floor/iron/white,
 /area/science/lower)
@@ -6105,8 +6115,8 @@
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/purple/filled/line,
-/obj/machinery/camera/autoname/directional/north{
-	c_tag = "science_tech_lab"
+/obj/machinery/camera/directional/north{
+	c_tag = "Science - Applied Mechanics"
 	},
 /turf/open/floor/iron/dark/corner{
 	dir = 1
@@ -13615,8 +13625,8 @@
 /obj/effect/turf_decal/trimline/purple/line{
 	dir = 4
 	},
-/obj/machinery/camera/autoname/directional/west{
-	c_tag = "science_foyer_2"
+/obj/machinery/camera/directional/west{
+	c_tag = "Science - Foyer #3"
 	},
 /turf/open/floor/iron/white,
 /area/science/lower)
@@ -23529,6 +23539,16 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/white,
 /area/medical/storage)
+"ihW" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/access/all/science/general,
+/obj/machinery/door/airlock/hatch{
+	name = "Maintenance Access"
+	},
+/turf/open/floor/plating,
+/area/maintenance/floor2/starboard/fore)
 "iia" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -25231,6 +25251,9 @@
 	},
 /turf/open/floor/catwalk_floor,
 /area/maintenance/floor4/port)
+"iOA" = (
+/turf/closed/wall/r_wall,
+/area/maintenance/floor2/starboard)
 "iOD" = (
 /obj/machinery/computer/upload/ai,
 /obj/structure/window/reinforced{
@@ -26469,9 +26492,6 @@
 /obj/structure/shuttle/engine/router,
 /turf/closed/wall,
 /area/engineering/atmos/project)
-"jor" = (
-/turf/closed/wall/r_wall,
-/area/maintenance/floor2/starboard)
 "joE" = (
 /obj/structure/railing{
 	dir = 1
@@ -35053,8 +35073,8 @@
 "mlV" = (
 /obj/item/kirbyplants/random,
 /obj/machinery/light/small/directional/west,
-/obj/machinery/camera/autoname/directional/west{
-	c_tag = "command_RD_quarters_1"
+/obj/machinery/camera/directional/west{
+	c_tag = "Command - Research Director's Quarters #1"
 	},
 /turf/open/floor/iron/large,
 /area/command/heads_quarters/rd)
@@ -38108,8 +38128,8 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/machinery/camera/autoname/directional/west{
-	c_tag = "science_r&d_lab"
+/obj/machinery/camera/directional/west{
+	c_tag = "Science - R&D Lab"
 	},
 /turf/open/floor/iron/dark,
 /area/science/research)
@@ -39622,8 +39642,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
-/obj/machinery/camera/autoname/directional/north{
-	c_tag = "science_upper_hallway"
+/obj/machinery/camera/directional/north{
+	c_tag = "Science - Deck 3 Hall"
 	},
 /turf/open/floor/iron/white,
 /area/science/lower)
@@ -40660,16 +40680,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/command/bridge)
-"odg" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable,
-/obj/effect/mapping_helpers/airlock/access/all/science/general,
-/obj/machinery/door/airlock/hatch{
-	name = "Maintenance Access"
-	},
-/turf/open/floor/plating,
-/area/maintenance/floor2/starboard/fore)
 "odJ" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 6
@@ -43381,8 +43391,8 @@
 /turf/open/floor/light/colour_cycle/dancefloor_a,
 /area/medical/abandoned)
 "oZv" = (
-/obj/machinery/camera/autoname/directional/north{
-	c_tag = "science_experimentor_lab"
+/obj/machinery/camera/directional/north{
+	c_tag = "Science - Experimentor"
 	},
 /turf/open/floor/engine,
 /area/science/explab)
@@ -47289,8 +47299,8 @@
 	dir = 4
 	},
 /obj/structure/hedge,
-/obj/machinery/camera/autoname/directional/north{
-	c_tag = "science_break_room"
+/obj/machinery/camera/directional/north{
+	c_tag = "Science - Break Room"
 	},
 /turf/open/floor/iron/dark,
 /area/science/breakroom)
@@ -48313,7 +48323,7 @@
 "qSz" = (
 /obj/effect/turf_decal/trimline/purple/filled/corner,
 /obj/machinery/camera/directional/south{
-	c_tag = "Science Foyer - #4"
+	c_tag = "Science Foyer - #2"
 	},
 /turf/open/floor/iron/white,
 /area/science/lower)
@@ -49836,8 +49846,8 @@
 "rwG" = (
 /obj/effect/turf_decal/trimline/purple/line,
 /obj/machinery/airalarm/directional/north,
-/obj/machinery/camera/autoname/directional/north{
-	c_tag = "science_foyer_3"
+/obj/machinery/camera/directional/north{
+	c_tag = "Science - Foyer #4"
 	},
 /turf/open/floor/iron/white,
 /area/science/lower)
@@ -52449,8 +52459,8 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/purple/opposingcorners,
-/obj/machinery/camera/autoname/directional/west{
-	c_tag = "science_circuits_lab"
+/obj/machinery/camera/directional/west{
+	c_tag = "Science - Circuitry Lab"
 	},
 /turf/open/floor/iron/white,
 /area/science/misc_lab)
@@ -53819,8 +53829,8 @@
 /area/space/nearstation)
 "sVr" = (
 /obj/structure/closet/emcloset,
-/obj/machinery/camera/autoname/directional/west{
-	c_tag = "science_fore_entry"
+/obj/machinery/camera/directional/west{
+	c_tag = "Science - Fore Entry"
 	},
 /turf/open/floor/iron/white,
 /area/science/lower)
@@ -59506,9 +59516,6 @@
 /area/science/robotics/lab)
 "vad" = (
 /obj/structure/rack,
-/obj/machinery/camera/autoname/directional/west{
-	c_tag = "science_bunker"
-	},
 /turf/open/floor/catwalk_floor,
 /area/maintenance/radshelter/sci)
 "vae" = (
@@ -61455,6 +61462,9 @@
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor,
 /area/maintenance/floor3/port)
+"vKx" = (
+/turf/closed/wall/r_wall,
+/area/maintenance/radshelter/sci)
 "vKD" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/light/small/red/directional/north,
@@ -64971,14 +64981,14 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
-/obj/machinery/camera/autoname/directional/west{
-	c_tag = "science_server"
+/obj/machinery/camera/directional/west{
+	c_tag = "Science - Server"
 	},
 /turf/open/floor/iron/white,
 /area/science/server)
 "wUU" = (
-/obj/machinery/camera/autoname/directional/north{
-	c_tag = "command_RD_lab"
+/obj/machinery/camera/directional/north{
+	c_tag = "Command - Research Director's Lab"
 	},
 /turf/open/floor/engine,
 /area/command/heads_quarters/rd)
@@ -67915,9 +67925,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/chapel,
 /area/service/chapel)
-"xYq" = (
-/turf/closed/wall/r_wall,
-/area/maintenance/radshelter/sci)
 "xYr" = (
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted,
 /turf/open/floor/iron/dark,
@@ -161105,7 +161112,7 @@ qdW
 qdW
 wwu
 cwq
-odg
+ihW
 pUr
 fsI
 sYD
@@ -163413,13 +163420,13 @@ vnK
 wvg
 jql
 jql
-jor
+iOA
 jXM
 jXM
 jXM
-jor
-jor
-jor
+iOA
+iOA
+iOA
 alF
 amU
 jXM
@@ -163676,12 +163683,12 @@ xGk
 ksg
 vnK
 wvg
-xYq
-xYq
-xYq
-xYq
-xYq
-xYq
+vKx
+vKx
+vKx
+vKx
+vKx
+vKx
 mGd
 mQi
 lTo
@@ -163933,12 +163940,12 @@ lhq
 ksg
 vnK
 wvg
-xYq
+vKx
 fMC
 vad
 fMC
-fMC
-xYq
+apu
+vKx
 mGd
 shk
 lTo
@@ -164447,12 +164454,12 @@ tlF
 kxA
 vnK
 oWa
-xYq
+vKx
 dFO
 cMm
 ldQ
 ePX
-xYq
+vKx
 lTo
 fsI
 lTo
@@ -164704,12 +164711,12 @@ bHh
 iyF
 vnK
 sUj
-xYq
-xYq
-xYq
-xYq
-xYq
-xYq
+vKx
+vKx
+vKx
+vKx
+vKx
+vKx
 wev
 fsI
 lTo
