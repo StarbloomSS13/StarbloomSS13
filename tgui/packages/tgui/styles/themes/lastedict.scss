@@ -1,0 +1,60 @@
+/**
+ * Copyright (c) 2020 Aleksej Komarov
+ * SPDX-License-Identifier: MIT
+ */
+
+@use 'sass:color';
+@use 'sass:meta';
+
+@use '../colors.scss' with (
+  $primary: #1a3625,
+  $fg-map-keys: (),
+  $bg-map-keys: (),
+);
+@use '../base.scss' with (
+  $color-bg: #3a2042,
+  $color-bg-grad-spread: 6%,
+);
+
+.theme-syndicate {
+  // Atomic classes
+  @include meta.load-css('../atomic/color.scss');
+
+  // Components
+  @include meta.load-css('../components/Button.scss', $with: (
+    'color-default': colors.$primary,
+    'color-disabled': #363636,
+    'color-selected': #61466A,
+    'color-caution': #be0936,
+    'color-danger': #9d0000,
+  ));
+  @include meta.load-css('../components/Input.scss', $with: (
+    'border-color': #87ce87,
+  ));
+  @include meta.load-css('../components/NoticeBox.scss', $with: (
+    'background-color': #4b3652,
+  ));
+  @include meta.load-css('../components/NumberInput.scss', $with: (
+    'border-color': #87ce87,
+  ));
+  @include meta.load-css('../components/ProgressBar.scss', $with: (
+    'background-color': rgba(0, 0, 0, 0.5),
+  ));
+  @include meta.load-css('../components/Section.scss');
+  @include meta.load-css('../components/Tooltip.scss', $with: (
+    'background-color': #190022,
+  ));
+
+  // Layouts
+  @include meta.load-css('../layouts/Layout.scss');
+  @include meta.load-css('../layouts/Window.scss');
+  @include meta.load-css('../layouts/TitleBar.scss', $with: (
+    'background-color': #4b3652,
+  ));
+
+  /* // TEMP - Uncomment when SVG is ready
+  .Layout__content {
+    background-image: url('../../assets/bg-lastedict.svg');
+  }
+  */
+}
