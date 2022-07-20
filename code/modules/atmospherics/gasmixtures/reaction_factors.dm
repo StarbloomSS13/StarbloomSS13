@@ -143,15 +143,15 @@
 		"Temperature" = "Can only occur between [HALON_FORMATION_MIN_TEMPERATURE] - [HALON_FORMATION_MAX_TEMPERATURE] kelvin",
 	)
 
-/datum/gas_reaction/halon_o2removal/init_factors()
+/datum/gas_reaction/halon_plasmaremoval/init_factors()
 	factor = list(
 		/datum/gas/halon = "Halon is consumed at 1 reaction rate",
-		/datum/gas/oxygen = "Oxygen is consumed at 20 reaction rate",
+		/datum/gas/plasma = "Plasma is consumed at 20 reaction rate",
 		/datum/gas/carbon_dioxide = "Carbon dioxide is produced at 5 reaction rate.",
 		"Energy" = "[HALON_COMBUSTION_ENERGY] joules of energy is absorbed per reaction rate",
 		"Temperature" = "Can only occur above [FIRE_MINIMUM_TEMPERATURE_TO_EXIST] kelvin. Higher temperature increases the reaction rate.",
 	)
-	
+
 /datum/gas_reaction/healium_formation/init_factors()
 	factor = list(
 		/datum/gas/bz = "BZ is consumed at 0.25 reaction rate",
@@ -169,7 +169,7 @@
 		"Temperature" = "Can only occur between [ZAUKER_FORMATION_MIN_TEMPERATURE] - [ZAUKER_FORMATION_MAX_TEMPERATURE] kelvin",
 		"Energy" = "[ZAUKER_FORMATION_ENERGY] joules of energy is absorbed per reaction rate",
 	)
-	
+
 /datum/gas_reaction/zauker_decomp/init_factors() //Fixed reaction rate
 	factor = list(
 		/datum/gas/zauker = "Zauker is consumed at 1 reaction rate",
@@ -186,7 +186,7 @@
 		"Energy" = "[PN_FORMATION_ENERGY] joules of energy is released per reaction rate",
 		"Temperature" = "Can only occur between [PN_FORMATION_MIN_TEMPERATURE] - [PN_FORMATION_MAX_TEMPERATURE] kelvin. Higher temperature increases the reaction rate.",
 	)
-	
+
 /datum/gas_reaction/proto_nitrate_hydrogen_response/init_factors() // Fixed reaction rate
 	factor = list(
 		/datum/gas/hydrogen = "[PN_HYDROGEN_CONVERSION_THRESHOLD] moles of hydrogen needs to be present for the reaction to occur. Hydrogen is consumed at 1 reaction rate.",

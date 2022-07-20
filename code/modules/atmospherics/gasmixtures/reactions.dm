@@ -58,12 +58,12 @@
 	/// A short string describing this reaction.
 	var/desc
 	/** REACTION FACTORS
-	 * 
+	 *
 	 * Describe (to a human) factors influencing this reaction in an assoc list format.
 	 * Also include gases formed by the reaction
 	 * Implement various interaction for different keys under subsystem/air/proc/atmos_handbook_init()
-	 * 
-	 * E.G. 
+	 *
+	 * E.G.
 	 * factor["Temperature"] = "Minimum temperature of 20 kelvins, maximum temperature of 100 kelvins"
 	 * factor["o2"] = "Minimum oxygen amount of 20 moles, more oxygen increases reaction rate up to 150 moles"
 	 */
@@ -544,7 +544,7 @@
 	var/list/cached_gases = air.gases
 	var/pressure = air.return_pressure()
 	// This slows down in relation to pressure, very quickly. Please don't expect it to be anything more then a snail
-	
+
 	// Bigger is better for these two values.
 	var/pressure_efficiency = (0.1 * ONE_ATMOSPHERE) / pressure // More pressure = more bad
 	var/ratio_efficiency = min(cached_gases[/datum/gas/nitrous_oxide][MOLES] / cached_gases[/datum/gas/plasma][MOLES], 1) // Malus to production if more plasma than n2o.
@@ -783,7 +783,7 @@
 
 	var/old_heat_capacity = air.heat_capacity()
 	air.assert_gases(/datum/gas/hypernoblium, /datum/gas/bz)
-	cached_gases[/datum/gas/tritium][MOLES] -= 5 * nob_formed 
+	cached_gases[/datum/gas/tritium][MOLES] -= 5 * nob_formed
 	cached_gases[/datum/gas/nitrogen][MOLES] -= 10 * nob_formed
 	cached_gases[/datum/gas/hypernoblium][MOLES] += nob_formed // I'm not going to nitpick, but N20H10 feels like it should be an explosive more than anything.
 	SET_REACTION_RESULTS(nob_formed)
@@ -839,35 +839,35 @@
 /**
  * Halon Combustion:
  *
- * Consumes a large amount of oxygen relative to the amount of halon consumed.
+ * Consumes a large amount of plasma relative to the amount of halon consumed.
  * Produces carbon dioxide.
  * Endothermic.
  */
-/datum/gas_reaction/halon_o2removal
+/datum/gas_reaction/halon_plasmaremoval
 	priority_group = PRIORITY_PRE_FORMATION
-	name = "Halon Oxygen Absorption"
-	id = "halon_o2removal"
-	desc = "Halon interaction with oxygen that can be used to snuff fires out."
+	name = "Halon Plasma Absorption"
+	id = "halon_plasmaremoval"
+	desc = "Halon interaction with plasma that can be used to snuff fires out."
 
-/datum/gas_reaction/halon_o2removal/init_reqs()
+/datum/gas_reaction/halon_plasmaremoval/init_reqs()
 	requirements = list(
 		/datum/gas/halon = MINIMUM_MOLE_COUNT,
-		/datum/gas/oxygen = MINIMUM_MOLE_COUNT,
+		/datum/gas/plasma = MINIMUM_MOLE_COUNT,
 		"MIN_TEMP" = FIRE_MINIMUM_TEMPERATURE_TO_EXIST,
 	)
 
-/datum/gas_reaction/halon_o2removal/react(datum/gas_mixture/air, datum/holder)
+/datum/gas_reaction/halon_plasmaremoval/react(datum/gas_mixture/air, datum/holder)
 	var/list/cached_gases = air.gases
 	var/temperature = air.temperature
 
-	var/heat_efficency = min(temperature / ( FIRE_MINIMUM_TEMPERATURE_TO_EXIST * 10), cached_gases[/datum/gas/halon][MOLES], cached_gases[/datum/gas/oxygen][MOLES] * INVERSE(20))
-	if (heat_efficency <= 0 || (cached_gases[/datum/gas/halon][MOLES] - heat_efficency < 0 ) || (cached_gases[/datum/gas/oxygen][MOLES] - heat_efficency * 20 < 0)) //Shouldn't produce gas from nothing.
+	var/heat_efficency = min(temperature / ( FIRE_MINIMUM_TEMPERATURE_TO_EXIST * 10), cached_gases[/datum/gas/halon][MOLES], cached_gases[/datum/gas/plasma][MOLES] * INVERSE(20))
+	if (heat_efficency <= 0 || (cached_gases[/datum/gas/halon][MOLES] - heat_efficency < 0 ) || (cached_gases[/datum/gas/plasma][MOLES] - heat_efficency * 20 < 0)) //Shouldn't produce gas from nothing.
 		return NO_REACTION
 
 	var/old_heat_capacity = air.heat_capacity()
 	ASSERT_GAS(/datum/gas/carbon_dioxide, air)
 	cached_gases[/datum/gas/halon][MOLES] -= heat_efficency
-	cached_gases[/datum/gas/oxygen][MOLES] -= heat_efficency * 20
+	cached_gases[/datum/gas/plasma][MOLES] -= heat_efficency * 20
 	cached_gases[/datum/gas/carbon_dioxide][MOLES] += heat_efficency * 5
 
 	SET_REACTION_RESULTS(heat_efficency * 5)

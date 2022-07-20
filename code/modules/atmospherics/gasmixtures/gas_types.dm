@@ -249,7 +249,7 @@ GLOBAL_LIST_INIT(nonreactive_gases, typecacheof(list(/datum/gas/oxygen, /datum/g
 	moles_visible = MOLES_GAS_VISIBLE
 	rarity = 300
 	base_value = 9
-	desc = "A potent fire supressant. Removes oxygen from high temperature fires and cools down the area"
+	desc = "A potent fire supressant. Removes plasma from high temperature fires and cools down the area."
 
 /datum/gas/helium
 	id = "helium"
