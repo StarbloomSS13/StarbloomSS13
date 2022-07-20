@@ -95,10 +95,10 @@ export const ListMapper = (props, context) => {
      * reference rather than value, we can't find functions whose keys
      * within the table are tables, threads, or userdata
      */
-    const uniquelyIndexable =
-      (typeof key === 'string' &&
-        !(UnconvertibleLuaValueRegex.test(key) || RefRegex.test(key))) ||
-      typeof key === 'number';
+    const uniquelyIndexable
+      = (typeof key === 'string'
+        && !(UnconvertibleLuaValueRegex.test(key) || RefRegex.test(key)))
+      || typeof key === 'number';
     let valueNode = ThingNode(value, valuePath, {
       callType: uniquelyIndexable && callType,
     });
@@ -126,8 +126,7 @@ export const ListMapper = (props, context) => {
                 tooltip="Remove"
                 onClick={() => act('removeArg', { path: entryPath })}
               />
-            </>
-          )
+            </>)
         }>
         {valueNode}
       </LabeledList.Item>

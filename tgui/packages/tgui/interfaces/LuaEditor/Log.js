@@ -45,8 +45,7 @@ export const Log = (props, context) => {
                   act('vvReturnValue', {
                     entryIndex: i + 1,
                     tableIndices: path,
-                  })
-                }
+                  })}
               />
             ) : (
               <br />
@@ -74,8 +73,7 @@ export const Log = (props, context) => {
                     act('vvReturnValue', {
                       entryIndex: i + 1,
                       tableIndices: path,
-                    })
-                  }
+                    })}
                 />
               ) : (
                 <br />
