@@ -43,27 +43,22 @@
 	)
 
 /datum/species/human/get_species_description()
-	return "Humans are the dominant species in the known galaxy. \
-		Their kind extend from old Earth to the edges of known space."
+	return "Humans descend from the dead planet Earth. \
+		Their kind exist purely aboard the North Star colony ship.."
 
 /datum/species/human/get_species_lore()
 	return list(
-		"These primate-descended creatures, originating from the mostly harmless Earth, \
-		have long-since outgrown their home and semi-benign designation. \
-		The space age has taken humans out of their solar system and into the galaxy-at-large.",
+		"These primate-descended creatures, originating from Earth, \
+		found themselves driven out of their homes by a runaway greenhouse effect. \
+		Building a colony ship, the survivors of their kind left their home to find a new one.",
 
-		"In traditional human fashion, this near-record pace from terra firma to the final frontier spat \
-		in the face of other races they now shared a stage with. \
-		This included the lizards - if anyone was offended by these upstarts, it was certainly lizardkind.",
+		"To cope with the harsh conditions aboard their hastily constructed ship, the humans turned \
+		to genetically altering themselves in increasingly extreme ways, slowly giving rise to new species. \
+		Forced to live together, genotypical humans did not begin to see modified people as much different from themselves.",
 
-		"Humanity never managed to find the kind of peace to fully unite under one banner like other species. \
-		The pencil and paper pushing of the UN bureaucrat lives on in the mosaic that is TerraGov; \
-		a composite of the nation-states that still live on in human society.",
-
-		"The human spirit of opportunity and enterprise continues on in its peak form: \
-		the hypercorporation. Acting outside of TerraGov's influence, literally and figuratively, \
-		hypercorporations buy the senate votes they need and establish territory far past the Earth Government's reach. \
-		In hypercorporation territory company policy is law, giving new meaning to \"employee termination\".",
+		"Led by a corrupt aristocracy, humans find themselves lost out of time in a galaxy hostile to them. \
+		A bloody first contact incident caused them to turn inward, becoming extremely isolationist and terrified of the outside. \
+		Still, they continue on every day trying to find their place in the galaxy.",
 	)
 
 /datum/species/human/create_pref_unique_perks()

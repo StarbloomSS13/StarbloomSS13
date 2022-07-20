@@ -1,7 +1,7 @@
 /datum/species/lizard
 	// Reptilian humanoids with scaled skin and tails.
-	name = "\improper Lizardperson"
-	plural_form = "Lizardfolk"
+	name = "\improper Scalefolk"
+	plural_form = "Scalefolks"
 	id = SPECIES_LIZARD
 	say_mod = "hisses"
 	default_color = COLOR_VIBRANT_LIME
@@ -9,6 +9,7 @@
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,
 		TRAIT_CAN_STRIP,
+		TRAIT_RADIMMUNE,
 		TRAIT_CAN_USE_FLIGHT_POTION,
 	)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_REPTILE
@@ -144,28 +145,18 @@
 	)
 
 /datum/species/lizard/get_species_description()
-	return "The militaristic Lizardpeople hail originally from Tizira, but have grown \
-		throughout their centuries in the stars to possess a large spacefaring \
-		empire: though now they must contend with their younger, more \
-		technologically advanced Human neighbours."
+	return "A modification of humanity, this species was developed to manage \
+		failed reactor shielding that threatened the lives of every crewmember aboard. \
+		Their extreme regenerative abilities and thick hide allow them immunity \
+		to all forms of ionizing radiation."
 
 /datum/species/lizard/get_species_lore()
 	return list(
-		"The face of conspiracy theory was changed forever the day mankind met the lizards.",
+		"Scalefolk were the first of the modified humans to be created.",
 
-		"Hailing from the arid world of Tizira, lizards were travelling the stars back when mankind was first discovering how neat trains could be. \
-		However, much like the space-fable of the space-tortoise and space-hare, lizards have rejected their kin's motto of \"slow and steady\" \
-		in favor of resting on their laurels and getting completely surpassed by 'bald apes', due in no small part to their lack of access to plasma.",
-
-		"The history between lizards and humans has resulted in many conflicts that lizards ended on the losing side of, \
-		with the finale being an explosive remodeling of their moon. Today's lizard-human relations are seeing the continuance of a record period of peace.",
-
-		"Lizard culture is inherently militaristic, though the influence the military has on lizard culture \
-		begins to lessen the further colonies lie from their homeworld - \
-		with some distanced colonies finding themselves subsumed by the cultural practices of other species nearby.",
-
-		"On their homeworld, lizards celebrate their 16th birthday by enrolling in a mandatory 5 year military tour of duty. \
-		Roles range from combat to civil service and everything in between. As the old slogan goes: \"Your place will be found!\"",
+		"Due to a shielding failure in the North Star's fission reactor leaking extreme amounts of radiation, intense enough to shut down any \
+		remote robots - a different approach was needed. Using the regenerative abilities of a reptilian species adapted to radiation, Chiron Biolabs \
+		spearheaded the attempt to fix the leak, with Scalefolk developing a thick metallic hide and the capacity to repair any damage caused by radiation.",
 	)
 
 // Override for the default temperature perks, so we can give our specific "cold blooded" perk.
@@ -176,7 +167,7 @@
 		SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
 		SPECIES_PERK_ICON = "thermometer-empty",
 		SPECIES_PERK_NAME = "Cold-blooded",
-		SPECIES_PERK_DESC = "Lizardpeople have higher tolerance for hot temperatures, but lower \
+		SPECIES_PERK_DESC = "Scalefolk have higher tolerance for hot temperatures, but lower \
 			tolerance for cold temperatures. Additionally, they cannot self-regulate their body temperature - \
 			they are as cold or as warm as the environment around them is. Stay warm!",
 	))
