@@ -134,10 +134,10 @@
 	return source //For log icon
 
 /datum/uplink_item/device_tools/toolbox
-	name = "Full Syndicate Toolbox"
-	desc = "The Syndicate toolbox is a suspicious black and red. It comes loaded with a full tool set including a \
-			multitool and combat gloves that are resistant to shocks and heat."
-	item = /obj/item/storage/toolbox/syndicate
+	name = "Lead-Lined Toolbox"
+	desc = "This luxurious toolbox is a suspicious black and purple. It comes loaded with a full tool set; including a \
+			multitool and combat gloves that are resistant to shocks and heat. Extra hefty for any physical encounters."
+	item = /obj/item/storage/toolbox/edict
 	cost = 1
 	illegal_tech = FALSE
 
