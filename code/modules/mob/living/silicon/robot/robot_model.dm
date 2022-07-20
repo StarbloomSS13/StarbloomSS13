@@ -767,7 +767,7 @@
 		/obj/item/card/emag,
 		/obj/item/crowbar/cyborg,
 		/obj/item/extinguisher/mini,
-		/obj/item/pinpointer/edict_cyborg)
+		/obj/item/pinpointer/syndicate_cyborg)
 
 	cyborg_base_icon = "edict_sec"
 	model_select_icon = "malf"
@@ -788,8 +788,8 @@
 	name = "Edict Medical"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
-		/obj/item/reagent_containers/borghypo/edict,
-		/obj/item/shockpaddles/edict/cyborg,
+		/obj/item/reagent_containers/borghypo/syndicate,
+		/obj/item/shockpaddles/syndicate/cyborg,
 		/obj/item/healthanalyzer,
 		/obj/item/surgical_drapes,
 		/obj/item/retractor,
@@ -801,7 +801,7 @@
 		/obj/item/roller/robo,
 		/obj/item/crowbar/cyborg,
 		/obj/item/extinguisher/mini,
-		/obj/item/pinpointer/edict_cyborg,
+		/obj/item/pinpointer/syndicate_cyborg,
 		/obj/item/stack/medical/gauze,
 		/obj/item/gun/medbeam,
 		/obj/item/borg/apparatus/organ_storage)
@@ -816,7 +816,7 @@
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
 		/obj/item/borg/sight/thermal,
-		/obj/item/construction/rcd/borg/edict,
+		/obj/item/construction/rcd/borg/syndicate,
 		/obj/item/pipe_dispenser,
 		/obj/item/restraints/handcuffs/cable/zipties,
 		/obj/item/extinguisher,
@@ -834,7 +834,7 @@
 		/obj/item/stack/tile/iron/base/cyborg,
 		/obj/item/dest_tagger/borg,
 		/obj/item/stack/cable_coil,
-		/obj/item/pinpointer/edict_cyborg,
+		/obj/item/pinpointer/syndicate_cyborg,
 		/obj/item/borg_chameleon,
 		/obj/item/card/emag,
 		)

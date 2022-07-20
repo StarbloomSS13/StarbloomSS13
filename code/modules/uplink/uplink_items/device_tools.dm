@@ -13,7 +13,7 @@
 	name = "Syndicate Soap"
 	desc = "A sinister-looking surfactant used to clean blood stains to hide murders and prevent DNA analysis. \
 			You can also drop it underfoot to slip people."
-	item = /obj/item/soap/syndie
+	item = /obj/item/soap/edict
 	cost = 1
 	surplus = 50
 	illegal_tech = FALSE
@@ -22,7 +22,7 @@
 	name = "Last Edict Surgery Toolkit"
 	desc = "This sleek, lightweight duffel bag come pre-equipped with a toolkit containing all surgery tools, surgical drapes, \
 			a Edict-Modified MMI, a straitjacket, and a muzzle."
-	item = /obj/item/storage/backpack/duffelbag/syndie/surgery
+	item = /obj/item/storage/backpack/duffelbag/edict/surgery
 	cost = 3
 
 /datum/uplink_item/device_tools/encryptionkey

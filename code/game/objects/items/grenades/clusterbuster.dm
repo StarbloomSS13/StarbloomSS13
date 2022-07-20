@@ -162,9 +162,9 @@
 	name = "Aciding Rain"
 	payload = /obj/item/grenade/chem_grenade/facid
 
-/obj/item/grenade/clusterbuster/syndieminibomb
-	name = "SyndiWrath"
-	payload = /obj/item/grenade/syndieminibomb
+/obj/item/grenade/clusterbuster/edictminibomb
+	name = "EdictWrath"
+	payload = /obj/item/grenade/edictminibomb
 
 /obj/item/grenade/clusterbuster/spawner_manhacks
 	name = "iViscerator"

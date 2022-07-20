@@ -2,7 +2,7 @@
 	category = OPFOR_EQUIPMENT_CATEGORY_EXPLOSIVES
 
 /datum/opposing_force_equipment/bomb/henade
-	item_type = /obj/item/grenade/syndieminibomb/concussion
+	item_type = /obj/item/grenade/edictminibomb/concussion
 	description = "A grenade intended to concuss and incapacitate enemies. Still rather explosive."
 
 /datum/opposing_force_equipment/bomb/fragnade
@@ -33,8 +33,8 @@
 	description = "A modified version of the Syndicate Bomb that releases a large EMP instead."
 
 /datum/opposing_force_equipment/bomb/minibomb
-	name = "Syndicate Minibomb"
-	item_type = /obj/item/grenade/syndieminibomb
+	name = "EXODUS Minibomb"
+	item_type = /obj/item/grenade/edictminibomb
 	description = "The minibomb is a grenade with a five-second fuse. Upon detonation, it will create a small hull breach \
 			in addition to dealing high amounts of damage to nearby personnel."
 
