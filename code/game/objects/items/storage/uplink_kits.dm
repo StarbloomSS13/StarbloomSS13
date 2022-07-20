@@ -109,7 +109,7 @@
 			new /obj/item/encryptionkey/binary(src)
 			new /obj/item/ai_module/toy_ai(src)
 			new /obj/item/multitool/ai_detect(src)
-			new /obj/item/storage/toolbox/syndicate(src)
+			new /obj/item/storage/toolbox/edict(src)
 			new /obj/item/camera_bug(src)
 			new /obj/item/clothing/glasses/thermal/syndi(src)
 			new /obj/item/card/id/advanced/chameleon(src)
@@ -119,7 +119,7 @@
 			new /obj/item/clothing/suit/space/syndicate/black/red(src)
 			new /obj/item/clothing/head/helmet/space/syndicate/black/red(src)
 			new /obj/item/card/emag(src)
-			new /obj/item/storage/toolbox/syndicate(src)
+			new /obj/item/storage/toolbox/edict(src)
 			new /obj/item/card/id/advanced/mining(src)
 			new /obj/item/stack/spacecash/c10000(src)
 			new /obj/item/toy/spinningtoy(src) //lol
@@ -129,7 +129,7 @@
 			new /obj/item/camera_bug(src)
 			new /obj/item/sbeacondrop/powersink(src)
 			new /obj/item/cartridge/virus/syndicate(src)
-			new /obj/item/storage/toolbox/syndicate(src)
+			new /obj/item/storage/toolbox/edict(src)
 			new /obj/item/pizzabox/bomb(src)
 			new /obj/item/storage/box/syndie_kit/emp(src)
 
@@ -208,7 +208,7 @@
 			new /obj/item/assembly/signaler(src) // 0 tc
 			new /obj/item/assembly/signaler(src) // 0 tc
 			new /obj/item/assembly/signaler(src) // 0 tc
-			new /obj/item/storage/toolbox/syndicate(src) // 1 tc
+			new /obj/item/storage/toolbox/edict(src) // 1 tc
 			new /obj/item/pen/edagger(src)
 			new /obj/item/gun/energy/wormhole_projector/core_inserted(src)
 			new /obj/item/gun/energy/decloner/unrestricted(src)
