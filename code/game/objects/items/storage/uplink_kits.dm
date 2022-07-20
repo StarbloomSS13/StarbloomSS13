@@ -65,7 +65,7 @@
 			new /obj/item/pen/sleepy(src)
 			new /obj/item/healthanalyzer/rad_laser(src)
 			new /obj/item/chameleon(src)
-			new /obj/item/soap/syndie(src)
+			new /obj/item/soap/edict(src)
 			new /obj/item/clothing/glasses/thermal/syndi(src)
 			new /obj/item/flashlight/emp(src)
 			new /obj/item/jammer(src)
@@ -82,7 +82,7 @@
 
 		if(KIT_SCREWED)
 			new /obj/item/sbeacondrop/bomb(src)
-			new /obj/item/grenade/syndieminibomb(src)
+			new /obj/item/grenade/edictminibomb(src)
 			new /obj/item/sbeacondrop/powersink(src)
 			new /obj/item/clothing/suit/space/syndicate/black/red(src)
 			new /obj/item/clothing/head/helmet/space/syndicate/black/red(src)
@@ -94,7 +94,7 @@
 			new /obj/item/card/emag(src)
 			new /obj/item/clothing/shoes/chameleon/noslip(src)
 			new /obj/item/encryptionkey/lastedict(src)
-			new /obj/item/grenade/syndieminibomb(src)
+			new /obj/item/grenade/edictminibomb(src)
 
 		if(KIT_IMPLANTS)
 			new /obj/item/implanter/freedom(src)

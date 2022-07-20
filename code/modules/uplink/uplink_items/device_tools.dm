@@ -19,9 +19,9 @@
 	illegal_tech = FALSE
 
 /datum/uplink_item/device_tools/surgerybag
-	name = "Syndicate Surgery Duffel Bag"
-	desc = "The Syndicate surgery duffel bag is a toolkit containing all surgery tools, surgical drapes, \
-			a Syndicate brand MMI, a straitjacket, and a muzzle."
+	name = "Last Edict Surgery Toolkit"
+	desc = "This sleek, lightweight duffel bag come pre-equipped with a toolkit containing all surgery tools, surgical drapes, \
+			a Edict-Modified MMI, a straitjacket, and a muzzle."
 	item = /obj/item/storage/backpack/duffelbag/syndie/surgery
 	cost = 3
 

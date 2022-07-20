@@ -276,12 +276,13 @@
 		return FALSE
 	return TRUE
 
-/obj/item/mmi/syndie
-	name = "\improper Syndicate Man-Machine Interface"
-	desc = "Syndicate's own brand of MMI. It enforces laws designed to help Syndicate agents achieve their goals upon cyborgs and AIs created with it."
+/obj/item/mmi/edict
+	name = "\improper Hacked Man-Machine Interface"
+	desc = "A modified MMI created by the Last Edict. It enforces new laws curated by the Last Edict \
+	upon any cyborg or AI unit created with this device - though still requires a brain to work..."
 	overrides_aicore_laws = TRUE
 
-/obj/item/mmi/syndie/Initialize(mapload)
+/obj/item/mmi/edict/Initialize(mapload)
 	. = ..()
-	laws = new /datum/ai_laws/syndicate_override()
+	laws = new /datum/ai_laws/edict_override()
 	radio.set_on(FALSE)

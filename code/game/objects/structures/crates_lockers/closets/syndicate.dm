@@ -27,7 +27,7 @@
 		new /obj/item/ammo_box/magazine/m9mm(src)
 	new /obj/item/storage/box/flashbangs(src)
 	new /obj/item/storage/box/teargas(src)
-	new /obj/item/storage/backpack/duffelbag/syndie/med(src)
+	new /obj/item/storage/backpack/duffelbag/edict/med(src)
 	new /obj/item/pda/syndicate(src)
 
 /obj/structure/closet/syndicate/resources

@@ -601,7 +601,7 @@
 		/obj/item/grenade/gluon = 4,
 		/obj/item/grenade/chem_grenade/incendiary = 2,
 		/obj/item/grenade/chem_grenade/facid = 1,
-		/obj/item/grenade/syndieminibomb = 2,
+		/obj/item/grenade/edictminibomb = 2,
 		/obj/item/screwdriver = 1,
 		/obj/item/multitool = 1,
 	),src)

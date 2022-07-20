@@ -192,11 +192,11 @@
 	var/obj/structure/closet/supplypod/pod = setup_pod()
 	switch(borg_to_spawn)
 		if("Medical")
-			borg = new /mob/living/silicon/robot/model/syndicate/medical()
+			borg = new /mob/living/silicon/robot/model/edict/medical()
 		if("Saboteur")
-			borg = new /mob/living/silicon/robot/model/syndicate/saboteur()
+			borg = new /mob/living/silicon/robot/model/edict/saboteur()
 		else
-			borg = new /mob/living/silicon/robot/model/syndicate() //Assault borg by default
+			borg = new /mob/living/silicon/robot/model/edict() //Assault borg by default
 
 	var/brainfirstname = pick(GLOB.first_names_male)
 	if(prob(50))

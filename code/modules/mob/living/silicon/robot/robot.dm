@@ -86,9 +86,9 @@
 	alert_control.listener.RegisterSignal(src, COMSIG_LIVING_DEATH, /datum/alarm_listener/proc/prevent_alarm_changes)
 	alert_control.listener.RegisterSignal(src, COMSIG_LIVING_REVIVE, /datum/alarm_listener/proc/allow_alarm_changes)
 
-/mob/living/silicon/robot/model/syndicate/Initialize(mapload)
+/mob/living/silicon/robot/model/edict/Initialize(mapload)
 	. = ..()
-	laws = new /datum/ai_laws/syndicate_override()
+	laws = new /datum/ai_laws/edict_override()
 	addtimer(CALLBACK(src, .proc/show_playstyle), 5)
 
 /mob/living/silicon/robot/proc/create_modularInterface()
@@ -97,7 +97,7 @@
 	modularInterface.layer = ABOVE_HUD_PLANE
 	modularInterface.plane = ABOVE_HUD_PLANE
 
-/mob/living/silicon/robot/model/syndicate/create_modularInterface()
+/mob/living/silicon/robot/model/edict/create_modularInterface()
 	if(!modularInterface)
 		modularInterface = new /obj/item/modular_computer/tablet/integrated/syndicate(src)
 	return ..()
@@ -105,7 +105,7 @@
 /**
  * Sets the tablet theme and icon
  *
- * These variables are based on if the borg is a syndicate type or is emagged. This gets used in model change code
+ * These variables are based on if the borg is a edict type or is emagged. This gets used in model change code
  * and also borg emag code.
  */
 /mob/living/silicon/robot/proc/set_modularInterface_theme()
@@ -723,7 +723,7 @@
 
 	return TRUE
 
-/mob/living/silicon/robot/model/syndicate/ResetModel()
+/mob/living/silicon/robot/model/edict/ResetModel()
 	return
 
 /mob/living/silicon/robot/proc/has_model()
