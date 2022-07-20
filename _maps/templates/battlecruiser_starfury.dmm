@@ -872,12 +872,12 @@
 /area/shuttle/sbc_starfury)
 "cW" = (
 /obj/structure/table,
-/obj/item/storage/backpack/duffelbag/syndie/surgery,
 /obj/item/defibrillator/compact/combat/loaded,
 /obj/item/gun/syringe/rapidsyringe,
 /obj/machinery/airalarm/directional/east{
 	req_access = list(150)
 	},
+/obj/item/storage/backpack/duffelbag/edict/surgery,
 /turf/open/floor/iron/white/smooth_large,
 /area/shuttle/sbc_starfury)
 "da" = (
@@ -2066,22 +2066,14 @@
 	req_access_txt = "151"
 	},
 /obj/item/storage/belt/grenade/full,
-/obj/item/grenade/syndieminibomb{
-	pixel_x = -1;
-	pixel_y = 3
-	},
-/obj/item/grenade/syndieminibomb{
-	pixel_x = 2
-	},
-/obj/item/grenade/syndieminibomb{
-	pixel_x = 5;
-	pixel_y = -3
-	},
 /obj/item/syndicatedetonator{
 	desc = "This gaudy button can be used to instantly detonate syndicate bombs that have been activated on the station. It is also fun to press."
 	},
 /obj/item/storage/belt/military,
 /obj/effect/turf_decal/siding/red,
+/obj/item/grenade/edictminibomb,
+/obj/item/grenade/edictminibomb,
+/obj/item/grenade/edictminibomb,
 /turf/open/floor/pod/light,
 /area/shuttle/sbc_starfury)
 "hc" = (
