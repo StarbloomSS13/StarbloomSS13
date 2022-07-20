@@ -757,8 +757,8 @@
 	if(enzyme)
 		enzyme.reagents.add_reagent(/datum/reagent/consumable/enzyme, 2 * coeff)
 
-/obj/item/robot_model/syndicate
-	name = "Syndicate Assault"
+/obj/item/robot_model/edict
+	name = "Edict Assault"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
 		/obj/item/melee/energy/sword/cyborg,
@@ -767,29 +767,29 @@
 		/obj/item/card/emag,
 		/obj/item/crowbar/cyborg,
 		/obj/item/extinguisher/mini,
-		/obj/item/pinpointer/syndicate_cyborg)
+		/obj/item/pinpointer/edict_cyborg)
 
-	cyborg_base_icon = "synd_sec"
+	cyborg_base_icon = "edict_sec"
 	model_select_icon = "malf"
 	model_traits = list(TRAIT_PUSHIMMUNE)
 	hat_offset = 3
 
-/obj/item/robot_model/syndicate/rebuild_modules()
+/obj/item/robot_model/edict/rebuild_modules()
 	..()
 	var/mob/living/silicon/robot/cyborg = loc
 	cyborg.faction -= "silicon" //ai turrets
 
-/obj/item/robot_model/syndicate/remove_module(obj/item/removed_module, delete_after)
+/obj/item/robot_model/edict/remove_module(obj/item/removed_module, delete_after)
 	..()
 	var/mob/living/silicon/robot/cyborg = loc
 	cyborg.faction |= "silicon" //ai is your bff now!
 
-/obj/item/robot_model/syndicate_medical
-	name = "Syndicate Medical"
+/obj/item/robot_model/edict_medical
+	name = "Edict Medical"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
-		/obj/item/reagent_containers/borghypo/syndicate,
-		/obj/item/shockpaddles/syndicate/cyborg,
+		/obj/item/reagent_containers/borghypo/edict,
+		/obj/item/shockpaddles/edict/cyborg,
 		/obj/item/healthanalyzer,
 		/obj/item/surgical_drapes,
 		/obj/item/retractor,
@@ -801,22 +801,22 @@
 		/obj/item/roller/robo,
 		/obj/item/crowbar/cyborg,
 		/obj/item/extinguisher/mini,
-		/obj/item/pinpointer/syndicate_cyborg,
+		/obj/item/pinpointer/edict_cyborg,
 		/obj/item/stack/medical/gauze,
 		/obj/item/gun/medbeam,
 		/obj/item/borg/apparatus/organ_storage)
 
-	cyborg_base_icon = "synd_medical"
+	cyborg_base_icon = "edict_medical"
 	model_select_icon = "malf"
 	model_traits = list(TRAIT_PUSHIMMUNE)
 	hat_offset = 3
 
 /obj/item/robot_model/saboteur
-	name = "Syndicate Saboteur"
+	name = "Edict Saboteur"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
 		/obj/item/borg/sight/thermal,
-		/obj/item/construction/rcd/borg/syndicate,
+		/obj/item/construction/rcd/borg/edict,
 		/obj/item/pipe_dispenser,
 		/obj/item/restraints/handcuffs/cable/zipties,
 		/obj/item/extinguisher,
@@ -834,18 +834,18 @@
 		/obj/item/stack/tile/iron/base/cyborg,
 		/obj/item/dest_tagger/borg,
 		/obj/item/stack/cable_coil,
-		/obj/item/pinpointer/syndicate_cyborg,
+		/obj/item/pinpointer/edict_cyborg,
 		/obj/item/borg_chameleon,
 		/obj/item/card/emag,
 		)
 
-	cyborg_base_icon = "synd_engi"
+	cyborg_base_icon = "edict_engi"
 	model_select_icon = "malf"
 	model_traits = list(TRAIT_PUSHIMMUNE, TRAIT_NEGATES_GRAVITY)
 	hat_offset = -4
 	canDispose = TRUE
 
-/obj/item/robot_model/syndicate/kiltborg
+/obj/item/robot_model/edict/kiltborg
 	name = "Highlander"
 	basic_modules = list(
 		/obj/item/claymore/highlander/robot,
@@ -856,17 +856,17 @@
 	breakable_modules = FALSE
 	locked_transform = FALSE //GO GO QUICKLY AND SLAUGHTER THEM ALL
 
-/obj/item/robot_model/syndicate/kiltborg/be_transformed_to(obj/item/robot_model/old_model)
+/obj/item/robot_model/edict/kiltborg/be_transformed_to(obj/item/robot_model/old_model)
 	. = ..()
 	qdel(robot.radio)
-	robot.radio = new /obj/item/radio/borg/syndicate(robot)
+	robot.radio = new /obj/item/radio/borg/edict(robot)
 	robot.scrambledcodes = TRUE
 	robot.maxHealth = 50 //DIE IN THREE HITS, LIKE A REAL SCOT
 	robot.break_cyborg_slot(3) //YOU ONLY HAVE TWO ITEMS ANYWAY
 	var/obj/item/pinpointer/nuke/diskyfinder = locate(/obj/item/pinpointer/nuke) in basic_modules
 	diskyfinder.attack_self(robot)
 
-/obj/item/robot_model/syndicate/kiltborg/do_transform_delay() //AUTO-EQUIPPING THESE TOOLS ANY EARLIER CAUSES RUNTIMES OH YEAH
+/obj/item/robot_model/edict/kiltborg/do_transform_delay() //AUTO-EQUIPPING THESE TOOLS ANY EARLIER CAUSES RUNTIMES OH YEAH
 	. = ..()
 	robot.equip_module_to_slot(locate(/obj/item/claymore/highlander/robot) in basic_modules, 1)
 	robot.equip_module_to_slot(locate(/obj/item/pinpointer/nuke) in basic_modules, 2)

@@ -26,10 +26,10 @@
 	cost = 3
 
 /datum/uplink_item/device_tools/encryptionkey
-	name = "Syndicate Encryption Key"
-	desc = "A key that, when inserted into a radio headset, allows you to listen to all station department channels \
-			as well as talk on an encrypted Syndicate channel with other agents that have the same key."
-	item = /obj/item/encryptionkey/syndicate
+	name = "Last Edict Encryption Key"
+	desc = "A key that, when inserted into a radio headset, allows you to listen to all department channels \
+			as well as talk on an encrypted Last Edict channel with other agents that have the same key."
+	item = /obj/item/encryptionkey/lastedict
 	cost = 2
 	surplus = 75
 	restricted = TRUE

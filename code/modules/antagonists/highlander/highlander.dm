@@ -99,5 +99,5 @@
 	robotlander.laws.clear_inherent_laws()
 	robotlander.laws.set_zeroth_law("THERE CAN BE ONLY ONE")
 	robotlander.laws.show_laws(robotlander)
-	robotlander.model.transform_to(/obj/item/robot_model/syndicate/kiltborg)
+	robotlander.model.transform_to(/obj/item/robot_model/edict/kiltborg)
 	sword = locate(/obj/item/claymore/highlander/robot) in robotlander.model.basic_modules

@@ -33,7 +33,7 @@
 
 /datum/outfit/syndicate/post_equip(mob/living/carbon/human/H)
 	var/obj/item/radio/R = H.ears
-	R.set_frequency(FREQ_SYNDICATE)
+	R.set_frequency(FREQ_EDICT)
 	R.freqlock = TRUE
 	if(command_radio)
 		R.command = TRUE

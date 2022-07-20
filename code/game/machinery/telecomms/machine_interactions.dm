@@ -11,7 +11,7 @@
 	var/mob/living/operator
 	///Illegal frequencies that can't be listened to by telecommunication servers.
 	var/list/banned_frequencies = list(
-		FREQ_SYNDICATE,
+		FREQ_EDICT,
 		FREQ_CENTCOM,
 		FREQ_CTF_RED,
 		FREQ_CTF_YELLOW,

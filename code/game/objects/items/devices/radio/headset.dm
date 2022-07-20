@@ -7,7 +7,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	RADIO_CHANNEL_ENGINEERING = RADIO_TOKEN_ENGINEERING,
 	RADIO_CHANNEL_SECURITY = RADIO_TOKEN_SECURITY,
 	RADIO_CHANNEL_CENTCOM = RADIO_TOKEN_CENTCOM,
-	RADIO_CHANNEL_SYNDICATE = RADIO_TOKEN_SYNDICATE,
+	RADIO_CHANNEL_EDICT = RADIO_TOKEN_EDICT,
 	RADIO_CHANNEL_SUPPLY = RADIO_TOKEN_SUPPLY,
 	RADIO_CHANNEL_SERVICE = RADIO_TOKEN_SERVICE,
 	MODE_BINARY = MODE_TOKEN_BINARY,
@@ -101,7 +101,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 /obj/item/radio/headset/syndicate/Initialize(mapload)
 	. = ..()
-	make_syndie()
+	make_edict()
 
 /obj/item/radio/headset/binary
 /obj/item/radio/headset/binary/Initialize(mapload)
@@ -341,8 +341,8 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 		if(keyslot2.translate_binary)
 			translate_binary = TRUE
-		if(keyslot2.syndie)
-			syndie = TRUE
+		if(keyslot2.edict)
+			edict = TRUE
 		if (keyslot2.independent)
 			independent = TRUE
 

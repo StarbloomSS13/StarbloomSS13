@@ -751,9 +751,9 @@
 	if (radio)
 		radio.interact(src)
 
-/mob/living/silicon/ai/proc/set_syndie_radio()
+/mob/living/silicon/ai/proc/set_edict_radio()
 	if(radio)
-		radio.make_syndie()
+		radio.make_edict()
 
 /mob/living/silicon/ai/proc/set_automatic_say_channel()
 	set name = "Set Auto Announce Mode"

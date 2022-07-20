@@ -130,7 +130,7 @@
 
 	var/obj/item/radio/outfit_radio = equipped.ears
 	if(outfit_radio)
-		outfit_radio.set_frequency(FREQ_SYNDICATE)
+		outfit_radio.set_frequency(FREQ_EDICT)
 		outfit_radio.freqlock = TRUE
 
 	var/obj/item/card/id/outfit_id = equipped.wear_id
