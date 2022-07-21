@@ -32,7 +32,7 @@
 /datum/uplink_item/stealthy_weapons/traitor_chem_bottle
 	name = "Poison Kit"
 	desc = "An assortment of deadly chemicals packed into a compact box. Comes with a syringe for more precise application."
-	item = /obj/item/storage/box/syndie_kit/chemical
+	item = /obj/item/storage/box/edict_kit/chemical
 	cost = 6
 	surplus = 50
 
@@ -67,7 +67,7 @@
 	desc = "This box contains a guide on how to craft masterful works of origami, allowing you to transform normal pieces of paper into \
 			perfectly aerodynamic (and potentially lethal) paper airplanes."
 	progression_minimum = 15 MINUTES
-	item = /obj/item/storage/box/syndie_kit/origami_bundle
+	item = /obj/item/storage/box/edict_kit/origami_bundle
 	cost = 14
 	surplus = 0
 	purchasable_from = ~UPLINK_NUKE_OPS //clown ops intentionally left in, because that seems like some s-tier shenanigans.

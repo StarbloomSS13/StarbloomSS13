@@ -23,7 +23,7 @@
 	desc = "This red and black Syndicate space suit is less encumbering than Nanotrasen variants, \
 			fits inside bags, and has a weapon slot. Nanotrasen crew members are trained to report red space suit \
 			sightings, however."
-	item = /obj/item/storage/box/syndie_kit/space
+	item = /obj/item/storage/box/edict_kit/space
 	cost = 4
 
 // Low progression cost

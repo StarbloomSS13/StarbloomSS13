@@ -41,7 +41,7 @@
 			new /obj/item/storage/briefcase/launchpad(src) //6 tc
 			new /obj/item/binoculars(src) // 2 tc?
 			new /obj/item/encryptionkey/lastedict(src) // 2 tc
-			new /obj/item/storage/box/syndie_kit/space(src) //4 tc
+			new /obj/item/storage/box/edict_kit/space(src) //4 tc
 			new /obj/item/grenade/frag(src) // ~2 tc each?
 			new /obj/item/grenade/frag(src)
 			new /obj/item/flashlight/emp(src)
@@ -131,7 +131,7 @@
 			new /obj/item/cartridge/virus/syndicate(src)
 			new /obj/item/storage/toolbox/edict(src)
 			new /obj/item/pizzabox/bomb(src)
-			new /obj/item/storage/box/syndie_kit/emp(src)
+			new /obj/item/storage/box/edict_kit/emp(src)
 
 		if(KIT_SNIPER) //This shit is unique so can't really balance it around tc, also no silencer because getting killed without ANY indicator on what killed you sucks
 			new /obj/item/gun/ballistic/automatic/sniper_rifle(src) // 12 tc
@@ -255,14 +255,14 @@
 /obj/item/storage/box/syndicate/contract_kit
 	name = "Contract Kit"
 	desc = "Supplied to Syndicate contractors."
-	icon_state = "syndiebox"
-	illustration = "writing_syndie"
+	icon_state = "edictbox"
+	illustration = "writing_edict"
 
 /obj/item/storage/box/syndicate/contractor_loadout
 	name = "Standard Loadout"
 	desc = "Supplied to Syndicate contractors, providing their specialised space suit and chameleon uniform."
-	icon_state = "syndiebox"
-	illustration = "writing_syndie"
+	icon_state = "edictbox"
+	illustration = "writing_edict"
 
 /obj/item/paper/contractor_guide
 	name = "Contractor Guide"
@@ -309,87 +309,87 @@
 			<p>Good luck agent. You can burn this document with the supplied lighter.</p>"}
 
 	return ..()
-/obj/item/storage/box/syndie_kit
+/obj/item/storage/box/edict_kit
 	name = "box"
 	desc = "A sleek, sturdy box."
-	icon_state = "syndiebox"
-	illustration = "writing_syndie"
+	icon_state = "edictbox"
+	illustration = "writing_edict"
 
-/obj/item/storage/box/syndie_kit/origami_bundle
+/obj/item/storage/box/edict_kit/origami_bundle
 	name = "origami kit"
 	desc = "A box full of a number of rather masterfully engineered paper planes and a manual on \"The Art of Origami\"."
 
-/obj/item/storage/box/syndie_kit/origami_bundle/PopulateContents()
+/obj/item/storage/box/edict_kit/origami_bundle/PopulateContents()
 	new /obj/item/book/granter/action/origami(src)
 	for(var/i in 1 to 5)
 		new /obj/item/paper(src)
 
-/obj/item/storage/box/syndie_kit/imp_freedom
+/obj/item/storage/box/edict_kit/imp_freedom
 	name = "freedom implant box"
 
-/obj/item/storage/box/syndie_kit/imp_freedom/PopulateContents()
+/obj/item/storage/box/edict_kit/imp_freedom/PopulateContents()
 	new /obj/item/implanter/freedom(src)
 
-/obj/item/storage/box/syndie_kit/imp_microbomb
+/obj/item/storage/box/edict_kit/imp_microbomb
 	name = "microbomb implant box"
 
-/obj/item/storage/box/syndie_kit/imp_microbomb/PopulateContents()
+/obj/item/storage/box/edict_kit/imp_microbomb/PopulateContents()
 	new /obj/item/implanter/explosive(src)
 
-/obj/item/storage/box/syndie_kit/imp_macrobomb
+/obj/item/storage/box/edict_kit/imp_macrobomb
 	name = "macrobomb implant box"
 
-/obj/item/storage/box/syndie_kit/imp_macrobomb/PopulateContents()
+/obj/item/storage/box/edict_kit/imp_macrobomb/PopulateContents()
 	new /obj/item/implanter/explosive_macro(src)
 
-/obj/item/storage/box/syndie_kit/imp_uplink
+/obj/item/storage/box/edict_kit/imp_uplink
 	name = "uplink implant box"
 
-/obj/item/storage/box/syndie_kit/imp_uplink/PopulateContents()
+/obj/item/storage/box/edict_kit/imp_uplink/PopulateContents()
 	new /obj/item/implanter/uplink(src)
 
-/obj/item/storage/box/syndie_kit/bioterror
+/obj/item/storage/box/edict_kit/bioterror
 	name = "bioterror syringe box"
 
-/obj/item/storage/box/syndie_kit/bioterror/PopulateContents()
+/obj/item/storage/box/edict_kit/bioterror/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_containers/syringe/bioterror(src)
 
-/obj/item/storage/box/syndie_kit/clownpins
+/obj/item/storage/box/edict_kit/clownpins
 	name = "ultra hilarious firing pin box"
 
-/obj/item/storage/box/syndie_kit/clownpins/PopulateContents()
+/obj/item/storage/box/edict_kit/clownpins/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/firing_pin/clown/ultra(src)
 
-/obj/item/storage/box/syndie_kit/imp_storage
+/obj/item/storage/box/edict_kit/imp_storage
 	name = "storage implant box"
 
-/obj/item/storage/box/syndie_kit/imp_storage/PopulateContents()
+/obj/item/storage/box/edict_kit/imp_storage/PopulateContents()
 	new /obj/item/implanter/storage(src)
 
-/obj/item/storage/box/syndie_kit/imp_stealth
+/obj/item/storage/box/edict_kit/imp_stealth
 	name = "stealth implant box"
 
-/obj/item/storage/box/syndie_kit/imp_stealth/PopulateContents()
+/obj/item/storage/box/edict_kit/imp_stealth/PopulateContents()
 	new /obj/item/implanter/stealth(src)
 
-/obj/item/storage/box/syndie_kit/imp_radio
+/obj/item/storage/box/edict_kit/imp_radio
 	name = "syndicate radio implant box"
 
-/obj/item/storage/box/syndie_kit/imp_radio/PopulateContents()
+/obj/item/storage/box/edict_kit/imp_radio/PopulateContents()
 	new /obj/item/implanter/radio/syndicate(src)
 
-/obj/item/storage/box/syndie_kit/space
+/obj/item/storage/box/edict_kit/space
 	name = "boxed space suit and helmet"
 
-/obj/item/storage/box/syndie_kit/space/ComponentInitialize()
+/obj/item/storage/box/edict_kit/space/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.set_holdable(list(/obj/item/clothing/suit/space/syndicate, /obj/item/clothing/head/helmet/space/syndicate))
 
-/obj/item/storage/box/syndie_kit/space/PopulateContents()
+/obj/item/storage/box/edict_kit/space/PopulateContents()
 	if(prob(50))
 		new /obj/item/clothing/suit/space/syndicate/black/red(src) // Black and red is so in right now
 		new /obj/item/clothing/head/helmet/space/syndicate/black/red(src)
@@ -398,23 +398,23 @@
 		new /obj/item/clothing/head/helmet/space/syndicate(src)
 		new /obj/item/clothing/suit/space/syndicate(src)
 
-/obj/item/storage/box/syndie_kit/emp
+/obj/item/storage/box/edict_kit/emp
 	name = "EMP kit"
 
-/obj/item/storage/box/syndie_kit/emp/PopulateContents()
+/obj/item/storage/box/edict_kit/emp/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/grenade/empgrenade(src)
 	new /obj/item/implanter/emp(src)
 
-/obj/item/storage/box/syndie_kit/chemical
+/obj/item/storage/box/edict_kit/chemical
 	name = "chemical kit"
 
-/obj/item/storage/box/syndie_kit/chemical/ComponentInitialize()
+/obj/item/storage/box/edict_kit/chemical/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 14
 
-/obj/item/storage/box/syndie_kit/chemical/PopulateContents()
+/obj/item/storage/box/edict_kit/chemical/PopulateContents()
 	new /obj/item/reagent_containers/glass/bottle/polonium(src)
 	new /obj/item/reagent_containers/glass/bottle/venom(src)
 	new /obj/item/reagent_containers/glass/bottle/fentanyl(src)
@@ -430,39 +430,39 @@
 	new /obj/item/reagent_containers/glass/bottle/amanitin(src)
 	new /obj/item/reagent_containers/syringe(src)
 
-/obj/item/storage/box/syndie_kit/nuke
+/obj/item/storage/box/edict_kit/nuke
 	name = "nuke core extraction kit"
 	desc = "A box containing the equipment and instructions for extracting the plutonium cores of most Nanotrasen nuclear explosives."
 
-/obj/item/storage/box/syndie_kit/nuke/PopulateContents()
+/obj/item/storage/box/edict_kit/nuke/PopulateContents()
 	new /obj/item/screwdriver/nuke(src)
 	new /obj/item/nuke_core_container(src)
 	new /obj/item/paper/guides/antag/nuke_instructions(src)
 
-/obj/item/storage/box/syndie_kit/supermatter
+/obj/item/storage/box/edict_kit/supermatter
 	name = "supermatter sliver extraction kit"
 	desc = "A box containing the equipment and instructions for extracting a sliver of supermatter."
 
-/obj/item/storage/box/syndie_kit/supermatter/PopulateContents()
+/obj/item/storage/box/edict_kit/supermatter/PopulateContents()
 	new /obj/item/scalpel/supermatter(src)
 	new /obj/item/hemostat/supermatter(src)
 	new /obj/item/nuke_core_container/supermatter(src)
 	new /obj/item/paper/guides/antag/supermatter_sliver(src)
 
-/obj/item/storage/box/syndie_kit/tuberculosisgrenade
+/obj/item/storage/box/edict_kit/tuberculosisgrenade
 	name = "virus grenade kit"
 
-/obj/item/storage/box/syndie_kit/tuberculosisgrenade/PopulateContents()
+/obj/item/storage/box/edict_kit/tuberculosisgrenade/PopulateContents()
 	new /obj/item/grenade/chem_grenade/tuberculosis(src)
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/hypospray/medipen/tuberculosiscure(src)
 	new /obj/item/reagent_containers/syringe(src)
 	new /obj/item/reagent_containers/glass/bottle/tuberculosiscure(src)
 
-/obj/item/storage/box/syndie_kit/chameleon
+/obj/item/storage/box/edict_kit/chameleon
 	name = "chameleon kit"
 
-/obj/item/storage/box/syndie_kit/chameleon/PopulateContents()
+/obj/item/storage/box/edict_kit/chameleon/PopulateContents()
 	new /obj/item/clothing/under/chameleon(src)
 	new /obj/item/clothing/suit/chameleon(src)
 	new /obj/item/clothing/gloves/chameleon(src)
@@ -479,7 +479,7 @@
 
 //5*(2*4) = 5*8 = 45, 45 damage if you hit one person with all 5 stars.
 //Not counting the damage it will do while embedded (2*4 = 8, at 15% chance)
-/obj/item/storage/box/syndie_kit/throwing_weapons/PopulateContents()
+/obj/item/storage/box/edict_kit/throwing_weapons/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/throwing_star(src)
 	for(var/i in 1 to 2)
@@ -487,28 +487,28 @@
 	new /obj/item/restraints/legcuffs/bola/tactical(src)
 	new /obj/item/restraints/legcuffs/bola/tactical(src)
 
-/obj/item/storage/box/syndie_kit/cutouts/PopulateContents()
+/obj/item/storage/box/edict_kit/cutouts/PopulateContents()
 	for(var/i in 1 to 3)
 		new/obj/item/cardboard_cutout/adaptive(src)
 	new/obj/item/toy/crayon/rainbow(src)
 
-/obj/item/storage/box/syndie_kit/romerol/PopulateContents()
+/obj/item/storage/box/edict_kit/romerol/PopulateContents()
 	new /obj/item/reagent_containers/glass/bottle/romerol(src)
 	new /obj/item/reagent_containers/syringe(src)
 	new /obj/item/reagent_containers/dropper(src)
 
-/obj/item/storage/box/syndie_kit/ez_clean/PopulateContents()
+/obj/item/storage/box/edict_kit/ez_clean/PopulateContents()
 	for(var/i in 1 to 3)
 		new/obj/item/grenade/chem_grenade/ez_clean(src)
 
 /obj/item/storage/box/hug/reverse_revolver/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/reverse(src)
 
-/obj/item/storage/box/syndie_kit/mimery/PopulateContents()
+/obj/item/storage/box/edict_kit/mimery/PopulateContents()
 	new /obj/item/book/granter/spell/mimery_blockade(src)
 	new /obj/item/book/granter/spell/mimery_guns(src)
 
-/obj/item/storage/box/syndie_kit/centcom_costume/PopulateContents()
+/obj/item/storage/box/edict_kit/centcom_costume/PopulateContents()
 	new /obj/item/clothing/under/rank/centcom/officer(src)
 	new /obj/item/clothing/shoes/sneakers/black(src)
 	new /obj/item/clothing/gloves/color/black(src)
@@ -518,7 +518,7 @@
 	new /obj/item/pda/heads(src)
 	new /obj/item/clipboard(src)
 
-/obj/item/storage/box/syndie_kit/chameleon/broken/PopulateContents()
+/obj/item/storage/box/edict_kit/chameleon/broken/PopulateContents()
 	new /obj/item/clothing/under/chameleon/broken(src)
 	new /obj/item/clothing/suit/chameleon/broken(src)
 	new /obj/item/clothing/gloves/chameleon/broken(src)
@@ -534,15 +534,15 @@
 	new /obj/item/pda/chameleon/broken(src)
 	// No chameleon laser, they can't randomise for //REASONS//
 
-/obj/item/storage/box/syndie_kit/bee_grenades
+/obj/item/storage/box/edict_kit/bee_grenades
 	name = "buzzkill grenade box"
 	desc = "A sleek, sturdy box with a buzzing noise coming from the inside. Uh oh."
 
-/obj/item/storage/box/syndie_kit/bee_grenades/PopulateContents()
+/obj/item/storage/box/edict_kit/bee_grenades/PopulateContents()
 	for(var/i in 1 to 3)
 		new /obj/item/grenade/spawnergrenade/buzzkill(src)
 
-/obj/item/storage/box/syndie_kit/sleepytime/PopulateContents()
+/obj/item/storage/box/edict_kit/sleepytime/PopulateContents()
 	new /obj/item/clothing/under/syndicate/bloodred/sleepytime(src)
 	new /obj/item/reagent_containers/food/drinks/mug/coco(src)
 	new /obj/item/toy/plush/carpplushie(src)
@@ -557,21 +557,21 @@
 	new /obj/item/grenade/c4(src)
 	new /obj/item/grenade/c4/x4(src)
 	new /obj/item/grenade/c4/x4(src)
-	new /obj/item/storage/box/syndie_kit/signaler(src)
+	new /obj/item/storage/box/edict_kit/signaler(src)
 
-/obj/item/storage/box/syndie_kit/signaler
+/obj/item/storage/box/edict_kit/signaler
 	name = "signaler box"
 	desc = "Contains everything an agent would need to remotely detonate their bombs."
 
-/obj/item/storage/box/syndie_kit/signaler/PopulateContents()
+/obj/item/storage/box/edict_kit/signaler/PopulateContents()
 	for(var/i in 1 to 6)
 		new /obj/item/assembly/signaler(src)
 
-/obj/item/storage/box/syndie_kit/imp_deathrattle
+/obj/item/storage/box/edict_kit/imp_deathrattle
 	name = "deathrattle implant box"
 	desc = "Contains eight linked deathrattle implants."
 
-/obj/item/storage/box/syndie_kit/imp_deathrattle/PopulateContents()
+/obj/item/storage/box/edict_kit/imp_deathrattle/PopulateContents()
 	new /obj/item/implanter(src)
 
 	var/datum/deathrattle_group/group = new

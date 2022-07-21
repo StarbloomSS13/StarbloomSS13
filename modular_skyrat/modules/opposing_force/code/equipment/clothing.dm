@@ -47,7 +47,7 @@
 
 /datum/opposing_force_equipment/clothing/chameleon_set
 	name = "Chameleon Kit"
-	item_type = /obj/item/storage/box/syndie_kit/chameleon
+	item_type = /obj/item/storage/box/edict_kit/chameleon
 	description = "A box containing a set of chameleon gear, perfect for disguise and infiltration."
 
 /datum/opposing_force_equipment/clothing/ablative_coat

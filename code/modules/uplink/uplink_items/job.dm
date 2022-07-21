@@ -95,7 +95,7 @@
 	desc = "A box with three cleaner grenades using the trademark Waffle Co. formula. Serves as a cleaner and causes acid damage to anyone standing nearby. \
 			The acid only affects carbon-based creatures."
 	progression_minimum = 10 MINUTES
-	item = /obj/item/storage/box/syndie_kit/ez_clean
+	item = /obj/item/storage/box/edict_kit/ez_clean
 	cost = 6
 	surplus = 20
 	restricted_roles = list(JOB_JANITOR)
@@ -200,7 +200,7 @@
 			Obviously only works for Mimes."
 	progression_minimum = 30 MINUTES
 	cost = 12
-	item = /obj/item/storage/box/syndie_kit/mimery
+	item = /obj/item/storage/box/edict_kit/mimery
 	restricted_roles = list(JOB_MIME)
 	surplus = 0
 

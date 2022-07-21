@@ -39,13 +39,13 @@
 
 /datum/opposing_force_equipment/other/throwing_weapons
 	name = "Box of Throwing Weapons"
-	item_type = /obj/item/storage/box/syndie_kit/throwing_weapons
+	item_type = /obj/item/storage/box/edict_kit/throwing_weapons
 	description = "A box of shurikens and reinforced bolas from ancient Earth martial arts. They are highly effective \
 		throwing weapons. The bolas can knock a target down and the shurikens will embed into limbs."
 	name = "Box of Throwing Weapons"
 
 /datum/opposing_force_equipment/other/origami
-	item_type = /obj/item/storage/box/syndie_kit/origami_bundle
+	item_type = /obj/item/storage/box/edict_kit/origami_bundle
 	description = "A box containing a guide on how to craft masterful works of origami, allowing you to transform normal pieces of paper into \
 		perfectly aerodynamic (and potentially lethal) paper airplanes."
 
