@@ -11705,6 +11705,19 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/pod/dark,
 /area/maintenance/floor4/port)
+"dKz" = (
+/obj/machinery/door/airlock/hatch{
+	name = "Maintenance Bulkhead"
+	},
+/obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/turf/open/floor/pod/dark,
+/area/maintenance/floor2/starboard/fore)
 "dKF" = (
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 4
@@ -36324,6 +36337,9 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
 /turf/open/floor/pod/dark,
 /area/maintenance/floor2/starboard/fore)
 "muN" = (
@@ -164434,7 +164450,7 @@ wwu
 wwu
 wwu
 wwu
-muI
+dKz
 xuv
 vgh
 vgh
