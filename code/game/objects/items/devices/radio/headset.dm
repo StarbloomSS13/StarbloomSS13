@@ -88,7 +88,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 /obj/item/radio/headset/syndicate/alt //undisguised bowman with flash protection
 	name = "syndicate headset"
 	desc = "A syndicate headset that can be used to hear all radio frequencies. Protects ears from flashbangs."
-	icon_state = "syndie_headset"
+	icon_state = "edict_headset"
 	inhand_icon_state = "syndie_headset"
 
 /obj/item/radio/headset/syndicate/alt/ComponentInitialize()
