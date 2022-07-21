@@ -72,6 +72,7 @@
 		/obj/item/gun/ballistic/revolver/detective,
 		)
 	implants = list(/obj/item/implant/mindshield)
+	skillchips = list(/obj/item/skillchip/job/detective)
 
 /datum/outfit/job/detective/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
