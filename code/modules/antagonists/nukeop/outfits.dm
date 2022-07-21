@@ -5,7 +5,7 @@
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/combat
 	back = /obj/item/storage/backpack/fireproof
-	ears = /obj/item/radio/headset/syndicate/alt
+	ears = /obj/item/radio/headset/edict/alt
 	l_pocket = /obj/item/modular_computer/tablet/nukeops
 	id = /obj/item/card/id/advanced/chameleon
 	belt = /obj/item/gun/ballistic/automatic/pistol
