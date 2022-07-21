@@ -29,8 +29,9 @@
 // Low progression cost
 
 /datum/uplink_item/suits/modsuit
-	name = "Syndicate MODsuit"
-	desc = "The feared MODsuit of a Syndicate agent. Features armoring and a set of inbuilt modules."
+	name = "Last Edict MODsuit"
+	desc = "A heavily modified Scrapper Modsuit - put fear into your enemies with your mere presence! \
+			Features armoring and a set of select modules to enhance your combat capabilities."
 	item = /obj/item/mod/control/pre_equipped/traitor
 	cost = 8
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS) //you can't buy it in nuke, because the elite modsuit costs the same while being better

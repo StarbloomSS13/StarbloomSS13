@@ -792,16 +792,15 @@
 		),
 	)
 
-/datum/mod_theme/syndicate
-	name = "syndicate"
-	desc = "A suit designed by Gorlex Marauders, offering armor ruled illegal in most of Spinward Stellar."
-	extended_desc = "An advanced combat suit adorned in a sinister crimson red color scheme, produced and manufactured \
-		for special mercenary operations. The build is a streamlined layering consisting of shaped Plasteel, \
+/datum/mod_theme/edict
+	name = "last edict"
+	desc = "A heavily bastardized scrapping modsuit curated by the Last Edict, built for combat."
+	extended_desc = "A homebrewed combat suit adorned in a dark purple color scheme, produced \
+		for loud attacks on the North Star. The build is a streamlined layering consisting of shaped Plasteel, \
 		and composite ceramic, while the under suit is lined with a lightweight Kevlar and durathread hybrid weave \
 		to provide ample protection to the user where the plating doesn't, with an illegal onboard electric powered \
-		ablative shield module to provide resistance against conventional energy firearms. \
-		A small tag hangs off of it reading; 'Property of the Gorlex Marauders, with assistance from Cybersun Industries. \
-		All rights reserved, tampering with suit will void warranty."
+		ablative shield module to provide resistance against conventional energy firearms. It's roots as a scrapper \
+		suit are evident in general terms, but the design is much more aggressive than the original."
 	default_skin = "syndicate"
 	armor = list(MELEE = 15, BULLET = 20, LASER = 15, ENERGY = 15, BOMB = 35, BIO = 100, FIRE = 50, ACID = 90, WOUND = 25)
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
@@ -809,7 +808,7 @@
 	siemens_coefficient = 0
 	slowdown_inactive = 1
 	slowdown_active = 0.5
-	ui_theme = "syndicate"
+	ui_theme = "lastedict"
 	inbuilt_modules = list(/obj/item/mod/module/armor_booster)
 	allowed_suit_storage = list(
 		/obj/item/gun, // SKYRAT EDIT - GUN IN SUIT SLOT
