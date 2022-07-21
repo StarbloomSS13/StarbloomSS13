@@ -18,8 +18,8 @@
 	cost = 5
 
 /datum/uplink_item/implants/radio
-	name = "Internal Syndicate Radio Implant"
-	desc = "An implant injected into the body, allowing the use of an internal Syndicate radio. \
+	name = "Internal Edict Radio Implant"
+	desc = "An implant injected into the body, allowing the use of an internal Last Edict radio. \
 			Used just like a regular headset, but can be disabled to use external headsets normally and to avoid detection."
 	item = /obj/item/storage/box/syndie_kit/imp_radio
 	cost = 4
