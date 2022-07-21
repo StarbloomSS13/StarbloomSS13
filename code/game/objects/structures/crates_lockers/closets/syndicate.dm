@@ -11,7 +11,7 @@
 	new /obj/item/clothing/under/syndicate(src)
 	new /obj/item/clothing/under/syndicate/skirt(src)
 	new /obj/item/clothing/shoes/sneakers/black(src)
-	new /obj/item/radio/headset/syndicate(src)
+	new /obj/item/radio/headset/edict(src)
 	new /obj/item/ammo_box/magazine/m9mm(src)
 	new /obj/item/storage/belt/military(src)
 	new /obj/item/crowbar/red(src)

@@ -83,23 +83,23 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 		return attack_self(headset_user)
 	return ..()
 
-/obj/item/radio/headset/syndicate //disguised to look like a normal headset for stealth ops
+/obj/item/radio/headset/edict //disguised to look like a normal headset for stealth ops
 
-/obj/item/radio/headset/syndicate/alt //undisguised bowman with flash protection
-	name = "syndicate headset"
-	desc = "A syndicate headset that can be used to hear all radio frequencies. Protects ears from flashbangs."
+/obj/item/radio/headset/edict/alt //undisguised bowman with flash protection
+	name = "last edict headset"
+	desc = "A edict-curated headset that can be used to hear all radio frequencies. Protects ears from flashbangs."
 	icon_state = "edict_headset"
 	inhand_icon_state = "syndie_headset"
 
-/obj/item/radio/headset/syndicate/alt/ComponentInitialize()
+/obj/item/radio/headset/edict/alt/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 
-/obj/item/radio/headset/syndicate/alt/leader
+/obj/item/radio/headset/edict/alt/leader
 	name = "team leader headset"
 	command = TRUE
 
-/obj/item/radio/headset/syndicate/Initialize(mapload)
+/obj/item/radio/headset/edict/Initialize(mapload)
 	. = ..()
 	make_edict()
 
