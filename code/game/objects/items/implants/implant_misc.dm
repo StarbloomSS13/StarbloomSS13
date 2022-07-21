@@ -87,6 +87,6 @@
 	imp_type = /obj/item/implant/radio
 
 /obj/item/implanter/radio/syndicate
-	name = "implanter (internal last edic radio)"
+	name = "implanter (internal last edict radio)"
 	imp_type = /obj/item/implant/radio/edict
 
