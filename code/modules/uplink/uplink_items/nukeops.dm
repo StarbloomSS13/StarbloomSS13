@@ -405,7 +405,7 @@
 	name = "Box of Bioterror Syringes"
 	desc = "A box full of preloaded syringes, containing various chemicals that seize up the victim's motor \
 			and broca systems, making it impossible for them to move or speak for some time."
-	item = /obj/item/storage/box/syndie_kit/bioterror
+	item = /obj/item/storage/box/edict_kit/bioterror
 	cost = 6
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
@@ -466,7 +466,7 @@
 	name = "Buzzkill Grenade Box"
 	desc = "A box with three grenades that release a swarm of angry bees upon activation. These bees indiscriminately attack friend or foe \
 			with random toxins. Courtesy of the BLF and Tiger Cooperative."
-	item = /obj/item/storage/box/syndie_kit/bee_grenades
+	item = /obj/item/storage/box/edict_kit/bee_grenades
 	cost = 15
 	surplus = 35
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
@@ -476,7 +476,7 @@
 	desc = "A primed bio-grenade packed into a compact box. Comes with five Bio Virus Antidote Kit (BVAK) \
 			autoinjectors for rapid application on up to two targets each, a syringe, and a bottle containing \
 			the BVAK solution."
-	item = /obj/item/storage/box/syndie_kit/tuberculosisgrenade
+	item = /obj/item/storage/box/edict_kit/tuberculosisgrenade
 	cost = 12
 	surplus = 35
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
@@ -699,7 +699,7 @@
 	desc = "An implant injected into the body, and later activated either manually or automatically upon death. \
 			The more implants inside of you, the higher the explosive power. \
 			This will permanently destroy your body, however."
-	item = /obj/item/storage/box/syndie_kit/imp_microbomb
+	item = /obj/item/storage/box/edict_kit/imp_microbomb
 	cost = 2
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -707,7 +707,7 @@
 	name = "Macrobomb Implant"
 	desc = "An implant injected into the body, and later activated either manually or automatically upon death. \
 			Upon death, releases a massive explosion that will wipe out everything nearby."
-	item = /obj/item/storage/box/syndie_kit/imp_macrobomb
+	item = /obj/item/storage/box/edict_kit/imp_macrobomb
 	cost = 20
 	purchasable_from = UPLINK_NUKE_OPS
 	restricted = TRUE
@@ -742,7 +742,7 @@
 	dies, all other implant holders recieve a mental message informing them of their teammates' name \
 	and the location of their death. Unlike most implants, these are designed to be implanted \
 	in any creature, biological or mechanical."
-	item = /obj/item/storage/box/syndie_kit/imp_deathrattle
+	item = /obj/item/storage/box/edict_kit/imp_deathrattle
 	cost = 4
 	surplus = 0
 	purchasable_from = UPLINK_NUKE_OPS
@@ -766,7 +766,7 @@
 	desc = "A highly experimental bioterror agent which creates dormant nodules to be etched into the grey matter of the brain. \
 			On death, these nodules take control of the dead body, causing limited revivification, \
 			along with slurred speech, aggression, and the ability to infect others with this agent."
-	item = /obj/item/storage/box/syndie_kit/romerol
+	item = /obj/item/storage/box/edict_kit/romerol
 	cost = 25
 	purchasable_from = UPLINK_CLOWN_OPS|UPLINK_NUKE_OPS
 	cant_discount = TRUE

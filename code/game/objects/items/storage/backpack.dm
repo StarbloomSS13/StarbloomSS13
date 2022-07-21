@@ -624,7 +624,7 @@
 
 /obj/item/storage/backpack/duffelbag/edict/med/bioterrorbundle/PopulateContents()
 	new /obj/item/reagent_containers/spray/chemsprayer/bioterror(src)
-	new /obj/item/storage/box/syndie_kit/chemical(src)
+	new /obj/item/storage/box/edict_kit/chemical(src)
 	new /obj/item/gun/syringe/syndicate(src)
 	new /obj/item/gun/ballistic/automatic/c20r/toy(src)
 	new /obj/item/storage/box/syringes(src)

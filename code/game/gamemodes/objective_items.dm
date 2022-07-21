@@ -253,7 +253,7 @@
 	ADD_STEAL_ITEM(src, /obj/item/nuke_core)
 
 /datum/objective_item/steal/nuke_core/New()
-	special_equipment += /obj/item/storage/box/syndie_kit/nuke
+	special_equipment += /obj/item/storage/box/edict_kit/nuke
 	..()
 
 /datum/objective_item/steal/hdd_extraction
@@ -278,7 +278,7 @@
 	difficulty = 15
 
 /datum/objective_item/steal/supermatter/New()
-	special_equipment += /obj/item/storage/box/syndie_kit/supermatter
+	special_equipment += /obj/item/storage/box/edict_kit/supermatter
 	..()
 
 /datum/objective_item/steal/supermatter/TargetExists()

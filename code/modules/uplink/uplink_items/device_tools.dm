@@ -56,7 +56,7 @@
 	name = "Adaptive Cardboard Cutouts"
 	desc = "These cardboard cutouts are coated with a thin material that prevents discoloration and makes the images on them appear more lifelike. \
 			This pack contains three as well as a crayon for changing their appearances."
-	item = /obj/item/storage/box/syndie_kit/cutouts
+	item = /obj/item/storage/box/edict_kit/cutouts
 	cost = 1
 	surplus = 20
 

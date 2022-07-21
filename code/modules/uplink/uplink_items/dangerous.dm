@@ -34,7 +34,7 @@
 	desc = "A box of shurikens and reinforced bolas from ancient Earth martial arts. They are highly effective \
 			throwing weapons. The bolas can knock a target down and the shurikens will embed into limbs."
 	progression_minimum = 10 MINUTES
-	item = /obj/item/storage/box/syndie_kit/throwing_weapons
+	item = /obj/item/storage/box/edict_kit/throwing_weapons
 	cost = 3
 	illegal_tech = FALSE
 
@@ -85,7 +85,7 @@
 	desc = "Though capable of near sorcerous feats via use of hardlight holograms and nanomachines, they require an \
 			organic host as a home base and source of fuel. Holoparasites come in various types and share damage with their host."
 	progression_minimum = 30 MINUTES
-	item = /obj/item/storage/box/syndie_kit/guardian
+	item = /obj/item/storage/box/edict_kit/guardian
 	cost = 18
 	surplus = 0
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)

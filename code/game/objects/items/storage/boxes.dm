@@ -657,7 +657,7 @@
 /obj/item/storage/box/fakesyndiesuit
 	name = "boxed space suit and helmet"
 	desc = "A sleek, sturdy box used to hold replica spacesuits."
-	icon_state = "syndiebox"
+	icon_state = "edictbox"
 	illustration = "syndiesuit"
 
 /obj/item/storage/box/fakesyndiesuit/PopulateContents()
@@ -1076,7 +1076,7 @@
 /obj/item/storage/box/stockparts/deluxe
 	name = "box of deluxe stock parts"
 	desc = "Contains a variety of deluxe stock parts."
-	icon_state = "syndiebox"
+	icon_state = "edictbox"
 
 /obj/item/storage/box/stockparts/deluxe/PopulateContents()
 	var/static/items_inside = list(
@@ -1087,7 +1087,7 @@
 		/obj/item/stock_parts/matter_bin/bluespace = 3)
 	generate_items_inside(items_inside,src)
 
-/obj/item/storage/box/syndie_kit/space_dragon/PopulateContents()
+/obj/item/storage/box/edict_kit/space_dragon/PopulateContents()
 	new /obj/item/dna_probe/carp_scanner(src)
 	new /obj/item/clothing/suit/hooded/carp_costume/spaceproof/old(src)
 	new /obj/item/clothing/mask/gas/carp(src)
@@ -1139,7 +1139,7 @@
 
 /obj/item/storage/box/debugtools
 	name = "box of debug tools"
-	icon_state = "syndiebox"
+	icon_state = "edictbox"
 
 /obj/item/storage/box/debugtools/PopulateContents()
 	var/static/items_inside = list(
@@ -1195,7 +1195,7 @@
 /obj/item/storage/box/firecrackers
 	name = "box of firecrackers"
 	desc = "A box filled with illegal firecracker. You wonder who still makes these."
-	icon_state = "syndiebox"
+	icon_state = "edictbox"
 	illustration = "firecracker"
 
 /obj/item/storage/box/firecrackers/PopulateContents()
@@ -1367,7 +1367,7 @@
 
 /obj/item/storage/box/stabilized //every single stabilized extract from xenobiology
 	name = "box of stabilized extracts"
-	icon_state = "syndiebox"
+	icon_state = "edictbox"
 
 /obj/item/storage/box/stabilized/PopulateContents()
 	var/static/items_inside = list(

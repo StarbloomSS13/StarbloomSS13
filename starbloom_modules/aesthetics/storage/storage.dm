@@ -53,7 +53,7 @@
 	illustration = "holobadge"
 
 /obj/item/storage/box/survival/syndie
-	icon_state = "syndiebox"
+	icon_state = "edictbox"
 
 /obj/item/storage/box/survival/security
 	icon_state = "secbox"
@@ -74,7 +74,7 @@
 	icon_state = "medbox"
 
 /obj/item/storage/box/emps
-	icon_state = "syndiebox"
+	icon_state = "edictbox"
 
 /obj/item/storage/box/chemimp
 	icon_state = "medbox"
