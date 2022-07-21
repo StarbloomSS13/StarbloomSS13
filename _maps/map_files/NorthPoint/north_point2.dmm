@@ -15854,6 +15854,14 @@
 /obj/structure/cable,
 /turf/open/floor/pod/light,
 /area/maintenance/floor1/starboard)
+"fmQ" = (
+/obj/effect/turf_decal/stripes{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/light/cold/no_nightlight/directional/north,
+/turf/open/floor/plating,
+/area/maintenance/floor2/starboard)
 "fmV" = (
 /turf/open/floor/iron/dark,
 /area/medical/virology)
@@ -24954,6 +24962,7 @@
 "iyF" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/effect/turf_decal/tile/purple/opposingcorners,
+/obj/machinery/light/cold/no_nightlight/directional/east,
 /turf/open/floor/iron/white,
 /area/science/cytology/lower)
 "iyK" = (
@@ -40795,7 +40804,14 @@
 /area/medical/chemistry)
 "nQG" = (
 /obj/structure/cable/multilayer/connected,
-/obj/machinery/power/smes/engineering,
+/obj/machinery/power/smes/engineering{
+	input_attempt = 0;
+	output_attempt = 0;
+	inputting = 0;
+	outputting = 0;
+	output_level = 60000;
+	input_level = 60000
+	},
 /turf/open/floor/plating,
 /area/maintenance/floor2/starboard)
 "nQH" = (
@@ -48002,7 +48018,10 @@
 /area/hallway/floor3/fore)
 "qtY" = (
 /obj/structure/cable,
-/obj/machinery/power/smes/engineering,
+/obj/machinery/power/smes/engineering{
+	input_level = 60000;
+	output_level = 60000
+	},
 /turf/open/floor/plating,
 /area/maintenance/floor2/starboard)
 "qun" = (
@@ -168664,7 +168683,7 @@ fvR
 tFM
 oWa
 vnK
-uOq
+fmQ
 uOq
 uOq
 vnK
