@@ -173,39 +173,26 @@ GLOBAL_VAR_INIT(emergency_access, FALSE)
 	SSblackbox.record_feedback("nested tally", "keycard_auths", 1, list("bluespace artillery", GLOB.bsa_unlock? "unlocked" : "locked"))
 
 //YOU ARE ENTERING CONCEPTUAL, RUSHED, SHITCODE TERRITORY! -VivI Fanteriso
-//Total time wasted so far: 3 hours 26 minutes
+//Total time wasted so far: 6 hours 15 minutes
 
 GLOBAL_VAR_INIT(neutron_purge, FALSE)
 
 /proc/toggle_neutron_self_destruct() //togglable, turn on or off the big bad boom!
 	GLOB.neutron_purge = !GLOB.neutron_purge
 
-	var/neutron_death
-	neutron_death = addtimer(CALLBACK(GLOBAL_PROC, .proc/neutron_destruct), GLOB.neutron_purge? 20 SECONDS : qdel(neutron_death)) //MAKE THE TIMER 300 SECONDS IN THE FINAL COMMIT/WHEN YOU KNOW IT WORKS.
-	//neutron_death = addtimer(CALLBACK(GLOBAL_PROC, .proc/neutron_destruct), GLOB.neutron_purge? 20 SECONDS : qdel(neutron_death)) ?
-	//above line edit is untested. Ill probably do that 2morrow
-
+	var/timer
 	set_security_level("[GLOB.neutron_purge? "delta" : "blue"]") //this works perfectly fine
 
-//trust me, my next commit will address the super ghetto offie light shit
-	if(GLOB.neutron_purge)
-		priority_announce("ATTENTION NEUTRON PURGE PROTOCOL COMMENCING. ALL STAFF ARE ADVISED TO RETREAT TO A RADIATION SHELTER. PURGE COMMENCING IN [neutron_death] SECONDS. THIS IS NOT A DRILL.", "Purge Protocol Update") //neutron_death.timeleft didnt work, what the fuck, someone tell me whats happening
-		sound_to_playing_players('sound/effects/selfdestructalarm.ogg') // a three minute version of this file would've been more convenient. Someone should do COOLDOWN_START and just put this in a "while purge is happening" loop
+	priority_announce(GLOB.neutron_purge? "ATTENTION NEUTRON PURGE PROTOCOL COMMENCING. ALL STAFF ARE ADVISED TO RETREAT TO A RADIATION SHELTER. PURGE COMMENCING IN [timer] SECONDS. THIS IS NOT A DRILL." : "ATTENTION NEUTRON PURGE PROTOCOL DISABLED. All staff are to listen for instructions from their departmental heads.", "Purge Protocol Update")
+	timer = GLOB.neutron_purge? addtimer(CALLBACK(GLOBAL_PROC, .proc/neutron_destruct), GLOB.neutron_purge? 10 SECONDS : deltimer(timer), TIMER_UNIQUE | TIMER_STOPPABLE) : null
 
-		for(var/obj/machinery/light/stationlights) //foreach this
-			stationlights.color = "#FF3232" //there is a smarter way of doing this, but Im not smart
-			stationlights.brightness = 4 //darken all lights on the station.
-			stationlights.update()
+//trust me, the super ghetto offie light shit will be fixed soon
+	GLOB.neutron_purge? sound_to_playing_players('sound/effects/selfdestructalarm.ogg') : null // a three minute version of this file would've been more convenient. Someone should do COOLDOWN_START and just put this in a "while purge is happening" loop
 
-	if(!GLOB.neutron_purge) //yes, I could have just done GLOB.neutron_purge? WHATEVER : WHATEVER for most of these, but there were like two odd things I couldnt wrap my dome around, so ghetto solutions it is! -V
-		priority_announce("ATTENTION NEUTRON PURGE PROTOCOL DISABLED. All staff are to listen for instructions from their departmental heads.", "Purge Protocol Update")
-		//STOP sound/effects/selfdestructalarm.ogg in a later commit
-
-		for(var/obj/machinery/light/stationlights) //foreach this
-			stationlights.color = "#f3fffa" //-----this will wipe any spraypaint off of a light. Too bad!---- (VivI)
-			stationlights.brightness = 8 //return to normal values
-			stationlights.update()
-
+	for(var/obj/machinery/light/stationlights) //foreach this
+		stationlights.color = GLOB.neutron_purge? "#FF3232" : "#f3fffa" //there is a smarter way of doing this, but Im not smart
+		stationlights.brightness = GLOB.neutron_purge? 4 : 8//darken all lights on the station.
+		stationlights.update()
 /*
 	for(var/mob/living/carbon/human/victim as anything in GLOB.mob_living_list) //every advanced mob(player) on the station takes clone damage, including people in shelters. Particles would still go through walls.
 		while(GLOB.neutron_purge == TRUE) //while neutron purge is true play a sound with a cooldown, very creative.
@@ -223,16 +210,18 @@ this was a terrible idea, dont uncomment it. It crashes the server and doesnt wo
 
 	for(var/mob/living/victim as anything in GLOB.mob_living_list) //literally any liiving thing add a pass for silicons
 		var/turf/target_turf = get_turf(victim)
-		if(istype(victim.loc.loc, /area/maintenance/radshelter))
-			var/area/maintenance/radshelter/shelter = target_turf.loc //is the person we are about to turn to dust in /area/maintenance/radshelter?
+//player isnt safe
+		if(victim.stat && target_turf && is_station_level(target_turf.z)) //is target_turf on the station Zlevel? If not, dont dust them
+			to_chat(victim, span_userdanger("For a moment every cell in your body cries in pain. Only for a moment, though.")) //OOC HEP IDED
+			victim.dust() //add a pass for silicons!!!!!!!!
+//player is in a safe area
+		if(istype(victim.loc, /area/maintenance/radshelter))
+			var/area/maintenance/radshelter/shelter = victim.loc.loc //is the person we are about to turn to dust in /area/maintenance/radshelter? //target_turf.loc
 			if(!shelter) //"shelter.Entered" didnt work here, wonder why.
 				to_chat(victim, span_boldannounce("The station cries around you as the Neutron Purge occurs. The shelter seems to have protected you. It's safe to leave."))
 				shelter = TRUE
 				continue
-		if(victim.stat && target_turf && is_station_level(target_turf.z)) //is target_turf on the station Zlevel? If not, dont dust them
-			to_chat(victim, span_userdanger("For a moment every cell in your body cries in pain. Only for a moment, though.")) //OOC HEP IDED
-			victim.dust() //add a pass for silicons!!!!!!!!
-		SSticker.force_ending = 1
+	SSticker.force_ending = 1
 
 #undef KEYCARD_RED_ALERT
 #undef KEYCARD_EMERGENCY_MAINTENANCE_ACCESS
