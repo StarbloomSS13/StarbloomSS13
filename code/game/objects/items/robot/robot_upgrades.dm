@@ -505,7 +505,7 @@
 		out procedures"
 	icon_state = "cyborg_upgrade3"
 	require_model = TRUE
-	model_type = list(/obj/item/robot_model/medical, /obj/item/robot_model/syndicate_medical)
+	model_type = list(/obj/item/robot_model/medical, /obj/item/robot_model/edict_medical)
 	model_flags = BORG_MODEL_MEDICAL
 
 /obj/item/borg/upgrade/processor/action(mob/living/silicon/robot/R, user = usr)
@@ -620,7 +620,7 @@
 	icon = 'icons/obj/device.dmi'
 	icon_state = "pinpointer_crew"
 	require_model = TRUE
-	model_type = list(/obj/item/robot_model/medical, /obj/item/robot_model/syndicate_medical)
+	model_type = list(/obj/item/robot_model/medical, /obj/item/robot_model/edict_medical)
 	model_flags = BORG_MODEL_MEDICAL
 	var/datum/action/crew_monitor
 

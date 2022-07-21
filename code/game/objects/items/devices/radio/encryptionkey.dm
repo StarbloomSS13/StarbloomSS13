@@ -5,7 +5,7 @@
 	icon_state = "cypherkey"
 	w_class = WEIGHT_CLASS_TINY
 	var/translate_binary = FALSE
-	var/syndie = FALSE
+	var/edict = FALSE
 	var/independent = FALSE
 	var/list/channels = list()
 
@@ -26,11 +26,11 @@
 
 		. += span_notice("It can access the following channels; [jointext(examine_text_list, ", ")].")
 
-/obj/item/encryptionkey/syndicate
-	name = "syndicate encryption key"
-	icon_state = "syn_cypherkey"
-	channels = list(RADIO_CHANNEL_SYNDICATE = 1)
-	syndie = TRUE//Signifies that it de-crypts Syndicate transmissions
+/obj/item/encryptionkey/lastedict
+	name = "last edict encryption key"
+	icon_state = "edi_cypherkey"
+	channels = list(RADIO_CHANNEL_EDICT = 1)
+	edict = TRUE//Signifies that it de-crypts Edict transmissions
 
 /obj/item/encryptionkey/binary
 	name = "binary translator key"

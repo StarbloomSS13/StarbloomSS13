@@ -73,9 +73,9 @@
 	description = "An advanced version of Nakamura Engineering's classic suit, shining with a white, acid and fire resistant polish."
 
 /datum/opposing_force_equipment/clothing/nukiemod
-	name = "Blood-Red MODsuit"
+	name = "Last Edict MODsuit" // YOU MUST WEAR THE MODSUIT
 	item_type = /obj/item/mod/control/pre_equipped/nuclear
-	description = "A suit designed by Gorlex Marauders, offering armor ruled illegal in most of Spinward Stellar."
+	description = "A modified scrapper modsuit produced by the Last Edict. Offers good armor and basic modules to get the job done."
 
 /datum/opposing_force_equipment/clothing/elitemod
 	name = "Elite MODsuit"

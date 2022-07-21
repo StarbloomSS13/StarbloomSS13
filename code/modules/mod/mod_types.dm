@@ -141,7 +141,7 @@
 	)
 
 /obj/item/mod/control/pre_equipped/traitor
-	theme = /datum/mod_theme/syndicate
+	theme = /datum/mod_theme/edict
 	applied_cell = /obj/item/stock_parts/cell/super
 	initial_modules = list(
 		/obj/item/mod/module/storage/syndicate,
@@ -153,7 +153,7 @@
 	)
 
 /obj/item/mod/control/pre_equipped/nuclear
-	theme = /datum/mod_theme/syndicate
+	theme = /datum/mod_theme/edict
 	applied_cell = /obj/item/stock_parts/cell/hyper
 	initial_modules = list(
 		/obj/item/mod/module/storage/syndicate,
@@ -339,7 +339,7 @@
 
 //these exist for the prefs menu
 /obj/item/mod/control/pre_equipped/syndicate_empty
-	theme = /datum/mod_theme/syndicate
+	theme = /datum/mod_theme/edict
 
 /obj/item/mod/control/pre_equipped/syndicate_empty/elite
 	theme = /datum/mod_theme/elite

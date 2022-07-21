@@ -65,8 +65,8 @@
 	slowdown_active = SHOES_SLOWDOWN
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
-/obj/item/clothing/shoes/magboots/syndie
-	desc = "Reverse-engineered magnetic boots that have a heavy magnetic pull. Property of Gorlex Marauders."
-	name = "blood-red magboots"
+/obj/item/clothing/shoes/magboots/edict
+	desc = "Reverse-engineered magnetic boots that have a heavy magnetic pull."
+	name = "purple magboots"
 	icon_state = "syndiemag0"
 	magboot_state = "syndiemag"

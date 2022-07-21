@@ -1253,9 +1253,9 @@
 		if("robot")
 			var/robot = pick(
 				200 ; /mob/living/silicon/robot,
-				/mob/living/silicon/robot/model/syndicate,
-				/mob/living/silicon/robot/model/syndicate/medical,
-				/mob/living/silicon/robot/model/syndicate/saboteur,
+				/mob/living/silicon/robot/model/edict,
+				/mob/living/silicon/robot/model/edict/medical,
+				/mob/living/silicon/robot/model/edict/saboteur,
 				200 ; /mob/living/simple_animal/drone/polymorphed,
 			)
 			new_mob = new robot(loc)

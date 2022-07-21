@@ -11,8 +11,8 @@
 	item_type = /obj/item/card/emag/doorjack
 	description = "Identifies commonly as a \"doorjack\", this illegally modified ID card can disrupt airlock electronics. Has a self recharging cell."
 
-/datum/opposing_force_equipment/gear/stoolbox
-	item_type = /obj/item/storage/toolbox/syndicate
+/datum/opposing_force_equipment/gear/etoolbox
+	item_type = /obj/item/storage/toolbox/edict
 	description = "A fully-kitted toolbox scavenged from maintenance by our highly-paid monkeys. The toolbox \
 		itself is weighted especially to bash any head in and comes with a free pair of insulated combat gloves."
 

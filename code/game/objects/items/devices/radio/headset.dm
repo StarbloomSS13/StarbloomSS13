@@ -7,7 +7,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	RADIO_CHANNEL_ENGINEERING = RADIO_TOKEN_ENGINEERING,
 	RADIO_CHANNEL_SECURITY = RADIO_TOKEN_SECURITY,
 	RADIO_CHANNEL_CENTCOM = RADIO_TOKEN_CENTCOM,
-	RADIO_CHANNEL_SYNDICATE = RADIO_TOKEN_SYNDICATE,
+	RADIO_CHANNEL_EDICT = RADIO_TOKEN_EDICT,
 	RADIO_CHANNEL_SUPPLY = RADIO_TOKEN_SUPPLY,
 	RADIO_CHANNEL_SERVICE = RADIO_TOKEN_SERVICE,
 	MODE_BINARY = MODE_TOKEN_BINARY,
@@ -83,25 +83,25 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 		return attack_self(headset_user)
 	return ..()
 
-/obj/item/radio/headset/syndicate //disguised to look like a normal headset for stealth ops
+/obj/item/radio/headset/edict //disguised to look like a normal headset for stealth ops
 
-/obj/item/radio/headset/syndicate/alt //undisguised bowman with flash protection
-	name = "syndicate headset"
-	desc = "A syndicate headset that can be used to hear all radio frequencies. Protects ears from flashbangs."
-	icon_state = "syndie_headset"
+/obj/item/radio/headset/edict/alt //undisguised bowman with flash protection
+	name = "last edict headset"
+	desc = "A edict-curated headset that can be used to hear all radio frequencies. Protects ears from flashbangs."
+	icon_state = "edict_headset"
 	inhand_icon_state = "syndie_headset"
 
-/obj/item/radio/headset/syndicate/alt/ComponentInitialize()
+/obj/item/radio/headset/edict/alt/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 
-/obj/item/radio/headset/syndicate/alt/leader
+/obj/item/radio/headset/edict/alt/leader
 	name = "team leader headset"
 	command = TRUE
 
-/obj/item/radio/headset/syndicate/Initialize(mapload)
+/obj/item/radio/headset/edict/Initialize(mapload)
 	. = ..()
-	make_syndie()
+	make_edict()
 
 /obj/item/radio/headset/binary
 /obj/item/radio/headset/binary/Initialize(mapload)
@@ -341,8 +341,8 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 		if(keyslot2.translate_binary)
 			translate_binary = TRUE
-		if(keyslot2.syndie)
-			syndie = TRUE
+		if(keyslot2.edict)
+			edict = TRUE
 		if (keyslot2.independent)
 			independent = TRUE
 

@@ -1,6 +1,6 @@
-/obj/item/grenade/syndieminibomb
-	desc = "A syndicate manufactured explosive used to sow destruction and chaos."
-	name = "syndicate minibomb"
+/obj/item/grenade/edictminibomb
+	desc = "A Last Edict created explosive used to sow destruction and chaos."
+	name = "EXODUS minibomb"
 	icon = 'icons/obj/grenade.dmi'
 	icon_state = "syndicate"
 	inhand_icon_state = "flashbang"
@@ -10,7 +10,7 @@
 	ex_light = 4
 	ex_flame = 2
 
-/obj/item/grenade/syndieminibomb/detonate(mob/living/lanced_by)
+/obj/item/grenade/edictminibomb/detonate(mob/living/lanced_by)
 	. = ..()
 	if(!.)
 		return
@@ -18,7 +18,7 @@
 	update_mob()
 	qdel(src)
 
-/obj/item/grenade/syndieminibomb/concussion
+/obj/item/grenade/edictminibomb/concussion
 	name = "HE Grenade"
 	desc = "A compact shrapnel grenade meant to devastate nearby organisms and cause some damage in the process. Pull pin and throw opposite direction."
 	icon_state = "concussion"

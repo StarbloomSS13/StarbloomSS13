@@ -164,14 +164,14 @@
 			if (channel in borg.radio.channels) // We're removing a channel
 				if (!borg.radio.keyslot) // There's no encryption key. This shouldn't happen but we can cope
 					borg.radio.channels -= channel
-					if (channel == RADIO_CHANNEL_SYNDICATE)
-						borg.radio.syndie = FALSE
+					if (channel == RADIO_CHANNEL_EDICT)
+						borg.radio.edict = FALSE
 					else if (channel == "CentCom")
 						borg.radio.independent = FALSE
 				else
 					borg.radio.keyslot.channels -= channel
-					if (channel == RADIO_CHANNEL_SYNDICATE)
-						borg.radio.keyslot.syndie = FALSE
+					if (channel == RADIO_CHANNEL_EDICT)
+						borg.radio.keyslot.edict = FALSE
 					else if (channel == "CentCom")
 						borg.radio.keyslot.independent = FALSE
 				message_admins("[key_name_admin(user)] removed the [channel] radio channel from [ADMIN_LOOKUPFLW(borg)].")
@@ -180,8 +180,8 @@
 				if (!borg.radio.keyslot) // Assert that an encryption key exists
 					borg.radio.keyslot = new (borg.radio)
 				borg.radio.keyslot.channels[channel] = 1
-				if (channel == RADIO_CHANNEL_SYNDICATE)
-					borg.radio.keyslot.syndie = TRUE
+				if (channel == RADIO_CHANNEL_EDICT)
+					borg.radio.keyslot.edict = TRUE
 				else if (channel == "CentCom")
 					borg.radio.keyslot.independent = TRUE
 				message_admins("[key_name_admin(user)] added the [channel] radio channel to [ADMIN_LOOKUPFLW(borg)].")

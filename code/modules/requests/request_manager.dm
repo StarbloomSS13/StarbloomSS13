@@ -182,7 +182,7 @@ GLOBAL_DATUM_INIT(requests, /datum/request_manager, new)
 				to_chat(usr, "Cannot reply to a prayer", confidential = TRUE)
 				return TRUE
 			var/mob/M = request.owner?.mob
-			usr.client.admin_headset_message(M, request.req_type == REQUEST_SYNDICATE ? RADIO_CHANNEL_SYNDICATE : RADIO_CHANNEL_CENTCOM)
+			usr.client.admin_headset_message(M, request.req_type == REQUEST_SYNDICATE ? RADIO_CHANNEL_EDICT : RADIO_CHANNEL_CENTCOM)
 			return TRUE
 		if ("setcode")
 			if (request.req_type != REQUEST_NUKE)

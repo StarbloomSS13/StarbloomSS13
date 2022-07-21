@@ -50,7 +50,7 @@
 		/obj/item/storage/medkit/fire = 27,
 		/obj/item/grenade/clusterbuster/smoke = 15,
 		/obj/item/clothing/under/chameleon = 13,
-		/obj/item/storage/toolbox/syndicate = 12,
+		/obj/item/storage/toolbox/edict = 12,
 		/obj/item/melee/baton/telescopic = 12,
 		/obj/item/melee/baton = 11,
 		/obj/item/book/granter/spell/smoke = 10,

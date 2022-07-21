@@ -40,7 +40,7 @@
 			new /obj/item/clothing/glasses/thermal/xray(src) // ~8 tc?
 			new /obj/item/storage/briefcase/launchpad(src) //6 tc
 			new /obj/item/binoculars(src) // 2 tc?
-			new /obj/item/encryptionkey/syndicate(src) // 2 tc
+			new /obj/item/encryptionkey/lastedict(src) // 2 tc
 			new /obj/item/storage/box/syndie_kit/space(src) //4 tc
 			new /obj/item/grenade/frag(src) // ~2 tc each?
 			new /obj/item/grenade/frag(src)
@@ -53,7 +53,7 @@
 			new /obj/item/clothing/shoes/chameleon/noslip(src) // 2 tc
 			new /obj/item/camera_bug(src) // 1 tc
 			new /obj/item/multitool/ai_detect(src) // 1 tc
-			new /obj/item/encryptionkey/syndicate(src) // 2 tc
+			new /obj/item/encryptionkey/lastedict(src) // 2 tc
 			new /obj/item/reagent_containers/syringe/mulligan(src) // 4 tc
 			new /obj/item/switchblade(src) //I'll count this as 2 tc
 			new /obj/item/storage/fancy/cigarettes/cigpack_syndicate (src) // 2 tc this shit heals
@@ -65,7 +65,7 @@
 			new /obj/item/pen/sleepy(src)
 			new /obj/item/healthanalyzer/rad_laser(src)
 			new /obj/item/chameleon(src)
-			new /obj/item/soap/syndie(src)
+			new /obj/item/soap/edict(src)
 			new /obj/item/clothing/glasses/thermal/syndi(src)
 			new /obj/item/flashlight/emp(src)
 			new /obj/item/jammer(src)
@@ -82,19 +82,19 @@
 
 		if(KIT_SCREWED)
 			new /obj/item/sbeacondrop/bomb(src)
-			new /obj/item/grenade/syndieminibomb(src)
+			new /obj/item/grenade/edictminibomb(src)
 			new /obj/item/sbeacondrop/powersink(src)
 			new /obj/item/clothing/suit/space/syndicate/black/red(src)
 			new /obj/item/clothing/head/helmet/space/syndicate/black/red(src)
-			new /obj/item/encryptionkey/syndicate(src)
+			new /obj/item/encryptionkey/lastedict(src)
 
 		if(KIT_MURDER)
 			new /obj/item/melee/energy/sword/saber(src)
 			new /obj/item/clothing/glasses/thermal/syndi(src)
 			new /obj/item/card/emag(src)
 			new /obj/item/clothing/shoes/chameleon/noslip(src)
-			new /obj/item/encryptionkey/syndicate(src)
-			new /obj/item/grenade/syndieminibomb(src)
+			new /obj/item/encryptionkey/lastedict(src)
+			new /obj/item/grenade/edictminibomb(src)
 
 		if(KIT_IMPLANTS)
 			new /obj/item/implanter/freedom(src)
@@ -109,7 +109,7 @@
 			new /obj/item/encryptionkey/binary(src)
 			new /obj/item/ai_module/toy_ai(src)
 			new /obj/item/multitool/ai_detect(src)
-			new /obj/item/storage/toolbox/syndicate(src)
+			new /obj/item/storage/toolbox/edict(src)
 			new /obj/item/camera_bug(src)
 			new /obj/item/clothing/glasses/thermal/syndi(src)
 			new /obj/item/card/id/advanced/chameleon(src)
@@ -119,7 +119,7 @@
 			new /obj/item/clothing/suit/space/syndicate/black/red(src)
 			new /obj/item/clothing/head/helmet/space/syndicate/black/red(src)
 			new /obj/item/card/emag(src)
-			new /obj/item/storage/toolbox/syndicate(src)
+			new /obj/item/storage/toolbox/edict(src)
 			new /obj/item/card/id/advanced/mining(src)
 			new /obj/item/stack/spacecash/c10000(src)
 			new /obj/item/toy/spinningtoy(src) //lol
@@ -129,7 +129,7 @@
 			new /obj/item/camera_bug(src)
 			new /obj/item/sbeacondrop/powersink(src)
 			new /obj/item/cartridge/virus/syndicate(src)
-			new /obj/item/storage/toolbox/syndicate(src)
+			new /obj/item/storage/toolbox/edict(src)
 			new /obj/item/pizzabox/bomb(src)
 			new /obj/item/storage/box/syndie_kit/emp(src)
 
@@ -208,7 +208,7 @@
 			new /obj/item/assembly/signaler(src) // 0 tc
 			new /obj/item/assembly/signaler(src) // 0 tc
 			new /obj/item/assembly/signaler(src) // 0 tc
-			new /obj/item/storage/toolbox/syndicate(src) // 1 tc
+			new /obj/item/storage/toolbox/edict(src) // 1 tc
 			new /obj/item/pen/edagger(src)
 			new /obj/item/gun/energy/wormhole_projector/core_inserted(src)
 			new /obj/item/gun/energy/decloner/unrestricted(src)
