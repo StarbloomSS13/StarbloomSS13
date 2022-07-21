@@ -79,3 +79,8 @@
 	name = "command directions"
 	desc = "A sign pointing to Command."
 	icon_state = "dir_cmd"
+
+/obj/structure/sign/hazard/halon
+    name = "halon warning sign"
+    desc = "A sign warning of the presence of suffocating halon gas in the area."
+    icon_state = "sign_halon"
