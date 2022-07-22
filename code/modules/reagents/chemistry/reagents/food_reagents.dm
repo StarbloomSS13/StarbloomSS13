@@ -878,23 +878,6 @@
 	reagent_state = SOLID
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
-/datum/reagent/consumable/char
-	name = "Char"
-	description = "Essence of the grill. Has strange properties when overdosed."
-	reagent_state = LIQUID
-	nutriment_factor = 5 * REAGENTS_METABOLISM
-	color = "#C8C8C8"
-	taste_mult = 6
-	taste_description = "smoke"
-	overdose_threshold = 15
-	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-
-/datum/reagent/consumable/char/overdose_process(mob/living/M, delta_time, times_fired)
-	if(DT_PROB(13, delta_time))
-		M.say(pick_list_replacements(BOOMER_FILE, "boomer"), forced = /datum/reagent/consumable/char)
-	..()
-	return
-
 /datum/reagent/consumable/bbqsauce
 	name = "BBQ Sauce"
 	description = "Sweet, smoky, savory, and gets everywhere. Perfect for grilling."

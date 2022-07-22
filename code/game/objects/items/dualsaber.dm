@@ -44,10 +44,6 @@
 /obj/item/dualsaber/proc/on_wield(obj/item/source, mob/living/carbon/user)
 	SIGNAL_HANDLER
 
-	if(user?.has_dna())
-		if(user.dna.check_mutation(/datum/mutation/human/hulk))
-			to_chat(user, span_warning("You lack the grace to wield this!"))
-			return COMPONENT_TWOHANDED_BLOCK_WIELD
 	wielded = TRUE
 	w_class = w_class_on
 	hitsound = 'sound/weapons/blade1.ogg'
@@ -119,12 +115,6 @@
 	. = ..()
 
 /obj/item/dualsaber/attack(mob/target, mob/living/carbon/human/user)
-	if(user.has_dna())
-		if(user.dna.check_mutation(/datum/mutation/human/hulk))
-			to_chat(user, span_warning("You grip the blade too hard and accidentally drop it!"))
-			if(wielded)
-				user.dropItemToGround(src, force=TRUE)
-				return
 	..()
 	if(wielded && HAS_TRAIT(user, TRAIT_CLUMSY) && prob(40))
 		impale(user)

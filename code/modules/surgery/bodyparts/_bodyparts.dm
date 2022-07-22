@@ -618,11 +618,6 @@
 		dmg_overlay_type = initial(dmg_overlay_type)
 		is_husked = FALSE
 
-	if(!dropping_limb && owner.dna?.check_mutation(/datum/mutation/human/hulk)) //Please remove hulk from the game. I beg you.
-		mutation_color = "#00aa00"
-	else
-		mutation_color = null
-
 	if(mutation_color)
 		draw_color = mutation_color
 	else if(should_draw_greyscale)

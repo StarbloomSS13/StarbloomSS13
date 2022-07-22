@@ -13,10 +13,6 @@
 
 /* RECIPES */
 
-/datum/generecipe/hulk
-	required = "/datum/mutation/human/strong; /datum/mutation/human/radioactive"
-	result = /datum/mutation/human/hulk
-
 /datum/generecipe/mindread
 	required = "/datum/mutation/human/antenna; /datum/mutation/human/paranoia"
 	result = /datum/mutation/human/mindreader

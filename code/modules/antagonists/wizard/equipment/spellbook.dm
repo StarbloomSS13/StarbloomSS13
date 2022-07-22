@@ -205,11 +205,6 @@
 	spell_type = /obj/effect/proc_holder/spell/targeted/area_teleport/teleport
 	category = "Mobility"
 
-/datum/spellbook_entry/mutate
-	name = "Mutate"
-	desc = "Causes you to turn into a hulk and gain laser vision for a short while."
-	spell_type = /obj/effect/proc_holder/spell/targeted/genetic/mutate
-
 /datum/spellbook_entry/jaunt
 	name = "Ethereal Jaunt"
 	desc = "Turns your form ethereal, temporarily making you invisible and able to pass through walls."
@@ -802,8 +797,8 @@
 	switch(loadout)
 		if(WIZARD_LOADOUT_CLASSIC) //(Fireball>2, MM>2, Smite>2, Jauntx2>4) = 10
 			wanted_spell_names = list("Fireball" = 1, "Magic Missile" = 1, "Smite" = 1, "Ethereal Jaunt" = 2)
-		if(WIZARD_LOADOUT_MJOLNIR) //(Mjolnir>2, Summon Itemx3>3, Mutate>2, Force Wall>1, Blink>2) = 10
-			wanted_spell_names = list("Mjolnir" = 1, "Summon Item" = 3, "Mutate" = 1, "Force Wall" = 1, "Blink" = 1)
+		if(WIZARD_LOADOUT_MJOLNIR) //(Mjolnir>2, Summon Itemx3>3, Tesla Blast>2, Force Wall>1, Blink>2) = 10
+			wanted_spell_names = list("Mjolnir" = 1, "Summon Item" = 3, "Tesla Blast" = 1, "Force Wall" = 1, "Blink" = 1)
 		if(WIZARD_LOADOUT_WIZARMY) //(Soulstones>2, Staff of Change>2, A Necromantic Stone>2, Teleport>2, Ethereal Jaunt>2) = 10
 			wanted_spell_names = list("Soulstone Shard Kit" = 1, "Staff of Change" = 1, "A Necromantic Stone" = 1, "Teleport" = 1, "Ethereal Jaunt" = 1)
 		if(WIZARD_LOADOUT_SOULTAP) //(Soul Tap>1, Smite>2, Flesh to Stone>2, Mindswap>2, Knock>1, Teleport>2) = 10
