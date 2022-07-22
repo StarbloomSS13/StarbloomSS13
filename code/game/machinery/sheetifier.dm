@@ -2,7 +2,7 @@
 	name = "Sheet-meister 2000"
 	desc = "A very sheety machine."
 	examinepp_req_jobs = list(JOB_CHAPLAIN)
-	examinepp_desc_job = "Concerningly, this machine accepts both raw Meat \
+	examinepp_desc_job = "Concerningly, this machine accepts both raw meat \
 	and raw ectoplasm."
 	icon = 'icons/obj/machines/sheetifier.dmi'
 	icon_state = "base_machine"
