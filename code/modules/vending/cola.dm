@@ -4,8 +4,6 @@
 	desc = "A softdrink vendor provided by Robust Industries, LLC."
 	icon_state = "Cola_Machine"
 	panel_type = "panel2"
-	product_slogans = "Robust Softdrinks: More robust than a toolbox to the head!"
-	product_ads = "Refreshing!;Hope you're thirsty!;Over 1 million drinks sold!;Thirsty? Why not cola?;Please, have a drink!;Drink up!;The best drinks in space."
 	products = list(
 		/obj/item/reagent_containers/food/drinks/soda_cans/cola = 10,
 		/obj/item/reagent_containers/food/drinks/soda_cans/space_mountain_wind = 10,

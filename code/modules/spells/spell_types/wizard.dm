@@ -29,26 +29,6 @@
 	trail_lifespan = 5
 	trail_icon_state = "magicmd"
 
-/obj/effect/proc_holder/spell/targeted/genetic/mutate
-	name = "Mutate"
-	desc = "This spell causes you to turn into a hulk and gain laser vision for a short while."
-
-	school = SCHOOL_TRANSMUTATION
-	charge_max = 400
-	clothes_req = TRUE
-	invocation = "BIRUZ BENNAR"
-	invocation_type = INVOCATION_SHOUT
-	range = -1
-	include_user = TRUE
-
-	mutations = list(/datum/mutation/human/laser_eyes, /datum/mutation/human/hulk)
-	duration = 300
-	cooldown_min = 300 //25 deciseconds reduction per rank
-
-	action_icon_state = "mutate"
-	sound = 'sound/magic/mutate.ogg'
-
-
 /obj/effect/proc_holder/spell/targeted/smoke
 	name = "Smoke"
 	desc = "This spell spawns a cloud of choking smoke at your location."
@@ -293,7 +273,7 @@
 		if(caster.can_cast_magic(antimagic_flags))
 			caster.IgniteMob()
 		else
-			return 
+			return
 	for(var/mob/living/target in targets)
 		if(target.can_block_magic(antimagic_flags))
 			to_chat(user, span_warning("The spell can't seem to affect [target]!"))

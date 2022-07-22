@@ -205,11 +205,6 @@
 	spell_type = /obj/effect/proc_holder/spell/targeted/area_teleport/teleport
 	category = "Mobility"
 
-/datum/spellbook_entry/mutate
-	name = "Mutate"
-	desc = "Causes you to turn into a hulk and gain laser vision for a short while."
-	spell_type = /obj/effect/proc_holder/spell/targeted/genetic/mutate
-
 /datum/spellbook_entry/jaunt
 	name = "Ethereal Jaunt"
 	desc = "Turns your form ethereal, temporarily making you invisible and able to pass through walls."

@@ -4,7 +4,6 @@
 	icon_state = "med"
 	icon_deny = "med-deny"
 	panel_type = "panel11"
-	product_ads = "Go save some lives!;The best stuff for your medbay.;Only the finest tools.;Natural chemicals!;This stuff saves lives.;Don't you want some?;Ping!"
 	req_access = list(ACCESS_MEDICAL)
 	products = list(
 		/obj/item/stack/medical/gauze = 8,
@@ -52,7 +51,6 @@
 	icon_state = "drug"
 	icon_deny = "drug-deny"
 	panel_type = "panel11"
-	product_ads = "Go save some lives!;The best stuff for your medbay.;Only the finest tools.;Natural chemicals!;This stuff saves lives.;Don't you want some?;Ping!"
 	req_access = list(ACCESS_MEDICAL)
 	products = list(/obj/item/reagent_containers/pill/patch/libital = 5,
 					/obj/item/reagent_containers/pill/patch/aiuri = 5,
