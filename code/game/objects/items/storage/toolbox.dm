@@ -255,7 +255,7 @@
 /obj/item/storage/toolbox/infiltrator
 	name = "insidious case"
 	icon = 'icons/obj/storage.dmi'
-	desc = "Bearing the emblem of the Syndicate, this case contains a full infiltrator stealth suit, and has enough room to fit weaponry if necessary."
+	desc = "Bearing the emblem of subterfuge, this case contains a full infiltrator stealth suit, and has enough room to fit weaponry if necessary."
 	icon_state = "infiltrator_case"
 	inhand_icon_state = "infiltrator_case"
 	lefthand_file = 'icons/mob/inhands/equipment/toolbox_lefthand.dmi'
