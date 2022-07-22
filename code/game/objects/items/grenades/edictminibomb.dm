@@ -9,6 +9,10 @@
 	ex_heavy = 2
 	ex_light = 4
 	ex_flame = 2
+	examinepp_req_antags = list(ROLE_TRAITOR,ROLE_NUCLEAR_OPERATIVE)
+	examinepp_desc_antag = "A shock explosive meant to be used to deter and demoralize the enemy. \
+	While offensively effective, it is also dangerous to use in close quarters and shouldn't \
+	be solely relied upon for killing personnel."
 
 /obj/item/grenade/edictminibomb/detonate(mob/living/lanced_by)
 	. = ..()

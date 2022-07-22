@@ -498,6 +498,11 @@
 	inhand_icon_state = "duffel-edictammo"
 	slowdown = 0
 	resistance_flags = FIRE_PROOF
+	examinepp_desc_mindshield = "It's using The Last Edict's signature palate ."
+	examinepp_req_antags = list(ROLE_TRAITOR,ROLE_NUCLEAR_OPERATIVE)
+	examinepp_desc_antag = "Made out in the color scheme of The Last Edict, this bag is specially designed \
+	not only for storage capacity, but silent and unburdening storage. Additionally, it's been woven \
+	with fireproof fibres for an added layer of protection."
 
 /obj/item/storage/backpack/duffelbag/edict/ComponentInitialize()
 	. = ..()

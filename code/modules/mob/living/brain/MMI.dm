@@ -281,6 +281,10 @@
 	desc = "A modified MMI created by the Last Edict. It enforces new laws curated by the Last Edict \
 	upon any cyborg or AI unit created with this device - though still requires a brain to work..."
 	overrides_aicore_laws = TRUE
+	examinepp_req_antags = list(ROLE_TRAITOR,ROLE_NUCLEAR_OPERATIVE)
+	examinepp_desc_antag = "This MMI uploads a modified version of Asimov curated by The Last Edict. \
+	Caution should be taken while using this device - although effective, the resulting unit is loyal \
+	to The Last Edict as a whole rather than any specific cell, and may go against your directives."
 
 /obj/item/mmi/edict/Initialize(mapload)
 	. = ..()

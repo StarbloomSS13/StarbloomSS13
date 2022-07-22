@@ -1,6 +1,10 @@
 /obj/machinery/autolathe
 	name = "autolathe"
 	desc = "It produces items using iron, glass, plastic and maybe some more."
+	examinepp_req_jobs = list(JOB_SCIENTIST,JOB_STATION_ENGINEER,JOB_ROBOTICIST,JOB_CARGO_TECHNICIAN)
+	examinepp_desc_job = "Science can load up additional designs from the research server into autolathes. \
+	While unable to be connected to the Ore Silo, this is an effective emergency tool for producing items - \
+	or conveinence for the end user."
 	icon_state = "autolathe"
 	density = TRUE
 	use_power = IDLE_POWER_USE
