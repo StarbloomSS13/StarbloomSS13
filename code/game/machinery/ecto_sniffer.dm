@@ -1,6 +1,8 @@
 /obj/machinery/ecto_sniffer
 	name = "ectoscopic sniffer"
 	desc = "A highly sensitive parascientific instrument calibrated to detect the slightest whiff of ectoplasm."
+	examinepp_desc = "Any active ghost can leave a layer of ectoplasm on the ectoscopic sniffer, causing a small, audible blip, \
+	indicating they wish to enter the world as a positronic personality."
 	icon = 'icons/obj/machines/research.dmi'
 	icon_state = "ecto_sniffer"
 	density = FALSE
@@ -73,11 +75,6 @@
 /obj/machinery/ecto_sniffer/Destroy()
 	ectoplasmic_residues = null
 	. = ..()
-
-/obj/machinery/ecto_sniffer/examine(mob/user)
-	. = ..()
-	. += span_notice("Any active ghost can leave a layer of ectoplasm on the ectoscopic sniffer, causing a small, audible blip, \
-	indicating they wish to enter the world as a positronic personality.")
 
 ///Removes the ghost from the ectoplasmic_residues list and lets them know they are free to activate the sniffer again.
 /obj/machinery/ecto_sniffer/proc/clear_residue(ghost_ckey)

@@ -1,6 +1,9 @@
 /obj/machinery/sheetifier
 	name = "Sheet-meister 2000"
-	desc = "A very sheety machine"
+	desc = "A very sheety machine."
+	examinepp_req_jobs = list(JOB_CHAPLAIN)
+	examinepp_desc_job = "Concerningly, this machine accepts both raw Meat \
+	and raw ectoplasm."
 	icon = 'icons/obj/machines/sheetifier.dmi'
 	icon_state = "base_machine"
 	density = TRUE
