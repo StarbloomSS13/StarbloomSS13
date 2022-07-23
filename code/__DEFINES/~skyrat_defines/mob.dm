@@ -1,0 +1,1 @@
+#define VOMIT_NANITE 3
