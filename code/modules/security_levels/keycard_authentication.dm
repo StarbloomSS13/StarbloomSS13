@@ -3,6 +3,7 @@ GLOBAL_DATUM_INIT(keycard_events, /datum/events, new)
 #define KEYCARD_RED_ALERT "Red Alert"
 #define KEYCARD_EMERGENCY_MAINTENANCE_ACCESS "Emergency Maintenance Access"
 #define KEYCARD_BSA_UNLOCK "Bluespace Artillery Unlock"
+#define KEYCARD_SELF_DESTRUCT "Neutron Purge"
 
 /obj/machinery/keycard_auth
 	name = "Keycard Authentication Device"
@@ -49,6 +50,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/keycard_auth, 26)
 	data["red_alert"] = (seclevel2num(get_security_level()) >= SEC_LEVEL_RED) ? 1 : 0
 	data["emergency_maint"] = GLOB.emergency_access
 	data["bsa_unlock"] = GLOB.bsa_unlock
+	data["neutron_purge"] = GLOB.neutron_purge
 	return data
 
 /obj/machinery/keycard_auth/ui_status(mob/user)
@@ -85,6 +87,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/keycard_auth, 26)
 		if("bsa_unlock")
 			if(!event_source)
 				sendEvent(KEYCARD_BSA_UNLOCK)
+				. = TRUE
+		if("neutron_purge")
+			if(!event_source)
+				sendEvent(KEYCARD_SELF_DESTRUCT)
 				. = TRUE
 
 /obj/machinery/keycard_auth/update_appearance(updates)
@@ -139,6 +145,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/keycard_auth, 26)
 			make_maint_all_access()
 		if(KEYCARD_BSA_UNLOCK)
 			toggle_bluespace_artillery()
+		if(KEYCARD_SELF_DESTRUCT)
+			toggle_neutron_self_destruct()
 
 GLOBAL_VAR_INIT(emergency_access, FALSE)
 /proc/make_maint_all_access()
@@ -164,6 +172,58 @@ GLOBAL_VAR_INIT(emergency_access, FALSE)
 	minor_announce("Bluespace Artillery firing protocols have been [GLOB.bsa_unlock? "unlocked" : "locked"]", "Weapons Systems Update:")
 	SSblackbox.record_feedback("nested tally", "keycard_auths", 1, list("bluespace artillery", GLOB.bsa_unlock? "unlocked" : "locked"))
 
+//YOU ARE ENTERING CONCEPTUAL, RUSHED, SHITCODE TERRITORY! -VivI Fanteriso
+//Total time wasted so far: 6 hours 15 minutes
+
+GLOBAL_VAR_INIT(neutron_purge, FALSE)
+
+/proc/toggle_neutron_self_destruct() //togglable, turn on or off the big bad boom!
+	GLOB.neutron_purge = !GLOB.neutron_purge
+
+	var/timer
+	set_security_level("[GLOB.neutron_purge? "delta" : "blue"]") //this works perfectly fine
+
+	priority_announce(GLOB.neutron_purge? "ATTENTION NEUTRON PURGE PROTOCOL COMMENCING. ALL STAFF ARE ADVISED TO RETREAT TO A RADIATION SHELTER. PURGE COMMENCING IN [timer] SECONDS. THIS IS NOT A DRILL." : "ATTENTION NEUTRON PURGE PROTOCOL DISABLED. All staff are to listen for instructions from their departmental heads.", "Purge Protocol Update")
+	timer = GLOB.neutron_purge? addtimer(CALLBACK(GLOBAL_PROC, .proc/neutron_destruct), GLOB.neutron_purge? 10 SECONDS : deltimer(timer), TIMER_UNIQUE | TIMER_STOPPABLE) : null
+
+//trust me, the super ghetto offie light shit will be fixed soon
+	GLOB.neutron_purge? sound_to_playing_players('sound/effects/selfdestructalarm.ogg') : null // a three minute version of this file would've been more convenient. Someone should do COOLDOWN_START and just put this in a "while purge is happening" loop
+
+	for(var/obj/machinery/light/stationlights) //foreach this
+		stationlights.color = GLOB.neutron_purge? "#FF3232" : "#f3fffa" //there is a smarter way of doing this, but Im not smart
+		stationlights.brightness = GLOB.neutron_purge? 4 : 8//darken all lights on the station.
+		stationlights.update()
+/*
+	for(var/mob/living/carbon/human/victim as anything in GLOB.mob_living_list) //every advanced mob(player) on the station takes clone damage, including people in shelters. Particles would still go through walls.
+		while(GLOB.neutron_purge == TRUE) //while neutron purge is true play a sound with a cooldown, very creative.
+			victim.adjustCloneLoss(1)
+this was a terrible idea, dont uncomment it. It crashes the server and doesnt work. Maybe because Im awful at coding */
+
+//========================================TO DO, DONT MERGE UNTIL THIS SHIT IS DONE! HELP IS APPRICIATED!=================
+//Add more announcements as it ticks down.
+//add cloneloss damage after a certain point
+//make this code not dogshit(getting there!)
+//fix the timer in line 189
+//add an admin cencel button when the KDA is swipped for neutron purge
+
+/proc/neutron_destruct() //the big bad boom
+
+	for(var/mob/living/victim as anything in GLOB.mob_living_list) //literally any liiving thing add a pass for silicons
+		var/turf/target_turf = get_turf(victim)
+//player isnt safe
+		if(victim.stat && target_turf && is_station_level(target_turf.z)) //is target_turf on the station Zlevel? If not, dont dust them
+			to_chat(victim, span_userdanger("For a moment every cell in your body cries in pain. Only for a moment, though.")) //OOC HEP IDED
+			victim.dust() //add a pass for silicons!!!!!!!!
+//player is in a safe area
+		if(istype(victim.loc, /area/maintenance/radshelter))
+			var/area/maintenance/radshelter/shelter = victim.loc.loc //is the person we are about to turn to dust in /area/maintenance/radshelter? //target_turf.loc
+			if(!shelter) //"shelter.Entered" didnt work here, wonder why.
+				to_chat(victim, span_boldannounce("The station cries around you as the Neutron Purge occurs. The shelter seems to have protected you. It's safe to leave."))
+				shelter = TRUE
+				continue
+	SSticker.force_ending = 1
+
 #undef KEYCARD_RED_ALERT
 #undef KEYCARD_EMERGENCY_MAINTENANCE_ACCESS
 #undef KEYCARD_BSA_UNLOCK
+#undef KEYCARD_SELF_DESTRUCT
