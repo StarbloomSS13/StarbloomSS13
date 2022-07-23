@@ -442,6 +442,10 @@
 	max_n_of_items = 20 //vastly lower to prevent processing too long
 	base_build_path = /obj/machinery/smartfridge/organ
 	var/repair_rate = 0
+	examinepp_req_jobs = list(JOB_MEDICAL_DOCTOR,JOB_PARAMEDIC,JOB_CHIEF_MEDICAL_OFFICER)
+	examinepp_desc_job = "The science department is able to upgrade these fridges to both improve \
+	storage capacity and repair damaged organs. Although slow, the repairs Smartfridges offer can \
+	bring back even entirely destroyed organs."
 
 /obj/machinery/smartfridge/organ/accept_check(obj/item/O)
 	if(isorgan(O) || isbodypart(O))

@@ -646,7 +646,7 @@ Congratulations! You are now trained for invasive xenobiology research!"}
 
 /obj/item/radio/headset/abductor/Initialize(mapload)
 	. = ..()
-	make_syndie()
+	make_edict() // I knew the edict were all about the aliens, but this is ridiculous!
 
 /obj/item/radio/headset/abductor/ComponentInitialize()
 	. = ..()

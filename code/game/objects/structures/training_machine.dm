@@ -160,7 +160,7 @@
 /obj/structure/training_machine/proc/remove_attached_item(mob/user, throwing = FALSE)
 	if (!attached_item)
 		return
-	if (istype(attached_item, /obj/item/storage/toolbox/syndicate))
+	if (istype(attached_item, /obj/item/storage/toolbox/edict))
 		UnregisterSignal(attached_item, COMSIG_PARENT_QDELETING)
 		qdel(attached_item)
 	else if (user)
@@ -319,7 +319,7 @@
 		return
 	obj_flags |= EMAGGED
 	remove_attached_item(throwing = TRUE) //Toss out the old attached item!
-	attach_item(new /obj/item/storage/toolbox/syndicate(src))
+	attach_item(new /obj/item/storage/toolbox/edict(src))
 	to_chat(user, span_warning("You override the training machine's safety protocols, and activate its realistic combat feature. A toolbox pops out of a slot on the top."))
 	playsound(src, 'sound/machines/click.ogg', 50, TRUE)
 	add_overlay("evil_trainer")

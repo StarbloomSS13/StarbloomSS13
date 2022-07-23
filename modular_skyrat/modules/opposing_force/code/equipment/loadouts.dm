@@ -2,7 +2,7 @@
 	category = OPFOR_EQUIPMENT_CATEGORY_LOADOUT
 
 /datum/opposing_force_equipment/loadout/gunman
-	item_type = /obj/item/storage/box/syndie_kit/gunman_outfit
+	item_type = /obj/item/storage/box/edict_kit/gunman_outfit
 
 /datum/opposing_force_equipment/loadout/grenadier
 	item_type = /obj/item/storage/belt/grenade/full
@@ -10,7 +10,7 @@
 	description = "A belt full of grenades and bombs. May gods have mercy upon us if they approve this."
 
 /datum/opposing_force_equipment/loadout/syndicate
-	item_type = /obj/item/storage/box/syndie_kit/insurgent
+	item_type = /obj/item/storage/box/edict_kit/insurgent
 	description = "A box containing a MODSuit, among other clothing, to LARP as your favorite syndicate operative! Does not come with any weapons."
 
 /datum/opposing_force_equipment/loadout/contractor

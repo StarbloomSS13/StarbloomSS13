@@ -159,8 +159,8 @@
 
 			// Syndicate radios can hear all well-known radio channels
 			if (num2text(frequency) in GLOB.reverseradiochannels)
-				for(var/obj/item/radio/syndicate_radios in GLOB.all_radios["[FREQ_SYNDICATE]"])
-					if(syndicate_radios.can_receive(FREQ_SYNDICATE, RADIO_NO_Z_LEVEL_RESTRICTION))
+				for(var/obj/item/radio/syndicate_radios in GLOB.all_radios["[FREQ_EDICT]"])
+					if(syndicate_radios.can_receive(FREQ_EDICT, RADIO_NO_Z_LEVEL_RESTRICTION))
 						radios |= syndicate_radios
 
 		if (TRANSMISSION_RADIO)

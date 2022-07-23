@@ -41,7 +41,7 @@
 		/obj/effect/spawner/random/entertainment/coin = 3,
 		/obj/effect/spawner/random/entertainment/money = 3,
 		/obj/item/dice/d6 = 3,
-		/obj/item/storage/box/syndie_kit/throwing_weapons = 1,
+		/obj/item/storage/box/edict_kit/throwing_weapons = 1,
 		/obj/item/reagent_containers/food/drinks/bottle/vodka/badminka = 1,
 	)
 

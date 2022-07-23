@@ -13,23 +13,23 @@
 	name = "Syndicate Soap"
 	desc = "A sinister-looking surfactant used to clean blood stains to hide murders and prevent DNA analysis. \
 			You can also drop it underfoot to slip people."
-	item = /obj/item/soap/syndie
+	item = /obj/item/soap/edict
 	cost = 1
 	surplus = 50
 	illegal_tech = FALSE
 
 /datum/uplink_item/device_tools/surgerybag
-	name = "Syndicate Surgery Duffel Bag"
-	desc = "The Syndicate surgery duffel bag is a toolkit containing all surgery tools, surgical drapes, \
-			a Syndicate brand MMI, a straitjacket, and a muzzle."
-	item = /obj/item/storage/backpack/duffelbag/syndie/surgery
+	name = "Last Edict Surgery Toolkit"
+	desc = "This sleek, lightweight duffel bag come pre-equipped with a toolkit containing all surgery tools, surgical drapes, \
+			a Edict-Modified MMI, a straitjacket, and a muzzle."
+	item = /obj/item/storage/backpack/duffelbag/edict/surgery
 	cost = 3
 
 /datum/uplink_item/device_tools/encryptionkey
-	name = "Syndicate Encryption Key"
-	desc = "A key that, when inserted into a radio headset, allows you to listen to all station department channels \
-			as well as talk on an encrypted Syndicate channel with other agents that have the same key."
-	item = /obj/item/encryptionkey/syndicate
+	name = "Last Edict Encryption Key"
+	desc = "A key that, when inserted into a radio headset, allows you to listen to all department channels \
+			as well as talk on an encrypted Last Edict channel with other agents that have the same key."
+	item = /obj/item/encryptionkey/lastedict
 	cost = 2
 	surplus = 75
 	restricted = TRUE
@@ -56,7 +56,7 @@
 	name = "Adaptive Cardboard Cutouts"
 	desc = "These cardboard cutouts are coated with a thin material that prevents discoloration and makes the images on them appear more lifelike. \
 			This pack contains three as well as a crayon for changing their appearances."
-	item = /obj/item/storage/box/syndie_kit/cutouts
+	item = /obj/item/storage/box/edict_kit/cutouts
 	cost = 1
 	surplus = 20
 
@@ -134,10 +134,10 @@
 	return source //For log icon
 
 /datum/uplink_item/device_tools/toolbox
-	name = "Full Syndicate Toolbox"
-	desc = "The Syndicate toolbox is a suspicious black and red. It comes loaded with a full tool set including a \
-			multitool and combat gloves that are resistant to shocks and heat."
-	item = /obj/item/storage/toolbox/syndicate
+	name = "Lead-Lined Toolbox"
+	desc = "This luxurious toolbox is a suspicious black and purple. It comes loaded with a full tool set; including a \
+			multitool and combat gloves that are resistant to shocks and heat. Extra hefty for any physical encounters."
+	item = /obj/item/storage/toolbox/edict
 	cost = 1
 	illegal_tech = FALSE
 

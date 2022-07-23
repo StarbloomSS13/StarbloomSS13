@@ -839,6 +839,7 @@
 	worn_icon_state = "card_grey"
 
 	wildcard_slots = WILDCARD_LIMIT_GREY
+	flags_1 = UNPAINTABLE_1
 
 	/// An overlay icon state for when the card is assigned to a name. Usually manifests itself as a little scribble to the right of the job icon.
 	var/assigned_icon_state = "assigned"
@@ -847,6 +848,12 @@
 	var/trim_icon_override
 	/// If this is set, will manually override the icon state for the trim. Intended for admins to VV edit and chameleon ID cards.
 	var/trim_state_override
+	/// If this is set, will manually override the department color for this trim. Intended for admins to VV edit and chameleon ID cards.
+	var/department_color_override
+	/// If this is set, will manually override the department icon state for the trim. Intended for admins to VV edit and chameleon ID cards.
+	var/department_state_override
+	/// If this is set, will manually override the subdepartment color for this trim. Intended for admins to VV edit and chameleon ID cards.
+	var/subdepartment_color_override
 	/// If this is set, will manually override the trim's assignmment as it appears in the crew monitor and elsewhere. Intended for admins to VV edit and chameleon ID cards.
 	var/trim_assignment_override
 	/// If this is set, will manually override the trim shown for SecHUDs. Intended for admins to VV edit and chameleon ID cards.
@@ -861,6 +868,22 @@
 	UnregisterSignal(src, list(COMSIG_ITEM_EQUIPPED, COMSIG_ITEM_DROPPED))
 
 	return ..()
+
+
+/obj/item/card/id/advanced/attackby(obj/item/W, mob/user, params)
+	. = ..()
+	if(istype(W, /obj/item/toy/crayon))
+		var/obj/item/toy/crayon/our_crayon = W
+		if(tgui_alert(usr, "Recolor Department or Subdepartment?", "Recoloring ID...", list("Department", "Subdepartment")) == "Department")
+			if(!do_after(user, 2 SECONDS)) // Doesn't technically require a spraycan's cap to be off but shhh
+				return
+			department_color_override = our_crayon.paint_color
+			balloon_alert(user, "recolored")
+		else if(do_after(user, 1 SECONDS))
+			subdepartment_color_override = our_crayon.paint_color
+			balloon_alert(user, "recolored")
+		update_icon()
+
 
 /obj/item/card/id/advanced/proc/update_intern_status(datum/source, mob/user)
 	SIGNAL_HANDLER
@@ -944,9 +967,23 @@
 	var/trim_icon_file = trim_icon_override ? trim_icon_override : trim?.trim_icon
 	var/trim_icon_state = trim_state_override ? trim_state_override : trim?.trim_state
 
-	if(!trim_icon_file || !trim_icon_state)
+	var/trim_department_color = department_color_override ? department_color_override : trim?.department_color
+	var/trim_department_state = department_state_override ? department_state_override : trim?.department_state
+	var/trim_subdepartment_color = subdepartment_color_override ? subdepartment_color_override : trim?.subdepartment_color
+
+	if(!trim_icon_file || !trim_icon_state || !trim_department_color || !trim_subdepartment_color || !trim_department_state)
 		return
 
+	/// We handle department and subdepartment overlays first, so the job icon is always on top.
+	var/mutable_appearance/department_overlay = mutable_appearance(trim_icon_file, trim_department_state)
+	department_overlay.color = trim_department_color
+	. += department_overlay
+
+	var/mutable_appearance/subdepartment_overlay = mutable_appearance(trim_icon_file, "subdepartment")
+	subdepartment_overlay.color = trim_subdepartment_color
+	. += subdepartment_overlay
+
+	/// Then we handle the job's icon here.
 	. += mutable_appearance(trim_icon_file, trim_icon_state)
 
 /obj/item/card/id/advanced/get_trim_assignment()
@@ -963,12 +1000,19 @@
 /obj/item/card/id/advanced/get_trim_sechud_icon_state()
 	return sechud_icon_state_override || ..()
 
+/obj/item/card/id/advanced/rainbow
+	name = "rainbow identification card"
+	desc = "A rainbow card, promoting fun in a 'business proper' sense!"
+	icon_state = "card_rainbow"
+	worn_icon_state = "card_rainbow"
+
 /obj/item/card/id/advanced/silver
 	name = "silver identification card"
 	desc = "A silver card which shows honour and dedication."
 	icon_state = "card_silver"
 	worn_icon_state = "card_silver"
 	inhand_icon_state = "silver_id"
+	assigned_icon_state = "assigned_silver"
 	wildcard_slots = WILDCARD_LIMIT_SILVER
 
 /datum/id_trim/maint_reaper
@@ -987,6 +1031,7 @@
 	icon_state = "card_gold"
 	worn_icon_state = "card_gold"
 	inhand_icon_state = "gold_id"
+	assigned_icon_state = "assigned_gold"
 	wildcard_slots = WILDCARD_LIMIT_GOLD
 
 /obj/item/card/id/advanced/gold/captains_spare
@@ -1054,12 +1099,13 @@
 	desc = "This card is telling you one thing and one thing alone. The person holding this card is an utter badass."
 	icon_state = "card_black"
 	worn_icon_state = "card_black"
-	assigned_icon_state = "assigned_syndicate"
+	assigned_icon_state = "assigned_edict"
 	wildcard_slots = WILDCARD_LIMIT_GOLD
 
 /obj/item/card/id/advanced/black/deathsquad
 	name = "\improper Death Squad ID"
 	desc = "A Death Squad ID card."
+	assigned_icon_state = "assigned_syndicate"
 	registered_name = JOB_ERT_DEATHSQUAD
 	trim = /datum/id_trim/centcom/deathsquad
 	wildcard_slots = WILDCARD_LIMIT_DEATHSQUAD
@@ -1069,21 +1115,15 @@
 	desc = "An ID straight from the Syndicate."
 	registered_name = "Syndicate"
 	registered_age = null
-	trim = /datum/id_trim/syndicom
+	trim = /datum/id_trim/lastedict
 	wildcard_slots = WILDCARD_LIMIT_SYNDICATE
 
 /obj/item/card/id/advanced/black/syndicate_command/crew_id
-	name = "syndicate ID card"
-	desc = "An ID straight from the Syndicate."
-	registered_name = "Syndicate"
-	trim = /datum/id_trim/syndicom/crew
+	trim = /datum/id_trim/lastedict/robotics
 
 /obj/item/card/id/advanced/black/syndicate_command/captain_id
 	name = "syndicate captain ID card"
-	desc = "An ID straight from the Syndicate."
-	registered_name = "Syndicate"
-	trim = /datum/id_trim/syndicom/captain
-
+	trim = /datum/id_trim/lastedict/pilot
 
 /obj/item/card/id/advanced/black/syndicate_command/captain_id/syndie_spare
 	name = "syndicate captain's spare ID"

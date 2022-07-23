@@ -63,9 +63,9 @@
 /obj/item/implant/radio/mining
 	radio_key = /obj/item/encryptionkey/headset_cargo
 
-/obj/item/implant/radio/syndicate
-	desc = "Are you there God? It's me, Syndicate Comms Agent."
-	radio_key = /obj/item/encryptionkey/syndicate
+/obj/item/implant/radio/edict
+	desc = "Are you there God? It's me, Syndicate Comms Agent." // No
+	radio_key = /obj/item/encryptionkey/lastedict
 	subspace_transmission = TRUE
 
 /obj/item/implant/radio/slime
@@ -87,6 +87,6 @@
 	imp_type = /obj/item/implant/radio
 
 /obj/item/implanter/radio/syndicate
-	name = "implanter (internal syndicate radio)"
-	imp_type = /obj/item/implant/radio/syndicate
+	name = "implanter (internal last edict radio)"
+	imp_type = /obj/item/implant/radio/edict
 

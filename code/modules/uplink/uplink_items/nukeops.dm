@@ -2,7 +2,7 @@
 	name = "Bioterror bundle"
 	desc = "For the madman: Contains a handheld Bioterror chem sprayer, a Bioterror foam grenade, a box of lethal chemicals, a dart pistol, \
 			box of syringes, Donksoft assault rifle, and some riot darts. Remember: Seal suit and equip internals before use."
-	item = /obj/item/storage/backpack/duffelbag/syndie/med/bioterrorbundle
+	item = /obj/item/storage/backpack/duffelbag/edict/med/bioterrorbundle
 	cost = 30 // normally 42
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
@@ -10,14 +10,14 @@
 	name = "Bulldog bundle"
 	desc = "Lean and mean: Optimized for people that want to get up close and personal. Contains the popular \
 			Bulldog shotgun, two 12g buckshot drums, and a pair of Thermal imaging goggles."
-	item = /obj/item/storage/backpack/duffelbag/syndie/bulldogbundle
+	item = /obj/item/storage/backpack/duffelbag/edict/bulldogbundle
 	cost = 13 // normally 16
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/bundles_tc/c20r
 	name = "C-20r bundle"
 	desc = "Old Faithful: The classic C-20r, bundled with two magazines and a (surplus) suppressor at discount price."
-	item = /obj/item/storage/backpack/duffelbag/syndie/c20rbundle
+	item = /obj/item/storage/backpack/duffelbag/edict/c20rbundle
 	cost = 14 // normally 16
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -32,7 +32,7 @@
 	name = "Medical bundle"
 	desc = "The support specialist: Aid your fellow operatives with this medical bundle. Contains a tactical medkit, \
 			a Donksoft LMG, a box of riot darts and a pair of magboots to rescue your friends in no-gravity environments."
-	item = /obj/item/storage/backpack/duffelbag/syndie/med/medicalbundle
+	item = /obj/item/storage/backpack/duffelbag/edict/med/medicalbundle
 	cost = 15 // normally 20
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -50,7 +50,7 @@
 	desc = "For systematic suppression of carbon lifeforms in close quarters: Contains a lethal New Russian backpack spray, Elite hardsuit, \
 			Stechkin APS machine pistol, two incendiary magazines, a minibomb and a stimulant syringe. \
 			Order NOW and comrade Boris will throw in an extra tracksuit."
-	item = /obj/item/storage/backpack/duffelbag/syndie/firestarter
+	item = /obj/item/storage/backpack/duffelbag/edict/firestarter
 	cost = 30
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -242,7 +242,7 @@
 /datum/uplink_item/ammo/shotgun/bag
 	name = "12g Ammo Duffel Bag"
 	desc = "A duffel bag filled with enough 12g ammo to supply an entire team, at a discounted price."
-	item = /obj/item/storage/backpack/duffelbag/syndie/ammo/shotgun
+	item = /obj/item/storage/backpack/duffelbag/edict/ammo/shotgun
 	cost = 12
 
 /datum/uplink_item/ammo/shotgun/buck
@@ -282,7 +282,7 @@
 /datum/uplink_item/ammo/smg/bag
 	name = ".45 Ammo Duffel Bag"
 	desc = "A duffel bag filled with enough .45 ammo to supply an entire team, at a discounted price."
-	item = /obj/item/storage/backpack/duffelbag/syndie/ammo/smg
+	item = /obj/item/storage/backpack/duffelbag/edict/ammo/smg
 	cost = 20 //instead of 27 TC
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -405,7 +405,7 @@
 	name = "Box of Bioterror Syringes"
 	desc = "A box full of preloaded syringes, containing various chemicals that seize up the victim's motor \
 			and broca systems, making it impossible for them to move or speak for some time."
-	item = /obj/item/storage/box/syndie_kit/bioterror
+	item = /obj/item/storage/box/edict_kit/bioterror
 	cost = 6
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
@@ -420,14 +420,14 @@
 /datum/uplink_item/ammo/mech/bag
 	name = "Mech Support Kit Bag"
 	desc = "A duffel bag containing ammo for four full reloads of the scattershotm which is equipped on standard Dark Gygax and Mauler exosuits. Also comes with some support equipment for maintaining the mech, including tools and an inducer."
-	item = /obj/item/storage/backpack/duffelbag/syndie/ammo/mech
+	item = /obj/item/storage/backpack/duffelbag/edict/ammo/mech
 	cost = 4
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/ammo/mauler/bag
 	name = "Mauler Ammo Bag"
 	desc = "A duffel bag containing ammo for three full reloads of the LMG, scattershot carbine, and SRM-8 missile laucher that are equipped on a standard Mauler exosuit."
-	item = /obj/item/storage/backpack/duffelbag/syndie/ammo/mauler
+	item = /obj/item/storage/backpack/duffelbag/edict/ammo/mauler
 	cost = 6
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -466,7 +466,7 @@
 	name = "Buzzkill Grenade Box"
 	desc = "A box with three grenades that release a swarm of angry bees upon activation. These bees indiscriminately attack friend or foe \
 			with random toxins. Courtesy of the BLF and Tiger Cooperative."
-	item = /obj/item/storage/box/syndie_kit/bee_grenades
+	item = /obj/item/storage/box/edict_kit/bee_grenades
 	cost = 15
 	surplus = 35
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
@@ -476,7 +476,7 @@
 	desc = "A primed bio-grenade packed into a compact box. Comes with five Bio Virus Antidote Kit (BVAK) \
 			autoinjectors for rapid application on up to two targets each, a syringe, and a bottle containing \
 			the BVAK solution."
-	item = /obj/item/storage/box/syndie_kit/tuberculosisgrenade
+	item = /obj/item/storage/box/edict_kit/tuberculosisgrenade
 	cost = 12
 	surplus = 35
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
@@ -627,11 +627,11 @@
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/device_tools/magboots
-	name = "Blood-Red Magboots"
-	desc = "A pair of magnetic boots with a Syndicate paintjob that assist with freer movement in space or on-station \
+	name = "Purple Magboots"
+	desc = "A pair of magnetic boots with an Edict paintjob that assist with freer movement in space or on-station \
 			during gravitational generator failures. These reverse-engineered knockoffs of Nanotrasen's \
 			'Advanced Magboots' slow you down in simulated-gravity environments much like the standard issue variety."
-	item = /obj/item/clothing/shoes/magboots/syndie
+	item = /obj/item/clothing/shoes/magboots/edict
 	cost = 2
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
@@ -699,7 +699,7 @@
 	desc = "An implant injected into the body, and later activated either manually or automatically upon death. \
 			The more implants inside of you, the higher the explosive power. \
 			This will permanently destroy your body, however."
-	item = /obj/item/storage/box/syndie_kit/imp_microbomb
+	item = /obj/item/storage/box/edict_kit/imp_microbomb
 	cost = 2
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -707,7 +707,7 @@
 	name = "Macrobomb Implant"
 	desc = "An implant injected into the body, and later activated either manually or automatically upon death. \
 			Upon death, releases a massive explosion that will wipe out everything nearby."
-	item = /obj/item/storage/box/syndie_kit/imp_macrobomb
+	item = /obj/item/storage/box/edict_kit/imp_macrobomb
 	cost = 20
 	purchasable_from = UPLINK_NUKE_OPS
 	restricted = TRUE
@@ -742,7 +742,7 @@
 	dies, all other implant holders recieve a mental message informing them of their teammates' name \
 	and the location of their death. Unlike most implants, these are designed to be implanted \
 	in any creature, biological or mechanical."
-	item = /obj/item/storage/box/syndie_kit/imp_deathrattle
+	item = /obj/item/storage/box/edict_kit/imp_deathrattle
 	cost = 4
 	surplus = 0
 	purchasable_from = UPLINK_NUKE_OPS
@@ -766,7 +766,7 @@
 	desc = "A highly experimental bioterror agent which creates dormant nodules to be etched into the grey matter of the brain. \
 			On death, these nodules take control of the dead body, causing limited revivification, \
 			along with slurred speech, aggression, and the ability to infect others with this agent."
-	item = /obj/item/storage/box/syndie_kit/romerol
+	item = /obj/item/storage/box/edict_kit/romerol
 	cost = 25
 	purchasable_from = UPLINK_CLOWN_OPS|UPLINK_NUKE_OPS
 	cant_discount = TRUE

@@ -561,7 +561,7 @@ GLOBAL_LIST_INIT(cardboard_recipes, list ( \
 		if(use(1))
 			to_chat(user, span_notice("You stamp the cardboard in a sinister way."))
 			if (amount >= 0)
-				new/obj/item/storage/box/syndie_kit(droploc)
+				new/obj/item/storage/box/edict_kit(droploc)
 	else
 		. = ..()
 

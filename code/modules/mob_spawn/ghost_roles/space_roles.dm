@@ -227,7 +227,7 @@
 	back = /obj/item/storage/backpack/satchel/leather
 	head = /obj/item/clothing/head/hos/syndicate
 	mask = /obj/item/clothing/mask/cigarette/cigar/havana
-	ears = /obj/item/radio/headset/syndicate/alt/leader
+	ears = /obj/item/radio/headset/edict/alt/leader
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	id = /obj/item/card/id/advanced/black/syndicate_command/captain_id
 	id_trim = /datum/id_trim/battlecruiser/captain

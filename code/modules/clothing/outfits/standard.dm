@@ -120,7 +120,7 @@
 	id_trim = /datum/id_trim/pirate
 	uniform = /obj/item/clothing/under/costume/pirate
 	suit = /obj/item/clothing/suit/pirate/armored
-	ears = /obj/item/radio/headset/syndicate
+	ears = /obj/item/radio/headset/edict
 	glasses = /obj/item/clothing/glasses/eyepatch
 	head = /obj/item/clothing/head/bandana/armored
 	shoes = /obj/item/clothing/shoes/sneakers/brown
@@ -130,7 +130,7 @@
 
 	var/obj/item/radio/outfit_radio = equipped.ears
 	if(outfit_radio)
-		outfit_radio.set_frequency(FREQ_SYNDICATE)
+		outfit_radio.set_frequency(FREQ_EDICT)
 		outfit_radio.freqlock = TRUE
 
 	var/obj/item/card/id/outfit_id = equipped.wear_id

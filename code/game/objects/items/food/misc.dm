@@ -953,7 +953,7 @@
 	name = "roasted bell pepper"
 	desc = "A blackened, blistered bell pepper. Great for making sauces."
 	icon_state = "roasted_bell_pepper"
-	food_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/vitamin = 5, /datum/reagent/consumable/char = 1)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/vitamin = 5)
 	tastes = list("bell pepper" = 1, "char" = 1)
 	foodtypes = VEGETABLES
 	burns_in_oven = TRUE

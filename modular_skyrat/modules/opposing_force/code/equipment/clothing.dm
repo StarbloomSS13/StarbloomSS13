@@ -47,7 +47,7 @@
 
 /datum/opposing_force_equipment/clothing/chameleon_set
 	name = "Chameleon Kit"
-	item_type = /obj/item/storage/box/syndie_kit/chameleon
+	item_type = /obj/item/storage/box/edict_kit/chameleon
 	description = "A box containing a set of chameleon gear, perfect for disguise and infiltration."
 
 /datum/opposing_force_equipment/clothing/ablative_coat
@@ -73,9 +73,9 @@
 	description = "An advanced version of Nakamura Engineering's classic suit, shining with a white, acid and fire resistant polish."
 
 /datum/opposing_force_equipment/clothing/nukiemod
-	name = "Blood-Red MODsuit"
+	name = "Last Edict MODsuit" // YOU MUST WEAR THE MODSUIT
 	item_type = /obj/item/mod/control/pre_equipped/nuclear
-	description = "A suit designed by Gorlex Marauders, offering armor ruled illegal in most of Spinward Stellar."
+	description = "A modified scrapper modsuit produced by the Last Edict. Offers good armor and basic modules to get the job done."
 
 /datum/opposing_force_equipment/clothing/elitemod
 	name = "Elite MODsuit"

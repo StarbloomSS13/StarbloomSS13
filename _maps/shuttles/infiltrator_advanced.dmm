@@ -59,7 +59,7 @@
 "ai" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light/directional/north,
-/obj/item/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/edict,
 /obj/item/assembly/voice,
 /obj/item/crowbar/red,
 /turf/open/floor/pod/dark,
@@ -83,7 +83,7 @@
 /obj/machinery/light/directional/east,
 /obj/item/stack/cable_coil,
 /obj/item/crowbar/red,
-/obj/item/radio/headset/syndicate/alt,
+/obj/item/radio/headset/edict/alt,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/syndicate/bridge)
 "am" = (
@@ -452,7 +452,7 @@
 /obj/item/storage/toolbox/mechanical{
 	pixel_y = 6
 	},
-/obj/item/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/edict,
 /obj/item/crowbar/red,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/mineral/plastitanium,
@@ -1373,7 +1373,7 @@
 	pixel_x = -4
 	},
 /obj/structure/table/reinforced,
-/obj/item/radio/headset/syndicate/alt{
+/obj/item/radio/headset/edict/alt{
 	pixel_x = 4;
 	pixel_y = 4
 	},
@@ -1466,20 +1466,19 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate/airlock)
 "dj" = (
-/obj/item/grenade/syndieminibomb{
-	pixel_x = 6;
-	pixel_y = 4
-	},
-/obj/item/grenade/syndieminibomb{
-	pixel_x = -4;
-	pixel_y = 4
-	},
 /obj/structure/table/reinforced,
 /obj/item/grenade/c4,
 /obj/item/grenade/c4,
 /obj/item/grenade/c4,
 /obj/item/grenade/c4,
 /obj/item/grenade/c4,
+/obj/item/grenade/edictminibomb{
+	pixel_x = 10;
+	pixel_y = 8
+	},
+/obj/item/grenade/edictminibomb{
+	pixel_x = 10
+	},
 /turf/open/floor/pod/dark,
 /area/shuttle/syndicate/armory)
 "dk" = (

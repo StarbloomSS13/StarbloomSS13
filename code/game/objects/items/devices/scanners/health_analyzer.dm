@@ -293,20 +293,8 @@
 
 		// Species and body temperature
 		var/datum/species/targetspecies = humantarget.dna.species
-		var/mutant = humantarget.dna.check_mutation(/datum/mutation/human/hulk) \
-			|| targetspecies.mutantlungs != initial(targetspecies.mutantlungs) \
-			|| targetspecies.mutantbrain != initial(targetspecies.mutantbrain) \
-			|| targetspecies.mutantheart != initial(targetspecies.mutantheart) \
-			|| targetspecies.mutanteyes != initial(targetspecies.mutanteyes) \
-			|| targetspecies.mutantears != initial(targetspecies.mutantears) \
-			|| targetspecies.mutanthands != initial(targetspecies.mutanthands) \
-			|| targetspecies.mutanttongue != initial(targetspecies.mutanttongue) \
-			|| targetspecies.mutantliver != initial(targetspecies.mutantliver) \
-			|| targetspecies.mutantstomach != initial(targetspecies.mutantstomach) \
-			|| targetspecies.mutantappendix != initial(targetspecies.mutantappendix) \
-			|| targetspecies.flying_species != initial(targetspecies.flying_species)
 
-		render_list += "<span class='info ml-1'>Species: [targetspecies.name][mutant ? "-derived mutant" : ""]</span>\n"
+		render_list += "<span class='info ml-1'>Species: [targetspecies.name]</span>\n"
 		render_list += "<span class='info ml-1'>Core temperature: [round(humantarget.coretemperature-T0C,0.1)] &deg;C ([round(humantarget.coretemperature*1.8-459.67,0.1)] &deg;F)</span>\n"
 	render_list += "<span class='info ml-1'>Body temperature: [round(target.bodytemperature-T0C,0.1)] &deg;C ([round(target.bodytemperature*1.8-459.67,0.1)] &deg;F)</span>\n"
 

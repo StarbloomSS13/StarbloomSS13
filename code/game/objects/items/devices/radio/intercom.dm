@@ -90,8 +90,8 @@
 		if(isnull(position) || !(position.z in levels))
 			return FALSE
 
-	if(freq == FREQ_SYNDICATE)
-		if(!(syndie))
+	if(freq == FREQ_EDICT)
+		if(!(edict))
 			return FALSE//Prevents broadcast of messages over devices lacking the encryption
 
 	return TRUE

@@ -440,3 +440,7 @@ GLOBAL_LIST_INIT(testing_global_profiler, list("_PROFILE_NAME" = "Global"))
 		return "([AREACOORD(T)])"
 	else if(A.loc)
 		return "(UNKNOWN (?, ?, ?))"
+
+/// Logging for lua scripting
+/proc/log_lua(text)
+	WRITE_LOG(GLOB.lua_log, text)

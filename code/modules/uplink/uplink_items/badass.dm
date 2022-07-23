@@ -49,14 +49,14 @@
 /datum/uplink_item/badass/costumes/clown
 	name = "Clown Costume"
 	desc = "Nothing is more terrifying than clowns with fully automatic weaponry."
-	item = /obj/item/storage/backpack/duffelbag/clown/syndie
+	item = /obj/item/storage/backpack/duffelbag/clown/edict
 	purchasable_from = ALL
 	progression_minimum = 70 MINUTES
 
 /datum/uplink_item/badass/costumes/tactical_naptime
 	name = "Sleepy Time Pajama Bundle"
 	desc = "Even soldiers need to get a good nights rest. Comes with blood-red pajamas, a blankie, a hot mug of cocoa and a fuzzy friend."
-	item = /obj/item/storage/box/syndie_kit/sleepytime
+	item = /obj/item/storage/box/edict_kit/sleepytime
 	purchasable_from = ALL
 	progression_minimum = 90 MINUTES
 	cost = 4
@@ -69,7 +69,7 @@
 			Please note that this kit did NOT pass quality control."
 	purchasable_from = ALL
 	progression_minimum = 90 MINUTES
-	item = /obj/item/storage/box/syndie_kit/chameleon/broken
+	item = /obj/item/storage/box/edict_kit/chameleon/broken
 
 /datum/uplink_item/badass/costumes/centcom_official
 	name = "CentCom Official Costume"
@@ -77,4 +77,4 @@
 			Radio headset does not include encryption key. No gun included."
 	purchasable_from = ALL
 	progression_minimum = 110 MINUTES
-	item = /obj/item/storage/box/syndie_kit/centcom_costume
+	item = /obj/item/storage/box/edict_kit/centcom_costume

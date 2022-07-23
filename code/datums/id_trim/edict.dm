@@ -1,18 +1,20 @@
-/// Trim for Syndicate mobs, outfits and corpses.
-/datum/id_trim/syndicom
-	assignment = "Syndicate Overlord"
-	trim_state = "trim_syndicate"
-	sechud_icon_state = SECHUD_SYNDICATE
+/// Trim for Edict mobs, outfits and corpses. Not chameleon.
+/datum/id_trim/lastedict
+	assignment = "Last Edict Operator"
+	trim_state = "trim_edict"
+	department_color = COLOR_EDICT_VIOLET
+	subdepartment_color = COLOR_EDICT_VIOLET
+	sechud_icon_state = SECHUD_EDICT
 	access = list(ACCESS_SYNDICATE)
 
-/// Trim for Syndicate mobs, outfits and corpses.
-/datum/id_trim/syndicom/crew
-	assignment = "Syndicate Operative"
+/// Trim originally meant for forgottenship.dmm / cybersun
+/datum/id_trim/lastedict/robotics
 	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
 
-/// Trim for Syndicate mobs, outfits and corpses.
-/datum/id_trim/syndicom/captain
-	assignment = "Syndicate Ship Captain"
+/// Trim originally meant for forgottenship.dmm / cybersun
+/datum/id_trim/lastedict/pilot
+	assignment = "Last Edict Flightman"
+	trim_state = "trim_captain"
 	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_ROBOTICS)
 
 /// Trim for Syndicate mobs, outfits and corpses.
@@ -33,12 +35,17 @@
 
 /// Trim for Chameleon ID cards. Many outfits, nuke ops and some corpses hold Chameleon ID cards.
 /datum/id_trim/chameleon/operative
-	assignment = "Syndicate Operative"
-	trim_state = "trim_syndicate"
+	assignment = "Last Edict Operative"
+	trim_state = "trim_edict"
+	department_color = COLOR_EDICT_VIOLET
+	subdepartment_color = COLOR_EDICT_VIOLET
 
 /// Trim for Chameleon ID cards. Many outfits, nuke ops and some corpses hold Chameleon ID cards.
 /datum/id_trim/chameleon/operative/clown
 	assignment = "Syndicate Entertainment Operative"
+	trim_state = "trim_clown"
+	department_color = COLOR_SYNDIE_RED
+	subdepartment_color = COLOR_SYNDIE_RED
 
 /// Trim for Chameleon ID cards. Many outfits, nuke ops and some corpses hold Chameleon ID cards.
 /datum/id_trim/chameleon/operative/clown_leader
@@ -47,5 +54,5 @@
 
 /// Trim for Chameleon ID cards. Many outfits, nuke ops and some corpses hold Chameleon ID cards.
 /datum/id_trim/chameleon/operative/nuke_leader
-	assignment = "Syndicate Operative Leader"
+	assignment = "Last Edict Commandant"
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)

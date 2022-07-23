@@ -183,39 +183,39 @@
 	set_model = /obj/item/robot_model/service
 	icon_state = "brobot"
 
-/mob/living/silicon/robot/model/syndicate
-	icon_state = "synd_sec"
+/mob/living/silicon/robot/model/edict
+	icon_state = "edict_sec"
 	faction = list(ROLE_SYNDICATE)
 	bubble_icon = "syndibot"
 	req_access = list(ACCESS_SYNDICATE)
 	lawupdate = FALSE
 	scrambledcodes = TRUE // These are rogue borgs.
 	ionpulse = TRUE
-	var/playstyle_string = "<span class='big bold'>You are a Syndicate assault cyborg!</span><br>\
+	var/playstyle_string = "<span class='big bold'>You are an Edict assault cyborg!</span><br>\
 							<b>You are armed with powerful offensive tools to aid you in your mission: help the operatives secure the nuclear authentication disk. \
 							Your cyborg LMG will slowly produce ammunition from your power supply, and your operative pinpointer will find and locate fellow nuclear operatives. \
 							<i>Help the operatives secure the disk at all costs!</i></b>"
-	set_model = /obj/item/robot_model/syndicate
+	set_model = /obj/item/robot_model/edict
 	cell = /obj/item/stock_parts/cell/hyper
-	radio = /obj/item/radio/borg/syndicate
+	radio = /obj/item/radio/borg/edict
 
-/mob/living/silicon/robot/model/syndicate/proc/show_playstyle()
+/mob/living/silicon/robot/model/edict/proc/show_playstyle()
 	if(playstyle_string)
 		to_chat(src, playstyle_string)
 
-/mob/living/silicon/robot/model/syndicate/medical
-	icon_state = "synd_medical"
-	playstyle_string = "<span class='big bold'>You are a Syndicate medical cyborg!</span><br>\
+/mob/living/silicon/robot/model/edict/medical
+	icon_state = "edict_medical"
+	playstyle_string = "<span class='big bold'>You are a Edict medical cyborg!</span><br>\
 						<b>You are armed with powerful medical tools to aid you in your mission: help the operatives secure the nuclear authentication disk. \
 						Your hypospray will produce Restorative Nanites, a wonder-drug that will heal most types of bodily damages, including clone and brain damage. It also produces morphine for offense. \
 						Your defibrillator paddles can revive operatives through their suits, or can be used on harm intent to shock enemies! \
 						Your energy saw functions as a circular saw, but can be activated to deal more damage, and your operative pinpointer will find and locate fellow nuclear operatives. \
 						<i>Help the operatives secure the disk at all costs!</i></b>"
-	set_model = /obj/item/robot_model/syndicate_medical
+	set_model = /obj/item/robot_model/edict_medical
 
-/mob/living/silicon/robot/model/syndicate/saboteur
-	icon_state = "synd_engi"
-	playstyle_string = "<span class='big bold'>You are a Syndicate saboteur cyborg!</span><br>\
+/mob/living/silicon/robot/model/edict/saboteur
+	icon_state = "edict_engi"
+	playstyle_string = "<span class='big bold'>You are a Edict saboteur cyborg!</span><br>\
 						<b>You are armed with robust engineering tools to aid you in your mission: help the operatives secure the nuclear authentication disk. \
 						Your destination tagger will allow you to stealthily traverse the disposal network across the station \
 						Your welder will allow you to repair the operatives' exosuits, but also yourself and your fellow cyborgs \
@@ -224,6 +224,6 @@
 						<i>Help the operatives secure the disk at all costs!</i></b>"
 	set_model = /obj/item/robot_model/saboteur
 
-/mob/living/silicon/robot/model/syndicate/kiltborg
-	set_model = /obj/item/robot_model/syndicate/kiltborg
+/mob/living/silicon/robot/model/edict/kiltborg
+	set_model = /obj/item/robot_model/edict/kiltborg
 	icon_state = "peace"

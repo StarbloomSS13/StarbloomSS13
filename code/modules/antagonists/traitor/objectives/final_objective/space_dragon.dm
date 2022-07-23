@@ -46,5 +46,5 @@
 			podspawn(list(
 				"target" = get_turf(user),
 				"style" = STYLE_SYNDICATE,
-				"spawn" = /obj/item/storage/box/syndie_kit/space_dragon,
+				"spawn" = /obj/item/storage/box/edict_kit/space_dragon,
 			))
