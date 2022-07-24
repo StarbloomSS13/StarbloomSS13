@@ -1,5 +1,7 @@
+/// Helper fake-span define to produce a more readable yellow than span_yellow.
 #define span_readable_yellow(str) ("<font color = '#c5c900'>" + str + "</font>")
 
+/// An element to add a unique examine to something based on some conditions.
 /datum/element/unique_examine
 	element_flags = ELEMENT_BESPOKE|ELEMENT_DETACH
 	id_arg_index = 2
@@ -14,6 +16,8 @@
 	var/requirements
 	/// If TRUE, those with the detective's skillchip (TRAIT_SEE_ALL_DESCRIPTIONS) will be able to see the description regardless.
 	var/detective_sees_all = TRUE
+	/// A generic title for what we are, generated for things which hint.
+	var/what_are_we = "thing"
 
 /datum/element/unique_examine/Attach(
 	atom/thing,
@@ -50,61 +54,68 @@
 	switch(desc_requirement)
 		if(EXAMINE_CHECK_TRAIT, EXAMINE_CHECK_SKILLCHIP, EXAMINE_CHECK_FACTION, EXAMINE_CHECK_JOB, EXAMINE_CHECK_SPECIES)
 			if(!islist(requirements))
+				// All of the abose checks should have a static list supplied, even if it's one item only.
 				stack_trace("Unique examine element attempted to attach to something without a proper requirements list. (Mode: [desc_requirement])")
 				return ELEMENT_INCOMPATIBLE
 
 		if(EXAMINE_CHECK_DEPARTMENT)
 			if(isnull(requirements))
+				// Department check should have a department bitflag set.
 				stack_trace("Unique examine element attempted to attach to something without departmental bitflag. (Mode: [desc_requirement])")
 				return ELEMENT_INCOMPATIBLE
 
 		if(EXAMINE_CHECK_NONE, EXAMINE_CHECK_MINDSHIELD)
 			if(!isnull(requirements))
+				// Having requirements set is technically fine, as they're never read, but improper.
 				stack_trace("Unique examine element attached to something with requirements passed, even though it does not need any. \
 					This may be a mistake, and should be corrected. (Mode: [desc_requirement])")
 
 	// Having hint = TRUE will register a normal examine signal to give examiners a hint additional info is present
 	if(hint)
-		RegisterSignal(thing, COMSIG_PARENT_EXAMINE, .proc/hint_at)
+		what_are_we = get_identifier(thing)
+		RegisterSignal(thing, COMSIG_PARENT_EXAMINE, .proc/on_examine)
 
-	RegisterSignal(thing, COMSIG_PARENT_EXAMINE_MORE, .proc/examine)
+	RegisterSignal(thing, COMSIG_PARENT_EXAMINE_MORE, .proc/on_examine_more)
 
 /datum/element/unique_examine/Detach(atom/thing)
 	. = ..()
 	UnregisterSignal(thing, list(COMSIG_PARENT_EXAMINE, COMSIG_PARENT_EXAMINE_MORE))
 
-/datum/element/unique_examine/proc/hint_at(datum/source, mob/examiner, list/examine_list)
-	// What IS this thing anyways?
-	var/thing = "thing"
-	if(ismob(source))
-		thing = "creature"
-	if(isanimal(source))
-		thing = "animal"
-	if(ishuman(source))
-		thing = "person"
-	if(isobj(source))
-		thing = "object"
-	if(isgun(source))
-		thing = "weapon"
-	if(isclothing(source))
-		thing = "clothing"
-	if(ismachinery(source))
-		thing = "machine"
-	if(isstructure(source))
-		thing = "structure"
+/// Signal proc for [COMSIG_PARENT_EXAMINE] to hint this thing may have more info.
+/// Does not guarantee the examiner is someone who can actually access said info.
+/datum/element/unique_examine/proc/on_examine(datum/source, mob/examiner, list/examine_list)
+	SIGNAL_HANDLER
 
-	examine_list += span_smallnoticeital("This [thing] might have additional information if you [span_bold("examine closer")].")
+	examine_list += span_smallnoticeital("This [what_are_we] might have additional information if you [span_bold("examine closer")].")
 
-/datum/element/unique_examine/proc/examine(datum/source, mob/examiner, list/examine_list)
+/// Signal proc for [COMSIG_PARENT_EXAMINE_MORE], shows the unique description of the examiner fits the bill.
+/datum/element/unique_examine/proc/on_examine_more(datum/source, mob/examiner, list/examine_list)
 	SIGNAL_HANDLER
 
 	// "You note the following becuase x, y, and z."
-	var/note_message
+	var/note_message = get_note_message(examiner)
 
+	// Check for detective skills at the very end
+	if(detective_sees_all && HAS_TRAIT(examiner, TRAIT_SEE_ALL_DESCRIPTIONS))
+		note_message ||= "Your [span_red("suite of innate detective skills")] has given you insight here:"
+
+	// Ghosts can see all too
+	if(isobserver(examiner) && desc_requirement != EXAMINE_CHECK_NONE)
+		note_message ||= "This item has addition information available to people with a certain [desc_requirement]:"
+
+	// Did not meet any requirements, or detective skills
+	if(isnull(note_message))
+		return
+
+	examine_list += span_info("<br>[note_message]<br>[desc]")
+
+/// Gets what message is displayed to the examiner.
+/// Returns a string, or null if they aren't able to see the special description.
+/datum/element/unique_examine/proc/get_note_message(mob/examiner)
 	switch(desc_requirement)
 		// Will always show if set.
 		if(EXAMINE_CHECK_NONE)
-			note_message = "Upon further scrutiny, you note the following:"
+			return "Upon further scrutiny, you note the following:"
 
 		// Checks for a mindshield present
 		if(EXAMINE_CHECK_MINDSHIELD)
@@ -112,7 +123,7 @@
 				return
 
 			// "Your innate loyalty to the North Star", not quite innate if they get implanted midround but y'know
-			note_message = "Your [span_blue(span_bold("innate loyalty to the North Star"))] has given you insight here:"
+			return "Your [span_blue(span_bold("innate loyalty to the North Star"))] has given you insight here:"
 
 		// Antag datum checks
 		if(EXAMINE_CHECK_ANTAG)
@@ -125,8 +136,8 @@
 					continue
 
 				// "Your status as a secret agent" or "Your status as a traitor"
-				note_message = "Your status as a [span_red(span_bold(special_affiliation || antag_datum.job_rank))] has given you insight here:"
-				break
+				var/antag_title = special_affiliation || antag_datum.job_rank
+				return "Your status as a [span_red(span_bold(antag_title))] has given you insight here:"
 
 		// Job checks by title
 		if(EXAMINE_CHECK_JOB)
@@ -138,19 +149,20 @@
 				return
 
 			// "Your training as a medical doctor"
-			note_message = "Your training as a [span_bold(their_job.title)] has given you insight here:"
+			return "Your training as a [span_bold(their_job.title)] has given you insight here:"
 
 		// Department checks by bitflag
 		if(EXAMINE_CHECK_DEPARTMENT)
 			if(!examiner.mind)
 				return
+
 			// What flag do they have that fulfills our requirements?
 			var/their_department = examiner.mind.assigned_role.departments_bitflags & requirements
 			if(!their_department)
 				return
 
 			// "Your job in the cargo bay"
-			note_message = "Your job [get_department(their_department)] has given you insight here:"
+			return "Your job [get_department(their_department)] has given you insight here:"
 
 		// Standard faction checks
 		if(EXAMINE_CHECK_FACTION)
@@ -160,7 +172,7 @@
 				return
 
 			// "Your affiliation with the Wizard Federation"
-			note_message = "Your affiliation with [get_formatted_faction(pick(required_factions))] has given you insight here:"
+			return "Your affiliation with [get_formatted_faction(pick(required_factions))] has given you insight here:"
 
 		// Skillchip checks
 		if(EXAMINE_CHECK_SKILLCHIP)
@@ -179,16 +191,14 @@
 					continue
 
 				// "Your implanted K33P-TH4T-D15K skillchip"
-				note_message = "Your implanted [span_readable_yellow(span_bold(checked_skillchip.name))] has given you insight here:"
-				break
+				return "Your implanted [span_readable_yellow(span_bold(checked_skillchip.name))] has given you insight here:"
 
 		// Trait checks
 		if(EXAMINE_CHECK_TRAIT)
 			for(var/checked_trait in requirements)
 				if(HAS_TRAIT(examiner, checked_trait))
 					// "A trait you have", kinda meta-y but not sure how else to prhase it
-					note_message = "A [span_readable_yellow(span_bold("trait"))] you have has given you insight here:"
-					break
+					return "A [span_readable_yellow(span_bold("trait"))] you have has given you insight here:"
 
 		// Species checks
 		if(EXAMINE_CHECK_SPECIES)
@@ -200,19 +210,55 @@
 			if(!their_species || !(their_species.type in requirements))
 				return
 
-			note_message = "Being a [span_green(span_bold(their_species.name))] has given you insight here:"
+			return "Being a [span_green(span_bold(their_species.name))] has given you insight here:"
 
-	// Check for detective skills at the very end
-	if(detective_sees_all && HAS_TRAIT(examiner, TRAIT_SEE_ALL_DESCRIPTIONS))
-		note_message ||= "Your [span_red("suite of innate detective skills")] has given you insight here:"
+/// Gets an "identifier" for items which get a hint.
+/datum/element/unique_examine/proc/get_identifier(atom/thing)
+	// What IS this thing anyways? Follows a very loose priority system.
+	// Order matters - lower types should be lower.
 
-	// Did not meet any requirements, or detective skills
-	if(isnull(note_message))
-		return
+	// Mobs
+	if(ishuman(thing))
+		return "person"
+	if(isanimal_or_basicmob(thing))
+		return "animal"
+	if(ismob(thing))
+		return "creature"
 
-	examine_list += span_info("<br>[note_message]<br>[desc]")
+	// Items
+	if(isorgan(thing))
+		return "organ"
+	if(isbodypart(thing))
+		return "limb"
+	if(isgun(thing) || ismelee(thing))
+		return "weapon"
+	if(isclothing(thing))
+		return "clothing"
+	if(isitem(thing))
+		var/obj/item/item_thing = thing
+		if(item_thing.tool_behaviour)
+			return "tool"
+		else
+			return "item"
 
-// Formats some of the more common faction names into a more accurate string.
+	// Machines
+	if(iscomputer(thing))
+		return "computer"
+	if(ismachinery(thing))
+		return "machine"
+
+	// Strucures
+	if(isstructure(thing))
+		return "structure"
+
+	// Any object?
+	if(isobj(thing))
+		return "object"
+
+	// Who knows?
+	return "thing"
+
+/// Formats some of the more common faction names into a more accurate string.
 /datum/element/unique_examine/proc/get_formatted_faction(faction)
 	var/faction_text = faction
 
@@ -244,7 +290,7 @@
 
 	return span_bold(faction_text)
 
-/// Format our department bitflag into a string.
+/// Format a department bitflag into a string.
 /datum/element/unique_examine/proc/get_department(department_bitflag)
 	var/department_text = "on the ship"
 

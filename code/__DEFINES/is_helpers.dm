@@ -190,6 +190,8 @@ GLOBAL_LIST_INIT(turfs_openspace, typecacheof(list(
 
 #define ismachinery(A) (istype(A, /obj/machinery))
 
+#define iscomputer(A) (istype(A, /obj/machinery/computer))
+
 #define isvehicle(A) (istype(A, /obj/vehicle))
 
 #define ismecha(A) (istype(A, /obj/vehicle/sealed/mecha))
@@ -209,6 +211,8 @@ GLOBAL_LIST_INIT(turfs_openspace, typecacheof(list(
 #define isprojectile(A) (istype(A, /obj/projectile))
 
 #define isgun(A) (istype(A, /obj/item/gun))
+
+#define ismelee(A) (istype(A, /obj/item/melee)) // Does not guarantee this is a weapon, oddly
 
 #define is_reagent_container(O) (istype(O, /obj/item/reagent_containers))
 

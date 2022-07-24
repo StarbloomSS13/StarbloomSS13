@@ -20,7 +20,8 @@
 			While offensively effective, it is also dangerous to use in close quarters and shouldn't \
 			be solely relied upon for killing personnel.", \
 		desc_requirement = EXAMINE_CHECK_ANTAG, \
-		requirements = our_boys_in_red)
+		requirements = our_boys_in_red, \
+		hint = FALSE)
 
 /obj/item/grenade/edictminibomb/detonate(mob/living/lanced_by)
 	. = ..()

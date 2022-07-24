@@ -509,12 +509,12 @@
 			not only for storage capacity, but silent and unburdening storage. Additionally, it's been woven \
 			with fireproof fibres for an added layer of protection.", \
 		desc_requirement = EXAMINE_CHECK_ANTAG, \
-		requirements = our_boys_in_red)
+		requirements = our_boys_in_red, \
+		hint = FALSE)
 
 	AddElement(/datum/element/unique_examine, \
 		desc = "It's using The Last Edict's signature palate.", \
-		desc_requirement = EXAMINE_CHECK_MINDSHIELD, \
-		hint = FALSE)
+		desc_requirement = EXAMINE_CHECK_MINDSHIELD)
 
 /obj/item/storage/backpack/duffelbag/edict/ComponentInitialize()
 	. = ..()
