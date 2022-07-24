@@ -137,6 +137,7 @@
 	splint_factor = 0.7
 	burn_cleanliness_bonus = 0.35
 	merge_type = /obj/item/stack/medical/gauze
+	var/gauze_type = /datum/bodypart_aid/gauze //SKYRAT EDIT ADDITION - MEDICAL
 
 // gauze is only relevant for wounds, which are handled in the wounds themselves
 /obj/item/stack/medical/gauze/try_heal(mob/living/M, mob/user, silent)
@@ -204,6 +205,7 @@
 	absorption_rate = 0.075
 	absorption_capacity = 4
 	merge_type = /obj/item/stack/medical/gauze/improvised
+	gauze_type = /datum/bodypart_aid/gauze/improvised //SKYRAT EDIT ADDITION - MEDICAL
 
 	/*
 	The idea is for the following medical devices to work like a hybrid of the old brute packs and tend wounds,

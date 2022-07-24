@@ -585,6 +585,8 @@
 //SKYRAT EDIT ADDITION END
 /// Jumpsuit clothing layer
 #define UNIFORM_LAYER 25
+
+#define BANDAGE_LAYER 24.5
 /// ID card layer (might be deprecated)
 #define ID_LAYER 24
 /// ID card layer
