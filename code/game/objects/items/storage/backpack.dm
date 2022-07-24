@@ -498,11 +498,23 @@
 	inhand_icon_state = "duffel-edictammo"
 	slowdown = 0
 	resistance_flags = FIRE_PROOF
-	examinepp_desc_mindshield = "It's using The Last Edict's signature palate ."
-	examinepp_req_antags = list(ROLE_TRAITOR,ROLE_NUCLEAR_OPERATIVE)
-	examinepp_desc_antag = "Made out in the color scheme of The Last Edict, this bag is specially designed \
-	not only for storage capacity, but silent and unburdening storage. Additionally, it's been woven \
-	with fireproof fibres for an added layer of protection."
+
+/obj/item/storage/backpack/duffelbag/edict/Initialize(mapload)
+	. = ..()
+
+	var/static/list/our_boys_in_red = list(/datum/antagonist/traitor, /datum/antagonist/nukeop)
+
+	AddElement(/datum/element/unique_examine, \
+		desc = "Made out in the color scheme of The Last Edict, this bag is specially designed \
+			not only for storage capacity, but silent and unburdening storage. Additionally, it's been woven \
+			with fireproof fibres for an added layer of protection.", \
+		desc_requirement = EXAMINE_CHECK_ANTAG, \
+		requirements = our_boys_in_red)
+
+	AddElement(/datum/element/unique_examine, \
+		desc = "It's using The Last Edict's signature palate.", \
+		desc_requirement = EXAMINE_CHECK_MINDSHIELD, \
+		hint = FALSE)
 
 /obj/item/storage/backpack/duffelbag/edict/ComponentInitialize()
 	. = ..()
@@ -684,4 +696,3 @@
 	name = "police bag"
 	desc = "A large duffel bag for holding extra police gear."
 	slowdown = 0
-

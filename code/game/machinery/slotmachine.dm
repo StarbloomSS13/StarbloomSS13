@@ -56,6 +56,12 @@
 		coinvalues["[cointype]"] = C.get_item_credit_value()
 		qdel(C) //Sigh
 
+	AddElement(/datum/element/unique_examine, \
+		desc = "Often called 'one armed bandit', 'fruit machine', or just 'slots', \
+			slot machines are of the most common forms of gambling.", \
+		desc_requirement = EXAMINE_CHECK_DEPARTMENT, \
+		requirements = DEPARTMENT_BITFLAG_SERVICE)
+
 /obj/machinery/computer/slot_machine/Destroy()
 	if(balance)
 		give_payout(balance)
