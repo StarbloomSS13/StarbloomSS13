@@ -1,9 +1,6 @@
 /obj/machinery/sheetifier
 	name = "Sheet-meister 2000"
 	desc = "A very sheety machine."
-	examinepp_req_jobs = list(JOB_CHAPLAIN)
-	examinepp_desc_job = "Concerningly, this machine accepts both raw meat \
-	and raw ectoplasm."
 	icon = 'icons/obj/machines/sheetifier.dmi'
 	icon_state = "base_machine"
 	density = TRUE
@@ -18,6 +15,13 @@
 	. = ..()
 
 	AddComponent(/datum/component/material_container, list(/datum/material/meat, /datum/material/hauntium), MINERAL_MATERIAL_AMOUNT * MAX_STACK_SIZE * 2, MATCONTAINER_EXAMINE|BREAKDOWN_FLAGS_SHEETIFIER, typesof(/datum/material/meat) + /datum/material/hauntium, list(/obj/item/food/meat, /obj/item/photo), null, CALLBACK(src, .proc/CanInsertMaterials), CALLBACK(src, .proc/AfterInsertMaterials))
+
+	var/static/list/our_father = list(/datum/job/chaplain)
+
+	AddElement(/datum/element/unique_examine, \
+		desc = "Concerningly, this machine accepts both raw meat and raw ectoplasm.", \
+		desc_requirement = EXAMINE_CHECK_JOB, \
+		requirements = our_father)
 
 /obj/machinery/sheetifier/update_overlays()
 	. = ..()

@@ -1,8 +1,6 @@
 /obj/machinery/ecto_sniffer
 	name = "ectoscopic sniffer"
 	desc = "A highly sensitive parascientific instrument calibrated to detect the slightest whiff of ectoplasm."
-	examinepp_desc = "Any active ghost can leave a layer of ectoplasm on the ectoscopic sniffer, causing a small, audible blip, \
-	indicating they wish to enter the world as a positronic personality."
 	icon = 'icons/obj/machines/research.dmi'
 	icon_state = "ecto_sniffer"
 	density = FALSE
@@ -19,6 +17,11 @@
 /obj/machinery/ecto_sniffer/Initialize(mapload)
 	. = ..()
 	wires = new/datum/wires/ecto_sniffer(src)
+
+	AddElement(/datum/element/unique_examine, \
+		desc = "Any active ghost can leave a layer of ectoplasm on the ectoscopic sniffer, causing a small, \
+			audible blip, indicating they wish to enter the world as a positronic personality.", \
+		desc_requirement = EXAMINE_CHECK_NONE)
 
 /obj/machinery/ecto_sniffer/attack_ghost(mob/user)
 	. = ..()
