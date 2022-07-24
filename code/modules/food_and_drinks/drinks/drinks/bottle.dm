@@ -301,12 +301,31 @@
 	list_reagents = list(/datum/reagent/consumable/ethanol/wine = 100)
 	foodtype = FRUIT | ALCOHOL
 
+/obj/item/reagent_containers/food/drinks/bottle/wine/Initialize(mapload)
+	. = ..()
+
+	var/vintage
+	// Get the vintage for the wine generated within
+	var/datum/reagent/consumable/ethanol/wine/wine_within = locate() in reagents.reagent_list
+	if(wine_within?.data)
+		vintage = wine_within.data["vintage"]
+	// If we didn't find a wine within just generate a new one for the "label"
+	vintage ||= generate_vintage()
+
+	var/static/list/wine_skillchip = list(/obj/item/skillchip/wine_taster)
+
+	AddElement(/datum/element/unique_examine, \
+		desc = "A bottle of fine wine. Classic, refreshing, usually comes with a sharp taste. Looks like its vintage is [vintage].", \
+		desc_requirement = EXAMINE_CHECK_SKILLCHIP, \
+		requirements = wine_skillchip, \
+		hint = FALSE)
+
 /obj/item/reagent_containers/food/drinks/bottle/wine/add_initial_reagents()
 	. = ..()
 	var/wine_info = generate_vintage()
-	var/datum/reagent/consumable/ethanol/wine/W = locate() in reagents.reagent_list
-	if(W)
-		LAZYSET(W.data,"vintage",wine_info)
+	var/datum/reagent/consumable/ethanol/wine/wine_within = locate() in reagents.reagent_list
+	if(wine_within)
+		LAZYSET(wine_within.data, "vintage", wine_info)
 
 /obj/item/reagent_containers/food/drinks/bottle/wine/proc/generate_vintage()
 	return "[GLOB.year_integer + 540] Nanotrasen Light Red"
