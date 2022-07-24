@@ -264,11 +264,14 @@
 	return TRUE
 
 /// Like add_reagent but you can enter a list. Format it like this: list(/datum/reagent/toxin = 10, "beer" = 15)
-/datum/reagents/proc/add_reagent_list(list/list_reagents, list/data=null)
+/datum/reagents/proc/add_reagent_list(list/list_reagents, list/data=null, no_react = FALSE)
 	for(var/r_id in list_reagents)
 		var/amt = list_reagents[r_id]
-		add_reagent(r_id, amt, data)
-
+	//SKYRAT EDIT CHANGE BEGIN
+		add_reagent(r_id, amt, data, no_react = TRUE)
+	if(!no_react)
+		handle_reactions()
+	//SKYRAT EDIT CHANGE END
 
 /// Remove a specific reagent
 /datum/reagents/proc/remove_reagent(reagent, amount, safety = TRUE)//Added a safety check for the trans_id_to

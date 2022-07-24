@@ -115,16 +115,6 @@
 	shave(user, BODY_ZONE_HEAD)//doesnt need to be BODY_ZONE_HEAD specifically, but whatever
 	return BRUTELOSS
 
-/obj/item/razor/proc/shave(mob/living/carbon/human/H, location = BODY_ZONE_PRECISE_MOUTH)
-	if(location == BODY_ZONE_PRECISE_MOUTH)
-		H.facial_hairstyle = "Shaved"
-	else
-		H.hairstyle = "Skinhead"
-
-	H.update_hair()
-	playsound(loc, 'sound/items/welder2.ogg', 20, TRUE)
-
-
 /obj/item/razor/attack(mob/M, mob/living/user)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
