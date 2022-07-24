@@ -271,8 +271,6 @@
 			faction_text = span_red("the Syndicate")
 		if(ROLE_ALIEN)
 			faction_text = span_alien("the alien hivemind")
-		if(ROLE_NINJA)
-			faction_text = span_hypnophrase("the spider clan")
 		if(FACTION_HERETIC)
 			faction_text = span_hypnophrase("the Mansus")
 
