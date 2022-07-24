@@ -74,7 +74,7 @@
 		desc = "All craftsmanship is of the highest quality. \
 			It is decorated with assistant leather and chrome. The object menaces with spikes of energy. \
 			On the item is an image of a space station. The station is exploding.", \
-		desc_requirement = EXAMINE_CHECK_NONE,
+		desc_requirement = EXAMINE_CHECK_NONE, \
 		hint = FALSE)
 
 /obj/item/gun/energy/laser/captain/scattershot

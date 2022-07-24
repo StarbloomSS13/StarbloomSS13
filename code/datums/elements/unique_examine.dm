@@ -98,11 +98,6 @@
 /datum/element/unique_examine/proc/examine(datum/source, mob/examiner, list/examine_list)
 	SIGNAL_HANDLER
 
-	if(detective_sees_all && HAS_TRAIT(examiner, TRAIT_SEE_ALL_DESCRIPTIONS))
-		// "Your suite of innate detective skills", skill chips are magical yes
-		examine_list += span_info("Your [span_red("suite of innate detective skills")] has given you insight here:<br>[special_desc]")
-		return
-
 	// "You note the following becuase x, y, and z."
 	var/note_message
 
@@ -143,25 +138,29 @@
 				return
 
 			// "Your training as a medical doctor"
-			note_message = "Your training as a [span_bold(their_job.name)] has given you insight here:"
+			note_message = "Your training as a [span_bold(their_job.title)] has given you insight here:"
 
 		// Department checks by bitflag
 		if(EXAMINE_CHECK_DEPARTMENT)
 			if(!examiner.mind)
 				return
-			if(!(examiner.mind.assigned_role.departments_bitflags & requirements))
+			// What flag do they have that fulfills our requirements?
+			var/their_department = examiner.mind.assigned_role.departments_bitflags & requirements
+			if(!their_department)
 				return
 
 			// "Your job in the cargo bay"
-			note_message = "Your job [get_department(special_desc_req)] has given you insight here:"
+			note_message = "Your job [get_department(their_department)] has given you insight here:"
 
 		// Standard faction checks
 		if(EXAMINE_CHECK_FACTION)
-			if(!length(requirements & examiner.faction))
+			// What factions do they have that fulfills our requirements?
+			var/list/required_factions = requirements & examiner.faction
+			if(!length(required_factions))
 				return
 
 			// "Your affiliation with the Wizard Federation"
-			note_message = "Your affiliation with [get_formatted_faction(checked_faction)] has given you insight here:"
+			note_message = "Your affiliation with [get_formatted_faction(pick(required_factions))] has given you insight here:"
 
 		// Skillchip checks
 		if(EXAMINE_CHECK_SKILLCHIP)
@@ -185,7 +184,7 @@
 
 		// Trait checks
 		if(EXAMINE_CHECK_TRAIT)
-			for(var/checked_trait in special_desc_req)
+			for(var/checked_trait in requirements)
 				if(HAS_TRAIT(examiner, checked_trait))
 					// "A trait you have", kinda meta-y but not sure how else to prhase it
 					note_message = "A [span_readable_yellow(span_bold("trait"))] you have has given you insight here:"
@@ -203,11 +202,15 @@
 
 			note_message = "Being a [span_green(span_bold(their_species.name))] has given you insight here:"
 
+	// Check for detective skills at the very end
+	if(detective_sees_all && HAS_TRAIT(examiner, TRAIT_SEE_ALL_DESCRIPTIONS))
+		note_message ||= "Your [span_red("suite of innate detective skills")] has given you insight here:"
+
+	// Did not meet any requirements, or detective skills
 	if(isnull(note_message))
-		// Did not meet any requirements
 		return
 
-	examine_list += span_info("[note_message]<br>[special_desc]")
+	examine_list += span_info("<br>[note_message]<br>[desc]")
 
 // Formats some of the more common faction names into a more accurate string.
 /datum/element/unique_examine/proc/get_formatted_faction(faction)
@@ -243,24 +246,24 @@
 
 /// Format our department bitflag into a string.
 /datum/element/unique_examine/proc/get_department(department_bitflag)
-	var/department_text = "on the station"
+	var/department_text = "on the ship"
 
 	if(department_bitflag & DEPARTMENT_BITFLAG_COMMAND)
-		department_text "as a member of command staff"
+		department_text = "as a member of command staff"
 	else if(department_bitflag & DEPARTMENT_BITFLAG_SECURITY)
-		department_text "as a member of security force"
+		department_text = "as a member of security force"
 	else if(department_bitflag & DEPARTMENT_BITFLAG_SERVICE)
-		department_text "in the service department"
+		department_text = "in the service department"
 	else if(department_bitflag & DEPARTMENT_BITFLAG_CARGO)
-		department_text "in the cargo bay"
+		department_text = "in the cargo bay"
 	else if(department_bitflag & DEPARTMENT_BITFLAG_ENGINEERING)
-		department_text "as one of the engineers"
+		department_text = "as one of the engineers"
 	else if(department_bitflag & DEPARTMENT_BITFLAG_SCIENCE)
-		department_text "in the science team"
+		department_text = "in the science team"
 	else if(department_bitflag & DEPARTMENT_BITFLAG_MEDICAL)
-		department_text "in the medical field"
+		department_text = "in the medical field"
 	else if(department_bitflag & DEPARTMENT_BITFLAG_SILICON)
-		department_text "as a silicon unit"
+		department_text = "as a silicon unit"
 
 	return span_bold(department_text)
 
