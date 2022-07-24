@@ -58,7 +58,8 @@
 
 	AddElement(/datum/element/unique_examine, \
 		desc = "Often called 'one armed bandit', 'fruit machine', or just 'slots', \
-			slot machines are of the most common forms of gambling.", \
+			slot machines are one of the most common form of automated gambling. \
+			I hope you're not playing it on duty.", \
 		desc_requirement = EXAMINE_CHECK_DEPARTMENT, \
 		requirements = DEPARTMENT_BITFLAG_SERVICE)
 
