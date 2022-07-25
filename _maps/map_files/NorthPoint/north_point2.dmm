@@ -27740,6 +27740,18 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/noslip,
 /area/science/lower)
+"jdX" = (
+/obj/docking_port/stationary{
+	dheight = 1;
+	dir = 8;
+	dwidth = 12;
+	height = 17;
+	id = "syndicate_ne";
+	name = "northeast of ship";
+	width = 23
+	},
+/turf/open/space/openspace,
+/area/space)
 "jdZ" = (
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /turf/open/floor/iron/dark,
@@ -44498,6 +44510,12 @@
 /obj/effect/turf_decal/stripes/box,
 /turf/open/floor/iron/dark,
 /area/security/range)
+"otM" = (
+/obj/machinery/door/poddoor/shuttledock{
+	checkdir = 1
+	},
+/turf/open/floor/plating,
+/area/faction/survey_wings)
 "otO" = (
 /obj/effect/turf_decal/trimline/green/filled/corner{
 	dir = 4
@@ -52192,6 +52210,16 @@
 /obj/effect/turf_decal/tile/red,
 /turf/open/floor/iron/dark,
 /area/security/office)
+"qXo" = (
+/obj/docking_port/stationary{
+	dwidth = 11;
+	height = 22;
+	id = "whiteship_home";
+	name = "North Star: Survey Wings Hangar";
+	width = 35
+	},
+/turf/open/space/openspace,
+/area/space)
 "qXr" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -66005,7 +66033,7 @@
 /turf/closed/wall,
 /area/engineering/break_room)
 "vKs" = (
-/obj/machinery/door/poddoor/shuttledock,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/pod/light,
 /area/faction/survey_wings)
 "vKt" = (
@@ -291194,9 +291222,9 @@ ucA
 ucA
 ucA
 ucA
-ucA
-ucA
-ucA
+dkh
+dkh
+dkh
 ucA
 ucA
 ucA
@@ -301215,7 +301243,7 @@ ucA
 ucA
 ucA
 ucA
-gBL
+otM
 vKs
 dBb
 nTU
@@ -301472,7 +301500,7 @@ ucA
 ucA
 ucA
 ucA
-gBL
+otM
 vKs
 bjg
 kFF
@@ -301729,7 +301757,7 @@ ucA
 ucA
 ucA
 ucA
-gBL
+otM
 vKs
 nNk
 nSC
@@ -301986,7 +302014,7 @@ ucA
 ucA
 ucA
 ucA
-gBL
+otM
 vKs
 nNk
 dtv
@@ -302243,7 +302271,7 @@ ucA
 ucA
 ucA
 ucA
-gBL
+otM
 vKs
 cVb
 uHv
@@ -302500,7 +302528,7 @@ ucA
 ucA
 ucA
 ucA
-gBL
+otM
 vKs
 wir
 tby
@@ -302757,7 +302785,7 @@ ucA
 ucA
 ucA
 ucA
-gBL
+otM
 vKs
 wir
 nSC
@@ -303014,7 +303042,7 @@ ucA
 ucA
 ucA
 ucA
-gBL
+otM
 vKs
 wir
 nSC
@@ -303271,7 +303299,7 @@ ucA
 ucA
 ucA
 ucA
-gBL
+otM
 vKs
 nNk
 nSC
@@ -303528,7 +303556,7 @@ ucA
 ucA
 ucA
 ucA
-gBL
+otM
 vKs
 mvs
 gid
@@ -303784,8 +303812,8 @@ ucA
 ucA
 ucA
 ucA
-ucA
-gBL
+qXo
+otM
 vKs
 dKf
 nSC
@@ -304042,7 +304070,7 @@ ucA
 ucA
 ucA
 ucA
-gBL
+otM
 vKs
 ckU
 jKi
@@ -304299,7 +304327,7 @@ ucA
 ucA
 ucA
 ucA
-gBL
+otM
 vKs
 dBb
 hKx
@@ -316075,7 +316103,7 @@ ucA
 ucA
 ucA
 ucA
-ucA
+jdX
 ucA
 ucA
 ucA
