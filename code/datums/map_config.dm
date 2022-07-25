@@ -22,7 +22,7 @@
 	var/space_ruin_levels = 7
 	var/space_empty_levels = 1
 
-	var/minetype = "lavaland"
+	var/minetype = "kc13"
 
 	var/allow_custom_shuttles = TRUE
 	var/shuttles = list(
@@ -176,7 +176,7 @@
 			log_world("map_config \"job_changes\" field is missing or invalid!")
 			return
 		job_changes = json["job_changes"]
-	
+
 	if("library_areas" in json)
 		if(!islist(json["library_areas"]))
 			log_world("map_config \"library_areas\" field is missing or invalid!")
