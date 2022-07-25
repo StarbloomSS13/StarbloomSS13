@@ -53,6 +53,7 @@
 	source.toggle_internals(lab_rat)
 	TEST_ASSERT(!lab_rat.internal, "Plasmaman toggle_internals() failed to toggle internals")
 
+/* // DISABLED FOR NOW
 /// Tests to make sure ashwalkers can breath from the lavaland air
 /datum/unit_test/breath_sanity_ashwalker
 
@@ -77,3 +78,4 @@
 	var/turf/open/to_fill = run_loc_floor_bottom_left
 	to_fill.initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	return ..()
+*/ // DISABLED FOR NOW
