@@ -3271,15 +3271,12 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/hallway)
 "aVr" = (
-/obj/structure/table,
-/obj/item/folder/yellow{
-	pixel_x = -7
+/obj/structure/cable,
+/obj/machinery/power/solar_control{
+	dir = 1;
+	id = "portbowsolar";
+	name = "Port Bow Solar Control"
 	},
-/obj/item/folder/yellow,
-/obj/item/folder/yellow{
-	pixel_x = 6
-	},
-/obj/item/storage/briefcase,
 /turf/open/floor/pod/light,
 /area/maintenance/solars/port/aft)
 "aVs" = (
@@ -7909,6 +7906,7 @@
 /area/hallway/floor2/aft)
 "ckl" = (
 /obj/item/toy/snowball,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /turf/open/misc/asteroid/snow/standard_air,
 /area/maintenance/floor2/port/aft)
 "ckn" = (
@@ -23245,6 +23243,13 @@
 /obj/machinery/holopad,
 /turf/open/floor/wood,
 /area/service/dining)
+"hvY" = (
+/obj/effect/spawner/structure/window/hollow/reinforced/middle{
+	dir = 4
+	},
+/obj/structure/girder,
+/turf/open/floor/plating,
+/area/maintenance/solars/port/aft)
 "hwa" = (
 /turf/closed/wall,
 /area/science/breakroom)
@@ -26020,6 +26025,12 @@
 /obj/effect/mapping_helpers/airlock/access/any/service/general,
 /turf/open/floor/iron/dark,
 /area/hallway/secondary/service)
+"img" = (
+/obj/structure/cable,
+/obj/structure/girder,
+/obj/effect/spawner/structure/window/hollow/reinforced/middle,
+/turf/open/floor/plating,
+/area/maintenance/solars/port/aft)
 "imi" = (
 /obj/machinery/portable_atmospherics/canister/anesthetic_mix,
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
@@ -50866,6 +50877,9 @@
 /turf/open/floor/grass,
 /area/security/courtroom)
 "qhE" = (
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 1
+	},
 /turf/open/misc/asteroid/snow/standard_air{
 	icon_state = "snow12"
 	},
@@ -52121,7 +52135,8 @@
 /turf/open/openspace,
 /area/security/brig)
 "qCt" = (
-/obj/effect/spawner/structure/window/reinforced,
+/obj/effect/spawner/structure/window/hollow/reinforced/middle,
+/obj/structure/girder,
 /turf/open/floor/plating,
 /area/maintenance/solars/port/aft)
 "qCH" = (
@@ -190750,7 +190765,7 @@ lQM
 wfq
 lHW
 wfq
-qCt
+hvY
 wfq
 nvU
 lXs
@@ -191265,8 +191280,8 @@ buX
 cWR
 ioQ
 aVr
-qCt
-nvU
+img
+dlU
 hgN
 cCE
 cCE
@@ -191521,9 +191536,9 @@ pxK
 gmQ
 uxt
 wfq
-qCt
+hvY
 wfq
-nvU
+dlU
 wYH
 wYH
 wYH
