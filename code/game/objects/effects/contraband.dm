@@ -448,7 +448,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 
 /obj/structure/sign/poster/contraband/the_big_gas_giant_truth
 	name = "The Big Gas Giant Truth"
-	desc = "Don't believe everything you see on a poster, patriots. All the lizards on the lowder decks don't want to answer this SIMPLE QUESTION: WHERE IS THE GAS MINER MINING FROM?"
+	desc = "Don't believe everything you see on a poster, patriots. All the lizards on the lower decks don't want to answer this SIMPLE QUESTION: WHERE IS THE GAS MINER MINING FROM?"
 	icon_state = "the_big_gas_giant_truth"
 
 /obj/structure/sign/poster/contraband/got_wood
