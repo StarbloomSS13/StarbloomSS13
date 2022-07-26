@@ -18731,10 +18731,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/faction/homeguard)
-"gbz" = (
-/obj/structure/sign/poster/contraband/operative_duffy,
-/turf/closed/wall,
-/area/commons/storage/tools)
 "gbG" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/pod/light,
@@ -30223,11 +30219,10 @@
 /turf/open/floor/plating,
 /area/hallway/floor3/fore)
 "jVG" = (
-/obj/structure/sign/poster/contraband/gorlex_recruitment{
-	desc = "This poster appears to motivate people to join the Last Edict. As if anyone has a choice.";
+/obj/structure/cable,
+/obj/structure/sign/poster/contraband/edict_enlist{
 	pixel_y = 32
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/dark/red/corner,
 /area/faction/last_edict)
 "jVJ" = (
@@ -33738,17 +33733,15 @@
 /turf/open/floor/pod/light,
 /area/maintenance/floor1/port/fore)
 "lcr" = (
-/obj/structure/sign/poster/contraband/syndicate_medical{
-	desc = "This poster celebrates the complete successful revival of an hour-dead, six person mining team by Chiron Biolabs. Written in the corner is a simple message, 'Stay Winning.'";
-	name = "Chiron Biolabs: Life at Any Cost";
-	pixel_y = -32
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/structure/table/reinforced/plastitaniumglass,
 /obj/item/paper/fluff{
 	info = "Note:<br>Pending conflicts relating to the ZH-75 tests, we're going to put<br>mutagenic tests on hold for now until the controversy<br>surrounding the insect incident die down.<br>Look into further tests with ZH-76 and ZH-77.";
 	name = "Chiron Research Note"
+	},
+/obj/structure/sign/poster/contraband/chiron_biolabs{
+	pixel_y = -32
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/faction/chiron_hq)
@@ -34141,11 +34134,6 @@
 /area/medical/storage)
 "liL" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/sign/poster/contraband/syndicate_medical{
-	desc = "This poster celebrates the complete successful revival of an hour-dead, six person mining team by Chiron Biolabs. Written in the corner is a simple message, 'Stay Winning.'";
-	name = "Chiron Biolabs: Life at Any Cost";
-	pixel_y = -32
-	},
 /turf/open/floor/iron,
 /area/maintenance/floor3/starboard/aft)
 "liS" = (
@@ -37571,11 +37559,6 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/sign/poster/contraband/interdyne_gene_clinics{
-	desc = "An advertisement for Chiron Biolabs. 'Become the master of your own body!'";
-	name = "Chiron Biolabs";
-	pixel_y = -32
-	},
 /turf/open/floor/iron/dark/blue/side{
 	dir = 10
 	},
@@ -44063,6 +44046,9 @@
 "olZ" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 2
+	},
+/obj/structure/sign/poster/contraband/grey_tide{
+	pixel_y = 32
 	},
 /turf/open/floor/iron/dark/corner,
 /area/commons/storage/tools)
@@ -56292,11 +56278,6 @@
 /obj/item/stack/medical/suture,
 /obj/item/stack/medical/gauze/twelve,
 /obj/item/stack/medical/bone_gel,
-/obj/structure/sign/poster/contraband/interdyne_gene_clinics{
-	desc = "An advertisement for Chiron Biolabs. 'Become the master of your own body!'";
-	name = "Chiron Biolabs";
-	pixel_y = -32
-	},
 /turf/open/floor/iron/white,
 /area/maintenance/floor3/starboard/aft)
 "sxd" = (
@@ -62116,13 +62097,12 @@
 /turf/open/floor/iron/dark,
 /area/engineering/atmos/pumproom)
 "uvf" = (
-/obj/structure/sign/poster/contraband/gorlex_recruitment{
-	desc = "This poster appears to motivate people to join the Last Edict. As if anyone has a choice.";
-	pixel_y = 32
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/sign/poster/contraband/edict_recruitment{
+	pixel_y = 32
+	},
 /turf/open/floor/iron/dark/red/corner{
 	dir = 8
 	},
@@ -71750,11 +71730,6 @@
 /turf/open/floor/plating/elevatorshaft,
 /area/hallway/floor1/aft)
 "xzM" = (
-/obj/structure/sign/poster/contraband/interdyne_gene_clinics{
-	desc = "An advertisement for Chiron Biolabs, the ship's medical provider.";
-	name = "Chiron Biolabs";
-	pixel_x = -32
-	},
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/structure/chair/comfy/teal{
 	dir = 4
@@ -73853,13 +73828,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/kitchen,
 /area/service/kitchen)
-"ykA" = (
-/obj/structure/sign/poster/contraband/crocin_pool{
-	pixel_x = -32
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/wood/parquet,
-/area/command/heads_quarters/cmo)
 "ykP" = (
 /turf/open/floor/iron,
 /area/service/janitor)
@@ -110537,7 +110505,7 @@ evR
 qzg
 afe
 pRY
-gbz
+gBT
 olZ
 nAu
 kPk
@@ -170180,7 +170148,7 @@ vUq
 vNA
 qSn
 gjA
-ykA
+wti
 oQF
 qnb
 qSn
