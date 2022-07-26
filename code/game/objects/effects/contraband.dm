@@ -443,7 +443,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 /obj/structure/sign/poster/contraband/bountyhunters
 	name = "Bounty Hunters"
 	desc = "A poster glorifying external Bounty Hunting spacers. They're probably not as friendly \
-	in their swashbuckling in their pursuits as this poster would have you beleive."
+	in their swashbuckling pursuits as this poster would have you beleive."
 	icon_state = "bountyhunters"
 
 /obj/structure/sign/poster/contraband/the_big_gas_giant_truth
