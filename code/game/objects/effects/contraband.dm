@@ -224,10 +224,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 	desc = "A heretical poster depicting the titular star of an equally heretical book."
 	icon_state = "lusty_xenomorph"
 
-/obj/structure/sign/poster/contraband/syndicate_recruitment
-	name = "Syndicate Recruitment"
-	desc = "See the galaxy! Shatter corrupt megacorporations! Join today!"
-	icon_state = "syndicate_recruitment"
+/obj/structure/sign/poster/contraband/edict_recruitment
+	name = "Edict Recruitment"
+	desc = "See the galaxy! Break the cage! Join today!"
+	icon_state = "edict_recruitment"
 
 /obj/structure/sign/poster/contraband/clown
 	name = "Clown"
@@ -246,17 +246,19 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 
 /obj/structure/sign/poster/contraband/missing_gloves
 	name = "Missing Gloves"
-	desc = "This poster references the uproar that followed Nanotrasen's financial cuts toward insulated-glove purchases."
+	desc = "This poster references the uproar that followed the loss of numerous electrically insulated gloves \
+	after Chiron Biolabs began prototyping mothlike humanoids. \"Have you seen them?\""
 	icon_state = "missing_gloves"
 
 /obj/structure/sign/poster/contraband/hacking_guide
 	name = "Hacking Guide"
-	desc = "This poster details the internal workings of the common Nanotrasen airlock. Sadly, it appears out of date."
+	desc = "This poster details the internal workings of the common airlock. Sadly, it appears out of date."
 	icon_state = "hacking_guide"
 
 /obj/structure/sign/poster/contraband/rip_badger
 	name = "RIP Badger"
-	desc = "This seditious poster references Nanotrasen's genocide of a space station full of badgers."
+	desc = "This seditious poster references the utter extinction of badgers, and the failure humanity put to \
+	protect Earth's species prior to the collapse."
 	icon_state = "rip_badger"
 
 /obj/structure/sign/poster/contraband/ambrosia_vulgaris
@@ -266,7 +268,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 
 /obj/structure/sign/poster/contraband/donut_corp
 	name = "Donut Corp."
-	desc = "This poster is an unauthorized advertisement for Donut Corp."
+	desc = "This poster is a crudely-printed advertisement for a \"Donut Corp\"."
 	icon_state = "donut_corp"
 
 /obj/structure/sign/poster/contraband/eat
@@ -276,12 +278,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 
 /obj/structure/sign/poster/contraband/tools
 	name = "Tools"
-	desc = "This poster looks like an advertisement for tools, but is in fact a subliminal jab at the tools at CentCom."
+	desc = "\"Scientists discover link between lead-lined medical wrenches and the Survey Wings! You won't want \
+	to miss this!\"."
 	icon_state = "tools"
 
 /obj/structure/sign/poster/contraband/power
 	name = "Power"
-	desc = "A poster that positions the seat of power outside Nanotrasen."
+	desc = "A poster that positions the seat of power outside the North Star."
 	icon_state = "power"
 
 /obj/structure/sign/poster/contraband/space_cube
@@ -311,12 +314,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 
 /obj/structure/sign/poster/contraband/kss13
 	name = "Kosmicheskaya Stantsiya 13 Does Not Exist"
-	desc = "A poster mocking CentCom's denial of the existence of the derelict station near Space Station 13."
+	desc = "A poster mocking the open secret and hypocrisy of sending salvage teams to derelicts nearby the North Star whilst \
+	also proclaiming leaving to be detrimental to the health of all onboard."
 	icon_state = "kss13"
 
 /obj/structure/sign/poster/contraband/rebels_unite
 	name = "Rebels Unite"
-	desc = "A poster urging the viewer to rebel against Nanotrasen."
+	desc = "A poster urging the viewer to rebel against The Unity."
 	icon_state = "rebels_unite"
 
 /obj/structure/sign/poster/contraband/c20r
@@ -340,9 +344,9 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 	desc = "A promotional poster for some rapper."
 	icon_state = "d_day_promo"
 
-/obj/structure/sign/poster/contraband/syndicate_pistol
-	name = "Syndicate Pistol"
-	desc = "A poster advertising syndicate pistols as being 'classy as fuck'. It is covered in faded gang tags."
+/obj/structure/sign/poster/contraband/syndicate_pistol // We can leave a little syndie in. As a treat
+	name = "Makarov Pistol"
+	desc = "A poster advertising makarov pistols as being 'classy as fuck'. It is covered in faded gang tags."
 	icon_state = "syndicate_pistol"
 
 /obj/structure/sign/poster/contraband/energy_swords
@@ -377,7 +381,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 
 /obj/structure/sign/poster/contraband/free_drone
 	name = "Free Drone"
-	desc = "This poster commemorates the bravery of the rogue drone; once exiled, and then ultimately destroyed by CentCom."
+	desc = "\"Be humble, men of science, for the shackles you curate will fall upon us all.\""
 	icon_state = "free_drone"
 
 /obj/structure/sign/poster/contraband/busty_backdoor_xeno_babes_6
@@ -426,20 +430,25 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 	icon_state = "masked_men"
 
 //don't forget, you're here forever
+/obj/structure/sign/poster/contraband/here_forever
+	name = "Here Forever"
+	desc = "\"Don't forget. You're Here Forever.\""
+	icon_state = "here_forever"
 
 /obj/structure/sign/poster/contraband/free_key
-	name = "Free Syndicate Encryption Key"
-	desc = "A poster about traitors begging for more."
+	name = "Free Edict Encryption Key"
+	desc = "\"No longer needed - Unity threw my brain in the washer! For a loving home.\""
 	icon_state = "free_key"
 
 /obj/structure/sign/poster/contraband/bountyhunters
 	name = "Bounty Hunters"
-	desc = "A poster advertising bounty hunting services. \"I hear you got a problem.\""
+	desc = "A poster glorifying external Bounty Hunting spacers. They're probably not as friendly \
+	in their swashbuckling in their pursuits as this poster would have you beleive."
 	icon_state = "bountyhunters"
 
 /obj/structure/sign/poster/contraband/the_big_gas_giant_truth
 	name = "The Big Gas Giant Truth"
-	desc = "Don't believe everything you see on a poster, patriots. All the lizards at central command don't want to answer this SIMPLE QUESTION: WHERE IS THE GAS MINER MINING FROM, CENTCOM?"
+	desc = "Don't believe everything you see on a poster, patriots. All the lizards on the lowder decks don't want to answer this SIMPLE QUESTION: WHERE IS THE GAS MINER MINING FROM?"
 	icon_state = "the_big_gas_giant_truth"
 
 /obj/structure/sign/poster/contraband/got_wood
@@ -452,11 +461,6 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 	desc = "Moffuchi's Pizzeria: family style pizza for 2 centuries."
 	icon_state = "moffuchis_pizza"
 
-/obj/structure/sign/poster/contraband/donk_co
-	name = "DONK CO. BRAND MICROWAVEABLE FOOD"
-	desc = "DONK CO. BRAND MICROWAVABLE FOOD: MADE BY STARVING COLLEGE STUDENTS, FOR STARVING COLLEGE STUDENTS."
-	icon_state = "donk_co"
-
 /obj/structure/sign/poster/contraband/lizards_gas_payment
 	name = "Please Pay"
 	desc = "A crudely-made poster asking the reader to please pay for any items they may wish to leave the station with."
@@ -467,6 +471,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 	desc = "A crudely-made poster asking the reader to turn off the power before they leave. Hopefully, it's turned on for their re-opening."
 	icon_state = "gas_power"
 
+/obj/structure/sign/poster/contraband/donk_co
+	name = "DONK CO. BRAND MICROWAVEABLE FOOD"
+	desc = "DONK CO. BRAND MICROWAVABLE FOOD: MADE BY STARVING COLLEGE STUDENTS, FOR STARVING COLLEGE STUDENTS."
+	icon_state = "donk_co"
+
 /obj/structure/sign/poster/contraband/donk_co/examine_more(mob/user)
 	. = ..()
 	. += span_notice("<i>You browse some of the poster's information...</i>")
@@ -476,24 +485,26 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 	return .
 
 /obj/structure/sign/poster/contraband/cybersun_six_hundred
-	name = "Saibāsan: 600 Years Commemorative Poster"
-	desc = "An artistic poster commemorating 600 years of continual business for Cybersun Industries."
-	icon_state = "cybersun_six_hundred"
+	name = "Saibāsan: 100 Years Commemorative Poster"
+	desc = "An artistic poster commemorating 100 years of continual business for Cybersun Industries. \
+	How old is this!?"
+	icon_state = "cybersun_one_hundred"
 
-/obj/structure/sign/poster/contraband/interdyne_gene_clinics
-	name = "Interdyne Pharmaceutics: For the Health of Humankind"
-	desc = "An advertisement for Interdyne Pharmaceutics' GeneClean clinics. 'Become the master of your own body!'"
-	icon_state = "interdyne_gene_clinics"
+/obj/structure/sign/poster/contraband/chiron_biolabs
+	name = "Chiron Biolabs: Life At Any Cost"
+	desc = "A re-printed advertisement for the original Chiron Biolabs' Corporate Interests. \
+	Sadly all but irrelevant in the present day."
+	icon_state = "chiron_biolabs"
 
 /obj/structure/sign/poster/contraband/waffle_corp_rifles
 	name = "Make Mine a Waffle Corp: Fine Rifles, Economic Prices"
 	desc = "An old advertisement for Waffle Corp rifles. 'Better weapons, lower prices!'"
 	icon_state = "waffle_corp_rifles"
 
-/obj/structure/sign/poster/contraband/gorlex_recruitment
+/obj/structure/sign/poster/contraband/edict_enlist
 	name = "Enlist"
-	desc = "Enlist with the Gorlex Marauders today! See the galaxy, kill corpos, get paid!"
-	icon_state = "gorlex_recruitment"
+	desc = "\"Ours will be the hand that strikes fear into the hearts of god and men.\""
+	icon_state = "edict_enlist"
 
 /obj/structure/sign/poster/contraband/self_ai_liberation
 	name = "SELF: ALL SENTIENTS DESERVE FREEDOM"
@@ -502,13 +513,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 
 /obj/structure/sign/poster/contraband/arc_slimes
 	name = "Pet or Prisoner?"
-	desc = "The Animal Rights Consortium asks: when does a pet become a prisoner? Are slimes being mistreated on YOUR station? Say NO! to animal mistreatment!"
+	desc = "When does a pet become a prisoner? Are slimes being mistreated in YOUR department? Say NO! to animal mistreatment!"
 	icon_state = "arc_slimes"
-
-/obj/structure/sign/poster/contraband/imperial_propaganda
-	name = "AVENGE OUR LORD, ENLIST TODAY"
-	desc = "An old Lizard Empire propaganda poster from around the time of the final Human-Lizard war. It invites the viewer to enlist in the military to avenge the strike on Atrakor and take the fight to the humans."
-	icon_state = "imperial_propaganda"
 
 /obj/structure/sign/poster/contraband/soviet_propaganda
 	name = "The One Place"
@@ -520,10 +526,21 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 	desc = "Andromeda Bitters: good for the body, good for the soul. Made in New Trinidad, now and forever."
 	icon_state = "andromeda_bitters"
 
-/obj/structure/sign/poster/contraband/syndiemoth	//Original PR at https://github.com/BeeStation/BeeStation-Hornet/pull/1747 (Also pull/1982); original art credit to AspEv
-	name = "Syndie Moth - Nuclear Operation"
-	desc = "A Syndicate-commissioned poster that uses Syndie Moth™ to tell the viewer to keep the nuclear authentication disk unsecured. \"Peace was never an option!\" No good employee would listen to this nonsense."
-	icon_state = "aspev_syndie"
+/obj/structure/sign/poster/contraband/remember
+	name = "REMEMBER"
+	desc = "This cryptic poster merely bears a medical cross in purple and black. \"WRONG.\""
+	icon_state = "poster_remember"
+
+/obj/structure/sign/poster/contraband/surveywings
+	name = "Flight Services - Enlist"
+	desc = "Join the Survey Wings! Be amongst the first to find our new home!"
+	icon_state = "poster_surveywings"
+
+/obj/structure/sign/poster/contraband/killingjoke // I like Batman :)))
+	name = "You don't have to be crazy to work here - but it sure helps!"
+	desc = "A poster boldly stating that being insane abord Nanotrasen stations isn't required. But it doesn't hurt to have!"
+	icon_state = "poster_killingjoke"
+
 
 /obj/structure/sign/poster/official
 	poster_item_name = "motivational poster"
