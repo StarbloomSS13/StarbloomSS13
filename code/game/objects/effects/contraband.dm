@@ -563,7 +563,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/random, 32)
 /obj/structure/sign/poster/official/unity_logo
 	name = "\improper Unity logo"
 	desc = "A poster depicting the Unity logo."
-	icon_state = "nanotrasen_logo"
+	icon_state = "unity_logo"
 
 /obj/structure/sign/poster/official/cleanliness
 	name = "Cleanliness"
