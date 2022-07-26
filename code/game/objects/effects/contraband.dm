@@ -557,12 +557,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/random, 32)
 
 /obj/structure/sign/poster/official/here_for_your_safety
 	name = "Here For Your Safety"
-	desc = "A poster glorifying the station's security force."
+	desc = "A poster glorifying the North Star's security force."
 	icon_state = "here_for_your_safety"
 
-/obj/structure/sign/poster/official/nanotrasen_logo
-	name = "\improper Nanotrasen logo"
-	desc = "A poster depicting the Nanotrasen logo."
+/obj/structure/sign/poster/official/unity_logo
+	name = "\improper Unity logo"
+	desc = "A poster depicting the Unity logo."
 	icon_state = "nanotrasen_logo"
 
 /obj/structure/sign/poster/official/cleanliness
@@ -680,25 +680,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/random, 32)
 	desc = "Cohiba Robusto, the classy cigar."
 	icon_state = "cohiba_robusto_ad"
 
-/obj/structure/sign/poster/official/anniversary_vintage_reprint
-	name = "50th Anniversary Vintage Reprint"
-	desc = "A reprint of a poster from 2505, commemorating the 50th Anniversary of Nanoposters Manufacturing, a subsidiary of Nanotrasen."
-	icon_state = "anniversary_vintage_reprint"
-
 /obj/structure/sign/poster/official/fruit_bowl
 	name = "Fruit Bowl"
 	desc = " Simple, yet awe-inspiring."
 	icon_state = "fruit_bowl"
-
-/obj/structure/sign/poster/official/pda_ad
-	name = "PDA Ad"
-	desc = "A poster advertising the latest PDA from Nanotrasen suppliers."
-	icon_state = "pda_ad"
-
-/obj/structure/sign/poster/official/enlist
-	name = "Enlist" // but I thought deathsquad was never acknowledged
-	desc = "Enlist in the Nanotrasen Deathsquadron reserves today!"
-	icon_state = "enlist"
 
 /obj/structure/sign/poster/official/nanomichi_ad
 	name = "Nanomichi Ad"
@@ -722,7 +707,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/random, 32)
 
 /obj/structure/sign/poster/official/no_erp
 	name = "No ERP"
-	desc = "This poster reminds the crew that Eroticism, Rape and Pornography are banned on Nanotrasen stations."
+	desc = "This poster reminds the crew that Eroticism, Rape and Pornography seditious activities \
+	that will all instantly lead to swift, harsh action against participating parties."
 	icon_state = "no_erp"
 
 /obj/structure/sign/poster/official/wtf_is_co2
@@ -737,7 +723,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/random, 32)
 
 /obj/structure/sign/poster/official/there_is_no_gas_giant
 	name = "There Is No Gas Giant"
-	desc = "Nanotrasen has issued posters, like this one, to all stations reminding them that rumours of a gas giant are false."
+	desc = "The lower deck have issued posters, like this one, to all hands reminding them that rumours of a gas giant are false."
 	// And yet people still believe...
 	icon_state = "there_is_no_gas_giant"
 
@@ -754,24 +740,18 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/random, 32)
 /obj/structure/sign/poster/official/plasma_effects/examine_more(mob/user)
 	. = ..()
 	. += span_notice("<i>You browse some of the poster's information...</i>")
-	. += "\t[span_info("Plasma (scientific name Amenthium) is classified by TerraGov as a Grade 1 Health Hazard, and has significant risks to health associated with chronic exposure.")]"
+	. += "\t[span_info("Plasma (scientific name Amenthium) is classified as a Grade 1 Health Hazard, and has significant risks to health associated with chronic exposure.")]"
 	. += "\t[span_info("Plasma is known to cross the blood/brain barrier and bioaccumulate in brain tissue, where it begins to result in degradation of brain function. The mechanism for attack is not yet fully known, and as such no concrete preventative advice is available barring proper use of PPE (gloves + protective jumpsuit + respirator).")]"
 	. += "\t[span_info("In small doses, plasma induces confusion, short-term amnesia, and heightened aggression. These effects persist with continual exposure.")]"
 	. += "\t[span_info("In individuals with chronic exposure, severe effects have been noted. Further heightened aggression, long-term amnesia, Alzheimer's symptoms, schizophrenia, macular degeneration, aneurysms, heightened risk of stroke, and Parkinsons symptoms have all been noted.")]"
-	. += "\t[span_info("It is recommended that all individuals in unprotected contact with raw plasma regularly check with company health officials.")]"
-	. += "\t[span_info("For more information, please check with TerraGov's extranet site on Amenthium: www.terra.gov/health_and_safety/amenthium/, or our internal risk-assessment documents (document numbers #47582-b (Plasma safety data sheets) and #64210 through #64225 (PPE regulations for working with Plasma), available via NanoDoc to all employees).")]"
-	. += "\t[span_info("Nanotrasen: Always looking after your health.")]"
+	. += "\t[span_info("It is recommended that all individuals in unprotected contact with raw plasma regularly check with nearby medical facilities.")]"
 	return .
 
-/obj/structure/sign/poster/official/terragov
-	name = "TerraGov: United for Humanity"
-	desc = "A poster depicting TerraGov's logo and motto, reminding viewers of who's looking out for humankind."
-	icon_state = "terragov"
-
-/obj/structure/sign/poster/official/corporate_perks_vacation
-	name = "Nanotrasen Corporate Perks: Vacation"
-	desc = "This informational poster provides information on some of the prizes available via the NT Corporate Perks program, including a two-week vacation for two on the resort world Idyllus."
-	icon_state = "corporate_perks_vacation"
+/obj/structure/sign/poster/official/vacation
+	name = "Vacation"
+	desc = "North Star crewmen will one day see beaches such as these, when safety is found amongst the stars - \
+	or so the poster proclaims."
+	icon_state = "vacation"
 
 //SafetyMoth Original PR at https://github.com/BeeStation/BeeStation-Hornet/pull/1747 (Also pull/1982)
 //SafetyMoth art credit goes to AspEv
