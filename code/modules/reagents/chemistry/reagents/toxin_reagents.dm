@@ -329,8 +329,6 @@
 	if(istype(exposed_obj, /obj/structure/alien/weeds))
 		var/obj/structure/alien/weeds/alien_weeds = exposed_obj
 		alien_weeds.take_damage(rand(15,35), BRUTE, 0) // Kills alien weeds pretty fast
-	else if(istype(exposed_obj, /obj/structure/glowshroom)) //even a small amount is enough to kill it
-		qdel(exposed_obj)
 	else if(istype(exposed_obj, /obj/structure/spacevine))
 		var/obj/structure/spacevine/SV = exposed_obj
 		SV.on_chem_effect(src)

@@ -76,10 +76,6 @@
 	if(istype(scan_target, /obj/machinery/hydroponics))
 		to_chat(user, scan_tray_stats(scan_target))
 		return TRUE
-	if(istype(scan_target, /obj/structure/glowshroom))
-		var/obj/structure/glowshroom/shroom_plant = scan_target
-		to_chat(user, scan_plant_stats(shroom_plant.myseed))
-		return TRUE
 	if(istype(scan_target, /obj/item/graft))
 		to_chat(user, get_graft_text(scan_target))
 		return TRUE
@@ -108,10 +104,6 @@
 /obj/item/plant_analyzer/proc/do_plant_chem_scan(atom/scan_target, mob/user)
 	if(istype(scan_target, /obj/machinery/hydroponics))
 		to_chat(user, scan_tray_chems(scan_target))
-		return TRUE
-	if(istype(scan_target, /obj/structure/glowshroom))
-		var/obj/structure/glowshroom/shroom_plant = scan_target
-		to_chat(user, scan_plant_chems(shroom_plant.myseed))
 		return TRUE
 	if(istype(scan_target, /obj/item/graft))
 		to_chat(user, get_graft_text(scan_target))
