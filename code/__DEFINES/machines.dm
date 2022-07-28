@@ -210,3 +210,5 @@
 #define TLV_OUTSIDE_WARNING_LIMIT 1
 ///the gas is outside the hazard limit, the air alarm will go into hazard mode
 #define TLV_OUTSIDE_HAZARD_LIMIT 2
+///clicky noises, how much time needed in between clicks on the machine for the sound to play on click again.
+#define CLICKSOUND_INTERVAL (0.1 SECONDS)

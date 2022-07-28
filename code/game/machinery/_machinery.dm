@@ -135,6 +135,10 @@
 	var/market_verb = "Customer"
 	var/payment_department = ACCOUNT_ENG
 
+	var/clickvol = 40	// sound volume played on succesful click
+	var/next_clicksound = 0	// value to compare with world.time for whether to play clicksound according to CLICKSOUND_INTERVAL
+	var/clicksound	// sound played on succesful interface use by a carbon lifeform
+
 	// For storing and overriding ui id
 	var/tgui_id // ID of TGUI interface
 	///Is this machine currently in the atmos machinery queue?
@@ -588,6 +592,7 @@
 /obj/machinery/ui_act(action, list/params)
 	add_fingerprint(usr)
 	update_last_used(usr)
+	play_click_sound()
 	return ..()
 
 /obj/machinery/Topic(href, href_list)
@@ -988,3 +993,12 @@
 	if(isliving(user))
 		last_used_time = world.time
 		last_user_mobtype = user.type
+
+/obj/machinery/proc/play_click_sound(var/custom_clicksound)
+	if((custom_clicksound||clicksound) && world.time > next_clicksound)
+		next_clicksound = world.time + CLICKSOUND_INTERVAL
+		if(custom_clicksound)
+			playsound(src, custom_clicksound, clickvol)
+		else if(clicksound)
+			playsound(src, clicksound, clickvol)
+	return
