@@ -6,6 +6,8 @@
 	worn_icon_state = "healthanalyzer"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	pickup_sound =  'sound/items/handling/device_pickup.ogg'
+	drop_sound = 'sound/items/handling/device_drop.ogg'
 	desc = "A hand-held scanner for analyzing someones gene sequence on the fly. Hold near a DNA console to update the internal database."
 	flags_1 = CONDUCT_1
 	item_flags = NOBLUDGEON
@@ -26,6 +28,7 @@
 		user.visible_message(span_notice("[user] analyzes [M]'s genetic sequence."), \
 							span_notice("You analyze [M]'s genetic sequence."))
 		gene_scan(M, user)
+		playsound(src, 'sound/effects/fastbeep.ogg', 20)
 
 	else
 		user.visible_message(span_notice("[user] fails to analyze [M]'s genetic sequence."), span_warning("[M] has no readable genetic sequence!"))

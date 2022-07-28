@@ -18,6 +18,8 @@
 	inhand_icon_state = "beer" //Generic held-item sprite until unique ones are made.
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
+	pickup_sound =  'sound/items/handling/bottle_pickup.ogg'
+	drop_sound = 'sound/items/handling/bottle_drop.ogg'
 	isGlass = TRUE
 	foodtype = ALCOHOL
 	age_restricted = TRUE // wrryy can't set an init value to see if foodtype contains ALCOHOL so here we go

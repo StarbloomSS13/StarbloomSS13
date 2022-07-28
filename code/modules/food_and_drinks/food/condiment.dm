@@ -93,6 +93,7 @@
 			return
 		var/trans = src.reagents.trans_to(target, amount_per_transfer_from_this, transfered_by = user)
 		to_chat(user, span_notice("You transfer [trans] units of the condiment to [target]."))
+		playsound(src, 'sound/items/glass_transfer.ogg', 50, 1)
 
 /obj/item/reagent_containers/food/condiment/enzyme
 	name = "universal enzyme"

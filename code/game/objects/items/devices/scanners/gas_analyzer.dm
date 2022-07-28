@@ -7,6 +7,8 @@
 	inhand_icon_state = "analyzer"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	pickup_sound =  'sound/items/handling/device_pickup.ogg'
+	drop_sound = 'sound/items/handling/device_drop.ogg'
 	w_class = WEIGHT_CLASS_SMALL
 	flags_1 = CONDUCT_1
 	item_flags = NOBLUDGEON
@@ -125,7 +127,7 @@
 
 /**
  * Outputs a message to the user describing the target's gasmixes.
- * 
+ *
  * Gets called by analyzer_act, which in turn is called by tool_act.
  * Also used in other chat-based gas scans.
  */
@@ -133,7 +135,7 @@
 	var/mixture = target.return_analyzable_air()
 	if(!mixture)
 		return FALSE
-	
+
 	var/icon = target
 	var/message = list()
 	if(!silent && isliving(user))
@@ -157,7 +159,7 @@
 
 		if(total_moles > 0)
 			message += span_notice("Moles: [round(total_moles, 0.01)] mol")
-				
+
 			var/list/cached_gases = air.gases
 			for(var/id in cached_gases)
 				var/gas_concentration = cached_gases[id][MOLES]/total_moles
@@ -167,7 +169,7 @@
 			message += span_notice("Pressure: [round(pressure, 0.01)] kPa")
 		else
 			message += airs.len > 1 ? span_notice("This node is empty!") : span_notice("[target] is empty!")
-		
+
 		gasmix_data += list(gas_mixture_parser(air, mix_name))
 
 	if(istype(tool))

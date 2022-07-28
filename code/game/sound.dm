@@ -219,7 +219,7 @@ distance_multiplier - Can be used to multiply the distance at which the sound is
 			if (SFX_SPARKS)
 				soundin = pick('sound/effects/sparks1.ogg','sound/effects/sparks2.ogg','sound/effects/sparks3.ogg','sound/effects/sparks4.ogg')
 			if (SFX_RUSTLE)
-				soundin = pick('sound/effects/rustle1.ogg','sound/effects/rustle2.ogg','sound/effects/rustle3.ogg','sound/effects/rustle4.ogg','sound/effects/rustle5.ogg')
+				soundin = pick('sound/items/storage/rustle1.ogg','sound/items/storage/rustle2.ogg','sound/items/storage/rustle3.ogg','sound/items/storage/rustle4.ogg','sound/items/storage/rustle5.ogg')
 			if (SFX_BODYFALL)
 				soundin = pick('sound/effects/bodyfall1.ogg','sound/effects/bodyfall2.ogg','sound/effects/bodyfall3.ogg','sound/effects/bodyfall4.ogg')
 			if (SFX_PUNCH)
@@ -272,4 +272,12 @@ distance_multiplier - Can be used to multiply the distance at which the sound is
 				soundin = pick('sound/effects/treechop1.ogg', 'sound/effects/treechop2.ogg', 'sound/effects/treechop3.ogg')
 			if(SFX_ROCK_TAP)
 				soundin = pick('sound/effects/rocktap1.ogg', 'sound/effects/rocktap2.ogg', 'sound/effects/rocktap3.ogg')
+			if(SFX_KEYSTROKE)
+				soundin = pick('sound/machines/keyboard/keypress1.ogg','sound/machines/keyboard/keypress2.ogg','sound/machines/keyboard/keypress3.ogg','sound/machines/keyboard/keypress4.ogg')
+			if(SFX_KEYBOARD)
+				soundin = pick('sound/machines/keyboard/keystroke1.ogg','sound/machines/keyboard/keystroke2.ogg','sound/machines/keyboard/keystroke3.ogg','sound/machines/keyboard/keystroke4.ogg')
+			if(SFX_BUTTON)
+				soundin = pick('sound/machines/button1.ogg','sound/machines/button2.ogg','sound/machines/button3.ogg','sound/machines/button4.ogg')
+			if(SFX_SWITCH)	//stolen from nsv
+				soundin = pick('sound/machines/switch1.ogg','sound/machines/switch2.ogg','sound/machines/switch3.ogg')
 	return soundin

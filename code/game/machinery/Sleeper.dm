@@ -14,6 +14,7 @@
 	obj_flags = NO_BUILD
 	state_open = TRUE
 	circuit = /obj/item/circuitboard/machine/sleeper
+	clicksound = 'sound/machines/pda_button1.ogg'
 
 	var/efficiency = 1
 	var/min_health = -25
@@ -28,6 +29,8 @@
 	var/list/chem_buttons //Used when emagged to scramble which chem is used, eg: mutadone -> morphine
 	var/scrambled_chems = FALSE //Are chem buttons scrambled? used as a warning
 	var/enter_message = "<span class='notice'><b>You feel cool air surround you. You go numb as your senses turn inward.</b></span>"
+	var/open_sound = 'sound/machines/podopen.ogg'
+	var/close_sound = 'sound/machines/podclose.ogg'
 	payment_department = ACCOUNT_MED
 	fair_market_price = 5
 
@@ -76,11 +79,15 @@
 /obj/machinery/sleeper/open_machine()
 	if(!state_open && !panel_open)
 		flick("[initial(icon_state)]-anim", src)
+		if(open_sound)
+			playsound(src, open_sound, 40)
 		..()
 
 /obj/machinery/sleeper/close_machine(mob/user)
 	if((isnull(user) || istype(user)) && state_open && !panel_open)
 		flick("[initial(icon_state)]-anim", src)
+		if(close_sound)
+			playsound(src, close_sound, 40)
 		..(user)
 		var/mob/living/mob_occupant = occupant
 		if(mob_occupant && mob_occupant.stat != DEAD)

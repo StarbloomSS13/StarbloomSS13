@@ -209,12 +209,14 @@
 		return
 	. = ..()
 	add_fingerprint(user)
+	play_click_sound(SFX_BUTTON)
 	alarm(user)
 
 /obj/machinery/firealarm/attack_hand_secondary(mob/user, list/modifiers)
 	if(buildstage != 2)
 		return ..()
 	add_fingerprint(user)
+	play_click_sound(SFX_BUTTON)
 	reset(user)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 

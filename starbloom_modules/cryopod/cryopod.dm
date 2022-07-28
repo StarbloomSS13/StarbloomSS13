@@ -139,6 +139,9 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	var/on_store_message = "has entered long-term storage."
 	var/on_store_name = "Cryogenic Oversight"
 
+	var/open_sound = 'sound/machines/podopen.ogg'
+	var/close_sound = 'sound/machines/podclose.ogg'
+
 	/// Time until despawn when a mob enters a cryopod. You cannot other people in pods unless they're catatonic.
 	var/time_till_despawn = 30 SECONDS
 	/// Cooldown for when it's now safe to try an despawn the player.
@@ -204,6 +207,8 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 
 		COOLDOWN_START(src, despawn_world_time, time_till_despawn)
 	icon_state = close_state
+	if(close_sound)
+		playsound(src, close_sound, 40)
 
 /obj/machinery/cryopod/proc/apply_effects_to_mob(mob/living/carbon/sleepyhead)
 	sleepyhead.SetSleeping(50)
@@ -214,6 +219,8 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	icon_state = open_state
 	density = TRUE
 	name = initial(name)
+	if(open_sound)
+		playsound(src, open_sound, 40)
 
 /obj/machinery/cryopod/container_resist_act(mob/living/user)
 	visible_message("<span class='notice'>[occupant] emerges from [src]!</span>",

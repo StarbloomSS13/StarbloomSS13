@@ -23,6 +23,7 @@
 	fire_sound_volume = 90
 	bolt_wording = "slide"
 	suppressor_x_offset = 4
+	pickup_sound =  'sound/items/handling/gun_pickup.ogg'
 
 /obj/item/gun/ballistic/automatic/pistol/no_mag
 	spawnwithmagazine = FALSE

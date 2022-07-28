@@ -7,6 +7,8 @@
 	inhand_icon_state = "walkietalkie"
 	worn_icon_state = "radio"
 	desc = "A basic handheld radio that communicates with local telecommunication networks."
+	pickup_sound =  'sound/items/handling/device_pickup.ogg'
+	drop_sound = 'sound/items/handling/device_drop.ogg'
 	dog_fashion = /datum/dog_fashion/back
 
 	flags_1 = CONDUCT_1

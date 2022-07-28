@@ -23,7 +23,7 @@
 	storage_component.max_combined_w_class = 40
 	storage_component.max_w_class = WEIGHT_CLASS_NORMAL
 	storage_component.max_items = 5
-	storage_component.rustle_sound = FALSE
+	storage_component.use_sound = FALSE
 	storage_component.set_holdable(drone_builtins)
 
 
