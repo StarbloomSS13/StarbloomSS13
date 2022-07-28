@@ -20,6 +20,7 @@
 	item_flags = NEEDS_PERMIT
 	attack_verb_continuous = list("strikes", "hits", "bashes")
 	attack_verb_simple = list("strike", "hit", "bash")
+	pickup_sound =  'sound/items/handling/gun_pickup.ogg'
 
 	var/gun_flags = NONE
 	var/fire_sound = 'sound/weapons/gun/pistol/shot.ogg'

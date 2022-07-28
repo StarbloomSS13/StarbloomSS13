@@ -26,6 +26,7 @@
 		user.visible_message(span_notice("[user] analyzes [M]'s genetic sequence."), \
 							span_notice("You analyze [M]'s genetic sequence."))
 		gene_scan(M, user)
+		playsound(src, 'sound/effects/fastbeep.ogg', 20)
 
 	else
 		user.visible_message(span_notice("[user] fails to analyze [M]'s genetic sequence."), span_warning("[M] has no readable genetic sequence!"))

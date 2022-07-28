@@ -61,6 +61,8 @@
 	payment_department = ACCOUNT_SRV
 	light_power = 0.5
 	light_range = MINIMUM_USEFUL_LIGHT_RANGE
+	clicksound = 'sound/machines/pda_button1.ogg'
+
 	/// Is the machine active (No sales pitches if off)!
 	var/active = 1
 	///Are we ready to vend?? Is it time??

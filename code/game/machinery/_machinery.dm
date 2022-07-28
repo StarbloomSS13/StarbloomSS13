@@ -592,7 +592,8 @@
 /obj/machinery/ui_act(action, list/params)
 	add_fingerprint(usr)
 	update_last_used(usr)
-	play_click_sound()
+	if(isliving(usr) && in_range(src, usr))
+		play_click_sound()
 	return ..()
 
 /obj/machinery/Topic(href, href_list)

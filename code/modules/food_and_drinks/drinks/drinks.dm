@@ -89,6 +89,7 @@
 		var/refill = reagents.get_master_reagent_id()
 		var/trans = src.reagents.trans_to(target, amount_per_transfer_from_this, transfered_by = user)
 		to_chat(user, span_notice("You transfer [trans] units of the solution to [target]."))
+		playsound(src, 'sound/items/glass_transfer.ogg', 50, 1)
 
 		if(iscyborg(user)) //Cyborg modules that include drinks automatically refill themselves (and only with consumable drinks), but drain the borg's cell
 			if (!ispath(refill, /datum/reagent/consumable))

@@ -25,6 +25,7 @@
 	cartridge_wording = "shell"
 	tac_reloads = FALSE
 	weapon_weight = WEAPON_HEAVY
+	pickup_sound =  'sound/items/handling/shotgun_pickup.ogg'
 
 	pb_knockback = 2
 
@@ -137,6 +138,7 @@
 	semi_auto = TRUE
 	internal_magazine = FALSE
 	tac_reloads = TRUE
+	pickup_sound =  'sound/items/handling/rifle_pickup.ogg'
 
 
 /obj/item/gun/ballistic/shotgun/bulldog/unrestricted

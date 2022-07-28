@@ -10,6 +10,8 @@
 	possible_transfer_amounts = list(5,10,15,25,30)
 	volume = 30
 	fill_icon_thresholds = list(0, 1, 20, 40, 60, 80, 100)
+	drop_sound = 'sound/items/handling/beaker_drop.ogg'
+	pickup_sound =  'sound/items/handling/beaker_pickup.ogg'
 
 /obj/item/reagent_containers/glass/bottle/Initialize(mapload)
 	. = ..()

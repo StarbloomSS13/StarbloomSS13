@@ -178,6 +178,7 @@
 			reagents.total_volume *= rand(5,10) * 0.1 //Not all of it makes contact with the target
 		var/mob/M = target
 		var/R
+		playsound(src, 'sound/items/glass_splash.ogg', 50, 1)
 		target.visible_message(span_danger("[M] is splashed with something!"), \
 						span_userdanger("[M] is splashed with something!"))
 		for(var/datum/reagent/A in reagents.reagent_list)
@@ -197,6 +198,7 @@
 			log_game("[key_name(thrown_by)] splashed (thrown) [english_list(reagents.reagent_list)] on [target] in [AREACOORD(target)].")
 			message_admins("[ADMIN_LOOKUPFLW(thrown_by)] splashed (thrown) [english_list(reagents.reagent_list)] on [target] in [ADMIN_VERBOSEJMP(target)].")
 		visible_message(span_notice("[src] spills its contents all over [target]."))
+		playsound(src, 'sound/items/glass_splash.ogg', 50, 1)
 		reagents.expose(target, TOUCH)
 		if(QDELETED(src))
 			return
