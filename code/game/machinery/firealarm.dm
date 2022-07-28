@@ -209,6 +209,7 @@
 		return
 	. = ..()
 	add_fingerprint(user)
+	play_click_sound(SFX_BUTTON)
 	alarm(user)
 
 /obj/machinery/firealarm/attack_hand_secondary(mob/user, list/modifiers)

@@ -818,9 +818,6 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 		. = COMPONENT_CANCEL_ATTACK_CHAIN
 		return
 
-	if(rustle_sound)
-		playsound(A, SFX_RUSTLE, 50, TRUE, -5)
-
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.l_store == A && !H.get_active_held_item()) //Prevents opening if it's in a pocket.

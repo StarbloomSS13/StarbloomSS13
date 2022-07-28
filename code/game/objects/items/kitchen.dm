@@ -78,8 +78,6 @@
 /obj/item/knife/kitchen
 	name = "kitchen knife"
 	desc = "A general purpose Chef's Knife made by SpaceCook Incorporated. Guaranteed to stay sharp for years to come."
-	pickup_sound =  'sound/items/handling/knife1_pickup.ogg'
-	drop_sound = 'sound/items/handling/knife3_drop.ogg'
 
 /obj/item/knife/plastic
 	name = "plastic knife"
