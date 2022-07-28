@@ -995,7 +995,7 @@
 		last_used_time = world.time
 		last_user_mobtype = user.type
 
-/obj/machinery/proc/play_click_sound(var/custom_clicksound)
+/obj/machinery/proc/play_click_sound(custom_clicksound)
 	if((custom_clicksound||clicksound) && world.time > next_clicksound)
 		next_clicksound = world.time + CLICKSOUND_INTERVAL
 		if(custom_clicksound)
