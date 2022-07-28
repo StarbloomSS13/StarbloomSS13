@@ -5,6 +5,8 @@
 	desc = "A device that automatically inserts an implant, skillchip or organ into the user without the hassle of extensive surgery. \
 		It has a screwdriver slot for removing accidentally added items."
 	icon = 'icons/obj/device.dmi'
+	pickup_sound =  'sound/items/handling/device_pickup.ogg'
+	drop_sound = 'sound/items/handling/device_drop.ogg'
 	icon_state = "autoimplanter"
 	inhand_icon_state = "nothing"
 	w_class = WEIGHT_CLASS_SMALL
