@@ -709,3 +709,6 @@ GLOBAL_LIST_EMPTY(station_turfs)
 
 /turf/proc/TakeTemperature(temp)
 	temperature += temp
+
+/turf/proc/IgniteTurf(power, fire_color = "red")
+	return
