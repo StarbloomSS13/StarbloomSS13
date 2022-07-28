@@ -29300,6 +29300,9 @@
 "jqo" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/light/directional/south,
+/obj/machinery/conveyor_switch/oneway{
+	id = "cargodisposals"
+	},
 /turf/open/floor/iron,
 /area/cargo/sorting)
 "jqv" = (
@@ -44569,7 +44572,7 @@
 /area/faction/unity)
 "nYh" = (
 /obj/machinery/conveyor{
-	id = "cargodisposals";
+	id = s;
 	dir = 4
 	},
 /obj/structure/window/spawner,
