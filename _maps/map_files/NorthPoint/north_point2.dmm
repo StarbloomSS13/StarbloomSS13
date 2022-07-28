@@ -18471,9 +18471,8 @@
 /turf/open/floor/iron/dark,
 /area/engineering/atmos/pumproom)
 "fNg" = (
-/obj/machinery/hydroponics/constructable,
-/turf/open/floor/iron/green,
-/area/service/hydroponics)
+/turf/open/floor/iron/dark/red/side,
+/area/security/brig)
 "fNl" = (
 /obj/structure/flora/ausbushes/sunnybush,
 /obj/structure/flora/ausbushes/fullgrass,
@@ -21609,6 +21608,11 @@
 /obj/effect/turf_decal/stripes/white/line,
 /turf/open/floor/iron/dark/side,
 /area/engineering/storage/tech)
+"gSS" = (
+/turf/open/floor/iron/dark/red/side{
+	dir = 1
+	},
+/area/security/office)
 "gTh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/glass/bottle/ethanol,
@@ -23898,10 +23902,11 @@
 /turf/open/floor/iron/white,
 /area/science)
 "hED" = (
-/turf/open/floor/iron/dark/red/side{
-	dir = 1
-	},
-/area/security/office)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
+/turf/open/floor/iron/dark/red/side,
+/area/security/brig)
 "hEQ" = (
 /obj/structure/filingcabinet,
 /obj/effect/turf_decal/bot_white,
@@ -61405,9 +61410,6 @@
 /obj/structure/sign/poster/contraband/random/directional/north,
 /turf/open/floor/plating,
 /area/medical/abandoned)
-"tDf" = (
-/turf/open/floor/iron/dark/red/side,
-/area/security/brig)
 "tDj" = (
 /obj/machinery/camera/autoname/directional/south,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -62504,11 +62506,9 @@
 /turf/open/floor/iron/white,
 /area/science/research)
 "tUn" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable,
-/turf/open/floor/iron/dark/red/side,
-/area/security/brig)
+/obj/machinery/hydroponics/constructable,
+/turf/open/floor/iron/green,
+/area/service/hydroponics)
 "tUt" = (
 /turf/closed/wall,
 /area/commons/dorms)
@@ -234065,9 +234065,9 @@ nCL
 lSj
 oNs
 grb
-fNg
+tUn
 sWw
-fNg
+tUn
 vcg
 mOh
 rFy
@@ -234322,7 +234322,7 @@ sNq
 rFy
 kHv
 grb
-fNg
+tUn
 sWw
 uiE
 uYg
@@ -234836,9 +234836,9 @@ sNq
 lSj
 qeA
 gAe
-fNg
+tUn
 mZy
-fNg
+tUn
 vcg
 cSf
 rFy
@@ -235093,9 +235093,9 @@ sNq
 rFy
 dPv
 grb
-fNg
+tUn
 mZy
-fNg
+tUn
 vcg
 vyH
 rFy
@@ -235607,13 +235607,13 @@ sNq
 rFy
 qUs
 grb
-fNg
+tUn
 tff
-fNg
+tUn
 vcg
-fNg
+tUn
 grb
-fNg
+tUn
 cZE
 xKJ
 xKJ
@@ -235864,13 +235864,13 @@ tQF
 rFy
 rFy
 grb
-fNg
+tUn
 tff
-fNg
+tUn
 vcg
-fNg
+tUn
 grb
-fNg
+tUn
 mFB
 xKJ
 xKJ
@@ -236125,9 +236125,9 @@ brO
 ruS
 umG
 yhz
-fNg
+tUn
 xmM
-fNg
+tUn
 tuH
 oYb
 nhs
@@ -301667,7 +301667,7 @@ eBy
 sMB
 sMB
 sMB
-hED
+gSS
 akb
 ufI
 nfX
@@ -302952,7 +302952,7 @@ woK
 pnJ
 pnJ
 mDL
-hED
+gSS
 akb
 gJA
 nfX
@@ -307312,7 +307312,7 @@ wrj
 oWR
 hQN
 mMo
-tDf
+fNg
 wrj
 uPd
 fhv
@@ -307569,7 +307569,7 @@ wrj
 wpV
 uFw
 xJo
-tUn
+hED
 cxg
 okJ
 bJF
@@ -307826,7 +307826,7 @@ wrj
 aJc
 hgf
 oRY
-tDf
+fNg
 wrj
 vTj
 fhv
@@ -309369,7 +309369,7 @@ faM
 iuA
 wze
 bTJ
-tUn
+hED
 jze
 jsy
 gRx
@@ -309626,7 +309626,7 @@ sRH
 qIB
 eBO
 cgV
-tDf
+fNg
 fgl
 sfG
 efz
