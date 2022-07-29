@@ -15282,6 +15282,10 @@
 /obj/structure/filingcabinet/medical,
 /turf/open/floor/iron/dark/corner,
 /area/service/lawoffice)
+"eEU" = (
+/obj/machinery/atmospherics/components/unary/bluespace_sender,
+/turf/open/floor/iron,
+/area/engineering/atmos)
 "eFc" = (
 /obj/structure/table,
 /obj/item/assembly/timer{
@@ -19450,6 +19454,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet/blue,
 /area/command/heads_quarters/hop)
+"geI" = (
+/obj/machinery/bluespace_vendor/directional/north,
+/turf/open/floor/iron/dark,
+/area/engineering/atmos)
 "geL" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -40121,9 +40129,10 @@
 /turf/open/floor/iron,
 /area/medical/chemistry)
 "mIL" = (
-/obj/machinery/newscaster/directional/east,
-/turf/open/floor/iron/checker,
-/area/commons/locker)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible,
+/obj/item/radio/intercom/directional/east,
+/turf/open/floor/engine,
+/area/engineering/supermatter/room)
 "mIO" = (
 /obj/structure/ladder,
 /turf/open/floor/catwalk_floor,
@@ -43296,10 +43305,10 @@
 /turf/open/floor/iron/dark,
 /area/hallway/floor2/aft)
 "nFu" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible,
-/obj/item/radio/intercom/directional/east,
-/turf/open/floor/engine,
-/area/engineering/supermatter/room)
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/landmark/start/atmospheric_technician,
+/turf/open/floor/iron/dark/side,
+/area/engineering/atmos)
 "nFA" = (
 /turf/open/floor/iron,
 /area/hallway/secondary/exit/departure_lounge)
@@ -43681,6 +43690,10 @@
 	},
 /turf/open/floor/iron/white,
 /area/medical/surgery/aft)
+"nLz" = (
+/obj/machinery/newscaster/directional/east,
+/turf/open/floor/iron/checker,
+/area/commons/locker)
 "nLF" = (
 /obj/effect/turf_decal/trimline/purple/line,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -117437,9 +117450,9 @@ grC
 gBU
 kEi
 mFZ
-abV
-uht
-gyL
+eEU
+ntj
+nFu
 fZn
 pFO
 wpy
@@ -117694,7 +117707,7 @@ bOI
 gBU
 kEi
 mFZ
-ctt
+abV
 uht
 lza
 dtA
@@ -121810,7 +121823,7 @@ uXx
 ofq
 nLH
 bAE
-gBU
+geI
 rMW
 fWs
 bAE
@@ -126194,7 +126207,7 @@ lXx
 hed
 czt
 vRs
-nFu
+mIL
 eza
 huI
 bWV
@@ -165519,7 +165532,7 @@ bzF
 cod
 cVL
 eac
-mIL
+nLz
 eEQ
 gkq
 hbv
