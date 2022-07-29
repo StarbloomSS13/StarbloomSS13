@@ -1801,7 +1801,6 @@
 /turf/open/floor/plating,
 /area/service/chapel)
 "azQ" = (
-/obj/effect/turf_decal/stripes,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/engine,
@@ -4476,7 +4475,8 @@
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "radshut"
 	},
-/turf/open/floor/engine,
+/obj/effect/turf_decal/stripes,
+/turf/open/floor/plating,
 /area/engineering/supermatter)
 "bkR" = (
 /obj/effect/turf_decal/siding/white,
@@ -29924,7 +29924,7 @@
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "radshut"
 	},
-/turf/open/floor/engine,
+/turf/open/floor/plating,
 /area/engineering/supermatter)
 "jzR" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -33697,7 +33697,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/engineering/supermatter/room)
 "kKE" = (
 /obj/structure/railing{
 	dir = 8
@@ -36903,7 +36903,7 @@
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "radshut"
 	},
-/turf/open/floor/engine,
+/turf/open/floor/plating,
 /area/engineering/supermatter)
 "lKy" = (
 /obj/effect/turf_decal/delivery,
@@ -40129,10 +40129,10 @@
 /turf/open/floor/iron,
 /area/medical/chemistry)
 "mIL" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible,
-/obj/item/radio/intercom/directional/east,
-/turf/open/floor/engine,
-/area/engineering/supermatter/room)
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/landmark/start/atmospheric_technician,
+/turf/open/floor/iron/dark/side,
+/area/engineering/atmos)
 "mIO" = (
 /obj/structure/ladder,
 /turf/open/floor/catwalk_floor,
@@ -43305,10 +43305,9 @@
 /turf/open/floor/iron/dark,
 /area/hallway/floor2/aft)
 "nFu" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/effect/landmark/start/atmospheric_technician,
-/turf/open/floor/iron/dark/side,
-/area/engineering/atmos)
+/obj/machinery/newscaster/directional/east,
+/turf/open/floor/iron/checker,
+/area/commons/locker)
 "nFA" = (
 /turf/open/floor/iron,
 /area/hallway/secondary/exit/departure_lounge)
@@ -43690,10 +43689,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/medical/surgery/aft)
-"nLz" = (
-/obj/machinery/newscaster/directional/east,
-/turf/open/floor/iron/checker,
-/area/commons/locker)
 "nLF" = (
 /obj/effect/turf_decal/trimline/purple/line,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -43727,7 +43722,6 @@
 /turf/open/floor/wood/parquet,
 /area/medical/virology)
 "nMc" = (
-/obj/effect/turf_decal/stripes,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/engine,
 /area/engineering/supermatter)
@@ -58858,7 +58852,6 @@
 /turf/open/floor/pod/light,
 /area/maintenance/floor1/starboard/fore)
 "sLr" = (
-/obj/effect/turf_decal/stripes,
 /obj/structure/cable,
 /turf/open/floor/engine,
 /area/engineering/supermatter)
@@ -61984,7 +61977,7 @@
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "radshut"
 	},
-/turf/open/floor/engine,
+/turf/open/floor/plating,
 /area/engineering/supermatter)
 "tKJ" = (
 /obj/item/storage/toolbox/electrical{
@@ -64920,7 +64913,8 @@
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "radshut"
 	},
-/turf/open/floor/engine,
+/obj/effect/turf_decal/stripes,
+/turf/open/floor/plating,
 /area/engineering/supermatter)
 "uMz" = (
 /obj/effect/turf_decal/siding/wood{
@@ -69381,9 +69375,10 @@
 /turf/open/floor/wood/tile,
 /area/command/heads_quarters/captain)
 "wjk" = (
-/obj/effect/spawner/structure/window/reinforced/plasma,
-/turf/open/floor/plating,
-/area/engineering/main)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible,
+/obj/item/radio/intercom/directional/east,
+/turf/open/floor/engine,
+/area/engineering/supermatter/room)
 "wjm" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
@@ -117452,7 +117447,7 @@ kEi
 mFZ
 eEU
 ntj
-nFu
+mIL
 fZn
 pFO
 wpy
@@ -124146,9 +124141,9 @@ ePz
 ePz
 lbw
 qEF
-wjk
+lUn
 kKw
-wjk
+lUn
 lwo
 bAI
 tCk
@@ -126207,7 +126202,7 @@ lXx
 hed
 czt
 vRs
-mIL
+wjk
 eza
 huI
 bWV
@@ -165532,7 +165527,7 @@ bzF
 cod
 cVL
 eac
-nLz
+nFu
 eEQ
 gkq
 hbv
