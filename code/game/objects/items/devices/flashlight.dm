@@ -18,6 +18,8 @@
 	light_power = 1
 	light_on = FALSE
 	var/on = FALSE
+	var/toggle_on_sound = 'sound/items/flashlight_on.ogg'
+	var/toggle_off_sound = 'sound/items/flashlight_off.ogg'
 
 
 /obj/item/flashlight/Initialize(mapload)
@@ -38,7 +40,7 @@
 
 /obj/item/flashlight/attack_self(mob/user)
 	on = !on
-	playsound(user, on ? 'sound/weapons/magin.ogg' : 'sound/weapons/magout.ogg', 40, TRUE)
+	playsound(user, on ? toggle_on_sound : toggle_off_sound, 40, TRUE)
 	update_brightness(user)
 	update_action_buttons()
 	return 1
@@ -462,6 +464,8 @@
 	grind_results = list(/datum/reagent/phenol = 15, /datum/reagent/hydrogen = 10, /datum/reagent/oxygen = 5) //Meth-in-a-stick
 	/// How many seconds of fuel we have left
 	var/fuel = 0
+	toggle_on_sound = 'sound/effects/glowstick.ogg'
+	toggle_off_sound = 'sound/effects/glowstick.ogg'
 
 
 /obj/item/flashlight/glowstick/Initialize(mapload)

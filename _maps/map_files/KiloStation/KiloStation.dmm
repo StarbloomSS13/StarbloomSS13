@@ -8834,7 +8834,7 @@
 "aXN" = (
 /obj/machinery/igniter/incinerator_ordmix,
 /mob/living/simple_animal/chicken{
-	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0);
+	atmos_requirements = list("min_oxy"=0,"max_oxy"=0,"min_tox"=0,"max_tox"=1,"min_co2"=0,"max_co2"=0,"min_n2"=0,"max_n2"=0);
 	desc = "A timeless classic.";
 	name = "Kentucky"
 	},
@@ -18632,20 +18632,6 @@
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/box,
-/turf/open/floor/iron,
-/area/hallway/primary/aft)
-"cpW" = (
-/obj/effect/turf_decal/tile/red,
-/obj/effect/turf_decal/tile/red{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/structure/sign/poster/official/enlist{
-	pixel_y = -32
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/open/floor/iron,
 /area/hallway/primary/aft)
 "cpX" = (
@@ -55113,7 +55099,6 @@
 /turf/open/floor/plating,
 /area/maintenance/department/crew_quarters/bar)
 "nQy" = (
-/obj/structure/sign/poster/official/pda_ad,
 /turf/closed/wall,
 /area/command/heads_quarters/hop)
 "nQT" = (
@@ -58264,9 +58249,6 @@
 	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
-	},
-/obj/structure/sign/poster/official/anniversary_vintage_reprint{
-	pixel_y = 32
 	},
 /obj/machinery/camera/directional/north{
 	c_tag = "Chemistry North";
@@ -78881,7 +78863,7 @@
 	},
 /obj/item/reagent_containers/food/drinks/bottle/beer{
 	desc = "A station exclusive. Consumption may result in seizures, blindness, drunkenness, or even death.";
-	list_reagents = list(/datum/reagent/consumable/ethanol/thirteenloko = 30);
+	list_reagents = list(/datum/reagent/consumable/ethanol/thirteenloko=30);
 	name = "Kilo-Kocktail";
 	pixel_x = 5;
 	pixel_y = 5
@@ -112434,7 +112416,7 @@ arp
 bBk
 ubr
 chd
-cpW
+cnG
 bFa
 bFa
 bET

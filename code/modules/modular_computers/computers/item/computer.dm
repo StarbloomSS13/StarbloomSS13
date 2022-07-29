@@ -63,6 +63,7 @@
 		soundloop = new(src, enabled)
 	update_appearance()
 
+
 /obj/item/modular_computer/Destroy()
 	wipe_program(forced = TRUE)
 	for(var/datum/computer_file/program/idle as anything in idle_threads)

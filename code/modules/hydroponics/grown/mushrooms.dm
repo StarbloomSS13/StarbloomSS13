@@ -245,32 +245,7 @@
 	name = "glowshroom cluster"
 	desc = "<I>Mycena Bregprox</I>: This species of mushroom glows in the dark."
 	icon_state = "glowshroom"
-	var/effect_path = /obj/structure/glowshroom
 	wine_power = 50
-
-/obj/item/food/grown/mushroom/glowshroom/attack_self(mob/user)
-	if(isspaceturf(user.loc))
-		return FALSE
-	if(!isturf(user.loc))
-		to_chat(user, span_warning("You need more space to plant [src]."))
-		return FALSE
-	var/count = 0
-	var/maxcount = 1
-	for(var/tempdir in GLOB.cardinals)
-		var/turf/closed/wall = get_step(user.loc, tempdir)
-		if(istype(wall))
-			maxcount++
-	for(var/obj/structure/glowshroom/G in user.loc)
-		count++
-	if(count >= maxcount)
-		to_chat(user, span_warning("There are too many shrooms here to plant [src]."))
-		return FALSE
-	new effect_path(user.loc, seed)
-	to_chat(user, span_notice("You plant [src]."))
-	seed = null // We pass our seed to our planted shroom, null it here
-	qdel(src)
-	return TRUE
-
 
 // Glowcap
 /obj/item/seeds/glowshroom/glowcap
@@ -292,7 +267,6 @@
 	name = "glowcap cluster"
 	desc = "<I>Mycena Ruthenia</I>: This species of mushroom glows in the dark, but isn't actually bioluminescent. They're warm to the touch..."
 	icon_state = "glowcap"
-	effect_path = /obj/structure/glowshroom/glowcap
 	tastes = list("glowcap" = 1)
 
 
@@ -317,14 +291,8 @@
 	name = "shadowshroom cluster"
 	desc = "<I>Mycena Umbra</I>: This species of mushroom emits shadow instead of light."
 	icon_state = "shadowshroom"
-	effect_path = /obj/structure/glowshroom/shadowshroom
 	tastes = list("shadow" = 1, "mushroom" = 1)
 	wine_power = 60
-
-/obj/item/food/grown/mushroom/glowshroom/shadowshroom/attack_self(mob/user)
-	. = ..()
-	if(.)
-		investigate_log("was planted by [key_name(user)] at [AREACOORD(user)]", INVESTIGATE_BOTANY)
 
 /obj/item/seeds/odious_puffball
 	name = "pack of odious pullball spores"

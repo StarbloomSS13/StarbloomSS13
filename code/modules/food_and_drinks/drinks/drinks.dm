@@ -8,6 +8,8 @@
 	icon_state = null
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
+	pickup_sound =  'sound/items/handling/bottle_pickup.ogg'
+	drop_sound = 'sound/items/handling/bottle_drop.ogg'
 	reagent_flags = OPENCONTAINER | DUNKABLE
 	var/gulp_size = 5 //This is now officially broken ... need to think of a nice way to fix it.
 	possible_transfer_amounts = list(5,10,15,20,25,30,50)
@@ -89,6 +91,7 @@
 		var/refill = reagents.get_master_reagent_id()
 		var/trans = src.reagents.trans_to(target, amount_per_transfer_from_this, transfered_by = user)
 		to_chat(user, span_notice("You transfer [trans] units of the solution to [target]."))
+		playsound(src, 'sound/items/glass_transfer.ogg', 50, 1)
 
 		if(iscyborg(user)) //Cyborg modules that include drinks automatically refill themselves (and only with consumable drinks), but drain the borg's cell
 			if (!ispath(refill, /datum/reagent/consumable))

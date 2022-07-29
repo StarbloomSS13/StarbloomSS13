@@ -37,24 +37,57 @@
 
 /obj/item/gun/energy/laser/captain
 	name = "antique laser gun"
+	desc = "A heavily modified silver and chrome laser gun, decorated with engravings."
 	icon_state = "caplaser"
 	w_class = WEIGHT_CLASS_NORMAL
 	inhand_icon_state = null
-	desc = "This is an antique laser gun. All craftsmanship is of the highest quality. It is decorated with assistant leather and chrome. The object menaces with spikes of energy. On the item is an image of Space Station 13. The station is exploding."
 	force = 10
 	ammo_x_offset = 3
 	selfcharge = 1
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/hellfire/antique)
 
+/obj/item/gun/energy/laser/captain/Initialize(mapload)
+	. = ..()
+
+	add_unique_lasergun_examine()
+
+/obj/item/gun/energy/laser/captain/proc/add_unique_lasergun_examine()
+	var/static/list/captains = list(
+		/datum/job/captain,
+		// I added every captain job I could find, for thoroughness.
+		// (Even though these roles will likely encounter one, or even exist)
+		/datum/job/battlecruiser_captain,
+		/datum/job/syndicate_cybersun_captain,
+	)
+
+	// Captains of the galaxy
+	AddElement(/datum/element/unique_examine, \
+		desc = "It's tradition amongst captains to modify and maintain a laser gun of their own. \
+			Every captain has their own personal modifications - \
+			this one is modified with a self-recharging cell and hellfire laser rounds.", \
+		desc_requirement = EXAMINE_CHECK_JOB, \
+		requirements = captains)
+
+	// Original dwarf fortress reference from the antique's description
+	AddElement(/datum/element/unique_examine, \
+		desc = "All craftsmanship is of the highest quality. \
+			It is decorated with assistant leather and chrome. The object menaces with spikes of energy. \
+			On the item is an image of a space station. The station is exploding.", \
+		desc_requirement = EXAMINE_CHECK_NONE, \
+		hint = FALSE)
+
 /obj/item/gun/energy/laser/captain/scattershot
 	name = "scatter shot laser rifle"
+	desc = "An industrial-grade heavy-duty laser rifle with a modified laser lens to scatter its shot into multiple smaller lasers. The inner-core can self-charge for theoretically infinite use."
 	icon_state = "lasercannon"
 	w_class = WEIGHT_CLASS_BULKY
 	inhand_icon_state = "laser"
-	desc = "An industrial-grade heavy-duty laser rifle with a modified laser lens to scatter its shot into multiple smaller lasers. The inner-core can self-charge for theoretically infinite use."
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter, /obj/item/ammo_casing/energy/laser)
 	shaded_charge = FALSE
+
+/obj/item/gun/energy/laser/captain/scattershot/add_unique_lasergun_examine()
+	return
 
 /obj/item/gun/energy/laser/cyborg
 	can_charge = FALSE

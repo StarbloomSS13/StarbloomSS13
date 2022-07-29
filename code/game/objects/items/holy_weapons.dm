@@ -239,6 +239,8 @@
 	worn_icon_state = "claymore_gold"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	pickup_sound =  'sound/items/handling/knife2_pickup.ogg'
+	drop_sound = 'sound/items/handling/metal_drop.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
 	block_chance = 30

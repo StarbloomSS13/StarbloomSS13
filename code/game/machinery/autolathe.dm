@@ -1,10 +1,6 @@
 /obj/machinery/autolathe
 	name = "autolathe"
 	desc = "It produces items using iron, glass, plastic and maybe some more."
-	examinepp_req_jobs = list(JOB_SCIENTIST,JOB_STATION_ENGINEER,JOB_ROBOTICIST,JOB_CARGO_TECHNICIAN)
-	examinepp_desc_job = "Science can load up additional designs from the research server into autolathes. \
-	While unable to be connected to the Ore Silo, this is an effective emergency tool for producing items - \
-	or conveinence for the end user."
 	icon_state = "autolathe"
 	density = TRUE
 	use_power = IDLE_POWER_USE
@@ -36,17 +32,17 @@
 	var/hacked_price = 50
 
 	var/list/categories = list(
-							"Tools",
-							"Electronics",
-							"Construction",
-							"T-Comm",
-							"Security",
-							"Machinery",
-							"Medical",
-							"Misc",
-							"Dinnerware",
-							"Imported"
-							)
+		"Tools",
+		"Electronics",
+		"Construction",
+		"T-Comm",
+		"Security",
+		"Machinery",
+		"Medical",
+		"Misc",
+		"Dinnerware",
+		"Imported",
+	)
 
 /obj/machinery/autolathe/Initialize(mapload)
 	AddComponent(/datum/component/material_container, SSmaterials.materials_by_category[MAT_CATEGORY_ITEM_MATERIAL], 0, MATCONTAINER_EXAMINE, _after_insert = CALLBACK(src, .proc/AfterMaterialInsert))
@@ -55,6 +51,21 @@
 	wires = new /datum/wires/autolathe(src)
 	stored_research = new /datum/techweb/specialized/autounlocking/autolathe
 	matching_designs = list()
+
+	// Static list of jobs who get a unique examine hint.
+	var/static/list/already_making_an_autolathe_roundstart = list(
+		/datum/job/scientist,
+		/datum/job/station_engineer,
+		/datum/job/cargo_technician,
+		/datum/job/roboticist,
+	)
+
+	AddElement(/datum/element/unique_examine, \
+		desc = "Science can load up additional designs from the research server into autolathes. \
+			While unable to be connected to the Ore Silo, this is an effective emergency tool for producing items - \
+			or conveinence for the end user.", \
+		desc_requirement = EXAMINE_CHECK_JOB, \
+		requirements = already_making_an_autolathe_roundstart)
 
 /obj/machinery/autolathe/Destroy()
 	QDEL_NULL(wires)

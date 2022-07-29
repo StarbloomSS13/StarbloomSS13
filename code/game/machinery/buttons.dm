@@ -139,6 +139,7 @@
 	if(!initialized_button)
 		setup_device()
 	add_fingerprint(user)
+	play_click_sound(SFX_BUTTON)
 	if(panel_open)
 		if(device || board)
 			if(device)

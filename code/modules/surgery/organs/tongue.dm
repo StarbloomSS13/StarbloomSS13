@@ -33,6 +33,7 @@
 		/datum/language/eurocom,
 		/datum/language/neareastern,
 		/datum/language/kixhosa,
+		/datum/language/mekarunic,
 		/datum/language/machine,
 	))
 

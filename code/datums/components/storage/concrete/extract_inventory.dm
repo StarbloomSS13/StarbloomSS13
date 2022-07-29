@@ -9,7 +9,7 @@
 	can_transfer = FALSE
 	drop_all_on_deconstruct = FALSE
 	locked = TRUE //True in order to prevent messing with the inventory in any way other than the specified ways on reproductive.dm
-	rustle_sound = FALSE
+	use_sound = FALSE
 	silent = TRUE
 	var/obj/item/slimecross/reproductive/parentSlimeExtract
 
