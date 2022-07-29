@@ -18945,13 +18945,12 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 4
 	},
-/obj/machinery/button/door{
-	id = "med_doors";
-	name = "Medbay Door Control";
-	normaldoorcontrol = 1;
-	pixel_y = -26
-	},
 /obj/effect/landmark/start/paramedic,
+/obj/machinery/button/door/directional/south{
+	normaldoorcontrol = 1;
+	id = "med_doors";
+	name = "Medbay Door Control"
+	},
 /turf/open/floor/iron/dark,
 /area/medical/medbay/lobby)
 "fVL" = (
@@ -41892,15 +41891,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
-/obj/machinery/button/door{
-	id = "bridge_blast";
-	name = "Bridge Blast Door Control";
-	pixel_x = 32;
-	req_access = null;
-	req_one_access_txt = "19"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 10
+	},
+/obj/machinery/button/door/directional/east{
+	id = "bridge_blast";
+	name = "Bridge Blast Door Control";
+	req_access_txt = "19"
 	},
 /turf/open/floor/iron/dark,
 /area/command/bridge)
