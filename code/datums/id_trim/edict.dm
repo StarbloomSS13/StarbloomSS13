@@ -39,6 +39,12 @@
 	trim_state = "trim_edict"
 	department_color = COLOR_EDICT_VIOLET
 	subdepartment_color = COLOR_EDICT_VIOLET
+	sechud_icon_state = SECHUD_EDICT
+
+/// Trim for Chameleon ID cards. Many outfits, nuke ops and some corpses hold Chameleon ID cards.
+/datum/id_trim/chameleon/operative/nuke_leader
+	assignment = "Last Edict Commandant"
+	access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
 
 /// Trim for Chameleon ID cards. Many outfits, nuke ops and some corpses hold Chameleon ID cards.
 /datum/id_trim/chameleon/operative/clown
@@ -50,9 +56,4 @@
 /// Trim for Chameleon ID cards. Many outfits, nuke ops and some corpses hold Chameleon ID cards.
 /datum/id_trim/chameleon/operative/clown_leader
 	assignment = "Syndicate Entertainment Operative Leader"
-	access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
-
-/// Trim for Chameleon ID cards. Many outfits, nuke ops and some corpses hold Chameleon ID cards.
-/datum/id_trim/chameleon/operative/nuke_leader
-	assignment = "Last Edict Commandant"
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
