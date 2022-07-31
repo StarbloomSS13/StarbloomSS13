@@ -1624,6 +1624,11 @@
 	icon_state = "warden"
 	toysay = "Seventeen minutes for coughing at an officer!"
 
+/obj/item/toy/figure/model_ship_non_explosive // Yes, I have to specify
+	name = "\improper Model Ship"
+	icon_state = "ship"
+	toysay = "Oxygen offline. Weapons charging. All systems nominal."
+	toysound = 'sound/mecha/nominal.ogg'
 
 /obj/item/toy/dummy
 	name = "ventriloquist dummy"
