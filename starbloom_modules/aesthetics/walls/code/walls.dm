@@ -24,3 +24,10 @@
 	. = ..()
 	var/mutable_appearance/rust = mutable_appearance(icon, "rust")
 	add_overlay(rust)
+
+/obj/structure/falsewall
+	icon = 'icons/turf/walls/wall.dmi'
+	canSmoothWith = list(SMOOTH_GROUP_WALLS, SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_AIRLOCK)
+
+/obj/structure/falsewall/reinforced
+	icon = 'starbloom_modules/aesthetics/walls/icons/reinforced_wall.dmi'
