@@ -3510,6 +3510,9 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
+/obj/machinery/camera/autoname/directional/west{
+	dir = 9
+	},
 /turf/open/floor/iron/white/smooth_edge{
 	dir = 1
 	},
@@ -8472,15 +8475,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard/fore)
-"cqa" = (
-/obj/machinery/shower{
-	pixel_y = 12
-	},
-/obj/machinery/camera/autoname/directional/west{
-	dir = 9
-	},
-/turf/open/floor/catwalk_floor/iron_white,
-/area/cargo/miningdock)
 "cqc" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -14428,7 +14422,6 @@
 /area/maintenance/floor2/starboard/aft)
 "ejA" = (
 /obj/structure/cable,
-/obj/machinery/computer/cargo/request,
 /turf/open/floor/iron/dark,
 /area/command/bridge)
 "ejE" = (
@@ -14530,14 +14523,18 @@
 /turf/open/floor/pod,
 /area/faction/survey_wings)
 "elp" = (
-/obj/structure/rack/shelf,
 /obj/effect/turf_decal/stripes{
 	dir = 4
 	},
-/obj/item/storage/box/beakers,
+/obj/structure/rack/shelf,
 /obj/item/storage/box/petridish{
 	pixel_x = -5;
 	pixel_y = 8
+	},
+/obj/item/storage/box/beakers,
+/obj/item/storage/box/gloves{
+	pixel_x = 5;
+	pixel_y = -8
 	},
 /turf/open/floor/plating,
 /area/science/cytology)
@@ -30938,7 +30935,6 @@
 /turf/open/floor/catwalk_floor,
 /area/hallway/floor3/fore)
 "jEc" = (
-/obj/machinery/door/airlock/highsecurity,
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -30946,6 +30942,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
+	},
+/obj/machinery/door/airlock/highsecurity{
+	id_tag = "mine_bhz_lock";
+	name = "Biohazard Decontamination"
 	},
 /turf/open/floor/iron/white/textured_large,
 /area/cargo/miningdock)
@@ -31725,10 +31725,10 @@
 /obj/structure/chair/sofa/bench/right{
 	dir = 8
 	},
-/obj/structure/sign/poster/official/here_for_your_safety{
+/obj/effect/turf_decal/tile/yellow,
+/obj/structure/sign/warning/biohazard{
 	pixel_x = 32
 	},
-/obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/iron/white,
 /area/cargo/miningdock)
 "jPR" = (
@@ -32464,7 +32464,10 @@
 /turf/open/floor/iron/large,
 /area/science/robotics/lab)
 "kbM" = (
-/obj/machinery/door/airlock/highsecurity,
+/obj/machinery/door/airlock/highsecurity{
+	id_tag = "mine_bhz_lock";
+	name = "Biohazard Decontamination"
+	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining,
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/any/science/general,
@@ -42164,6 +42167,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark/textured_corner,
 /area/cargo/scrapbeacon)
+"mVL" = (
+/obj/effect/spawner/structure/window/hollow/reinforced/middle{
+	dir = 4
+	},
+/obj/structure/girder/reinforced,
+/turf/open/floor/plating,
+/area/cargo/miningdock)
 "mVP" = (
 /obj/item/toy/beach_ball/holoball,
 /turf/open/floor/pod/light,
@@ -44444,7 +44454,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/door/airlock/hatch{
-	name = "Abandonned Theatre"
+	name = "Abandoned Theatre"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/abandoned,
@@ -48168,6 +48178,16 @@
 	},
 /turf/open/floor/iron/white,
 /area/science/research)
+"oIi" = (
+/obj/machinery/door/airlock{
+	id_tag = "miningdorm3";
+	name = "Room 3"
+	},
+/obj/effect/turf_decal/siding/wood,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/wood,
+/area/cargo/miningdock)
 "oIj" = (
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/pod/light,
@@ -49249,16 +49269,23 @@
 "oZV" = (
 /obj/machinery/button/crematorium{
 	id = "crematoriummining";
-	pixel_x = -5;
-	pixel_y = -26
+	pixel_y = -39
 	},
 /obj/machinery/button/door/directional/south{
 	id = "minecremshutter";
-	pixel_x = 5
+	name = "Cremation Shutter";
+	pixel_x = 6
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/button/door/directional/south{
+	id = "mine_bhz_lock";
+	name = "Biohazard Lockdown";
+	normaldoorcontrol = 1;
+	pixel_x = -6;
+	specialfunctions = 4
+	},
 /turf/open/floor/iron/white/smooth_corner,
 /area/cargo/miningdock)
 "oZW" = (
@@ -52362,13 +52389,12 @@
 /turf/open/floor/iron/dark,
 /area/faction/conserve_recycling)
 "qel" = (
-/obj/structure/rack/shelf,
 /obj/effect/turf_decal/stripes{
 	dir = 4
 	},
-/obj/item/storage/box/gloves,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/closet/secure_closet/cytology,
 /turf/open/floor/plating,
 /area/science/cytology)
 "qem" = (
@@ -69213,8 +69239,8 @@
 "vwN" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/components/binary/valve/layer4{
-	name = "distro access";
-	dir = 8
+	dir = 8;
+	name = "distro access"
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/maintenance/floor2/starboard/aft)
@@ -71088,7 +71114,7 @@
 /area/medical/abandoned)
 "wcF" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Abandonned Theatre"
+	name = "Abandoned Theatre"
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
@@ -74824,7 +74850,7 @@
 /area/maintenance/floor3/starboard/aft)
 "xhH" = (
 /obj/machinery/button/door/directional/south{
-	id = "miningdorm2";
+	id = "miningdorm3";
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
@@ -106197,7 +106223,7 @@ qcG
 rbT
 qcG
 nCj
-kxo
+mVL
 kbM
 kxo
 kxo
@@ -106454,7 +106480,7 @@ myk
 rHR
 fNW
 nCj
-cqa
+oYn
 kVu
 qsg
 jme
@@ -108253,7 +108279,7 @@ ujC
 nCj
 anf
 hXa
-iFs
+oIi
 qly
 jUR
 nPy
