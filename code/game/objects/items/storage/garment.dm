@@ -108,6 +108,8 @@
 	new /obj/item/clothing/neck/cloak/cmo(src)
 	new /obj/item/clothing/shoes/sneakers/blue (src)
 	new /obj/item/clothing/suit/hooded/wintercoat/medical/cmo(src)
+	new /obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck(src)
+	new /obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck/skirt(src)
 
 /obj/item/storage/bag/garment/engineering_chief/PopulateContents()
 	new /obj/item/clothing/under/rank/engineering/chief_engineer(src)
