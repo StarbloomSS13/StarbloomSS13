@@ -10,7 +10,7 @@
 // No progression cost
 
 /datum/uplink_item/device_tools/soap
-	name = "Syndicate Soap"
+	name = "Last Edict Soap"
 	desc = "A sinister-looking surfactant used to clean blood stains to hide murders and prevent DNA analysis. \
 			You can also drop it underfoot to slip people."
 	item = /obj/item/soap/edict
@@ -177,7 +177,7 @@
 	desc = "The cryptographic sequencer, electromagnetic card, or emag, is a small card that unlocks hidden functions \
 			in electronic devices, subverts intended functions, and easily breaks security mechanisms. Cannot be used to open airlocks."
 	progression_minimum = 20 MINUTES
-	item = /obj/item/card/emag
+	item = /obj/item/card/emag/edict
 	cost = 4
 
 /datum/uplink_item/device_tools/stimpack
