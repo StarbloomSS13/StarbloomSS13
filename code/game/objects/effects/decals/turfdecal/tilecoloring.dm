@@ -227,6 +227,40 @@
 	icon_state = "tile_full"
 	name = "purple full"
 
+// Dark Purple tiles
+
+/obj/effect/turf_decal/tile/darkpurple
+	name = "dark purple corner"
+	color = "#61466A"
+
+/obj/effect/turf_decal/tile/darkpurple/opposingcorners
+	icon_state = "tile_opposing_corners"
+	name = "opposing dark purple corners"
+
+/obj/effect/turf_decal/tile/darkpurple/half
+	icon_state = "tile_half"
+	name = "dark purple half"
+
+/obj/effect/turf_decal/tile/darkpurple/half/contrasted
+	icon_state = "tile_half_contrasted"
+	name = "contrasted dark purple half"
+
+/obj/effect/turf_decal/tile/darkpurple/anticorner
+	icon_state = "tile_anticorner"
+	name = "dark purple anticorner"
+
+/obj/effect/turf_decal/tile/darkpurple/anticorner/contrasted
+	icon_state = "tile_anticorner_contrasted"
+	name = "contrasted dark purple anticorner"
+
+/obj/effect/turf_decal/tile/darkpurple/fourcorners
+	icon_state = "tile_fourcorners"
+	name = "dark purple fourcorners"
+
+/obj/effect/turf_decal/tile/darkpurple/full
+	icon_state = "tile_full"
+	name = "dark purple full"
+
 /// Brown tiles
 
 /obj/effect/turf_decal/tile/brown
@@ -714,6 +748,62 @@
 	icon_state = "trimline_shrink_cw"
 
 /obj/effect/turf_decal/trimline/purple/filled/shrink_ccw
+	icon_state = "trimline_shrink_ccw"
+
+/// Dark Purple trimlines
+
+/obj/effect/turf_decal/trimline/darkpurple
+	color = "#61466A"
+
+/obj/effect/turf_decal/trimline/darkpurple/line
+	icon_state = "trimline"
+
+/obj/effect/turf_decal/trimline/darkpurple/corner
+	icon_state = "trimline_corner"
+
+/obj/effect/turf_decal/trimline/darkpurple/end
+	icon_state = "trimline_end"
+
+/obj/effect/turf_decal/trimline/darkpurple/arrow_cw
+	icon_state = "trimline_arrow_cw"
+
+/obj/effect/turf_decal/trimline/darkpurple/arrow_ccw
+	icon_state = "trimline_arrow_ccw"
+
+/obj/effect/turf_decal/trimline/darkpurple/warning
+	icon_state = "trimline_warn"
+
+/obj/effect/turf_decal/trimline/darkpurple/mid_joiner
+	icon_state = "trimline_mid"
+
+/obj/effect/turf_decal/trimline/darkpurple/filled
+	icon_state = "trimline_box_fill"
+
+/obj/effect/turf_decal/trimline/darkpurple/filled/line
+	icon_state = "trimline_fill"
+
+/obj/effect/turf_decal/trimline/darkpurple/filled/corner
+	icon_state = "trimline_corner_fill"
+
+/obj/effect/turf_decal/trimline/darkpurple/filled/end
+	icon_state = "trimline_end_fill"
+
+/obj/effect/turf_decal/trimline/darkpurple/filled/arrow_cw
+	icon_state = "trimline_arrow_cw_fill"
+
+/obj/effect/turf_decal/trimline/darkpurple/filled/arrow_ccw
+	icon_state = "trimline_arrow_ccw_fill"
+
+/obj/effect/turf_decal/trimline/darkpurple/filled/warning
+	icon_state = "trimline_warn_fill"
+
+/obj/effect/turf_decal/trimline/darkpurple/filled/mid_joiner
+	icon_state = "trimline_mid_fill"
+
+/obj/effect/turf_decal/trimline/darkpurple/filled/shrink_cw
+	icon_state = "trimline_shrink_cw"
+
+/obj/effect/turf_decal/trimline/darkpurple/filled/shrink_ccw
 	icon_state = "trimline_shrink_ccw"
 
 /// Brown trimlines

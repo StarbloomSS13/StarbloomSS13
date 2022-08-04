@@ -58,6 +58,26 @@
 /obj/effect/turf_decal/stripes/red/full
 	icon_state = "warn_full_red"
 
+/obj/effect/turf_decal/stripes/darkpurple/line
+	icon_state = "warningline_white"
+	color = "#61466A"
+
+/obj/effect/turf_decal/stripes/darkpurple/end
+	icon_state = "warn_end_white"
+	color = "#61466A"
+
+/obj/effect/turf_decal/stripes/darkpurple/corner
+	icon_state = "warninglinecorner_white"
+	color = "#61466A"
+
+/obj/effect/turf_decal/stripes/darkpurple/box
+	icon_state = "warn_box_white"
+	color = "#61466A"
+
+/obj/effect/turf_decal/stripes/darkpurple/full
+	icon_state = "warn_full_white"
+	color = "#61466A"
+
 /obj/effect/turf_decal/delivery
 	icon_state = "delivery"
 
@@ -94,11 +114,27 @@
 /obj/effect/turf_decal/bot_red/left
 	icon_state = "bot_left_red"
 
+/obj/effect/turf_decal/bot_purple
+	icon_state = "bot_white"
+	color = "#61466A"
+
+/obj/effect/turf_decal/bot_purple/right
+	icon_state = "bot_right_white"
+	color = "#61466A"
+
+/obj/effect/turf_decal/bot_purple/left
+	icon_state = "bot_left_white"
+	color = "#61466A"
+
 /obj/effect/turf_decal/loading_area
 	icon_state = "loadingarea"
 
 /obj/effect/turf_decal/loading_area/white
 	icon_state = "loadingarea_white"
+
+/obj/effect/turf_decal/loading_area/purple
+	icon_state = "loadingarea_white"
+	color = "#61466A"
 
 /obj/effect/turf_decal/loading_area/red
 	icon_state = "loadingarea_red"
@@ -109,6 +145,10 @@
 /obj/effect/turf_decal/caution/white
 	icon_state = "caution_white"
 
+/obj/effect/turf_decal/caution/purple
+	icon_state = "caution_white"
+	color = "#61466A"
+
 /obj/effect/turf_decal/caution/red
 	icon_state = "caution_red"
 
@@ -118,6 +158,10 @@
 /obj/effect/turf_decal/caution/stand_clear/white
 	icon_state = "stand_clear_white"
 
+/obj/effect/turf_decal/caution/stand_clear/purple
+	icon_state = "stand_clear_white"
+	color = "#61466A"
+
 /obj/effect/turf_decal/caution/stand_clear/red
 	icon_state = "stand_clear_red"
 
@@ -126,6 +170,10 @@
 
 /obj/effect/turf_decal/arrows/white
 	icon_state = "arrows_white"
+
+/obj/effect/turf_decal/arrows/purple
+	icon_state = "arrows_white"
+	color = "#61466A"
 
 /obj/effect/turf_decal/arrows/red
 	icon_state = "arrows_red"
@@ -141,6 +189,14 @@
 
 /obj/effect/turf_decal/box/white/corners
 	icon_state = "box_corners_white"
+
+/obj/effect/turf_decal/box/purple
+	icon_state = "box_white"
+	color = "#61466A"
+
+/obj/effect/turf_decal/box/purple/corners
+	icon_state = "box_corners_white"
+	color = "#61466A"
 
 /obj/effect/turf_decal/box/red
 	icon_state = "box_red"
@@ -280,6 +336,15 @@
 	icon_state = "siding_corner"
 
 /obj/effect/turf_decal/siding/purple/end
+	icon_state = "siding_end"
+
+/obj/effect/turf_decal/siding/darkpurple
+	color = "#61466A"
+
+/obj/effect/turf_decal/siding/darkpurple/corner
+	icon_state = "siding_corner"
+
+/obj/effect/turf_decal/siding/darkpurple/end
 	icon_state = "siding_end"
 
 /obj/effect/turf_decal/siding/brown
