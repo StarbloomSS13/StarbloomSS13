@@ -1,8 +1,6 @@
 /turf/open/floor
 	icon = 'starbloom_modules/aesthetics/floors/icons/floors.dmi'
 
-/turf/open/floor/circuit
-
 //Removes redundant textured stuff from this radial, as all of ours are textured by default
 /obj/item/stack/tile/iron
 	tile_reskin_types = list(
