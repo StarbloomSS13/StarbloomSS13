@@ -8,8 +8,8 @@
  * EMAG AND SUBTYPES
  */
 /obj/item/card/emag
-	desc = "It's a card with a magnetic strip attached to some circuitry."
 	name = "cryptographic sequencer"
+	desc = "It's a card with a magnetic strip attached to some circuitry."
 	icon_state = "emag"
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
@@ -35,6 +35,12 @@
 	name = "hack-o'-lantern"
 	desc = "It's a pumpkin with a cryptographic sequencer sticking out."
 	icon_state = "hack_o_lantern"
+
+/obj/item/card/emag/edict
+	name = "cryptographic sequencer"
+	desc = "An infamous \"emag\" card, made out to be as brazenly Last Edict themed as possible."
+	icon_state = "edictmag"
+
 
 /obj/item/card/emagfake
 	desc = "It's a card with a magnetic strip attached to some circuitry. Closer inspection shows that this card is a poorly made replica, with a \"Donk Co.\" logo stamped on the back."

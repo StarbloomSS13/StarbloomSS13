@@ -3,19 +3,19 @@
 
 /datum/opposing_force_equipment/service/rep
 	name = "100 Reputation"
-	description = "Grant your Syndicate uplink 100 reputation, should you have one."
+	description = "Grant your Edict uplink 100 reputation, should you have one."
 	item_type = /obj/effect/gibspawner/generic
 	var/rep_count = 100
 
 /datum/opposing_force_equipment/service/rep/high
 	name = "500 Reputation"
-	description = "Grant your Syndicate uplink 500 reputation, should you have one."
+	description = "Grant your Edict uplink 500 reputation, should you have one."
 	item_type = /obj/effect/gibspawner/generic
 	rep_count = 500
 
 /datum/opposing_force_equipment/service/rep/very_high
 	name = "1000 Reputation"
-	description = "Grant your Syndicate uplink 1000 reputation, should you have one."
+	description = "Grant your Edict uplink 1000 reputation, should you have one."
 	item_type = /obj/effect/gibspawner/generic
 	rep_count = 1000
 

@@ -8,10 +8,12 @@
 	item_type = /obj/item/melee/baseball_bat/ablative
 	description = "A highly reflective baseball bat for when you need to crack skulls and run away from security in the same night. Can reflect lasers."
 
+/// I've opted not to mark energy swords as Edict weapons. While it's most likely they'd be the ones to have them, it's not impossible for another faction to as well.
+/// Mins should be mindful of plausibility when handing these out considering the HOS' is the only legal one on the North Star.
 /datum/opposing_force_equipment/melee/esword
 	item_type = /obj/item/melee/energy/sword
-	description = "The energy sword is an edged weapon with a blade of pure energy. The sword is small enough to be \
-		pocketed when inactive. Activating it produces a loud, distinctive noise."
+	description = "The energy sword is an edged weapon with a blade of pure energy, Reverse engineered from the Head of Security's own. \
+	Can be pocketed while inactive, though produces a loud, distinctive sound when unleashed."
 
 /datum/opposing_force_equipment/melee/epirate
 	item_type = /obj/item/melee/energy/sword/pirate
@@ -20,14 +22,15 @@
 /datum/opposing_force_equipment/melee/edagger
 	item_type = /obj/item/pen/edagger
 	name = "Energy Dagger"
-	description = "A dagger made of energy that looks and functions as a pen when off."
+	description = "A miniaturized energy sword hidden inside a functional pen."
 
 /datum/opposing_force_equipment/melee/cutlass
 	item_type = /obj/item/claymore/cutlass
 
 /datum/opposing_force_equipment/melee/claymore
 	item_type = /obj/item/claymore
-	description = "An extremely sharp and robust sword perfect to cleave through any opposition. Also highly illegal."
+	description = "An extremely sharp and robust sword perfect to cleave through any opposition. Also highly illegal. \
+	Scottish pride not provided."
 
 /datum/opposing_force_equipment/melee/katana
 	item_type = /obj/item/katana
@@ -52,5 +55,4 @@
 
 /datum/opposing_force_equipment/melee/hfblade
 	item_type = /obj/item/highfrequencyblade
-	admin_note = "This can gib corpses, and has chance to block.\
-	It also has very good AP and a very low attack delay. Hand this out with caution."
+	admin_note = "WARNING: Wizard Gear. High AP, Low attack delay. Approve with caution."

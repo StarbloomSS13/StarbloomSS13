@@ -3,8 +3,9 @@
 
 /datum/opposing_force_equipment/other/uplink
 	item_type = /obj/item/uplink/opfor
-	name = "Syndicate Uplink"
-	description = "An old-school syndicate uplink without a password and an empty TC account. Perfect for the aspiring operatives."
+	name = "Last Edict - Uplink"
+	description = "A Last Edict uplink with an empty TC account. \"Disguised\" as an older model station bounced radio, but will be \
+	brazenly obvious to those in the know."
 
 /datum/opposing_force_equipment/other/tc1
 	item_type = /obj/item/stack/telecrystal
@@ -23,7 +24,7 @@
 
 /datum/opposing_force_equipment/other/cashcase
 	item_type = /obj/item/storage/secure/briefcase/syndie
-	name = "Syndicate Briefcase Full of Cash"
+	name = "Weighted Briefcase Full of Cash"
 	description = "A secure briefcase containing 5000 space credits. Useful for bribing personnel, or purchasing goods \
 			and services at lucrative prices. The briefcase also feels a little heavier to hold; it has been \
 			manufactured to pack a little bit more of a punch if your client needs some convincing."
@@ -50,10 +51,10 @@
 		perfectly aerodynamic (and potentially lethal) paper airplanes."
 
 /datum/opposing_force_equipment/other/surplus
-	name = "Surplus Crate"
+	name = "Last Edict - Surplus Crate"
 	item_type = /obj/effect/gibspawner/generic
-	description = "A dusty crate from the back of the Syndicate warehouse. Rumored to contain a valuable assortment of items, \
-			but you never know. Contents are sorted to always be worth 50 TC."
+	description = "The zealots are offering a crate of surplus equipment for agents willing to take the odds. It contains a variety of useful items, \
+		but there's no guarantee any of it will be applicable to your needs. Contents equal to 50 TC."
 	admin_note = "WARNING: There is no guarantee of what will come out of this. Contents equal to 50 TC."
 	var/telecrystal_count = 50
 
@@ -77,8 +78,9 @@
 		new uplink_item.item(holder_crate)
 
 /datum/opposing_force_equipment/other/surplus/super
-	name = "Super Surplus Crate"
-	description = "A dusty SUPER-SIZED crate from the back of the Syndicate warehouse. Rumored to contain a valuable assortment of items, \
-			but you never know. Contents are sorted to always be worth 125 TC."
+	name = "Last Edict - Super Surplus Crate"
+	description = "The zealots have reserved a reserve of especially valuable items for high priority missions. While there's no guarantee \
+		any of these will be applicable to your needs, the sheer volume of items should ensure you will find at least some equipment for \
+		your personal niche, and possibly another agent's! Contents equal to 125 TC."
 	telecrystal_count = 125
 	admin_note = "WARNING: Extremely high TC count, absolutely no guarantee whatsoever of what will come out of this. Contents equal to 125 TC."
