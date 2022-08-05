@@ -143,8 +143,8 @@
 
 
 /obj/item/clothing/head/hos/syndicate
-	name = "syndicate cap"
-	desc = "A black cap fit for a high ranking syndicate officer."
+	name = "last edict cap"
+	desc = "A black cap fit for a high ranking Last Edict Zealot."
 
 /obj/item/clothing/head/hos/beret
 	name = "head of security's beret"
@@ -160,8 +160,9 @@
 	greyscale_colors = "#3C485A#FFCE5B"
 
 /obj/item/clothing/head/hos/beret/syndicate
-	name = "syndicate beret"
+	name = "last edict beret"
 	desc = "A black beret with thick armor padding inside. Stylish and robust."
+	greyscale_colors = "#3F3C40#61466A"
 
 /obj/item/clothing/head/warden
 	name = "warden's police hat"

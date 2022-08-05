@@ -981,6 +981,15 @@
 	turf_type = /turf/open/floor/circuit/red/anim
 	merge_type = /obj/item/stack/tile/circuit/red/anim
 
+/obj/item/stack/tile/circuit/purple
+	name = "purple circuit tile"
+	singular_name = "purple circuit tile"
+	desc = "A purple circuit tile."
+	icon_state = "tile_pcircuit"
+	inhand_icon_state = "tile-pcircuit"
+	turf_type = /turf/open/floor/circuit/purple
+	merge_type = /obj/item/stack/tile/circuit/purple
+
 //Pod floor
 /obj/item/stack/tile/pod
 	name = "pod floor tile"

@@ -1,6 +1,5 @@
 //Circuit flooring, glows a little
 /turf/open/floor/circuit
-	icon = 'icons/turf/floors.dmi'
 	icon_state = "bcircuit"
 	var/icon_normal = "bcircuit"
 	light_color = LIGHT_COLOR_CYAN
@@ -88,6 +87,22 @@
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/circuit/red/telecomms
+	initial_gas_mix = TCOMMS_ATMOS
+
+/turf/open/floor/circuit/purple
+	icon_state = "pcircuit"
+	icon_normal = "pcircuit"
+	light_color = LIGHT_COLOR_PURPLE
+	floor_tile = /obj/item/stack/tile/circuit/purple
+
+/turf/open/floor/circuit/purple/off
+	icon_state = "pcircuitoff"
+	on = FALSE
+
+/turf/open/floor/circuit/purple/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/circuit/purple/telecomms
 	initial_gas_mix = TCOMMS_ATMOS
 
 /turf/open/floor/pod

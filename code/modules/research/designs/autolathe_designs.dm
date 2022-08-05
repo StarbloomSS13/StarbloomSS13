@@ -1089,6 +1089,15 @@
 	category = list("initial", "Misc")
 	maxstack = 50
 
+/datum/design/circuitpurple
+	name = "Purple Circuit Tile"
+	id = "circuitpurple"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = 500, /datum/material/glass = 500)
+	build_path = /obj/item/stack/tile/circuit/purple
+	category = list("initial", "Misc")
+	maxstack = 50
+
 /datum/design/price_tagger
 	name = "Price Tagger"
 	id = "price_tagger"

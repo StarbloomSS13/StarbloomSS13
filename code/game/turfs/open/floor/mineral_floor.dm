@@ -177,6 +177,13 @@
 /turf/open/floor/mineral/plastitanium/red/brig
 	name = "brig floor"
 
+/turf/open/floor/mineral/plastitanium/purple
+	icon_state = "plastitanium_purple"
+	floor_tile = /obj/item/stack/tile/mineral/plastitanium/purple
+
+/turf/open/floor/mineral/plastitanium/purple/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
 //BANANIUM
 
 /turf/open/floor/mineral/bananium

@@ -211,6 +211,7 @@
 	tile_reskin_types = list(
 		/obj/item/stack/tile/mineral/plastitanium,
 		/obj/item/stack/tile/mineral/plastitanium/red,
+		/obj/item/stack/tile/mineral/plastitanium/purple,
 		)
 
 /obj/item/stack/tile/mineral/plastitanium/red
@@ -220,6 +221,14 @@
 	turf_type = /turf/open/floor/mineral/plastitanium/red
 	icon_state = "tile_plastitanium_red"
 	merge_type = /obj/item/stack/tile/mineral/plastitanium/red
+
+/obj/item/stack/tile/mineral/plastitanium/purple
+	name = "purple plastitanium tile"
+	singular_name = "purple plastitanium floor tile"
+	desc = "A tile made of plastitanium, used for very purple shuttles."
+	turf_type = /turf/open/floor/mineral/plastitanium/purple
+	icon_state = "tile_plastitanium_purple"
+	merge_type = /obj/item/stack/tile/mineral/plastitanium/purple
 
 /obj/item/stack/tile/mineral/snow
 	name = "snow tile"
