@@ -3,7 +3,7 @@
 
 /obj/machinery/syndicatebomb
 	icon = 'icons/obj/assemblies.dmi'
-	name = "syndicate bomb"
+	name = "\improper EXODUS bomb" // Because you're gonna leave, right?
 	icon_state = "syndicate-bomb"
 	desc = "A large and menacing device. Can be bolted down with a wrench."
 
@@ -277,7 +277,7 @@
 
 /obj/item/bombcore
 	name = "bomb payload"
-	desc = "A powerful secondary explosive of syndicate design and unknown composition, it should be stable under normal conditions..."
+	desc = "A powerful secondary explosive of unknown composition, it should be stable under normal conditions..."
 	icon = 'icons/obj/assemblies.dmi'
 	icon_state = "bombcore"
 	inhand_icon_state = "eshield0"
@@ -316,7 +316,7 @@
 
 /obj/item/bombcore/training
 	name = "dummy payload"
-	desc = "A Nanotrasen replica of a syndicate payload. It's not intended to explode but to announce that it WOULD have exploded, then rewire itself to allow for more training."
+	desc = "A Nanotrasen \"payload\". It's not intended to explode but to announce that it WOULD have exploded, then rewire itself to allow for more training."
 	var/defusals = 0
 	var/attempts = 0
 
@@ -562,7 +562,7 @@
 		to_chat(user, span_notice("[existent] found, [detonated] triggered."))
 		if(detonated)
 			detonated--
-			log_bomber(user, "remotely detonated [detonated ? "syndicate bombs" : "a syndicate bomb"] using a", src)
+			log_bomber(user, "remotely detonated [detonated ? "exodus bombs" : "a exodus bomb"] using a", src)
 		detonated = 0
 		existent = 0
 		timer = world.time + BUTTON_COOLDOWN

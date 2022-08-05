@@ -2,9 +2,14 @@
 	category = OPFOR_EQUIPMENT_CATEGORY_UTILITY
 
 /datum/opposing_force_equipment/gear/emag
-	name = "Cryptographic Sequencer"
 	item_type = /obj/item/card/emag
-	description = "An electromagnetic ID card used to break machinery and disable safeties. Notoriously used by Syndicate agents, now commonly traded hardware at blackmarkets."
+	description = "An electromagnetic ID card used to break machinery and disable safeties. Notorious, for good reason."
+
+/datum/opposing_force_equipment/gear/edictmag
+	name = "Last Edict Cryptographic Sequencer"
+	item_type = /obj/item/card/emag/edict
+	description = "An electromagnetic ID card used to break machinery and disable safeties. This one is brazenly Last Edict themed, \
+	but offers no additional benefeits."
 
 /datum/opposing_force_equipment/gear/doormag
 	name = "Airlock Override Card"
@@ -63,7 +68,7 @@
 /datum/opposing_force_equipment/gear/dump_eet
 	name = "Crab-17 Phone"
 	item_type = /obj/item/suspiciousphone
-	description = "\"Bogdanoff, he did it.\" \"He bought?\" \"He went all in.\" \"Dump it.\"" // I'm sorry
+	description = "\"Bogdanoff, he did it.\" \"He bought?\" \"He went all in.\" \"Dump it.\"" // I'm sorry // No you're not
 
 /datum/opposing_force_equipment/gear/holoparasite
 	item_type = /obj/item/guardiancreator/tech/choose/traitor
@@ -76,7 +81,6 @@
 			Also includes a remote control, disguised as an ordinary folder. Touch the briefcase with the remote to link it."
 
 /datum/opposing_force_equipment/gear/camera_bug
-	name = "Camera Bug"
 	item_type = /obj/item/camera_bug
 
 /datum/opposing_force_equipment/gear/microlaser
@@ -105,7 +109,8 @@
 /datum/opposing_force_equipment/gear/agentcard
 	name = "Agent Card"
 	item_type = /obj/item/card/id/advanced/chameleon
-	description = "A highly advanced chameleon ID card. Touch this card on another ID card or player to choose which accesses to copy. Has special magnetic properties which force it to the front of wallets."
+	description = "A highly advanced chameleon ID card. Touch this card on another ID card or player to choose which accesses to copy. Has special magnetic properties which force it to the front of wallets, \
+	and can copy access from nearby IDs."
 
 /datum/opposing_force_equipment/gear/agentcarddeluxe
 	name = "Deluxe Agent Identification Card"
@@ -113,20 +118,17 @@
 	description = "Created by Cybersun Industries to be the ultimate for field operations, this upgraded Agent ID \
 	comes with all the fluff of the original, but with an upgraded microchip - allowing for the storage of all \
 	standard Nanotrasen access codes in one conveinent package. Now in glossy olive by default!"
-	admin_note = "Has no limit on how many accesses it can store."
+	admin_note = "Can hold every access flag, and, like normal Agent IDS, can remotely copy access from nearby players. \
+	Not nessecarily an issue if used in good faith and not just pawned off to crew."
 
 /datum/opposing_force_equipment/gear/syndiejaws
-	name = "Syndicate Jaws of Life"
 	item_type = /obj/item/crowbar/power/syndicate
 	description = "Based on a Nanotrasen model, this powerful tool can be used as both a crowbar and a pair of wirecutters. \
 	In its crowbar configuration, it can be used to force open airlocks. Very useful for entering the station or its departments."
 
 /datum/opposing_force_equipment/gear/combatmedkit
-	name = "Syndicate Combat Medic Kit"
+	name = "Combat Medic Kit"
 	item_type = /obj/item/storage/medkit/tactical
-	description = "This first aid kit is a suspicious brown and red. Included is a combat stimulant injector \
-			for rapid healing, a medical night vision HUD for quick identification of injured personnel, \
-			and other supplies helpful for a field medic."
 
 /datum/opposing_force_equipment/gear/cloak_mod
 	item_type = /obj/item/mod/module/stealth/ninja
@@ -142,7 +144,7 @@
 
 /datum/opposing_force_equipment/gear/jetpack_mod
 	item_type = /obj/item/mod/module/jetpack/advanced
-	description = "A jetpack usually reserved for Syndicate MODsuits, this jetpack had the safety limiters removed, allowing it to move much faster in space."
+	description = "A jetpack usually reserved for Edict MODsuits, this jetpack had the safety limiters removed, allowing it to move much faster in space."
 
 /datum/opposing_force_equipment/gear/energyshield_mod
 	item_type = /obj/item/mod/module/energy_shield
@@ -150,7 +152,8 @@
 
 /datum/opposing_force_equipment/gear/biteof87_mod
 	item_type = /obj/item/mod/module/springlock/bite_of_87
-	description = "An advanced springlock module that allows the user to enter and exit their MODsuit at extremely fast speeds. There's a scratched-off warning label on the back."
+	description = "A disguised, extra-efficient MOD springlock module, made out in the shape of a DNA Lock. \
+	Exposure to liquid reagents will cause the module to malfunction, and will cause the user's death after a small delay."
 
 /datum/opposing_force_equipment/gear/flamethrower_mod
 	item_type = /obj/item/mod/module/flamethrower

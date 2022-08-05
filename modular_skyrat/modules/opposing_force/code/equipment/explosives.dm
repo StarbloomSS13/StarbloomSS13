@@ -22,18 +22,18 @@
 	description = "Similar to C4, but with a stronger blast that is directional instead of circular."
 
 /datum/opposing_force_equipment/bomb/syndicate
-	name = "Syndicate Bomb"
+	name = "Last Edict - EXODUS Bomb"
 	item_type = /obj/item/sbeacondrop/bomb
 	description = "A large, powerful bomb that can be wrenched down and armed with a variable timer."
 	admin_note = "WARNING: This is a pretty big bomb, it can take out entire rooms."
 
 /datum/opposing_force_equipment/bomb/syndicate_emp
-	name = "Syndicate EMP Bomb"
+	name = "Last Edict - EMP Bomb"
 	item_type = /obj/item/sbeacondrop/emp
-	description = "A modified version of the Syndicate Bomb that releases a large EMP instead."
+	description = "A modified version of the EXODUS Bomb that releases a large EMP instead."
 
 /datum/opposing_force_equipment/bomb/minibomb
-	name = "EXODUS Minibomb"
+	name = "Last Edict - EXODUS Minibomb"
 	item_type = /obj/item/grenade/edictminibomb
 	description = "The minibomb is a grenade with a five-second fuse. Upon detonation, it will create a small hull breach \
 			in addition to dealing high amounts of damage to nearby personnel."
@@ -48,7 +48,9 @@
 	name = "Viscerator Delivery Grenade"
 	item_type = /obj/item/grenade/spawnergrenade/manhacks
 	description = "A unique grenade that deploys a swarm of viscerators upon activation, which will chase down and shred \
-			any non-operatives in the area."
+			anyone in the area."
+	admin_note = "Friendly only to the \"SYNDICATE\" faction - in practice; nukies, lavaland syndicate agents, and the \
+			space comms agent. Will absolutely kill the guy who releases these too unless you add them to this faction."
 
 /datum/opposing_force_equipment/bomb/buzzkill
 	name = "Buzzkill Grenade"
