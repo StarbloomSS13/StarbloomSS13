@@ -33,7 +33,7 @@
 	worn_icon = 'icons/mob/clothing/under/syndicate.dmi'
 
 /obj/item/clothing/under/syndicate/bloodred
-	name = "blood-red sneaksuit"
+	name = "purple sneaksuit"
 	desc = "It still counts as stealth if there are no witnesses."
 	icon_state = "bloodred_pajamas"
 	inhand_icon_state = "bl_suit"
@@ -42,8 +42,8 @@
 	can_adjust = FALSE
 
 /obj/item/clothing/under/syndicate/bloodred/sleepytime
-	name = "blood-red pajamas"
-	desc = "Do operatives dream of nuclear sheep?"
+	name = "purple pajamas"
+	desc = "Does the last edict dream of wild sheep?"
 	icon_state = "bloodred_pajamas"
 	inhand_icon_state = "bl_suit"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 50, ACID = 40)
