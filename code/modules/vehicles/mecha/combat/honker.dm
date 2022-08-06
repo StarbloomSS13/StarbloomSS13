@@ -33,8 +33,8 @@
 	max_integrity = 300
 	armor = list(MELEE = 40, BULLET = 40, LASER = 50, ENERGY = 35, BOMB = 20, BIO = 0, FIRE = 100, ACID = 100)
 	max_temperature = 35000
-	operation_req_access = list(ACCESS_SYNDICATE)
-	internals_req_access = list(ACCESS_SYNDICATE)
+	operation_req_access = list(ACCESS_EDICT)
+	internals_req_access = list(ACCESS_EDICT)
 	wreckage = /obj/structure/mecha_wreckage/honker/dark
 	max_equip_by_category = list(
 		MECHA_UTILITY = 1,

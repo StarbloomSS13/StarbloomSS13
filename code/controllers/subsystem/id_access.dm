@@ -88,9 +88,9 @@ SUBSYSTEM_DEF(id_access)
 	for(var/access in accesses_by_flag["[ACCESS_FLAG_CENTCOM]"])
 		flags_by_access |= list("[access]" = ACCESS_FLAG_CENTCOM)
 
-	accesses_by_flag["[ACCESS_FLAG_SYNDICATE]"] = SYNDICATE_ACCESS
-	for(var/access in accesses_by_flag["[ACCESS_FLAG_SYNDICATE]"])
-		flags_by_access |= list("[access]" = ACCESS_FLAG_SYNDICATE)
+	accesses_by_flag["[ACCESS_FLAG_EDICT]"] = EDICT_ACCESS
+	for(var/access in accesses_by_flag["[ACCESS_FLAG_EDICT]"])
+		flags_by_access |= list("[access]" = ACCESS_FLAG_EDICT)
 
 	accesses_by_flag["[ACCESS_FLAG_AWAY]"] = AWAY_ACCESS
 	for(var/access in accesses_by_flag["[ACCESS_FLAG_AWAY]"])
@@ -109,7 +109,7 @@ SUBSYSTEM_DEF(id_access)
 	access_flag_string_by_flag["[ACCESS_FLAG_PRV_COMMAND]"] = ACCESS_FLAG_PRV_COMMAND_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_CAPTAIN]"] = ACCESS_FLAG_CAPTAIN_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_CENTCOM]"] = ACCESS_FLAG_CENTCOM_NAME
-	access_flag_string_by_flag["[ACCESS_FLAG_SYNDICATE]"] = ACCESS_FLAG_SYNDICATE_NAME
+	access_flag_string_by_flag["[ACCESS_FLAG_EDICT]"] = ACCESS_FLAG_EDICT_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_AWAY]"] = ACCESS_FLAG_AWAY_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_SPECIAL]"] = ACCESS_FLAG_SPECIAL_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_FACTIONAL]"] = ACCESS_FLAG_FACTIONAL_NAME
@@ -243,7 +243,7 @@ SUBSYSTEM_DEF(id_access)
 	wildcard_flags_by_wildcard[WILDCARD_NAME_PRV_COMMAND] = WILDCARD_FLAG_PRV_COMMAND
 	wildcard_flags_by_wildcard[WILDCARD_NAME_CAPTAIN] = WILDCARD_FLAG_CAPTAIN
 	wildcard_flags_by_wildcard[WILDCARD_NAME_CENTCOM] = WILDCARD_FLAG_CENTCOM
-	wildcard_flags_by_wildcard[WILDCARD_NAME_SYNDICATE] = WILDCARD_FLAG_SYNDICATE
+	wildcard_flags_by_wildcard[WILDCARD_NAME_EDICT] = WILDCARD_FLAG_EDICT
 	wildcard_flags_by_wildcard[WILDCARD_NAME_AWAY] = WILDCARD_FLAG_AWAY
 	wildcard_flags_by_wildcard[WILDCARD_NAME_SPECIAL] = WILDCARD_FLAG_SPECIAL
 	wildcard_flags_by_wildcard[WILDCARD_NAME_FACTIONAL] = WILDCARD_FLAG_FACTIONAL

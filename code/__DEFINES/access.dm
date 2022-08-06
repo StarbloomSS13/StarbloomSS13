@@ -120,11 +120,11 @@
 /// The non-existent CentCom Bar
 #define ACCESS_CENT_BAR 110
 
-	//The Syndicate
-/// General Syndicate Access. Includes Syndicate mechs and ruins.
-#define ACCESS_SYNDICATE 150
+	// Last Edict
+/// General Last Edict access. Includes Last Edict Mechs, Ruins, and other facilities.
+#define ACCESS_EDICT 150
 /// Nuke Op Leader Access
-#define ACCESS_SYNDICATE_LEADER 151
+#define ACCESS_EDICT_LEADER 151
 
 	//Away Missions or Ruins
 	/*For generic away-mission/ruin access. Why would normal crew have access to a long-abandoned derelict
@@ -184,10 +184,10 @@
 #define ACCESS_FLAG_CENTCOM_NAME "Centcom"
 /// Bitflag for Centcom ID card accesses. See CENTCOM_ACCESS.
 #define ACCESS_FLAG_CENTCOM (1 << 4)
-/// Displayed name for Syndicate ID card accesses.
-#define ACCESS_FLAG_SYNDICATE_NAME "Syndicate"
-/// Bitflag for Syndicate ID card accesses. See SYNDICATE_ACCESS.
-#define ACCESS_FLAG_SYNDICATE (1 << 5)
+/// Displayed name for Edict ID card accesses.
+#define ACCESS_FLAG_EDICT_NAME "Last Edict"
+/// Bitflag for Edict ID card accesses. See EDICT_ACCESS.
+#define ACCESS_FLAG_EDICT (1 << 5)
 /// Displayed name for Offstation/Ruin/Away Mission ID card accesses.
 #define ACCESS_FLAG_AWAY_NAME "Away"
 /// Bitflag for Offstation/Ruin/Away Mission ID card accesses. See AWAY_ACCESS.
@@ -225,10 +225,10 @@
 #define WILDCARD_FLAG_CENTCOM ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_CAPTAIN | ACCESS_FLAG_CENTCOM | ACCESS_FLAG_FACTIONAL
 /// Name associated with the centcom wildcard bitflag.
 #define WILDCARD_NAME_CENTCOM ACCESS_FLAG_CENTCOM_NAME
-/// Access flags that can be applied to syndicate wildcard slots.
-#define WILDCARD_FLAG_SYNDICATE ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_CAPTAIN | ACCESS_FLAG_SYNDICATE | ACCESS_FLAG_FACTIONAL
-/// Name associated with the syndicate wildcard bitflag.
-#define WILDCARD_NAME_SYNDICATE ACCESS_FLAG_SYNDICATE_NAME
+/// Access flags that can be applied to edict wildcard slots.
+#define WILDCARD_FLAG_EDICT ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_CAPTAIN | ACCESS_FLAG_EDICT | ACCESS_FLAG_FACTIONAL
+/// Name associated with the edict wildcard bitflag.
+#define WILDCARD_NAME_EDICT ACCESS_FLAG_EDICT_NAME
 /// Access flags that can be applied to offstation wildcard slots.
 #define WILDCARD_FLAG_AWAY ACCESS_FLAG_AWAY
 /// Name associated with the offstation wildcard bitflag.
@@ -343,10 +343,10 @@
 	ACCESS_CENT_GENERAL, \
 )
 
-/// Syndicate areas off station. Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_SYNDICATE)
-#define SYNDICATE_ACCESS list( \
-	ACCESS_SYNDICATE_LEADER, \
-	ACCESS_SYNDICATE, \
+/// Last Edict areas. Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_EDICT)
+#define EDICT_ACCESS list( \
+	ACCESS_EDICT_LEADER, \
+	ACCESS_EDICT, \
 )
 
 /// Away missions/gateway/space ruins.  Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_AWAY)
@@ -379,7 +379,7 @@
 /// Name for the Global region.
 #define REGION_ALL_GLOBAL "All"
 /// Used to seed the accesses_by_region list in SSid_access. A list of every single access in the game.
-#define REGION_ACCESS_ALL_GLOBAL REGION_ACCESS_ALL_STATION + CENTCOM_ACCESS + SYNDICATE_ACCESS + AWAY_ACCESS + CULT_ACCESS + FACTIONAL_ACCESS
+#define REGION_ACCESS_ALL_GLOBAL REGION_ACCESS_ALL_STATION + CENTCOM_ACCESS + EDICT_ACCESS + AWAY_ACCESS + CULT_ACCESS + FACTIONAL_ACCESS
 /// Name for the Station All Access region.
 #define REGION_ALL_STATION "Station"
 /// Used to seed the accesses_by_region list in SSid_access. A list of all station accesses.

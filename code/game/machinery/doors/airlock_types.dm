@@ -75,7 +75,7 @@
 	autoclose = FALSE
 	frequency = FREQ_AIRLOCK_CONTROL
 	heat_proof = TRUE
-	req_access = list(ACCESS_SYNDICATE)
+	req_access = list(ACCESS_EDICT)
 
 /obj/machinery/door/airlock/glass/incinerator/syndicatelava_interior
 	name = "Turbine Interior Airlock"

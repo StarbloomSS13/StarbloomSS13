@@ -62,7 +62,7 @@
 /obj/machinery/computer/communications/syndicate
 	icon_screen = "commsyndie"
 	circuit = /obj/item/circuitboard/computer/communications/syndicate
-	req_access = list(ACCESS_SYNDICATE_LEADER)
+	req_access = list(ACCESS_EDICT_LEADER)
 	light_color = LIGHT_COLOR_BLOOD_MAGIC
 
 	syndicate = TRUE

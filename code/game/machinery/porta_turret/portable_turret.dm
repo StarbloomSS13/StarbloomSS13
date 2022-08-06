@@ -710,7 +710,7 @@ DEFINE_BITFIELD(turret_flags, list(
 	use_power = NO_POWER_USE
 	has_cover = FALSE
 	scan_range = 9
-	req_access = list(ACCESS_SYNDICATE)
+	req_access = list(ACCESS_EDICT)
 	uses_stored = FALSE
 	mode = TURRET_LETHAL
 	stun_projectile = /obj/projectile/bullet
