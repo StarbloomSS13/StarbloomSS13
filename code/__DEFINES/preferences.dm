@@ -65,13 +65,6 @@
 #define SEC_DEPT_SCIENCE "Science"
 #define SEC_DEPT_SUPPLY "Supply"
 
-#define NS_FAC_NONE "None"
-#define NS_FAC_UNITY "The Unity"
-#define NS_FAC_HOMEGUARD "The Home Guard"
-#define NS_FAC_CHIRON "Chiron Biolabs"
-#define NS_FAC_MEKHANE "Mekhane"
-#define NS_FAC_CONSERVATORS "The Conservators"
-
 // Playtime tracking system, see jobs_exp.dm
 #define EXP_TYPE_LIVING "Living"
 #define EXP_TYPE_CREW "Crew"

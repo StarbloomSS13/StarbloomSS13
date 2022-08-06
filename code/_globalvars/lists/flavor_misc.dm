@@ -198,15 +198,6 @@ GLOBAL_LIST_INIT(security_depts_prefs, sort_list(list(
 	SEC_DEPT_SUPPLY,
 )))
 
-GLOBAL_LIST_INIT(northstar_factions_prefs, sort_list(list(
-	NS_FAC_NONE,
-	NS_FAC_UNITY,
-	NS_FAC_HOMEGUARD,
-	NS_FAC_CHIRON,
-	NS_FAC_MEKHANE,
-	NS_FAC_CONSERVATORS,
-)))
-
 	//Backpacks
 #define DBACKPACK "Department Backpack"
 #define DDUFFELBAG "Department Duffel Bag"
