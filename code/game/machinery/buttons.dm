@@ -233,12 +233,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/button/door, 24)
 /obj/machinery/button/door/incinerator_vent_syndicatelava_main
 	name = "turbine vent control"
 	id = INCINERATOR_SYNDICATELAVA_MAINVENT
-	req_access = list(ACCESS_SYNDICATE)
+	req_access = list(ACCESS_EDICT)
 
 /obj/machinery/button/door/incinerator_vent_syndicatelava_aux
 	name = "combustion chamber vent control"
 	id = INCINERATOR_SYNDICATELAVA_AUXVENT
-	req_access = list(ACCESS_SYNDICATE)
+	req_access = list(ACCESS_EDICT)
 
 /obj/machinery/button/massdriver
 	name = "mass driver button"

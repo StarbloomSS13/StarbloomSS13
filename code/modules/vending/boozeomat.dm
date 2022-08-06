@@ -65,7 +65,7 @@
 	req_access = null
 
 /obj/machinery/vending/boozeomat/syndicate_access
-	req_access = list(ACCESS_SYNDICATE)
+	req_access = list(ACCESS_EDICT)
 	age_restrictions = FALSE
 
 /obj/item/vending_refill/boozeomat

@@ -104,7 +104,7 @@
 	trim_state = "trim_unknown"
 	department_color = COLOR_MOSTLY_PURE_RED
 	subdepartment_color = COLOR_MOSTLY_PURE_RED
-	access = list(ACCESS_SYNDICATE)
+	access = list(ACCESS_EDICT)
 
 /// Trim for pirates.
 /datum/id_trim/pirate/silverscale
