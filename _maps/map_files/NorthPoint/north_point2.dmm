@@ -4530,6 +4530,12 @@
 	dir = 4
 	},
 /obj/machinery/light_switch/directional/west,
+/obj/machinery/button/ec_glass{
+	id = "roboprivacy";
+	name = "Robotics Desk Privacy";
+	pixel_x = -5;
+	pixel_y = 24
+	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/science/robotics/lab)
 "bij" = (
@@ -6369,10 +6375,10 @@
 /obj/item/mmi{
 	pixel_x = 5
 	},
-/obj/machinery/button/door/directional/east{
+/obj/machinery/button/ec_glass{
 	id = "robosurgery";
-	name = "Robotics Surgery Privacy Control";
-	req_access_txt = "29"
+	name = "Surgery Privacy";
+	pixel_x = 26
 	},
 /turf/open/floor/iron/showroomfloor{
 	name = "lab floor"
@@ -6825,6 +6831,11 @@
 /obj/structure/ladder,
 /turf/open/floor/plating/foam,
 /area/maintenance/floor1/port/aft)
+"bKb" = (
+/obj/item/storage/box/bodybags,
+/obj/structure/table/reinforced/rglass,
+/turf/open/floor/iron/dark/blue,
+/area/medical/morgue)
 "bKc" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 8
@@ -13650,6 +13661,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/autoname/directional/east,
+/obj/structure/closet/l3closet/virology,
 /turf/open/floor/iron/white,
 /area/hallway/floor2/aft)
 "dJy" = (
@@ -20598,6 +20610,7 @@
 	dir = 4
 	},
 /obj/machinery/light/cold/no_nightlight/directional/east,
+/obj/structure/closet/l3closet/virology,
 /turf/open/floor/iron/white,
 /area/hallway/floor2/aft)
 "fRV" = (
@@ -23520,6 +23533,12 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/disposal)
+"gNm" = (
+/obj/structure/table/wood,
+/obj/machinery/newscaster/directional/south,
+/obj/item/reagent_containers/spray/cleaner,
+/turf/open/floor/carpet/royalblue,
+/area/medical/break_room)
 "gNn" = (
 /obj/structure/railing{
 	dir = 8
@@ -37990,6 +38009,7 @@
 /obj/item/clothing/glasses/hud/health,
 /obj/item/clothing/glasses/hud/health,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white/textured_large,
 /area/medical/storage)
 "kUh" = (
@@ -51020,10 +51040,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood,
 /area/hallway/floor4/fore)
-"ouO" = (
-/obj/structure/closet/bombcloset,
-/turf/closed/wall,
-/area/maintenance/floor2/starboard)
 "ouU" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/pod/light,
@@ -54187,7 +54203,6 @@
 	},
 /area/security/office)
 "psv" = (
-/obj/effect/turf_decal/tile/purple/opposingcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
@@ -60188,13 +60203,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/pod/light,
 /area/maintenance/floor3/port/fore)
-"rfK" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable/layer3,
-/obj/structure/closet/bombcloset,
-/turf/open/floor/catwalk_floor,
-/area/maintenance/floor2/starboard)
 "rfM" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
@@ -62348,6 +62356,7 @@
 	},
 /obj/item/radio/intercom/directional/south,
 /obj/machinery/light/cold/directional/south,
+/obj/structure/closet/l3closet/virology,
 /turf/open/floor/iron/white,
 /area/medical/storage)
 "rPw" = (
@@ -74115,6 +74124,7 @@
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 5
 	},
+/obj/structure/closet/l3closet/virology,
 /turf/open/floor/iron/white,
 /area/hallway/floor2/aft)
 "vqN" = (
@@ -76467,8 +76477,8 @@
 /obj/structure/sign/departments/psychology{
 	pixel_x = -32
 	},
-/obj/item/kirbyplants/random,
 /obj/machinery/light/cold/directional/west,
+/obj/structure/closet/l3closet/virology,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "wbk" = (
@@ -179063,7 +179073,7 @@ qho
 mbv
 xQo
 eOv
-ajq
+gNm
 aal
 aal
 aal
@@ -179538,7 +179548,7 @@ owf
 lhq
 eME
 vnK
-ouO
+vnK
 vKx
 fMC
 vad
@@ -179795,7 +179805,7 @@ xOW
 llO
 jmf
 vnK
-rfK
+sUj
 bGv
 aZj
 czW
@@ -185735,7 +185745,7 @@ nKo
 lGB
 oIU
 azp
-omk
+bKb
 omk
 omk
 buR

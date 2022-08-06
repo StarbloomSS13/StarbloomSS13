@@ -617,7 +617,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 								span_userdanger("Oh f-"))
 							O.dismember()
 							O.drop_organs()
-							qdel(O)
+//							qdel(O) // Uncomment when customization is fixed
 							new /obj/effect/gibspawner/human/bodypartless(get_turf(C))
 
 				if(prob(30))
