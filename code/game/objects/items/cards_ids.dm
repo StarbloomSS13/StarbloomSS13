@@ -1116,7 +1116,7 @@
 	registered_name = "Syndicate"
 	registered_age = null
 	trim = /datum/id_trim/lastedict
-	wildcard_slots = WILDCARD_LIMIT_SYNDICATE
+	wildcard_slots = WILDCARD_LIMIT_EDICT
 
 /obj/item/card/id/advanced/black/syndicate_command/crew_id
 	trim = /datum/id_trim/lastedict/robotics

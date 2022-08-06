@@ -42,7 +42,7 @@
 
 /obj/machinery/vending/medical/syndicate_access
 	name = "\improper SyndiMed Plus"
-	req_access = list(ACCESS_SYNDICATE)
+	req_access = list(ACCESS_EDICT)
 
 //Created out of a necessity to get these dumb chems out of the medical tools vendor.
 /obj/machinery/vending/drugs
