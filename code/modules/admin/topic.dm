@@ -999,11 +999,11 @@
 		var/mob/M = locate(href_list["CentComReply"])
 		usr.client.admin_headset_message(M, RADIO_CHANNEL_CENTCOM)
 
-	else if(href_list["SyndicateReply"])
+	else if(href_list["EdictReply"])
 		if(!check_rights(R_ADMIN))
 			return
 
-		var/mob/M = locate(href_list["SyndicateReply"])
+		var/mob/M = locate(href_list["EdictReply"])
 		usr.client.admin_headset_message(M, RADIO_CHANNEL_EDICT)
 
 	else if(href_list["HeadsetMessage"])
