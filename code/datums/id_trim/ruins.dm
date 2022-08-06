@@ -4,11 +4,11 @@
 
 /// Trim for the hotel ruin. Not Hilbert's Hotel.
 /datum/id_trim/away/hotel
-	access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_MAINT)
+	access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_MAINTENANCE)
 
 /// Trim for the hotel ruin. Not Hilbert's Hotel.
 /datum/id_trim/away/hotel/security
-	access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_MAINT, ACCESS_AWAY_SEC)
+	access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_MAINTENANCE, ACCESS_AWAY_SEC)
 
 /// Trim for the oldstation ruin/Charlie station
 /datum/id_trim/away/old/sec
@@ -22,7 +22,7 @@
 
 /// Trim for the oldstation ruin/Charlie station
 /datum/id_trim/away/old/eng
-	access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_ENGINE)
+	access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_ENGINEERING)
 	assignment = "Charlie Station Engineer"
 
 /// Trim for the oldstation ruin/Charlie station
@@ -35,7 +35,7 @@
 	trim_state = "trim_medicaldoctor"
 	department_color = COLOR_MEDICAL_BLUE
 	subdepartment_color = COLOR_SERVICE_LIME
-	access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_MAINT)
+	access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_MAINTENANCE)
 
 /// Trim for Hilber in Hilbert's Hotel.
 /datum/id_trim/away/hilbert
@@ -91,7 +91,7 @@
 	trim_state = "trim_stationengineer"
 	department_color = COLOR_ENGINEERING_ORANGE
 	subdepartment_color = COLOR_ENGINEERING_ORANGE
-	access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_ENGINE, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_MAINT_TUNNELS)
+	access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_ENGINEERING, ACCESS_ENGINEERING, ACCESS_ENGINE_EQUIP, ACCESS_MAINT_TUNNELS)
 
 /// Trim for various various ruins.
 /datum/id_trim/job/station_engineer/gunner

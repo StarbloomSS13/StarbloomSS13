@@ -4,25 +4,25 @@
 
 // These are mutually exclusive; can't have req_any and req_all
 /obj/effect/mapping_helpers/airlock/access/any/payload(obj/machinery/door/airlock/airlock)
-	if(airlock.req_access_txt == "0")
+	if(airlock.req_access != null)
+		log_mapping("[src] at [AREACOORD(src)] tried to set req_one_access, but req_access was already set!")
+	else
 		var/list/access_list = get_access()
 		// Overwrite if there is no access set, otherwise add onto existing access
-		if(airlock.req_one_access_txt == "0")
-			airlock.req_one_access_txt = access_list.Join(";")
+		if(airlock.req_one_access == null)
+			airlock.req_one_access = access_list
 		else
-			airlock.req_one_access_txt += ";[access_list.Join(";")]"
-	else
-		log_mapping("[src] at [AREACOORD(src)] tried to set req_one_access, but req_access was already set!")
+			airlock.req_one_access += access_list
 
 /obj/effect/mapping_helpers/airlock/access/all/payload(obj/machinery/door/airlock/airlock)
-	if(airlock.req_one_access_txt == "0")
-		var/list/access_list = get_access()
-		if(airlock.req_access_txt == "0")
-			airlock.req_access_txt = access_list.Join(";")
-		else
-			airlock.req_access_txt += ";[access_list.Join(";")]"
+	if(airlock.req_one_access != null)
+		log_mapping("[src] at [AREACOORD(src)] tried to set req_one_access, but req_access was already set!")
 	else
-		log_mapping("[src] at [AREACOORD(src)] tried to set req_access, but req_one_access was already set!")
+		var/list/access_list = get_access()
+		if(airlock.req_access == null)
+			airlock.req_access = access_list
+		else
+			airlock.req_access_txt += access_list
 
 /obj/effect/mapping_helpers/airlock/access/proc/get_access()
 	var/list/access = list()
@@ -35,7 +35,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/any/command/general/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_HEADS
+	access_list += ACCESS_COMMAND
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/any/command/ai_upload/get_access()
@@ -74,7 +74,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/any/engineering/general/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_ENGINE
+	access_list += ACCESS_ENGINEERING
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/any/engineering/construction/get_access()
@@ -109,7 +109,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/any/engineering/tcoms/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_TCOMSAT
+	access_list += ACCESS_TCOMMS
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/any/engineering/ce/get_access()
@@ -133,7 +133,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/any/medical/chemistry/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_CHEMISTRY
+	access_list += ACCESS_PLUMBING
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/any/medical/virology/get_access()
@@ -167,7 +167,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/any/science/general/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_RND
+	access_list += ACCESS_SCIENCE
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/any/science/research/get_access()
@@ -236,7 +236,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/any/security/detective/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_FORENSICS
+	access_list += ACCESS_DETECTIVE
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/any/security/court/get_access()
@@ -319,7 +319,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/any/supply/mail_sorting/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_MAILSORTING
+	access_list += ACCESS_MAIL_SORTING
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining/get_access()
@@ -354,7 +354,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/all/command/general/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_HEADS
+	access_list += ACCESS_COMMAND
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/all/command/ai_upload/get_access()
@@ -393,7 +393,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_ENGINE
+	access_list += ACCESS_ENGINEERING
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/all/engineering/construction/get_access()
@@ -428,7 +428,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/all/engineering/tcoms/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_TCOMSAT
+	access_list += ACCESS_TCOMMS
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/all/engineering/ce/get_access()
@@ -452,7 +452,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/all/medical/chemistry/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_CHEMISTRY
+	access_list += ACCESS_PLUMBING
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/all/medical/virology/get_access()
@@ -486,7 +486,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/all/science/general/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_RND
+	access_list += ACCESS_SCIENCE
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/all/science/research/get_access()
@@ -555,7 +555,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/all/security/detective/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_FORENSICS
+	access_list += ACCESS_DETECTIVE
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/all/security/court/get_access()
@@ -638,7 +638,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/all/supply/mail_sorting/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_MAILSORTING
+	access_list += ACCESS_MAIL_SORTING
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/all/supply/mining/get_access()
