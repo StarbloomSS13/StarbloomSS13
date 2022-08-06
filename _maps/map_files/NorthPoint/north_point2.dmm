@@ -4393,9 +4393,6 @@
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "bfT" = (
-/obj/machinery/door/airlock/command{
-	name = "Unity Boardroom"
-	},
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 8
 	},
@@ -4403,6 +4400,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/door/firedoor/heavy,
+/obj/machinery/door/airlock/command{
+	name = "Unity Boardroom";
+	req_access_txt = "74"
+	},
 /turf/open/floor/iron/dark,
 /area/faction/unity)
 "bfU" = (
@@ -6157,7 +6158,8 @@
 "bzU" = (
 /obj/effect/turf_decal/stripes/full,
 /obj/machinery/door/airlock/mining{
-	name = "Recycling"
+	name = "Recycling";
+	req_access_txt = "78"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/smooth,
@@ -7724,7 +7726,8 @@
 /area/hallway/floor2/aft)
 "bWA" = (
 /obj/machinery/door/airlock/mining{
-	name = "Private Office"
+	name = "Private Office";
+	req_access_txt = "78"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/firedoor,
@@ -7865,7 +7868,8 @@
 /area/maintenance/floor3/port/aft)
 "cah" = (
 /obj/machinery/door/airlock/command{
-	name = "Unity Private Storage"
+	name = "Unity Private Storage";
+	req_access_txt = "74"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -9482,7 +9486,8 @@
 /area/commons/cryo_storage)
 "cxC" = (
 /obj/machinery/door/airlock/science{
-	name = "Conservators Science Wing"
+	name = "Conservators Science Wing";
+	req_access_txt = "78"
 	},
 /obj/effect/turf_decal/tile/purple/fourcorners,
 /obj/structure/cable,
@@ -18056,9 +18061,20 @@
 /turf/open/floor/pod/light,
 /area/maintenance/floor2/port/fore)
 "fcS" = (
-/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/airlock/command{
+	name = "Unity Boardroom";
+	req_access_txt = "74"
+	},
+/obj/effect/turf_decal/trimline/blue/line{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor/heavy,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/dark,
-/area/hallway/floor1/aft)
+/area/faction/unity)
 "fdk" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light/directional/east,
@@ -27617,9 +27633,6 @@
 /turf/open/floor/plating,
 /area/maintenance/disposal)
 "hUR" = (
-/obj/machinery/door/airlock/command{
-	name = "Unity Boardroom"
-	},
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 4
 	},
@@ -27628,6 +27641,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor/heavy,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/command{
+	name = "Unity Boardroom";
+	req_access_txt = "74"
+	},
 /turf/open/floor/iron/dark,
 /area/faction/unity)
 "hUX" = (
@@ -31403,7 +31420,8 @@
 /area/science/cytology)
 "jaI" = (
 /obj/machinery/door/airlock/service{
-	name = "Home Guard Bunker"
+	name = "Home Guard Bunker";
+	req_access_txt = "75"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -38820,13 +38838,14 @@
 /turf/open/floor/pod/dark,
 /area/maintenance/floor2/starboard/aft)
 "lgX" = (
-/obj/machinery/door/airlock/command{
-	name = "Unity Boardroom"
-	},
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 8
 	},
 /obj/machinery/door/firedoor/heavy,
+/obj/machinery/door/airlock/command{
+	name = "Unity Boardroom";
+	req_access_txt = "74"
+	},
 /turf/open/floor/iron/dark,
 /area/faction/unity)
 "lhc" = (
@@ -39271,7 +39290,7 @@
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/service{
-	name = "Home Guard Enlstment"
+	name = "Home Guard Enlistment"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/dark/green,
@@ -45805,7 +45824,8 @@
 /area/maintenance/floor1/port/fore)
 "naz" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Mekhane Workshop"
+	name = "Mekhane Workshop";
+	req_access_txt = "77"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -48685,7 +48705,8 @@
 /area/maintenance/floor3/starboard/fore)
 "nNQ" = (
 /obj/machinery/door/airlock/medical{
-	name = "Chiron Gene Therapy Storage"
+	name = "Chiron Gene Therapy Storage";
+	req_access_txt = "76"
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/faction/chiron_hq)
@@ -57323,7 +57344,8 @@
 /area/commons/storage/tools)
 "qsD" = (
 /obj/machinery/door/airlock/mining{
-	name = "Conservator Office"
+	name = "Conservator Office";
+	req_access_txt = "78"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -61188,7 +61210,8 @@
 /area/science/lower)
 "rwM" = (
 /obj/machinery/door/airlock/mining{
-	name = "Conservator Entrance"
+	name = "Conservator Entrance";
+	req_access_txt = "78"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -64891,7 +64914,8 @@
 /area/command/bridge)
 "sGs" = (
 /obj/machinery/door/airlock/mining{
-	name = "Meeting Room"
+	name = "Meeting Room";
+	req_access_txt = "78"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -72822,7 +72846,8 @@
 /area/engineering/supermatter/room)
 "uWU" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "The Hole"
+	name = "The Hole";
+	req_access_txt = "150"
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/faction/last_edict)
@@ -75931,7 +75956,8 @@
 /area/construction)
 "vRW" = (
 /obj/machinery/door/airlock/medical{
-	name = "Chiron Biolabs HQ"
+	name = "Chiron Biolabs HQ";
+	req_access_txt = "76"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -76766,7 +76792,8 @@
 	},
 /obj/machinery/button/door/directional/west{
 	id = "cons_scrap";
-	name = "Storage"
+	name = "Storage";
+	req_access_txt = "78"
 	},
 /turf/open/floor/iron/dark,
 /area/faction/conserve_recycling)
@@ -77524,7 +77551,8 @@
 /area/service/kitchen/diner)
 "wqq" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "Last Edict Arsenal"
+	name = "Last Edict Arsenal";
+	req_access_txt = "150"
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/faction/last_edict)
@@ -80243,7 +80271,8 @@
 /area/faction/survey_wings)
 "xbH" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "Last Edict Interrogation Facility"
+	name = "Last Edict Interrogation Facility";
+	req_access_txt = "150"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -123032,7 +123061,7 @@ ibE
 xCk
 ibE
 woP
-fcS
+tqo
 kCg
 xgH
 hdA
@@ -123289,7 +123318,7 @@ yhr
 yhr
 yhr
 cLX
-fcS
+tqo
 tvX
 xgH
 eVh
@@ -123546,7 +123575,7 @@ rxn
 avm
 yhr
 cLX
-fcS
+tqo
 srd
 xgH
 hdA
@@ -123803,7 +123832,7 @@ lxc
 tTp
 wUL
 rcV
-fcS
+tqo
 dhj
 xgH
 hdA
@@ -304986,7 +305015,7 @@ dVk
 fkY
 lrV
 gHt
-hUR
+fcS
 aId
 aId
 dKF

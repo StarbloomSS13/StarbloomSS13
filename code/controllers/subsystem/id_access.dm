@@ -100,6 +100,10 @@ SUBSYSTEM_DEF(id_access)
 	for(var/access in accesses_by_flag["[ACCESS_FLAG_SPECIAL]"])
 		flags_by_access |= list("[access]" = ACCESS_FLAG_SPECIAL)
 
+	accesses_by_flag["[ACCESS_FLAG_FACTIONAL]"] = FACTIONAL_ACCESS
+	for(var/access in accesses_by_flag["[ACCESS_FLAG_FACTIONAL]"])
+		flags_by_access |= list("[access]" = ACCESS_FLAG_FACTIONAL)
+
 	access_flag_string_by_flag["[ACCESS_FLAG_COMMON]"] = ACCESS_FLAG_COMMON_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_COMMAND]"] = ACCESS_FLAG_COMMAND_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_PRV_COMMAND]"] = ACCESS_FLAG_PRV_COMMAND_NAME
@@ -108,6 +112,7 @@ SUBSYSTEM_DEF(id_access)
 	access_flag_string_by_flag["[ACCESS_FLAG_SYNDICATE]"] = ACCESS_FLAG_SYNDICATE_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_AWAY]"] = ACCESS_FLAG_AWAY_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_SPECIAL]"] = ACCESS_FLAG_SPECIAL_NAME
+	access_flag_string_by_flag["[ACCESS_FLAG_FACTIONAL]"] = ACCESS_FLAG_FACTIONAL_NAME
 
 /// Populates the region lists with data about which accesses correspond to which regions.
 /datum/controller/subsystem/id_access/proc/setup_region_lists()
@@ -120,6 +125,7 @@ SUBSYSTEM_DEF(id_access)
 	accesses_by_region[REGION_ENGINEERING] = REGION_ACCESS_ENGINEERING
 	accesses_by_region[REGION_SUPPLY] = REGION_ACCESS_SUPPLY
 	accesses_by_region[REGION_COMMAND] = REGION_ACCESS_COMMAND
+	accesses_by_region[REGION_FACTIONAL] = REGION_ACCESS_FACTIONAL
 	accesses_by_region[REGION_CENTCOM] = REGION_ACCESS_CENTCOM
 
 	station_regions = REGION_AREA_STATION
@@ -153,7 +159,7 @@ SUBSYSTEM_DEF(id_access)
 
 	sub_department_managers_tgui = list(
 		"[ACCESS_CAPTAIN]" = list(
-			"regions" = list(REGION_COMMAND),
+			"regions" = list(REGION_COMMAND, REGION_FACTIONAL),
 			"head" = JOB_CAPTAIN,
 			"templates" = list(),
 			"pdas" = list(),
@@ -240,6 +246,7 @@ SUBSYSTEM_DEF(id_access)
 	wildcard_flags_by_wildcard[WILDCARD_NAME_SYNDICATE] = WILDCARD_FLAG_SYNDICATE
 	wildcard_flags_by_wildcard[WILDCARD_NAME_AWAY] = WILDCARD_FLAG_AWAY
 	wildcard_flags_by_wildcard[WILDCARD_NAME_SPECIAL] = WILDCARD_FLAG_SPECIAL
+	wildcard_flags_by_wildcard[WILDCARD_NAME_FACTIONAL] = WILDCARD_FLAG_FACTIONAL
 	wildcard_flags_by_wildcard[WILDCARD_NAME_FORCED] = WILDCARD_FLAG_FORCED
 
 /// Setup dictionary that converts access levels to text descriptions.
@@ -322,6 +329,11 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_CENT_SPECOPS]"] = "Code Black"
 	desc_by_access["[ACCESS_CENT_CAPTAIN]"] = "Code Gold"
 	desc_by_access["[ACCESS_CENT_BAR]"] = "Code Scotch"
+	desc_by_access["[ACCESS_UNITY]"] = "The Unity"
+	desc_by_access["[ACCESS_HOME_GUARD]"] = "The Home Guard"
+	desc_by_access["[ACCESS_CHIRON_BIOLABS]"] = "Chiron Biolabs"
+	desc_by_access["[ACCESS_MEKHANE]"] = "Mekhane"
+	desc_by_access["[ACCESS_CONSERVATORS]"] = "Conservators"
 
 /**
  * Returns the access bitflags associated with any given access level.
