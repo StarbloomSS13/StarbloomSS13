@@ -86,6 +86,17 @@
 #define ACCESS_AUX_BASE 72
 /// Service access, for service hallway and service consoles
 #define ACCESS_SERVICE 73
+/// Unity access, for the Unity Boardroom and storage room. Front doors shared with teleporter as of writing this.
+#define ACCESS_UNITY 74
+/// Home Guard access, for the Home Guard HQ.
+#define ACCESS_HOME_GUARD 75
+/// Chiron Biolabs access, for their lab.
+#define ACCESS_CHIRON_BIOLABS 76
+/// Mekhane access, for their own lab.
+#define ACCESS_MEKHANE 77
+/// Conservators access, for their facilities.
+#define ACCESS_CONSERVATORS 78
+/// Survey wings would go here but frankly just give them access flag 150 lmao.
 
 	//BEGIN CENTCOM ACCESS
 	/*Should leave plenty of room if we need to add more access levels.
@@ -185,6 +196,10 @@
 #define ACCESS_FLAG_SPECIAL_NAME "Special"
 /// Bitflag for Special accesses that ordinaryily shouldn't be on ID cards. See CULT_ACCESS.
 #define ACCESS_FLAG_SPECIAL (1 << 7)
+/// Displayed name for accesses that only exist for factions.
+#define ACCESS_FLAG_FACTIONAL_NAME "Factional"
+/// Bitflag for factional accesses. See FACTIONAL_ACCESS.
+#define ACCESS_FLAG_FACTIONAL (1 << 8)
 
 /// This wildcraft flag accepts any access level.
 #define WILDCARD_FLAG_ALL ALL
@@ -203,15 +218,15 @@
 /// Name associated with the private command wildcard bitflag.
 #define WILDCARD_NAME_PRV_COMMAND ACCESS_FLAG_PRV_COMMAND_NAME
 /// Access flags that can be applied to captain wildcard slots.
-#define WILDCARD_FLAG_CAPTAIN ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_CAPTAIN
+#define WILDCARD_FLAG_CAPTAIN ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_CAPTAIN | ACCESS_FLAG_FACTIONAL
 /// Name associated with the captain wildcard bitflag.
 #define WILDCARD_NAME_CAPTAIN ACCESS_FLAG_CAPTAIN_NAME
 /// Access flags that can be applied to centcom wildcard slots.
-#define WILDCARD_FLAG_CENTCOM ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_CAPTAIN | ACCESS_FLAG_CENTCOM
+#define WILDCARD_FLAG_CENTCOM ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_CAPTAIN | ACCESS_FLAG_CENTCOM | ACCESS_FLAG_FACTIONAL
 /// Name associated with the centcom wildcard bitflag.
 #define WILDCARD_NAME_CENTCOM ACCESS_FLAG_CENTCOM_NAME
 /// Access flags that can be applied to edict wildcard slots.
-#define WILDCARD_FLAG_EDICT ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_CAPTAIN | ACCESS_FLAG_EDICT
+#define WILDCARD_FLAG_EDICT ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_CAPTAIN | ACCESS_FLAG_EDICT | ACCESS_FLAG_FACTIONAL
 /// Name associated with the edict wildcard bitflag.
 #define WILDCARD_NAME_EDICT ACCESS_FLAG_EDICT_NAME
 /// Access flags that can be applied to offstation wildcard slots.
@@ -222,6 +237,10 @@
 #define WILDCARD_FLAG_SPECIAL ACCESS_FLAG_SPECIAL
 /// Name associated with the super special weird wildcard bitflag.
 #define WILDCARD_NAME_SPECIAL ACCESS_FLAG_SPECIAL_NAME
+/// Access flags that can be applied to factional wildcard slots.
+#define WILDCARD_FLAG_FACTIONAL ACCESS_FLAG_FACTIONAL
+/// Name associated with the factional wildcard bitflag
+#define WILDCARD_NAME_FACTIONAL ACCESS_FLAG_FACTIONAL_NAME
 /// Access flag that indicates a wildcard was forced onto an ID card.
 #define WILDCARD_FLAG_FORCED ALL
 /// Name associated with the wildcard bitflag that covers wildcards that have been forced onto an ID card that could not accept them.
@@ -348,14 +367,23 @@
 	ACCESS_BLOODCULT, \
 )
 
+/// Factional Accesses. Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_FACTIONAL)
+#define FACTIONAL_ACCESS list( \
+	ACCESS_UNITY, \
+	ACCESS_HOME_GUARD, \
+	ACCESS_CHIRON_BIOLABS, \
+	ACCESS_MEKHANE, \
+	ACCESS_CONSERVATORS, \
+)
+
 /// Name for the Global region.
 #define REGION_ALL_GLOBAL "All"
 /// Used to seed the accesses_by_region list in SSid_access. A list of every single access in the game.
-#define REGION_ACCESS_ALL_GLOBAL REGION_ACCESS_ALL_STATION + CENTCOM_ACCESS + EDICT_ACCESS + AWAY_ACCESS + CULT_ACCESS
+#define REGION_ACCESS_ALL_GLOBAL REGION_ACCESS_ALL_STATION + CENTCOM_ACCESS + EDICT_ACCESS + AWAY_ACCESS + CULT_ACCESS + FACTIONAL_ACCESS
 /// Name for the Station All Access region.
 #define REGION_ALL_STATION "Station"
 /// Used to seed the accesses_by_region list in SSid_access. A list of all station accesses.
-#define REGION_ACCESS_ALL_STATION COMMON_ACCESS + COMMAND_ACCESS + PRIVATE_COMMAND_ACCESS + CAPTAIN_ACCESS
+#define REGION_ACCESS_ALL_STATION COMMON_ACCESS + COMMAND_ACCESS + PRIVATE_COMMAND_ACCESS + CAPTAIN_ACCESS + FACTIONAL_ACCESS
 /// Name for the General region.
 #define REGION_GENERAL "General"
 /// Used to seed the accesses_by_region list in SSid_access. A list of general service accesses that are overseen by the HoP.
@@ -462,6 +490,16 @@
 	ACCESS_CAPTAIN, \
 	ACCESS_VAULT, \
 )
+/// Name for the Command "region".
+#define REGION_FACTIONAL "Factional"
+/// Used to seed the accesses_by_region list in SSid_access. A list of all command regional accesses that are factional in nature.
+#define REGION_ACCESS_FACTIONAL list( \
+	ACCESS_UNITY, \
+	ACCESS_HOME_GUARD, \
+	ACCESS_CHIRON_BIOLABS, \
+	ACCESS_MEKHANE, \
+	ACCESS_CONSERVATORS, \
+)
 /// Name for the Centcom region.
 #define REGION_CENTCOM "Central Command"
 /// Used to seed the accesses_by_region list in SSid_access. A list of all CENTCOM_ACCESS regional accesses.
@@ -515,6 +553,7 @@
 	REGION_ENGINEERING, \
 	REGION_SUPPLY, \
 	REGION_COMMAND, \
+	REGION_FACTIONAL, \
 )
 
 /// Used in ID card access adding procs. Will try to add all accesses and utilises free wildcards, skipping over any accesses it can't add.
