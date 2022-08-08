@@ -11818,7 +11818,7 @@
 /turf/open/floor/pod/light,
 /area/maintenance/floor1/port/aft)
 "dhP" = (
-/obj/effect/spawner/random/structure/crate,
+/obj/machinery/vending/wardrobe/cargo_wardrobe,
 /turf/open/floor/iron,
 /area/cargo/storage)
 "dhT" = (
@@ -11948,7 +11948,7 @@
 /area/maintenance/floor3/starboard)
 "djV" = (
 /obj/effect/turf_decal/trimline/green/filled/line,
-/obj/item/radio/intercom/directional/south,
+/obj/machinery/light/cold/no_nightlight/directional/south,
 /turf/open/floor/iron,
 /area/hallway/floor3/fore)
 "djW" = (
@@ -33669,6 +33669,7 @@
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 6
 	},
+/obj/item/radio/intercom/directional/south,
 /turf/open/floor/iron,
 /area/hallway/floor3/fore)
 "jIs" = (
@@ -56439,6 +56440,9 @@
 	},
 /obj/structure/rack/shelf,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/item/clothing/gloves/cargo_gauntlet,
+/obj/item/clothing/gloves/cargo_gauntlet,
+/obj/item/clothing/gloves/cargo_gauntlet,
 /turf/open/floor/iron,
 /area/cargo/warehouse)
 "qcb" = (
@@ -79285,6 +79289,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/hallway/floor2/aft)
+"wMT" = (
+/obj/effect/turf_decal/bot,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/random/structure/crate,
+/turf/open/floor/iron/smooth,
+/area/cargo/warehouse)
 "wMU" = (
 /obj/structure/showcase/cyborg/old{
 	dir = 4;
@@ -107956,7 +107966,7 @@ oic
 nkT
 oic
 oic
-yiZ
+wMT
 eEB
 gUS
 bUC
