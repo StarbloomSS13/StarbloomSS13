@@ -1,6 +1,6 @@
 import { Feature, FeatureDropdownInput } from "../../base";
 
-export const unity_access: Feature<number> = {
-  name: "The Unity",
+export const bonus_access: Feature<number> = {
+  name: "Faction Choice",
   component: FeatureDropdownInput,
 }
