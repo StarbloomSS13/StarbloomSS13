@@ -31,6 +31,9 @@
 	icon_state = "crowbar_red"
 	force = 8
 
+/obj/item/crowbar/red/purple
+	icon_state = "crowbar_purple"
+
 /obj/item/crowbar/abductor
 	name = "alien crowbar"
 	desc = "A hard-light crowbar. It appears to pry by itself, without any effort required."
@@ -60,6 +63,9 @@
 	desc = "It's a big crowbar. It doesn't fit in your pockets, because it's big. It feels oddly heavy.."
 	force = 20
 	icon_state = "crowbar_powergame"
+
+/obj/item/crowbar/large/heavy/purple
+	icon_state = "crowbar_felinidsec" // HENK
 
 /obj/item/crowbar/large/old
 	name = "old crowbar"
@@ -110,7 +116,7 @@
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
 /obj/item/crowbar/power/syndicate
-	name = "Syndicate jaws of life"
+	name = "Last Edict jaws of life"
 	desc = "A re-engineered copy of Nanotrasen's standard jaws of life. Can be used to force open airlocks in its crowbar configuration."
 	icon_state = "jaws_syndie"
 	toolspeed = 0.5
