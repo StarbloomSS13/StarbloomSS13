@@ -106,5 +106,10 @@ Remember that, when adding new preferences, you also need to add a corresponding
 
 */
 
+/datum/preference/choiced/access/bonus_access
+	savefile_identifier = PREFERENCE_CHARACTER
+	savefile_key = "bonus_access"
+	keys_to_access = list("Additional Access" = ACCESS_UNITY)
+
 #undef NO_EXTRA_ACCESS
 #undef NO_EXTRA_ACCESS_KEY
