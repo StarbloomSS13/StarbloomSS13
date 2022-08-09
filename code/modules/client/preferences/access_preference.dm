@@ -1,5 +1,5 @@
 #define NO_EXTRA_ACCESS -1
-#define NO_EXTRA_ACCESS_KEY "No Faction"
+#define NO_EXTRA_ACCESS_KEY "No Extra Access"
 
 /// Allowss you to make a preference for starting with additional roundstart access
 /// Contains a smidge of hackery to function before SSid_access is instantiated
