@@ -1,6 +1,6 @@
-import { Feature, FeatureDropdownInput } from "../../base";
+import { FeatureChoiced, FeatureDropdownInput } from "../../base";
 
-export const bonus_access: Feature<number> = {
+export const bonus_access: FeatureChoiced = {
   name: "Faction Choice",
   component: FeatureDropdownInput,
 };
