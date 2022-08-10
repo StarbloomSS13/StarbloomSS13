@@ -32,11 +32,11 @@
 
 /obj/item/clothing/under/syndicate/edict
 	desc = "A non-descript and slightly suspicious looking turtleneck with pitch-black cargo pants."
-	greyscale_colors = "#1c1c1c#2d1735#384339"
+	greyscale_colors = "#333333#61466a#384339"
 
 /obj/item/clothing/under/syndicate/skirt/edict
 	desc = "A non-descript and slightly suspicious looking turtleneck with a pitch-black skirt."
-	greyscale_colors = "#1c1c1c#2d1735#384339"
+	greyscale_colors = "#333333#61466a#384339"
 
 /obj/item/clothing/under/syndicate/bloodred
 	name = "purple sneaksuit"
