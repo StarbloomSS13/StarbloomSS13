@@ -2237,7 +2237,7 @@
 					/obj/item/clothing/under/tactical/tacticool,
 					/obj/item/storage/fancy/cigarettes/cigpack_syndicate,
 					/obj/item/storage/fancy/cigarettes/cigpack_shadyjims,
-					/obj/item/clothing/mask/gas/syndicate,
+					/obj/item/clothing/mask/gas/edict,
 					/obj/item/clothing/neck/necklace/dope,
 					/obj/item/vending_refill/donksoft)
 	crate_name = "crate"
