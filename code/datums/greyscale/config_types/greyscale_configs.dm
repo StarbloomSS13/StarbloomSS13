@@ -89,12 +89,12 @@
 
 /datum/greyscale_config/tactical_turtleneck
 	name = "Tactical Turtleneck"
-	icon_file = 'icons/obj/clothing/under/syndicate.dmi'
+	icon_file = 'icons/obj/clothing/under/tactical.dmi'
 	json_config = 'code/datums/greyscale/json_configs/tactical_turtleneck.json'
 
 /datum/greyscale_config/tactical_turtleneck_worn
 	name = "Worn Tactical Turtleneck"
-	icon_file = 'icons/mob/clothing/under/syndicate.dmi'
+	icon_file = 'icons/mob/clothing/under/tactical.dmi'
 	json_config = 'code/datums/greyscale/json_configs/tactical_turtleneck_worn.json'
 
 /datum/greyscale_config/jumpsuit_prison

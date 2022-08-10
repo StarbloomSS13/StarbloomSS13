@@ -3,7 +3,7 @@
 /datum/outfit/ctf
 	name = "CTF Rifleman (Solo)"
 	ears = /obj/item/radio/headset
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/tactical
 	suit = /obj/item/clothing/suit/armor/vest/ctf
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/combat

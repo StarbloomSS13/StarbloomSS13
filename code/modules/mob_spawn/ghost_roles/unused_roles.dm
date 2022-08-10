@@ -93,7 +93,7 @@
 
 /datum/outfit/syndicate_empty
 	name = "Syndicate Operative Empty"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/tactical
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	ears = /obj/item/radio/headset/edict/alt
@@ -241,7 +241,7 @@
 
 /datum/outfit/snowsyndie
 	name = "Syndicate Snow Operative"
-	uniform = /obj/item/clothing/under/syndicate/coldres
+	uniform = /obj/item/clothing/under/tactical/coldres
 	shoes = /obj/item/clothing/shoes/combat/coldres
 	ears = /obj/item/radio/headset/edict/alt
 	r_pocket = /obj/item/gun/ballistic/automatic/pistol
@@ -292,7 +292,7 @@
 
 /datum/outfit/syndicatespace/syndicrew
 	name = "Syndicate Ship Crew Member"
-	uniform = /obj/item/clothing/under/syndicate/combat
+	uniform = /obj/item/clothing/under/tactical/combat
 	glasses = /obj/item/clothing/glasses/night
 	mask = /obj/item/clothing/mask/gas/syndicate
 	ears = /obj/item/radio/headset/edict/alt
@@ -307,7 +307,7 @@
 
 /datum/outfit/syndicatespace/syndicaptain
 	name = "Syndicate Ship Captain"
-	uniform = /obj/item/clothing/under/syndicate/combat
+	uniform = /obj/item/clothing/under/tactical/combat
 	suit = /obj/item/clothing/suit/armor/vest/capcarapace/syndicate
 	head = /obj/item/clothing/head/hos/beret/syndicate
 	ears = /obj/item/radio/headset/edict/alt/leader

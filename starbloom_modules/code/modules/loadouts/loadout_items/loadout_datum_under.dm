@@ -512,10 +512,10 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 
 /datum/loadout_item/under/miscellaneous/turtleneck_crew
 	name = "Tactical Turtleneck"
-	item_path = /obj/item/clothing/under/syndicate/crew
+	item_path = /obj/item/clothing/under/tactical/crew
 	can_be_greyscale = TRUE
 
 /datum/loadout_item/under/miscellaneous/skirtleneck_crew
 	name = "Tactical Skirtleneck"
-	item_path = /obj/item/clothing/under/syndicate/skirt/crew
+	item_path = /obj/item/clothing/under/tactical/skirt/crew
 	can_be_greyscale = TRUE

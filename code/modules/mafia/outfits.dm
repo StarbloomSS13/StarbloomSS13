@@ -127,7 +127,7 @@
 	name = "Mafia Traitor"
 
 	mask = /obj/item/clothing/mask/gas/syndicate
-	uniform = /obj/item/clothing/under/syndicate/tacticool
+	uniform = /obj/item/clothing/under/tactical/tacticool
 	shoes = /obj/item/clothing/shoes/jackboots
 
 /datum/outfit/mafia/nightmare
