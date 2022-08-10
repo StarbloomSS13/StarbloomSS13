@@ -1,10 +1,7 @@
 /obj/structure/closet/syndicate
-	name = "armory closet"
-	desc = "Why is this here?"
+	name = "purple closet"
+	desc = "A purple closet, for tactical gear."
 	icon_state = "syndicate"
-
-/obj/structure/closet/syndicate/personal
-	desc = "It's a personal storage unit for operative gear."
 
 /obj/structure/closet/syndicate/personal/PopulateContents()
 	..()
@@ -18,9 +15,6 @@
 	new /obj/item/clothing/glasses/night(src)
 	new /obj/item/storage/belt/holster/nukie(src)
 	new /obj/item/pickaxe/drill/diamonddrill(src)
-
-/obj/structure/closet/syndicate/nuclear
-	desc = "It's a storage unit for a Syndicate boarding party."
 
 /obj/structure/closet/syndicate/nuclear/PopulateContents()
 	for(var/i in 1 to 5)

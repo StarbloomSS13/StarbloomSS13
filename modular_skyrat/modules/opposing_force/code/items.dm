@@ -36,7 +36,8 @@
 	desc = "\"REMEMBER\"."
 
 /obj/item/storage/box/edict_kit/insurgent/PopulateContents()
-	new /obj/item/clothing/under/syndicate(src)
+	new /obj/item/clothing/under/syndicate/edict(src)
+	new /obj/item/clothing/under/syndicate/skirt/edict(src)
 	new /obj/item/clothing/gloves/tackler/combat(src)
 	new /obj/item/clothing/shoes/combat(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
