@@ -58,7 +58,7 @@
 	loot = list(
 		/obj/item/clothing/under/tactical,
 		/obj/item/clothing/under/tactical/skirt,
-		/obj/item/clothing/under/tactical/bloodred,
+		/obj/item/clothing/under/tactical/purple,
 		/obj/item/clothing/under/tactical/tacticool,
 		/obj/item/clothing/under/tactical/tacticool/skirt,
 		/obj/item/clothing/under/tactical/sniper,
@@ -66,7 +66,7 @@
 		/obj/item/clothing/under/tactical/soviet,
 		/obj/item/clothing/under/tactical/combat,
 		/obj/item/clothing/under/tactical/rus_army,
-		/obj/item/clothing/under/tactical/bloodred/sleepytime,
+		/obj/item/clothing/under/tactical/purple/sleepytime,
 	)
 
 /obj/effect/spawner/random/clothing/gloves
