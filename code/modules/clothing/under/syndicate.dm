@@ -8,7 +8,7 @@
 	alt_covers_chest = TRUE
 	greyscale_config = /datum/greyscale_config/tactical_turtleneck
 	greyscale_config_worn = /datum/greyscale_config/tactical_turtleneck_worn
-	greyscale_colors = "#594032#37373E#5E1117"
+	greyscale_colors = "#5e483c#1c1c1c#4fb4e6"
 
 /obj/item/clothing/under/syndicate/skirt
 	name = "tactical skirtleneck"
@@ -32,11 +32,11 @@
 
 /obj/item/clothing/under/syndicate/edict
 	desc = "A non-descript and slightly suspicious looking turtleneck with pitch-black cargo pants."
-	greyscale_colors = "#3F3C40#61466A#00FF21"
+	greyscale_colors = "#1c1c1c#2d1735#384339"
 
 /obj/item/clothing/under/syndicate/skirt/edict
 	desc = "A non-descript and slightly suspicious looking turtleneck with a pitch-black skirt."
-	greyscale_colors = "#3F3C40#61466A#00FF21"
+	greyscale_colors = "#1c1c1c#2d1735#384339"
 
 /obj/item/clothing/under/syndicate/bloodred
 	name = "purple sneaksuit"
