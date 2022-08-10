@@ -159,7 +159,7 @@
 	has_fov = FALSE
 	flags_cover = MASKCOVERSEYES
 
-/obj/item/clothing/mask/gas/syndicate
+/obj/item/clothing/mask/gas/edict
 	name = "last edict mask"
 	desc = "A close-fitting tactical mask that can be connected to an air supply."
 	icon_state = "edict"

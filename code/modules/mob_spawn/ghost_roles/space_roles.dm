@@ -206,7 +206,7 @@
 	suit = /obj/item/clothing/suit/armor/vest
 	suit_store = /obj/item/gun/ballistic/automatic/pistol
 	back = /obj/item/storage/backpack/security
-	mask = /obj/item/clothing/mask/gas/syndicate
+	mask = /obj/item/clothing/mask/gas/edict
 
 /obj/effect/mob_spawn/ghost_role/human/syndicate/battlecruiser/captain
 	name = "Syndicate Battlecruiser Captain"
