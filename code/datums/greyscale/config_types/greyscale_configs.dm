@@ -87,6 +87,16 @@
 	icon_file = 'icons/mob/inhands/clothing_righthand.dmi'
 	json_config = 'code/datums/greyscale/json_configs/jumpsuit_inhand.json'
 
+/datum/greyscale_config/tactical_turtleneck
+	name = "Tactical Turtleneck"
+	icon_file = 'icons/obj/clothing/under/syndicate.dmi'
+	json_config = 'code/datums/greyscale/json_configs/tactical_turtleneck.json'
+
+/datum/greyscale_config/tactical_turtleneck_worn
+	name = "Worn Tactical Turtleneck"
+	icon_file = 'icons/mob/clothing/under/syndicate.dmi'
+	json_config = 'code/datums/greyscale/json_configs/tactical_turtleneck_worn.json'
+
 /datum/greyscale_config/jumpsuit_prison
 	name = "Prison Jumpsuit"
 	icon_file = 'icons/obj/clothing/under/color.dmi'

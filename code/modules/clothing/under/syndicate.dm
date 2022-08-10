@@ -32,6 +32,20 @@
 	icon = 'icons/obj/clothing/under/syndicate.dmi'
 	worn_icon = 'icons/mob/clothing/under/syndicate.dmi'
 
+/obj/item/clothing/under/syndicate/edict // TODO: Repath /syndicate/ to /tactical/
+	desc = "A non-descript and slightly suspicious looking turtleneck with pitch-black cargo pants."
+	icon_state = "tactical_turtleneck"
+
+	greyscale_config = /datum/greyscale_config/tactical_turtleneck
+
+	greyscale_config_worn = /datum/greyscale_config/tactical_turtleneck_worn
+
+	greyscale_colors = "#61466A#00FF21"
+
+/obj/item/clothing/under/syndicate/edict/skirts
+	desc = "A non-descript and slightly suspicious looking skirtleneck with pitch-black cargo pants."
+	icon_state = "tactical_skirtleneck"
+
 /obj/item/clothing/under/syndicate/bloodred
 	name = "purple sneaksuit"
 	desc = "It still counts as stealth if there are no witnesses."
