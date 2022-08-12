@@ -9712,6 +9712,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/smooth_half,
 /area/maintenance/radshelter/sci)
+"cAf" = (
+/obj/structure/cable/layer3,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
+/obj/item/radio/intercom/directional/east,
+/turf/open/floor/engine,
+/area/engineering/supermatter)
 "cAu" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance,
@@ -20636,14 +20642,6 @@
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron/dark/smooth_large,
 /area/science/robotics/lab)
-"fSr" = (
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/obj/structure/cable,
-/obj/item/radio/intercom/directional/west,
-/turf/open/floor/catwalk_floor/iron,
-/area/engineering/engine_smes)
 "fSv" = (
 /obj/machinery/door/airlock/atmos{
 	name = "Hypertorus Fusion Reactor"
@@ -72091,6 +72089,14 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/wood,
 /area/commons/vacant_room/office)
+"uRS" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/item/radio/intercom/directional/west,
+/turf/open/floor/catwalk_floor/iron,
+/area/engineering/engine_smes)
 "uSr" = (
 /obj/structure/filingcabinet/security,
 /turf/open/floor/wood,
@@ -126260,7 +126266,7 @@ wec
 fOq
 fxB
 iAS
-fSr
+uRS
 pSG
 fcx
 lOI
@@ -129339,7 +129345,7 @@ klY
 klY
 klY
 nHv
-klY
+cAf
 klY
 klY
 klY
