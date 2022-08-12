@@ -13450,6 +13450,7 @@
 "dHd" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/airalarm/directional/north,
+/obj/machinery/status_display/ai/directional/east,
 /turf/open/floor/iron/textured_large,
 /area/engineering/engine_smes)
 "dHf" = (
@@ -20635,6 +20636,14 @@
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron/dark/smooth_large,
 /area/science/robotics/lab)
+"fSr" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/item/radio/intercom/directional/west,
+/turf/open/floor/catwalk_floor/iron,
+/area/engineering/engine_smes)
 "fSv" = (
 /obj/machinery/door/airlock/atmos{
 	name = "Hypertorus Fusion Reactor"
@@ -45285,14 +45294,6 @@
 /obj/structure/cable/layer1,
 /turf/open/floor/plating,
 /area/engineering/supermatter)
-"mVY" = (
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/obj/structure/cable,
-/obj/item/radio/intercom/directional/west,
-/turf/open/floor/catwalk_floor/iron,
-/area/engineering/engine_smes)
 "mWd" = (
 /obj/structure/filingcabinet/filingcabinet,
 /obj/effect/turf_decal/siding/wood{
@@ -126259,7 +126260,7 @@ wec
 fOq
 fxB
 iAS
-mVY
+fSr
 pSG
 fcx
 lOI
