@@ -42,10 +42,10 @@
 
 /obj/item/clothing/under/misc/adminsuit
 	name = "administrative cybernetic jumpsuit"
-	icon = 'icons/obj/clothing/under/syndicate.dmi'
+	icon = 'icons/obj/clothing/under/tactical.dmi'
 	icon_state = "syndicate"
 	inhand_icon_state = "bl_suit"
-	worn_icon = 'icons/mob/clothing/under/syndicate.dmi'
+	worn_icon = 'icons/mob/clothing/under/tactical.dmi'
 	desc = "A cybernetically enhanced jumpsuit used for administrative duties."
 	permeability_coefficient = 0.01
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS

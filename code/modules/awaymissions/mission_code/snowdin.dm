@@ -6,7 +6,7 @@
 	requires_power = FALSE
 	static_lighting = FALSE
 	base_lighting_alpha = 255
-	
+
 /area/awaymission/snowdin/outside
 	name = "Snowdin Tundra Plains"
 	icon_state = "awaycontent25"
@@ -445,7 +445,7 @@
 	icon_state = "woodenbarricade-snow"
 	max_integrity = 125
 
-/obj/item/clothing/under/syndicate/coldres
+/obj/item/clothing/under/tactical/coldres
 	name = "insulated tactical turtleneck"
 	desc = "A nondescript and slightly suspicious-looking turtleneck with digital camouflage cargo pants. The interior has been padded with special insulation for both warmth and protection."
 	armor = list(MELEE = 20, BULLET = 10, LASER = 0,ENERGY = 5, BOMB = 0, BIO = 0, FIRE = 25, ACID = 25)

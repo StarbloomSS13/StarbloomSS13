@@ -15,7 +15,7 @@
 
 	id = /obj/item/card/id/advanced/chameleon/black
 	id_trim = /datum/id_trim/vr/operative
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/tactical
 	back = /obj/item/storage/backpack
 	backpack_contents = list(
 		/obj/item/storage/box/survival/syndie = 1,
