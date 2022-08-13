@@ -1,6 +1,3 @@
-/obj/item/camera
-	icon = 'starbloom_modules/aesthetics/items_and_weapons/items_and_weapons.dmi'
-
 /obj/item/implanter
 	icon = 'starbloom_modules/aesthetics/items_and_weapons/items_and_weapons.dmi'
 
