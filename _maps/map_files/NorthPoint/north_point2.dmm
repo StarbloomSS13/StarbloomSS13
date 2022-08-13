@@ -11107,9 +11107,10 @@
 /turf/open/floor/pod/light,
 /area/maintenance/floor4/starboard/aft)
 "cVp" = (
-/obj/item/storage/box/rxglasses,
-/turf/closed/wall,
-/area/medical/morgue)
+/obj/structure/disposalpipe/segment,
+/obj/machinery/camera/autoname/directional/east,
+/turf/open/floor/iron/chapel,
+/area/service/chapel)
 "cVt" = (
 /obj/machinery/portable_atmospherics/canister/bz,
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
@@ -11578,6 +11579,13 @@
 	},
 /turf/open/floor/iron,
 /area/commons/vacant_room/commissary)
+"ddd" = (
+/obj/structure/bodycontainer/morgue{
+	dir = 8
+	},
+/obj/machinery/camera/autoname/directional/east,
+/turf/open/floor/iron/dark,
+/area/service/chapel/funeral)
 "ddg" = (
 /turf/open/floor/iron,
 /area/hallway/floor3/aft)
@@ -17125,6 +17133,12 @@
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
 /turf/open/floor/iron/dark,
 /area/engineering/atmos/storage/gas)
+"eNo" = (
+/obj/machinery/camera/autoname/directional/south{
+	dir = 6
+	},
+/turf/open/floor/iron/white/textured_large,
+/area/service/chapel)
 "eNJ" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/structure/table/wood,
@@ -24592,6 +24606,10 @@
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor,
 /area/maintenance/floor1/port)
+"hdJ" = (
+/obj/machinery/light/directional/south,
+/turf/open/openspace,
+/area/service/library/upper)
 "hdK" = (
 /obj/structure/rack,
 /obj/item/clothing/suit/armor/riot{
@@ -43828,6 +43846,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/camera/autoname/directional/north,
 /turf/open/floor/iron/chapel{
 	dir = 4
 	},
@@ -44796,7 +44815,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/pink/visible/layer2{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold/purple/visible{
+/obj/machinery/atmospherics/pipe/smart/manifold/dark/visible{
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
@@ -45023,6 +45042,9 @@
 /area/maintenance/floor2/port/aft)
 "mTg" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/camera/autoname/directional/west{
+	dir = 9
+	},
 /turf/open/floor/iron/chapel{
 	dir = 1
 	},
@@ -62093,6 +62115,7 @@
 /obj/structure/chair/sofa/bench/right{
 	dir = 1
 	},
+/obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/iron,
 /area/service/chapel)
 "rOJ" = (
@@ -63588,6 +63611,9 @@
 /turf/open/floor/catwalk_floor,
 /area/maintenance/floor1/starboard)
 "spb" = (
+/obj/machinery/camera/autoname/directional/south{
+	dir = 6
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 10
 	},
@@ -66752,14 +66778,11 @@
 /turf/open/floor/pod/dark,
 /area/maintenance/floor1/starboard/aft)
 "tjF" = (
-/obj/machinery/camera/autoname/directional/west{
-	dir = 9
+/obj/machinery/door/firedoor/border_only,
+/turf/open/floor/iron/chapel{
+	dir = 8
 	},
-/obj/machinery/camera/autoname/directional/west{
-	dir = 9
-	},
-/turf/open/space/openspace,
-/area/space)
+/area/service/chapel)
 "tjJ" = (
 /obj/effect/turf_decal/caution/stand_clear/white{
 	dir = 4
@@ -73574,8 +73597,9 @@
 /obj/machinery/button/ec_glass{
 	id = "bodyburn";
 	name = "Privacy";
-	pixel_x = -32
+	pixel_x = -24
 	},
+/obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/carpet/orange,
 /area/service/chapel/funeral)
 "voA" = (
@@ -74384,6 +74408,7 @@
 /area/medical/psychology)
 "vzw" = (
 /obj/machinery/light_switch/directional/north,
+/obj/machinery/camera/autoname/directional/north,
 /turf/open/floor/iron/white/textured_large,
 /area/service/chapel)
 "vzx" = (
@@ -75914,7 +75939,7 @@
 /area/commons/vacant_room/commissary)
 "vWE" = (
 /obj/effect/spawner/structure/window/reinforced/tinted,
-/turf/open/floor/iron/dark,
+/turf/open/floor/plating,
 /area/service/chapel/office)
 "vWF" = (
 /turf/open/floor/iron/dark/side{
@@ -80434,7 +80459,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/pink/visible/layer2{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/smart/simple/purple/visible{
+/obj/machinery/atmospherics/pipe/smart/simple/dark/visible{
 	dir = 6
 	},
 /turf/open/floor/iron/dark,
@@ -82654,6 +82679,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
+/obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/wood/tile,
 /area/service/chapel/office)
 "xRk" = (
@@ -83034,6 +83060,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
+/obj/machinery/door/firedoor/border_only,
 /turf/open/floor/iron/chapel,
 /area/service/chapel)
 "xYg" = (
@@ -83412,9 +83439,9 @@
 /turf/open/floor/carpet/royalblack,
 /area/service/dining)
 "ydi" = (
-/obj/machinery/light/directional/east,
-/turf/open/openspace,
-/area/service/library/upper)
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/iron/chapel,
+/area/service/chapel)
 "ydj" = (
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 8
@@ -186381,7 +186408,7 @@ nKo
 buR
 buR
 buR
-cVp
+buR
 utM
 uwU
 wCb
@@ -257547,7 +257574,7 @@ wjm
 kEv
 hLd
 vcc
-vcc
+hdJ
 ovL
 kFJ
 oqd
@@ -257803,7 +257830,7 @@ dBj
 aib
 weg
 btG
-ydi
+vcc
 vcc
 ovL
 gem
@@ -318194,7 +318221,7 @@ kvR
 jYy
 nGL
 mvM
-nGL
+cVp
 mvM
 nGL
 mvM
@@ -319228,7 +319255,7 @@ ayl
 uYr
 aZG
 wwM
-ooy
+ydi
 aZG
 gVS
 aZG
@@ -319485,7 +319512,7 @@ wBU
 qVM
 jks
 veQ
-kpz
+tjF
 gYY
 gYY
 aZG
@@ -319992,7 +320019,7 @@ deM
 deM
 uLQ
 uLQ
-deM
+eNo
 aZG
 lLt
 mzr
@@ -322308,7 +322335,7 @@ iWQ
 xeQ
 qnG
 cRL
-cRL
+ddd
 wmc
 wmc
 wmc
@@ -331335,7 +331362,7 @@ ucA
 ucA
 ucA
 ucA
-tjF
+ucA
 ucA
 ucA
 ucA
