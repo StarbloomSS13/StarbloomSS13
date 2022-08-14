@@ -25,12 +25,12 @@
 .theme-mekhane {
   // Components
   @include meta.load-css('../components/Button.scss', $with: ('color-disabled': #616161));
-  @include meta.load-css('../components/Section.scss');
+  @include meta.load-css('../components/Section.scss', $with: ('separator-color': #ff9c32));
 
   // Layouts
   @include meta.load-css('../layouts/Layout.scss');
   @include meta.load-css('../layouts/Window.scss');
-  @include meta.load-css('../layouts/TitleBar.scss', $with: ('background-color': #7C2A16));
+  @include meta.load-css('../layouts/TitleBar.scss', $with: ('background-color': #781600));
 
   .Layout__content {
     background-image: url('../../assets/bg-mekhane.svg');
