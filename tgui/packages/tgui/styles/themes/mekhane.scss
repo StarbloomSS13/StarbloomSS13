@@ -10,27 +10,18 @@
   $color-bg-grad-spread: 5%,
 );
 
-.mkhcog-outer-teeth {
-  fill: #593100
-}
-
-.mkhcog-middle-ring {
-  fill: #6c4600
-}
-
-.mkhcog-inner-ring {
-  fill: #835a00
-}
+$TitleBar-color-mekhane: #781600;
+$Button-color-disabled-mekhane: #616161;
 
 .theme-mekhane {
   // Components
-  @include meta.load-css('../components/Button.scss', $with: ('color-disabled': #616161));
-  @include meta.load-css('../components/Section.scss', $with: ('separator-color': #ff9c32));
+  @include meta.load-css('../components/Button.scss', $with: ('color-disabled': $Button-color-disabled-mekhane));
+  @include meta.load-css('../components/Section.scss', $with: ('separator-color': color.scale(colors.$primary, $lightness: -10%)));
 
   // Layouts
   @include meta.load-css('../layouts/Layout.scss');
   @include meta.load-css('../layouts/Window.scss');
-  @include meta.load-css('../layouts/TitleBar.scss', $with: ('background-color': #781600));
+  @include meta.load-css('../layouts/TitleBar.scss', $with: ('background-color': $TitleBar-color-mekhane));
 
   .Layout__content {
     background-image: url('../../assets/bg-mekhane.svg');
