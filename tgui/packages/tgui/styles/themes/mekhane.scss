@@ -1,0 +1,38 @@
+@use 'sass:color';
+@use 'sass:meta';
+
+@use '../colors.scss' with ($primary: #FF8500,
+  $fg-map-keys: (),
+  $bg-map-keys: (),
+);
+
+@use '../base.scss' with ($color-bg: #260D00,
+  $color-bg-grad-spread: 5%,
+);
+
+.mkhcog-outer-teeth {
+  fill: #593100
+}
+
+.mkhcog-middle-ring {
+  fill: #6c4600
+}
+
+.mkhcog-inner-ring {
+  fill: #835a00
+}
+
+.theme-mekhane {
+  // Components
+  @include meta.load-css('../components/Button.scss', $with: ('color-disabled': #616161));
+  @include meta.load-css('../components/Section.scss');
+
+  // Layouts
+  @include meta.load-css('../layouts/Layout.scss');
+  @include meta.load-css('../layouts/Window.scss');
+  @include meta.load-css('../layouts/TitleBar.scss', $with: ('background-color': #7C2A16));
+
+  .Layout__content {
+    background-image: url('../../assets/bg-mekhane.svg');
+  }
+}
