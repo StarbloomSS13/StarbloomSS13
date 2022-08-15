@@ -347,12 +347,12 @@
 
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_MINING
+	access_list += ACCESS_SALVAGECREW
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining_station/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_MINING_STATION
+	access_list += ACCESS_SALVAGECREW_STATION
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/any/supply/mineral_storage/get_access()
@@ -822,12 +822,12 @@
 
 /obj/effect/mapping_helpers/airlock/access/all/supply/mining/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_MINING
+	access_list += ACCESS_SALVAGECREW
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/all/supply/mining_station/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_MINING_STATION
+	access_list += ACCESS_SALVAGECREW_STATION
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/all/supply/mineral_storage/get_access()

@@ -61,8 +61,8 @@
 		/obj/item/mod/module/stamp,
 	)
 
-/obj/item/mod/control/pre_equipped/mining
-	theme = /datum/mod_theme/mining
+/obj/item/mod/control/pre_equipped/salvage
+	theme = /datum/mod_theme/salvage
 	applied_core = /obj/item/mod/core/plasma
 	initial_modules = list(
 		/obj/item/mod/module/storage,

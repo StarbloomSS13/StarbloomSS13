@@ -19,22 +19,22 @@
 /obj/effect/light_emitter/singularity_act()
 	return
 
-/**********************Miner Lockers**************************/
+/**********************Salvage Crew Lockers**************************/
 
-/obj/structure/closet/wardrobe/miner
-	name = "mining wardrobe"
+/obj/structure/closet/wardrobe/salvagecrew
+	name = "salvage wardrobe"
 	icon_door = "mixed"
 
-/obj/structure/closet/wardrobe/miner/PopulateContents()
+/obj/structure/closet/wardrobe/salvagecrew/PopulateContents()
 	new /obj/item/storage/backpack/duffelbag(src)
 	new /obj/item/storage/backpack/explorer(src)
 	new /obj/item/storage/backpack/satchel/explorer(src)
-	new /obj/item/clothing/under/rank/cargo/miner/lavaland(src)
-	new /obj/item/clothing/under/rank/cargo/miner/lavaland(src)
-	new /obj/item/clothing/under/rank/cargo/miner/lavaland(src)
-	new /obj/item/clothing/shoes/workboots/mining(src)
-	new /obj/item/clothing/shoes/workboots/mining(src)
-	new /obj/item/clothing/shoes/workboots/mining(src)
+	new /obj/item/clothing/under/rank/cargo/salvagecrew/explorer(src)
+	new /obj/item/clothing/under/rank/cargo/salvagecrew/explorer(src)
+	new /obj/item/clothing/under/rank/cargo/salvagecrew/explorer(src)
+	new /obj/item/clothing/shoes/workboots/salvage(src)
+	new /obj/item/clothing/shoes/workboots/salvage(src)
+	new /obj/item/clothing/shoes/workboots/salvage(src)
 	new /obj/item/clothing/gloves/color/black(src)
 	new /obj/item/clothing/gloves/color/black(src)
 	new /obj/item/clothing/gloves/color/black(src)
@@ -42,21 +42,21 @@
 	new /obj/item/clothing/suit/hooded/wintercoat/miner(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/miner(src)
 
-/obj/structure/closet/secure_closet/miner
-	name = "miner's equipment"
-	icon_state = "mining"
-	req_access = list(ACCESS_MINING)
+/obj/structure/closet/secure_closet/salvagecrew
+	name = "salvage crew equipment"
+	icon_state = "salvage"
+	req_access = list(ACCESS_SALVAGECREW)
 
-/obj/structure/closet/secure_closet/miner/unlocked
+/obj/structure/closet/secure_closet/salvagecrew/unlocked
 	locked = FALSE
 
-/obj/structure/closet/secure_closet/miner/PopulateContents()
+/obj/structure/closet/secure_closet/salvagecrew/PopulateContents()
 	..()
 	new /obj/item/stack/sheet/mineral/sandbags(src, 5)
 	new /obj/item/storage/box/emptysandbags(src)
 	new /obj/item/shovel(src)
 	new /obj/item/pickaxe/mini(src)
-	new /obj/item/radio/headset/headset_cargo/mining(src)
+	new /obj/item/radio/headset/headset_cargo/salvagecrew(src)
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/storage/bag/plants(src)
 	new /obj/item/storage/bag/ore(src)
