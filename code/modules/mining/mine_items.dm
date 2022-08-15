@@ -64,22 +64,22 @@
 	new /obj/item/gun/energy/kinetic_accelerator(src)
 	new /obj/item/clothing/glasses/meson(src)
 	new /obj/item/survivalcapsule(src)
-	new /obj/item/assault_pod/mining(src)
+	new /obj/item/assault_pod/auxbase(src)
 
 
 /**********************Shuttle Computer**************************/
 
-/obj/machinery/computer/shuttle/mining
-	name = "mining shuttle console"
-	desc = "Used to call and send the mining shuttle."
-	circuit = /obj/item/circuitboard/computer/mining_shuttle
-	shuttleId = "mining"
-	possible_destinations = "mining_home;mining_away;landing_zone_dock;mining_public"
+/obj/machinery/computer/shuttle/salvage
+	name = "salvage shuttle console"
+	desc = "Used to call and send the salvage shuttle."
+	circuit = /obj/item/circuitboard/computer/salvage_shuttle
+	shuttleId = "mining" // Unchanged because it'd be a nightmare
+	possible_destinations = "mining_home;mining_away;landing_zone_dock;mining_public" // Ditto
 	no_destination_swap = TRUE
 	var/static/list/dumb_rev_heads = list()
 
 //ATTACK HAND IGNORING PARENT RETURN VALUE
-/obj/machinery/computer/shuttle/mining/attack_hand(mob/user, list/modifiers)
+/obj/machinery/computer/shuttle/salvage/attack_hand(mob/user, list/modifiers)
 	if(is_station_level(user.z) && user.mind && IS_HEAD_REVOLUTIONARY(user) && !(user.mind in dumb_rev_heads))
 		to_chat(user, span_warning("You get a feeling that leaving the station might be a REALLY dumb idea..."))
 		dumb_rev_heads += user.mind
@@ -91,16 +91,16 @@
 
 	return ..()
 
-/obj/machinery/computer/shuttle/mining/common
+/obj/machinery/computer/shuttle/salvage/common // TODO: Send this and related code to the shadow realm
 	name = "lavaland shuttle console"
 	desc = "Used to call and send the lavaland shuttle."
-	circuit = /obj/item/circuitboard/computer/mining_shuttle/common
+	circuit = /obj/item/circuitboard/computer/salvage_shuttle/common
 	shuttleId = "mining_common"
 	possible_destinations = "commonmining_home;lavaland_common_away;landing_zone_dock;mining_public"
 
 /**********************Mining car (Crate like thing, not the rail car)**************************/
 
 /obj/structure/closet/crate/miningcar
-	desc = "A mining car. This one doesn't work on rails, but has to be dragged."
-	name = "Mining car (not for rails)"
+	name = "Minecart"
+	desc = "For storing valuable ores, or kidnapped locals."
 	icon_state = "miningcar"

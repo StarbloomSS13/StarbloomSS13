@@ -74,10 +74,10 @@
 #define ACCESS_MAIL_SORTING "mail_sorting"
 /// For releasing minerals from the ORM
 #define ACCESS_MINERAL_STOREROOM "mineral_storeroom"
-#define ACCESS_SALVAGECREW_STATION "mining_station"
+#define ACCESS_SALVAGECREW_STATION "salvagecrew_station"
 #define ACCESS_VAULT "vault"
 #define ACCESS_QM "qm"
-#define ACCESS_SALVAGECREW "mining"
+#define ACCESS_SALVAGECREW "salvagecrew"
 
 ///Science general access
 #define ACCESS_SCIENCE "science"
