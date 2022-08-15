@@ -4647,7 +4647,7 @@
 /area/medical/patients_rooms)
 "biL" = (
 /obj/machinery/door/airlock/mining{
-	name = "Mining Office"
+	name = "Salvage Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -28061,11 +28061,12 @@
 "ieh" = (
 /obj/docking_port/stationary{
 	dwidth = 3;
-	height = 5;
+	height = 7;
 	id = "mining_home";
-	name = "mining shuttle bay";
+	name = "salvage shuttle bay";
 	roundstart_template = /datum/map_template/shuttle/mining/delta;
-	width = 7
+	width = 8;
+	dir = 8
 	},
 /turf/open/floor/engine,
 /area/cargo/miningdock)
@@ -36822,7 +36823,7 @@
 /area/space/nearstation)
 "kFP" = (
 /obj/machinery/door/airlock/mining{
-	name = "Mining Office"
+	name = "Salvage Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -46696,7 +46697,7 @@
 /area/maintenance/floor1/starboard/fore)
 "noa" = (
 /obj/machinery/door/airlock/mining{
-	name = "Mining Decontamination"
+	name = "Salvage Decontamination"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/supply/mining,
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
@@ -64262,7 +64263,7 @@
 /area/solars/port/fore)
 "syp" = (
 /obj/machinery/door/airlock/mining{
-	name = "Mining Decontamination"
+	name = "Salvage Decontamination"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining,
 /obj/structure/cable,
@@ -115997,7 +115998,7 @@ bZN
 bZN
 bZN
 bZN
-ieh
+bZN
 wdP
 xhI
 mBB
@@ -116766,7 +116767,7 @@ bZN
 bZN
 bZN
 bZN
-bZN
+ieh
 bZN
 bZN
 wdP
