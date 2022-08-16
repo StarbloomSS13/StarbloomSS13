@@ -492,21 +492,26 @@
 //this is to check if this shuttle can physically dock at dock S
 /obj/docking_port/mobile/proc/canDock(obj/docking_port/stationary/S)
 	if(!istype(S))
+		message_admins("Shuttle [id] attempted to dock at [S], which is not a docking port!")
 		return SHUTTLE_NOT_A_DOCKING_PORT
 
 	if(istype(S, /obj/docking_port/stationary/transit))
 		return SHUTTLE_CAN_DOCK
 
 	if(dwidth > S.dwidth)
+		message_admins("Shuttle [id] (Dwidth of [dwidth]) attempted to dock at [S] (Dwidth of [S.dwidth]), but it's dwidth is too large!")
 		return SHUTTLE_DWIDTH_TOO_LARGE
 
 	if(width-dwidth > S.width-S.dwidth)
+		message_admins("Shuttle [id] (Width Difference of [width-dwidth]) attempted to dock at [S] (Width Defference of [width-dwidth]), but's too wide!")
 		return SHUTTLE_WIDTH_TOO_LARGE
 
 	if(dheight > S.dheight)
+		message_admins("Shuttles [id] (DHeight of [dheight]) attempted to dock at [S] (DHeight of [S.dheight]), but it's dheight is too large!")
 		return SHUTTLE_DHEIGHT_TOO_LARGE
 
 	if(height-dheight > S.height-S.dheight)
+		message_admins("Shuttle [id] (Height Difference of [height-dheight]) attempted to dock at [S] (Height Difference of [S.height-S.dheight]), but it's too tall!")
 		return SHUTTLE_HEIGHT_TOO_LARGE
 
 	//check the dock isn't occupied
