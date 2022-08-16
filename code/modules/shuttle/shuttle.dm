@@ -503,7 +503,7 @@
 		return SHUTTLE_DWIDTH_TOO_LARGE
 
 	if(width-dwidth > S.width-S.dwidth)
-		message_admins("Shuttle [id] (Width Difference of [width-dwidth]) attempted to dock at [S] (Width Defference of [width-dwidth]), but's too wide!")
+		message_admins("Shuttle [id] (Width Difference of [width-dwidth]) attempted to dock at [S] (Width Difference of [S.width-S.dwidth]), but's too wide!")
 		return SHUTTLE_WIDTH_TOO_LARGE
 
 	if(dheight > S.dheight)
