@@ -36,23 +36,17 @@
 /turf/open/floor/mineral/titanium/tiled,
 /area/shuttle/mining)
 "h" = (
-/obj/machinery/door/airlock/external,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
 /obj/docking_port/mobile{
-	dwidth = 2;
-	height = 7;
+	dwidth = 4;
+	height = 6;
 	id = "mining";
 	name = "salvage shuttle";
 	port_direction = 4;
 	width = 6;
-	dir = 8
+	dir = 8;
+	dheight = 1
 	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
-	},
-/turf/open/floor/plating,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/mining)
 "l" = (
 /obj/structure/shuttle/engine/heater,
@@ -325,7 +319,7 @@ F
 F
 D
 F
-F
+h
 F
 S
 l
@@ -338,7 +332,7 @@ B
 F
 s
 F
-h
+u
 K
 s
 "}
