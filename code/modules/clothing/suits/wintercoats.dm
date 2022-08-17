@@ -413,9 +413,9 @@
 	desc = "A dark brown winter hood"
 	icon_state = "hood_qm"
 
-// Shaft Miner
+// Salvage Winter Coat
 /obj/item/clothing/suit/hooded/wintercoat/miner
-	name = "mining winter coat"
+	name = "salvage winter coat"
 	desc = "A dusty button up winter coat. The zipper tab looks like a tiny pickaxe."
 	icon_state = "coatminer"
 	inhand_icon_state = "coatminer"
