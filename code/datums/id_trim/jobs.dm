@@ -577,7 +577,7 @@
 	trim_state = "trim_salvagecrew"
 	department_color = COLOR_CARGO_BROWN
 	subdepartment_color = COLOR_SCIENCE_PINK
-	sechud_icon_state = SECHUD_SHAFT_MINER
+	sechud_icon_state = SECHUD_SALVAGE_CREW
 	extra_access = list(ACCESS_CARGO, ACCESS_MAINT_TUNNELS, ACCESS_QM)
 	minimal_access = list(ACCESS_AUX_BASE, ACCESS_MAIL_SORTING, ACCESS_MECH_MINING, ACCESS_MINERAL_STOREROOM, ACCESS_SALVAGECREW,
 					ACCESS_SALVAGECREW_STATION)
