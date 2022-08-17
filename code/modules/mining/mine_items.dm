@@ -38,9 +38,9 @@
 	new /obj/item/clothing/gloves/color/black(src)
 	new /obj/item/clothing/gloves/color/black(src)
 	new /obj/item/clothing/gloves/color/black(src)
-	new /obj/item/clothing/suit/hooded/wintercoat/miner(src)
-	new /obj/item/clothing/suit/hooded/wintercoat/miner(src)
-	new /obj/item/clothing/suit/hooded/wintercoat/miner(src)
+	new /obj/item/clothing/suit/hooded/wintercoat/salvage(src)
+	new /obj/item/clothing/suit/hooded/wintercoat/salvage(src)
+	new /obj/item/clothing/suit/hooded/wintercoat/salvage(src)
 
 /obj/structure/closet/secure_closet/salvagecrew
 	name = "salvage crew equipment"

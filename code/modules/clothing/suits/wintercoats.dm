@@ -414,7 +414,7 @@
 	icon_state = "hood_qm"
 
 // Salvage Winter Coat
-/obj/item/clothing/suit/hooded/wintercoat/miner
+/obj/item/clothing/suit/hooded/wintercoat/salvage
 	name = "salvage winter coat"
 	desc = "A dusty button up winter coat. The zipper tab looks like a tiny pickaxe."
 	icon_state = "coatminer"
@@ -429,9 +429,9 @@
 		/obj/item/storage/bag/ore,
 	)
 	armor = list(MELEE = 10, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
-	hoodtype = /obj/item/clothing/head/hooded/winterhood/miner
+	hoodtype = /obj/item/clothing/head/hooded/winterhood/salvage
 
-/obj/item/clothing/head/hooded/winterhood/miner
+/obj/item/clothing/head/hooded/winterhood/salvage
 	desc = "A dusty winter coat hood."
 	icon_state = "hood_miner"
 	armor = list(MELEE = 10, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
