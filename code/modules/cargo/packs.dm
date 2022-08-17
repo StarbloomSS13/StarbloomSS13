@@ -1643,7 +1643,7 @@
 	cost = CARGO_CRATE_VALUE * 4
 	access = ACCESS_QM
 	access_view = ACCESS_SALVAGECREW_STATION
-	contains = list(/obj/item/storage/backpack/duffelbag/mining_conscript)
+	contains = list(/obj/item/storage/backpack/duffelbag/salvage_conscript)
 	crate_name = "salvage crew starter kit"
 	crate_type = /obj/structure/closet/crate/secure
 
