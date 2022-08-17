@@ -43,7 +43,7 @@
 
 /obj/structure/scrap/attackby(obj/item/tool, mob/user, params)
 	// We check here if we have a shovel, OR a valid welding tool.
-	if(tool.tool_behaviour == TOOL_SHOVEL || tool.tool_behaviour == TOOL_WELDER &! tool.tool_start_check(user, amount=0))
+	if(tool.tool_behaviour == TOOL_SHOVEL || tool.tool_behaviour == TOOL_WELDER && tool.tool_start_check(user, amount=0))
 		user.visible_message(span_notice("[user] [pick(ways)] \the [src]..."))
 		// If the tool works, we spawn loot and delete the scrap pile.
 		if(tool.use_tool(src, user, 150, volume = 100))
