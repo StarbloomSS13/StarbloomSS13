@@ -145,12 +145,6 @@
 /obj/item/stack/rods/ten,
 /turf/open/floor/plating/elevatorshaft,
 /area/scrapping/rimworld/centralpavillion/lower)
-"dzW" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 6
-	},
-/turf/open/floor/plating,
-/area/scrapping/rimworld/centralpavillion/lower)
 "dCw" = (
 /obj/machinery/door/airlock/hatch{
 	name = "MiniSat Service"
@@ -214,6 +208,12 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating/elevatorshaft,
 /area/scrapping/rimworld/centralpavillion/lower)
+"fiL" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 6
+	},
+/turf/open/floor/plating,
+/area/scrapping/rimworld/centralpavillion/lower)
 "fqy" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -227,6 +227,11 @@
 "fBy" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/catwalk_floor/iron,
+/area/scrapping/rimworld/centralpavillion/lower)
+"fOj" = (
+/obj/effect/turf_decal/weather/dirt,
+/obj/effect/spawner/random/structure/girder,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "gaG" = (
 /turf/open/floor/plating,
@@ -308,12 +313,8 @@
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "gVw" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "AI Core shutters";
-	name = "AI Core Shutter"
-	},
-/turf/open/floor/plating,
+/obj/effect/mob_spawn/corpse/human/charredskeleton,
+/turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion/lower)
 "haJ" = (
 /obj/effect/turf_decal/stripes/line{
@@ -369,16 +370,6 @@
 	listening = 0;
 	name = "Private Channel";
 	pixel_x = 8
-	},
-/obj/machinery/door/window{
-	atom_integrity = 300;
-	base_state = "leftsecure";
-	dir = 8;
-	icon_state = "leftsecure";
-	layer = 4.1;
-	name = "Tertiary AI Core Access";
-	pixel_x = -3;
-	req_access_txt = "16"
 	},
 /turf/open/floor/circuit,
 /area/scrapping/rimworld/centralpavillion/lower)
@@ -448,16 +439,6 @@
 	name = "Private Channel";
 	pixel_x = -8
 	},
-/obj/machinery/door/window{
-	atom_integrity = 300;
-	base_state = "rightsecure";
-	dir = 4;
-	icon_state = "rightsecure";
-	layer = 4.1;
-	name = "Secondary AI Core Access";
-	pixel_x = 4;
-	req_access_txt = "16"
-	},
 /obj/structure/scrap,
 /turf/open/floor/circuit,
 /area/scrapping/rimworld/centralpavillion/lower)
@@ -501,6 +482,10 @@
 /area/scrapping/rimworld/centralpavillion/lower)
 "kjK" = (
 /turf/closed/wall,
+/area/scrapping/rimworld/centralpavillion/lower)
+"ktm" = (
+/obj/effect/spawner/random/structure/grille,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "ktV" = (
 /obj/effect/turf_decal/stripes/line{
@@ -655,6 +640,13 @@
 "nhZ" = (
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
+"npB" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 4
+	},
+/obj/item/stack/sheet/iron/five,
+/turf/open/floor/plating,
+/area/scrapping/rimworld/centralpavillion/lower)
 "nzy" = (
 /obj/structure/scrap,
 /turf/open/floor/iron,
@@ -713,6 +705,7 @@
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 4
 	},
+/obj/item/stack/sheet/mineral/plasma/thirty,
 /turf/open/floor/iron/grimy,
 /area/scrapping/rimworld/centralpavillion/lower)
 "pnO" = (
@@ -759,11 +752,6 @@
 	},
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
-"qMv" = (
-/obj/effect/turf_decal/weather/dirt,
-/obj/effect/spawner/random/structure/girder,
-/turf/open/floor/plating,
-/area/scrapping/rimworld/centralpavillion/lower)
 "ryV" = (
 /obj/structure/flora/junglebush/b,
 /obj/structure/window/reinforced/spawner/east,
@@ -792,13 +780,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/lushplanet/underground)
-"stb" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 4
-	},
-/obj/item/stack/sheet/iron/five,
-/turf/open/floor/plating,
-/area/scrapping/rimworld/centralpavillion/lower)
 "sHD" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -40641,7 +40622,7 @@ xHC
 kjK
 lHU
 iuP
-gVw
+fqy
 jvP
 rOP
 aeW
@@ -41154,7 +41135,7 @@ iuP
 uyZ
 igh
 iuP
-iuP
+gVw
 gEc
 igh
 aeW
@@ -41180,7 +41161,7 @@ kjK
 fqy
 fqy
 kjK
-fqy
+ktm
 fqy
 kjK
 kjK
@@ -41192,7 +41173,7 @@ kjK
 agI
 jzj
 nhZ
-qMv
+fOj
 kjK
 uMy
 uMy
@@ -41448,8 +41429,8 @@ nhZ
 nhZ
 nhZ
 nhZ
-stb
-dzW
+npB
+fiL
 laP
 uMy
 uMy
