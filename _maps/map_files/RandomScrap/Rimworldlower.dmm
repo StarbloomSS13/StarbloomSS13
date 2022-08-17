@@ -15,6 +15,11 @@
 /obj/structure/scrap,
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion/lower)
+"agC" = (
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/turf/open/floor/plating,
+/area/scrapping/rimworld/centralpavillion/lower)
 "agI" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -37,13 +42,15 @@
 /obj/machinery/atmospherics/components/unary/portables_connector/layer4{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/rust,
 /area/lushplanet/underground)
 "aCH" = (
 /obj/structure/chair/office{
 	dir = 1
 	},
 /obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/grimy,
 /area/scrapping/rimworld/centralpavillion/lower)
 "aJd" = (
@@ -54,7 +61,8 @@
 /obj/machinery/power/apc/auto_name/directional/south{
 	start_charge = 0
 	},
-/turf/open/floor/circuit,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "aNl" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner{
@@ -62,13 +70,17 @@
 	},
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
+"aNo" = (
+/obj/structure/cable,
+/turf/open/floor/circuit/red/anim,
+/area/scrapping/rimworld/centralpavillion/lower)
 "aUD" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	cycle_id = "ai-passthrough"
-	},
 /obj/structure/cable,
 /obj/machinery/door/airlock/hatch{
 	name = "MiniSat Antechamber"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "dereai-passthrough"
 	},
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
@@ -80,7 +92,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
+/turf/open/floor/plating/rust,
 /area/lushplanet/underground)
 "bzF" = (
 /obj/machinery/atmospherics/pipe/multiz/scrubbers/hidden/layer2{
@@ -124,8 +136,13 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion/lower)
+"cFB" = (
+/obj/machinery/atmospherics/pipe/multiz/supply/hidden/layer4,
+/turf/open/floor/plating/rust,
+/area/lushplanet/underground)
 "cNE" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -141,6 +158,20 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
+"cSg" = (
+/mob/living/simple_animal/hostile/asteroid/goliath/beast,
+/turf/open/misc/dirt/jungle,
+/area/lushplanet/underground)
+"dch" = (
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/dark,
+/area/scrapping/rimworld/centralpavillion/lower)
+"dfx" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/cable,
+/turf/open/floor/plating/rust,
+/area/lushplanet/underground)
 "djG" = (
 /obj/item/stack/rods/ten,
 /turf/open/floor/plating/elevatorshaft,
@@ -149,10 +180,11 @@
 /obj/machinery/door/airlock/hatch{
 	name = "MiniSat Service"
 	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	cycle_id = "ai-passthrough"
-	},
 /obj/structure/cable,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "dereai-passthrough"
+	},
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion/lower)
 "dJw" = (
@@ -160,7 +192,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
+/turf/open/floor/plating/rust,
 /area/lushplanet/underground)
 "dLy" = (
 /obj/machinery/atmospherics/pipe/multiz/supply/hidden/layer4{
@@ -168,7 +200,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
-/turf/open/floor/plating,
+/turf/open/floor/plating/rust,
 /area/lushplanet/underground)
 "ebm" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/layer2{
@@ -180,6 +212,13 @@
 /obj/structure/scrap,
 /turf/open/misc/dirt/jungle,
 /area/lushplanet/underground)
+"eBh" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 4
+	},
+/obj/item/stack/sheet/iron/five,
+/turf/open/floor/plating,
+/area/scrapping/rimworld/centralpavillion/lower)
 "eGV" = (
 /obj/structure/safe,
 /obj/item/clothing/head/bearpelt,
@@ -199,6 +238,10 @@
 	},
 /turf/open/floor/plating,
 /area/lushplanet/underground)
+"eOd" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/grimy,
+/area/scrapping/rimworld/centralpavillion/lower)
 "ffd" = (
 /obj/structure/cable/multilayer/multiz,
 /turf/open/floor/plating,
@@ -208,12 +251,6 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating/elevatorshaft,
 /area/scrapping/rimworld/centralpavillion/lower)
-"fiL" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 6
-	},
-/turf/open/floor/plating,
-/area/scrapping/rimworld/centralpavillion/lower)
 "fqy" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -222,16 +259,19 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
 "fBy" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/catwalk_floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
-"fOj" = (
-/obj/effect/turf_decal/weather/dirt,
-/obj/effect/spawner/random/structure/girder,
-/turf/open/floor/plating,
+"fSm" = (
+/turf/closed/wall/r_wall/rust,
+/area/scrapping/rimworld/centralpavillion/lower)
+"fVU" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/closed/wall,
 /area/scrapping/rimworld/centralpavillion/lower)
 "gaG" = (
 /turf/open/floor/plating,
@@ -261,6 +301,7 @@
 	dir = 4
 	},
 /obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/grimy,
 /area/scrapping/rimworld/centralpavillion/lower)
 "gtz" = (
@@ -268,6 +309,7 @@
 	dir = 1
 	},
 /obj/structure/cable,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "gwS" = (
@@ -295,10 +337,16 @@
 	dir = 5
 	},
 /obj/structure/scrap,
-/turf/open/floor/circuit,
+/turf/open/floor/circuit/red/anim,
+/area/scrapping/rimworld/centralpavillion/lower)
+"gIb" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
 "gJR" = (
 /obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/grimy,
 /area/scrapping/rimworld/centralpavillion/lower)
 "gLC" = (
@@ -313,15 +361,19 @@
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "gVw" = (
-/obj/effect/mob_spawn/corpse/human/charredskeleton,
-/turf/open/floor/iron/dark,
+/turf/closed/wall/rust,
 /area/scrapping/rimworld/centralpavillion/lower)
 "haJ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
 /obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
+/area/scrapping/rimworld/centralpavillion/lower)
+"hiY" = (
+/obj/effect/mob_spawn/corpse/human/charredskeleton,
+/turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion/lower)
 "hjR" = (
 /obj/effect/turf_decal/stripes/line,
@@ -329,6 +381,7 @@
 /area/scrapping/rimworld/centralpavillion/lower)
 "hkb" = (
 /obj/structure/cable,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
 "hoA" = (
@@ -371,7 +424,7 @@
 	name = "Private Channel";
 	pixel_x = 8
 	},
-/turf/open/floor/circuit,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "hQt" = (
 /turf/open/floor/plating,
@@ -393,7 +446,8 @@
 	dir = 6
 	},
 /obj/structure/scrap,
-/turf/open/floor/circuit,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "iuP" = (
 /turf/open/floor/iron/dark,
@@ -409,6 +463,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/power/smes,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "iVA" = (
@@ -416,7 +471,7 @@
 	name = "MiniSat Chamber Hallway"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	cycle_id = "ai-passthrough"
+	cycle_id = "dereai-passthrough"
 	},
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion/lower)
@@ -440,16 +495,22 @@
 	pixel_x = -8
 	},
 /obj/structure/scrap,
-/turf/open/floor/circuit,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "jlm" = (
 /obj/item/stack/rods/ten,
 /turf/open/misc/dirt/jungle,
 /area/lushplanet/underground)
+"jvv" = (
+/obj/structure/cable,
+/obj/structure/scrap,
+/turf/open/floor/iron/dark,
+/area/scrapping/rimworld/centralpavillion/lower)
 "jvP" = (
 /obj/machinery/porta_turret/ai,
 /obj/effect/turf_decal/stripes/line,
-/turf/open/floor/circuit,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "jyE" = (
 /obj/effect/turf_decal/stripes/line,
@@ -463,36 +524,40 @@
 	},
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
+"jDe" = (
+/obj/effect/turf_decal/siding/thinplating/dark{
+	dir = 8
+	},
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/grimy,
+/area/scrapping/rimworld/centralpavillion/lower)
 "jSY" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
 /obj/machinery/porta_turret/syndicate/energy,
-/turf/open/floor/circuit,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "khP" = (
 /obj/machinery/door/airlock/hatch{
 	name = "MiniSat Atmospherics"
 	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	cycle_id = "ai-passthrough"
-	},
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "dereai-passthrough"
+	},
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion/lower)
 "kjK" = (
 /turf/closed/wall,
-/area/scrapping/rimworld/centralpavillion/lower)
-"ktm" = (
-/obj/effect/spawner/random/structure/grille,
-/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "ktV" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
 /obj/machinery/porta_turret/syndicate/energy,
-/turf/open/floor/circuit,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "kuO" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -505,7 +570,8 @@
 	dir = 9
 	},
 /obj/structure/scrap,
-/turf/open/floor/circuit,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "kPR" = (
 /obj/structure/cable,
@@ -562,13 +628,12 @@
 	pixel_y = 4
 	},
 /obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/circuit,
 /area/scrapping/rimworld/centralpavillion/lower)
 "lNI" = (
-/obj/machinery/ai_slipper{
-	uses = 10
-	},
 /obj/structure/cable,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion/lower)
 "lOs" = (
@@ -586,6 +651,13 @@
 /area/scrapping/rimworld/centralpavillion/lower)
 "mdB" = (
 /turf/closed/wall/r_wall,
+/area/scrapping/rimworld/centralpavillion/lower)
+"mdC" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "mkJ" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner{
@@ -621,10 +693,18 @@
 	},
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
+"mXX" = (
+/obj/machinery/ai_slipper{
+	uses = 10
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/dark,
+/area/scrapping/rimworld/centralpavillion/lower)
 "ndd" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "nfH" = (
@@ -639,13 +719,6 @@
 /area/scrapping/rimworld/centralpavillion/lower)
 "nhZ" = (
 /turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion/lower)
-"npB" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 4
-	},
-/obj/item/stack/sheet/iron/five,
-/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "nzy" = (
 /obj/structure/scrap,
@@ -678,6 +751,22 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
+/area/scrapping/rimworld/centralpavillion/lower)
+"owR" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/grimy,
+/area/scrapping/rimworld/centralpavillion/lower)
+"oBD" = (
+/obj/effect/turf_decal/weather/dirt,
+/obj/effect/spawner/random/structure/girder,
+/turf/open/floor/plating,
+/area/scrapping/rimworld/centralpavillion/lower)
+"oCz" = (
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
 "oGw" = (
@@ -689,6 +778,10 @@
 	},
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
+"oOd" = (
+/obj/structure/ladder,
+/turf/open/floor/plating/rust,
+/area/lushplanet/underground)
 "oWe" = (
 /obj/structure/scrap,
 /turf/open/floor/iron/dark/side,
@@ -708,15 +801,21 @@
 /obj/item/stack/sheet/mineral/plasma/thirty,
 /turf/open/floor/iron/grimy,
 /area/scrapping/rimworld/centralpavillion/lower)
+"piK" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/circuit/red/anim,
+/area/scrapping/rimworld/centralpavillion/lower)
 "pnO" = (
-/obj/machinery/ai_slipper{
-	uses = 10
-	},
 /obj/structure/cable,
 /obj/structure/chair/office{
 	dir = 1
 	},
 /turf/open/floor/iron/dark,
+/area/scrapping/rimworld/centralpavillion/lower)
+"poD" = (
+/obj/effect/spawner/random/structure/grille,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "pxk" = (
 /obj/machinery/door/airlock/command/glass{
@@ -725,11 +824,20 @@
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/grimy,
+/area/scrapping/rimworld/centralpavillion/lower)
+"pxv" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/scrap,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "pQN" = (
 /obj/effect/turf_decal/stripes/line,
-/turf/open/floor/circuit,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "pUj" = (
 /turf/open/floor/plating/elevatorshaft,
@@ -742,15 +850,42 @@
 /obj/structure/flora/junglebush/b,
 /turf/open/floor/grass,
 /area/scrapping/rimworld/centralpavillion/lower)
+"qjO" = (
+/obj/structure/cable/multilayer/multiz,
+/turf/open/floor/plating/rust,
+/area/lushplanet/underground)
 "quM" = (
 /obj/structure/cable,
-/turf/open/floor/circuit,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/circuit/red/anim,
+/area/scrapping/rimworld/centralpavillion/lower)
+"qwQ" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
 "qJG" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
+/area/scrapping/rimworld/centralpavillion/lower)
+"qLZ" = (
+/obj/structure/cable,
+/turf/open/floor/plating/rust,
+/area/lushplanet/underground)
+"qQp" = (
+/obj/effect/turf_decal/siding/thinplating/dark{
+	dir = 4
+	},
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/grimy,
 /area/scrapping/rimworld/centralpavillion/lower)
 "ryV" = (
 /obj/structure/flora/junglebush/b,
@@ -769,7 +904,12 @@
 	uses = 10
 	},
 /obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/dark,
+/area/scrapping/rimworld/centralpavillion/lower)
+"rSt" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "rVq" = (
 /obj/structure/scrap,
@@ -786,7 +926,23 @@
 /area/lushplanet/underground)
 "sIJ" = (
 /obj/machinery/porta_turret/syndicate/energy,
-/turf/open/floor/circuit,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/circuit/red/anim,
+/area/scrapping/rimworld/centralpavillion/lower)
+"sIM" = (
+/obj/machinery/atmospherics/pipe/multiz/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/turf/open/floor/plating/rust,
+/area/lushplanet/underground)
+"sNj" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/scrapping/rimworld/centralpavillion/lower)
+"sXy" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion/lower)
 "tqQ" = (
 /obj/structure/cable,
@@ -804,14 +960,20 @@
 	},
 /turf/open/floor/plating,
 /area/lushplanet/underground)
+"tMe" = (
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
+/area/scrapping/rimworld/centralpavillion/lower)
 "ueX" = (
-/turf/open/floor/circuit,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "uyZ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
-/turf/open/floor/circuit,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "uFK" = (
 /obj/structure/cable,
@@ -828,13 +990,15 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion/lower)
 "vhr" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
-/turf/open/floor/circuit,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "vAy" = (
 /obj/structure/window/reinforced/spawner/north,
@@ -845,6 +1009,12 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/grass,
 /area/scrapping/rimworld/centralpavillion/lower)
+"wds" = (
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/dark,
+/area/scrapping/rimworld/centralpavillion/lower)
 "wfA" = (
 /obj/structure/window/reinforced/spawner/west,
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -854,17 +1024,22 @@
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/open/floor/grass,
 /area/scrapping/rimworld/centralpavillion/lower)
+"wjY" = (
+/obj/machinery/porta_turret/syndicate/energy,
+/turf/open/floor/circuit/red/anim,
+/area/scrapping/rimworld/centralpavillion/lower)
 "wqF" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
 /obj/structure/scrap,
-/turf/open/floor/circuit,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "wry" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/grimy,
 /area/scrapping/rimworld/centralpavillion/lower)
 "wuW" = (
@@ -872,6 +1047,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "wzB" = (
@@ -881,6 +1057,11 @@
 /area/scrapping/rimworld/centralpavillion/lower)
 "wJf" = (
 /turf/open/floor/catwalk_floor/iron_dark,
+/area/scrapping/rimworld/centralpavillion/lower)
+"wYk" = (
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "xeH" = (
 /obj/structure/ladder,
@@ -896,13 +1077,13 @@
 "xjD" = (
 /obj/structure/ladder,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
+/turf/open/floor/plating/rust,
 /area/lushplanet/underground)
 "xHC" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/circuit,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "xIl" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -928,10 +1109,15 @@
 	dir = 10
 	},
 /obj/machinery/porta_turret/syndicate/energy,
-/turf/open/floor/circuit,
+/turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
 "yhA" = (
 /turf/open/floor/catwalk_floor/iron,
+/area/scrapping/rimworld/centralpavillion/lower)
+"yka" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 
 (1,1,1) = {"
@@ -19860,7 +20046,7 @@ uMy
 uMy
 uMy
 nXT
-aah
+cFB
 avw
 acJ
 acJ
@@ -33477,7 +33663,7 @@ acJ
 kuO
 sHD
 shc
-shc
+dfx
 xjD
 nXT
 uMy
@@ -33990,7 +34176,7 @@ acJ
 acJ
 nXT
 dLy
-bzF
+sIM
 nRu
 nXT
 uMy
@@ -38322,7 +38508,7 @@ uMy
 uMy
 uMy
 kjK
-kjK
+gVw
 kjK
 kjK
 uMy
@@ -38579,8 +38765,8 @@ uMy
 uMy
 uMy
 kjK
-hQt
-rVq
+rSt
+wYk
 kjK
 kjK
 uMy
@@ -38836,7 +39022,7 @@ uMy
 uMy
 uMy
 kjK
-rVq
+wYk
 hQt
 hQt
 kjK
@@ -38861,8 +39047,8 @@ uMy
 uMy
 uMy
 uMy
-nXT
-ffd
+nRu
+qjO
 laP
 laP
 acJ
@@ -39085,20 +39271,20 @@ kjK
 kjK
 mdB
 mdB
-iuP
+sXy
+gVw
 kjK
-kjK
 uMy
 uMy
 uMy
 uMy
 kjK
-rVq
+wYk
 rVq
 kjK
 kjK
 wuW
-wuW
+pxv
 kjK
 kjK
 uMy
@@ -39119,7 +39305,7 @@ uMy
 uMy
 uMy
 uMy
-sHD
+qLZ
 acJ
 acJ
 acJ
@@ -39337,25 +39523,25 @@ mdB
 mdB
 mdB
 iXZ
+fSm
+fSm
+fSm
 mdB
 mdB
-mdB
-mdB
-mdB
-iuP
-iuP
+sXy
+sXy
 kjK
 kjK
 kjK
 kjK
-kjK
-kjK
-uFK
-uFK
+gVw
+gVw
+yka
+yka
 oYA
-cdl
-cdl
-cdl
+lNI
+lNI
+lNI
 gtz
 kjK
 uMy
@@ -39370,13 +39556,13 @@ uMy
 uMy
 kjK
 kjK
-kjK
-kjK
-kjK
+gVw
+gVw
+gVw
 uMy
 uMy
 uMy
-xeH
+oOd
 laP
 laP
 acJ
@@ -39589,10 +39775,10 @@ mdB
 mdB
 kjK
 mdB
-mdB
+fSm
 jSY
 iuP
-iuP
+sXy
 aeW
 aeW
 hoA
@@ -39600,19 +39786,19 @@ ryV
 mdB
 mdB
 aeW
-iuP
+sXy
 iuP
 oKk
-hQt
+rSt
 rVq
+yka
 uFK
 uFK
-uFK
-hQt
+rSt
 kjK
 vgp
 pnO
-iuP
+sXy
 iBF
 kjK
 laP
@@ -39847,18 +40033,18 @@ mdB
 kjK
 mdB
 aeW
-iuP
-aeW
-aeW
+sXy
+dch
+dch
 ahx
-aeW
-iuP
-iuP
+dch
+sXy
+sXy
 ktV
 mdB
 aeW
-aeW
-iuP
+dch
+sXy
 kjK
 kjK
 kjK
@@ -39866,10 +40052,10 @@ oYA
 kjK
 kjK
 kjK
-kjK
+gVw
 cNE
-cdl
-iuP
+lNI
+sXy
 hBB
 kjK
 uMy
@@ -39880,15 +40066,15 @@ uMy
 uMy
 uMy
 uMy
+gVw
+gVw
+nhZ
+gIb
+nhZ
+gIb
+gIb
 kjK
-kjK
-nhZ
-nhZ
-nhZ
-nhZ
-nhZ
-kjK
-kjK
+gVw
 uMy
 uMy
 uMy
@@ -40106,30 +40292,30 @@ mdB
 iuP
 kFf
 vhr
-aeW
-aeW
+dch
+wds
 kFf
 vhr
-iuP
-iuP
+sXy
+sXy
 fqy
 wry
 xIl
-xIl
+jDe
 kjK
 sIJ
 ueX
+aNo
+piK
 quM
-ueX
-quM
-sIJ
+wjY
 kjK
 kjK
 dCw
 kjK
 kjK
-kjK
-kjK
+gVw
+gVw
 fqy
 fqy
 kjK
@@ -40360,19 +40546,19 @@ mdB
 mdB
 mdB
 gpi
-iuP
+sXy
 wqF
 kjK
 kjK
-iuP
+sXy
 kjK
 pQN
-aeW
-aeW
+dch
+dch
 fqy
-aVG
+owR
 gJR
-aVG
+eOd
 kjK
 cON
 cON
@@ -40381,27 +40567,27 @@ cON
 cON
 cON
 kjK
-iuP
+sXy
 cdl
-aeW
-aeW
+dch
+dch
 kjK
 iuP
 aeW
+dch
 aeW
-aeW
 iuP
 iuP
-iuP
+sXy
 kjK
-nhZ
-nhZ
+gIb
+gIb
 hjR
 ffV
 pUj
 pUj
 lBm
-nhZ
+gIb
 nhZ
 kjK
 uMy
@@ -40615,21 +40801,21 @@ uMy
 uMy
 mdB
 mdB
-mdB
+fSm
 jyE
-ahx
+mXX
 xHC
 kjK
 lHU
-iuP
+sXy
 fqy
 jvP
 rOP
-aeW
+dch
 pxk
 aVG
 gJR
-aVG
+eOd
 xKo
 wJf
 gwS
@@ -40638,18 +40824,18 @@ oGw
 wJf
 wJf
 iVA
-iuP
-cdl
+sXy
+jvv
 lNI
-cdl
+lNI
 aUD
-cdl
+lNI
+sNj
+sNj
+lNI
 gzO
-gzO
-cdl
-gzO
-gzO
-cdl
+sNj
+lNI
 lYA
 hkb
 hkb
@@ -40658,8 +40844,8 @@ pUj
 pUj
 pUj
 kjK
-nhZ
-nhZ
+gIb
+gIb
 kjK
 uMy
 uMy
@@ -40872,17 +41058,17 @@ uMy
 uMy
 mdB
 mdB
-mdB
+fSm
 gLV
-cdl
+lNI
 aJd
 kjK
-kjK
-iuP
+fVU
+sXy
 kjK
 pQN
-iuP
-iuP
+sXy
+sXy
 fqy
 msD
 aCH
@@ -40896,28 +41082,28 @@ cON
 cON
 kjK
 iuP
-cdl
-iuP
-iuP
+lNI
+sXy
+sXy
 kjK
+sXy
 iuP
 iuP
-iuP
-iuP
-iuP
+sXy
+sXy
 iuP
 aeW
 kjK
-nhZ
+tMe
 hkb
 hjR
 pUj
 djG
 pUj
 lBm
-nhZ
-nhZ
-kjK
+gIb
+gIb
+gVw
 uMy
 uMy
 uMy
@@ -41129,26 +41315,26 @@ uMy
 uMy
 mdB
 mdB
+fSm
 mdB
-mdB
-iuP
+sXy
 uyZ
 igh
-iuP
-gVw
+sXy
+hiY
 gEc
 igh
-aeW
-iuP
+dch
+sXy
 fqy
 oYJ
-grz
+qQp
 grz
 kjK
 sIJ
-ueX
-ueX
-quM
+piK
+piK
+aNo
 ueX
 sIJ
 kjK
@@ -41160,21 +41346,21 @@ kjK
 kjK
 fqy
 fqy
-kjK
-ktm
+gVw
+poD
 fqy
 kjK
 kjK
-kjK
+gVw
 hkb
 ftF
 agI
-kjK
-agI
+gVw
+qwQ
 jzj
 nhZ
-fOj
-kjK
+oBD
+gVw
 uMy
 uMy
 uMy
@@ -41390,23 +41576,23 @@ kjK
 mdB
 iuP
 aeW
-aeW
-aeW
+dch
+dch
 rOP
-aeW
-iuP
+dch
+sXy
 iuP
 mta
-mdB
+fSm
+sXy
+dch
 iuP
-aeW
-iuP
-kjK
+gVw
 kjK
 kjK
 kjK
 oYA
-kjK
+gVw
 kjK
 kjK
 cns
@@ -41425,12 +41611,12 @@ uMy
 kjK
 kjK
 nhZ
-nhZ
-nhZ
-nhZ
-nhZ
-npB
-fiL
+gIb
+gIb
+gIb
+gIb
+eBh
+mdC
 laP
 uMy
 uMy
@@ -41645,47 +41831,47 @@ mdB
 mdB
 kjK
 mdB
-mdB
+fSm
 ycC
 iuP
-iuP
-iuP
-iuP
+sXy
+sXy
+sXy
 bDd
 wfA
+fSm
 mdB
-mdB
-aeW
-aeW
+dch
+dch
 iuP
 oKk
-hQt
-rVq
-hQt
+rSt
+wYk
+rSt
 uFK
 uFK
-hQt
+rSt
 kjK
 xMA
 lNI
 aeW
 haJ
-kjK
+gVw
 uMy
 uMy
 uMy
 uMy
+cSg
 laP
-laP
 uMy
 uMy
 uMy
 kjK
 kjK
-nzy
+oCz
+gIb
 nhZ
-nhZ
-kjK
+gVw
 kjK
 laP
 laP
@@ -41905,29 +42091,29 @@ kjK
 mdB
 mdB
 mdB
-mdB
+fSm
 hEz
 mdB
 mdB
+fSm
 mdB
 mdB
-mdB
-aeW
+dch
 iuP
+fSm
 mdB
 mdB
 mdB
 mdB
-mdB
-mdB
-uFK
+fSm
+yka
 uFK
 oYA
 cdl
-cdl
-aeW
+lNI
+dch
 ndd
-kjK
+gVw
 uMy
 uMy
 uMy
@@ -41938,8 +42124,8 @@ laP
 uMy
 uMy
 uMy
-kjK
-kjK
+gVw
+gVw
 kjK
 nfH
 kjK
@@ -42170,15 +42356,15 @@ kjK
 mdB
 mdB
 iuP
-mdB
-mdB
+fSm
+fSm
 hTz
 aNl
 apj
 qju
-mdB
+fSm
 hQt
-hQt
+rSt
 kjK
 kjK
 xgF
@@ -42435,10 +42621,10 @@ nhZ
 vAy
 mdB
 rVq
-hQt
+rSt
 rVq
-kjK
-kjK
+gVw
+gVw
 kjK
 kjK
 uMy
@@ -42690,9 +42876,9 @@ oWe
 rFe
 gns
 lAh
-mdB
-rVq
-rVq
+fSm
+agC
+wYk
 kjK
 kjK
 uMy
@@ -42948,7 +43134,7 @@ wzB
 nhZ
 fBy
 mdB
-mdB
+fSm
 kjK
 kjK
 uMy
@@ -46299,7 +46485,7 @@ uMy
 uMy
 uMy
 uMy
-nXT
+nRu
 laP
 laP
 laP
@@ -51461,12 +51647,12 @@ uMy
 uMy
 uMy
 uMy
-nXT
+nRu
 eLt
 bzF
 ffd
 xeH
-nXT
+nRu
 uMy
 uMy
 uMy
