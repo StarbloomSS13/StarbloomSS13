@@ -2,7 +2,7 @@
 	name = "plasma blast"
 	icon_state = "plasmacutter"
 	damage_type = BRUTE
-	damage = 5
+	damage = 10 // Equal to a PKA indoors.
 	range = 4
 	dismemberment = 20
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/purple_laser
@@ -23,12 +23,12 @@
 			return BULLET_ACT_FORCE_PIERCE
 
 /obj/projectile/plasma/adv
-	damage = 7
+	damage = 12 // Slightly better than a PKA indoors.
 	range = 5
 	mine_range = 5
 
 /obj/projectile/plasma/adv/mech
-	damage = 10
+	damage = 15 // Better than a PKA indoors.
 	range = 9
 	mine_range = 3
 

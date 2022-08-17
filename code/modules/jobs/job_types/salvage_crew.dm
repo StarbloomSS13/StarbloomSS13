@@ -42,6 +42,7 @@
 		)
 	belt = /obj/item/pda/salvagecrew
 	ears = /obj/item/radio/headset/headset_cargo/salvagecrew
+	glasses = /obj/item/clothing/glasses/welding
 	gloves = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/workboots/salvage
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/survival
@@ -52,7 +53,7 @@
 	duffelbag = /obj/item/storage/backpack/duffelbag/explorer
 
 	box = /obj/item/storage/box/survival/mining
-	chameleon_extras = /obj/item/gun/energy/kinetic_accelerator
+	chameleon_extras = /obj/item/gun/energy/plasmacutter
 
 /datum/outfit/job/salvage_crew/equipped
 	name = "Salvage Crew (Equipment)"
@@ -61,7 +62,7 @@
 	suit_store = /obj/item/tank/internals/oxygen
 	backpack_contents = list(
 		/obj/item/flashlight/seclite = 1,
-		/obj/item/gun/energy/kinetic_accelerator = 1,
+		/obj/item/gun/energy/plasmacutter = 1,
 		/obj/item/knife/combat/survival = 1,
 		/obj/item/mining_voucher = 1,
 		/obj/item/stack/marker_beacon/ten = 1,
