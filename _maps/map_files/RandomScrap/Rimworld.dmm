@@ -931,21 +931,10 @@
 	},
 /turf/open/floor/wood/large,
 /area/scrapping/rimworld/civilianpavillion)
-"bvn" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/textured,
-/area/scrapping/rimworld/centralpavillion)
 "bvr" = (
-/obj/structure/railing,
-/obj/effect/turf_decal/tile/blue/anticorner{
-	dir = 8
-	},
-/turf/open/floor/iron/corner{
-	dir = 4
-	},
+/obj/structure/scrap,
+/obj/machinery/light/built/directional/east,
+/turf/open/floor/iron/textured,
 /area/scrapping/rimworld/centralpavillion)
 "bvF" = (
 /obj/structure/chair/office/light{
@@ -969,10 +958,11 @@
 /turf/open/floor/iron/smooth_large,
 /area/scrapping/rimworld/securitypavillion)
 "byF" = (
-/obj/structure/railing{
+/obj/effect/turf_decal/trimline/neutral/warning{
 	dir = 4
 	},
-/turf/open/floor/glass,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "byT" = (
 /obj/structure/fluff/tram_rail{
@@ -1424,10 +1414,6 @@
 	},
 /turf/open/floor/plating,
 /area/scrapping/rimworld/securitypavillion)
-"caX" = (
-/obj/effect/spawner/random/structure/grille,
-/turf/open/floor/plating,
-/area/scrapping/rimworld/centralpavillion)
 "cbg" = (
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
@@ -1583,12 +1569,6 @@
 "cqO" = (
 /turf/closed/wall,
 /area/scrapping/rimworld/researchpavillion)
-"crt" = (
-/obj/structure/door_assembly/door_assembly_public{
-	glass = 1
-	},
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion)
 "csi" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/bot/right,
@@ -1899,15 +1879,11 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/scrapping/rimworld/cargopavllion)
 "cLc" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/blue/anticorner{
-	dir = 8
-	},
-/turf/open/floor/iron/corner{
+/obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood,
 /area/scrapping/rimworld/centralpavillion)
 "cLu" = (
 /obj/structure/fluff/tram_rail/floor,
@@ -2001,13 +1977,6 @@
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/grass,
 /area/scrapping/rimworld/civilianpavillion)
-"cVt" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion)
 "cVY" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 1
@@ -2185,14 +2154,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/securitypavillion)
-"dka" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion)
 "dkp" = (
 /turf/open/misc/dirt/jungle/dark,
 /area/lushplanet/surface)
@@ -2251,8 +2212,7 @@
 /area/scrapping/rimworld/civilianpavillion)
 "doN" = (
 /obj/machinery/door/airlock/command{
-	name = "Teleport Access";
-	req_access_txt = "17"
+	name = "Teleport Access"
 	},
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
@@ -2741,13 +2701,9 @@
 	},
 /area/lushplanet/surface)
 "dYR" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue/anticorner,
-/turf/open/floor/iron/corner{
-	dir = 1
-	},
+/obj/structure/closet/crate/trashcart,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "dZc" = (
 /obj/effect/turf_decal/stripes/asteroid/box,
@@ -3347,12 +3303,6 @@
 /obj/machinery/atmospherics/pipe/multiz/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/civilianpavillion)
-"eFJ" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/corner{
-	dir = 4
-	},
-/area/scrapping/rimworld/centralpavillion)
 "eFZ" = (
 /turf/open/floor/catwalk_floor/iron,
 /area/scrapping/rimworld/centralpavillion)
@@ -3422,8 +3372,7 @@
 "eJV" = (
 /obj/machinery/door/airlock/command{
 	name = "Chief Medical Officer";
-	req_access = null;
-	req_access_txt = "40"
+	req_access = null
 	},
 /obj/effect/turf_decal/trimline/blue/filled/warning{
 	dir = 8
@@ -3438,11 +3387,13 @@
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/securitypavillion)
 "eLe" = (
-/obj/machinery/button/elevator{
-	id = "ailift";
-	pixel_x = 24
+/obj/effect/turf_decal/siding/white{
+	dir = 4
 	},
-/turf/open/floor/glass,
+/obj/structure/door_assembly/door_assembly_public{
+	glass = 1
+	},
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "eLI" = (
 /obj/effect/turf_decal/siding/blue{
@@ -3746,11 +3697,11 @@
 	},
 /area/scrapping/rimworld/securitypavillion)
 "fex" = (
-/obj/structure/railing,
-/obj/effect/turf_decal/tile/blue/anticorner,
-/turf/open/floor/iron/corner{
-	dir = 1
+/obj/effect/turf_decal/trimline/neutral/warning{
+	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "feK" = (
 /obj/machinery/door/airlock/security/glass{
@@ -4233,15 +4184,8 @@
 	},
 /area/lushplanet/surface)
 "fNw" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue/anticorner{
-	dir = 4
-	},
-/turf/open/floor/iron/corner{
-	dir = 8
-	},
+/obj/effect/spawner/random/structure/girder,
+/turf/open/misc/dirt/jungle,
 /area/scrapping/rimworld/centralpavillion)
 "fNx" = (
 /obj/effect/turf_decal/siding/white{
@@ -4309,11 +4253,13 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/securitypavillion)
 "fRc" = (
-/obj/machinery/button/elevator{
-	id = "ailift";
-	pixel_y = -24
+/obj/structure/sign/poster/official/unity_logo{
+	pixel_x = -32
 	},
-/turf/open/floor/glass,
+/obj/machinery/computer/shuttle/salvage{
+	dir = 4
+	},
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "fRh" = (
 /obj/effect/turf_decal/siding/thinplating/end{
@@ -4474,13 +4420,10 @@
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/securitypavillion)
 "gaT" = (
-/obj/structure/railing/corner{
-	dir = 4
+/obj/structure/scrap,
+/turf/open/floor/iron/corner{
+	dir = 8
 	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "gaW" = (
 /obj/effect/turf_decal/siding/wood{
@@ -4542,15 +4485,6 @@
 /obj/structure/scrap,
 /turf/open/floor/iron/dark/textured,
 /area/scrapping/rimworld/cargopavllion)
-"gdH" = (
-/obj/structure/sign/poster/official/unity_logo{
-	pixel_x = -32
-	},
-/obj/machinery/computer/shuttle/salvage{
-	dir = 4
-	},
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion)
 "gdS" = (
 /obj/effect/turf_decal/tile/red,
 /obj/structure/scrap,
@@ -4658,10 +4592,12 @@
 /turf/open/floor/plating,
 /area/scrapping/rimworld/securitypavillion)
 "gkv" = (
-/obj/structure/railing{
-	dir = 8
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
 	},
-/turf/open/floor/glass,
+/obj/structure/table,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "gkI" = (
 /obj/machinery/button/curtain{
@@ -4802,8 +4738,7 @@
 /area/scrapping/rimworld/researchpavillion)
 "gzh" = (
 /obj/machinery/door/airlock/command{
-	name = "Captain's Quarters";
-	req_access_txt = "20"
+	name = "Captain's Quarters"
 	},
 /turf/open/floor/wood,
 /area/scrapping/rimworld/centralpavillion)
@@ -4984,8 +4919,7 @@
 /area/scrapping/rimworld/medicalpavillion)
 "gKd" = (
 /obj/machinery/door/airlock/command{
-	name = "Head of Personnel";
-	req_access_txt = "57"
+	name = "Head of Personnel"
 	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -5041,11 +4975,21 @@
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/securitypavillion)
 "gNU" = (
-/obj/structure/industrial_lift,
-/obj/structure/railing/corner{
-	dir = 1
+/obj/structure/table,
+/obj/item/gps/mining{
+	pixel_x = -2;
+	pixel_y = 1
 	},
-/turf/open/openspace,
+/obj/item/gps/mining{
+	pixel_x = -5;
+	pixel_y = -2
+	},
+/obj/item/gps/mining{
+	pixel_x = 5
+	},
+/obj/effect/decal/cleanable/cobweb,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/textured,
 /area/scrapping/rimworld/centralpavillion)
 "gOn" = (
 /obj/effect/turf_decal/bot,
@@ -5592,13 +5536,9 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/securitypavillion)
 "hBG" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/railing/corner{
-	dir = 1
-	},
-/turf/open/floor/glass,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "hCK" = (
 /turf/open/floor/iron/edge{
@@ -5712,12 +5652,8 @@
 /turf/open/floor/iron/grimy,
 /area/scrapping/rimworld/securitypavillion)
 "hKZ" = (
-/obj/structure/railing/corner{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "hLo" = (
@@ -5826,15 +5762,6 @@
 /obj/structure/scrap,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/cargopavllion)
-"hRy" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue/anticorner{
-	dir = 1
-	},
-/turf/open/floor/iron/corner,
-/area/scrapping/rimworld/centralpavillion)
 "hRV" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
@@ -6018,11 +5945,6 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron/dark/side,
 /area/scrapping/rimworld/centralpavillion)
-"igB" = (
-/obj/structure/closet/crate/trashcart,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion)
 "igC" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/brflowers,
@@ -6147,6 +6069,7 @@
 /turf/open/floor/plating,
 /area/scrapping/rimworld/cargopavllion)
 "ioN" = (
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/corner{
 	dir = 4
 	},
@@ -6337,7 +6260,7 @@
 /area/lushplanet/surface)
 "iAJ" = (
 /obj/machinery/light/broken/directional/west,
-/turf/open/floor/iron,
+/turf/open/floor/iron/corner,
 /area/scrapping/rimworld/centralpavillion)
 "iAY" = (
 /obj/effect/turf_decal/stripes/line{
@@ -6683,8 +6606,7 @@
 /area/scrapping/rimworld/centralpavillion)
 "iXW" = (
 /obj/machinery/door/airlock/command{
-	name = "Captain's Quarters";
-	req_access_txt = "20"
+	name = "Captain's Quarters"
 	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -7128,8 +7050,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Head of Security";
-	req_access_txt = "58"
+	name = "Head of Security"
 	},
 /turf/open/floor/wood,
 /area/scrapping/rimworld/securitypavillion)
@@ -7189,6 +7110,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood,
 /area/scrapping/rimworld/centralpavillion)
 "jMU" = (
@@ -7384,9 +7306,11 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/civilianpavillion)
 "kaU" = (
-/obj/structure/railing,
-/obj/structure/railing/corner,
-/turf/open/floor/glass,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "kbh" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -7606,12 +7530,6 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/scrapping/rimworld/civilianpavillion)
 "kpI" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing/corner{
-	dir = 1
-	},
 /turf/open/floor/glass,
 /area/scrapping/rimworld/centralpavillion)
 "kpX" = (
@@ -7665,11 +7583,9 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "kxJ" = (
-/obj/machinery/button/elevator{
-	id = "ailift";
-	pixel_y = 24
-	},
-/turf/open/floor/glass,
+/obj/structure/lattice,
+/obj/item/wallframe/button,
+/turf/open/openspace,
 /area/scrapping/rimworld/centralpavillion)
 "kxY" = (
 /obj/structure/chair/sofa/right{
@@ -7756,9 +7672,6 @@
 /area/scrapping/rimworld/cargopavllion)
 "kDS" = (
 /turf/open/floor/circuit,
-/area/scrapping/rimworld/centralpavillion)
-"kEh" = (
-/turf/closed/wall/rust,
 /area/scrapping/rimworld/centralpavillion)
 "kEt" = (
 /obj/structure/fluff/tram_rail,
@@ -8193,11 +8106,11 @@
 /turf/open/floor/iron/dark/textured,
 /area/lushplanet/surface)
 "ljj" = (
-/obj/structure/railing{
+/obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/structure/railing/corner,
-/turf/open/floor/glass,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "ljv" = (
 /obj/machinery/door/airlock/security{
@@ -8317,11 +8230,8 @@
 /turf/open/floor/engine,
 /area/scrapping/rimworld/researchpavillion)
 "lvV" = (
-/obj/structure/industrial_lift,
-/obj/structure/railing/corner{
-	dir = 8
-	},
-/turf/open/openspace,
+/obj/effect/spawner/random/structure/grille,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion)
 "lvY" = (
 /obj/structure/railing{
@@ -8397,15 +8307,8 @@
 /turf/open/misc/dirt/jungle,
 /area/lushplanet/surface)
 "lzC" = (
-/obj/effect/turf_decal/trimline/blue/filled/warning{
-	dir = 8
-	},
-/obj/effect/turf_decal/trimline/blue/mid_joiner{
-	dir = 8
-	},
-/turf/open/floor/iron/edge{
-	dir = 8
-	},
+/obj/structure/lattice,
+/turf/open/openspace,
 /area/scrapping/rimworld/centralpavillion)
 "lAr" = (
 /obj/machinery/door/airlock/public/glass{
@@ -8743,9 +8646,10 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/civilianpavillion)
 "mbI" = (
-/obj/effect/turf_decal/trimline/blue/filled/warning,
-/obj/effect/turf_decal/trimline/blue/mid_joiner,
-/turf/open/floor/iron/edge,
+/obj/structure/door_assembly/door_assembly_public{
+	glass = 1
+	},
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "mbT" = (
 /obj/structure/table/wood,
@@ -9000,13 +8904,8 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/cargopavllion)
 "mxN" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/blue/anticorner{
-	dir = 1
-	},
-/turf/open/floor/iron/corner,
+/obj/structure/grille/broken,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion)
 "mya" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -9016,8 +8915,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Command Lobby";
-	req_access_txt = "19"
+	name = "Command Lobby"
 	},
 /turf/open/floor/wood,
 /area/scrapping/rimworld/centralpavillion)
@@ -9199,8 +9097,8 @@
 	},
 /area/scrapping/rimworld/researchpavillion)
 "mJt" = (
-/obj/structure/railing,
-/turf/open/floor/glass,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion)
 "mJF" = (
 /obj/structure/chair/office/light,
@@ -9353,10 +9251,6 @@
 /obj/structure/rack,
 /turf/open/floor/iron/checker,
 /area/scrapping/rimworld/civilianpavillion)
-"mTr" = (
-/obj/structure/barricade/security,
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion)
 "mTD" = (
 /obj/effect/turf_decal/trimline/neutral/warning,
 /turf/open/floor/iron,
@@ -9599,6 +9493,9 @@
 /obj/machinery/atmospherics/pipe/multiz/scrubbers/hidden/layer2{
 	dir = 1
 	},
+/obj/effect/turf_decal/weather/dirt{
+	dir = 10
+	},
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion)
 "ngU" = (
@@ -9725,6 +9622,7 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/cargopavllion)
 "npG" = (
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/corner{
 	dir = 8
 	},
@@ -9767,12 +9665,6 @@
 	},
 /turf/open/floor/catwalk_floor/iron,
 /area/scrapping/rimworld/medicalpavillion)
-"ntQ" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/corner{
-	dir = 1
-	},
-/area/scrapping/rimworld/centralpavillion)
 "ntS" = (
 /obj/structure/urinal/directional/west,
 /obj/structure/sign/poster/official/random{
@@ -9913,12 +9805,6 @@
 /obj/item/stack/cable_coil/cut,
 /turf/open/floor/iron/dark/textured_large,
 /area/lushplanet/surface)
-"nBs" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/corner{
-	dir = 8
-	},
-/area/scrapping/rimworld/centralpavillion)
 "nBU" = (
 /obj/structure/closet/l3closet/janitor,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -10100,11 +9986,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/scrapping/rimworld/medicalpavillion)
-"nOa" = (
-/obj/structure/scrap,
-/obj/machinery/light/built/directional/east,
-/turf/open/floor/iron/textured,
-/area/scrapping/rimworld/centralpavillion)
 "nOx" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 4
@@ -10443,6 +10324,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "onV" = (
@@ -10563,8 +10445,7 @@
 /area/scrapping/rimworld/civilianpavillion)
 "oww" = (
 /obj/machinery/door/airlock/command{
-	name = "Gateway Access";
-	req_access_txt = "62"
+	name = "Gateway Access"
 	},
 /turf/open/floor/iron/dark/side{
 	dir = 8
@@ -10589,14 +10470,6 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/cargopavllion)
-"oxC" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/structure/table,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion)
 "oxJ" = (
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
@@ -11144,6 +11017,7 @@
 	dir = 1
 	},
 /obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "pnT" = (
@@ -11184,8 +11058,11 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/securitypavillion)
 "pqi" = (
-/obj/structure/railing/corner,
-/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "pqr" = (
@@ -11366,13 +11243,11 @@
 /turf/open/floor/stone,
 /area/lushplanet/surface)
 "pHq" = (
-/obj/structure/railing/corner{
-	dir = 8
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
 	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/turf/open/floor/iron,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/textured,
 /area/scrapping/rimworld/centralpavillion)
 "pHI" = (
 /obj/structure/filingcabinet,
@@ -12097,11 +11972,6 @@
 "qDn" = (
 /turf/open/floor/iron/freezer,
 /area/scrapping/rimworld/medicalpavillion)
-"qEf" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion)
 "qEu" = (
 /obj/structure/water_source/puddle,
 /turf/open/misc/dirt/jungle,
@@ -12320,8 +12190,7 @@
 /area/scrapping/rimworld/cargopavllion)
 "qSZ" = (
 /obj/machinery/door/airlock/command{
-	name = "Head of Personnel";
-	req_access_txt = "57"
+	name = "Head of Personnel"
 	},
 /turf/open/floor/wood,
 /area/scrapping/rimworld/centralpavillion)
@@ -12768,9 +12637,9 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/civilianpavillion)
 "rpY" = (
-/obj/structure/industrial_lift,
-/obj/structure/railing/corner,
-/turf/open/openspace,
+/obj/effect/turf_decal/trimline/neutral/warning,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "rqj" = (
 /obj/effect/turf_decal/siding/thinplating{
@@ -12968,15 +12837,9 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/medicalpavillion)
 "rEr" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue/anticorner{
-	dir = 4
-	},
-/turf/open/floor/iron/corner{
-	dir = 8
-	},
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/textured,
 /area/scrapping/rimworld/centralpavillion)
 "rFo" = (
 /obj/structure/table,
@@ -13309,13 +13172,8 @@
 /turf/open/floor/engine/cult,
 /area/scrapping/rimworld/civilianpavillion)
 "saP" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing/corner{
-	dir = 8
-	},
-/turf/open/floor/glass,
+/obj/structure/barricade/security,
+/turf/open/floor/iron/textured,
 /area/scrapping/rimworld/centralpavillion)
 "sbQ" = (
 /turf/open/floor/wood,
@@ -13371,9 +13229,8 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/lushplanet/surface)
 "sdN" = (
-/obj/effect/turf_decal/tile/blue,
 /obj/structure/scrap,
-/turf/open/floor/iron,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion)
 "seI" = (
 /obj/effect/turf_decal/siding/wood/end,
@@ -13943,13 +13800,8 @@
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion)
 "sUv" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/railing/corner{
-	dir = 4
-	},
-/turf/open/floor/glass,
+/obj/structure/barricade/security,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "sUR" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
@@ -14012,11 +13864,6 @@
 	},
 /turf/open/floor/iron/textured,
 /area/scrapping/rimworld/researchpavillion)
-"tan" = (
-/obj/structure/scrap,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/textured,
-/area/scrapping/rimworld/centralpavillion)
 "taI" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -14209,15 +14056,12 @@
 	},
 /area/scrapping/rimworld/researchpavillion)
 "toJ" = (
-/obj/effect/turf_decal/trimline/blue/filled/warning{
-	dir = 1
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
 	},
-/obj/effect/turf_decal/trimline/blue/mid_joiner{
-	dir = 1
-	},
-/turf/open/floor/iron/edge{
-	dir = 1
-	},
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood,
 /area/scrapping/rimworld/centralpavillion)
 "toS" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
@@ -14278,23 +14122,6 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion)
-"tuz" = (
-/obj/structure/table,
-/obj/item/gps/mining{
-	pixel_x = -2;
-	pixel_y = 1
-	},
-/obj/item/gps/mining{
-	pixel_x = -5;
-	pixel_y = -2
-	},
-/obj/item/gps/mining{
-	pixel_x = 5
-	},
-/obj/effect/decal/cleanable/cobweb,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/textured,
 /area/scrapping/rimworld/centralpavillion)
 "tuV" = (
 /obj/effect/turf_decal/siding/wood{
@@ -14984,15 +14811,8 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/civilianpavillion)
 "uoa" = (
-/obj/effect/turf_decal/trimline/blue/filled/warning{
-	dir = 4
-	},
-/obj/effect/turf_decal/trimline/blue/mid_joiner{
-	dir = 4
-	},
-/turf/open/floor/iron/edge{
-	dir = 4
-	},
+/obj/item/stack/tile/iron,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion)
 "uok" = (
 /obj/effect/turf_decal/stripes/asteroid/corner{
@@ -15161,10 +14981,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/medicalpavillion)
-"uxZ" = (
-/obj/structure/grille/broken,
-/turf/open/floor/plating,
-/area/scrapping/rimworld/centralpavillion)
 "uyj" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/stripes/line{
@@ -15974,14 +15790,6 @@
 	},
 /turf/open/floor/iron,
 /area/scrapping/rimworld/cargopavllion)
-"vwl" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/scrap,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion)
 "vwm" = (
 /obj/machinery/door/airlock/external{
 	name = "Supply Dock Airlock";
@@ -16313,11 +16121,8 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/researchpavillion)
 "vOE" = (
-/obj/structure/railing,
-/obj/structure/railing/corner{
-	dir = 8
-	},
-/turf/open/floor/glass,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "vQD" = (
 /obj/structure/table/wood,
@@ -16428,10 +16233,11 @@
 /turf/open/floor/iron/white,
 /area/scrapping/rimworld/medicalpavillion)
 "vWj" = (
-/obj/structure/railing{
+/obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
-/turf/open/floor/glass,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "vWp" = (
 /obj/effect/turf_decal/tile/blue{
@@ -16921,13 +16727,12 @@
 /turf/open/water/jungle,
 /area/lushplanet/surface)
 "wFs" = (
-/obj/structure/industrial_lift,
+/obj/structure/lattice/catwalk,
 /turf/open/openspace,
 /area/scrapping/rimworld/centralpavillion)
 "wFt" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Command Lobby";
-	req_access_txt = "19"
+	name = "Command Lobby"
 	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -17090,6 +16895,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood,
 /area/scrapping/rimworld/centralpavillion)
 "wNw" = (
@@ -17134,11 +16940,9 @@
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion)
 "wOO" = (
-/obj/machinery/button/elevator{
-	id = "ailift";
-	pixel_x = -24
-	},
-/turf/open/floor/glass,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/stack/tile/iron,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion)
 "wPY" = (
 /obj/machinery/door/airlock/mining{
@@ -17177,13 +16981,7 @@
 /turf/open/floor/plating,
 /area/scrapping/rimworld/civilianpavillion)
 "wTp" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/railing/corner{
-	dir = 4
-	},
-/turf/open/floor/glass,
+/turf/open/misc/dirt/jungle,
 /area/scrapping/rimworld/centralpavillion)
 "wTA" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
@@ -17473,11 +17271,9 @@
 	},
 /area/scrapping/rimworld/researchpavillion)
 "xgf" = (
-/obj/structure/industrial_lift,
-/obj/structure/railing/corner{
-	dir = 4
-	},
-/turf/open/openspace,
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion)
 "xgh" = (
 /obj/structure/scrap,
@@ -17782,11 +17578,7 @@
 /turf/open/floor/iron/white,
 /area/scrapping/rimworld/medicalpavillion)
 "xCt" = (
-/obj/structure/industrial_lift{
-	id = "ailift"
-	},
-/mob/living/simple_animal/hostile/jungle/mook,
-/turf/open/openspace,
+/turf/closed/wall/rust,
 /area/scrapping/rimworld/centralpavillion)
 "xDe" = (
 /obj/effect/turf_decal/tile/red{
@@ -17865,6 +17657,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood,
 /area/scrapping/rimworld/centralpavillion)
 "xIi" = (
@@ -18002,10 +17795,6 @@
 /obj/item/paper_bin,
 /turf/open/floor/carpet/black,
 /area/scrapping/rimworld/civilianpavillion)
-"xRO" = (
-/obj/structure/barricade/security,
-/turf/open/floor/iron/textured,
-/area/scrapping/rimworld/centralpavillion)
 "xSi" = (
 /obj/structure/closet/emcloset,
 /obj/effect/decal/cleanable/dirt,
@@ -18084,7 +17873,9 @@
 /area/scrapping/rimworld/civilianpavillion)
 "xYo" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
+/turf/open/floor/iron/corner{
+	dir = 1
+	},
 /area/scrapping/rimworld/centralpavillion)
 "xZg" = (
 /obj/structure/scrap,
@@ -18210,11 +18001,6 @@
 	dir = 8
 	},
 /area/scrapping/rimworld/civilianpavillion)
-"yhO" = (
-/obj/structure/scrap,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion)
 "yiu" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner,
 /turf/open/floor/iron/white,
@@ -55390,11 +55176,11 @@ bSI
 iGv
 iGv
 iGv
-hbe
-hbe
-hbe
-hbe
-hbe
+xCt
+xCt
+xCt
+fNw
+wTp
 hbe
 iGv
 oUz
@@ -55647,12 +55433,12 @@ bSI
 syc
 iGv
 syc
-hbe
+xCt
 jVg
 jVg
 fug
 nfB
-hbe
+xCt
 iGv
 iGv
 oUz
@@ -56414,18 +56200,18 @@ bex
 xml
 bSI
 bSI
-tus
-tus
-tus
-tus
+jVg
+fex
+fex
+fex
 tus
 hbe
-hbe
+xCt
 jVg
 jVg
 jVg
-hbe
-hbe
+xCt
+xCt
 iGv
 aid
 oqH
@@ -56435,7 +56221,7 @@ hbe
 lUq
 hbe
 lUq
-kEh
+xCt
 xVb
 oqH
 aid
@@ -56670,14 +56456,14 @@ bSI
 bSI
 bSI
 bSI
+uoa
+xgf
+xgf
+jVg
+mJt
+vOE
 cbg
-jpU
-jpU
-rcH
-cbg
-cbg
-cbg
-hbe
+xCt
 hbe
 uel
 jVg
@@ -56690,7 +56476,7 @@ oUz
 oUz
 bCn
 jVg
-caX
+lvV
 jVg
 bCn
 oUz
@@ -56926,32 +56712,32 @@ uFl
 qzy
 hbe
 hbe
-cbg
-jpU
+vOE
 sdN
-uoa
-uoa
-uoa
-wKO
-jpU
-jpU
+sdN
+wqU
+lzC
+wqU
+jVg
+sdN
+hKZ
 hbe
-hbe
+xCt
 hbe
 gEL
 hbe
 bCn
-kEh
-caX
-caX
+xCt
+lvV
+lvV
 bCn
 hbe
 pEO
-kEh
+xCt
 pEO
 hbe
-caX
-kEh
+lvV
+xCt
 oUz
 iGv
 syc
@@ -57182,33 +56968,33 @@ xcp
 lAy
 hbe
 hbe
-cbg
-cbg
-pqi
-dYR
-sUv
-eLe
-kaU
-fNw
-gaT
-jpU
-jpU
+vOE
+vOE
+jVg
+wqU
+wqU
+lzC
+wqU
+wqU
+jVg
+xgf
+hKZ
 hbe
 wNq
-lqf
-lqf
+cLc
+cLc
 lqf
 bCn
-tuz
-xYo
+gNU
+vOE
 lQS
 iAJ
 lQS
-gdH
+fRc
 rcH
-xYo
+ioN
 rcH
-kEh
+xCt
 iGv
 iGv
 syc
@@ -57439,32 +57225,32 @@ tPP
 jRa
 hbe
 qVR
-cbg
+vOE
 tEL
-fex
 wqU
-vWj
+wqU
+wqU
 hbe
-mJt
 wqU
-rEr
+wqU
+wqU
 wKO
 cbg
-mTD
+rpY
 cbg
+vOE
 cbg
-cbg
-cbg
+vOE
 hbe
-oxC
+gkv
 nVN
 gEW
-bvn
+pHq
 gEW
-bvn
+pHq
 whJ
 eRW
-cVt
+ljj
 hbe
 iGv
 syc
@@ -57697,31 +57483,31 @@ jRa
 fnA
 pnS
 jpU
-mbI
-saP
-gkv
-gNU
+lzC
+lzC
+wqU
 wFs
-lvV
-gkv
+wFs
+wqU
+wqU
 kpI
-toJ
-mTr
-mTD
+lzC
+sUv
+rpY
 vHI
 jpU
-cbg
+vOE
 ioN
 sQc
 iMP
 cbg
-xYo
-xYo
-qEf
-xYo
-xYo
+vOE
+vOE
+hBG
+vOE
+vOE
 cbg
-eFJ
+ioN
 lHB
 syc
 iGv
@@ -57954,32 +57740,32 @@ jRa
 bCn
 pnS
 rcH
-mbI
-fRc
+wqU
+wqU
 hbe
 wFs
-xCt
+lzC
 wFs
 hbe
 kxJ
-toJ
-xRO
+wqU
+saP
 mTD
-cbg
+vOE
 mWT
-mWT
+rEr
 cbg
-caX
-xYo
+lvV
+vOE
 eFZ
 sPm
 eFZ
-xYo
+vOE
 sPm
 sPm
 eFZ
-xYo
-uxZ
+vOE
+mxN
 syc
 iGv
 syc
@@ -58210,32 +57996,32 @@ tPP
 jRa
 fnA
 pnS
-cbg
-mbI
-ljj
-byF
-xgf
-wFs
+vOE
+wqU
+wqU
+wqU
+wqU
+wqU
+wqU
+wqU
+wqU
+wqU
+sUv
 rpY
-byF
-wTp
-toJ
-mTr
-mTD
 npG
-cbg
-cbg
+vOE
+vOE
 jgr
-crt
-nBs
-xYo
+mbI
+npG
+vOE
 cbg
 cbg
-xYo
-igB
-xYo
+vOE
+dYR
+vOE
 cbg
-ntQ
+xYo
 lHB
 syc
 iGv
@@ -58467,32 +58253,32 @@ xcp
 jRa
 hbe
 qVR
-cbg
+vOE
 wjt
-bvr
+wqU
+wqU
+wqU
+hbe
+wqU
+wqU
 wqU
 vWj
+vOE
+rpY
+vOE
+cbg
+cbg
+vOE
 hbe
-mJt
-wqU
-hRy
-qmD
-cbg
-mTD
-cbg
-cbg
-cbg
-cbg
-hbe
-vwl
+pqi
 ehx
 vWs
 ehx
-vwl
-ucH
-dka
+pqi
 ucH
 onz
+ucH
+kaU
 hbe
 iGv
 syc
@@ -58724,33 +58510,33 @@ xcp
 kMP
 hbe
 hbe
-cbg
-cbg
-pHq
-cLc
-hBG
-wOO
 vOE
-mxN
-hKZ
-cbg
+vOE
+wjt
+wqU
+wqU
+wqU
+wqU
+wqU
+qmD
+vOE
 cbg
 hbe
 qlR
-qlR
+toJ
 xHx
 jMP
-caX
+lvV
 mWT
-yhO
-tan
-jpU
-nOa
-xYo
+hKZ
+rEr
+gaT
+bvr
+vOE
 lQS
 xYo
 lQS
-kEh
+xCt
 iGv
 syc
 syc
@@ -58983,31 +58769,31 @@ idu
 hbe
 hbe
 cbg
-cbg
+vOE
 wjt
+wqU
 lzC
-lzC
-lzC
+wqU
 qmD
-cbg
+vOE
 jpU
+xCt
+xCt
 hbe
-hbe
-hbe
 bCn
-caX
+lvV
 bCn
-kEh
+xCt
 bCn
 bCn
-caX
-kEh
+lvV
+xCt
 hbe
 dMz
-kEh
+xCt
 hbe
 bCn
-kEh
+xCt
 iGv
 iGv
 iGv
@@ -59240,15 +59026,15 @@ bSI
 bSI
 bSI
 bSI
-cbg
-cbg
-cbg
+vOE
+vOE
+mJt
 rcH
 cbg
-cbg
-jpU
+vOE
+hKZ
 hbe
-hbe
+xCt
 iGv
 iGv
 iGv
@@ -59259,7 +59045,7 @@ iGv
 iGv
 iGv
 iGv
-caX
+lvV
 jVg
 bCn
 oUz
@@ -59499,9 +59285,9 @@ kyB
 bSI
 bSI
 obd
-obd
-obd
-obd
+wOO
+mJt
+byF
 dLE
 hbe
 hbe
@@ -59756,8 +59542,8 @@ euo
 hbe
 bSI
 bSI
-pLs
-bCn
+eLe
+lvV
 pLs
 hbe
 hbe

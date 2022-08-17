@@ -63,14 +63,13 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
 "aUD" = (
-/obj/machinery/door/airlock/hatch{
-	name = "MiniSat Antechamber";
-	req_one_access_txt = "65"
-	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "ai-passthrough"
 	},
 /obj/structure/cable,
+/obj/machinery/door/airlock/hatch{
+	name = "MiniSat Antechamber"
+	},
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
 "aVG" = (
@@ -143,12 +142,12 @@
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "djG" = (
-/turf/open/floor/iron/dark/textured_corner,
+/obj/item/stack/rods/ten,
+/turf/open/floor/plating/elevatorshaft,
 /area/scrapping/rimworld/centralpavillion/lower)
 "dCw" = (
 /obj/machinery/door/airlock/hatch{
-	name = "MiniSat Service";
-	req_one_access_txt = "65"
+	name = "MiniSat Service"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "ai-passthrough"
@@ -204,19 +203,10 @@
 /obj/structure/cable/multilayer/multiz,
 /turf/open/floor/plating,
 /area/lushplanet/underground)
-"ffV" = (
-/obj/machinery/button/elevator{
-	id = "ailift";
-	pixel_x = -24
-	},
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion/lower)
 "foj" = (
-/obj/machinery/door/airlock/hatch{
-	name = "Artificial Intelligence Foyer - Teleporter";
-	req_access_txt = "17;65"
-	},
-/turf/open/floor/iron/dark/side,
+/obj/effect/decal/remains/xeno,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plating/elevatorshaft,
 /area/scrapping/rimworld/centralpavillion/lower)
 "fqy" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -230,7 +220,6 @@
 /area/scrapping/rimworld/centralpavillion/lower)
 "fBy" = (
 /obj/structure/filingcabinet,
-/obj/item/folder/documents,
 /turf/open/floor/catwalk_floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
 "gaG" = (
@@ -427,8 +416,7 @@
 /area/scrapping/rimworld/centralpavillion/lower)
 "iVA" = (
 /obj/machinery/door/airlock/hatch{
-	name = "MiniSat Chamber Hallway";
-	req_one_access_txt = "65"
+	name = "MiniSat Chamber Hallway"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "ai-passthrough"
@@ -502,8 +490,7 @@
 /area/scrapping/rimworld/centralpavillion/lower)
 "khP" = (
 /obj/machinery/door/airlock/hatch{
-	name = "MiniSat Atmospherics";
-	req_one_access_txt = "65"
+	name = "MiniSat Atmospherics"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "ai-passthrough"
@@ -611,16 +598,10 @@
 /area/scrapping/rimworld/centralpavillion/lower)
 "lYA" = (
 /obj/machinery/door/airlock/hatch{
-	name = "MiniSat Antechamber";
-	req_one_access_txt = "65"
+	name = "MiniSat Antechamber"
 	},
 /obj/structure/cable,
 /turf/open/floor/iron/dark/side{
-	dir = 1
-	},
-/area/scrapping/rimworld/centralpavillion/lower)
-"mci" = (
-/turf/open/floor/iron/dark/textured_corner{
 	dir = 1
 	},
 /area/scrapping/rimworld/centralpavillion/lower)
@@ -674,9 +655,7 @@
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 8
 	},
-/obj/machinery/door/airlock/maintenance/external{
-	req_access_txt = "12"
-	},
+/obj/machinery/door/airlock/maintenance/external,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "nhZ" = (
@@ -685,11 +664,6 @@
 "nzy" = (
 /obj/structure/scrap,
 /turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion/lower)
-"nIf" = (
-/turf/open/floor/iron/dark/textured_corner{
-	dir = 4
-	},
 /area/scrapping/rimworld/centralpavillion/lower)
 "nRu" = (
 /turf/closed/wall/rust,
@@ -729,8 +703,7 @@
 /area/scrapping/rimworld/centralpavillion/lower)
 "oKk" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "MiniSat Maintenance";
-	req_access_txt = "65"
+	name = "MiniSat Maintenance"
 	},
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
@@ -740,16 +713,10 @@
 /area/scrapping/rimworld/centralpavillion/lower)
 "oYA" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "MiniSat Maintenance";
-	req_access_txt = "65"
+	name = "MiniSat Maintenance"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/scrapping/rimworld/centralpavillion/lower)
-"oYE" = (
-/turf/open/floor/iron/dark/textured_corner{
-	dir = 8
-	},
 /area/scrapping/rimworld/centralpavillion/lower)
 "oYJ" = (
 /obj/structure/table,
@@ -770,8 +737,7 @@
 /area/scrapping/rimworld/centralpavillion/lower)
 "pxk" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "AI Core";
-	req_access_txt = "65"
+	name = "AI Core"
 	},
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 1
@@ -811,13 +777,6 @@
 	},
 /turf/open/floor/grass,
 /area/scrapping/rimworld/centralpavillion/lower)
-"rzY" = (
-/obj/machinery/button/elevator{
-	id = "ailift";
-	pixel_x = 24
-	},
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion/lower)
 "rFe" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/iron/dark,
@@ -828,13 +787,6 @@
 	},
 /obj/structure/scrap,
 /turf/open/floor/iron/dark,
-/area/scrapping/rimworld/centralpavillion/lower)
-"rPW" = (
-/obj/machinery/button/elevator{
-	id = "ailift";
-	pixel_y = 24
-	},
-/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
 "rVq" = (
 /obj/structure/scrap,
@@ -857,9 +809,6 @@
 /obj/structure/cable,
 /obj/structure/scrap,
 /turf/open/floor/iron/dark/textured_large,
-/area/scrapping/rimworld/centralpavillion/lower)
-"txe" = (
-/turf/open/floor/iron/dark/side,
 /area/scrapping/rimworld/centralpavillion/lower)
 "tHl" = (
 /obj/structure/cable,
@@ -903,14 +852,6 @@
 	dir = 10
 	},
 /turf/open/floor/circuit,
-/area/scrapping/rimworld/centralpavillion/lower)
-"vzm" = (
-/obj/machinery/button/elevator{
-	id = "ailift";
-	pixel_y = -24
-	},
-/obj/structure/cable,
-/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
 "vAy" = (
 /obj/structure/window/reinforced/spawner/north,
@@ -989,8 +930,7 @@
 /area/scrapping/rimworld/centralpavillion/lower)
 "xKo" = (
 /obj/machinery/door/airlock/hatch{
-	name = "MiniSat Chamber Observation";
-	req_one_access_txt = "65"
+	name = "MiniSat Chamber Observation"
 	},
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion/lower)
@@ -39961,7 +39901,7 @@ kjK
 kjK
 nhZ
 nhZ
-rzY
+nhZ
 nhZ
 nhZ
 kjK
@@ -40223,10 +40163,10 @@ onD
 ooL
 nhZ
 kjK
-mdB
-mdB
-mdB
-mdB
+kjK
+uMy
+uMy
+uMy
 uMy
 laP
 acJ
@@ -40474,16 +40414,16 @@ kjK
 nhZ
 nhZ
 hjR
-pUj
+foj
 pUj
 pUj
 lBm
 nhZ
 nhZ
-foj
-djG
-nIf
-mdB
+kjK
+uMy
+uMy
+uMy
 uMy
 acJ
 acJ
@@ -40729,18 +40669,18 @@ gzO
 cdl
 lYA
 hkb
-vzm
+hkb
 kjK
 pUj
 pUj
 pUj
 kjK
-rPW
 nhZ
-mdB
-iuP
-iuP
-mdB
+nhZ
+kjK
+uMy
+uMy
+uMy
 uMy
 acJ
 uMy
@@ -40989,15 +40929,15 @@ nhZ
 hkb
 hjR
 pUj
-pUj
+djG
 pUj
 lBm
 nhZ
 nhZ
-txe
-oYE
-mci
-mdB
+kjK
+uMy
+uMy
+uMy
 uMy
 acJ
 uMy
@@ -41251,10 +41191,10 @@ agI
 jzj
 nhZ
 kjK
-mdB
-mdB
-mdB
-mdB
+kjK
+uMy
+uMy
+uMy
 uMy
 acJ
 uMy
@@ -41503,7 +41443,7 @@ kjK
 kjK
 nhZ
 nhZ
-ffV
+nhZ
 nhZ
 nhZ
 kjK
