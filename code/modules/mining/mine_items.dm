@@ -63,6 +63,7 @@
 	new /obj/item/t_scanner/adv_mining_scanner/lesser(src)
 	new /obj/item/gun/energy/plasmacutter(src)
 	new /obj/item/survivalcapsule(src)
+	new /obj/item/mod/paint(src)
 	new /obj/item/assault_pod/auxbase(src)
 
 
