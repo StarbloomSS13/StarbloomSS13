@@ -42,7 +42,6 @@
 		)
 	belt = /obj/item/pda/salvagecrew
 	ears = /obj/item/radio/headset/headset_cargo/salvagecrew
-	glasses = /obj/item/clothing/glasses/welding
 	gloves = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/workboots/salvage
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/survival
