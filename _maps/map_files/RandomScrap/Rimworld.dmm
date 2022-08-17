@@ -907,6 +907,7 @@
 /area/scrapping/rimworld/civilianpavillion)
 "bse" = (
 /obj/effect/turf_decal/caution/stand_clear,
+/obj/machinery/door/firedoor,
 /turf/open/floor/plating,
 /area/lushplanet/surface)
 "btr" = (
@@ -932,12 +933,8 @@
 /turf/open/floor/wood/large,
 /area/scrapping/rimworld/civilianpavillion)
 "bvr" = (
-/obj/structure/sign/poster/official/unity_logo{
-	pixel_x = -32
-	},
-/obj/machinery/computer/shuttle/salvage{
-	dir = 4
-	},
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "bvF" = (
@@ -962,8 +959,9 @@
 /turf/open/floor/iron/smooth_large,
 /area/scrapping/rimworld/securitypavillion)
 "byF" = (
-/turf/closed/wall/rust,
-/area/scrapping/rimworld/centralpavillion)
+/obj/structure/flora/grass/jungle,
+/turf/open/misc/grass/jungle,
+/area/lushplanet/surface)
 "byT" = (
 /obj/structure/fluff/tram_rail{
 	dir = 1
@@ -1879,7 +1877,7 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/scrapping/rimworld/cargopavllion)
 "cLc" = (
-/obj/structure/grille/broken,
+/obj/effect/spawner/random/structure/grille,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion)
 "cLu" = (
@@ -2395,10 +2393,6 @@
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 4
 	},
-/obj/machinery/computer/security/telescreen/auxbase{
-	dir = 8;
-	pixel_x = 30
-	},
 /obj/item/stack/sheet/iron/fifty,
 /obj/item/stack/sheet/iron/fifty,
 /obj/item/stack/sheet/glass/fifty,
@@ -2699,9 +2693,8 @@
 /area/lushplanet/surface)
 "dYR" = (
 /obj/structure/scrap,
-/turf/open/floor/iron/corner{
-	dir = 8
-	},
+/obj/machinery/light/built/directional/east,
+/turf/open/floor/iron/textured,
 /area/scrapping/rimworld/centralpavillion)
 "dZc" = (
 /obj/effect/turf_decal/stripes/asteroid/box,
@@ -3388,9 +3381,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
+/turf/open/floor/iron/textured,
 /area/scrapping/rimworld/centralpavillion)
 "eLI" = (
 /obj/effect/turf_decal/siding/blue{
@@ -3694,8 +3686,9 @@
 	},
 /area/scrapping/rimworld/securitypavillion)
 "fex" = (
-/obj/item/stack/tile/iron,
-/turf/open/floor/plating,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "feK" = (
 /obj/machinery/door/airlock/security/glass{
@@ -4178,8 +4171,7 @@
 	},
 /area/lushplanet/surface)
 "fNw" = (
-/obj/structure/closet/crate/trashcart,
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/frame/computer,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "fNx" = (
@@ -4248,9 +4240,12 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/securitypavillion)
 "fRc" = (
-/obj/structure/barricade/security,
-/turf/open/floor/iron/textured,
-/area/scrapping/rimworld/centralpavillion)
+/obj/structure/railing/stone/right,
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 4
+	},
+/turf/open/floor/stone,
+/area/lushplanet/surface)
 "fRh" = (
 /obj/effect/turf_decal/siding/thinplating/end{
 	dir = 4
@@ -4410,11 +4405,9 @@
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/securitypavillion)
 "gaT" = (
-/obj/effect/turf_decal/trimline/neutral/warning{
-	dir = 8
-	},
+/obj/structure/scrap,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion)
 "gaW" = (
 /obj/effect/turf_decal/siding/wood{
@@ -4583,7 +4576,9 @@
 /turf/open/floor/plating,
 /area/scrapping/rimworld/securitypavillion)
 "gkv" = (
-/obj/structure/barricade/security,
+/obj/structure/door_assembly/door_assembly_public{
+	glass = 1
+	},
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "gkI" = (
@@ -4962,11 +4957,8 @@
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/securitypavillion)
 "gNU" = (
-/obj/effect/turf_decal/trimline/neutral/warning{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
+/obj/structure/lattice/catwalk,
+/turf/open/openspace,
 /area/scrapping/rimworld/centralpavillion)
 "gOn" = (
 /obj/effect/turf_decal/bot,
@@ -5342,6 +5334,10 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/misc/grass/jungle,
 /area/lushplanet/surface)
+"hpT" = (
+/obj/structure/grille/broken,
+/turf/open/floor/plating,
+/area/scrapping/rimworld/centralpavillion)
 "hqd" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 8
@@ -5513,9 +5509,8 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/securitypavillion)
 "hBG" = (
-/obj/structure/scrap,
-/obj/machinery/light/built/directional/east,
-/turf/open/floor/iron/textured,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "hCK" = (
 /turf/open/floor/iron/edge{
@@ -5629,12 +5624,12 @@
 /turf/open/floor/iron/grimy,
 /area/scrapping/rimworld/securitypavillion)
 "hKZ" = (
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
+/obj/structure/railing/stone/left,
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 8
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion)
+/turf/open/floor/stone,
+/area/lushplanet/surface)
 "hLo" = (
 /obj/structure/scrap,
 /turf/open/floor/iron/corner{
@@ -5742,13 +5737,8 @@
 /turf/open/floor/plating,
 /area/scrapping/rimworld/cargopavllion)
 "hRy" = (
-/obj/effect/turf_decal/siding/white{
-	dir = 4
-	},
-/obj/structure/door_assembly/door_assembly_public{
-	glass = 1
-	},
-/turf/open/floor/iron,
+/obj/item/stack/tile/iron,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion)
 "hRV" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -6723,6 +6713,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/showroomfloor,
 /area/lushplanet/surface)
+"jiT" = (
+/obj/structure/flora/junglebush/c,
+/turf/open/misc/grass/jungle,
+/area/lushplanet/surface)
 "jjv" = (
 /turf/open/floor/iron,
 /area/scrapping/rimworld/cargopavllion)
@@ -7294,9 +7288,8 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/civilianpavillion)
 "kaU" = (
-/obj/structure/scrap,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
+/obj/effect/spawner/random/structure/girder,
+/turf/open/misc/dirt/jungle,
 /area/scrapping/rimworld/centralpavillion)
 "kbh" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -7372,6 +7365,10 @@
 /obj/structure/window/spawner/west,
 /turf/open/floor/iron/dark/textured_large,
 /area/scrapping/rimworld/civilianpavillion)
+"kgW" = (
+/obj/structure/barricade/security,
+/turf/open/floor/iron/textured,
+/area/scrapping/rimworld/centralpavillion)
 "khg" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/radio/intercom/directional/west,
@@ -7746,6 +7743,12 @@
 	dir = 8
 	},
 /area/scrapping/rimworld/researchpavillion)
+"kLN" = (
+/obj/structure/railing/stone,
+/obj/structure/stone_tile/slab,
+/obj/item/melee/moonlight_greatsword,
+/turf/open/floor/stone,
+/area/lushplanet/surface)
 "kLU" = (
 /obj/effect/turf_decal/tile/blue/anticorner{
 	dir = 1
@@ -8092,10 +8095,11 @@
 /turf/open/floor/iron/dark/textured,
 /area/lushplanet/surface)
 "ljj" = (
-/obj/effect/turf_decal/trimline/neutral/warning,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion)
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 10
+	},
+/turf/open/floor/stone,
+/area/lushplanet/surface)
 "ljv" = (
 /obj/machinery/door/airlock/security{
 	name = "Brig";
@@ -8214,9 +8218,11 @@
 /turf/open/floor/engine,
 /area/scrapping/rimworld/researchpavillion)
 "lvV" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/stack/tile/iron,
-/turf/open/floor/plating,
+/turf/open/floor/wood,
 /area/scrapping/rimworld/centralpavillion)
 "lvY" = (
 /obj/structure/railing{
@@ -8292,9 +8298,12 @@
 /turf/open/misc/dirt/jungle,
 /area/lushplanet/surface)
 "lzC" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
 /obj/structure/scrap,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/textured,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "lAr" = (
 /obj/machinery/door/airlock/public/glass{
@@ -8632,12 +8641,11 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/civilianpavillion)
 "mbI" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 4
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 9
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood,
-/area/scrapping/rimworld/centralpavillion)
+/turf/open/floor/stone,
+/area/lushplanet/surface)
 "mbT" = (
 /obj/structure/table/wood,
 /obj/item/paper_bin{
@@ -8783,6 +8791,14 @@
 /obj/item/stack/tile/iron,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/civilianpavillion)
+"mnh" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/structure/scrap,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood,
+/area/scrapping/rimworld/centralpavillion)
 "mnM" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/random/decoration/ornament,
@@ -8891,9 +8907,10 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/cargopavllion)
 "mxN" = (
-/obj/structure/door_assembly/door_assembly_public{
-	glass = 1
+/obj/effect/turf_decal/trimline/neutral/warning{
+	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "mya" = (
@@ -9086,13 +9103,11 @@
 	},
 /area/scrapping/rimworld/researchpavillion)
 "mJt" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 6
 	},
-/obj/structure/scrap,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
-/area/scrapping/rimworld/centralpavillion)
+/turf/open/floor/stone,
+/area/lushplanet/surface)
 "mJF" = (
 /obj/structure/chair/office/light,
 /obj/effect/turf_decal/siding/thinplating/light/end{
@@ -9233,6 +9248,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/large,
 /area/scrapping/rimworld/securitypavillion)
+"mTf" = (
+/obj/structure/scrap,
+/turf/open/floor/iron/corner{
+	dir = 8
+	},
+/area/scrapping/rimworld/centralpavillion)
 "mTk" = (
 /obj/structure/window/reinforced/spawner/north,
 /obj/effect/turf_decal/siding/white{
@@ -9246,6 +9267,11 @@
 /area/scrapping/rimworld/civilianpavillion)
 "mTD" = (
 /obj/effect/turf_decal/trimline/neutral/warning,
+/turf/open/floor/iron,
+/area/scrapping/rimworld/centralpavillion)
+"mTG" = (
+/obj/structure/closet/crate/trashcart,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "mUa" = (
@@ -9616,9 +9642,7 @@
 /area/scrapping/rimworld/cargopavllion)
 "npG" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/corner{
-	dir = 8
-	},
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion)
 "npY" = (
 /obj/effect/turf_decal/stripes/line,
@@ -10232,6 +10256,12 @@
 	},
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
+"ofF" = (
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 1
+	},
+/turf/open/floor/stone,
+/area/lushplanet/surface)
 "ofH" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -10344,6 +10374,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/frame/computer,
 /turf/open/floor/iron,
 /area/lushplanet/surface)
 "oqg" = (
@@ -11050,8 +11081,21 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/securitypavillion)
 "pqi" = (
+/obj/structure/table,
+/obj/item/gps/mining{
+	pixel_x = -2;
+	pixel_y = 1
+	},
+/obj/item/gps/mining{
+	pixel_x = -5;
+	pixel_y = -2
+	},
+/obj/item/gps/mining{
+	pixel_x = 5
+	},
+/obj/effect/decal/cleanable/cobweb,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
+/turf/open/floor/iron/textured,
 /area/scrapping/rimworld/centralpavillion)
 "pqr" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -11195,6 +11239,13 @@
 	icon_state = "wood-broken5"
 	},
 /area/lushplanet/surface)
+"pDl" = (
+/obj/effect/turf_decal/trimline/neutral/warning{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
+/area/scrapping/rimworld/centralpavillion)
 "pEg" = (
 /obj/structure/chair{
 	dir = 8
@@ -11231,10 +11282,12 @@
 /turf/open/floor/stone,
 /area/lushplanet/surface)
 "pHq" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/siding/white{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/door_assembly/door_assembly_public{
+	glass = 1
+	},
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "pHI" = (
@@ -11575,6 +11628,7 @@
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 1
 	},
+/obj/structure/frame/computer,
 /turf/open/floor/iron,
 /area/lushplanet/surface)
 "qhY" = (
@@ -12625,8 +12679,10 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/civilianpavillion)
 "rpY" = (
-/obj/effect/spawner/random/structure/girder,
-/turf/open/misc/dirt/jungle,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/corner{
+	dir = 8
+	},
 /area/scrapping/rimworld/centralpavillion)
 "rqj" = (
 /obj/effect/turf_decal/siding/thinplating{
@@ -12824,12 +12880,9 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/medicalpavillion)
 "rEr" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
+/obj/structure/scrap,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
+/turf/open/floor/iron/textured,
 /area/scrapping/rimworld/centralpavillion)
 "rFo" = (
 /obj/structure/table,
@@ -13162,7 +13215,8 @@
 /turf/open/floor/engine/cult,
 /area/scrapping/rimworld/civilianpavillion)
 "saP" = (
-/turf/open/misc/dirt/jungle,
+/obj/structure/lattice,
+/turf/open/openspace,
 /area/scrapping/rimworld/centralpavillion)
 "sbQ" = (
 /turf/open/floor/wood,
@@ -13789,7 +13843,11 @@
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion)
 "sUv" = (
-/obj/structure/frame/computer,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/table,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "sUR" = (
@@ -14045,6 +14103,9 @@
 	},
 /area/scrapping/rimworld/researchpavillion)
 "toJ" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
@@ -14796,8 +14857,7 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/civilianpavillion)
 "uoa" = (
-/obj/structure/lattice,
-/turf/open/openspace,
+/turf/closed/wall/rust,
 /area/scrapping/rimworld/centralpavillion)
 "uok" = (
 /obj/effect/turf_decal/stripes/asteroid/corner{
@@ -15100,7 +15160,6 @@
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 10
 	},
-/obj/machinery/airalarm/directional/west,
 /turf/open/floor/iron,
 /area/lushplanet/surface)
 "uEs" = (
@@ -16106,9 +16165,7 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/researchpavillion)
 "vOE" = (
-/obj/structure/scrap,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron,
+/turf/open/misc/dirt/jungle,
 /area/scrapping/rimworld/centralpavillion)
 "vQD" = (
 /obj/structure/table/wood,
@@ -16219,12 +16276,9 @@
 /turf/open/floor/iron/white,
 /area/scrapping/rimworld/medicalpavillion)
 "vWj" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 8
-	},
-/obj/structure/scrap,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood,
+/obj/item/stack/tile/iron,
+/turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion)
 "vWp" = (
 /obj/effect/turf_decal/tile/blue{
@@ -16714,8 +16768,8 @@
 /turf/open/water/jungle,
 /area/lushplanet/surface)
 "wFs" = (
-/obj/structure/lattice/catwalk,
-/turf/open/openspace,
+/obj/structure/barricade/security,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "wFt" = (
 /obj/machinery/door/airlock/command/glass{
@@ -16927,7 +16981,7 @@
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion)
 "wOO" = (
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/trimline/neutral/warning,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
@@ -16968,12 +17022,9 @@
 /turf/open/floor/plating,
 /area/scrapping/rimworld/civilianpavillion)
 "wTp" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/textured,
-/area/scrapping/rimworld/centralpavillion)
+/obj/effect/turf_decal/siding/thinplating_new,
+/turf/open/floor/stone,
+/area/lushplanet/surface)
 "wTA" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 8
@@ -17262,8 +17313,12 @@
 	},
 /area/scrapping/rimworld/researchpavillion)
 "xgf" = (
-/obj/effect/spawner/random/structure/grille,
-/turf/open/floor/plating,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion)
 "xgh" = (
 /obj/structure/scrap,
@@ -17568,22 +17623,11 @@
 /turf/open/floor/iron/white,
 /area/scrapping/rimworld/medicalpavillion)
 "xCt" = (
-/obj/structure/table,
-/obj/item/gps/mining{
-	pixel_x = -2;
-	pixel_y = 1
+/obj/effect/turf_decal/siding/thinplating_new{
+	dir = 5
 	},
-/obj/item/gps/mining{
-	pixel_x = -5;
-	pixel_y = -2
-	},
-/obj/item/gps/mining{
-	pixel_x = 5
-	},
-/obj/effect/decal/cleanable/cobweb,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/textured,
-/area/scrapping/rimworld/centralpavillion)
+/turf/open/floor/stone,
+/area/lushplanet/surface)
 "xDe" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -17794,6 +17838,13 @@
 	},
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/civilianpavillion)
+"xQz" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
+/area/scrapping/rimworld/centralpavillion)
 "xRE" = (
 /obj/structure/table/wood,
 /obj/item/paper_bin,
@@ -17839,6 +17890,15 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/researchpavillion)
+"xVv" = (
+/obj/structure/sign/poster/official/unity_logo{
+	pixel_x = -32
+	},
+/obj/machinery/computer/shuttle/salvage{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/scrapping/rimworld/centralpavillion)
 "xVU" = (
 /obj/structure/table,
 /turf/open/floor/stone,
@@ -52354,7 +52414,7 @@ swm
 dXo
 wYE
 vnh
-iGv
+amE
 eDj
 eDj
 iJY
@@ -52611,8 +52671,8 @@ swm
 dXo
 wYE
 vnh
-iGv
-iGv
+amE
+amE
 eDj
 eDj
 eDj
@@ -52868,16 +52928,16 @@ swm
 tUm
 wYE
 vnh
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
 iGv
 iGv
 iGv
@@ -53125,15 +53185,15 @@ swm
 dXo
 wYE
 vnh
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
 iGv
 iGv
 iGv
@@ -53382,15 +53442,15 @@ sAu
 xJd
 aEt
 vnh
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
 oUz
 oUz
 oUz
@@ -53639,14 +53699,14 @@ vnh
 vnh
 vnh
 vnh
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
 aid
 oqH
 xVb
@@ -53896,13 +53956,13 @@ iGv
 iGv
 syc
 iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
+amE
+amE
+amE
+amE
+amE
+amE
+amE
 oUz
 kYS
 oUz
@@ -54152,14 +54212,14 @@ iGv
 syc
 iGv
 iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
 oUz
 qdn
 oUz
@@ -54405,17 +54465,17 @@ amE
 amE
 amE
 amE
-iGv
+amE
 iGv
 syc
 iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
+amE
+amE
+amE
+amE
+amE
+amE
+amE
 oUz
 oUz
 qdn
@@ -54665,14 +54725,14 @@ amE
 amE
 iGv
 iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
 oUz
 oUz
 qdn
@@ -54923,12 +54983,12 @@ amE
 iGv
 syc
 iGv
-iGv
-iGv
-iGv
-iGv
-iGv
-iGv
+amE
+amE
+syc
+syc
+syc
+syc
 iGv
 oUz
 oUz
@@ -55180,11 +55240,11 @@ bSI
 iGv
 iGv
 iGv
-byF
-byF
-byF
-rpY
-saP
+uoa
+uoa
+uoa
+kaU
+vOE
 hbe
 iGv
 oUz
@@ -55388,7 +55448,7 @@ amE
 amE
 amE
 amE
-iGv
+amE
 iGv
 iGv
 iGv
@@ -55437,12 +55497,12 @@ bSI
 syc
 iGv
 syc
-byF
+uoa
 jVg
 jVg
 fug
 nfB
-byF
+uoa
 iGv
 iGv
 oUz
@@ -55645,8 +55705,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -55902,8 +55962,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -56159,8 +56219,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -56205,17 +56265,17 @@ xml
 bSI
 bSI
 jVg
-gaT
-gaT
-gaT
+mxN
+mxN
+mxN
 tus
 hbe
-byF
+uoa
 jVg
 jVg
 jVg
-byF
-byF
+uoa
+uoa
 iGv
 aid
 oqH
@@ -56225,7 +56285,7 @@ hbe
 lUq
 hbe
 lUq
-byF
+uoa
 xVb
 oqH
 aid
@@ -56416,8 +56476,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -56460,14 +56520,14 @@ bSI
 bSI
 bSI
 bSI
-fex
-kaU
-kaU
+hRy
+gaT
+gaT
 jVg
-pqi
-toJ
+npG
+hBG
 cbg
-byF
+uoa
 hbe
 uel
 jVg
@@ -56480,7 +56540,7 @@ oUz
 oUz
 bCn
 jVg
-xgf
+cLc
 jVg
 bCn
 oUz
@@ -56673,8 +56733,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -56716,32 +56776,32 @@ uFl
 qzy
 hbe
 hbe
-toJ
+hBG
 sdN
 sdN
 wqU
-uoa
+saP
 wqU
 jVg
 sdN
-vOE
+bvr
 hbe
-byF
+uoa
 hbe
 gEL
 hbe
 bCn
-byF
-xgf
-xgf
+uoa
+cLc
+cLc
 bCn
 hbe
 pEO
-byF
+uoa
 pEO
 hbe
-xgf
-byF
+cLc
+uoa
 oUz
 iGv
 syc
@@ -56930,8 +56990,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -56972,33 +57032,33 @@ xcp
 lAy
 hbe
 hbe
-toJ
-toJ
+hBG
+hBG
 jVg
 wqU
 wqU
-uoa
+saP
 wqU
 wqU
 jVg
-kaU
-vOE
+gaT
+bvr
 hbe
 wNq
-mbI
-mbI
+lvV
+lvV
 lqf
 bCn
-xCt
-toJ
+pqi
+hBG
 lQS
 iAJ
 lQS
-bvr
+xVv
 rcH
 ioN
 rcH
-byF
+uoa
 iGv
 iGv
 syc
@@ -57187,8 +57247,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -57229,7 +57289,7 @@ tPP
 jRa
 hbe
 qVR
-toJ
+hBG
 tEL
 wqU
 wqU
@@ -57240,21 +57300,21 @@ wqU
 wqU
 wKO
 cbg
-ljj
+wOO
 cbg
-toJ
+hBG
 cbg
-lvV
+vWj
 hbe
-eLe
+sUv
 nVN
 gEW
-wTp
+eLe
 gEW
-wTp
+eLe
 whJ
 eRW
-pHq
+toJ
 hbe
 iGv
 syc
@@ -57444,8 +57504,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -57487,29 +57547,29 @@ jRa
 fnA
 pnS
 sdN
-uoa
-uoa
+saP
+saP
 wqU
-wFs
-wFs
+gNU
+gNU
 wqU
 wqU
 kpI
-uoa
-gkv
-ljj
+saP
+wFs
+wOO
 vHI
 jpU
-toJ
+hBG
 ioN
 sQc
 iMP
 cbg
-toJ
-toJ
-wOO
-toJ
-toJ
+hBG
+hBG
+fex
+hBG
+hBG
 cbg
 ioN
 lHB
@@ -57701,8 +57761,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -57747,29 +57807,29 @@ jVg
 wqU
 wqU
 hbe
-wFs
-uoa
-wFs
+gNU
+saP
+gNU
 hbe
 kxJ
 wqU
-fRc
+kgW
 mTD
-toJ
+hBG
 sdN
-lzC
+rEr
 cbg
-xgf
-toJ
-eFZ
-sPm
-eFZ
-toJ
-sPm
-sPm
-eFZ
-toJ
 cLc
+hBG
+eFZ
+sPm
+eFZ
+hBG
+sPm
+sPm
+eFZ
+hBG
+hpT
 syc
 iGv
 syc
@@ -57958,8 +58018,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -58000,7 +58060,7 @@ tPP
 jRa
 fnA
 pnS
-toJ
+hBG
 wqU
 wqU
 wqU
@@ -58010,20 +58070,20 @@ wqU
 wqU
 wqU
 wqU
-gkv
-ljj
-pqi
-lvV
-pqi
-jgr
-mxN
+wFs
+wOO
 npG
-toJ
+vWj
+npG
+jgr
+gkv
+rpY
+hBG
 cbg
 cbg
-toJ
-fNw
-toJ
+hBG
+mTG
+hBG
 cbg
 xYo
 lHB
@@ -58215,8 +58275,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -58257,7 +58317,7 @@ xcp
 jRa
 hbe
 qVR
-toJ
+hBG
 wjt
 wqU
 wqU
@@ -58266,21 +58326,21 @@ hbe
 wqU
 wqU
 wqU
-hKZ
-toJ
-ljj
-toJ
+xQz
+hBG
+wOO
+hBG
 jVg
 jVg
-pqi
+npG
 hbe
-mJt
+lzC
 ehx
 vWs
 ehx
-mJt
+lzC
 ucH
-rEr
+xgf
 ucH
 onz
 hbe
@@ -58472,8 +58532,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -58514,8 +58574,8 @@ xcp
 kMP
 hbe
 hbe
-toJ
-pqi
+hBG
+npG
 wjt
 wqU
 wqU
@@ -58523,24 +58583,24 @@ wqU
 wqU
 wqU
 qmD
-toJ
+hBG
 cbg
 hbe
 qlR
-vWj
+mnh
 xHx
 jMP
-xgf
+cLc
 mWT
-vOE
-lzC
+bvr
+rEr
+mTf
 dYR
 hBG
-toJ
 lQS
 xYo
 lQS
-byF
+uoa
 iGv
 syc
 syc
@@ -58729,8 +58789,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -58773,31 +58833,31 @@ idu
 hbe
 hbe
 cbg
-toJ
+hBG
 wjt
 wqU
-uoa
+saP
 wqU
 qmD
-lvV
+vWj
 jpU
-byF
-byF
+uoa
+uoa
 hbe
 bCn
-xgf
+cLc
 bCn
-byF
+uoa
 bCn
 bCn
-xgf
-byF
+cLc
+uoa
 hbe
 dMz
-byF
+uoa
 hbe
 bCn
-byF
+uoa
 iGv
 iGv
 iGv
@@ -58986,8 +59046,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -59030,15 +59090,15 @@ bSI
 bSI
 bSI
 bSI
-toJ
-toJ
-pqi
+hBG
+hBG
+npG
 rcH
 cbg
-toJ
-vOE
+hBG
+bvr
 hbe
-byF
+uoa
 iGv
 iGv
 iGv
@@ -59049,7 +59109,7 @@ iGv
 iGv
 iGv
 iGv
-xgf
+cLc
 jVg
 bCn
 oUz
@@ -59243,8 +59303,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -59289,9 +59349,9 @@ kyB
 bSI
 bSI
 obd
-lvV
-pqi
-gNU
+vWj
+npG
+pDl
 dLE
 hbe
 hbe
@@ -59500,8 +59560,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -59546,8 +59606,8 @@ euo
 hbe
 bSI
 bSI
-hRy
-xgf
+pHq
+cLc
 pLs
 hbe
 hbe
@@ -59757,8 +59817,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -60014,8 +60074,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -60271,8 +60331,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -60528,8 +60588,8 @@ amE
 amE
 amE
 amE
-iGv
-iGv
+amE
+amE
 iGv
 iGv
 iGv
@@ -60785,7 +60845,7 @@ amE
 amE
 amE
 amE
-iGv
+amE
 iGv
 iGv
 iGv
@@ -60958,9 +61018,9 @@ amE
 amE
 amE
 amE
-amE
-amE
-amE
+syc
+syc
+syc
 amE
 amE
 amE
@@ -61214,11 +61274,11 @@ amE
 amE
 amE
 amE
-amE
-amE
-amE
-amE
-amE
+syc
+tKQ
+iGv
+iGv
+syc
 amE
 amE
 amE
@@ -61326,7 +61386,7 @@ cbg
 vNR
 cbg
 myI
-sUv
+fNw
 inJ
 jpU
 ciY
@@ -61470,13 +61530,13 @@ amE
 amE
 amE
 amE
-amE
-amE
-amE
-amE
-amE
-amE
-amE
+syc
+iGv
+mbI
+hKZ
+ljj
+jiT
+syc
 amE
 amE
 amE
@@ -61727,13 +61787,13 @@ amE
 amE
 amE
 amE
-amE
-amE
-amE
-amE
-amE
-amE
-amE
+syc
+iGv
+ofF
+kLN
+wTp
+syc
+syc
 amE
 amE
 amE
@@ -61984,13 +62044,13 @@ amE
 amE
 amE
 amE
-amE
-amE
-amE
-amE
-amE
-amE
-amE
+syc
+fZd
+xCt
+fRc
+mJt
+iGv
+syc
 amE
 amE
 amE
@@ -62242,11 +62302,11 @@ amE
 amE
 amE
 amE
-amE
-amE
-amE
-amE
-amE
+syc
+iGv
+byF
+fUK
+syc
 amE
 amE
 amE
@@ -62500,9 +62560,9 @@ amE
 amE
 amE
 amE
-amE
-amE
-amE
+syc
+iGv
+syc
 amE
 amE
 amE
@@ -62758,7 +62818,7 @@ amE
 amE
 amE
 amE
-amE
+syc
 amE
 amE
 amE
