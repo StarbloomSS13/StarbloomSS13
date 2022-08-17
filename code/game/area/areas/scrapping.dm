@@ -1,6 +1,9 @@
 /// Areas for scrapping missions. ///
 
 // RIMWORLD //
+/area/scrapping/rimworld
+	name = "DO NOT USE /// BASETYPE"
+	has_gravity = STANDARD_GRAVITY
 
 /area/scrapping/rimworld/civilianpavillion // Fun name
 	name = "Civilian Pavillion"
