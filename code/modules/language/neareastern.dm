@@ -1,6 +1,6 @@
 /datum/language/neareastern
 	name = "Near-Eastern"
-	desc = "One of the minority languages aboard Arx. A descendant of Arabic, Hindi and other regional languages before the collapse of Earth."
+	desc = "One of the minority languages aboard the North Star. A descendant of Arabic, Hindi and other regional languages before the collapse of Earth."
 	secret = FALSE
 	key = "a"
 	flags = TONGUELESS_SPEECH
