@@ -1,9 +1,6 @@
-/mob/living/simple_animal/hostile/zombie
+/mob/living/simple_animal/hostile/simple_human/zombie
 	name = "Shambling Corpse"
 	desc = "When there is no more room in hell, the dead will walk in outer space."
-	icon = 'icons/mob/simple_human.dmi'
-	icon_state = "zombie"
-	icon_living = "zombie"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	sentience_type = SENTIENCE_HUMANOID
 	speak_chance = 0
@@ -21,29 +18,29 @@
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
 	status_flags = CANPUSH
-	del_on_death = 1
-	var/zombiejob = JOB_MEDICAL_DOCTOR
+	outfit = /datum/outfit/corpse_doctor
+	species = /datum/species/zombie
+	our_bloody_slots = list(ITEM_SLOT_OCLOTHING)
 	var/infection_chance = 0
 
-/mob/living/simple_animal/hostile/zombie/Initialize(mapload)
-	. = ..()
-	INVOKE_ASYNC(src, .proc/setup_visuals)
+/mob/living/simple_animal/hostile/simple_human/zombie/assistant
+	outfit = /datum/outfit/corpse_assistant
 
-/mob/living/simple_animal/hostile/zombie/proc/setup_visuals()
-	var/datum/job/job = SSjob.GetJob(zombiejob)
-
-	var/datum/outfit/outfit = new job.outfit
-	outfit.l_hand = null
-	outfit.r_hand = null
-
-	var/mob/living/carbon/human/dummy/dummy = new
-	dummy.equipOutfit(outfit)
-	dummy.set_species(/datum/species/zombie)
-	COMPILE_OVERLAYS(dummy)
-	icon = getFlatIcon(dummy)
-	qdel(dummy)
-
-/mob/living/simple_animal/hostile/zombie/AttackingTarget()
+/mob/living/simple_animal/hostile/simple_human/zombie/AttackingTarget()
 	. = ..()
 	if(. && ishuman(target) && prob(infection_chance))
 		try_to_zombie_infect(target)
+
+/datum/outfit/corpse_doctor
+	name = "Corpse Doctor"
+	suit = /obj/item/clothing/suit/toggle/labcoat
+	uniform = /obj/item/clothing/under/rank/medical/doctor
+	shoes = /obj/item/clothing/shoes/sneakers/white
+	back = /obj/item/storage/backpack/medic
+
+/datum/outfit/corpse_assistant
+	name = "Corpse Assistant"
+	mask = /obj/item/clothing/mask/gas
+	uniform = /obj/item/clothing/under/color/grey
+	shoes = /obj/item/clothing/shoes/sneakers/black
+	back = /obj/item/storage/backpack

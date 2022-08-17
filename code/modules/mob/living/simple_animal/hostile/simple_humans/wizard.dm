@@ -1,32 +1,17 @@
-/mob/living/simple_animal/hostile/wizard
+/mob/living/simple_animal/hostile/simple_human/wizard
 	name = "Space Wizard"
 	desc = "EI NATH?"
-	icon = 'icons/mob/simple_human.dmi'
-	icon_state = "wizard"
-	icon_living = "wizard"
-	icon_dead = "wizard_dead"
+	outfit = /datum/outfit/wizard
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	sentience_type = SENTIENCE_HUMANOID
-	speak_chance = 0
 	turns_per_move = 3
 	speed = 0
-	maxHealth = 100
-	health = 100
 	harm_intent_damage = 5
-	melee_damage_lower = 5
-	melee_damage_upper = 5
-	attack_verb_continuous = "punches"
-	attack_verb_simple = "punch"
-	attack_sound = 'sound/weapons/punch1.ogg'
-	combat_mode = TRUE
-	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
-	unsuitable_atmos_damage = 7.5
 	faction = list(ROLE_WIZARD)
 	status_flags = CANPUSH
 
 	retreat_distance = 3 //out of fireball range
 	minimum_distance = 3
-	del_on_death = 1
 	loot = list(/obj/effect/mob_spawn/corpse/human/wizard,
 				/obj/item/staff)
 
@@ -38,7 +23,7 @@
 
 	footstep_type = FOOTSTEP_MOB_SHOE
 
-/mob/living/simple_animal/hostile/wizard/Initialize(mapload)
+/mob/living/simple_animal/hostile/simple_human/wizard/Initialize(mapload)
 	. = ..()
 	fireball = new /obj/effect/proc_holder/spell/aimed/fireball
 	fireball.clothes_req = 0
@@ -60,7 +45,7 @@
 	blink.outer_tele_radius = 3
 	AddSpell(blink)
 
-/mob/living/simple_animal/hostile/wizard/handle_automated_action()
+/mob/living/simple_animal/hostile/simple_human/wizard/handle_automated_action()
 	. = ..()
 	if(target && next_cast < world.time)
 		if((get_dir(src,target) in list(SOUTH,EAST,WEST,NORTH)) && fireball.cast_check(0,src)) //Lined up for fireball

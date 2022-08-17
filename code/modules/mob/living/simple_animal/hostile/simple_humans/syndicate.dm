@@ -8,39 +8,18 @@
 
 
 ///////////////Base mob////////////
-/obj/effect/light_emitter/red_energy_sword //used so there's a combination of both their head light and light coming off the energy sword
-	set_luminosity = 2
-	set_cap = 2.5
-	light_color = COLOR_SOFT_RED
-
-
-/mob/living/simple_animal/hostile/syndicate
+/mob/living/simple_animal/hostile/simple_human/syndicate
 	name = "Syndicate Operative"
 	desc = "Death to Nanotrasen."
-	icon = 'icons/mob/simple_human.dmi'
-	icon_state = "syndicate"
-	icon_living = "syndicate"
-	icon_dead = "syndicate_dead"
-	icon_gib = "syndicate_gib"
+	outfit = /datum/outfit/syndicatesoldiercorpse
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	sentience_type = SENTIENCE_HUMANOID
-	speak_chance = 0
-	turns_per_move = 5
 	speed = 0
 	stat_attack = HARD_CRIT
 	robust_searching = 1
-	maxHealth = 100
-	health = 100
-	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attack_verb_continuous = "punches"
-	attack_verb_simple = "punch"
-	attack_sound = 'sound/weapons/punch1.ogg'
-	combat_mode = TRUE
 	loot = list(/obj/effect/mob_spawn/corpse/human/syndicatesoldier)
-	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
-	unsuitable_atmos_damage = 7.5
 	faction = list(ROLE_SYNDICATE)
 	check_friendly_fire = 1
 	status_flags = CANPUSH
@@ -51,33 +30,31 @@
 
 ///////////////Melee////////////
 
-/mob/living/simple_animal/hostile/syndicate/space
-	icon_state = "syndicate_space"
-	icon_living = "syndicate_space"
+/mob/living/simple_animal/hostile/simple_human/syndicate/space
 	name = "Syndicate Commando"
+	outfit = /datum/outfit/syndicatecommandocorpse
 	maxHealth = 170
 	health = 170
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
 	speed = 1
+	light_range = 4
 
-/mob/living/simple_animal/hostile/syndicate/space/Initialize(mapload)
+/mob/living/simple_animal/hostile/simple_human/syndicate/space/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
-	set_light(4)
 
-/mob/living/simple_animal/hostile/syndicate/space/stormtrooper
-	icon_state = "syndicate_stormtrooper"
-	icon_living = "syndicate_stormtrooper"
+/mob/living/simple_animal/hostile/simple_human/syndicate/space/stormtrooper
+	outfit = /datum/outfit/syndicatestormtroopercorpse
 	name = "Syndicate Stormtrooper"
 	maxHealth = 250
 	health = 250
 
-/mob/living/simple_animal/hostile/syndicate/melee //dude with a knife and no shields
+/mob/living/simple_animal/hostile/simple_human/syndicate/melee //dude with a knife and no shields
 	melee_damage_lower = 15
 	melee_damage_upper = 15
-	icon_state = "syndicate_knife"
-	icon_living = "syndicate_knife"
+	held_item = /obj/item/knife/combat/survival
+	held_item_left = /obj/item/shield/energy
 	loot = list(/obj/effect/gibspawner/human)
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
@@ -86,9 +63,8 @@
 	status_flags = 0
 	var/projectile_deflect_chance = 0
 
-/mob/living/simple_animal/hostile/syndicate/melee/space
-	icon_state = "syndicate_space_knife"
-	icon_living = "syndicate_space_knife"
+/mob/living/simple_animal/hostile/simple_human/syndicate/melee/space
+	outfit = /datum/outfit/syndicatecommandocorpse
 	name = "Syndicate Commando"
 	maxHealth = 170
 	health = 170
@@ -96,51 +72,40 @@
 	minbodytemp = 0
 	speed = 1
 	projectile_deflect_chance = 50
+	light_range = 4
 
-/mob/living/simple_animal/hostile/syndicate/melee/space/Initialize(mapload)
+/mob/living/simple_animal/hostile/simple_human/syndicate/melee/space/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
-	set_light(4)
 
-/mob/living/simple_animal/hostile/syndicate/melee/space/stormtrooper
-	icon_state = "syndicate_stormtrooper_knife"
-	icon_living = "syndicate_stormtrooper_knife"
+/mob/living/simple_animal/hostile/simple_human/syndicate/melee/space/stormtrooper
+	outfit = /datum/outfit/syndicatestormtroopercorpse
 	name = "Syndicate Stormtrooper"
 	maxHealth = 250
 	health = 250
 	projectile_deflect_chance = 50
 
-/mob/living/simple_animal/hostile/syndicate/melee/sword
+/mob/living/simple_animal/hostile/simple_human/syndicate/melee/sword
 	melee_damage_lower = 30
 	melee_damage_upper = 30
-	icon_state = "syndicate_sword"
-	icon_living = "syndicate_sword"
-	attack_verb_continuous = "slashes"
-	attack_verb_simple = "slash"
+	held_item = /obj/item/melee/energy/sword
 	attack_sound = 'sound/weapons/blade1.ogg'
 	armour_penetration = 35
 	light_color = COLOR_SOFT_RED
 	status_flags = 0
-	var/obj/effect/light_emitter/red_energy_sword/sord
+	light_range = 2
+	light_power = 2.5
+	light_color = COLOR_SOFT_RED
 	projectile_deflect_chance = 50
 
-/mob/living/simple_animal/hostile/syndicate/melee/sword/Initialize(mapload)
-	. = ..()
-	set_light(2)
-
-/mob/living/simple_animal/hostile/syndicate/melee/sword/Destroy()
-	QDEL_NULL(sord)
-	return ..()
-
-/mob/living/simple_animal/hostile/syndicate/melee/bullet_act(obj/projectile/Proj)
+/mob/living/simple_animal/hostile/simple_human/syndicate/melee/bullet_act(obj/projectile/Proj)
 	if(prob(projectile_deflect_chance))
 		visible_message(span_danger("[src] blocks [Proj] with its shield!"))
 		return BULLET_ACT_BLOCK
 	return ..()
 
-/mob/living/simple_animal/hostile/syndicate/melee/sword/space
-	icon_state = "syndicate_space_sword"
-	icon_living = "syndicate_space_sword"
+/mob/living/simple_animal/hostile/simple_human/syndicate/melee/sword/space
+	outfit = /datum/outfit/syndicatecommandocorpse
 	name = "Syndicate Commando"
 	maxHealth = 170
 	health = 170
@@ -148,20 +113,14 @@
 	minbodytemp = 0
 	speed = 1
 	projectile_deflect_chance = 50
+	light_range = 4
 
-/mob/living/simple_animal/hostile/syndicate/melee/sword/space/Initialize(mapload)
+/mob/living/simple_animal/hostile/simple_human/syndicate/melee/sword/space/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
-	sord = new(src)
-	set_light(4)
 
-/mob/living/simple_animal/hostile/syndicate/melee/sword/space/Destroy()
-	QDEL_NULL(sord)
-	return ..()
-
-/mob/living/simple_animal/hostile/syndicate/melee/sword/space/stormtrooper
-	icon_state = "syndicate_stormtrooper_sword"
-	icon_living = "syndicate_stormtrooper_sword"
+/mob/living/simple_animal/hostile/simple_human/syndicate/melee/sword/space/stormtrooper
+	outfit = /datum/outfit/syndicatestormtroopercorpse
 	name = "Syndicate Stormtrooper"
 	maxHealth = 250
 	health = 250
@@ -169,116 +128,107 @@
 
 ///////////////Guns////////////
 
-/mob/living/simple_animal/hostile/syndicate/ranged
+/mob/living/simple_animal/hostile/simple_human/syndicate/ranged
 	ranged = 1
 	retreat_distance = 5
 	minimum_distance = 5
-	icon_state = "syndicate_pistol"
-	icon_living = "syndicate_pistol"
+	held_item = /obj/item/gun/ballistic/automatic/pistol
 	casingtype = /obj/item/ammo_casing/c9mm
 	projectilesound = 'sound/weapons/gun/pistol/shot.ogg'
 	loot = list(/obj/effect/gibspawner/human)
 	dodging = FALSE
 	rapid_melee = 1
 
-/mob/living/simple_animal/hostile/syndicate/ranged/infiltrator //shuttle loan event
+/mob/living/simple_animal/hostile/simple_human/syndicate/ranged/infiltrator //shuttle loan event
 	projectilesound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
 	loot = list(/obj/effect/mob_spawn/corpse/human/syndicatesoldier)
 
-/mob/living/simple_animal/hostile/syndicate/ranged/space
-	icon_state = "syndicate_space_pistol"
-	icon_living = "syndicate_space_pistol"
+/mob/living/simple_animal/hostile/simple_human/syndicate/ranged/space
+	outfit = /datum/outfit/syndicatecommandocorpse
 	name = "Syndicate Commando"
 	maxHealth = 170
 	health = 170
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
 	speed = 1
+	light_range = 4
 
-/mob/living/simple_animal/hostile/syndicate/ranged/space/Initialize(mapload)
+/mob/living/simple_animal/hostile/simple_human/syndicate/ranged/space/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
-	set_light(4)
 
-/mob/living/simple_animal/hostile/syndicate/ranged/space/stormtrooper
-	icon_state = "syndicate_stormtrooper_pistol"
-	icon_living = "syndicate_stormtrooper_pistol"
+/mob/living/simple_animal/hostile/simple_human/syndicate/ranged/space/stormtrooper
+	outfit = /datum/outfit/syndicatestormtroopercorpse
 	name = "Syndicate Stormtrooper"
 	maxHealth = 250
 	health = 250
 
-/mob/living/simple_animal/hostile/syndicate/ranged/smg
+/mob/living/simple_animal/hostile/simple_human/syndicate/ranged/smg
 	rapid = 2
-	icon_state = "syndicate_smg"
-	icon_living = "syndicate_smg"
+	held_item = /obj/item/gun/ballistic/automatic/c20r // DO YOU KNOW THE NAME OF SPACE GOD?
 	casingtype = /obj/item/ammo_casing/c45
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
 
-/mob/living/simple_animal/hostile/syndicate/ranged/smg/pilot //caravan ambush ruin
+/mob/living/simple_animal/hostile/simple_human/syndicate/ranged/smg/pilot //caravan ambush ruin
 	name = "Syndicate Salvage Pilot"
 	loot = list(/obj/effect/mob_spawn/corpse/human/syndicatesoldier)
 
-/mob/living/simple_animal/hostile/syndicate/ranged/smg/space
-	icon_state = "syndicate_space_smg"
-	icon_living = "syndicate_space_smg"
+/mob/living/simple_animal/hostile/simple_human/syndicate/ranged/smg/space
+	outfit = /datum/outfit/syndicatecommandocorpse
 	name = "Syndicate Commando"
 	maxHealth = 170
 	health = 170
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
 	speed = 1
+	light_range = 4
 
-/mob/living/simple_animal/hostile/syndicate/ranged/smg/space/Initialize(mapload)
+/mob/living/simple_animal/hostile/simple_human/syndicate/ranged/smg/space/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
-	set_light(4)
 
-/mob/living/simple_animal/hostile/syndicate/ranged/smg/space/stormtrooper
-	icon_state = "syndicate_stormtrooper_smg"
-	icon_living = "syndicate_stormtrooper_smg"
+/mob/living/simple_animal/hostile/simple_human/syndicate/ranged/smg/space/stormtrooper
+	outfit = /datum/outfit/syndicatestormtroopercorpse
 	name = "Syndicate Stormtrooper"
 	maxHealth = 250
 	health = 250
 
-/mob/living/simple_animal/hostile/syndicate/ranged/shotgun
+/mob/living/simple_animal/hostile/simple_human/syndicate/ranged/shotgun
 	rapid = 2
 	rapid_fire_delay = 6
 	minimum_distance = 3
-	icon_state = "syndicate_shotgun"
-	icon_living = "syndicate_shotgun"
+	held_item = /obj/item/gun/ballistic/shotgun/bulldog
 	casingtype = /obj/item/ammo_casing/shotgun/buckshot //buckshot (up to 72.5 brute) fired in a two-round burst
 
-/mob/living/simple_animal/hostile/syndicate/ranged/shotgun/space
-	icon_state = "syndicate_space_shotgun"
-	icon_living = "syndicate_space_shotgun"
+/mob/living/simple_animal/hostile/simple_human/syndicate/ranged/shotgun/space
+	outfit = /datum/outfit/syndicatecommandocorpse
 	name = "Syndicate Commando"
 	maxHealth = 170
 	health = 170
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
 	speed = 1
+	light_range = 4
 
-/mob/living/simple_animal/hostile/syndicate/ranged/shotgun/space/Initialize(mapload)
+/mob/living/simple_animal/hostile/simple_human/syndicate/ranged/shotgun/space/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
-	set_light(4)
 
-/mob/living/simple_animal/hostile/syndicate/ranged/shotgun/space/stormtrooper
-	icon_state = "syndicate_stormtrooper_shotgun"
-	icon_living = "syndicate_stormtrooper_shotgun"
+/mob/living/simple_animal/hostile/simple_human/syndicate/ranged/shotgun/space/stormtrooper
+	outfit = /datum/outfit/syndicatestormtroopercorpse
 	name = "Syndicate Stormtrooper"
 	maxHealth = 250
 	health = 250
 
 ///////////////Misc////////////
 
-/mob/living/simple_animal/hostile/syndicate/civilian
+/mob/living/simple_animal/hostile/simple_human/syndicate/civilian
 	minimum_distance = 10
 	retreat_distance = 10
 	obj_damage = 0
 	environment_smash = ENVIRONMENT_SMASH_NONE
 
-/mob/living/simple_animal/hostile/syndicate/civilian/Aggro()
+/mob/living/simple_animal/hostile/simple_human/syndicate/civilian/Aggro()
 	..()
 	summon_backup(15)
 	say("GUARDS!!")
