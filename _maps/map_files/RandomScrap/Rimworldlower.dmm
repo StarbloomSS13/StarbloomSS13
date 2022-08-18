@@ -91,6 +91,7 @@
 /obj/machinery/door/airlock/hatch{
 	name = "MiniSat Antechamber"
 	},
+/obj/effect/mapping_helpers/airlock/access/any/away/command,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "dereai-passthrough"
 	},
@@ -164,6 +165,11 @@
 /obj/structure/cable,
 /turf/open/floor/plating/rust,
 /area/lushplanet/underground)
+"cHp" = (
+/turf/open/chasm/jungle{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
+/area/lushplanet/underground)
 "cNE" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -190,11 +196,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/lushplanet/underground)
-"deD" = (
-/turf/open/chasm/jungle{
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
-/area/lushplanet/underground)
 "djG" = (
 /obj/item/stack/rods/ten,
 /turf/open/floor/plating/elevatorshaft,
@@ -210,6 +211,7 @@
 	},
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/mapping_helpers/airlock/access/any/away/command,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "dereai-passthrough"
 	},
@@ -294,6 +296,12 @@
 /obj/structure/scrap,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
+"fyH" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/misc/dirt/jungle,
+/area/lushplanet/underground)
 "fBy" = (
 /obj/structure/filingcabinet,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -363,12 +371,6 @@
 	},
 /turf/open/misc/dirt/jungle,
 /area/lushplanet/underground)
-"gCt" = (
-/obj/structure/railing/corner{
-	dir = 4
-	},
-/turf/open/misc/dirt/jungle,
-/area/lushplanet/underground)
 "gEc" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
@@ -376,12 +378,6 @@
 /obj/structure/scrap,
 /turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
-"gIh" = (
-/obj/structure/railing/corner{
-	dir = 1
-	},
-/turf/open/misc/dirt/jungle,
-/area/lushplanet/underground)
 "gJR" = (
 /obj/structure/scrap,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -479,6 +475,10 @@
 	},
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
+"hYM" = (
+/obj/structure/railing,
+/turf/open/misc/dirt/jungle,
+/area/lushplanet/underground)
 "ibJ" = (
 /turf/closed/wall/rust,
 /area/scrapping/rimworld/centralpavillion/lower)
@@ -526,6 +526,7 @@
 /obj/machinery/door/airlock/hatch{
 	name = "MiniSat Chamber Hallway"
 	},
+/obj/effect/mapping_helpers/airlock/access/any/away/command,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "dereai-passthrough"
 	},
@@ -600,15 +601,12 @@
 /obj/machinery/porta_turret/syndicate/energy,
 /turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
-"kfz" = (
-/obj/structure/ladder,
-/turf/open/misc/dirt/jungle,
-/area/lushplanet/underground)
 "khP" = (
 /obj/machinery/door/airlock/hatch{
 	name = "MiniSat Atmospherics"
 	},
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/access/any/away/command,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "dereai-passthrough"
 	},
@@ -617,6 +615,10 @@
 "kjK" = (
 /turf/closed/wall,
 /area/scrapping/rimworld/centralpavillion/lower)
+"kmT" = (
+/obj/structure/railing/corner,
+/turf/open/misc/dirt/jungle,
+/area/lushplanet/underground)
 "kol" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/circuit/red/anim,
@@ -715,6 +717,7 @@
 	name = "MiniSat Antechamber"
 	},
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/access/any/away/command,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -800,6 +803,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/maintenance/external,
+/obj/effect/mapping_helpers/airlock/access/any/away/maintenance,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "nhZ" = (
@@ -811,6 +815,12 @@
 /area/scrapping/rimworld/centralpavillion/lower)
 "nRu" = (
 /turf/closed/wall/rust,
+/area/lushplanet/underground)
+"nSK" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/misc/dirt/jungle,
 /area/lushplanet/underground)
 "nTE" = (
 /obj/effect/turf_decal/tile/blue{
@@ -851,8 +861,13 @@
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "MiniSat Maintenance"
 	},
+/obj/effect/mapping_helpers/airlock/access/any/away/command,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
+"oNT" = (
+/obj/structure/ladder,
+/turf/open/misc/dirt/jungle,
+/area/lushplanet/underground)
 "oWe" = (
 /obj/structure/scrap,
 /turf/open/floor/iron/dark/side,
@@ -862,6 +877,7 @@
 	name = "MiniSat Maintenance"
 	},
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/access/any/away/command,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "oYJ" = (
@@ -897,6 +913,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/mapping_helpers/airlock/access/any/away/command,
 /turf/open/floor/iron/grimy,
 /area/scrapping/rimworld/centralpavillion/lower)
 "pCj" = (
@@ -905,16 +922,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/circuit/red/anim,
 /area/scrapping/rimworld/centralpavillion/lower)
-"pJb" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/open/misc/dirt/jungle,
-/area/lushplanet/underground)
-"pPZ" = (
-/obj/structure/railing/corner,
-/turf/open/misc/dirt/jungle,
-/area/lushplanet/underground)
 "pQN" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -986,6 +993,12 @@
 /obj/structure/scrap,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
+"sfC" = (
+/obj/structure/railing/corner{
+	dir = 4
+	},
+/turf/open/misc/dirt/jungle,
+/area/lushplanet/underground)
 "shc" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable,
@@ -1034,12 +1047,6 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/lushplanet/underground)
-"tPs" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/open/misc/dirt/jungle,
 /area/lushplanet/underground)
 "tTU" = (
 /obj/machinery/recharge_station,
@@ -1194,14 +1201,16 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/rust,
 /area/lushplanet/underground)
-"xjF" = (
-/obj/structure/railing{
+"xup" = (
+/obj/structure/railing/corner{
 	dir = 1
 	},
 /turf/open/misc/dirt/jungle,
 /area/lushplanet/underground)
-"xCW" = (
-/obj/structure/railing,
+"xGS" = (
+/obj/structure/railing{
+	dir = 4
+	},
 /turf/open/misc/dirt/jungle,
 /area/lushplanet/underground)
 "xHC" = (
@@ -1221,6 +1230,7 @@
 /obj/machinery/door/airlock/hatch{
 	name = "MiniSat Chamber Observation"
 	},
+/obj/effect/mapping_helpers/airlock/access/any/away/command,
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion/lower)
 "xMA" = (
@@ -11142,9 +11152,9 @@ uMy
 uMy
 uMy
 uMy
-pPZ
-tPs
-gCt
+kmT
+xGS
+sfC
 uMy
 uMy
 uMy
@@ -11399,9 +11409,9 @@ uMy
 uMy
 uMy
 uMy
-xCW
-deD
-xjF
+hYM
+cHp
+nSK
 uMy
 uMy
 uMy
@@ -11657,8 +11667,8 @@ uMy
 uMy
 uMy
 jlm
-pJb
-gIh
+fyH
+xup
 uMy
 uMy
 uMy
@@ -11915,7 +11925,7 @@ uMy
 uMy
 uMy
 uMy
-kfz
+oNT
 uMy
 uMy
 uMy
