@@ -4417,7 +4417,7 @@
 	name = "Unity Boardroom"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/faction/unity,
-/obj/effect/mapping_helpers/airlock/access/all/command/teleporter,
+/obj/effect/mapping_helpers/airlock/access/any/command/teleporter,
 /turf/open/floor/iron/dark,
 /area/faction/unity)
 "bfU" = (
@@ -6588,7 +6588,9 @@
 	dir = 4
 	},
 /obj/structure/table/wood,
-/obj/machinery/computer/libraryconsole/bookmanagement,
+/obj/machinery/computer/libraryconsole/bookmanagement{
+	dir = 8
+	},
 /turf/open/floor/carpet/red,
 /area/service/library/upper)
 "bGc" = (
@@ -16653,10 +16655,10 @@
 	name = "Maintenance";
 	req_one_access_txt = "12"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/pod/light,
 /area/maintenance/floor1/starboard/fore)
 "eFp" = (
@@ -24862,9 +24864,9 @@
 	name = "Maintenance";
 	req_one_access_txt = "12"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/pod/light,
 /area/maintenance/floor1/starboard/fore)
 "hhz" = (
@@ -27516,7 +27518,7 @@
 	name = "Unity Boardroom"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/faction/unity,
-/obj/effect/mapping_helpers/airlock/access/all/command/teleporter,
+/obj/effect/mapping_helpers/airlock/access/any/command/teleporter,
 /turf/open/floor/iron/dark,
 /area/faction/unity)
 "hUX" = (
@@ -34831,8 +34833,8 @@
 /obj/machinery/door/airlock/hatch{
 	name = "Maintenance Access"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/pod/light,
 /area/maintenance/floor1/starboard)
 "kch" = (
@@ -38715,7 +38717,7 @@
 	name = "Unity Boardroom"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/faction/unity,
-/obj/effect/mapping_helpers/airlock/access/all/command/teleporter,
+/obj/effect/mapping_helpers/airlock/access/any/command/teleporter,
 /turf/open/floor/iron/dark,
 /area/faction/unity)
 "lhc" = (
@@ -38770,7 +38772,9 @@
 /area/science/genetics)
 "lhG" = (
 /obj/structure/table/wood,
-/obj/machinery/computer/libraryconsole,
+/obj/machinery/computer/libraryconsole{
+	dir = 1
+	},
 /obj/structure/window/reinforced/tinted,
 /obj/structure/window/reinforced/tinted{
 	dir = 4
@@ -40606,7 +40610,9 @@
 /area/commons/cryo_storage)
 "lIn" = (
 /obj/structure/table/wood,
-/obj/machinery/computer/libraryconsole/bookmanagement,
+/obj/machinery/computer/libraryconsole/bookmanagement{
+	dir = 8
+	},
 /turf/open/floor/engine/cult,
 /area/service/library/private)
 "lIr" = (
@@ -45493,9 +45499,9 @@
 	name = "Maintenance";
 	req_one_access_txt = "12"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/pod/light,
 /area/maintenance/floor1/starboard/fore)
 "mZm" = (
@@ -58242,8 +58248,8 @@
 	req_one_access_txt = "12"
 	},
 /obj/structure/barricade/wooden/crude,
-/obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
 /obj/effect/mapping_helpers/airlock/abandoned,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/pod/light,
 /area/maintenance/floor1/starboard/fore)
 "qFz" = (
@@ -69934,7 +69940,6 @@
 /turf/open/floor/pod/light,
 /area/maintenance/floor4/port/fore)
 "uit" = (
-/obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
 /obj/machinery/door/airlock/hatch{
 	name = "Maintenance Access"
 	},
@@ -69942,6 +69947,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/plating,
 /area/maintenance/floor1/starboard/fore)
 "uiv" = (
@@ -73504,8 +73510,8 @@
 	name = "Maintenance";
 	req_one_access_txt = "12"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
 /obj/effect/mapping_helpers/airlock/abandoned,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/pod/light,
 /area/maintenance/floor1/starboard/fore)
 "vnt" = (
@@ -74599,7 +74605,6 @@
 	name = "Safe Habitation B"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/mapping_helpers/airlock/access/any/medical/psychology,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/wood,
 /area/medical/psychology/ward)
@@ -83033,7 +83038,6 @@
 	name = "Safe Habitation A"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/mapping_helpers/airlock/access/any/medical/psychology,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/wood,
 /area/medical/psychology/ward)

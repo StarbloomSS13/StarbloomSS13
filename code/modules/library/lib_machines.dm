@@ -745,6 +745,8 @@
 				say("This book is already in my internal cache")
 				return
 			cache = held_book.book_data.return_copy()
+			flick("bigscanner1", src)
+			playsound(src, 'sound/machines/scanner.ogg', vol = 50, vary = TRUE)
 			return TRUE
 		if("clear")
 			cache = null
@@ -788,6 +790,7 @@
 	audible_message(span_hear("[src] begins to hum as it warms up its printing drums."))
 	busy = TRUE
 	playsound(src, 'sound/machines/printer.ogg', 50)
+	flick("binder1", src)
 	addtimer(CALLBACK(src, .proc/bind_book, draw_from), 4.1 SECONDS)
 
 /obj/machinery/bookbinder/proc/bind_book(obj/item/paper/draw_from)

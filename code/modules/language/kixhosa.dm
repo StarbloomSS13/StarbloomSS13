@@ -1,6 +1,6 @@
 /datum/language/kixhosa
 	name = "kiXhosa"
-	desc = "One of the minority languages aboard Arx. A descendant of several African languages before the collapse of Earth."
+	desc = "One of the minority languages aboard the North Star. A descendant of several African languages before the collapse of Earth."
 	key = "x"
 	secret = FALSE
 	flags = TONGUELESS_SPEECH
