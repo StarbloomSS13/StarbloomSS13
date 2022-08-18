@@ -18,8 +18,8 @@
 
 /datum/map_generator_module/splatter_layer/syndie_mobs
 	spawnableAtoms = list(/mob/living/simple_animal/hostile/syndicate = 30, \
-		/mob/living/simple_animal/hostile/syndicate/melee = 20, \
-		/mob/living/simple_animal/hostile/syndicate/ranged = 20, \
+		/mob/living/simple_animal/hostile/simple_human/syndicate/melee = 20, \
+		/mob/living/simple_animal/hostile/simple_human/syndicate/ranged = 20, \
 		/mob/living/simple_animal/hostile/viscerator = 30)
 	spawnableTurfs = list()
 
