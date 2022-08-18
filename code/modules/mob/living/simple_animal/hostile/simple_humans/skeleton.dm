@@ -102,7 +102,7 @@
 	name = "shambling miner"
 	desc = "A plasma-soaked miner, their exposed limbs turned into a grossly incandescent bone seemingly made of plasma."
 	species = /datum/species/plasmaman
-	outfit = /datum/outfit/job/miner
+	outfit = /datum/outfit/job/miner/equipped
 	maxHealth = 150
 	health = 150
 	harm_intent_damage = 10

@@ -130,7 +130,7 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 /mob/living/simple_animal/hostile/simple_human/nanotrasen/ranged/assault
 	name = "Nanotrasen Assault Officer"
 	desc = "Nanotrasen Assault Officer. Contact CentCom if you saw him on your station. Prepare to die, if you've been found near Syndicate property."
-	outfit = /datum/outfit/centcom/centcom_intern
+	outfit = /datum/outfit/nanotrasenassaultsoldiercorpse
 	held_item_left = /obj/item/gun/ballistic/automatic/wt550
 	ranged = TRUE
 	rapid = 4

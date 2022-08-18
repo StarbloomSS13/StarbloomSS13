@@ -88,7 +88,7 @@
 /mob/living/simple_animal/hostile/simple_human/syndicate/melee/sword
 	melee_damage_lower = 30
 	melee_damage_upper = 30
-	held_item = /obj/item/melee/energy/sword
+	held_item = /obj/item/melee/energy/sword/saber
 	attack_sound = 'sound/weapons/blade1.ogg'
 	armour_penetration = 35
 	light_color = COLOR_SOFT_RED
