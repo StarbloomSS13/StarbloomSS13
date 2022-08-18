@@ -6,7 +6,7 @@
 /obj/item/card/id/away/old/rimworld/security_medical
 	name = "Faded MedSec Officer ID"
 	desc = "The name has long since faded, though the rank is still visible."
-	trim = /datum/id_trim/away/old/rimworld/security_medical
+	trim = /datum/id_trim/away/old/rimworld/security_officer_med
 
 /obj/item/card/id/away/old/rimworld/engineer
 	name = "Faded Engineering ID"
