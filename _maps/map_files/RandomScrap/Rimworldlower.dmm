@@ -53,6 +53,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
+"azw" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/misc/dirt/jungle,
+/area/lushplanet/underground)
 "aCH" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -164,11 +170,6 @@
 "cCg" = (
 /obj/structure/cable,
 /turf/open/floor/plating/rust,
-/area/lushplanet/underground)
-"cHp" = (
-/turf/open/chasm/jungle{
-	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
-	},
 /area/lushplanet/underground)
 "cNE" = (
 /obj/effect/turf_decal/tile/blue{
@@ -296,12 +297,6 @@
 /obj/structure/scrap,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
-"fyH" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/open/misc/dirt/jungle,
-/area/lushplanet/underground)
 "fBy" = (
 /obj/structure/filingcabinet,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -314,6 +309,10 @@
 /area/lushplanet/underground)
 "gaG" = (
 /turf/open/floor/plating,
+/area/lushplanet/underground)
+"gaJ" = (
+/obj/structure/ladder,
+/turf/open/misc/dirt/jungle,
 /area/lushplanet/underground)
 "gju" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner{
@@ -401,6 +400,10 @@
 /obj/structure/scrap,
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/centralpavillion/lower)
+"gZw" = (
+/obj/structure/railing/corner,
+/turf/open/misc/dirt/jungle,
+/area/lushplanet/underground)
 "haJ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -475,10 +478,6 @@
 	},
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
-"hYM" = (
-/obj/structure/railing,
-/turf/open/misc/dirt/jungle,
-/area/lushplanet/underground)
 "ibJ" = (
 /turf/closed/wall/rust,
 /area/scrapping/rimworld/centralpavillion/lower)
@@ -615,10 +614,6 @@
 "kjK" = (
 /turf/closed/wall,
 /area/scrapping/rimworld/centralpavillion/lower)
-"kmT" = (
-/obj/structure/railing/corner,
-/turf/open/misc/dirt/jungle,
-/area/lushplanet/underground)
 "kol" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/circuit/red/anim,
@@ -634,6 +629,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable,
 /obj/machinery/door/airlock/maintenance/external,
+/obj/effect/mapping_helpers/airlock/access/any/away/maintenance,
+/obj/effect/mapping_helpers/airlock/unres{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/lushplanet/underground)
 "kFf" = (
@@ -804,6 +803,9 @@
 	},
 /obj/machinery/door/airlock/maintenance/external,
 /obj/effect/mapping_helpers/airlock/access/any/away/maintenance,
+/obj/effect/mapping_helpers/airlock/unres{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
 "nhZ" = (
@@ -816,10 +818,8 @@
 "nRu" = (
 /turf/closed/wall/rust,
 /area/lushplanet/underground)
-"nSK" = (
-/obj/structure/railing{
-	dir = 1
-	},
+"nSX" = (
+/obj/structure/railing,
 /turf/open/misc/dirt/jungle,
 /area/lushplanet/underground)
 "nTE" = (
@@ -864,10 +864,6 @@
 /obj/effect/mapping_helpers/airlock/access/any/away/command,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
-"oNT" = (
-/obj/structure/ladder,
-/turf/open/misc/dirt/jungle,
-/area/lushplanet/underground)
 "oWe" = (
 /obj/structure/scrap,
 /turf/open/floor/iron/dark/side,
@@ -993,9 +989,9 @@
 /obj/structure/scrap,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
-"sfC" = (
-/obj/structure/railing/corner{
-	dir = 4
+"sgp" = (
+/obj/structure/railing{
+	dir = 8
 	},
 /turf/open/misc/dirt/jungle,
 /area/lushplanet/underground)
@@ -1048,6 +1044,12 @@
 	},
 /turf/open/floor/plating,
 /area/lushplanet/underground)
+"tNF" = (
+/obj/structure/railing/corner{
+	dir = 1
+	},
+/turf/open/misc/dirt/jungle,
+/area/lushplanet/underground)
 "tTU" = (
 /obj/machinery/recharge_station,
 /obj/effect/turf_decal/stripes/line{
@@ -1076,6 +1078,12 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion/lower)
+"uIW" = (
+/obj/structure/railing/corner{
+	dir = 4
+	},
+/turf/open/misc/dirt/jungle,
+/area/lushplanet/underground)
 "uMy" = (
 /turf/closed/mineral/random/jungle,
 /area/lushplanet/underground)
@@ -1185,6 +1193,11 @@
 /obj/structure/scrap,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
+"wYq" = (
+/turf/open/chasm/jungle{
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	},
+/area/lushplanet/underground)
 "xeH" = (
 /obj/structure/ladder,
 /turf/open/floor/plating,
@@ -1200,18 +1213,6 @@
 /obj/structure/ladder,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/rust,
-/area/lushplanet/underground)
-"xup" = (
-/obj/structure/railing/corner{
-	dir = 1
-	},
-/turf/open/misc/dirt/jungle,
-/area/lushplanet/underground)
-"xGS" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/open/misc/dirt/jungle,
 /area/lushplanet/underground)
 "xHC" = (
 /obj/effect/turf_decal/stripes/line{
@@ -1250,6 +1251,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/catwalk_floor/iron,
 /area/scrapping/rimworld/centralpavillion/lower)
+"yjx" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/misc/dirt/jungle,
+/area/lushplanet/underground)
 
 (1,1,1) = {"
 uMy
@@ -11152,9 +11159,9 @@ uMy
 uMy
 uMy
 uMy
-kmT
-xGS
-sfC
+gZw
+azw
+uIW
 uMy
 uMy
 uMy
@@ -11409,9 +11416,9 @@ uMy
 uMy
 uMy
 uMy
-hYM
-cHp
-nSK
+nSX
+wYq
+yjx
 uMy
 uMy
 uMy
@@ -11667,8 +11674,8 @@ uMy
 uMy
 uMy
 jlm
-fyH
-xup
+sgp
+tNF
 uMy
 uMy
 uMy
@@ -11925,7 +11932,7 @@ uMy
 uMy
 uMy
 uMy
-oNT
+gaJ
 uMy
 uMy
 uMy
