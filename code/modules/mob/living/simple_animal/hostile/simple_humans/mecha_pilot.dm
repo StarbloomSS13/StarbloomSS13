@@ -45,16 +45,14 @@
 /mob/living/simple_animal/hostile/syndicate/mecha_pilot/nanotrasen //nanotrasen are syndies! no it's just a weird path.
 	name = "\improper Nanotrasen Mecha Pilot"
 	desc = "Death to the Syndicate. This variant comes in MECHA DEATH flavour."
-	icon_living = "nanotrasen"
-	icon_state = "nanotrasen"
+	outfit = /datum/outfit/nanotrasensoldiercorpse2
 	faction = list("nanotrasen")
 	spawn_mecha_type = /obj/vehicle/sealed/mecha/combat/marauder/loaded
 
 /mob/living/simple_animal/hostile/syndicate/mecha_pilot/no_mech/nanotrasen
 	name = "\improper Nanotrasen Mecha Pilot"
 	desc = "Death to the Syndicate. This variant comes in MECHA DEATH flavour."
-	icon_living = "nanotrasen"
-	icon_state = "nanotrasen"
+	outfit = /datum/outfit/nanotrasensoldiercorpse2
 	faction = list("nanotrasen")
 
 
