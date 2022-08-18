@@ -18,6 +18,9 @@
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
 	status_flags = CANPUSH
+	deathmessage = "collapses, flesh gone in a pile of bones!"
+	del_on_death = TRUE
+	loot = list(/obj/effect/decal/remains/human)
 	outfit = /datum/outfit/corpse_doctor
 	species = /datum/species/zombie
 	our_bloody_slots = list(ITEM_SLOT_OCLOTHING)
