@@ -31,3 +31,7 @@
 
 /area/scrapping/rimworld/centralpavillion/lower
 	name = "Central Pavillion - B1"
+
+/area/scrapping/rimworld/auxbase
+	name = "Aux. Base Pavillion"
+	icon_state = "auxbase"
