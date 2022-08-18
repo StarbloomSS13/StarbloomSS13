@@ -23,7 +23,7 @@
 	dummy.underwear = "Nude"
 	dummy.undershirt = "Nude"
 	dummy.socks = "Nude"
-	dummy.equipOutfit(outfit)
+	dummy.equipOutfit(outfit, TRUE)
 	for(var/obj/item/carried_item in dummy)
 		if(dummy.is_holding(carried_item))
 			if(carried_item.GetComponent(/datum/component/two_handed))
@@ -34,6 +34,7 @@
 		if(bloody_slots & carried_item.slot_flags)
 			carried_item.add_mob_blood(dummy)
 	dummy.update_inv_hands()
+	dummy.update_inv_back()
 	COMPILE_OVERLAYS(dummy)
 	var/icon/output = icon('icons/blanks/32x32.dmi', "nothing")
 	for(var/direction in GLOB.cardinals)
