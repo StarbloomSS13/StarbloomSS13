@@ -16,7 +16,7 @@
  * * Uses Mecha special abilities in specific situations
  * * Pure Evil Incarnate
  */
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot
 	name = "Syndicate Mecha Pilot"
 	desc = "Death to Nanotrasen. This variant comes in MECHA DEATH flavour."
 	wanted_objects = list()
@@ -34,31 +34,29 @@
 	var/smoke_chance = 20 //Chance to deploy smoke for crowd control
 	var/retreat_chance = 40 //Chance to run away
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/no_mech
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/no_mech
 	spawn_mecha_type = null
 	search_objects = 2
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/no_mech/Initialize(mapload)
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/no_mech/Initialize(mapload)
 	. = ..()
 	wanted_objects = typecacheof(/obj/vehicle/sealed/mecha/combat, TRUE)
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/nanotrasen //nanotrasen are syndies! no it's just a weird path.
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/nanotrasen //nanotrasen are syndies! no it's just a weird path.
 	name = "\improper Nanotrasen Mecha Pilot"
 	desc = "Death to the Syndicate. This variant comes in MECHA DEATH flavour."
-	icon_living = "nanotrasen"
-	icon_state = "nanotrasen"
+	outfit = /datum/outfit/nanotrasensoldiercorpse2
 	faction = list("nanotrasen")
 	spawn_mecha_type = /obj/vehicle/sealed/mecha/combat/marauder/loaded
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/no_mech/nanotrasen
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/no_mech/nanotrasen
 	name = "\improper Nanotrasen Mecha Pilot"
 	desc = "Death to the Syndicate. This variant comes in MECHA DEATH flavour."
-	icon_living = "nanotrasen"
-	icon_state = "nanotrasen"
+	outfit = /datum/outfit/nanotrasensoldiercorpse2
 	faction = list("nanotrasen")
 
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/Initialize(mapload)
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/Initialize(mapload)
 	. = ..()
 	if(spawn_mecha_type)
 		var/obj/vehicle/sealed/mecha/M = new spawn_mecha_type (get_turf(src))
@@ -66,7 +64,7 @@
 			INVOKE_ASYNC(src, .proc/enter_mecha, M)
 
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/proc/enter_mecha(obj/vehicle/sealed/mecha/M)
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/proc/enter_mecha(obj/vehicle/sealed/mecha/M)
 	if(!M)
 		return 0
 	LoseTarget() //Target was our mecha, so null it out
@@ -91,7 +89,7 @@
 		var/datum/action/vehicle/sealed/mecha/mech_defense_mode/action = mecha.occupant_actions[src][/datum/action/vehicle/sealed/mecha/mech_defense_mode]
 		action.Trigger(forced_state = TRUE)
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/proc/exit_mecha(obj/vehicle/sealed/mecha/M)
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/proc/exit_mecha(obj/vehicle/sealed/mecha/M)
 	if(!M)
 		return 0
 
@@ -114,7 +112,7 @@
 	SSmove_manager.stop_looping(src)//end any lingering movement loops, to prevent the haunted mecha bug
 
 //Checks if a mecha is valid for theft
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/proc/is_valid_mecha(obj/vehicle/sealed/mecha/M)
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/proc/is_valid_mecha(obj/vehicle/sealed/mecha/M)
 	if(!M)
 		return FALSE
 	if(LAZYLEN(M.occupants))
@@ -126,7 +124,7 @@
 	return TRUE
 
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/proc/mecha_face_target(atom/A)
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/proc/mecha_face_target(atom/A)
 	if(mecha)
 		var/dirto = get_dir(mecha,A)
 		if(mecha.dir != dirto) //checking, because otherwise the mecha makes too many turn noises
@@ -134,7 +132,7 @@
 
 
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/proc/mecha_reload()
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/proc/mecha_reload()
 	if(mecha)
 		for(var/equip in mecha.flat_equipment)
 			var/obj/item/mecha_parts/mecha_equipment/ME = equip
@@ -142,7 +140,7 @@
 				ME.rearm()
 
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/proc/get_mecha_equip_by_flag(flag = MECHA_RANGED)
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/proc/get_mecha_equip_by_flag(flag = MECHA_RANGED)
 	. = list()
 	if(mecha)
 		for(var/equip in mecha.flat_equipment)
@@ -154,7 +152,7 @@
 
 //Pick a ranged weapon/tool
 //Fire it
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/OpenFire(atom/A)
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/OpenFire(atom/A)
 	if(mecha)
 		mecha_reload()
 		mecha_face_target(A)
@@ -168,7 +166,7 @@
 		..()
 
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/AttackingTarget()
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/AttackingTarget()
 	if(mecha)
 		var/list/possible_weapons = get_mecha_equip_by_flag(MECHA_MELEE)
 		if(possible_weapons.len)
@@ -194,7 +192,7 @@
 		return target.attack_animal(src)
 
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/handle_automated_action()
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/handle_automated_action()
 	. = ..()
 	if(!.)
 		return
@@ -246,12 +244,12 @@
 
 
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/death(gibbed)
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/death(gibbed)
 	if(mecha)
 		mecha.aimob_exit_mech(src)
 	..()
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/gib()
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/gib()
 	if(mecha)
 		mecha.aimob_exit_mech(src)
 	..()
@@ -259,7 +257,7 @@
 
 //Yes they actually try and pull this shit
 //~simple animals~
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/CanAttack(atom/the_target)
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/CanAttack(atom/the_target)
 	if(ismecha(the_target))
 		var/obj/vehicle/sealed/mecha/M = the_target
 		if(mecha)
@@ -276,19 +274,19 @@
 	. = ..()
 
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/EscapeConfinement()
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/EscapeConfinement()
 	if(mecha && loc == mecha)
 		return 0
 	..()
 
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/Move(NewLoc,Dir=0,step_x=0,step_y=0)
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/Move(NewLoc,Dir=0,step_x=0,step_y=0)
 	if(mecha && loc == mecha)
 		return mecha.relaymove(src, Dir)
 	return ..()
 
 
-/mob/living/simple_animal/hostile/syndicate/mecha_pilot/Goto(target, delay, minimum_distance)
+/mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/Goto(target, delay, minimum_distance)
 	if(mecha)
 		SSmove_manager.move_to(mecha, target, minimum_distance, mecha.movedelay)
 	else

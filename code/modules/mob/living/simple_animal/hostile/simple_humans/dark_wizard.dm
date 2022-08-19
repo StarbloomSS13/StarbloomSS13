@@ -1,9 +1,6 @@
-/mob/living/simple_animal/hostile/dark_wizard
+/mob/living/simple_animal/hostile/simple_human/dark_wizard
 	name = "Dark Wizard"
 	desc = "Killing amateurs since the dawn of times."
-	icon = 'icons/mob/simple_human.dmi'
-	icon_state = "dark_wizard"
-	icon_living = "dark_wizard"
 	move_to_delay = 10
 	projectiletype = /obj/projectile/temp/earth_bolt
 	projectilesound = 'sound/magic/ethereal_enter.ogg'
@@ -12,7 +9,6 @@
 	ranged_cooldown_time = 20
 	maxHealth = 50
 	health = 50
-	harm_intent_damage = 5
 	obj_damage = 20
 	melee_damage_lower = 5
 	melee_damage_upper = 5
@@ -20,8 +16,6 @@
 	combat_mode = TRUE
 	speak_emote = list("chants")
 	attack_sound = 'sound/weapons/bladeslice.ogg'
-	aggro_vision_range = 9
-	turns_per_move = 5
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	sentience_type = SENTIENCE_HUMANOID
 	faction = list(ROLE_WIZARD)
@@ -31,7 +25,7 @@
 	maxbodytemp = INFINITY
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	loot = list(/obj/effect/decal/remains/human)
-	del_on_death = TRUE
+	outfit = /datum/outfit/wizard
 
 /obj/projectile/temp/earth_bolt
 	name = "earth bolt"

@@ -12,6 +12,10 @@
 	flight_y_offset = 10
 	dual_wield_spread = 60
 
+/obj/item/gun/energy/e_gun/lethal/Initialize(mapload)
+	. = ..()
+	select_fire()
+
 /obj/item/gun/energy/e_gun/mini
 	name = "miniature energy gun"
 	desc = "A small, pistol-sized energy gun with a built-in flashlight. It has two settings: disable and kill."
