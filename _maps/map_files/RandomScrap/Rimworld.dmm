@@ -1390,10 +1390,10 @@
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/medicalpavillion)
 "bSB" = (
-/obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable,
-/turf/open/floor/iron,
-/area/scrapping/rimworld/auxbase)
+/obj/machinery/power/port_gen/pacman,
+/turf/open/misc/dirt/jungle,
+/area/lushplanet/surface)
 "bSI" = (
 /turf/closed/wall/r_wall,
 /area/scrapping/rimworld/centralpavillion)
@@ -2819,9 +2819,8 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/civilianpavillion)
 "dSh" = (
-/obj/structure/lattice,
-/turf/open/water/jungle,
-/area/scrapping/rimworld/centralpavillion)
+/turf/closed/wall/r_wall,
+/area/scrapping/rimworld/auxbase)
 "dTp" = (
 /obj/effect/turf_decal/tile/purple,
 /obj/effect/turf_decal/tile/purple{
@@ -2869,6 +2868,11 @@
 /obj/structure/stone_tile/slab,
 /obj/item/melee/moonlight_greatsword,
 /turf/open/floor/stone,
+/area/lushplanet/surface)
+"dVU" = (
+/obj/machinery/power/floodlight,
+/obj/structure/cable,
+/turf/open/misc/dirt/jungle,
 /area/lushplanet/surface)
 "dVZ" = (
 /obj/structure/scrap,
@@ -4513,7 +4517,7 @@
 /turf/open/floor/iron/showroomfloor,
 /area/scrapping/rimworld/securitypavillion)
 "fTT" = (
-/turf/closed/wall/r_wall,
+/turf/closed/wall,
 /area/scrapping/rimworld/auxbase)
 "fUo" = (
 /obj/effect/turf_decal/siding/thinplating/dark/corner{
@@ -5004,6 +5008,10 @@
 	dir = 4
 	},
 /area/scrapping/rimworld/medicalpavillion)
+"gzv" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron,
+/area/scrapping/rimworld/auxbase)
 "gAU" = (
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/open/misc/grass/jungle,
@@ -6208,7 +6216,7 @@
 /turf/open/floor/iron,
 /area/scrapping/rimworld/civilianpavillion)
 "ifq" = (
-/turf/closed/wall/r_wall/rust,
+/turf/closed/wall/rust,
 /area/scrapping/rimworld/auxbase)
 "ifQ" = (
 /obj/machinery/airalarm/directional/north,
@@ -6798,11 +6806,6 @@
 /obj/structure/scrap,
 /turf/open/floor/iron/white,
 /area/scrapping/rimworld/medicalpavillion)
-"iQc" = (
-/obj/machinery/power/floodlight,
-/obj/structure/cable,
-/turf/open/misc/dirt/jungle,
-/area/lushplanet/surface)
 "iQq" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 1
@@ -7487,11 +7490,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/large,
 /area/scrapping/rimworld/civilianpavillion)
-"jOA" = (
-/obj/structure/cable,
-/obj/machinery/power/port_gen/pacman,
-/turf/open/misc/dirt/jungle,
-/area/lushplanet/surface)
 "jOM" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
@@ -8735,9 +8733,6 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/civilianpavillion)
-"lxz" = (
-/turf/open/floor/iron,
-/area/scrapping/rimworld/auxbase)
 "lxH" = (
 /obj/structure/chair/office/light,
 /turf/open/floor/glass,
@@ -9298,6 +9293,10 @@
 /obj/structure/girder,
 /turf/open/floor/plating,
 /area/scrapping/rimworld/medicalpavillion)
+"mmF" = (
+/obj/structure/lattice,
+/turf/open/water/jungle,
+/area/scrapping/rimworld/centralpavillion)
 "mmZ" = (
 /obj/item/stack/tile/iron,
 /turf/open/floor/plating,
@@ -10130,6 +10129,7 @@
 /area/scrapping/rimworld/civilianpavillion)
 "nmV" = (
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/scrapping/rimworld/auxbase)
 "nnH" = (
@@ -11623,8 +11623,9 @@
 	},
 /area/scrapping/rimworld/civilianpavillion)
 "pmO" = (
-/turf/closed/wall/rust,
-/area/scrapping/rimworld/auxbase)
+/obj/structure/cable,
+/turf/open/misc/dirt/jungle,
+/area/lushplanet/surface)
 "pnd" = (
 /obj/effect/turf_decal/trimline/blue/filled/warning{
 	dir = 8
@@ -13905,9 +13906,9 @@
 /turf/open/floor/plating,
 /area/scrapping/rimworld/centralpavillion)
 "scP" = (
-/obj/structure/cable,
-/turf/open/misc/dirt/jungle,
-/area/lushplanet/surface)
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/scrapping/rimworld/auxbase)
 "scW" = (
 /obj/effect/turf_decal/siding/thinplating,
 /obj/structure/frame/machine,
@@ -15420,10 +15421,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/textured,
 /area/scrapping/rimworld/centralpavillion)
-"ucT" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/scrapping/rimworld/auxbase)
 "ucW" = (
 /obj/item/pickaxe,
 /obj/item/clothing/head/hardhat,
@@ -16571,7 +16568,7 @@
 	},
 /area/scrapping/rimworld/securitypavillion)
 "vsd" = (
-/turf/closed/wall,
+/turf/closed/wall/r_wall/rust,
 /area/scrapping/rimworld/auxbase)
 "vsg" = (
 /obj/structure/flora/ausbushes/fullgrass,
@@ -18155,6 +18152,9 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/misc/sandy_dirt,
 /area/scrapping/rimworld/researchpavillion)
+"xco" = (
+/turf/open/floor/iron,
+/area/scrapping/rimworld/auxbase)
 "xcp" = (
 /obj/effect/turf_decal/tile/blue/full,
 /turf/open/floor/iron/large,
@@ -57156,7 +57156,7 @@ jpU
 bvr
 cbg
 bvr
-dSh
+mmF
 pTM
 bSI
 bSI
@@ -72043,21 +72043,21 @@ pPh
 pPh
 pPh
 pPh
-ifq
-fTT
-ifq
-ifq
-ifq
-ifq
-ifq
-fTT
-fTT
-ifq
-ifq
-pmO
 vsd
-pmO
-pmO
+dSh
+vsd
+vsd
+vsd
+vsd
+vsd
+dSh
+dSh
+vsd
+vsd
+ifq
+fTT
+ifq
+ifq
 amE
 amE
 amE
@@ -72300,7 +72300,7 @@ pPh
 pPh
 pPh
 pPh
-ifq
+vsd
 rDf
 rDf
 rDf
@@ -72310,11 +72310,11 @@ rDf
 rDf
 rDf
 rDf
-fTT
+dSh
 swu
 tCE
 uDZ
-pmO
+ifq
 syc
 amE
 amE
@@ -72557,7 +72557,7 @@ pPh
 pPh
 pPh
 pPh
-ifq
+vsd
 rDf
 rDf
 rDf
@@ -72569,7 +72569,7 @@ rDf
 rDf
 bkP
 oph
-bSB
+nmV
 vLA
 bse
 syc
@@ -72814,7 +72814,7 @@ pPh
 pPh
 pPh
 pPh
-ifq
+vsd
 rDf
 rDf
 rDf
@@ -73071,7 +73071,7 @@ pPh
 pPh
 pPh
 pPh
-fTT
+dSh
 rDf
 rDf
 rDf
@@ -73083,9 +73083,9 @@ rDf
 rDf
 bkP
 hro
-bSB
+nmV
 the
-ucT
+scP
 syc
 tQb
 syc
@@ -73328,7 +73328,7 @@ pPh
 pPh
 pPh
 pPh
-ifq
+vsd
 rDf
 rDf
 rDf
@@ -73343,9 +73343,9 @@ iMc
 tTK
 nDo
 aWV
-scP
-scP
-jOA
+pmO
+pmO
+bSB
 syc
 amE
 amE
@@ -73585,7 +73585,7 @@ pPh
 pPh
 pPh
 pPh
-fTT
+dSh
 rDf
 rDf
 rDf
@@ -73599,9 +73599,9 @@ bkP
 nzn
 jUR
 fuR
-ucT
-syc
 scP
+syc
+pmO
 syc
 syc
 syc
@@ -73842,7 +73842,7 @@ pPh
 pPh
 pPh
 pPh
-ifq
+vsd
 rDf
 rDf
 rDf
@@ -73854,11 +73854,11 @@ rDf
 rDf
 bkP
 esA
-nmV
+gzv
 hmI
 bse
 syc
-iQc
+dVU
 syc
 syc
 syc
@@ -74099,7 +74099,7 @@ pPh
 pPh
 pPh
 pPh
-ifq
+vsd
 rDf
 rDf
 rDf
@@ -74111,7 +74111,7 @@ rDf
 rDf
 bkP
 anD
-lxz
+xco
 hmI
 bse
 syc
@@ -74356,7 +74356,7 @@ pPh
 pPh
 pPh
 pPh
-ifq
+vsd
 rDf
 rDf
 rDf
@@ -74366,11 +74366,11 @@ rDf
 rDf
 rDf
 rDf
-ifq
+vsd
 sbY
 dGB
 pMA
-pmO
+ifq
 pPh
 pPh
 pPh
@@ -74613,21 +74613,21 @@ pPh
 pPh
 pPh
 pPh
-ifq
-ifq
-ifq
-fTT
-ifq
-ifq
-ifq
-ifq
-fTT
-ifq
-ifq
-pmO
-pmO
 vsd
-pmO
+vsd
+vsd
+dSh
+vsd
+vsd
+vsd
+vsd
+dSh
+vsd
+vsd
+ifq
+ifq
+fTT
+ifq
 pPh
 pPh
 pPh
