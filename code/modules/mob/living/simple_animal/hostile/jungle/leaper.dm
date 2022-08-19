@@ -117,7 +117,6 @@
 			if(isanimal(L))
 				var/mob/living/simple_animal/A = L
 				A.adjustHealth(25)
-				A.paralyze(50)
 			qdel(src)
 
 /datum/reagent/toxin/leaper_venom
