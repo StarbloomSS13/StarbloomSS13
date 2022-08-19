@@ -4651,7 +4651,7 @@
 /area/medical/patients_rooms)
 "biL" = (
 /obj/machinery/door/airlock/mining{
-	name = "Mining Office"
+	name = "Salvage Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -12281,7 +12281,7 @@
 /turf/open/floor/iron/white,
 /area/science)
 "doE" = (
-/obj/item/toy/figure/miner,
+/obj/item/toy/figure/salvage,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/fakebasalt,
 /area/maintenance/floor3/port)
@@ -28072,12 +28072,14 @@
 /area/maintenance/solars/starboard/aft)
 "ieh" = (
 /obj/docking_port/stationary{
-	dwidth = 3;
-	height = 5;
+	dwidth = 5;
+	height = 8;
 	id = "mining_home";
-	name = "mining shuttle bay";
-	roundstart_template = /datum/map_template/shuttle/mining/delta;
-	width = 7
+	name = "salvage shuttle bay";
+	roundstart_template = /datum/map_template/shuttle/mining/northpoint;
+	width = 10;
+	dir = 8;
+	dheight = 1
 	},
 /turf/open/floor/engine,
 /area/cargo/miningdock)
@@ -33972,7 +33974,7 @@
 /turf/open/floor/grass,
 /area/science/genetics)
 "jPv" = (
-/obj/machinery/suit_storage_unit/mining/eva,
+/obj/machinery/suit_storage_unit/salvage/eva,
 /obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/iron/dark/side,
 /area/cargo/miningoffice)
@@ -36840,7 +36842,7 @@
 /area/space/nearstation)
 "kFP" = (
 /obj/machinery/door/airlock/mining{
-	name = "Mining Office"
+	name = "Salvage Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -44681,14 +44683,14 @@
 /turf/open/floor/iron,
 /area/engineering/atmospherics_engine)
 "mNF" = (
-/obj/structure/closet/secure_closet/miner,
+/obj/structure/closet/secure_closet/salvagecrew,
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
 /area/cargo/miningoffice)
 "mNJ" = (
-/obj/structure/closet/secure_closet/miner,
+/obj/structure/closet/secure_closet/salvagecrew,
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/iron/dark/side{
 	dir = 1
@@ -44790,7 +44792,7 @@
 /turf/open/floor/iron/dark,
 /area/hallway/floor2/fore)
 "mPg" = (
-/obj/structure/closet/secure_closet/miner,
+/obj/structure/closet/secure_closet/salvagecrew,
 /obj/machinery/light/directional/north,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron/dark/side{
@@ -46709,7 +46711,7 @@
 /area/maintenance/floor1/starboard/fore)
 "noa" = (
 /obj/machinery/door/airlock/mining{
-	name = "Mining Decontamination"
+	name = "Salvage Decontamination"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/supply/mining,
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
@@ -47230,7 +47232,7 @@
 /turf/open/floor/eighties,
 /area/commons/dorms/room2)
 "nuX" = (
-/obj/effect/landmark/start/shaft_miner,
+/obj/effect/landmark/start/salvage_crew,
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -48982,7 +48984,7 @@
 /turf/open/floor/iron/dark,
 /area/medical/surgery/fore)
 "nTy" = (
-/obj/machinery/suit_storage_unit/mining/eva,
+/obj/machinery/suit_storage_unit/salvage/eva,
 /turf/open/floor/iron/dark/side,
 /area/cargo/miningoffice)
 "nTB" = (
@@ -49053,7 +49055,7 @@
 /turf/open/floor/engine/hull/reinforced,
 /area/space)
 "nUM" = (
-/obj/machinery/suit_storage_unit/mining/eva,
+/obj/machinery/suit_storage_unit/salvage/eva,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
@@ -56241,7 +56243,7 @@
 /turf/open/floor/mineral/gold,
 /area/service/chapel)
 "qcW" = (
-/obj/machinery/computer/shuttle/mining{
+/obj/machinery/computer/shuttle/salvage{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -63556,7 +63558,7 @@
 	},
 /area/faction/conserve_recycling)
 "snN" = (
-/obj/effect/landmark/start/shaft_miner,
+/obj/effect/landmark/start/salvage_crew,
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -64274,7 +64276,7 @@
 /area/solars/port/fore)
 "syp" = (
 /obj/machinery/door/airlock/mining{
-	name = "Mining Decontamination"
+	name = "Salvage Decontamination"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining,
 /obj/structure/cable,
@@ -116009,7 +116011,7 @@ bZN
 bZN
 bZN
 bZN
-ieh
+bZN
 wdP
 xhI
 mBB
@@ -116519,7 +116521,7 @@ bZN
 bZN
 bZN
 bZN
-bZN
+ieh
 bZN
 bZN
 bZN

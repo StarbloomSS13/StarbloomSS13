@@ -117,9 +117,9 @@
 	icon_state = "cargo_cypherkey"
 	channels = list(RADIO_CHANNEL_SUPPLY = 1)
 
-/obj/item/encryptionkey/headset_mining
-	name = "mining radio encryption key"
-	icon_state = "cargo_cypherkey"
+/obj/item/encryptionkey/headset_salvage
+	name = "salvage radio encryption key"
+	icon_state = "salv_cypherkey"
 	channels = list(RADIO_CHANNEL_SUPPLY = 1, RADIO_CHANNEL_SCIENCE = 1)
 
 /obj/item/encryptionkey/headset_service

@@ -74,10 +74,10 @@
 #define ACCESS_MAIL_SORTING "mail_sorting"
 /// For releasing minerals from the ORM
 #define ACCESS_MINERAL_STOREROOM "mineral_storeroom"
-#define ACCESS_MINING_STATION "mining_station"
+#define ACCESS_SALVAGECREW_STATION "salvagecrew_station"
 #define ACCESS_VAULT "vault"
 #define ACCESS_QM "qm"
-#define ACCESS_MINING "mining"
+#define ACCESS_SALVAGECREW "salvagecrew"
 
 ///Science general access
 #define ACCESS_SCIENCE "science"
@@ -268,9 +268,9 @@
 	ACCESS_MINERAL_STOREROOM, \
 	ACCESS_BRIG_ENTRANCE, \
 	ACCESS_XENOBIOLOGY, \
-	ACCESS_MINING_STATION, \
+	ACCESS_SALVAGECREW_STATION, \
 	ACCESS_MAIL_SORTING, \
-	ACCESS_MINING, \
+	ACCESS_SALVAGECREW, \
 	ACCESS_RESEARCH, \
 	ACCESS_THEATRE, \
 	ACCESS_SURGERY, \
@@ -473,8 +473,8 @@
 /// Used to seed the accesses_by_region list in SSid_access. A list of all cargo regional accesses that are overseen by the HoP.
 #define REGION_ACCESS_SUPPLY list( \
 	ACCESS_MAIL_SORTING, \
-	ACCESS_MINING, \
-	ACCESS_MINING_STATION, \
+	ACCESS_SALVAGECREW, \
+	ACCESS_SALVAGECREW_STATION, \
 	ACCESS_MECH_MINING, \
 	ACCESS_MINERAL_STOREROOM, \
 	ACCESS_CARGO, \
@@ -539,7 +539,7 @@
 	/obj/item/pda/captain = list(REGION_COMMAND), \
 	/obj/item/pda/cargo = list(REGION_SUPPLY), \
 	/obj/item/pda/quartermaster = list(REGION_SUPPLY), \
-	/obj/item/pda/shaftminer = list(REGION_SUPPLY), \
+	/obj/item/pda/salvagecrew = list(REGION_SUPPLY), \
 	/obj/item/pda/chaplain = list(REGION_GENERAL), \
 	/obj/item/pda/lawyer = list(REGION_GENERAL, REGION_SECURITY), \
 	/obj/item/pda/botanist = list(REGION_GENERAL), \

@@ -139,7 +139,7 @@
 		/obj/item/radio/headset/headset_cargo = 3
 	)
 	premium = list(
-		/obj/item/clothing/under/rank/cargo/miner = 3,
+		/obj/item/clothing/under/rank/cargo/salvagecrew = 3,
 		/obj/item/clothing/head/mailman = 1,
 		/obj/item/clothing/under/misc/mailman = 1
 	)
