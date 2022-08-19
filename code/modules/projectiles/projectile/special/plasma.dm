@@ -3,7 +3,7 @@
 	icon_state = "plasmacutter"
 	damage_type = BRUTE
 	damage = 20
-	range = 4
+	range = 6
 	dismemberment = 10
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/purple_laser
 	var/mine_range = 3 //mines this many additional tiles of rock
