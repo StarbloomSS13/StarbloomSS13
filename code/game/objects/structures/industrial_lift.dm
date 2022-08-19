@@ -233,14 +233,6 @@ GLOBAL_LIST_EMPTY(lifts)
 			continue
 		. += neighbor
 
-/obj/structure/industrial_lift/proc/boneless(client/user, mob/living/target)
-
-	var/mob/living/carbon/carbon_target = target
-	for(var/_limb in carbon_target.bodyparts)
-		var/obj/item/bodypart/limb = _limb
-		var/type_wound = pick(list(/datum/wound/blunt/critical, /datum/wound/blunt/severe, /datum/wound/blunt/critical, /datum/wound/blunt/severe, /datum/wound/blunt/moderate))
-		limb.force_wound_upwards(type_wound)
-
 /obj/structure/industrial_lift/proc/travel(going, gliding_amount = 8)
 	var/list/things_to_move = LAZYCOPY(lift_load)
 	var/turf/destination
