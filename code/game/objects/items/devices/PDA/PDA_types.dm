@@ -173,8 +173,8 @@
 	greyscale_config = /datum/greyscale_config/pda/stripe_thick
 	greyscale_colors = "#D6B328#6506ca#927444"
 
-/obj/item/pda/salvagecrew
-	name = "salvage crew PDA"
+/obj/item/pda/shaftminer
+	name = "shaft miner PDA"
 	greyscale_config = /datum/greyscale_config/pda/stripe_thick
 	greyscale_colors = "#927444#D6B328#6C3BA1"
 

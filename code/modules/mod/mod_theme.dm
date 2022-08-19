@@ -247,17 +247,27 @@
 		),
 	)
 
-/datum/mod_theme/salvage
-	name = "salvage"
-	desc = "A Mekhane salvage suit for off-ship operations, fit with accreting ash armor and a sphere form."
-	extended_desc = "Created after the fall of the former Survey Wings, Salvage Modsuits such as this have been \
-	rigorously perfected to balance potential damage and provide a safe environment for off-ship operations. \
-	The suit is fully thermally insulated, and could hypothetically even resist magma or outright biological \
-	weaponry. In addition to general protection from potential hazards aboard derelicts, the suit is equipped with \
-	a heavily modified matter bin to allow reconsitution into a sphere, And a specialized module that harvests \
-	potentially biohazardous materials in Ash, Snow, and other Geological formations and converts them into kinetic \
-	energy, providing both a makeshift form of additional shielding and a boost to the wearer's speed."
-	default_skin = "asteroid" // Visually closer to the Edict theme and more fitting considering the work being done.
+/datum/mod_theme/mining
+	name = "mining"
+	desc = "A Nanotrasen mining suit for on-site operations, fit with accreting ash armor and a sphere form."
+	extended_desc = "A high-powered Nanotrasen-designed suit, based off the work of Nakamura Engineering. \
+		While initial designs were built for the rigors of asteroid mining, given blast resistance through inbuilt ceramics, \
+		mining teams have since heavily tweaked the suit themselves with assistance from devices crafted by \
+		destructive analysis of unknown technologies discovered on the Indecipheres mining sites, patterned off \
+		their typical non-EVA exploration suits. The visor has been expanded to a system of seven arachnid-like cameras, \
+		offering full view of the land and its soon-to-be-dead inhabitants. The armor plating has been trimmed down to \
+		the bare essentials, geared far more for environmental hazards than combat against fauna; however, \
+		this gives way to incredible protection against corrosives and thermal protection good enough for \
+		both casual backstroking through molten magma and romantic walks through arctic terrain. \
+		Instead, the suit is capable of using its' anomalous properties to attract and \
+		carefully distribute layers of ash or ice across the surface; these layers are ablative, but incredibly strong. \
+		Lastly, the suit is capable of compressing and shrinking the mass of the wearer, as well as \
+		rearranging its own constitution, to allow them to fit upright in a sphere form that can \
+		roll around at half their original size; leaving high-powered mining ordinance in its wake. \
+		However, all of this has proven to be straining on all Nanotrasen-approved cells, \
+		so much so that it comes default fueled by equally-enigmatic plasma fuel rather than a simple recharge. \
+		Additionally, the systems have been put to near their maximum load, allowing for far less customization than others."
+	default_skin = "mining"
 	armor = list(MELEE = 15, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 30, BIO = 100, FIRE = 100, ACID = 75, WOUND = 15)
 	resistance_flags = FIRE_PROOF|LAVA_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
@@ -277,13 +287,13 @@
 	)
 	inbuilt_modules = list(/obj/item/mod/module/ash_accretion, /obj/item/mod/module/sphere_transform)
 	skins = list(
-		"asteroid" = list(
+		"mining" = list(
 			HELMET_LAYER = null,
 			HELMET_FLAGS = list(
-				UNSEALED_CLOTHING = SNUG_FIT|THICKMATERIAL,
-				SEALED_CLOTHING = STOPSPRESSUREDAMAGE,
-				UNSEALED_INVISIBILITY = HIDEFACIALHAIR|HIDEEARS|HIDEHAIR|HIDESNOUT,
-				SEALED_INVISIBILITY = HIDEMASK|HIDEEYES|HIDEFACE,
+				UNSEALED_CLOTHING = SNUG_FIT,
+				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
+				UNSEALED_INVISIBILITY = HIDEEARS|HIDEHAIR,
+				SEALED_INVISIBILITY = HIDEMASK|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDESNOUT,
 				SEALED_COVER = HEADCOVERSMOUTH|HEADCOVERSEYES|PEPPERPROOF,
 			),
 			CHESTPLATE_FLAGS = list(
@@ -300,13 +310,13 @@
 				SEALED_CLOTHING = STOPSPRESSUREDAMAGE,
 			),
 		),
-		"mining" = list(
+		"asteroid" = list(
 			HELMET_LAYER = null,
 			HELMET_FLAGS = list(
-				UNSEALED_CLOTHING = SNUG_FIT,
-				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
-				UNSEALED_INVISIBILITY = HIDEEARS|HIDEHAIR,
-				SEALED_INVISIBILITY = HIDEMASK|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDESNOUT,
+				UNSEALED_CLOTHING = SNUG_FIT|THICKMATERIAL,
+				SEALED_CLOTHING = STOPSPRESSUREDAMAGE,
+				UNSEALED_INVISIBILITY = HIDEFACIALHAIR|HIDEEARS|HIDEHAIR|HIDESNOUT,
+				SEALED_INVISIBILITY = HIDEMASK|HIDEEYES|HIDEFACE,
 				SEALED_COVER = HEADCOVERSMOUTH|HEADCOVERSEYES|PEPPERPROOF,
 			),
 			CHESTPLATE_FLAGS = list(

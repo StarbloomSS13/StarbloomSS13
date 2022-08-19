@@ -1259,7 +1259,7 @@
 
 /obj/item/card/id/advanced/mining
 	name = "mining ID"
-	trim = /datum/id_trim/job/salvage_crew/spare
+	trim = /datum/id_trim/job/shaft_miner/spare
 
 /obj/item/card/id/advanced/highlander
 	name = "highlander ID"

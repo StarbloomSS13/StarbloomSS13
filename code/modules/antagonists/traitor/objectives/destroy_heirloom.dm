@@ -67,7 +67,7 @@
 	target_jobs = list(
 		// Cargo
 		/datum/job/quartermaster,
-		/datum/job/salvage_crew,
+		/datum/job/shaft_miner,
 		// Service
 		/datum/job/chaplain,
 		/datum/job/bartender,

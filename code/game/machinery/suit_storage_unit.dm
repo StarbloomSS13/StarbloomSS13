@@ -93,14 +93,14 @@
 	storage_type = /obj/item/tank/internals/oxygen
 	mod_type = /obj/item/mod/control/pre_equipped/safeguard
 
-/obj/machinery/suit_storage_unit/salvage
+/obj/machinery/suit_storage_unit/mining
 	suit_type = /obj/item/clothing/suit/hooded/explorer
 	mask_type = /obj/item/clothing/mask/gas/explorer
 
-/obj/machinery/suit_storage_unit/salvage/eva
+/obj/machinery/suit_storage_unit/mining/eva
 	suit_type = null
 	mask_type = /obj/item/clothing/mask/breath
-	mod_type = /obj/item/mod/control/pre_equipped/salvage
+	mod_type = /obj/item/mod/control/pre_equipped/mining
 
 /obj/machinery/suit_storage_unit/medical
 	mask_type = /obj/item/clothing/mask/breath/medical

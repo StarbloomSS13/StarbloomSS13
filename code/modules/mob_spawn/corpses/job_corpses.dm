@@ -39,16 +39,16 @@
 	outfit = /datum/outfit/job/scientist
 	icon_state = "corpsescientist"
 
-/obj/effect/mob_spawn/corpse/human/salvagecrew
-	name = "Salvage Crew"
-	outfit = /datum/outfit/job/salvage_crew
+/obj/effect/mob_spawn/corpse/human/miner
+	name = "Shaft Miner"
+	outfit = /datum/outfit/job/miner
 	icon_state = "corpseminer"
 
-/obj/effect/mob_spawn/corpse/human/salvagecrew/mod
-	outfit = /datum/outfit/job/salvage_crew/equipped/mod
+/obj/effect/mob_spawn/corpse/human/miner/mod
+	outfit = /datum/outfit/job/miner/equipped/mod
 
-/obj/effect/mob_spawn/corpse/human/salvagecrew/explorer
-	outfit = /datum/outfit/job/salvage_crew/equipped
+/obj/effect/mob_spawn/corpse/human/miner/explorer
+	outfit = /datum/outfit/job/miner/equipped
 
 /obj/effect/mob_spawn/corpse/human/plasmaman
 	mob_species = /datum/species/plasmaman

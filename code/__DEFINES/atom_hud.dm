@@ -107,7 +107,7 @@
 #define SECHUD_ROBOTICIST "hudroboticist"
 #define SECHUD_SECURITY_OFFICER "hudsecurityofficer"
 #define SECHUD_SCIENTIST "hudscientist"
-#define SECHUD_SALVAGE_CREW "hudsalvagecrew"
+#define SECHUD_SHAFT_MINER "hudshaftminer"
 #define SECHUD_STATION_ENGINEER "hudstationengineer"
 #define SECHUD_VIROLOGIST "hudvirologist"
 #define SECHUD_WARDEN "hudwarden"

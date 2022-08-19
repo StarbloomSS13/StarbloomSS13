@@ -39,14 +39,14 @@
 		new /datum/data/mining_equipment("Fulton Pack", /obj/item/extraction_pack, 1000),
 		new /datum/data/mining_equipment("Lazarus Injector", /obj/item/lazarus_injector, 1000),
 		new /datum/data/mining_equipment("Silver Pickaxe", /obj/item/pickaxe/silver, 1000),
-		new /datum/data/mining_equipment("Mining Conscription Kit", /obj/item/storage/backpack/duffelbag/salvage_conscript, 1500),
+		new /datum/data/mining_equipment("Mining Conscription Kit", /obj/item/storage/backpack/duffelbag/mining_conscript, 1500),
 		new /datum/data/mining_equipment("Space Cash", /obj/item/stack/spacecash/c1000, 2000),
 		new /datum/data/mining_equipment("Diamond Pickaxe", /obj/item/pickaxe/diamond, 2000),
 		new /datum/data/mining_equipment("Kheiral Cuffs", /obj/item/kheiral_cuffs, 2000),
 		new /datum/data/mining_equipment("Super Resonator", /obj/item/resonator/upgraded, 2500),
 		new /datum/data/mining_equipment("Jump Boots", /obj/item/clothing/shoes/bhop, 2500),
 		new /datum/data/mining_equipment("Ice Hiking Boots", /obj/item/clothing/shoes/winterboots/ice_boots, 2500),
-		new /datum/data/mining_equipment("Mining MODsuit", /obj/item/mod/control/pre_equipped/salvage, 2500),
+		new /datum/data/mining_equipment("Mining MODsuit", /obj/item/mod/control/pre_equipped/mining, 2500),
 		new /datum/data/mining_equipment("Luxury Shelter Capsule", /obj/item/survivalcapsule/luxury, 3000),
 		new /datum/data/mining_equipment("Luxury Bar Capsule", /obj/item/survivalcapsule/luxuryelite, 10000),
 		new /datum/data/mining_equipment("Nanotrasen Minebot", /mob/living/simple_animal/hostile/mining_drone, 800),
@@ -195,7 +195,7 @@
 			new /obj/item/extinguisher/mini(drop_location)
 			new /obj/item/kinetic_crusher(drop_location)
 		if("Mining Conscription Kit")
-			new /obj/item/storage/backpack/duffelbag/salvage_conscript(drop_location)
+			new /obj/item/storage/backpack/duffelbag/mining_conscript(drop_location)
 
 	SSblackbox.record_feedback("tally", "mining_voucher_redeemed", 1, selection)
 	qdel(voucher)
@@ -239,18 +239,18 @@
 	. = ..()
 	. += span_alert("There's [points] point\s on the card.")
 
-/obj/item/storage/backpack/duffelbag/salvage_conscript
+/obj/item/storage/backpack/duffelbag/mining_conscript
 	name = "mining conscription kit"
-	desc = "A kit containing everything a crewmember needs to be forcibly exiled to shovel scrap."
+	desc = "A kit containing everything a crewmember needs to support a shaft miner in the field."
 	icon_state = "duffel-explorer"
 	inhand_icon_state = "duffel-explorer"
 
-/obj/item/storage/backpack/duffelbag/salvage_conscript/PopulateContents()
+/obj/item/storage/backpack/duffelbag/mining_conscript/PopulateContents()
 	new /obj/item/clothing/glasses/meson(src)
 	new /obj/item/t_scanner/adv_mining_scanner/lesser(src)
 	new /obj/item/storage/bag/ore(src)
 	new /obj/item/clothing/suit/hooded/explorer(src)
-	new /obj/item/encryptionkey/headset_salvage(src)
+	new /obj/item/encryptionkey/headset_mining(src)
 	new /obj/item/clothing/mask/gas/explorer(src)
 	new /obj/item/card/id/advanced/mining(src)
 	new /obj/item/gun/energy/kinetic_accelerator(src)

@@ -45,7 +45,9 @@
 	ADD_TRAIT(src, TRAIT_NODROP, CYBORG_ITEM_TRAIT)
 
 /obj/item/gps/mining/internal
+	icon_state = "gps-m"
 	gpstag = "MINER"
+	desc = "A positioning system helpful for rescuing trapped or injured miners, keeping one on you at all times while mining might just save your life."
 
 /*
  * GPS for pAIS, which only allows access if it's contained within the user.

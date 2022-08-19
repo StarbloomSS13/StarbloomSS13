@@ -78,8 +78,8 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
 	lace_time = 8 SECONDS
 
-/obj/item/clothing/shoes/workboots/salvage
-	name = "salvage boots"
+/obj/item/clothing/shoes/workboots/mining
+	name = "mining boots"
 	desc = "Steel-toed mining boots for mining in hazardous environments. Very good at keeping toes uncrushed."
 	icon_state = "explorer"
 	resistance_flags = FIRE_PROOF

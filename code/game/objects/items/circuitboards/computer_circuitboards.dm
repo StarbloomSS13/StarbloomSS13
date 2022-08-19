@@ -538,14 +538,14 @@
 	greyscale_colors = CIRCUIT_COLOR_SUPPLY
 	build_path = /obj/machinery/computer/security/mining
 
-/obj/item/circuitboard/computer/salvage_shuttle
+/obj/item/circuitboard/computer/mining_shuttle
 	name = "Mining Shuttle (Computer Board)"
 	greyscale_colors = CIRCUIT_COLOR_SUPPLY
-	build_path = /obj/machinery/computer/shuttle/salvage
+	build_path = /obj/machinery/computer/shuttle/mining
 
-/obj/item/circuitboard/computer/salvage_shuttle/common
+/obj/item/circuitboard/computer/mining_shuttle/common
 	name = "Lavaland Shuttle (Computer Board)"
-	build_path = /obj/machinery/computer/shuttle/salvage/common
+	build_path = /obj/machinery/computer/shuttle/mining/common
 
 /obj/item/circuitboard/computer/exoscanner_console
 	name = "Scanner Array Control Console (Computer Board)"

@@ -285,11 +285,8 @@ Used by the AI doomsday and the self-destruct nuke.
 		++space_levels_so_far
 		add_new_zlevel("Empty Area [space_levels_so_far]", ZTRAITS_SPACE)
 
-	if(config.minetype == "lavaland") // TODO: Datumize this
+	if(config.minetype == "lavaland")
 		LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland.dmm", default_traits = ZTRAITS_LAVALAND)
-	else if(config.minetype == "rimworld")
-		LoadGroup(FailedZs, "Rimworld Caves", "map_files/RandomScrap", "Rimworldlower.dmm", default_traits = ZTRAITS_RIMWORLD_CAVES)
-		LoadGroup(FailedZs, "Rimworld Surface", "map_files/RandomScrap", "Rimworld.dmm", default_traits = ZTRAITS_RIMWORLD)
 	else if (!isnull(config.minetype) && config.minetype != "none")
 		INIT_ANNOUNCE("WARNING: An unknown minetype '[config.minetype]' was set! This is being ignored! Update the maploader code!")
 #endif

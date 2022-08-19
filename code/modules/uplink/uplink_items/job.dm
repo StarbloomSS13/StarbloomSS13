@@ -192,7 +192,7 @@
 	item = /obj/item/borg/upgrade/modkit/indoors
 	cost = 5 //you need two for full damage, so total of 10 for maximum damage
 	limited_stock = 2 //you can't use more than two!
-	restricted_roles = list(JOB_SALVAGE_CREW)
+	restricted_roles = list("Shaft Miner")
 
 /datum/uplink_item/role_restricted/mimery
 	name = "Guide to Advanced Mimery Series"

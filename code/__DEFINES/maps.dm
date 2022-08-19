@@ -121,19 +121,6 @@ require only minor tweaks.
 #define ZTRAITS_AWAY list(ZTRAIT_AWAY = TRUE)
 ///Z level traits for Secret Away Missions
 #define ZTRAITS_AWAY_SECRET list(ZTRAIT_AWAY = TRUE, ZTRAIT_SECRET = TRUE, ZTRAIT_NOPHASE = TRUE)
-///Z level traits for the rimworld salvage mission (Caves)
-#define ZTRAITS_RIMWORLD_CAVES list(\
-	ZTRAIT_UP = 1,	\
-	ZTRAIT_NOXRAY = TRUE, \
-	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
-	ZTRAIT_BASETURF = /turf/open/misc/dirt/jungle)
-///Z level traits for the rimworld salvage mission (Surface)
-#define ZTRAITS_RIMWORLD list(\
-	ZTRAIT_DOWN = -1,	\
-	ZTRAIT_NOXRAY = TRUE, \
-	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
-	ZTRAIT_BASETURF = /turf/open/openspace)
-
 
 #define DL_NAME "name"
 #define DL_TRAITS "traits"
