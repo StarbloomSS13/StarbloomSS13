@@ -17,8 +17,8 @@
 	friendly_verb_simple = "wail at"
 	speak_emote = list("bellows")
 	speed = 3
-	maxHealth = 300
-	health = 300
+	maxHealth = 50
+	health = 50
 	harm_intent_damage = 0
 	obj_damage = 100
 	melee_damage_lower = 25
@@ -142,8 +142,8 @@
 	icon_living = "Goliath"
 	icon_aggro = "Goliath_alert"
 	icon_dead = "Goliath_dead"
-	maxHealth = 400
-	health = 400
+	maxHealth = 100
+	health = 100
 	speed = 4
 	pre_attack_icon = "Goliath_preattack"
 	throw_message = "does nothing to the rocky hide of the"
