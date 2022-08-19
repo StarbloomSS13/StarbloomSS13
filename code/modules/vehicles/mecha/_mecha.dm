@@ -974,7 +974,7 @@
 
 
 ///Handles an actual AI (simple_animal mecha pilot) entering the mech
-/obj/vehicle/sealed/mecha/proc/aimob_enter_mech(mob/living/simple_animal/hostile/syndicate/mecha_pilot/pilot_mob)
+/obj/vehicle/sealed/mecha/proc/aimob_enter_mech(mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/pilot_mob)
 	if(!pilot_mob?.Adjacent(src))
 		return
 	if(LAZYLEN(occupants))
@@ -985,7 +985,7 @@
 	update_appearance()
 
 ///Handles an actual AI (simple_animal mecha pilot) exiting the mech
-/obj/vehicle/sealed/mecha/proc/aimob_exit_mech(mob/living/simple_animal/hostile/syndicate/mecha_pilot/pilot_mob)
+/obj/vehicle/sealed/mecha/proc/aimob_exit_mech(mob/living/simple_animal/hostile/simple_human/syndicate/mecha_pilot/pilot_mob)
 	LAZYREMOVE(occupants, pilot_mob)
 	if(pilot_mob.mecha == src)
 		pilot_mob.mecha = null
