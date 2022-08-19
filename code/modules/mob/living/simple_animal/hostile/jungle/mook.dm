@@ -18,6 +18,7 @@
 	base_pixel_x = -16
 	pixel_y = -8
 	base_pixel_y = -8
+	speed = 2
 	maxHealth = 45
 	health = 45
 	melee_damage_lower = 30
