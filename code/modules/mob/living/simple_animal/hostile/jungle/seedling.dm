@@ -14,8 +14,8 @@
 	icon_living = "seedling"
 	icon_dead = "seedling_dead"
 	mob_biotypes = MOB_ORGANIC | MOB_PLANT
-	maxHealth = 100
-	health = 100
+	maxHealth = 25
+	health = 25
 	melee_damage_lower = 30
 	melee_damage_upper = 30
 	pixel_x = -16
@@ -41,7 +41,7 @@
 /obj/projectile/seedling
 	name = "solar energy"
 	icon_state = "seedling"
-	damage = 10
+	damage = 1
 	damage_type = BURN
 	light_range = 2
 	armor_flag = ENERGY

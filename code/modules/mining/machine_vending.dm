@@ -13,7 +13,6 @@
 		new /datum/data/mining_equipment("1 Marker Beacon", /obj/item/stack/marker_beacon, 10),
 		new /datum/data/mining_equipment("10 Marker Beacons", /obj/item/stack/marker_beacon/ten, 100),
 		new /datum/data/mining_equipment("30 Marker Beacons", /obj/item/stack/marker_beacon/thirty, 300),
-		new /datum/data/mining_equipment("Skeleton Key", /obj/item/skeleton_key, 777),
 		new /datum/data/mining_equipment("Whiskey", /obj/item/reagent_containers/food/drinks/bottle/whiskey, 100),
 		new /datum/data/mining_equipment("Absinthe", /obj/item/reagent_containers/food/drinks/bottle/absinthe/premium, 100),
 		new /datum/data/mining_equipment("Bubblegum Gum Packet", /obj/item/storage/box/gum/bubblegum, 100),
@@ -240,7 +239,7 @@
 	. += span_alert("There's [points] point\s on the card.")
 
 /obj/item/storage/backpack/duffelbag/salvage_conscript
-	name = "mining conscription kit"
+	name = "salvage conscription kit"
 	desc = "A kit containing everything a crewmember needs to be forcibly exiled to shovel scrap."
 	icon_state = "duffel-explorer"
 	inhand_icon_state = "duffel-explorer"
@@ -253,6 +252,6 @@
 	new /obj/item/encryptionkey/headset_salvage(src)
 	new /obj/item/clothing/mask/gas/explorer(src)
 	new /obj/item/card/id/advanced/mining(src)
-	new /obj/item/gun/energy/kinetic_accelerator(src)
+	new /obj/item/gun/energy/plasmacutter(src)
 	new /obj/item/knife/combat/survival(src)
 	new /obj/item/flashlight/seclite(src)
