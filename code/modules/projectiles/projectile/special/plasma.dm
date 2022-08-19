@@ -2,9 +2,9 @@
 	name = "plasma blast"
 	icon_state = "plasmacutter"
 	damage_type = BRUTE
-	damage = 15
+	damage = 20
 	range = 4
-	dismemberment = 15
+	dismemberment = 10
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/purple_laser
 	var/mine_range = 3 //mines this many additional tiles of rock
 	tracer_type = /obj/effect/projectile/tracer/plasma_cutter
@@ -23,18 +23,18 @@
 			return BULLET_ACT_FORCE_PIERCE
 
 /obj/projectile/plasma/adv
-	damage = 17
+	damage = 22
 	range = 5
 	mine_range = 5
 
 /obj/projectile/plasma/adv/mech
-	damage = 22
+	damage = 27
 	range = 9
 	mine_range = 3
 
 /obj/projectile/plasma/turret
 	//Between normal and advanced for damage, made a beam so not the turret does not destroy glass
 	name = "plasma beam"
-	damage = 24
+	damage = 21
 	range = 7
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
