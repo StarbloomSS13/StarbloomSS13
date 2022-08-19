@@ -531,6 +531,8 @@
 /area/scrapping/rimworld/researchpavillion)
 "aJp" = (
 /obj/structure/window/reinforced/spawner/east,
+/obj/effect/spawner/random/exotic/technology,
+/obj/structure/closet,
 /turf/open/floor/iron/dark/textured_large,
 /area/scrapping/rimworld/securitypavillion)
 "aKa" = (
@@ -1465,9 +1467,7 @@
 /area/lushplanet/surface)
 "bXr" = (
 /obj/structure/table,
-/obj/item/stock_parts/scanning_module{
-	pixel_x = -5
-	},
+/obj/item/stock_parts/scanning_module/triphasic,
 /turf/open/floor/iron/dark/textured,
 /area/scrapping/rimworld/cargopavllion)
 "bYa" = (
@@ -2022,6 +2022,11 @@
 /obj/effect/turf_decal/trimline/blue/filled/warning,
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/medicalpavillion)
+"cJT" = (
+/obj/effect/spawner/random/exotic/technology,
+/obj/structure/scrap,
+/turf/open/floor/iron,
+/area/scrapping/rimworld/cargopavllion)
 "cKD" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 8
@@ -7685,8 +7690,10 @@
 /turf/open/floor/wood,
 /area/scrapping/rimworld/securitypavillion)
 "keQ" = (
-/turf/closed/wall/mineral/wood/nonmetal,
-/area/lushplanet/surface)
+/obj/structure/scrap,
+/obj/effect/spawner/random/exotic/technology,
+/turf/open/floor/iron/white,
+/area/scrapping/rimworld/researchpavillion)
 "keW" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -8057,6 +8064,7 @@
 /obj/structure/window/reinforced/spawner,
 /obj/structure/window/reinforced/spawner/north,
 /obj/structure/window/reinforced/spawner/east,
+/obj/effect/spawner/random/exotic/technology,
 /turf/open/floor/circuit,
 /area/scrapping/rimworld/centralpavillion)
 "kFL" = (
@@ -9446,14 +9454,7 @@
 	dir = 4
 	},
 /obj/structure/table,
-/obj/item/stock_parts/micro_laser{
-	pixel_x = -6;
-	pixel_y = 4
-	},
-/obj/item/stock_parts/micro_laser{
-	pixel_x = 6;
-	pixel_y = -2
-	},
+/obj/item/stock_parts/micro_laser/quadultra,
 /turf/open/floor/iron/dark,
 /area/scrapping/rimworld/cargopavllion)
 "mCy" = (
@@ -14446,13 +14447,6 @@
 /obj/item/reagent_containers/dropper,
 /turf/open/floor/iron/white,
 /area/scrapping/rimworld/researchpavillion)
-"sSB" = (
-/obj/structure/chair/comfy/black{
-	dir = 1
-	},
-/obj/structure/scrap,
-/turf/open/floor/iron/dark,
-/area/scrapping/rimworld/centralpavillion)
 "sUv" = (
 /obj/structure/lattice,
 /obj/effect/light_emitter,
@@ -16535,6 +16529,7 @@
 /obj/structure/window/reinforced/spawner,
 /obj/structure/window/reinforced/spawner/north,
 /obj/structure/window/reinforced/spawner/west,
+/obj/effect/spawner/random/exotic/technology,
 /turf/open/floor/circuit,
 /area/scrapping/rimworld/centralpavillion)
 "vtv" = (
@@ -18147,6 +18142,9 @@
 	dir = 8
 	},
 /area/scrapping/rimworld/researchpavillion)
+"xgf" = (
+/turf/closed/wall/mineral/wood/nonmetal,
+/area/lushplanet/surface)
 "xgh" = (
 /obj/item/stack/tile/iron/white/textured,
 /turf/open/floor/plating,
@@ -18308,7 +18306,6 @@
 /obj/structure/sign/plaques/kiddie{
 	pixel_x = 32
 	},
-/obj/item/assembly/signaler/anomaly/grav,
 /turf/open/floor/circuit,
 /area/scrapping/rimworld/centralpavillion)
 "xrg" = (
@@ -48688,7 +48685,7 @@ hEo
 xcP
 iGv
 iGv
-keQ
+xgf
 syc
 iGv
 iGv
@@ -48945,7 +48942,7 @@ hEo
 iGv
 qkr
 iGv
-keQ
+xgf
 syc
 dkp
 iGv
@@ -49202,7 +49199,7 @@ oyo
 iGv
 iGv
 iGv
-keQ
+xgf
 dkp
 syc
 iGv
@@ -49459,7 +49456,7 @@ hEo
 iGv
 iGv
 iGv
-keQ
+xgf
 syc
 iGv
 iGv
@@ -60671,7 +60668,7 @@ syc
 syc
 rJi
 hKZ
-sSB
+vqC
 uPz
 jgb
 hoc
@@ -66615,7 +66612,7 @@ oUz
 oUz
 oUz
 jHL
-jjv
+cJT
 iFb
 ulp
 xVZ
@@ -69492,7 +69489,7 @@ qKA
 pqr
 sJq
 kSr
-kSr
+keQ
 cqO
 pPh
 pPh
