@@ -171,8 +171,8 @@
 
 
 /atom/movable/screen/alert/fat
-	name = "Fat"
-	desc = "You ate too much food, lardass. Run around the station and lose some weight."
+	name = "Overindulged"
+	desc = "You ate too much food. See medical for help, or visit the rec room on Habitation."
 	icon_state = "fat"
 
 /atom/movable/screen/alert/hungry
