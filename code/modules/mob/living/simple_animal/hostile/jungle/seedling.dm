@@ -41,7 +41,7 @@
 /obj/projectile/seedling
 	name = "solar energy"
 	icon_state = "seedling"
-	damage = 1
+	damage = 3
 	damage_type = BURN
 	light_range = 2
 	armor_flag = ENERGY
@@ -161,9 +161,14 @@
 			final.Scale(1,32)
 			final.Translate(0,512)
 			K.transform = final
-			living_target.adjustFireLoss(30)
-			living_target.adjust_fire_stacks(0.2)//Just here for the showmanship
-			living_target.IgniteMob()
+			if(get_dist(src,living_target) > 5)
+				living_target.adjustFireLoss(5)
+				to_chat(living_target, span_warning("A weakened solar beam hits you!"))
+			else
+				living_target.adjustFireLoss(20)
+				living_target.adjust_fire_stacks(0.2)//Just here for the showmanship
+				living_target.IgniteMob()
+				to_chat(living_target, span_warning("A full-strength solar beam hits you!"))
 			playsound(living_target,'sound/weapons/sear.ogg', 50, TRUE)
 			addtimer(CALLBACK(src, .proc/AttackRecovery), 5)
 			return
