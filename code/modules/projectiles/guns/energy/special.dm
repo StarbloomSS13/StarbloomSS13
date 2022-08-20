@@ -123,7 +123,9 @@
 
 /obj/item/gun/energy/plasmacutter
 	name = "plasma cutter"
-	desc = "A mining tool capable of expelling concentrated plasma bursts. You could use it to cut limbs off xenos! Or, you know, mine stuff."
+	desc = "A mining tool capable of expelling concentrated plasma bursts - A wide variety of purposes can be applied to \
+		this tool, from cutting through rock, melting through walls, salvaging materials from scrap, to even butchering \
+		animals. Uses plasma ore and or sheets as fuel."
 	icon_state = "plasmacutter"
 	inhand_icon_state = "plasmacutter"
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
@@ -207,6 +209,7 @@
 	inhand_icon_state = "adv_plasmacutter"
 	force = 15
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/adv)
+	toolspeed = 0.5
 
 #define AMMO_SELECT_BLUE 1
 #define AMMO_SELECT_ORANGE 2

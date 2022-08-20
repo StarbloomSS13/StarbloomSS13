@@ -127,13 +127,11 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 
 //Special NT NPCs
 
-/mob/living/simple_animal/hostile/nanotrasen/ranged/assault
+/mob/living/simple_animal/hostile/simple_human/nanotrasen/ranged/assault
 	name = "Nanotrasen Assault Officer"
 	desc = "Nanotrasen Assault Officer. Contact CentCom if you saw him on your station. Prepare to die, if you've been found near Syndicate property."
-	icon_state = "nanotrasenrangedassault"
-	icon_living = "nanotrasenrangedassault"
-	icon_dead = null
-	icon_gib = "syndicate_gib"
+	outfit = /datum/outfit/nanotrasenassaultsoldiercorpse
+	held_item_left = /obj/item/gun/ballistic/automatic/wt550
 	ranged = TRUE
 	rapid = 4
 	rapid_fire_delay = 1
@@ -144,11 +142,11 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	projectilesound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
 	loot = list(/obj/effect/mob_spawn/corpse/human/nanotrasenassaultsoldier)
 
-/mob/living/simple_animal/hostile/nanotrasen/elite
+/mob/living/simple_animal/hostile/simple_human/nanotrasen/elite
 	name = "Nanotrasen Elite Assault Officer"
 	desc = "Pray for your life, syndicate. Run while you can."
-	icon_state = "nanotrasen_ert"
-	icon_living = "nanotrasen_ert"
+	outfit = /datum/outfit/centcom/ert/security
+	held_item_left = /obj/item/gun/energy/e_gun/lethal
 	maxHealth = 150
 	health = 150
 	melee_damage_lower = 13
@@ -158,7 +156,6 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	rapid_fire_delay = 5
 	rapid_melee = 3
 	retreat_distance = 0
-	minimum_distance = 1
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
 	projectiletype = /obj/projectile/beam/laser

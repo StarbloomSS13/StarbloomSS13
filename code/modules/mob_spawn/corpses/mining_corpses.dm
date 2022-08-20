@@ -60,7 +60,7 @@
 	name = "Legion-Consumed Miner"
 	gloves = /obj/item/clothing/gloves/color/black
 	mask = /obj/item/clothing/mask/gas/explorer
-	shoes = /obj/item/clothing/shoes/workboots/mining
+	shoes = /obj/item/clothing/shoes/workboots/salvage
 
 /datum/outfit/consumed_miner/pre_equip(mob/living/carbon/human/ashwalker, visualsOnly = FALSE)
 	var/regular_uniform = FALSE
@@ -77,7 +77,7 @@
 		if(new_species_type == /datum/species/lizard)
 			shoes = null //digitigrade says no
 	if(regular_uniform)
-		uniform = /obj/item/clothing/under/rank/cargo/miner/lavaland
+		uniform = /obj/item/clothing/under/rank/cargo/salvagecrew/explorer
 		if(prob(4))
 			belt = pick_weight(list(/obj/item/storage/belt/mining = 2, /obj/item/storage/belt/mining/alt = 2))
 		else if(prob(10))
