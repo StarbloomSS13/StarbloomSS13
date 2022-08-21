@@ -38,6 +38,7 @@
 	var/BZ_trip_balls_min = 1 //BZ gas
 	var/BZ_brain_damage_min = 10 //Give people some room to play around without killing the station
 	var/gas_stimulation_min = 0.002 //nitrium and Freon
+	var/halon_slowdown_min = 1
 	///Minimum amount of healium to make you unconscious for 4 seconds
 	var/healium_para_min = 3
 	///Minimum amount of healium to knock you down for good
@@ -369,7 +370,7 @@
 
 	// Halon
 		var/halon_pp = breath.get_breath_partial_pressure(breath_gases[/datum/gas/halon][MOLES])
-		if(halon_pp > gas_stimulation_min)
+		if(halon_pp > halon_slowdown_min)
 			breather.adjustOxyLoss(5)
 			var/existing = breather.reagents.get_reagent_amount(/datum/reagent/halon)
 			breather.reagents.add_reagent(/datum/reagent/halon,max(0, 1 - existing))
