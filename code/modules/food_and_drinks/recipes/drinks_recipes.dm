@@ -764,3 +764,7 @@
 	results = list(/datum/reagent/consumable/ethanol/helianthus = 5)
 	required_reagents = list(/datum/reagent/consumable/ethanol/absinthe = 1, /datum/reagent/consumable/sugar = 1, /datum/reagent/toxin/mindbreaker = 1)
 	mix_message = "The drink lets out a soft enlightening laughter..."
+
+/datum/chemical_reaction/drink/pile_driver
+	results = list(/datum/reagent/consumable/ethanol/pile_driver = 2)
+	required_reagents = list(/datum/reagent/consumable/ethanol/rum_coke = 1, /datum/reagent/consumable/ethanol/screwdrivercocktail = 1)
