@@ -244,8 +244,8 @@
 	return TRUE
 
 /obj/item/organ/cyberimp/arm/esword
-	name = "arm-mounted energy blade"
-	desc = "An illegal and highly dangerous cybernetic implant that can project a deadly blade of concentrated energy."
+	name = "arm-mounted nanoblade"
+	desc = "An illegal and highly dangerous cybernetic implant that can project a deadly ceramic blade on command."
 	items_to_create = list(/obj/item/melee/energy/blade/hardlight)
 
 /obj/item/organ/cyberimp/arm/medibeam
@@ -300,3 +300,12 @@
 	name = "surgical toolset implant"
 	desc = "A set of surgical tools hidden behind a concealed panel on the user's arm."
 	items_to_create = list(/obj/item/retractor/augment, /obj/item/hemostat/augment, /obj/item/cautery/augment, /obj/item/surgicaldrill/augment, /obj/item/scalpel/augment, /obj/item/circular_saw/augment, /obj/item/surgical_drapes)
+
+/obj/item/organ/cyberimp/arm/gun/repulsor
+	name = "arm-mounted repulsor implant"
+	desc = "A variant of the arm cannon implant that fires a nonlethal repulsion blast. The cannon emerges from the subject's arm and remains inside when not in use."
+	icon_state = "arm_laser"
+	items_to_create = list(/obj/item/gun/energy/laser/mounted/repulsor/augment)
+
+/obj/item/organ/cyberimp/arm/gun/repulsor/l
+	zone = BODY_ZONE_L_ARM
