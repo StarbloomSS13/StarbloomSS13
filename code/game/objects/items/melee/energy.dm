@@ -1,3 +1,4 @@
+/// Transforming (And Non-Transforming) energy weapons inside this file.
 /obj/item/melee/energy
 	icon = 'icons/obj/transforming_energy.dmi'
 	max_integrity = 200
@@ -112,7 +113,7 @@
 	set_light_on(active)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
-/// Energy axe - extremely strong.
+/// Energy axe - the infamous admin murderbone weapon itself.
 /obj/item/melee/energy/axe
 	name = "energy axe"
 	desc = "An energized battle axe."
@@ -149,7 +150,7 @@
 	user.visible_message(span_suicide("[user] swings [src] towards [user.p_their()] head! It looks like [user.p_theyre()] trying to commit suicide!"))
 	return (BRUTELOSS|FIRELOSS)
 
-/// Energy swords.
+/// Basetype of all energy swords. See /obj/item/melee/energy/sword/saber for energy swords proper.
 /obj/item/melee/energy/sword
 	name = "energy sword"
 	desc = "May the force be within you."
@@ -170,6 +171,7 @@
 		return ..()
 	return FALSE
 
+/// Cyborg E-Swords, used by Last Edict Assault Cyborgs. Deducts 50 cell charge per attack.
 /obj/item/melee/energy/sword/cyborg
 	name = "cyborg energy sword"
 	sword_color_icon = "red"
@@ -192,7 +194,8 @@
 		return
 	attack_self(user)
 
-/obj/item/melee/energy/sword/cyborg/saw //Used by medical Syndicate cyborgs
+/// Used by Last Edict medical cyborgs.
+/obj/item/melee/energy/sword/cyborg/saw
 	name = "energy saw"
 	desc = "For heavy duty cutting. It has a carbon-fiber blade in addition to a toggleable hard-light edge to dramatically increase sharpness."
 	icon = 'icons/obj/surgery.dmi'
@@ -359,6 +362,7 @@
 /obj/item/melee/energy/blade/make_transformable()
 	return FALSE
 
+/// Implanted E-Sword
 /obj/item/melee/energy/blade/hardlight
 	name = "hardlight blade"
 	desc = "An extremely sharp blade made out of hard light. Packs quite a punch."
