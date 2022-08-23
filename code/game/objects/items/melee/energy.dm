@@ -264,30 +264,23 @@
 	name = "energy cutlass"
 	desc = "Arrrr matey."
 	icon_state = "e_cutlass"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	light_color = COLOR_RED
 
 /obj/item/melee/energy/sword/dragonstooth
 	name = "dragon's tooth sword"
 	desc = "An advanced weapon of unknown origin. Its blade is dynamically forged on activation and kept sharp at nanoscale by a swarm of nanites."
 	icon_state = "dragonstooth"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	active_hitsound = 'sound/weapons/dtshit.ogg'
-	force = 3
-	throwforce = 5
-	throw_speed = 3
-	throw_range = 5
 	active_force = 20
 	armour_penetration = 75
 	block_chance = 10
-	embedding = list("embed_chance" = 75, "impact_pain_mult" = 10)
+	light_color = COLOR_BLUE
 
 /obj/item/melee/energy/sword/bane_of_unity
 	name = "bane of unity"
 	desc = "A highly advanced hardlight sword of alien origin, made out in the signature style of the Last Edict."
 	icon_state = "baneofunity"
+	light_color = COLOR_RED
 
 /obj/item/melee/energy/sword/bane_of_unity/Initialize(mapload)
 	. = ..()
