@@ -266,6 +266,7 @@
 	icon_state = "e_cutlass"
 	light_color = COLOR_RED
 
+/// HOS' variant of the Energy Sword. Trades 10 force and 40 blockchance for 40 extra armor penetration.
 /obj/item/melee/energy/sword/dragonstooth
 	name = "dragon's tooth sword"
 	desc = "An advanced weapon of unknown origin. Its blade is dynamically forged on activation and kept sharp at nanoscale by a swarm of nanites."
@@ -276,6 +277,7 @@
 	block_chance = 10
 	light_color = COLOR_BLUE
 
+/// Last Edict variant of the Energy Sword. Deals stamina damage and takes blood from the user to shoot laser beams.
 /obj/item/melee/energy/sword/bane_of_unity
 	name = "bane of unity"
 	desc = "A highly advanced hardlight sword of alien origin, made out in the signature style of the Last Edict."
@@ -295,7 +297,7 @@
 		requirements = purble_place, \
 		hint = TRUE)
 
-// Essentially a heavily cut down version of how the kinetic crusher handles it's projectile
+/// Essentially a heavily cut down version of how the kinetic crusher handles it's projectile
 /obj/item/melee/energy/sword/bane_of_unity/afterattack_secondary(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()
 	playsound(user, 'sound/weapons/fwoosh.ogg', 75, TRUE)
