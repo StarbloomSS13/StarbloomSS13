@@ -285,7 +285,7 @@
 	icon_state = "baneofunity"
 	light_color = COLOR_RED
 
-/// Initialize the examine text here.
+/// Add the examine text here.
 /obj/item/melee/energy/sword/bane_of_unity/Initialize(mapload)
 	. = ..()
 
