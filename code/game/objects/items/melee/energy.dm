@@ -268,6 +268,64 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	light_color = COLOR_RED
 
+/obj/item/melee/energy/sword/dragonstooth
+	name = "dragon's tooth sword"
+	desc = "An advanced weapon of unknown origin. Its blade is dynamically forged on activation and kept sharp at nanoscale by a swarm of nanites."
+	icon_state = "dragonstooth"
+	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	active_hitsound = 'sound/weapons/dtshit.ogg'
+	force = 3
+	throwforce = 5
+	throw_speed = 3
+	throw_range = 5
+	active_force = 20
+	armour_penetration = 75
+	block_chance = 10
+	embedding = list("embed_chance" = 75, "impact_pain_mult" = 10)
+
+/obj/item/melee/energy/sword/bane_of_unity
+	name = "bane of unity"
+	desc = "A highly advanced hardlight sword of alien origin, made out in the signature style of the Last Edict."
+	icon_state = "baneofunity"
+
+/obj/item/melee/energy/sword/bane_of_unity/Initialize(mapload)
+	. = ..()
+
+	var/static/list/purble_place = list(/datum/antagonist/traitor, /datum/antagonist/nukeop)
+
+	AddElement(/datum/element/unique_examine, \
+		desc = "Has an alternative beam-fire - giving up some of the electrical activity in the user's \
+		brain and some of their blood to fire off an armor-piercing laser. It's heavily advised not to \
+		fire off multiple in rapid succession.", \
+		desc_requirement = EXAMINE_CHECK_ANTAG, \
+		requirements = purble_place, \
+		hint = TRUE)
+
+// Essentially a heavily cut down version of how the kinetic crusher handles it's projectile
+/obj/item/melee/energy/sword/bane_of_unity/afterattack_secondary(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+	playsound(user, 'sound/weapons/fwoosh.ogg', 75, TRUE)
+	balloon_alert_to_viewers("slashes!")
+	if(target == user)
+		balloon_alert(user, "can't aim at yourself!")
+		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+	send_sword_laser(target, user)
+	user.changeNext_move(CLICK_CD_MELEE)
+	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+
+/obj/item/melee/energy/sword/bane_of_unity/proc/send_sword_laser(atom/target, mob/living/user)
+	var/turf/proj_turf = user.loc
+	if(!isturf(proj_turf))
+		return
+	var/obj/projectile/beam/weak/penetrator/sord_beam = new(proj_turf)
+	sord_beam.preparePixelProjectile(target, user)
+	sord_beam.firer = user
+	playsound(user, 'sound/weapons/resonator_blast.ogg', 90, TRUE)
+	sord_beam.fire()
+	user.apply_damage(25, STAMINA, BODY_ZONE_CHEST) // Spam these and pay the price of self-ownage
+	user.blood_volume -= 10 // 560 is normal blood volume
+
 /// Energy blades, which are effectively perma-extended energy swords
 /obj/item/melee/energy/blade
 	name = "energy blade"
@@ -310,24 +368,3 @@
 	icon_state = "lightblade"
 	inhand_icon_state = "lightblade"
 
-/obj/item/melee/energy/sword/dragonstooth
-	name = "dragon's tooth sword"
-	desc = "An advanced weapon of unknown origin. Its blade is dynamically forged on activation and kept sharp at nanoscale by a swarm of nanites."
-	icon_state = "dragonstooth"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	active_hitsound = 'sound/weapons/dtshit.ogg'
-	force = 3
-	throwforce = 5
-	throw_speed = 3
-	throw_range = 5
-	active_force = 20
-	armour_penetration = 75
-	block_chance = 10
-	embedding = list("embed_chance" = 75, "impact_pain_mult" = 10)
-
-/obj/item/melee/energy/sword/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	if(blade_active)
-		return ..()
-	return FALSE
-	

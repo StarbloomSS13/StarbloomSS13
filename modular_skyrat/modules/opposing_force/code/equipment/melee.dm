@@ -24,6 +24,15 @@
 	name = "Energy Dagger"
 	description = "A miniaturized energy sword hidden inside a functional pen."
 
+/datum/opposing_force_equipment/melee/bane_of_unity
+	item_type = /obj/item/melee/energy/sword/bane_of_unity
+	name = "Last Edict - Bane Of Unity"
+	description = "A direct upgrade to traditional energy swords, able to trade severe stamina damage and 10u of your blood for \
+	an armor-piercing laser shot! Unfortunately, this being alien technology tends to make it obvious who's side you're truly on - \
+	and, should you lack protection, make your mind fester and boil into nothing but a raving madman."
+	admin_note = "Direct upgrade to an Energy Sword. Secondary attack Trades 25 Stamina damage and 10u blood for 15 Damage, 50% Armor Piercing Laser Shots. \
+	Only the Last Edict or their direct sympathizers would have this, and anyone without the Edict's mindshield would be driven mad. Take this all into consideration."
+
 /datum/opposing_force_equipment/melee/cutlass
 	item_type = /obj/item/claymore/cutlass
 

@@ -41,10 +41,23 @@
 /datum/uplink_item/dangerous/sword
 	name = "Energy Sword"
 	desc = "The energy sword is an edged weapon with a blade of pure energy. The sword is small enough to be \
-			pocketed when inactive. Activating it produces a loud, distinctive noise."
+			pocketed when inactive. Activating it produces a loud, distinctive noise. This particular model, \
+			whilst lacking more advanced features the Edict can provide, feasibly could be created on board \
+			the North Star alone - a fact you may do well to weigh on any potential questions."
 	progression_minimum = 20 MINUTES
 	item = /obj/item/melee/energy/sword/saber
 	cost = 8
+	purchasable_from = ~UPLINK_CLOWN_OPS
+
+/datum/uplink_item/dangerous/bane_of_unity
+	name = "Bane Of Unity"
+	desc = "The distinctive Last Edict all-in-one ranged and melee combat solvant. Whilst lacking the reflective \
+	properties of a dual-sided energy sword, the Bane of Unity can fire out an armor-piercing laser with a simple \
+	slash. Potential users should take care - Each laser shot harvests energy both from the electrical activity in \
+	the wielder's brain, but 10u of their blood as well. Compatible with exotic blood types."
+	progression_minimum = 30 MINUTES
+	item = /obj/item/melee/energy/sword/bane_of_unity
+	cost = 12
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/powerfist
