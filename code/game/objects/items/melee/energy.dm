@@ -260,6 +260,7 @@
 		icon_state = "[initial(icon_state)]_on_rainbow"
 		user.update_inv_hands()
 
+/// Pirate variant of the energy sword. Identical minus flavor and lack of coloration options.
 /obj/item/melee/energy/sword/pirate
 	name = "energy cutlass"
 	desc = "Arrrr matey."
@@ -284,6 +285,7 @@
 	icon_state = "baneofunity"
 	light_color = COLOR_RED
 
+/// Initialize the examine text here.
 /obj/item/melee/energy/sword/bane_of_unity/Initialize(mapload)
 	. = ..()
 
