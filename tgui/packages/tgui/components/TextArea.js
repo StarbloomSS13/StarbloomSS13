@@ -95,10 +95,10 @@ export class TextArea extends Component {
         if (keyCode === KEY_TAB) {
           e.preventDefault();
           const { value, selectionStart, selectionEnd } = e.target;
-          e.target.value =
-            value.substring(0, selectionStart) +
-            '\t' +
-            value.substring(selectionEnd);
+          e.target.value
+            = value.substring(0, selectionStart)
+            + '\t'
+            + value.substring(selectionEnd);
           e.target.selectionEnd = selectionStart + 1;
           if (onInput) {
             onInput(e, e.target.value);
