@@ -1,15 +1,15 @@
 /obj/projectile/gravityrepulse
 	name = "repulsion bolt"
-	icon = 'icons/effects/effects.dmi'
-	icon_state = "chronofield"
-	hitsound = 'sound/weapons/wave.ogg'
+	icon = 'icons/obj/guns/projectiles.dmi'
+	icon_state = "repulsor"
+	hitsound = 'sound/weapons/repulsor.ogg'
 	damage = 0
 	damage_type = BRUTE
 	nodamage = TRUE
-	color = "#33CCFF"
 	var/turf/T
 	var/power = 4
 	var/list/thrown_items = list()
+	speed = 0.5
 
 /obj/projectile/gravityrepulse/Initialize(mapload)
 	. = ..()
