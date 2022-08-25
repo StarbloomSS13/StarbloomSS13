@@ -101,15 +101,3 @@
 	)
 	result = /obj/item/food/enchiladas
 	subcategory = CAT_MEXICAN
-
-/datum/crafting_recipe/food/stuffedlegion
-	name = "Stuffed legion"
-	time = 40
-	reqs = list(
-		/obj/item/food/meat/steak/goliath = 1,
-		/obj/item/organ/regenerative_core/legion = 1,
-		/datum/reagent/consumable/ketchup = 2,
-		/datum/reagent/consumable/capsaicin = 2
-	)
-	result = /obj/item/food/stuffedlegion
-	subcategory = CAT_MEXICAN

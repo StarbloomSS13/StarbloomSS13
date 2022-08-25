@@ -58,3 +58,5 @@
 #define CALIBER_TENTACLE "tentacle"
 /// The caliber used by the Last Edict magrifles.
 #define CALIBER_MAG "mag"
+/// The caliber used by the Crystal Harpoon.
+#define CALIBER_CRYSTAL "crystal"
