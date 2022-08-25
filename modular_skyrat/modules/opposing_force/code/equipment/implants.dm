@@ -75,3 +75,23 @@
 	name = "Last Edict - Arm-mounted Laser Implant"
 	item_type = /obj/item/autosurgeon/organ/syndicate/laser_arm
 	description = "A variant of the arm cannon implant that fires lethal laser beams. The cannon emerges from the subject's arm and remains inside when not in use."
+
+/datum/opposing_force_equipment/implant/toolset
+	name = "Last Edict - Integrated Toolset"
+	item_type = /obj/item/autosurgeon/organ/syndicate/toolset
+	description = "A full set of concealable tools, hidden within the user's arm. Does not include shock protection."
+
+/datum/opposing_force_equipment/implant/surgical
+	name = "Last Edict - Integrated Surgical Toolset"
+	item_type = /obj/item/autosurgeon/organ/syndicate/surgery
+	description = "A full set of concealable surgical tools, hidden within the user's arm."
+
+/datum/opposing_force_equipment/implant/repulsor
+	name = "Last Edict - Repulsor Cannon"
+	item_type = /obj/item/autosurgeon/organ/syndicate/repulsor_arm
+	description = "A variant of the arm cannon implant that fires nonlethal repulsor blasts. The cannon emerges from the subject's arm and remains inside when not in use."
+
+/datum/opposing_force_equipment/implant/nanoblade
+	name = "Last Edict - Nanoblade"
+	item_type = /obj/item/autosurgeon/organ/syndicate/sword
+	description = "A set of fabricators concealed in the arm, capable of deploying a ceramic blade on command."

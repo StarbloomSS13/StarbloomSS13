@@ -305,10 +305,14 @@
 	return FALSE
 
 /obj/item/melee/energy/blade/hardlight
-	name = "hardlight blade"
-	desc = "An extremely sharp blade made out of hard light. Packs quite a punch."
+	name = "nanoblade"
+	desc = "An extremely sharp ceramic blade forged on command. Packs quite a punch."
 	icon_state = "lightblade"
 	inhand_icon_state = "lightblade"
+	active_hitsound = 'sound/weapons/rapierhit.ogg'
+	armour_penetration = 50
+	active_force = 30
+	force = 30
 
 /obj/item/melee/energy/sword/dragonstooth
 	name = "dragon's tooth sword"
@@ -330,4 +334,4 @@
 	if(blade_active)
 		return ..()
 	return FALSE
-	
+
