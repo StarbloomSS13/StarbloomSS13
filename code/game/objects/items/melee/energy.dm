@@ -1,3 +1,4 @@
+/// Transforming (And Non-Transforming) energy weapons inside this file.
 /obj/item/melee/energy
 	icon = 'icons/obj/transforming_energy.dmi'
 	max_integrity = 200
@@ -112,7 +113,7 @@
 	set_light_on(active)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
-/// Energy axe - extremely strong.
+/// Energy axe - the infamous admin murderbone weapon itself.
 /obj/item/melee/energy/axe
 	name = "energy axe"
 	desc = "An energized battle axe."
@@ -149,7 +150,7 @@
 	user.visible_message(span_suicide("[user] swings [src] towards [user.p_their()] head! It looks like [user.p_theyre()] trying to commit suicide!"))
 	return (BRUTELOSS|FIRELOSS)
 
-/// Energy swords.
+/// Basetype of all energy swords. See /obj/item/melee/energy/sword/saber for energy swords proper.
 /obj/item/melee/energy/sword
 	name = "energy sword"
 	desc = "May the force be within you."
@@ -170,6 +171,7 @@
 		return ..()
 	return FALSE
 
+/// Cyborg E-Swords, used by Last Edict Assault Cyborgs. Deducts 50 cell charge per attack.
 /obj/item/melee/energy/sword/cyborg
 	name = "cyborg energy sword"
 	sword_color_icon = "red"
@@ -192,7 +194,8 @@
 		return
 	attack_self(user)
 
-/obj/item/melee/energy/sword/cyborg/saw //Used by medical Syndicate cyborgs
+/// Used by Last Edict medical cyborgs.
+/obj/item/melee/energy/sword/cyborg/saw
 	name = "energy saw"
 	desc = "For heavy duty cutting. It has a carbon-fiber blade in addition to a toggleable hard-light edge to dramatically increase sharpness."
 	icon = 'icons/obj/surgery.dmi'
@@ -260,13 +263,68 @@
 		icon_state = "[initial(icon_state)]_on_rainbow"
 		user.update_inv_hands()
 
+/// Pirate variant of the energy sword. Identical minus flavor and lack of coloration options.
 /obj/item/melee/energy/sword/pirate
 	name = "energy cutlass"
 	desc = "Arrrr matey."
 	icon_state = "e_cutlass"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	light_color = COLOR_RED
+
+/// HOS' variant of the Energy Sword. Trades 10 force and 40 blockchance for 40 extra armor penetration.
+/obj/item/melee/energy/sword/dragonstooth
+	name = "dragon's tooth sword"
+	desc = "An advanced weapon of unknown origin. Its blade is dynamically forged on activation and kept sharp at nanoscale by a swarm of nanites."
+	icon_state = "dragonstooth"
+	active_hitsound = 'sound/weapons/dtshit.ogg'
+	active_force = 20
+	armour_penetration = 75
+	block_chance = 10
+	light_color = COLOR_BLUE
+
+/// Last Edict variant of the Energy Sword. Deals stamina damage and takes blood from the user to shoot laser beams.
+/obj/item/melee/energy/sword/bane_of_unity
+	name = "bane of unity"
+	desc = "A highly advanced hardlight sword of alien origin, made out in the signature style of the Last Edict."
+	icon_state = "baneofunity"
+	light_color = COLOR_RED
+
+/// Add the examine text here.
+/obj/item/melee/energy/sword/bane_of_unity/Initialize(mapload)
+	. = ..()
+
+	var/static/list/purble_place = list(/datum/antagonist/traitor, /datum/antagonist/nukeop)
+
+	AddElement(/datum/element/unique_examine, \
+		desc = "Has an alternative beam-fire - giving up some of the electrical activity in the user's \
+		brain and some of their blood to fire off an armor-piercing laser. It's heavily advised not to \
+		fire off multiple in rapid succession.", \
+		desc_requirement = EXAMINE_CHECK_ANTAG, \
+		requirements = purble_place, \
+		hint = TRUE)
+
+/// Essentially a heavily cut down version of how the kinetic crusher handles it's projectile
+/obj/item/melee/energy/sword/bane_of_unity/afterattack_secondary(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+	playsound(user, 'sound/weapons/fwoosh.ogg', 75, TRUE)
+	balloon_alert_to_viewers("slashes!")
+	if(target == user)
+		balloon_alert(user, "can't aim at yourself!")
+		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+	send_sword_laser(target, user)
+	user.changeNext_move(CLICK_CD_MELEE)
+	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+
+/obj/item/melee/energy/sword/bane_of_unity/proc/send_sword_laser(atom/target, mob/living/user)
+	var/turf/proj_turf = user.loc
+	if(!isturf(proj_turf))
+		return
+	var/obj/projectile/beam/weak/penetrator/sord_beam = new(proj_turf)
+	sord_beam.preparePixelProjectile(target, user)
+	sord_beam.firer = user
+	playsound(user, 'sound/weapons/resonator_blast.ogg', 90, TRUE)
+	sord_beam.fire()
+	user.apply_damage(25, STAMINA, BODY_ZONE_CHEST) // Spam these and pay the price of self-ownage
+	user.blood_volume -= 10 // 560 is normal blood volume
 
 /// Energy blades, which are effectively perma-extended energy swords
 /obj/item/melee/energy/blade
@@ -304,6 +362,7 @@
 /obj/item/melee/energy/blade/make_transformable()
 	return FALSE
 
+/// Implanted E-Sword
 /obj/item/melee/energy/blade/hardlight
 	name = "nanoblade"
 	desc = "An extremely sharp ceramic blade forged on command. Packs quite a punch."
@@ -313,25 +372,3 @@
 	armour_penetration = 50
 	active_force = 30
 	force = 30
-
-/obj/item/melee/energy/sword/dragonstooth
-	name = "dragon's tooth sword"
-	desc = "An advanced weapon of unknown origin. Its blade is dynamically forged on activation and kept sharp at nanoscale by a swarm of nanites."
-	icon_state = "dragonstooth"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	active_hitsound = 'sound/weapons/dtshit.ogg'
-	force = 3
-	throwforce = 5
-	throw_speed = 3
-	throw_range = 5
-	active_force = 20
-	armour_penetration = 75
-	block_chance = 10
-	embedding = list("embed_chance" = 75, "impact_pain_mult" = 10)
-
-/obj/item/melee/energy/sword/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	if(blade_active)
-		return ..()
-	return FALSE
-
