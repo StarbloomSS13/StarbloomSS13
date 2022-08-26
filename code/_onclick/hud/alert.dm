@@ -830,6 +830,11 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 	carbon_owner.changeNext_move(CLICK_CD_RESIST)
 	carbon_owner.shoes.handle_tying(carbon_owner)
 
+/atom/movable/screen/alert/numbed
+	name = "Numbed"
+	desc = "Your body is numb, painless. You're under the effect of some kind of painkiller."
+	icon_state = "stasis"
+
 // PRIVATE = only edit, use, or override these if you're editing the system as a whole
 
 // Re-render all alerts - also called in /datum/hud/show_hud() because it's needed there
