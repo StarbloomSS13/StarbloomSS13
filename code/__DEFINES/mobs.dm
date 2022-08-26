@@ -108,7 +108,6 @@
 #define SPECIES_ZOMBIE_INFECTIOUS "memezombie"
 #define SPECIES_ZOMBIE_KROKODIL "krokodil_zombie"
 #define SPECIES_ZEALOT "zealot"
-#define SPECIES_DENDRITE "dendrite"
 
 //See: datum/species/var/digitigrade_customization
 ///The species does not have digitigrade legs in generation.
