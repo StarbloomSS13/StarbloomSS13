@@ -1,11 +1,8 @@
 /obj/effect/proc_holder/spell/targeted/forcewall
-	name = "Forcewall"
-	desc = "Create a magical barrier that only you can pass through."
-	school = SCHOOL_TRANSMUTATION
+	name = "Shard Wall"
+	desc = "Create a crystalline barrier that only you can pass through."
 	charge_max = 100
 	clothes_req = FALSE
-	invocation = "TARCOL MINTI ZHERI"
-	invocation_type = INVOCATION_SHOUT
 	sound = 'sound/magic/forcewall.ogg'
 	action_icon_state = "shield"
 	range = -1

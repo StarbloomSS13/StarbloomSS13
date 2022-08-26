@@ -1,9 +1,9 @@
 /obj/effect/forcefield
-	desc = "A space wizard's magic wall."
-	name = "FORCEWALL"
-	icon_state = "m_shield"
+	desc = "A crystalline wall."
+	name = "shard wall"
+	icon_state = "shardwall"
 	anchored = TRUE
-	opacity = FALSE
+	opacity = TRUE
 	density = TRUE
 	can_atmos_pass = ATMOS_PASS_DENSITY
 	var/timeleft = 300 //Set to 0 for permanent forcefields (ugh)
