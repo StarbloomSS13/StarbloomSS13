@@ -378,7 +378,12 @@
 		if(show_message)
 			to_chat(exposed_carbon, span_danger("You feel your injuries fade away to nothing!") )
 
+		exposed_mob.throw_alert("numbed", /atom/movable/screen/alert/numbed)
+		ADD_TRAIT(exposed_mob, TRAIT_NUMBED, src)
+
 /datum/reagent/medicine/mine_salve/on_mob_end_metabolize(mob/living/M)
+	REMOVE_TRAIT(M, TRAIT_NUMBED, src)
+	M.clear_alert("numbed")
 	if(iscarbon(M))
 		var/mob/living/carbon/N = M
 		N.hal_screwyhud = SCREWYHUD_NONE
@@ -605,9 +610,13 @@
 
 /datum/reagent/medicine/morphine/on_mob_metabolize(mob/living/L)
 	..()
+	ADD_TRAIT(L, TRAIT_NUMBED, src)
+	L.throw_alert("numbed", /atom/movable/screen/alert/numbed)
 	L.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 
 /datum/reagent/medicine/morphine/on_mob_end_metabolize(mob/living/L)
+	REMOVE_TRAIT(L, TRAIT_NUMBED, src)
+	L.clear_alert("numbed")
 	L.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 	..()
 
