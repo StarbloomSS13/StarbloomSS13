@@ -3289,15 +3289,15 @@
 /area/service/chapel/office)
 "aRl" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "AI Upload";
-	req_access_txt = "16"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 4
+	name = "AI Upload"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/access/any/command/ai_upload,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai_upload_foyer)
 "aRt" = (
@@ -10086,6 +10086,12 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/pod/light,
 /area/maintenance/floor2/port/aft)
+"cGS" = (
+/obj/machinery/camera/directional/north{
+	c_tag = "Gravity Generator Room"
+	},
+/turf/open/floor/iron/dark,
+/area/engineering/gravity_generator)
 "cGT" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -11713,15 +11719,15 @@
 /area/tcommsat/server/upper)
 "dfh" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "AI Upload";
-	req_access_txt = "16"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
+	name = "AI Upload"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/access/any/command/ai_upload,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai_upload)
 "dfi" = (
@@ -15434,11 +15440,12 @@
 /area/engineering/atmospherics_engine)
 "elh" = (
 /obj/structure/table,
-/obj/item/wrench,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/north,
+/obj/item/folder/yellow,
+/obj/item/wrench,
 /turf/open/floor/iron,
 /area/cargo/warehouse)
 "ell" = (
@@ -16699,8 +16706,7 @@
 /area/faction/mekhane_workshop)
 "eFe" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Maintenance";
-	req_one_access_txt = "12"
+	name = "Maintenance"
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -24922,8 +24928,7 @@
 /area/hallway/floor3/aft)
 "hhw" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Maintenance";
-	req_one_access_txt = "12"
+	name = "Maintenance"
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/effect/decal/cleanable/dirt,
@@ -25311,11 +25316,9 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "hmW" = (
-/obj/machinery/camera/directional/north{
-	c_tag = "Gravity Generator Room"
-	},
-/turf/open/floor/iron/dark,
-/area/engineering/gravity_generator)
+/obj/effect/landmark/start/atmospheric_technician,
+/turf/open/floor/iron,
+/area/engineering/atmos)
 "hmX" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -33088,10 +33091,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor,
 /area/maintenance/floor2/starboard/fore)
-"jBn" = (
-/obj/effect/landmark/start/atmospheric_technician,
-/turf/open/floor/iron,
-/area/engineering/atmos)
 "jCc" = (
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/structure/hedge,
@@ -42983,7 +42982,7 @@
 	name = "Virology Access Button";
 	pixel_x = -26;
 	pixel_y = 26;
-	req_access_txt = "39"
+	req_access = list("virology")
 	},
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 1
@@ -45572,8 +45571,7 @@
 /area/maintenance/floor3/port/aft)
 "mZj" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Maintenance";
-	req_one_access_txt = "12"
+	name = "Maintenance"
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -47037,11 +47035,12 @@
 	pixel_x = 7;
 	pixel_y = 5
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/camera/autoname/directional/west,
+/obj/item/folder/yellow,
 /obj/item/export_scanner{
 	pixel_x = -5
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/iron/smooth,
 /area/cargo/office)
 "nqY" = (
@@ -53415,6 +53414,7 @@
 	pixel_x = 7;
 	pixel_y = 5
 	},
+/obj/item/folder/yellow,
 /turf/open/floor/iron,
 /area/cargo/sorting)
 "pjU" = (
@@ -58332,8 +58332,7 @@
 /area/service/chapel/funeral)
 "qFv" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Maintenance";
-	req_one_access_txt = "12"
+	name = "Maintenance"
 	},
 /obj/structure/barricade/wooden/crude,
 /obj/effect/mapping_helpers/airlock/abandoned,
@@ -73639,8 +73638,7 @@
 /area/faction/unity)
 "vnp" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Maintenance";
-	req_one_access_txt = "12"
+	name = "Maintenance"
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
@@ -74334,7 +74332,6 @@
 /area/tcommsat/server)
 "vvX" = (
 /obj/machinery/door_buttons/access_button{
-	dir = 1;
 	idDoor = "virology_airlock_exterior";
 	idSelf = "virology_airlock_control";
 	name = "Virology Access Button";
@@ -123064,7 +123061,7 @@ yhJ
 ukR
 ttl
 xCw
-jBn
+hmW
 noM
 iAU
 iAU
@@ -125891,7 +125888,7 @@ leu
 hct
 rqr
 kZg
-jBn
+hmW
 gfW
 gmw
 isd
@@ -135440,7 +135437,7 @@ kVp
 dEc
 bOq
 dEc
-hmW
+cGS
 inN
 rQh
 inN
