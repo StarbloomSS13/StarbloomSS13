@@ -3,7 +3,7 @@
 	desc = "Create a crystalline barrier that only you can pass through."
 	charge_max = 100
 	clothes_req = FALSE
-	sound = 'sound/magic/forcewall.ogg'
+	sound = 'sound/effects/ethereal_revive.ogg'
 	action_icon_state = "shield"
 	range = -1
 	include_user = TRUE

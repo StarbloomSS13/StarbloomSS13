@@ -1692,7 +1692,7 @@
 
 /obj/item/toy/crystalsoul
 	name = "crystal soul"
-	desc = "A radiant turquoise crystal containing a piece of the Crystal Tree's intelligence. Research indicates that it may be used to ask a question of the Tree."
+	desc = "A radiant turquoise crystal containing a piece of the Crystal Tree's intelligence. Research indicates that if you ask it a question, then hold it between your hands - the Tree will offer its insight."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "crystalsoul"
 	w_class = WEIGHT_CLASS_SMALL

@@ -134,8 +134,8 @@
 
 /obj/item/organ/regenerative_core/crystalfruit/go_inert()
 	..()
-	desc = "The crystal fruit has been away from the Crystal Tree too long. It has decayed, and is completely useless."
+	desc = "The [src] has been away from the Crystal Tree too long. It has decayed, and is completely useless."
 
 /obj/item/organ/regenerative_core/crystalfruit/preserved(implanted = 0)
 	..()
-	desc = "The crystal fruit has been stabilized. It is preserved, allowing you to use it to heal completely without danger of decay."
+	desc = "The [src] has been stabilized. It is preserved, allowing you to use it to heal completely without danger of decay."

@@ -329,7 +329,7 @@
 /obj/structure/flora/ausbushes/crystalflowers
 	icon_state = "crystalflowers_1"
 
-/obj/structure/flora/ausbushes/ppflowers/Initialize(mapload)
+/obj/structure/flora/ausbushes/crystalflowers/Initialize(mapload)
 	icon_state = "crystalflowers_[rand(1, 3)]"
 	. = ..()
 
