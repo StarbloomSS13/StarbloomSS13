@@ -41,3 +41,9 @@
 	name = "invisible blockade"
 	desc = "You're gonna be here awhile."
 	timeleft = 600
+
+
+/obj/effect/forcefield/crystal
+	icon_state = "shardwall"
+	name = "shard wall"
+	desc = "A wall of pure crystal, raised from the earth.."

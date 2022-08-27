@@ -283,3 +283,11 @@
 /area/lushplanet/surface/ruingen/danger // All of the above + Megafauna should they be implemented
 	icon_state = "danger"
 	area_flags = VALID_TERRITORY | UNIQUE_AREA | CAVES_ALLOWED | FLORA_ALLOWED | MOB_SPAWN_ALLOWED | MEGAFAUNA_SPAWN_ALLOWED | NO_ALERTS
+
+/area/lushplanet/underground/crystalgrove
+	icon_state = "mining"
+	name = "Crystal Grove"
+	ambience_index = NONE
+	sound_environment = SOUND_AREA_TUNNEL_ENCLOSED
+	ambient_buzz = 'sound/ambience/crystaltree.ogg'
+	min_ambience_cooldown = 7200 SECONDS

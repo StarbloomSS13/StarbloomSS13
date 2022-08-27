@@ -132,6 +132,21 @@
 	projectile_var_overrides = list("range" = range)
 	return ..()
 
+/obj/effect/proc_holder/spell/aimed/crystal
+	name = "Crystal Harpoon"
+	desc = "This spell fires a serrated crystal harpoon at a target."
+	charge_max = 60
+	clothes_req = FALSE
+	range = 20
+	cooldown_min = 20 //10 deciseconds reduction per rank
+	projectile_type = /obj/projectile/bullet/harpoon/crystal
+	base_icon_state = "icebeam"
+	action_icon_state = "icebeam"
+	sound = 'sound/effects/glass_step.ogg'
+	active_msg = "You prepare to launch your crystal harpoon!"
+	deactive_msg = "You destroy the crystal harpoon."
+	active = FALSE
+
 /obj/effect/proc_holder/spell/aimed/spell_cards
 	name = "Spell Cards"
 	desc = "Blazing hot rapid-fire homing cards. Send your foes to the shadow realm with their mystical power!"

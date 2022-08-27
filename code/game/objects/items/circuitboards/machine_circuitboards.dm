@@ -198,6 +198,11 @@
 	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
 	build_path = /obj/machinery/power/port_gen/pacman/super
 
+/obj/item/circuitboard/machine/pacman/crystal
+	name = "Crystal Drive (Machine Board)"
+	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
+	build_path = /obj/machinery/power/port_gen/pacman/crystal
+
 /obj/item/circuitboard/machine/turbine_compressor
 	name = "Turbine - Inlet Compressor (Machine Board)"
 	greyscale_colors = CIRCUIT_COLOR_ENGINEERING

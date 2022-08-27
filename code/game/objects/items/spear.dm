@@ -201,3 +201,10 @@
 /obj/item/spear/bamboospear/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=18, icon_wielded="[icon_prefix]1")
+
+/obj/item/spear/crystal
+	icon_state = "spearcrystal0"
+	base_icon_state = "spearcrystal0"
+	icon_prefix = "spearcrystal"
+	name = "crystal spear"
+	desc = "A razor sharp branch of the Crystal Tree."

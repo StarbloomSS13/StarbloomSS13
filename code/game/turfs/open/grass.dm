@@ -30,3 +30,12 @@
 
 /turf/open/misc/grass/lavaland
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
+
+/turf/open/misc/grass/crystal
+	name = "crystal grass"
+	desc = "A patch of strange, deep blue grass. It crackles almost musically as you step on it."
+	icon = 'icons/turf/floors.dmi'
+	icon_state = "crystalgrass"
+	base_icon_state = "crystalgrass"
+	smooth_icon = 'icons/turf/floors/crystalgrass.dmi'
+	baseturfs = /turf/open/misc/sandy_dirt

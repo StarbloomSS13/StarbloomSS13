@@ -75,17 +75,17 @@
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
 		if(inert)
-			to_chat(user, span_notice("[src] has decayed and can no longer be used to heal."))
+			to_chat(user, span_notice("[src] has spent too long away from the Crystal Tree and can no longer be used to heal."))
 			return
 		else
 			if(H.stat == DEAD)
 				to_chat(user, span_notice("[src] is useless on the dead."))
 				return
 			if(H != user)
-				H.visible_message(span_notice("[user] forces [H] to apply [src]... Black tendrils entangle and reinforce [H.p_them()]!"))
+				H.visible_message(span_notice("[user] forces [H] to eat the crystal fruit."))
 				SSblackbox.record_feedback("nested tally", "hivelord_core", 1, list("[type]", "used", "other"))
 			else
-				to_chat(user, span_notice("You start to smear [src] on yourself. Disgusting tendrils hold you together and allow you to keep moving, but for how long?"))
+				to_chat(user, span_notice("You take a bite of the crystal fruit. Immediately, you feel shards burn through your veins, yet you hold together."))
 				SSblackbox.record_feedback("nested tally", "hivelord_core", 1, list("[type]", "used", "self"))
 			H.apply_status_effect(/datum/status_effect/regenerative_core)
 			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "core", /datum/mood_event/healsbadman) //Now THIS is a miner buff (fixed - nerf)
@@ -112,28 +112,30 @@
 		go_inert()
 	return ..()
 
-/*************************Legion core********************/
-/obj/item/organ/regenerative_core/legion
-	desc = "A strange rock that crackles with power. It can be used to heal completely, but it will rapidly decay into uselessness."
-	icon_state = "legion_soul"
+//crystalfruit
 
-/obj/item/organ/regenerative_core/legion/Initialize(mapload)
+/obj/item/organ/regenerative_core/crystalfruit
+	name = "crystal fruit"
+	desc = "A strange, radiant fruit. It can be used to heal completely, but it will rapidly decay into uselessness. It's not entirely compatible with your biology, either..."
+	icon_state = "crystalfruit"
+
+/obj/item/organ/regenerative_core/crystalfruit/Initialize(mapload)
 	. = ..()
 	update_appearance()
 
-/obj/item/organ/regenerative_core/update_icon_state()
+/obj/item/organ/regenerative_core/crystalfruit/update_icon_state()
 	if (inert)
-		icon_state = "legion_soul_inert"
+		icon_state = "crystalfruit_inert"
 	if (preserved)
-		icon_state = "legion_soul"
+		icon_state = "crystalfruit"
 	if (!inert && !preserved)
-		icon_state = "legion_soul_unstable"
+		icon_state = "crystalfruit_unstable"
 	return ..()
 
-/obj/item/organ/regenerative_core/legion/go_inert()
+/obj/item/organ/regenerative_core/crystalfruit/go_inert()
 	..()
-	desc = "[src] has become inert. It has decayed, and is completely useless."
+	desc = "The [src] has been away from the Crystal Tree too long. It has decayed, and is completely useless."
 
-/obj/item/organ/regenerative_core/legion/preserved(implanted = 0)
+/obj/item/organ/regenerative_core/crystalfruit/preserved(implanted = 0)
 	..()
-	desc = "[src] has been stabilized. It is preserved, allowing you to use it to heal completely without danger of decay."
+	desc = "The [src] has been stabilized. It is preserved, allowing you to use it to heal completely without danger of decay."
