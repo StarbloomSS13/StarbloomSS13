@@ -25303,7 +25303,7 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "hmW" = (
-/obj/machinery/camera/directional/east{
+/obj/machinery/camera/directional/north{
 	c_tag = "Gravity Generator Room"
 	},
 /turf/open/floor/iron/dark,
@@ -32811,7 +32811,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
-/turf/open/floor/iron,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/red/corner{
+	dir = 1
+	},
 /area/command/heads_quarters/hos)
 "jyC" = (
 /obj/structure/disposalpipe/segment{
@@ -51758,6 +51763,9 @@
 	},
 /obj/structure/cable,
 /obj/machinery/airalarm/directional/west,
+/obj/machinery/camera/directional/west{
+	c_tag = "Gravity Generator Maintenance"
+	},
 /turf/open/floor/plating,
 /area/engineering/gravity_generator)
 "oHz" = (
@@ -135416,10 +135424,10 @@ kVp
 dEc
 bOq
 dEc
-inN
+hmW
 inN
 rQh
-hmW
+inN
 dEc
 vYD
 vYD
