@@ -1546,10 +1546,6 @@
 /obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/wood/large,
 /area/service/library/artgallery)
-"atM" = (
-/obj/effect/landmark/start/atmospheric_technician,
-/turf/open/floor/iron,
-/area/engineering/atmos)
 "atU" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -13378,6 +13374,9 @@
 	name = "Science Hall"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/mapping_helpers/airlock_note_placer{
+	note_info = "THIS IS PUBLIC. IT'S MEANT TO BE. PLEASE. GOD. WE KNOW. STOP. TELLING US. - Yours Truly and Forever Faithfully, The Desk Of The Chief Engineer"
+	},
 /turf/open/floor/catwalk_floor,
 /area/science/lower)
 "dFq" = (
@@ -33089,6 +33088,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor,
 /area/maintenance/floor2/starboard/fore)
+"jBn" = (
+/obj/effect/landmark/start/atmospheric_technician,
+/turf/open/floor/iron,
+/area/engineering/atmos)
 "jCc" = (
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/structure/hedge,
@@ -123061,7 +123064,7 @@ yhJ
 ukR
 ttl
 xCw
-atM
+jBn
 noM
 iAU
 iAU
@@ -125888,7 +125891,7 @@ leu
 hct
 rqr
 kZg
-atM
+jBn
 gfW
 gmw
 isd
