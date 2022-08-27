@@ -10086,12 +10086,6 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/pod/light,
 /area/maintenance/floor2/port/aft)
-"cGS" = (
-/obj/machinery/camera/directional/north{
-	c_tag = "Gravity Generator Room"
-	},
-/turf/open/floor/iron/dark,
-/area/engineering/gravity_generator)
 "cGT" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -21403,10 +21397,9 @@
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "gdk" = (
-/obj/structure/cable,
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/engineering/lobby)
+/obj/effect/landmark/start/atmospheric_technician,
+/turf/open/floor/iron,
+/area/engineering/atmos)
 "gdA" = (
 /obj/structure/closet/crate/trashcart,
 /obj/effect/turf_decal/bot,
@@ -25316,9 +25309,11 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "hmW" = (
-/obj/effect/landmark/start/atmospheric_technician,
-/turf/open/floor/iron,
-/area/engineering/atmos)
+/obj/machinery/camera/directional/north{
+	c_tag = "Gravity Generator Room"
+	},
+/turf/open/floor/iron/dark,
+/area/engineering/gravity_generator)
 "hmX" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -123061,7 +123056,7 @@ yhJ
 ukR
 ttl
 xCw
-hmW
+gdk
 noM
 iAU
 iAU
@@ -125888,7 +125883,7 @@ leu
 hct
 rqr
 kZg
-hmW
+gdk
 gfW
 gmw
 isd
@@ -127449,7 +127444,7 @@ jEw
 nDw
 bhp
 jPh
-rFb
+wmU
 emj
 rCU
 iXU
@@ -127706,7 +127701,7 @@ yib
 nDw
 obA
 jPh
-gdk
+wmU
 pVZ
 uKL
 rGe
@@ -135437,7 +135432,7 @@ kVp
 dEc
 bOq
 dEc
-cGS
+hmW
 inN
 rQh
 inN
