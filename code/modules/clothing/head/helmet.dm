@@ -606,8 +606,10 @@
 	name = "blue helmet"
 	desc = "A member of the Unity's helmet. Treasured by all its members, this is a status symbol and an heirloom."
 	icon_state = "helmet_unity"
+	armor = list(MELEE = 35, BULLET = 30, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50, WOUND = 10)
 
 /obj/item/clothing/head/helmet/homeguard
 	name = "home guard helmet"
 	desc = "A Home Guardsman's helmet. Cheaply made, but enough to stop a few bullets."
 	icon_state = "helmet_homeguard"
+	armor = list(MELEE = 35, BULLET = 30, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50, WOUND = 10)
