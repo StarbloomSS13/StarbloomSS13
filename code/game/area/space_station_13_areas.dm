@@ -1739,6 +1739,9 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/faction/homeguard
 	name = "\improper Home Guard Bunker"
 	icon_state = "homeguard"
+/area/faction/homeguard/cache
+	name = "\improper Maintenance Outpost"
+	icon_state = "homeguard"
 /area/faction/conserve_recycling
 	name = "\improper Conservator Recycling Facility"
 	icon_state = "conservator_rec"

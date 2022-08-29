@@ -37,14 +37,14 @@
 /area/shuttle/mining)
 "h" = (
 /obj/docking_port/mobile{
+	dheight = 1;
+	dir = 8;
 	dwidth = 5;
 	height = 7;
 	id = "mining";
 	name = "salvage shuttle";
 	port_direction = 4;
-	width = 9;
-	dir = 8;
-	dheight = 1
+	width = 9
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/mining)
@@ -109,6 +109,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plating,
 /area/shuttle/mining)
 "w" = (
@@ -200,6 +201,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plating,
 /area/shuttle/mining)
 "Q" = (
