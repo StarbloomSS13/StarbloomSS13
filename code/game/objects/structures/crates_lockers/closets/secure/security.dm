@@ -114,6 +114,22 @@
 	..()
 	new /obj/item/storage/belt/security/full(src)
 
+//Unity
+/obj/structure/closet/secure_closet/unity
+	name = "unity officer's locker"
+	req_access = list(ACCESS_SECURITY)
+	icon_state = "unity"
+
+/obj/structure/closet/secure_closet/unity/PopulateContents()
+	..()
+	new /obj/item/radio/headset/headset_sec(src)
+	new /obj/item/radio/headset/headset_sec/alt(src)
+	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
+	new /obj/item/flashlight/seclite(src)
+	new /obj/item/clothing/head/helmet/unity(src)
+	new /obj/item/clothing/suit/unity/armored(src)
+//Unity
+
 /obj/structure/closet/secure_closet/security/cargo
 
 /obj/structure/closet/secure_closet/security/cargo/PopulateContents()

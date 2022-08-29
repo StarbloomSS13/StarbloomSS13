@@ -33,7 +33,9 @@
 //Command
 #define JOB_CAPTAIN "Captain"
 #define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
-#define JOB_HEAD_OF_SECURITY "Head of Security"
+//Temporarily Unity
+#define JOB_HEAD_OF_SECURITY "Unity Occupation Commander"
+//Temporarily Unity
 #define JOB_RESEARCH_DIRECTOR "Research Director"
 #define JOB_CHIEF_ENGINEER "Chief Engineer"
 #define JOB_CHIEF_MEDICAL_OFFICER "Chief Medical Officer"
@@ -44,7 +46,9 @@
 //Security
 #define JOB_WARDEN "Warden"
 #define JOB_DETECTIVE "Detective"
-#define JOB_SECURITY_OFFICER "Security Officer"
+//Temporarily Unity
+#define JOB_SECURITY_OFFICER "Unity Occupation Officer"
+//Temporarily Unity
 #define JOB_SECURITY_OFFICER_MEDICAL "Security Officer (Medical)"
 #define JOB_SECURITY_OFFICER_ENGINEERING "Security Officer (Engineering)"
 #define JOB_SECURITY_OFFICER_SCIENCE "Security Officer (Science)"
