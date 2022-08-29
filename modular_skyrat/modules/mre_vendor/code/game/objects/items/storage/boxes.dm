@@ -5,6 +5,13 @@
 	icon_state = "mre"
 	var/unheated = TRUE
 
+/obj/item/storage/box/mre/attack_hand(mob/user)
+	. = ..()
+	if(unheated)
+		unheated = FALSE
+		to_chat(user, span_notice("The [src] hisses softly, its internal chemical heater heating up the food inside."))
+		playsound(loc, 'sound/effects/fuse.ogg', 50, 1)
+
 /obj/item/storage/box/mre/AltClick(mob/user)
 	. = ..()
 	if(unheated)
@@ -258,7 +265,7 @@
 
 /obj/item/storage/box/mre/mre_continental/PopulateContents()
 	new	/obj/item/food/baguette(src)
-	new	/obj/item/food/cheese(src)
+	new	/obj/item/food/cheese/wedge(src)
 	new	/obj/item/food/chococornet(src)
 	new	/obj/item/food/donut/jelly/plain(src)
 	new	/obj/item/food/branrequests(src)

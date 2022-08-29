@@ -114,6 +114,22 @@
 	..()
 	new /obj/item/storage/belt/security/full(src)
 
+//Unity
+/obj/structure/closet/secure_closet/unity
+	name = "unity officer's locker"
+	req_access = list(ACCESS_SECURITY)
+	icon_state = "unity"
+
+/obj/structure/closet/secure_closet/unity/PopulateContents()
+	..()
+	new /obj/item/radio/headset/headset_sec(src)
+	new /obj/item/radio/headset/headset_sec/alt(src)
+	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
+	new /obj/item/flashlight/seclite(src)
+	new /obj/item/clothing/head/helmet/unity(src)
+	new /obj/item/clothing/suit/unity/armored(src)
+//Unity
+
 /obj/structure/closet/secure_closet/security/cargo
 
 /obj/structure/closet/secure_closet/security/cargo/PopulateContents()
@@ -144,7 +160,7 @@
 
 /obj/structure/closet/secure_closet/detective
 	name = "\improper detective's cabinet"
-	req_access = list(ACCESS_FORENSICS)
+	req_access = list(ACCESS_DETECTIVE)
 	icon_state = "cabinet"
 	resistance_flags = FLAMMABLE
 	max_integrity = 70
@@ -229,8 +245,7 @@
 /obj/structure/closet/secure_closet/evidence
 	anchored = TRUE
 	name = "Secure Evidence Closet"
-	req_access_txt = "0"
-	req_one_access_txt = list(ACCESS_ARMORY, ACCESS_FORENSICS)
+	req_one_access = list(ACCESS_ARMORY,ACCESS_DETECTIVE)
 
 /obj/structure/closet/secure_closet/brig/PopulateContents()
 	..()
@@ -260,7 +275,7 @@
 /obj/structure/closet/secure_closet/contraband/heads
 	anchored = TRUE
 	name = "Contraband Locker"
-	req_access = list(ACCESS_HEADS)
+	req_access = list(ACCESS_COMMAND)
 
 /obj/structure/closet/secure_closet/armory1
 	name = "armory armor locker"

@@ -31,6 +31,3 @@
 
 /obj/item/construction/rcd/arcd
 	icon = 'starbloom_modules/aesthetics/tools/tools.dmi'
-
-/obj/item/inducer
-	icon = 'starbloom_modules/aesthetics/tools/tools.dmi'

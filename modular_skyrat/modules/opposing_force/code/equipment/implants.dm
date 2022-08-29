@@ -18,10 +18,9 @@
 					a tape recorder playing Snake Eater."
 
 /datum/opposing_force_equipment/implant/radio
-	name = "Syndicate Radio Implant"
+	name = "Last Edict - Radio Implant"
 	item_type = /obj/item/implanter/radio/syndicate
-	description = "An implanter that grants you inherent access to the Syndicate radio channel, in addition to being able to listen to all on-station channels."
-	admin_note = "Warning: This can let someone get in contact with actual antagonists via the Syndicate channel."
+	description = "An implanter that grants you inherent access to the Last Edict radio channel, in addition to being able to listen to all on-station channels."
 
 /datum/opposing_force_equipment/implant/storage
 	name = "Storage Implant"
@@ -31,7 +30,7 @@
 /datum/opposing_force_equipment/implant/freedom
 	name = "Freedom Implant"
 	item_type = /obj/item/implanter/freedom
-	description = "An implanter that grants you the ability to break out of handcuffs a certain number of times."
+	description = "An implanter that grants you the ability to break out of handcuffs 4 times before becoming inert."
 
 /datum/opposing_force_equipment/implant/micro
 	name = "Microbomb Implant"
@@ -42,35 +41,57 @@
 	name = "Macrobomb Implant"
 	item_type = /obj/item/implanter/explosive_macro
 	description = "An implanter that will make you explode on death in a massive explosion, fun!"
-	admin_note = "Warning: Equivalent to 10 microbombs."
+	admin_note = "WARNING: Equivalent to 10 microbombs, or one EXODUS bomb. For if you REALLY want to ruin \
+					security's day."
 
 /datum/opposing_force_equipment/implant/emp
 	name = "EMP Implant"
 	item_type = /obj/item/implanter/emp
-	description = "An implanter that grants you the ability to create several EMP pulses, centered on you."
+	description = "An implanter that grants you the ability to create several EMP pulses, centered on you. \
+					Comes loaded with three charges."
 
 // Cybernetic Enhancements
 /datum/opposing_force_equipment/implant/cns
-	name = "CNS Rebooter Implant"
+	name = "Last Edict - CNS Rebooter Implant"
 	item_type = /obj/item/autosurgeon/organ/syndicate/anti_stun
 	description = "This implant will automatically give you back control over your central nervous system, reducing downtime when stunned."
 
 /datum/opposing_force_equipment/implant/reviver
-	name = "Reviver Implant"
+	name = "Last Edict - Reviver Implant"
 	item_type = /obj/item/autosurgeon/organ/syndicate/reviver
 	description = "This implant will attempt to revive and heal you if you lose consciousness. For the faint of heart!"
 
 /datum/opposing_force_equipment/implant/xray
-	name = "X-Ray Eyes"
+	name = "Last Edict - X-Ray Eyes"
 	item_type = /obj/item/autosurgeon/organ/syndicate/xray_eyes
 	description = "These cybernetic eyes will give you X-ray vision. Blinking is futile."
 
 /datum/opposing_force_equipment/implant/thermal
-	name = "Thermal Eyes"
+	name = "Last Edict - Thermal Eyes"
 	item_type = /obj/item/autosurgeon/organ/syndicate/thermal_eyes
 	description = "These cybernetic eye implants will give you thermal vision. Vertical slit pupil included."
 
 /datum/opposing_force_equipment/implant/armlaser
-	name = "Arm-mounted Laser Implant"
+	name = "Last Edict - Arm-mounted Laser Implant"
 	item_type = /obj/item/autosurgeon/organ/syndicate/laser_arm
 	description = "A variant of the arm cannon implant that fires lethal laser beams. The cannon emerges from the subject's arm and remains inside when not in use."
+
+/datum/opposing_force_equipment/implant/toolset
+	name = "Last Edict - Integrated Toolset"
+	item_type = /obj/item/autosurgeon/organ/syndicate/toolset
+	description = "A full set of concealable tools, hidden within the user's arm. Does not include shock protection."
+
+/datum/opposing_force_equipment/implant/surgical
+	name = "Last Edict - Integrated Surgical Toolset"
+	item_type = /obj/item/autosurgeon/organ/syndicate/surgery
+	description = "A full set of concealable surgical tools, hidden within the user's arm."
+
+/datum/opposing_force_equipment/implant/repulsor
+	name = "Last Edict - Repulsor Cannon"
+	item_type = /obj/item/autosurgeon/organ/syndicate/repulsor_arm
+	description = "A variant of the arm cannon implant that fires nonlethal repulsor blasts. The cannon emerges from the subject's arm and remains inside when not in use."
+
+/datum/opposing_force_equipment/implant/nanoblade
+	name = "Last Edict - Nanoblade"
+	item_type = /obj/item/autosurgeon/organ/syndicate/sword
+	description = "A set of fabricators concealed in the arm, capable of deploying a ceramic blade on command."

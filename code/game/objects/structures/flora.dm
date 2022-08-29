@@ -326,6 +326,13 @@
 	icon_state = "fullgrass_[rand(1, 3)]"
 	. = ..()
 
+/obj/structure/flora/ausbushes/crystalflowers
+	icon_state = "crystalflowers_1"
+
+/obj/structure/flora/ausbushes/crystalflowers/Initialize(mapload)
+	icon_state = "crystalflowers_[rand(1, 3)]"
+	. = ..()
+
 /obj/item/kirbyplants
 	name = "potted plant"
 	icon = 'icons/obj/flora/plants.dmi'
@@ -533,3 +540,32 @@
 /obj/structure/flora/rock/pile/largejungle/Initialize(mapload)
 	. = ..()
 	icon_state = "[initial(icon_state)][rand(1,3)]"
+
+/obj/structure/flora/tree/crystal
+	name = "The Crystal Tree"
+	icon_state = "crystaltree"
+	desc = "A strange, humming crystalline tree. It sparkles beautifully in the dim light."
+	icon = 'icons/obj/flora/jungletrees.dmi'
+	light_color = LIGHT_COLOR_CYAN
+	light_range = 12
+	light_power = 4
+	pixel_x = -48
+	pixel_y = -20
+
+/obj/structure/flora/tree/crystal/fruit
+	name = "crystalline fruit pod"
+	icon_state = "crystalfruit"
+	desc = "A strange, humming crystalline plant. It contains a soft, edible, short lived fruit."
+	icon = 'icons/obj/flora/ausflora.dmi'
+	light_color = LIGHT_COLOR_CYAN
+	light_range = 2
+	light_power = 1
+	pixel_x = 0
+	pixel_y = 0
+
+/obj/structure/flora/tree/crystal/fruit/attack_hand(mob/user)
+	. = ..()
+	playsound(loc, 'sound/effects/glass_step.ogg', 50, 1)
+	to_chat(user, "<span class='danger'>You break off a crystal fruit from its pod, shattering the plant into glimmering dust.</span>")
+	new /obj/item/organ/regenerative_core/crystalfruit(get_turf(src))
+	qdel(src)

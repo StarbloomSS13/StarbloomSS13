@@ -55,7 +55,7 @@
 
 /datum/uplink_item/badass/costumes/tactical_naptime
 	name = "Sleepy Time Pajama Bundle"
-	desc = "Even soldiers need to get a good nights rest. Comes with blood-red pajamas, a blankie, a hot mug of cocoa and a fuzzy friend."
+	desc = "Even soldiers need to get a good nights rest. Comes with purple pajamas, a blankie, a hot mug of cocoa and a fuzzy friend."
 	item = /obj/item/storage/box/edict_kit/sleepytime
 	purchasable_from = ALL
 	progression_minimum = 90 MINUTES

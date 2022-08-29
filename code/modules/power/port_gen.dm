@@ -284,3 +284,16 @@
 
 /obj/machinery/power/port_gen/pacman/super/overheat()
 	explosion(src, devastation_range = 3, heavy_impact_range = 3, light_impact_range = 3, flash_range = -1)
+
+/obj/machinery/power/port_gen/pacman/crystal
+	name = "\improper Crystal Drive"
+	desc = "A portable generator carefully designed using the shards of the Crystal Tree. Strangely, it's able to generate power from glass..."
+	icon_state = "crystaldrive_0"
+	base_icon = "crystaldrive"
+	circuit = /obj/item/circuitboard/machine/pacman/crystal
+	sheet_path = /obj/item/stack/sheet/glass
+	power_gen = 20000
+	time_per_sheet = 40
+
+/obj/machinery/power/port_gen/pacman/crystal/overheat()
+	explosion(src, devastation_range = 3, heavy_impact_range = 3, light_impact_range = 3, flash_range = -1)

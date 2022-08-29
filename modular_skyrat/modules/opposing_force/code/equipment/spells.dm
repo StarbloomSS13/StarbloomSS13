@@ -25,7 +25,7 @@
 	name = "Charge"
 	item_type = /obj/item/book/granter/spell/charge
 	description = "This spell can be used to recharge a variety of things in your hands, from magical artifacts to electrical components. A creative wizard can even use it to grant magical power to a fellow magic user."
-	admin_note = "This one can be used for some fuckery (such as recharging martial art granters, sometimes), be a bit careful."
+	admin_note = "Charge is fuckery incarnate and can be heavily abused by those in the know. Approve with caution."
 
 /datum/opposing_force_equipment/spell/summonitem
 	name = "Summon Item"

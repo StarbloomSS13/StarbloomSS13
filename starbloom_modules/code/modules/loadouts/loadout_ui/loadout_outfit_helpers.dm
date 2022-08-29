@@ -36,6 +36,9 @@
 	for(var/datum/loadout_item/item as anything in loadout_datums)
 		item.on_equip_item(preference_source, src, visuals_only)
 
+	if(preference_source && !visuals_only)
+		equip_preference_access(preference_source)
+
 	regenerate_icons()
 	return TRUE
 

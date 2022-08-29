@@ -254,7 +254,14 @@ GLOBAL_LIST_EMPTY(lifts)
 	if(going == DOWN)
 		for(var/mob/living/crushed in destination.contents)
 			to_chat(crushed, span_userdanger("You are crushed by [src]!"))
-			crushed.gib(FALSE,FALSE,FALSE)//the nicest kind of gibbing, keeping everything intact.
+			playsound(src, 'sound/effects/wounds/crackandbleed.ogg', 50, TRUE)
+			var/damage = rand(10, 20)
+			crushed.apply_damage(2 * damage, BRUTE, BODY_ZONE_HEAD)
+			crushed.apply_damage(2 * damage, BRUTE, BODY_ZONE_CHEST)
+			crushed.apply_damage(1 * damage, BRUTE, BODY_ZONE_L_LEG)
+			crushed.apply_damage(1 * damage, BRUTE, BODY_ZONE_R_LEG)
+			crushed.apply_damage(1 * damage, BRUTE, BODY_ZONE_L_ARM)
+			crushed.apply_damage(1 * damage, BRUTE, BODY_ZONE_R_ARM)
 
 	else if(going != UP) //can't really crush something upwards
 		var/atom/throw_target = get_edge_target_turf(src, turn(going, pick(45, -45))) //finds a spot to throw the victim at for daring to be hit by a tram

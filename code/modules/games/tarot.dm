@@ -7,7 +7,7 @@
 	deckstyle = "tarot"
 
 /obj/item/toy/cards/deck/tarot/populate_deck()
-	for(var/suit in list("Swords", "Wands", "Coins", "Cups"))
+	for(var/suit in list("Swords", "Rods", "Coins", "Cups"))
 		for(var/i in 1 to 10)
 			cards += generate_card("[i] of [suit]")
 		for(var/person in list("Page", "Knight", "Queen", "King"))

@@ -525,7 +525,7 @@
 				game.say("WEEWOO! WEEWOO! Spaceport security en route!")
 				playsound(game, 'sound/items/weeoo1.ogg', 100, FALSE)
 				for(var/i in 1 to 3)
-					var/mob/living/simple_animal/hostile/syndicate/ranged/smg/orion/spaceport_security = new(get_turf(src))
+					var/mob/living/simple_animal/hostile/simple_human/syndicate/ranged/smg/orion/spaceport_security = new(get_turf(src))
 					spaceport_security.GiveTarget(usr)
 	game.fuel += fuel
 	game.food += food

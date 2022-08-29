@@ -14,11 +14,6 @@
 	name = "Bluespace Artillery Controls (Computer Board)"
 	build_path = /obj/machinery/computer/bsa_control
 
-//obj/item/circuitboard/computer/shield
-// name = "Shield Control (Computer Board)"
-// greyscale_colors = CIRCUIT_COLOR_COMMAND
-// build_path = /obj/machinery/computer/stationshield
-
 //Engineering
 
 /obj/item/circuitboard/computer/apc_control
@@ -336,6 +331,10 @@
 	name = "Tram Controls (Computer Board)"
 	build_path = /obj/machinery/computer/tram_controls
 
+/obj/item/circuitboard/computer/terminal
+	name = "Terminal (Computer Board)"
+	build_path = /obj/machinery/computer/terminal
+
 //Medical
 
 /obj/item/circuitboard/computer/crew
@@ -539,14 +538,14 @@
 	greyscale_colors = CIRCUIT_COLOR_SUPPLY
 	build_path = /obj/machinery/computer/security/mining
 
-/obj/item/circuitboard/computer/mining_shuttle
+/obj/item/circuitboard/computer/salvage_shuttle
 	name = "Mining Shuttle (Computer Board)"
 	greyscale_colors = CIRCUIT_COLOR_SUPPLY
-	build_path = /obj/machinery/computer/shuttle/mining
+	build_path = /obj/machinery/computer/shuttle/salvage
 
-/obj/item/circuitboard/computer/mining_shuttle/common
+/obj/item/circuitboard/computer/salvage_shuttle/common
 	name = "Lavaland Shuttle (Computer Board)"
-	build_path = /obj/machinery/computer/shuttle/mining/common
+	build_path = /obj/machinery/computer/shuttle/salvage/common
 
 /obj/item/circuitboard/computer/exoscanner_console
 	name = "Scanner Array Control Console (Computer Board)"

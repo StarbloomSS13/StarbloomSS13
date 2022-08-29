@@ -20,7 +20,7 @@
 	var/codes_txt = "" // codes as set on map: "tag1;tag2" or "tag1=value;tag2=value"
 	var/wayfinding = FALSE
 
-	req_one_access = list(ACCESS_ENGINE, ACCESS_ROBOTICS)
+	req_one_access = list(ACCESS_ENGINEERING, ACCESS_ROBOTICS)
 
 /obj/machinery/navbeacon/Initialize(mapload)
 	. = ..()

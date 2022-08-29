@@ -239,3 +239,14 @@
 		user.put_in_hands(gun)
 	else
 		user.dropItemToGround(src, TRUE)
+
+/obj/item/gun/ballistic/rifle/boltaction/harpoon/crystal
+	name = "crystal harpoon gun"
+	desc = "A weapon using the shards of the Crystal Tree as ammunition."
+	icon = 'starbloom_modules/aesthetics/guns/icons/energy.dmi'
+	icon_state = "crystalharpoon"
+	inhand_icon_state = "circuitgun"
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/harpoon/crystal
+	fire_sound = 'sound/weapons/gun/sniper/shot.ogg'
+	can_be_sawn_off = FALSE
+	can_jam = FALSE

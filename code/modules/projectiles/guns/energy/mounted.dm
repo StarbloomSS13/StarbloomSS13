@@ -29,3 +29,24 @@
 /obj/item/gun/energy/laser/mounted/augment
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "arm_laser"
+
+/obj/item/gun/energy/laser/mounted/repulsor
+	name = "mounted repulsor"
+	desc = "An arm mounted cannon that fires a nonlethal repulsion blast."
+	icon = 'icons/obj/items_cyborg.dmi'
+	icon_state = "laser_cyborg"
+	inhand_icon_state = "armcannonlase"
+	force = 5
+	selfcharge = 1
+	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
+	ammo_type = list(/obj/item/ammo_casing/energy/gravity/repulse)
+	fire_delay = 8
+	vary_fire_sound = 0
+	fire_sound = 'sound/weapons/repulsor.ogg'
+
+/obj/item/gun/energy/laser/mounted/repulsor/dropped()
+	..()
+
+/obj/item/gun/energy/laser/mounted/repulsor/augment
+	icon = 'icons/obj/surgery.dmi'
+	icon_state = "arm_laser"

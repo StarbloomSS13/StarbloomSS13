@@ -123,3 +123,17 @@
 
 /obj/item/autosurgeon/organ/syndicate/reviver
 	starting_organ = /obj/item/organ/cyberimp/chest/reviver
+
+/obj/item/autosurgeon/organ/syndicate/repulsor_arm
+	desc = "A single use autosurgeon that contains a repulsor cannon augment. A screwdriver can be used to remove it, but implants can't be placed back in."
+	uses = 1
+	starting_organ = /obj/item/organ/cyberimp/arm/gun/repulsor
+
+/obj/item/autosurgeon/organ/syndicate/toolset
+	starting_organ = /obj/item/organ/cyberimp/arm/toolset
+
+/obj/item/autosurgeon/organ/syndicate/surgery
+	starting_organ = /obj/item/organ/cyberimp/arm/surgery
+
+/obj/item/autosurgeon/organ/syndicate/sword
+	starting_organ = /obj/item/organ/cyberimp/arm/esword

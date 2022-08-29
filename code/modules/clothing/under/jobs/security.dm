@@ -53,6 +53,9 @@
 	inhand_icon_state = "officerblueclothes"
 	alt_covers_chest = TRUE
 
+/obj/item/clothing/under/rank/security/officer/formal/unity
+	name = "unity occupation uniform"
+
 /obj/item/clothing/under/rank/security/constable
 	name = "constable outfit"
 	desc = "A british looking outfit."

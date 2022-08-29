@@ -999,11 +999,11 @@
 		var/mob/M = locate(href_list["CentComReply"])
 		usr.client.admin_headset_message(M, RADIO_CHANNEL_CENTCOM)
 
-	else if(href_list["SyndicateReply"])
+	else if(href_list["EdictReply"])
 		if(!check_rights(R_ADMIN))
 			return
 
-		var/mob/M = locate(href_list["SyndicateReply"])
+		var/mob/M = locate(href_list["EdictReply"])
 		usr.client.admin_headset_message(M, RADIO_CHANNEL_EDICT)
 
 	else if(href_list["HeadsetMessage"])
@@ -1999,8 +1999,6 @@
 		if(log_index <= state_to_view.log.len)
 			var/list/log_entry = state_to_view.log[log_index]
 			if(log_entry["chunk"])
-				LAZYINITLIST(editor.tgui_shared_states)
-				editor.tgui_shared_states["viewedChunk"] = json_encode(log_entry["chunk"])
-				editor.tgui_shared_states["modal"] = json_encode("viewChunk")
+				editor.force_view_chunk = log_entry["chunk"]
+				editor.force_modal = "viewChunk"
 		editor.ui_interact(usr)
-		editor.tgui_shared_states = null

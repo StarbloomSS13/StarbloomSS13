@@ -290,7 +290,7 @@
 /area/ruin/space/has_grav/syndicate_forgotten_cargopod)
 "bc" = (
 /obj/machinery/light/directional/south,
-/mob/living/simple_animal/hostile/nanotrasen/ranged/assault,
+/mob/living/simple_animal/hostile/simple_human/nanotrasen/ranged/assault,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "bd" = (
@@ -664,7 +664,7 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "cd" = (
 /obj/machinery/light/directional/south,
-/mob/living/simple_animal/hostile/nanotrasen/ranged/assault,
+/mob/living/simple_animal/hostile/simple_human/nanotrasen/ranged/assault,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "ce" = (
@@ -823,7 +823,7 @@
 	dir = 10
 	},
 /obj/item/wrench,
-/mob/living/simple_animal/hostile/nanotrasen/ranged/assault,
+/mob/living/simple_animal/hostile/simple_human/nanotrasen/ranged/assault,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "cz" = (
@@ -982,7 +982,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 4
 	},
-/mob/living/simple_animal/hostile/nanotrasen/elite,
+/mob/living/simple_animal/hostile/simple_human/nanotrasen/elite,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "cR" = (
@@ -1084,42 +1084,6 @@
 "de" = (
 /turf/open/floor/pod/dark,
 /area/ruin/space/has_grav/powered/syndicate_forgotten_vault)
-"df" = (
-/obj/structure/closet/syndicate{
-	anchored = 1;
-	armor = list("melee"=70,"bullet"=40,"laser"=40,"energy"=30,"bomb"=30,"bio"=0,"fire"=70,"acid"=60);
-	desc = "A basic closet for all your villainous needs.";
-	locked = 1;
-	name = "Closet";
-	req_one_access_txt = "150";
-	secure = 1
-	},
-/obj/item/clothing/under/syndicate/combat,
-/obj/item/clothing/gloves/combat,
-/obj/item/clothing/shoes/combat,
-/obj/item/clothing/mask/gas/syndicate,
-/obj/item/clothing/under/syndicate/skirt,
-/turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav/syndicate_forgotten_ship)
-"dg" = (
-/obj/structure/closet/syndicate{
-	anchored = 1;
-	armor = list("melee"=70,"bullet"=40,"laser"=40,"energy"=30,"bomb"=30,"bio"=0,"fire"=70,"acid"=60);
-	desc = "A basic closet for all your villainous needs.";
-	locked = 1;
-	name = "Closet";
-	req_one_access_txt = "150";
-	secure = 1
-	},
-/obj/item/clothing/head/hos/beret/syndicate,
-/obj/item/clothing/suit/armor/vest/capcarapace/syndicate,
-/obj/item/clothing/mask/gas/syndicate,
-/obj/item/clothing/under/syndicate,
-/obj/item/clothing/under/syndicate/skirt,
-/obj/item/clothing/gloves/combat,
-/obj/item/clothing/shoes/combat,
-/turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "dh" = (
 /obj/machinery/camera/xray{
 	c_tag = "Cargo pod";
@@ -1235,12 +1199,48 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/pod/dark,
 /area/ruin/space/has_grav/powered/syndicate_forgotten_vault)
+"Ka" = (
+/obj/structure/closet/syndicate{
+	anchored = 1;
+	armor = list("melee"=70,"bullet"=40,"laser"=40,"energy"=30,"bomb"=30,"bio"=0,"fire"=70,"acid"=60);
+	desc = "A basic closet for all your villainous needs.";
+	locked = 1;
+	name = "Closet";
+	req_one_access_txt = "150";
+	secure = 1
+	},
+/obj/item/clothing/head/hos/beret/syndicate,
+/obj/item/clothing/suit/armor/vest/capcarapace/syndicate,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/under/tactical/skirt/edict,
+/obj/item/clothing/under/tactical/edict,
+/obj/item/clothing/mask/gas/edict,
+/turf/open/floor/mineral/plastitanium/red,
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "WR" = (
 /obj/structure/closet/crate/secure/gear{
 	req_one_access_txt = "150"
 	},
 /obj/effect/spawner/random/clothing/costume,
 /turf/open/floor/mineral/plastitanium,
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
+"Xv" = (
+/obj/structure/closet/syndicate{
+	anchored = 1;
+	armor = list("melee"=70,"bullet"=40,"laser"=40,"energy"=30,"bomb"=30,"bio"=0,"fire"=70,"acid"=60);
+	desc = "A basic closet for all your villainous needs.";
+	locked = 1;
+	name = "Closet";
+	req_one_access_txt = "150";
+	secure = 1
+	},
+/obj/item/clothing/under/tactical/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/under/tactical/skirt/edict,
+/obj/item/clothing/mask/gas/edict,
+/turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 
 (1,1,1) = {"
@@ -2815,8 +2815,8 @@ aw
 aw
 aw
 bZ
-df
-df
+Xv
+Xv
 bZ
 aa
 aa
@@ -2909,7 +2909,7 @@ aw
 cb
 aw
 bZ
-dg
+Ka
 bZ
 ac
 aa

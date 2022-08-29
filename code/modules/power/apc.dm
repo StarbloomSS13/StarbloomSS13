@@ -174,7 +174,7 @@
 	locked = FALSE
 
 /obj/machinery/power/apc/syndicate //general syndicate access
-	req_access = list(ACCESS_SYNDICATE)
+	req_access = list(ACCESS_EDICT)
 
 /obj/machinery/power/apc/away //general away mission access
 	req_access = list(ACCESS_AWAY_GENERAL)

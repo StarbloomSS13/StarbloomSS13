@@ -170,7 +170,7 @@
 /obj/item/storage/box/survival/syndie //why is this its own thing if it's just the engi box with a syndie mask and medipen?
 	name = "extended-capacity survival box"
 	desc = "A box with the bare essentials of ensuring the survival of you and others. This one is labelled to contain an extended-capacity tank."
-	mask_type = /obj/item/clothing/mask/gas/syndicate
+	mask_type = /obj/item/clothing/mask/gas/edict
 	internal_type = /obj/item/tank/internals/emergency_oxygen/engi
 	medipen_type = null
 	illustration = "extendedtank"
@@ -1569,7 +1569,7 @@
 	new /obj/item/clothing/head/fedora/curator(src)
 	new /obj/item/clothing/suit/curator(src)
 	new /obj/item/clothing/under/rank/civilian/curator/treasure_hunter(src)
-	new /obj/item/clothing/shoes/workboots/mining(src)
+	new /obj/item/clothing/shoes/workboots/salvage(src)
 	new /obj/item/melee/curator_whip(src)
 
 /obj/item/storage/box/hero/astronaut

@@ -1570,10 +1570,10 @@
 	toysay = "..."
 	toysound = null
 
-/obj/item/toy/figure/miner
-	name = "\improper Shaft Miner action figure"
+/obj/item/toy/figure/salvage
+	name = "\improper Salvage Crew action figure"
 	icon_state = "miner"
-	toysay = "COLOSSUS RIGHT OUTSIDE THE BASE!"
+	toysay = "Threw the parts out!"
 
 /obj/item/toy/figure/ninja
 	name = "\improper Space Ninja action figure"
@@ -1624,6 +1624,11 @@
 	icon_state = "warden"
 	toysay = "Seventeen minutes for coughing at an officer!"
 
+/obj/item/toy/figure/model_ship_non_explosive // Yes, I have to specify
+	name = "\improper Model Ship"
+	icon_state = "ship"
+	toysay = "Oxygen offline. Weapons charging. All systems nominal."
+	toysound = 'sound/mecha/nominal.ogg'
 
 /obj/item/toy/dummy
 	name = "ventriloquist dummy"
@@ -1683,6 +1688,42 @@
 		addtimer(CALLBACK(GLOBAL_PROC, .proc/playsound, src, 'sound/items/radiostatic.ogg', 50, FALSE), 0.5 SECONDS)
 	else
 		to_chat(user, span_warning("The dial on [src] jams up"))
+		return
+
+/obj/item/toy/crystalsoul
+	name = "crystal soul"
+	desc = "A radiant turquoise crystal containing a piece of the Crystal Tree's intelligence. Research indicates that if you ask it a question, then hold it between your hands - the Tree will offer its insight."
+	icon = 'icons/obj/toy.dmi'
+	icon_state = "crystalsoul"
+	w_class = WEIGHT_CLASS_SMALL
+	var/cooldown = 0
+
+/obj/item/toy/crystalsoul/attack_self(mob/user)
+	if(cooldown <= world.time)
+		cooldown = (world.time + 1800)
+		playsound(loc, 'sound/items/haunted/ghostitemattack.ogg', 50, 1)
+		message_admins("[usr.key]/([usr.name]) holds the Crystal Soul, and requests the Tree's guidance!")
+		user.visible_message(span_notice("The Crystal Soul glows in the hands of [user], before quickly fading and growing dull. The request has been heard."))
+	else
+		to_chat(user, span_warning("The crystal feels cold to the touch."))
+		return
+
+/obj/item/toy/crystalheart
+	name = "crystal heart"
+	desc = "A deep purple crystal containing the stolen heart of the Crystal Tree's being. Research indicates that it may be used to produce a crystal fruit, rarely."
+	icon = 'icons/obj/toy.dmi'
+	icon_state = "crystalheart"
+	w_class = WEIGHT_CLASS_SMALL
+	var/cooldown = 0
+
+/obj/item/toy/crystalheart/attack_self(mob/user)
+	if(cooldown <= world.time)
+		cooldown = (world.time + 1800)
+		playsound(loc, 'sound/effects/ethereal_revive.ogg', 50, 1)
+		to_chat(user, "<span class='danger'>You force the heart to produce a crystal fruit. A profound sadness washes over you as the heart lets out a horrifying cry.</span>")
+		new /obj/item/organ/regenerative_core/crystalfruit(get_turf(src))
+	else
+		to_chat(user, span_warning("The crystal feels cold to the touch."))
 		return
 
 /obj/item/toy/braintoy

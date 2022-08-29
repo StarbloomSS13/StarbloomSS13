@@ -287,7 +287,7 @@
 /datum/outfit/lavaland_syndicate
 	name = "Lavaland Syndicate Agent"
 	r_hand = /obj/item/gun/ballistic/automatic/sniper_rifle
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/tactical
 	suit = /obj/item/clothing/suit/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated

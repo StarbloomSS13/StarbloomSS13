@@ -131,8 +131,8 @@
 /obj/item/clothing/under/suit/henchmen
 	name = "henchmen jumpsuit"
 	desc = "A very gaudy jumpsuit for a proper Henchman. Guild regulations, you understand."
-	icon = 'icons/obj/clothing/under/syndicate.dmi'
-	worn_icon = 'icons/mob/clothing/under/syndicate.dmi'
+	icon = 'icons/obj/clothing/under/tactical.dmi'
+	worn_icon = 'icons/mob/clothing/under/tactical.dmi'
 	icon_state = "henchmen"
 	inhand_icon_state = "henchmen"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS|HEAD

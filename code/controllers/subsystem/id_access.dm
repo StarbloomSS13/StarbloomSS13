@@ -88,9 +88,9 @@ SUBSYSTEM_DEF(id_access)
 	for(var/access in accesses_by_flag["[ACCESS_FLAG_CENTCOM]"])
 		flags_by_access |= list("[access]" = ACCESS_FLAG_CENTCOM)
 
-	accesses_by_flag["[ACCESS_FLAG_SYNDICATE]"] = SYNDICATE_ACCESS
-	for(var/access in accesses_by_flag["[ACCESS_FLAG_SYNDICATE]"])
-		flags_by_access |= list("[access]" = ACCESS_FLAG_SYNDICATE)
+	accesses_by_flag["[ACCESS_FLAG_EDICT]"] = EDICT_ACCESS
+	for(var/access in accesses_by_flag["[ACCESS_FLAG_EDICT]"])
+		flags_by_access |= list("[access]" = ACCESS_FLAG_EDICT)
 
 	accesses_by_flag["[ACCESS_FLAG_AWAY]"] = AWAY_ACCESS
 	for(var/access in accesses_by_flag["[ACCESS_FLAG_AWAY]"])
@@ -100,14 +100,19 @@ SUBSYSTEM_DEF(id_access)
 	for(var/access in accesses_by_flag["[ACCESS_FLAG_SPECIAL]"])
 		flags_by_access |= list("[access]" = ACCESS_FLAG_SPECIAL)
 
+	accesses_by_flag["[ACCESS_FLAG_FACTIONAL]"] = FACTIONAL_ACCESS
+	for(var/access in accesses_by_flag["[ACCESS_FLAG_FACTIONAL]"])
+		flags_by_access |= list("[access]" = ACCESS_FLAG_FACTIONAL)
+
 	access_flag_string_by_flag["[ACCESS_FLAG_COMMON]"] = ACCESS_FLAG_COMMON_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_COMMAND]"] = ACCESS_FLAG_COMMAND_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_PRV_COMMAND]"] = ACCESS_FLAG_PRV_COMMAND_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_CAPTAIN]"] = ACCESS_FLAG_CAPTAIN_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_CENTCOM]"] = ACCESS_FLAG_CENTCOM_NAME
-	access_flag_string_by_flag["[ACCESS_FLAG_SYNDICATE]"] = ACCESS_FLAG_SYNDICATE_NAME
+	access_flag_string_by_flag["[ACCESS_FLAG_EDICT]"] = ACCESS_FLAG_EDICT_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_AWAY]"] = ACCESS_FLAG_AWAY_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_SPECIAL]"] = ACCESS_FLAG_SPECIAL_NAME
+	access_flag_string_by_flag["[ACCESS_FLAG_FACTIONAL]"] = ACCESS_FLAG_FACTIONAL_NAME
 
 /// Populates the region lists with data about which accesses correspond to which regions.
 /datum/controller/subsystem/id_access/proc/setup_region_lists()
@@ -120,6 +125,7 @@ SUBSYSTEM_DEF(id_access)
 	accesses_by_region[REGION_ENGINEERING] = REGION_ACCESS_ENGINEERING
 	accesses_by_region[REGION_SUPPLY] = REGION_ACCESS_SUPPLY
 	accesses_by_region[REGION_COMMAND] = REGION_ACCESS_COMMAND
+	accesses_by_region[REGION_FACTIONAL] = REGION_ACCESS_FACTIONAL
 	accesses_by_region[REGION_CENTCOM] = REGION_ACCESS_CENTCOM
 
 	station_regions = REGION_AREA_STATION
@@ -153,7 +159,7 @@ SUBSYSTEM_DEF(id_access)
 
 	sub_department_managers_tgui = list(
 		"[ACCESS_CAPTAIN]" = list(
-			"regions" = list(REGION_COMMAND),
+			"regions" = list(REGION_COMMAND, REGION_FACTIONAL),
 			"head" = JOB_CAPTAIN,
 			"templates" = list(),
 			"pdas" = list(),
@@ -237,9 +243,10 @@ SUBSYSTEM_DEF(id_access)
 	wildcard_flags_by_wildcard[WILDCARD_NAME_PRV_COMMAND] = WILDCARD_FLAG_PRV_COMMAND
 	wildcard_flags_by_wildcard[WILDCARD_NAME_CAPTAIN] = WILDCARD_FLAG_CAPTAIN
 	wildcard_flags_by_wildcard[WILDCARD_NAME_CENTCOM] = WILDCARD_FLAG_CENTCOM
-	wildcard_flags_by_wildcard[WILDCARD_NAME_SYNDICATE] = WILDCARD_FLAG_SYNDICATE
+	wildcard_flags_by_wildcard[WILDCARD_NAME_EDICT] = WILDCARD_FLAG_EDICT
 	wildcard_flags_by_wildcard[WILDCARD_NAME_AWAY] = WILDCARD_FLAG_AWAY
 	wildcard_flags_by_wildcard[WILDCARD_NAME_SPECIAL] = WILDCARD_FLAG_SPECIAL
+	wildcard_flags_by_wildcard[WILDCARD_NAME_FACTIONAL] = WILDCARD_FLAG_FACTIONAL
 	wildcard_flags_by_wildcard[WILDCARD_NAME_FORCED] = WILDCARD_FLAG_FORCED
 
 /// Setup dictionary that converts access levels to text descriptions.
@@ -248,18 +255,18 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_SECURITY]"] = "Security"
 	desc_by_access["[ACCESS_BRIG]"] = "Holding Cells"
 	desc_by_access["[ACCESS_COURT]"] = "Courtroom"
-	desc_by_access["[ACCESS_FORENSICS]"] = "Forensics"
+	desc_by_access["[ACCESS_DETECTIVE]"] = "Forensics"
 	desc_by_access["[ACCESS_MEDICAL]"] = "Medical"
 	desc_by_access["[ACCESS_GENETICS]"] = "Genetics Lab"
 	desc_by_access["[ACCESS_MORGUE]"] = "Morgue"
-	desc_by_access["[ACCESS_RND]"] = "R&D Lab"
+	desc_by_access["[ACCESS_SCIENCE]"] = "R&D Lab"
 	desc_by_access["[ACCESS_ORDNANCE]"] = "Ordnance Lab"
 	desc_by_access["[ACCESS_ORDNANCE_STORAGE]"] = "Ordnance Storage"
-	desc_by_access["[ACCESS_CHEMISTRY]"] = "Chemistry Lab"
+	desc_by_access["[ACCESS_PLUMBING]"] = "Chemistry Lab"
 	desc_by_access["[ACCESS_RD]"] = "RD Office"
 	desc_by_access["[ACCESS_BAR]"] = "Bar"
 	desc_by_access["[ACCESS_JANITOR]"] = "Custodial Closet"
-	desc_by_access["[ACCESS_ENGINE]"] = "Engineering"
+	desc_by_access["[ACCESS_ENGINEERING]"] = "Engineering"
 	desc_by_access["[ACCESS_ENGINE_EQUIP]"] = "Power and Engineering Equipment"
 	desc_by_access["[ACCESS_MAINT_TUNNELS]"] = "Maintenance"
 	desc_by_access["[ACCESS_EXTERNAL_AIRLOCKS]"] = "External Airlocks"
@@ -267,7 +274,7 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_AI_UPLOAD]"] = "AI Chambers"
 	desc_by_access["[ACCESS_TELEPORTER]"] = "Teleporter"
 	desc_by_access["[ACCESS_EVA]"] = "EVA"
-	desc_by_access["[ACCESS_HEADS]"] = "Bridge"
+	desc_by_access["[ACCESS_COMMAND]"] = "Bridge"
 	desc_by_access["[ACCESS_CAPTAIN]"] = "Captain"
 	desc_by_access["[ACCESS_ALL_PERSONAL_LOCKERS]"] = "Personal Lockers"
 	desc_by_access["[ACCESS_CHAPEL_OFFICE]"] = "Chapel Office"
@@ -288,10 +295,10 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_SURGERY]"] = "Surgery"
 	desc_by_access["[ACCESS_THEATRE]"] = "Theatre"
 	desc_by_access["[ACCESS_RESEARCH]"] = "Science"
-	desc_by_access["[ACCESS_MINING]"] = "Mining"
-	desc_by_access["[ACCESS_MAILSORTING]"] = "Cargo Office"
+	desc_by_access["[ACCESS_SALVAGECREW]"] = "Salvage Crew"
+	desc_by_access["[ACCESS_MAIL_SORTING]"] = "Cargo Office"
 	desc_by_access["[ACCESS_VAULT]"] = "Main Vault"
-	desc_by_access["[ACCESS_MINING_STATION]"] = "Mining EVA"
+	desc_by_access["[ACCESS_SALVAGECREW_STATION]"] = "Salvage Crew EVA"
 	desc_by_access["[ACCESS_XENOBIOLOGY]"] = "Xenobiology Lab"
 	desc_by_access["[ACCESS_HOP]"] = "HoP Office"
 	desc_by_access["[ACCESS_HOS]"] = "HoS Office"
@@ -299,7 +306,7 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_PHARMACY]"] = "Pharmacy"
 	desc_by_access["[ACCESS_RC_ANNOUNCE]"] = "RC Announcements"
 	desc_by_access["[ACCESS_KEYCARD_AUTH]"] = "Keycode Auth."
-	desc_by_access["[ACCESS_TCOMSAT]"] = "Telecommunications"
+	desc_by_access["[ACCESS_TCOMMS]"] = "Telecommunications"
 	desc_by_access["[ACCESS_GATEWAY]"] = "Gateway"
 	desc_by_access["[ACCESS_BRIG_ENTRANCE]"] = "Brig"
 	desc_by_access["[ACCESS_MINERAL_STOREROOM]"] = "Mineral Storage"
@@ -322,6 +329,11 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_CENT_SPECOPS]"] = "Code Black"
 	desc_by_access["[ACCESS_CENT_CAPTAIN]"] = "Code Gold"
 	desc_by_access["[ACCESS_CENT_BAR]"] = "Code Scotch"
+	desc_by_access["[ACCESS_UNITY]"] = "The Unity"
+	desc_by_access["[ACCESS_HOME_GUARD]"] = "The Home Guard"
+	desc_by_access["[ACCESS_CHIRON_BIOLABS]"] = "Chiron Biolabs"
+	desc_by_access["[ACCESS_MEKHANE]"] = "Mekhane"
+	desc_by_access["[ACCESS_CONSERVATORS]"] = "Conservators"
 
 /**
  * Returns the access bitflags associated with any given access level.
@@ -450,6 +462,9 @@ SUBSYSTEM_DEF(id_access)
 	id_card.trim_state_override = null
 	id_card.trim_assignment_override = null
 	id_card.sechud_icon_state_override = null
+	id_card.department_color_override = null
+	id_card.department_state_override = null
+	id_card.subdepartment_color_override = null
 
 /**
  * Adds the accesses associated with a trim to an ID card.

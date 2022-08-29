@@ -1116,7 +1116,7 @@
 	registered_name = "Syndicate"
 	registered_age = null
 	trim = /datum/id_trim/lastedict
-	wildcard_slots = WILDCARD_LIMIT_SYNDICATE
+	wildcard_slots = WILDCARD_LIMIT_EDICT
 
 /obj/item/card/id/advanced/black/syndicate_command/crew_id
 	trim = /datum/id_trim/lastedict/robotics
@@ -1259,7 +1259,7 @@
 
 /obj/item/card/id/advanced/mining
 	name = "mining ID"
-	trim = /datum/id_trim/job/shaft_miner/spare
+	trim = /datum/id_trim/job/salvage_crew/spare
 
 /obj/item/card/id/advanced/highlander
 	name = "highlander ID"

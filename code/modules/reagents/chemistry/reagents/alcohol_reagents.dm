@@ -2827,3 +2827,15 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	if(drinker.hallucination < hal_cap && DT_PROB(5, delta_time))
 		drinker.hallucination += hal_amt
 	..()
+
+/datum/reagent/consumable/ethanol/pile_driver
+	name = "Pile Driver"
+	description = "A mix of vodka, coke, rum and orange juice. Fizzy." 
+	boozepwr = 20
+	color = "#e97617"
+	quality = DRINK_NICE 
+	taste_description = "slightly sweet and fizzy"
+	glass_icon_state = "pile_driver"
+	glass_name = "Pile Driver"
+	glass_desc = "A drink said to be bitter and somewhat spicy. You better not have a sore throat when drinking it." //Va-11 Hall-A reference moment flushed
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED

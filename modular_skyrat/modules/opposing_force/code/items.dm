@@ -32,11 +32,12 @@
 	new /obj/item/clothing/shoes/combat(src)
 
 /obj/item/storage/box/edict_kit/insurgent
-	name = "Syndicate Insurgent Bundle"
-	desc = "A box containing everything you need to LARP as your favorite syndicate operative!"
+	name = "Edict Insurgent Bundle"
+	desc = "\"REMEMBER\"."
 
 /obj/item/storage/box/edict_kit/insurgent/PopulateContents()
-	new /obj/item/clothing/under/syndicate(src)
+	new /obj/item/clothing/under/tactical/edict(src)
+	new /obj/item/clothing/under/tactical/skirt/edict(src)
 	new /obj/item/clothing/gloves/tackler/combat(src)
 	new /obj/item/clothing/shoes/combat(src)
 	new /obj/item/clothing/glasses/sunglasses(src)

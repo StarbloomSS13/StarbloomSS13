@@ -29,3 +29,8 @@
 	max_ammo = 1
 	caliber = CALIBER_HARPOON
 	ammo_type = /obj/item/ammo_casing/caseless/harpoon
+
+/obj/item/ammo_box/magazine/internal/boltaction/harpoon/crystal
+	max_ammo = 1
+	caliber = CALIBER_CRYSTAL
+	ammo_type = /obj/item/ammo_casing/caseless/harpoon/crystal

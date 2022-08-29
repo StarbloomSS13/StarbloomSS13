@@ -1,25 +1,4 @@
-/obj/item/storage/medkit/emergency
-	icon = 'starbloom_modules/aesthetics/storage/storage.dmi'
-
-/obj/item/borg/upgrade/rped
-	icon = 'starbloom_modules/aesthetics/storage/storage.dmi'
-
-/obj/item/storage/part_replacer
-	icon = 'starbloom_modules/aesthetics/storage/storage.dmi'
-
-/obj/item/storage/part_replacer/bluespace
-	icon = 'icons/obj/storage.dmi'
-
-/obj/item/storage/part_replacer/cyborg
-	icon = 'starbloom_modules/aesthetics/storage/storage.dmi'
-
-
-/obj/item/storage/box
-	icon = 'starbloom_modules/aesthetics/storage/storage.dmi'
-
-/obj/item/storage/box/lights
-	icon = 'starbloom_modules/aesthetics/storage/storage.dmi'
-
+// TODO: Migrate these back to their base types (De-Aestheticiation 2022)
 /obj/item/storage/box/rubbershot
 	icon_state = "secbox_xl"
 	illustration = "rubbershot"
@@ -43,7 +22,7 @@
 
 /obj/item/storage/box/evidence
 	icon_state = "secbox"
-	illustration = "evidence"
+	illustration = "evibag"
 
 /obj/item/storage/box/rxglasses/spyglasskit
 	icon_state = "secbox"

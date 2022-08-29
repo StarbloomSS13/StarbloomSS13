@@ -53,6 +53,9 @@
 					/obj/item/clothing/under/rank/medical/paramedic/skirt = 4,
 					/obj/item/clothing/head/nursehat = 4,
 					/obj/item/clothing/head/beret/medical = 4,
+					/obj/item/clothing/head/surgerycap = 4,
+					/obj/item/clothing/head/surgerycap/purple = 4,
+					/obj/item/clothing/head/surgerycap/green = 4,
 					/obj/item/clothing/under/rank/medical/doctor = 4,
 					/obj/item/clothing/under/rank/medical/doctor/skirt = 4,
 					/obj/item/clothing/under/rank/medical/scrubs/blue = 4,
@@ -136,7 +139,7 @@
 		/obj/item/radio/headset/headset_cargo = 3
 	)
 	premium = list(
-		/obj/item/clothing/under/rank/cargo/miner = 3,
+		/obj/item/clothing/under/rank/cargo/salvagecrew = 3,
 		/obj/item/clothing/head/mailman = 1,
 		/obj/item/clothing/under/misc/mailman = 1
 	)

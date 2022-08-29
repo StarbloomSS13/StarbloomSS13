@@ -9,7 +9,7 @@
 
 /datum/outfit/syndicatesoldiercorpse
 	name = "Syndicate Operative Corpse"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/tactical
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
@@ -28,11 +28,11 @@
 
 /datum/outfit/syndicatecommandocorpse
 	name = "Syndicate Commando Corpse"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/tactical
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	ears = /obj/item/radio/headset
-	mask = /obj/item/clothing/mask/gas/syndicate
+	mask = /obj/item/clothing/mask/gas/edict
 	back = /obj/item/mod/control/pre_equipped/nuclear
 	r_pocket = /obj/item/tank/internals/emergency_oxygen
 	id = /obj/item/card/id/advanced/chameleon
@@ -47,11 +47,11 @@
 
 /datum/outfit/syndicatestormtroopercorpse
 	name = "Syndicate Stormtrooper Corpse"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/tactical
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/tackler/combat
 	ears = /obj/item/radio/headset
-	mask = /obj/item/clothing/mask/gas/syndicate
+	mask = /obj/item/clothing/mask/gas/edict
 	back = /obj/item/mod/control/pre_equipped/elite
 	id = /obj/item/card/id/advanced/chameleon
 	id_trim = /datum/id_trim/chameleon/operative
@@ -70,6 +70,13 @@
 	glasses = /obj/item/clothing/glasses/eyepatch
 	head = /obj/item/clothing/head/bandana
 
+/obj/effect/mob_spawn/corpse/human/pirate/melee
+	outfit = /datum/outfit/piratecorpse/melee
+
+/datum/outfit/piratecorpse/melee
+	name = "Pirate Corpse (Melee)"
+	r_hand = /obj/item/melee/energy/sword/pirate
+
 
 /obj/effect/mob_spawn/corpse/human/pirate/ranged
 	name = "Pirate Gunner"
@@ -80,6 +87,19 @@
 	suit = /obj/item/clothing/suit/pirate
 	head = /obj/item/clothing/head/pirate
 
+/obj/effect/mob_spawn/corpse/human/pirate/space
+	outfit = /datum/outfit/piratecorpse/space
+
+/datum/outfit/piratecorpse/space
+	head = /obj/item/clothing/head/helmet/space/pirate
+	suit = /obj/item/clothing/suit/space/pirate
+	r_hand = /obj/item/melee/energy/sword/pirate
+
+/obj/effect/mob_spawn/corpse/human/pirate/space/ranged
+	outfit = /datum/outfit/piratecorpse/space
+
+/datum/outfit/piratecorpse/space/ranged
+	r_hand = /obj/item/gun/energy/e_gun/lethal
 
 /obj/effect/mob_spawn/corpse/human/russian
 	name = "Russian"
@@ -94,7 +114,7 @@
 	head = /obj/item/clothing/head/bearpelt
 	gloves = /obj/item/clothing/gloves/color/black
 	mask = /obj/item/clothing/mask/gas
-
+	r_hand = /obj/item/knife/kitchen
 
 
 /obj/effect/mob_spawn/corpse/human/russian/ranged
@@ -103,6 +123,15 @@
 /datum/outfit/russiancorpse/ranged
 	name = "Ranged Russian Corpse"
 	head = /obj/item/clothing/head/ushanka
+	r_hand = /obj/item/gun/ballistic/revolver/nagant
+
+/obj/effect/mob_spawn/corpse/human/russian/ranged/mosin
+	outfit = /datum/outfit/russiancorpse/ranged/mosin
+
+/datum/outfit/russiancorpse/ranged/mosin
+	name = "Ranged Russian Corpse (Mosin)"
+	head = /obj/item/clothing/head/ushanka
+	r_hand = /obj/item/gun/ballistic/rifle/boltaction
 
 
 /obj/effect/mob_spawn/corpse/human/russian/ranged/trooper
@@ -110,13 +139,14 @@
 
 /datum/outfit/russiancorpse/ranged/trooper
 	name = "Ranged Russian Trooper Corpse"
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/tactical/camo
 	suit = /obj/item/clothing/suit/armor/bulletproof
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/tackler/combat
 	ears = /obj/item/radio/headset
 	head = /obj/item/clothing/head/helmet/alt
 	mask = /obj/item/clothing/mask/balaclava
+	r_hand = /obj/item/gun/ballistic/shotgun/lethal
 
 
 /obj/effect/mob_spawn/corpse/human/russian/ranged/officer
@@ -130,6 +160,7 @@
 	shoes = /obj/item/clothing/shoes/combat
 	ears = /obj/item/radio/headset
 	head = /obj/item/clothing/head/ushanka
+	r_hand = /obj/item/gun/ballistic/automatic/pistol/aps
 
 
 /obj/effect/mob_spawn/corpse/human/wizard
@@ -175,7 +206,7 @@
 
 /datum/outfit/nanotrasenassaultsoldiercorpse
 	name = "NT Assault Officer Corpse"
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/tactical
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/combat
@@ -204,6 +235,7 @@
 	id = /obj/item/card/id/advanced
 	glasses = /obj/item/clothing/glasses/hud/health
 	id_trim = /datum/id_trim/away/cat_surgeon
+	r_hand = /obj/item/circular_saw
 
 /obj/effect/mob_spawn/corpse/human/bee_terrorist
 	name = "BLF Operative"
