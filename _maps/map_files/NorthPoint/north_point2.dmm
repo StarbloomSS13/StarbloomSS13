@@ -7291,7 +7291,6 @@
 	req_access = list("medical")
 	},
 /obj/effect/turf_decal/tile/blue/fourcorners,
-/obj/item/storage/medkit/regular,
 /turf/open/floor/iron/white,
 /area/medical/storage)
 "bPL" = (
@@ -16512,6 +16511,16 @@
 "eAE" = (
 /turf/open/floor/pod/dark,
 /area/maintenance/floor3/starboard/fore)
+"eAT" = (
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 8
+	},
+/obj/item/storage/medkit{
+	pixel_x = -4;
+	pixel_y = 8
+	},
+/turf/open/floor/iron/white,
+/area/medical/exam_room)
 "eAV" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/blue/opposingcorners,
@@ -23945,6 +23954,13 @@
 /obj/effect/turf_decal/tile/red/fourcorners,
 /turf/open/floor/iron/dark,
 /area/maintenance/floor4/port/aft)
+"gQa" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/storage/medkit,
+/turf/open/floor/iron/white,
+/area/medical/medbay/central)
 "gQA" = (
 /obj/structure/railing{
 	dir = 1
@@ -28887,7 +28903,6 @@
 	req_access = list("medical")
 	},
 /obj/effect/turf_decal/tile/blue/fourcorners,
-/obj/item/storage/medkit/regular,
 /turf/open/floor/iron/white,
 /area/medical/storage)
 "ilJ" = (
@@ -67339,6 +67354,7 @@
 "tiT" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner,
 /obj/structure/extinguisher_cabinet/directional/south,
+/obj/item/storage/medkit,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "tjc" = (
@@ -181830,7 +181846,7 @@ sCs
 vQz
 rLt
 qmB
-kvo
+eAT
 kvo
 kvo
 aal
@@ -184646,7 +184662,7 @@ nPG
 sYb
 vib
 bus
-cxq
+gQa
 fTR
 aeN
 sYk
