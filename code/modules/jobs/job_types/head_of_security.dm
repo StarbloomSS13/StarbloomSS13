@@ -54,12 +54,12 @@
 	uniform = /obj/item/clothing/under/rank/security/officer/formal/unity
 	suit = /obj/item/clothing/suit/unity/armored
 	//Temporarily Unity
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/equalizer
+	suit_store = /obj/item/pda/heads/hos
 	backpack_contents = list(
 		/obj/item/evidencebag = 1,
 		/obj/item/modular_computer/tablet/preset/advanced/command = 1,
 		)
-	belt = /obj/item/pda/heads/hos
+	belt = /obj/item/gun/ballistic/automatic/pistol/equalizer
 	ears = /obj/item/radio/headset/heads/hos/alt
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
 	gloves = /obj/item/clothing/gloves/color/white
