@@ -149,10 +149,19 @@
 
 /// Captain gets all station accesses hardcoded in because it's the Captain.
 /datum/id_trim/job/captain/New()
-	extra_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_COMMON) + SSid_access.get_flag_access_list(ACCESS_FLAG_COMMAND))
-	extra_wildcard_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_PRV_COMMAND) + SSid_access.get_flag_access_list(ACCESS_FLAG_CAPTAIN))
-	minimal_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_COMMON) + SSid_access.get_flag_access_list(ACCESS_FLAG_COMMAND))
-	minimal_wildcard_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_PRV_COMMAND) + SSid_access.get_flag_access_list(ACCESS_FLAG_CAPTAIN))
+	var/list/common_access = (\
+		SSid_access.get_flag_access_list(ACCESS_FLAG_COMMON) + \
+		SSid_access.get_flag_access_list(ACCESS_FLAG_COMMAND) + \
+		SSid_access.get_flag_access_list(ACCESS_FLAG_FACTIONAL))
+
+	var/list/private_access = (\
+		SSid_access.get_flag_access_list(ACCESS_FLAG_PRV_COMMAND) + \
+		SSid_access.get_flag_access_list(ACCESS_FLAG_CAPTAIN))
+
+	extra_access |= common_access
+	extra_wildcard_access |= private_access
+	minimal_access |= common_access
+	minimal_wildcard_access |= private_access
 
 	return ..()
 
