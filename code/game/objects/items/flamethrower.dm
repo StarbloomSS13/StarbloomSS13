@@ -279,11 +279,12 @@
 
 /obj/item/flamethrower/full
 	icon = 'icons/obj/guns/48x32guns.dmi'
-	item_state = "prebuilt_flamethrower_0"
+	inhand_icon_state = "prebuilt_flamethrower_0"
 	create_full = TRUE
 
 /obj/item/flamethrower/full/update_icon_state()
-	item_state = "prebuilt_flamethrower_[lit]"
+	inhand_icon_state = "prebuilt_flamethrower_[lit]"
+	return ..()
 
 /obj/item/flamethrower/full/tank
 	create_with_tank = TRUE
