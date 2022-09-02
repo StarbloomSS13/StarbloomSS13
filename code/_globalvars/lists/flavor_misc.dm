@@ -162,6 +162,7 @@ GLOBAL_LIST_INIT(ai_core_display_screens, sort_list(list(
 	"Red October",
 	"Red",
 	"Static",
+	"Smiling",
 	"Syndicat Meow",
 	"Text",
 	"Too Deep",
