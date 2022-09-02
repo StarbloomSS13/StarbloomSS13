@@ -146,6 +146,7 @@ GLOBAL_LIST_INIT(ai_core_display_screens, sort_list(list(
 	"Goon",
 	"Hades",
 	"HAL 9000",
+	"Smiling",
 	"Heartline",
 	"Helios",
 	"House",
