@@ -25,7 +25,7 @@
 	name = "9mm FMJ bullet"
 	damage = 20
 	embedding = list(embed_chance=15, fall_chance=3, jostle_chance=4, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=5, jostle_pain_mult=6, rip_time=10)
-
+	weak_against_armour = FALSE
 
 
 // 10mm

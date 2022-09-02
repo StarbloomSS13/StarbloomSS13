@@ -312,6 +312,7 @@
 	fire_sound = 'sound/weapons/gun/pistol/starbloom_45.ogg'
 	burst_size = 2
 	icon = 'starbloom_modules/aesthetics/guns/icons/guns.dmi'
+	mag_type = /obj/item/ammo_box/magazine/smgm45/hp
 
 /obj/item/gun/ballistic/automatic/ar/modular/model75
 	name = "\improper NT ARG-75"
