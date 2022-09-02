@@ -71,7 +71,7 @@
 		"m45_fmj",
 		"m9mm",
 		"m9mm_fmj",
-		"smgm45",
+		"smgm45hp",
 		"a762",
 		"m556"
 	)
@@ -1381,7 +1381,7 @@
 		"a762hp",
 		"a762i",
 		"smgm45ap",
-		"smgm45hp",
+		"smgm45",
 		"smgm45i"
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
