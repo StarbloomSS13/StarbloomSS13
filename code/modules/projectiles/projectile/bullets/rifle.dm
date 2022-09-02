@@ -12,8 +12,9 @@
 
 /obj/projectile/bullet/a556/hp
 	name = "5.56mm hollowpoint bullet"
-	damage = 30
-	weak_against_armour = TRUE
+	damage = 20
+	weak_against_armour = FALSE
+	armour_penetration = -30
 	wound_bonus = 30
 
 /obj/projectile/bullet/a556/i
@@ -43,14 +44,15 @@
 
 /obj/projectile/bullet/a762/ap
 	name = "7.62 armour-piercing bullet"
-	damage = 40
+	damage = 50
 	armour_penetration = 50
 	wound_bonus = -30
 
 /obj/projectile/bullet/a762/hp
 	name = "7.62 hollowpoint bullet"
 	damage = 60
-	weak_against_armour = TRUE
+	weak_against_armour = FALSE
+	armour_penetration = -50
 	wound_bonus = 30
 
 /obj/projectile/bullet/a762/i
