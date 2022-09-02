@@ -14,9 +14,10 @@
 
 /obj/projectile/bullet/c45/hp
 	name = ".45 hollowpoint bullet"
-	damage = 40
-	armour_penetration = -50
+	damage = 30
+	armour_penetration = -30
 	wound_bonus = 30
+	weak_against_armour = FALSE
 
 /obj/projectile/bullet/c45/i
 	name = ".45 incendiary bullet"
@@ -35,6 +36,7 @@
 	damage = 30
 	wound_bonus = -10
 	wound_falloff_tile = -10
+	weak_against_armour = FALSE
 
 /obj/projectile/bullet/incendiary/c45
 	name = ".45 incendiary bullet"

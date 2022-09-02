@@ -40,7 +40,7 @@
 	base_icon_state = "9x19p"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = CALIBER_9MM
-	max_ammo = 8
+	max_ammo = 10
 
 /obj/item/ammo_box/magazine/m9mm/update_icon_state()
 	. = ..()
@@ -68,6 +68,7 @@
 	name = "pistol magazine (9mm FMJ)"
 	desc = "A gun magazine loaded with standard lethal rounds."
 	ammo_type = /obj/item/ammo_casing/c9mm/fmj
+
 
 /obj/item/ammo_box/magazine/m9mm_aps
 	name = "stechkin pistol magazine (9mm)"
