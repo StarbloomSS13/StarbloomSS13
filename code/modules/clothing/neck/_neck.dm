@@ -183,7 +183,7 @@
 	name = "infinity scarf"
 	icon_state = "infinity_scarf"
 	w_class = WEIGHT_CLASS_TINY
-	custom_price = PAYCHECK_CREW
+	custom_price = PAYCHECK_EASY
 	greyscale_colors = "#EEEEEE"
 	greyscale_config = /datum/greyscale_config/infinity_scarf
 	greyscale_config_worn = /datum/greyscale_config/infinity_scarf_worn
