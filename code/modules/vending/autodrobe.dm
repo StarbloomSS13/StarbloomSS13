@@ -135,6 +135,11 @@
 		/obj/item/clothing/suit/cheongsam_blue = 1,
 		/obj/item/gohei = 1,
 		/obj/item/clothing/under/rank/medical/doctor/nurse = 1,
+		/obj/item/storage/backpack/henchmen = 5,
+		/obj/item/clothing/under/suit/henchmen = 5,
+		/obj/item/clothing/head/jackbros = 5,
+		/obj/item/clothing/under/costume/jackbros = 5,
+		/obj/item/clothing/under/costume/deckers = 5,
 	)
 	contraband = list(
 		/obj/item/clothing/suit/judgerobe = 1,

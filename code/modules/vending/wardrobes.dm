@@ -14,23 +14,27 @@
 	desc = "A vending machine for security and security-related clothing!"
 	icon_state = "secdrobe"
 	vend_reply = "Thank you for using the SecDrobe!"
-	products = list(/obj/item/clothing/suit/hooded/wintercoat/security = 3,
-					/obj/item/storage/backpack/security = 3,
-					/obj/item/storage/backpack/satchel/sec = 3,
-					/obj/item/storage/backpack/duffelbag/sec = 3,
-					/obj/item/clothing/under/rank/security/officer = 3,
-					/obj/item/clothing/shoes/jackboots = 3,
-					/obj/item/clothing/head/beret/sec = 3,
-					/obj/item/clothing/head/soft/sec = 3,
-					/obj/item/clothing/mask/bandana/color/striped/security = 3,
-					/obj/item/clothing/gloves/color/black = 3,
-					/obj/item/clothing/under/rank/security/officer/skirt = 3,
-					/obj/item/clothing/under/rank/security/officer/grey = 3,
-					/obj/item/clothing/under/pants/khaki = 3,
-					/obj/item/clothing/under/rank/security/officer/blueshirt = 3)
-	premium = list(/obj/item/clothing/under/rank/security/officer/formal = 3,
-					/obj/item/clothing/suit/security/officer = 3,
-					/obj/item/clothing/head/beret/sec/navyofficer = 3)
+	products = list(
+		/obj/item/clothing/suit/hooded/wintercoat/security = 3,
+		/obj/item/storage/backpack/security = 3,
+		/obj/item/storage/backpack/satchel/sec = 3,
+		/obj/item/storage/backpack/duffelbag/sec = 3,
+		/obj/item/clothing/under/rank/security/officer = 3,
+		/obj/item/clothing/shoes/jackboots = 3,
+		/obj/item/clothing/head/beret/sec = 3,
+		/obj/item/clothing/head/soft/sec = 3,
+		/obj/item/clothing/mask/bandana/color/striped/security = 3,
+		/obj/item/clothing/gloves/color/black = 3,
+		/obj/item/clothing/under/rank/security/officer/skirt = 3,
+		/obj/item/clothing/under/rank/security/officer/grey = 3,
+		/obj/item/clothing/under/pants/slacks = 3,
+		/obj/item/clothing/under/rank/security/officer/blueshirt = 3,
+		)
+	premium = list(
+		/obj/item/clothing/under/rank/security/officer/formal = 3,
+		/obj/item/clothing/suit/security/officer = 3,
+		/obj/item/clothing/head/beret/sec/navyofficer = 3,
+		)
 	refill_canister = /obj/item/vending_refill/wardrobe/sec_wardrobe
 	payment_department = ACCOUNT_SEC
 	light_color = COLOR_MOSTLY_PURE_RED
@@ -369,30 +373,36 @@
 	desc = "God wills your purchase."
 	icon_state = "chapdrobe"
 	vend_reply = "Thank you for using the DeusVend!"
-	products = list(/obj/item/choice_beacon/holy = 1,
-					/obj/item/storage/backpack/cultpack = 1,
-					/obj/item/clothing/accessory/pocketprotector/cosmetology = 1,
-					/obj/item/clothing/under/rank/civilian/chaplain = 1,
-					/obj/item/clothing/under/rank/civilian/chaplain/skirt = 2,
-					/obj/item/clothing/shoes/sneakers/black = 1,
-					/obj/item/clothing/suit/chaplainsuit/nun = 1,
-					/obj/item/clothing/head/nun_hood = 1,
-					/obj/item/clothing/suit/chaplainsuit/holidaypriest = 1,
-					/obj/item/clothing/suit/hooded/chaplainsuit/monkhabit = 1,
-					/obj/item/storage/fancy/candle_box = 2,
-					/obj/item/clothing/head/kippah = 3,
-					/obj/item/clothing/suit/chaplainsuit/whiterobe = 1,
-					/obj/item/clothing/head/taqiyahwhite = 1,
-					/obj/item/clothing/head/taqiyahred = 3,
-					/obj/item/clothing/suit/chaplainsuit/monkrobeeast = 1,
-					/obj/item/clothing/head/beanie/rasta = 1)
-	contraband = list(/obj/item/toy/plush/ratplush = 1,
-					/obj/item/toy/plush/narplush = 1,
-					/obj/item/clothing/head/medievaljewhat = 3,
-					/obj/item/clothing/suit/chaplainsuit/clownpriest = 1,
-					/obj/item/clothing/head/clownmitre = 1)
-	premium = list(/obj/item/clothing/suit/chaplainsuit/bishoprobe = 1,
-					/obj/item/clothing/head/bishopmitre = 1)
+	products = list(
+		/obj/item/choice_beacon/holy = 1,
+		/obj/item/storage/backpack/cultpack = 1,
+		/obj/item/clothing/accessory/pocketprotector/cosmetology = 1,
+		/obj/item/clothing/under/rank/civilian/chaplain = 1,
+		/obj/item/clothing/under/rank/civilian/chaplain/skirt = 2,
+		/obj/item/clothing/shoes/sneakers/black = 1,
+		/obj/item/clothing/suit/chaplainsuit/nun = 1,
+		/obj/item/clothing/head/nun_hood = 1,
+		/obj/item/clothing/suit/chaplainsuit/holidaypriest = 1,
+		/obj/item/clothing/suit/hooded/chaplainsuit/monkhabit = 1,
+		/obj/item/storage/fancy/candle_box = 2,
+		/obj/item/clothing/head/kippah = 3,
+		/obj/item/clothing/suit/chaplainsuit/whiterobe = 1,
+		/obj/item/clothing/head/taqiyahwhite = 1,
+		/obj/item/clothing/head/taqiyahred = 3,
+		/obj/item/clothing/suit/chaplainsuit/monkrobeeast = 1,
+		/obj/item/clothing/head/rasta = 1,
+		)
+	contraband = list(
+		/obj/item/toy/plush/ratplush = 1,
+		/obj/item/toy/plush/narplush = 1,
+		/obj/item/clothing/head/medievaljewhat = 3,
+		/obj/item/clothing/suit/chaplainsuit/clownpriest = 1,
+		/obj/item/clothing/head/clownmitre = 1,
+		)
+	premium = list(
+		/obj/item/clothing/suit/chaplainsuit/bishoprobe = 1,
+		/obj/item/clothing/head/bishopmitre = 1,
+		)
 	refill_canister = /obj/item/vending_refill/wardrobe/chap_wardrobe
 	payment_department = ACCOUNT_SRV
 /obj/item/vending_refill/wardrobe/chap_wardrobe
