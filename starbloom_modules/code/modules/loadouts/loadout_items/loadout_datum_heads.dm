@@ -14,6 +14,11 @@ GLOBAL_LIST_INIT(loadout_helmets, generate_loadout_items(/datum/loadout_item/hea
 	else
 		outfit.head = item_path
 
+/datum/loadout_item/head/greyscale_beanie
+	name = "Greyscale Beanie"
+	can_be_greyscale = TRUE
+	item_path = /obj/item/clothing/head/beanie/greyscale
+
 /datum/loadout_item/head/black_beanie
 	name = "Black Beanie"
 	item_path = /obj/item/clothing/head/beanie/black
@@ -64,7 +69,7 @@ GLOBAL_LIST_INIT(loadout_helmets, generate_loadout_items(/datum/loadout_item/hea
 
 /datum/loadout_item/head/white_beanie
 	name = "White Beanie"
-	item_path = /obj/item/clothing/head/beanie
+	item_path = /obj/item/clothing/head/beanie/white
 
 /datum/loadout_item/head/yellow_beanie
 	name = "Yellow Beanie"
@@ -193,7 +198,7 @@ GLOBAL_LIST_INIT(loadout_helmets, generate_loadout_items(/datum/loadout_item/hea
 
 /datum/loadout_item/head/rastafarian
 	name = "Rastafarian Cap"
-	item_path = /obj/item/clothing/head/beanie/rasta
+	item_path = /obj/item/clothing/head/rasta
 
 /datum/loadout_item/head/top_hat
 	name = "Top Hat"

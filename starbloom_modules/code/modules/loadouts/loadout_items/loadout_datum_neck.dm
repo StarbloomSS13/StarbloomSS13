@@ -9,6 +9,16 @@ GLOBAL_LIST_INIT(loadout_necks, generate_loadout_items(/datum/loadout_item/neck)
 /datum/loadout_item/neck/insert_path_into_outfit(datum/outfit/outfit, mob/living/carbon/human/equipper, visuals_only = FALSE)
 	outfit.neck = item_path
 
+/datum/loadout_item/neck/scarf_greyscale
+	name = "Greyscale Scarf"
+	can_be_greyscale = TRUE
+	item_path = /obj/item/clothing/neck/scarf
+
+/datum/loadout_item/neck/scarf_large_greyscale
+	name = "Greyscale Large Scarf"
+	can_be_greyscale = TRUE
+	item_path = /obj/item/clothing/neck/large_scarf
+
 /datum/loadout_item/neck/scarf_black
 	name = "Black Scarf"
 	item_path = /obj/item/clothing/neck/scarf/black
@@ -43,15 +53,15 @@ GLOBAL_LIST_INIT(loadout_necks, generate_loadout_items(/datum/loadout_item/neck)
 
 /datum/loadout_item/neck/scarf_blue_striped
 	name = "Striped Blue Scarf"
-	item_path = /obj/item/clothing/neck/stripedbluescarf
+	item_path = /obj/item/clothing/neck/large_scarf/blue
 
 /datum/loadout_item/neck/scarf_green_striped
 	name = "Striped Green Scarf"
-	item_path = /obj/item/clothing/neck/stripedgreenscarf
+	item_path = /obj/item/clothing/neck/large_scarf/green
 
 /datum/loadout_item/neck/scarf_red_striped
 	name = "Striped Red Scarf"
-	item_path = /obj/item/clothing/neck/stripedredscarf
+	item_path = /obj/item/clothing/neck/large_scarf/red
 
 /datum/loadout_item/neck/scarf_orange
 	name = "Orange Scarf"

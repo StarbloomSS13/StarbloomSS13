@@ -23,7 +23,7 @@
 		/obj/item/clothing/shoes/jackboots = 3,
 		/obj/item/clothing/head/beret/sec = 3,
 		/obj/item/clothing/head/soft/sec = 3,
-		/obj/item/clothing/mask/bandana/striped/security = 3,
+		/obj/item/clothing/mask/bandana/color/striped/security = 3,
 		/obj/item/clothing/gloves/color/black = 3,
 		/obj/item/clothing/under/rank/security/officer/skirt = 3,
 		/obj/item/clothing/under/rank/security/officer/grey = 3,
@@ -32,7 +32,7 @@
 		)
 	premium = list(
 		/obj/item/clothing/under/rank/security/officer/formal = 3,
-		/obj/item/clothing/suit/jacket/officer/blue = 3,
+		/obj/item/clothing/suit/security/officer = 3,
 		/obj/item/clothing/head/beret/sec/navyofficer = 3,
 		)
 	refill_canister = /obj/item/vending_refill/wardrobe/sec_wardrobe

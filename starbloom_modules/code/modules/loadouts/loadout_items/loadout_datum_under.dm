@@ -182,6 +182,16 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 // formal undersuits
 /datum/loadout_item/under/formal
 
+/datum/loadout_item/under/formal/turtleskirt
+	name = "Greyscale Turtleneck Skirt"
+	item_path = /obj/item/clothing/under/dress/skirt/turtleskirt/greyscale
+	can_be_greyscale = TRUE
+
+/datum/loadout_item/under/formal/skirt_plaid
+	name = "Greyscale Plaid Skirt"
+	item_path = /obj/item/clothing/under/dress/skirt/plaid/greyscale
+	can_be_greyscale = TRUE
+
 /datum/loadout_item/under/formal/amish_suit
 	name = "Amish Suit"
 	item_path = /obj/item/clothing/under/suit/sl
@@ -212,8 +222,9 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 	item_path = /obj/item/clothing/under/suit/black/skirt
 
 /datum/loadout_item/under/formal/black_tango
-	name = "Black Tango Dress"
-	item_path = /obj/item/clothing/under/dress/blacktango
+	name = "Tango Dress"
+	item_path = /obj/item/clothing/under/dress/tango
+	can_be_greyscale = TRUE
 
 /datum/loadout_item/under/formal/Black_twopiece
 	name = "Black Two-Piece Suit"
@@ -249,7 +260,7 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 
 /datum/loadout_item/under/formal/blue_skirt
 	name = "Blue Skirt"
-	item_path = /obj/item/clothing/under/dress/skirt/blue
+	item_path = /obj/item/clothing/under/dress/skirt/turtleskirt/blue
 
 /datum/loadout_item/under/formal/blue_skirt_plaid
 	name = "Blue Plaid Skirt"
@@ -305,7 +316,7 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 
 /datum/loadout_item/under/formal/purple_skirt
 	name = "Purple Skirt"
-	item_path = /obj/item/clothing/under/dress/skirt/purple
+	item_path = /obj/item/clothing/under/dress/skirt/turtleskirt/purple
 
 /datum/loadout_item/under/formal/purple_skirt_plaid
 	name = "Purple Plaid Skirt"
@@ -329,11 +340,11 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 
 /datum/loadout_item/under/formal/red_skirt
 	name = "Red Skirt"
-	item_path = /obj/item/clothing/under/dress/skirt/red
+	item_path = /obj/item/clothing/under/dress/skirt/turtleskirt/red
 
 /datum/loadout_item/under/formal/red_skirt_plaid
 	name = "Red Plaid Skirt"
-	item_path = /obj/item/clothing/under/dress/skirt/plaid
+	item_path = /obj/item/clothing/under/dress/skirt/plaid/red
 
 /datum/loadout_item/under/formal/sailor
 	name = "Sailor Suit"
@@ -398,21 +409,41 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 // misc undersuits
 /datum/loadout_item/under/miscellaneous
 
+/datum/loadout_item/under/miscellaneous/greyscale_jeans
+	name = "Greyscale Jeans"
+	item_path = /obj/item/clothing/under/pants/jeans/greyscale
+	can_be_greyscale = TRUE
+
+/datum/loadout_item/under/miscellaneous/greyscale_slacks
+	name = "Greyscale Slacks"
+	item_path = /obj/item/clothing/under/pants/slacks/greyscale
+	can_be_greyscale = TRUE
+
+/datum/loadout_item/under/miscellaneous/greyscale_shorts
+	name = "Greyscale Shorts"
+	item_path = /obj/item/clothing/under/shorts/greyscale
+	can_be_greyscale = TRUE
+
+/datum/loadout_item/under/miscellaneous/greyscale_jean_shorts
+	name = "Greyscale Jean Shorts"
+	item_path = /obj/item/clothing/under/jeanshorts/greyscale
+	can_be_greyscale = TRUE
+
 /datum/loadout_item/under/miscellaneous/camo
 	name = "Camo Pants"
 	item_path = /obj/item/clothing/under/pants/camo
 
 /datum/loadout_item/under/miscellaneous/jeans_classic
 	name = "Classic Jeans"
-	item_path = /obj/item/clothing/under/pants/classicjeans
+	item_path = /obj/item/clothing/under/pants/jeans/classic
 
 /datum/loadout_item/under/miscellaneous/jeans_black
 	name = "Black Jeans"
-	item_path = /obj/item/clothing/under/pants/blackjeans
+	item_path = /obj/item/clothing/under/pants/jeans/black
 
 /datum/loadout_item/under/miscellaneous/black
 	name = "Black Pants"
-	item_path = /obj/item/clothing/under/pants/black
+	item_path = /obj/item/clothing/under/pants/slacks/black
 
 /datum/loadout_item/under/miscellaneous/black_short
 	name = "Black Shorts"
@@ -430,17 +461,13 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 	name = "Grey Shorts"
 	item_path = /obj/item/clothing/under/shorts/grey
 
-/datum/loadout_item/under/miscellaneous/jeans
-	name = "Jeans"
-	item_path = /obj/item/clothing/under/pants/jeans
-
 /datum/loadout_item/under/miscellaneous/khaki
 	name = "Khaki Pants"
-	item_path = /obj/item/clothing/under/pants/khaki
+	item_path = /obj/item/clothing/under/pants/slacks/khaki
 
 /datum/loadout_item/under/miscellaneous/jeans_musthang
 	name = "Must Hang Jeans"
-	item_path = /obj/item/clothing/under/pants/mustangjeans
+	item_path = /obj/item/clothing/under/pants/jeans/musthang
 
 /datum/loadout_item/under/miscellaneous/purple_short
 	name = "Purple Shorts"
@@ -448,7 +475,7 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 
 /datum/loadout_item/under/miscellaneous/red
 	name = "Red Pants"
-	item_path = /obj/item/clothing/under/pants/red
+	item_path = /obj/item/clothing/under/pants/slacks/red
 
 /datum/loadout_item/under/miscellaneous/red_short
 	name = "Red Shorts"
@@ -456,7 +483,7 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 
 /datum/loadout_item/under/miscellaneous/tam
 	name = "Tan Pants"
-	item_path = /obj/item/clothing/under/pants/tan
+	item_path = /obj/item/clothing/under/pants/slacks/tan
 
 /datum/loadout_item/under/miscellaneous/track
 	name = "Track Pants"
@@ -464,11 +491,11 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 
 /datum/loadout_item/under/miscellaneous/jeans_youngfolk
 	name = "Young Folks Jeans"
-	item_path = /obj/item/clothing/under/pants/youngfolksjeans
+	item_path = /obj/item/clothing/under/pants/jeans/youngfolks
 
 /datum/loadout_item/under/miscellaneous/white
 	name = "White Pants"
-	item_path = /obj/item/clothing/under/pants/white
+	item_path = /obj/item/clothing/under/pants/slacks/white
 
 /datum/loadout_item/under/miscellaneous/kilt
 	name = "Kilt"

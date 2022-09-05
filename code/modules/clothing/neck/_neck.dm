@@ -154,7 +154,7 @@
 /obj/item/clothing/neck/large_scarf
 	name = "large scarf"
 	icon_state = "large_scarf"
-	custom_price = PAYCHECK_CREW * 0.2
+	custom_price = PAYCHECK_EASY * 0.2
 	greyscale_colors = "#C6C6C6#EEEEEE"
 	greyscale_config = /datum/greyscale_config/large_scarf
 	greyscale_config_worn = /datum/greyscale_config/large_scarf_worn

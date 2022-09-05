@@ -19,3 +19,15 @@
 	name = "tailored suspenders"
 	desc = "A set of custom made suspender straps."
 	greyscale_colors = "#ffffff"
+
+/obj/item/clothing/suit/toggle/suspenders/blue
+	name = "blue suspenders"
+	desc = "The symbol of hard labor and dirty jobs."
+	icon = 'icons/obj/clothing/belts.dmi'
+	greyscale_colors = "#1642bb"
+
+/obj/item/clothing/suit/toggle/suspenders/gray
+	name = "gray suspenders"
+	desc = "The symbol of hard labor and dirty jobs."
+	icon = 'icons/obj/clothing/belts.dmi'
+	greyscale_colors = "#888888"
