@@ -1,12 +1,5 @@
 #define RDSCREEN_NOBREAK "<NO_HTML_BREAK>"
 
-//! Defines for the Protolathe screens, see: [/obj/machinery/rnd/production/protolathe]
-#define RESEARCH_FABRICATOR_SCREEN_MAIN 1
-#define RESEARCH_FABRICATOR_SCREEN_CHEMICALS 2
-#define RESEARCH_FABRICATOR_SCREEN_MATERIALS 3
-#define RESEARCH_FABRICATOR_SCREEN_SEARCH 4
-#define RESEARCH_FABRICATOR_SCREEN_CATEGORYVIEW 5
-
 //! Department flags for techwebs. Defines which department can print what from each protolathe so Cargo can't print guns, etc.
 #define DEPARTMENTAL_FLAG_SECURITY (1<<0)
 #define DEPARTMENTAL_FLAG_MEDICAL (1<<1)
