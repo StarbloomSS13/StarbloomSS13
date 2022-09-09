@@ -197,9 +197,7 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	jobtype = /datum/job/security_officer
 
 	id_trim = /datum/id_trim/job/security_officer
-	//Temporarily Unity
-	uniform = /obj/item/clothing/under/rank/security/officer/formal/unity
-	//Temporarily Unity
+	uniform = /obj/item/clothing/under/rank/security/officer
 	suit = /obj/item/clothing/suit/armor/vest/alt
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/equalizer
 	backpack_contents = list(
@@ -208,10 +206,8 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 		)
 	belt = /obj/item/pda/security
 	ears = /obj/item/radio/headset/headset_sec/alt
-	gloves = /obj/item/clothing/gloves/color/white
-	//Temporarily Unity
-	head = /obj/item/clothing/head/helmet/unity
-	//Temporarily Unity
+	gloves = /obj/item/clothing/gloves/color/black
+	head = /obj/item/clothing/head/helmet/sec
 	shoes = /obj/item/clothing/shoes/jackboots
 	l_pocket = /obj/item/restraints/handcuffs
 	r_pocket = /obj/item/assembly/flash/handheld
