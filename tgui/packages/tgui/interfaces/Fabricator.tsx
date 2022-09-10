@@ -314,8 +314,8 @@ const MaterialCost = (props: MaterialCostProps, context) => {
               cost * amount > available[material]
                 ? 'bad'
                 : cost * amount * 2 > available[material]
-                ? 'average'
-                : 'normal'
+                  ? 'average'
+                  : 'normal'
             }
           />
         </Stack.Item>
