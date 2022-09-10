@@ -215,9 +215,7 @@ export const Fabricator = (props, context) => {
                         {sortedDesigns
                           .filter(
                             (design) =>
-                              selectedCategory === ALL_CATEGORY ||
-                              design.categories?.indexOf(selectedCategory) !==
-                                -1
+                              selectedCategory === ALL_CATEGORY || design.categories?.indexOf(selectedCategory) !== -1
                           )
                           .filter((design) =>
                             design.name.toLowerCase().includes(searchText)
