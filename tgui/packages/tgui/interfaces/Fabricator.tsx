@@ -3,7 +3,7 @@ import { Stack, Section, Button, Input, Icon, Tabs, Dimmer } from '../components
 import { Window } from '../layouts';
 import { Material, MaterialAmount, MaterialFormatting, Materials, MATERIAL_KEYS } from './common/Materials';
 import { Fragment } from "inferno";
-import { sortBy } from '../../common/collections';
+import { sortBy } from 'common/collections';
 
 type MaterialMap = Partial<Record<keyof typeof MATERIAL_KEYS, number>>;
 
