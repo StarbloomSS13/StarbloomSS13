@@ -1,8 +1,22 @@
 import { useBackend, useSharedState } from '../backend';
-import { Stack, Section, Button, Input, Icon, Tabs, Dimmer } from '../components';
+import {
+  Stack,
+  Section,
+  Button,
+  Input,
+  Icon,
+  Tabs,
+  Dimmer,
+} from '../components';
 import { Window } from '../layouts';
-import { Material, MaterialAmount, MaterialFormatting, Materials, MATERIAL_KEYS } from './common/Materials';
-import { Fragment } from "inferno";
+import {
+  Material,
+  MaterialAmount,
+  MaterialFormatting,
+  Materials,
+  MATERIAL_KEYS,
+} from './common/Materials';
+import { Fragment } from 'inferno';
 import { sortBy } from 'common/collections';
 
 type MaterialMap = Partial<Record<keyof typeof MATERIAL_KEYS, number>>;
@@ -300,8 +314,8 @@ const MaterialCost = (props: MaterialCostProps, context) => {
               cost * amount > available[material]
                 ? 'bad'
                 : cost * amount * 2 > available[material]
-                  ? 'average'
-                  : 'normal'
+                ? 'average'
+                : 'normal'
             }
           />
         </Stack.Item>
