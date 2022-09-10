@@ -356,7 +356,7 @@ const PrintButton = (props: PrintButtonProps, context) => {
             amount={quantity}
             available={available}
           />
-        )
+      )
       }
       color={'transparent'}
       onClick={() => act('build', { ref: design.id, amount: quantity })}>
@@ -404,7 +404,7 @@ const Recipe = (props: { design: Design; available: MaterialMap }, context) => {
                   amount={1}
                   available={available}
                 />
-              )
+            )
             }
             onClick={() => act('build', { ref: design.id, amount: 1 })}>
             {design.name}
