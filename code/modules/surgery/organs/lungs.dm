@@ -273,7 +273,7 @@
 			var/amount_of_sleep = min(breather.AmountSleeping() + 10 SECONDS, 20 SECONDS)
 			if(SA_pp > SA_sleep_min && breather.Sleeping(amount_of_sleep))
 				// If we got put to sleep we count as "on anesthetic"
-				ADD_TRAIT(breather, TRAIT_ON_ANESTHETIC, /datum/gas/nitrous_oxide)
+				breather.apply_status_effect(/datum/status_effect/grouped/anesthetic, /datum/gas/nitrous_oxide)
 
 		else
 			// There is sleeping gas in their lungs, but only a little, so give them a bit of a warning
@@ -288,7 +288,7 @@
 				breather.clear_alert(ALERT_TOO_MUCH_N2O)
 
 			// Clear any anesthetics we've given out
-			REMOVE_TRAIT(breather, TRAIT_ON_ANESTHETIC, /datum/gas/nitrous_oxide)
+			breather.remove_status_effect(/datum/status_effect/grouped/anesthetic, /datum/gas/nitrous_oxide)
 
 
 	// BZ
