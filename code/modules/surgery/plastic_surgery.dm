@@ -22,7 +22,7 @@
 	display_results(user, target, span_notice("You begin to alter [target]'s appearance..."),
 		span_notice("[user] begins to alter [target]'s appearance."),
 		span_notice("[user] begins to make an incision in [target]'s face."))
-	display_pain(target, "You feel slicing pain across your face!", target_zone = target_zone)
+	give_surgery_pain(target, "You feel slicing pain across your face!", target_zone = target_zone)
 
 /datum/surgery_step/reshape_face/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	if(HAS_TRAIT_FROM(target, TRAIT_DISFIGURED, TRAIT_GENERIC))
@@ -30,7 +30,7 @@
 		display_results(user, target, span_notice("You successfully restore [target]'s appearance."),
 			span_notice("[user] successfully restores [target]'s appearance!"),
 			span_notice("[user] finishes the operation on [target]'s face."))
-		display_pain(target, "The pain fades, your face feels normal again!", target_zone = target_zone)
+		give_surgery_pain(target, "The pain fades, your face feels normal again!", target_zone = target_zone)
 		cause_pain(target_zone, -pain_amount)
 	else
 		var/list/names = list()
@@ -50,7 +50,7 @@
 		display_results(user, target, span_notice("You alter [oldname]'s appearance completely, [target.p_they()] is now [newname]."),
 			span_notice("[user] alters [oldname]'s appearance completely, [target.p_they()] is now [newname]!"),
 			span_notice("[user] finishes the operation on [target]'s face."))
-		display_pain(target, "The pain fades, your face feels new and unfamiliar!", target_zone = target_zone)
+		give_surgery_pain(target, "The pain fades, your face feels new and unfamiliar!", target_zone = target_zone)
 	if(ishuman(target))
 		var/mob/living/carbon/human/human_target = target
 		human_target.sec_hud_set_ID()
@@ -60,6 +60,6 @@
 	display_results(user, target, span_warning("You screw up, leaving [target]'s appearance disfigured!"),
 		span_notice("[user] screws up, disfiguring [target]'s appearance!"),
 		span_notice("[user] finishes the operation on [target]'s face."))
-	display_pain(target, "Your face feels horribly scarred and deformed!", target_zone = target_zone)
+	give_surgery_pain(target, "Your face feels horribly scarred and deformed!", target_zone = target_zone)
 	ADD_TRAIT(target, TRAIT_DISFIGURED, TRAIT_GENERIC)
 	return FALSE

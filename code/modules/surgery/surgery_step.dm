@@ -20,8 +20,9 @@
 	var/surgery_moodlet = /datum/mood_event/surgery
 	/// Pain overlay flashed if a surgery is done without anesthetics
 	var/pain_overlay_severity = 1
-
+	/// How much pain this gives (given out in give_surgery_pain, so this might be given out twice)
 	var/pain_amount = 0
+	/// What type of pain this gives
 	var/pain_type = BRUTE
 
 /datum/surgery_step/proc/try_op(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, try_to_fail = FALSE)
@@ -221,7 +222,7 @@
  * * pain_message - The message to be displayed
  * * mechanical_surgery - Boolean flag that represents if a surgery step is done on a mechanical limb (therefore does not force scream)
  */
-/datum/surgery_step/proc/display_pain(mob/living/carbon/target, pain_message, mechanical_surgery = FALSE, target_zone, target_zone = target_zone)
+/datum/surgery_step/proc/give_surgery_pain(mob/living/carbon/target, pain_message, mechanical_surgery = FALSE, target_zone, target_zone = target_zone)
 	// Only feels pain if we feels pain
 	if(!target.pain_controller || target.pain_controller.pain_modifier <= 0.75 || pain_amount <= 0)
 		return FALSE

@@ -30,7 +30,7 @@
 		display_results(user, target, span_notice("You begin to extract [implant] from [target]'s [target_zone]..."),
 			span_notice("[user] begins to extract [implant] from [target]'s [target_zone]."),
 			span_notice("[user] begins to extract something from [target]'s [target_zone]."))
-		display_pain(target, "You feel a serious pain in your [target_zone]!", target_zone = target_zone)
+		give_surgery_pain(target, "You feel a serious pain in your [target_zone]!", target_zone = target_zone)
 	else
 		display_results(user, target, span_notice("You look for an implant in [target]'s [target_zone]..."),
 			span_notice("[user] looks for an implant in [target]'s [target_zone]."),
