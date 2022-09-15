@@ -11,8 +11,7 @@
 		pain_controller = new_pain_controller
 
 /mob/living/carbon/human/Destroy()
-	if(pain_controller)
-		QDEL_NULL(pain_controller)
+	QDEL_NULL(pain_controller)
 	return ..()
 
 /*

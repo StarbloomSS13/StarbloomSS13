@@ -113,12 +113,12 @@
 	var/targeted_zone
 
 /datum/status_effect/sharp_pain/on_creation(
-		mob/living/carbon/human/new_owner,
-		targeted_zone,
-		pain_amount = 0,
-		pain_type = BRUTE,
-		duration = 0
-	)
+	mob/living/carbon/human/new_owner,
+	targeted_zone,
+	pain_amount = 0,
+	pain_type = BRUTE,
+	duration = 0,
+)
 
 	src.duration = duration
 	src.targeted_zone = targeted_zone
@@ -134,7 +134,7 @@
 	if(!human_owner.pain_controller)
 		return FALSE
 
-	if(!targeted_zone || pain_amount == 0 || duration <= 0)
+	if(!targeted_zone || pain_amount == 0)
 		return FALSE
 
 	var/obj/item/bodypart/afflicted_bodypart = human_owner.pain_controller.body_zones[targeted_zone]
@@ -172,7 +172,7 @@
 	mob/living/carbon/human/new_owner,
 	targeted_zone,
 	min_amount = 0,
-	duration = 0
+	duration = 0,
 )
 
 	src.duration = duration
@@ -188,7 +188,7 @@
 	if(!human_owner.pain_controller)
 		return FALSE
 
-	if(!targeted_zone || min_amount == 0 || duration <= 0)
+	if(!targeted_zone || min_amount == 0)
 		return FALSE
 
 	var/obj/item/bodypart/afflicted_bodypart = human_owner.pain_controller.body_zones[targeted_zone]

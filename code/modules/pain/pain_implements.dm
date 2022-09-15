@@ -207,6 +207,30 @@
 	for(var/i in 1 to 2)
 		new /obj/item/reagent_containers/pill/oxycodone(src)
 
+/obj/item/storage/pill_bottle/prescription/aspirin_para_coffee
+	pill_type = /obj/item/reagent_containers/pill/aspirin_para_coffee
+	num_pills = 3
+
+/obj/item/storage/pill_bottle/prescription/paracetamol
+	pill_type = /obj/item/reagent_containers/pill/paracetamol
+	num_pills = 3
+
+/obj/item/storage/pill_bottle/prescription/aspirin
+	pill_type = /obj/item/reagent_containers/pill/aspirin
+	num_pills = 3
+
+/obj/item/storage/pill_bottle/prescription/ibuprofen
+	pill_type = /obj/item/reagent_containers/pill/ibuprofen
+	num_pills = 3
+
+/obj/item/storage/pill_bottle/prescription/happiness
+	pill_type = /obj/item/reagent_containers/pill/happinesspsych
+	num_pills = 5
+
+/obj/item/storage/pill_bottle/prescription/psicodine
+	pill_type = /obj/item/reagent_containers/pill/psicodine
+	num_pills = 3
+
 /// Miner pen. Heals about 30 pain to all limbs, causes ~150 addiction
 /obj/item/reagent_containers/hypospray/medipen/survival/painkiller
 	name = "survival painkiller medipen"
@@ -271,6 +295,9 @@
 	. += span_notice("To use: Apply to a patient experiencing shock or loss of body temperature. Keep patient still and lying down for maximum effect.")
 
 /obj/item/shock_blanket/attack_self(mob/user, modifiers)
+	. = ..()
+	if(.)
+		return
 	if(!user.dropItemToGround(src))
 		return
 
@@ -279,16 +306,15 @@
 	icon_state = "[initial(icon_state)]_dropped"
 	layer = MOB_LAYER
 
-	return ..()
 
 /obj/item/shock_blanket/pre_attack(atom/target, mob/living/user, params)
 	. = ..()
+	if(.)
+		return
 
 	if(ishuman(target))
 		try_shelter_mob(target, user)
 		return TRUE
-
-	return
 
 /*
  * Try to equip [target] with [src], done by [user].
