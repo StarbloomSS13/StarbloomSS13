@@ -82,3 +82,9 @@
 #define set_pain_mod(id, amount) pain_controller?.set_pain_modifier(id, amount)
 /// Unset [id] pain mod
 #define unset_pain_mod(id) pain_controller?.unset_pain_modifier(id)
+
+// Temperature pack stuff - things you can press to people to help reduce pain.
+// Heal rate and modifier for generic items that are frozen.
+#define FROZEN_ITEM_PAIN_RATE 1
+#define FROZEN_ITEM_PAIN_MODIFIER 0.5
+#define FROZEN_ITEM_TEMPERATURE_CHANGE -5

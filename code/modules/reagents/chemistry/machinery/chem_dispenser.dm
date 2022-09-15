@@ -79,7 +79,7 @@
 	var/list/emagged_reagents = list(
 		/datum/reagent/toxin/carpotoxin,
 		/datum/reagent/medicine/mine_salve,
-		/datum/reagent/medicine/morphine,
+		/datum/reagent/medicine/painkiller/morphine,
 		/datum/reagent/drug/space_drugs,
 		/datum/reagent/toxin
 	)
@@ -669,7 +669,7 @@
 		/datum/reagent/fuel/oil,
 		/datum/reagent/saltpetre,
 		/datum/reagent/medicine/mine_salve,
-		/datum/reagent/medicine/morphine,
+		/datum/reagent/medicine/painkiller/morphine,
 		/datum/reagent/drug/space_drugs,
 		/datum/reagent/toxin,
 		/datum/reagent/toxin/plasma,

@@ -1110,9 +1110,11 @@
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/toxin/mimesbane/on_mob_metabolize(mob/living/L)
+	. = ..()
 	ADD_TRAIT(L, TRAIT_EMOTEMUTE, type)
 
 /datum/reagent/toxin/mimesbane/on_mob_end_metabolize(mob/living/L)
+	. = ..()
 	REMOVE_TRAIT(L, TRAIT_EMOTEMUTE, type)
 
 /datum/reagent/toxin/bonehurtingjuice //oof ouch

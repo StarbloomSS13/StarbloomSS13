@@ -210,10 +210,17 @@
  * * pain_message - The message to be displayed
  * * mechanical_surgery - Boolean flag that represents if a surgery step is done on a mechanical limb (therefore does not force scream)
  */
-/datum/surgery_step/proc/display_pain(mob/living/target, pain_message, mechanical_surgery = FALSE)
-	if(!HAS_TRAIT(target, TRAIT_NUMBED) || target.stat >= UNCONSCIOUS)
-		to_chat(target, span_userdanger(pain_message))
-		if(prob(30) && !mechanical_surgery)
-			target.emote("scream")
+/datum/surgery_step/proc/display_pain(mob/living/carbon/target, pain_message, mechanical_surgery = FALSE)
+	// Only feels pain if we feels pain
+	if(!target.pain_controller || target.pain_controller.pain_modifier <= 0.75)
+		return
 
-	// melbert todo
+	// No pain if it's on a mechanical limb, or 70% chance to not get it
+	if(mechanical_surgery || prob(70))
+		return
+
+	// No message if the pain emtoe fails
+	if(!target.pain_controller.do_pain_emote())
+		return
+
+	to_chat(target, span_userdanger(pain_message))

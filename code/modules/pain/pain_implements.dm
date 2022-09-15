@@ -1,37 +1,14 @@
-// -- Implements and equipment to help reduce pain. --
-// Temperature pack stuff - things you can press to people to help reduce pain.
-/// Heal rate and modifier for generic items that are frozen.
-#define FROZEN_ITEM_PAIN_RATE 1
-#define FROZEN_ITEM_PAIN_MODIFIER 0.5
-#define FROZEN_ITEM_TEMPERATURE_CHANGE -5
-
 /// do_after key for using emergency blankets.
 #define DOAFTER_SOURCE_BLANKET "doafter_blanket"
-
-// Holding a beer to your busted arm, now that's classic
-/obj/item/reagent_containers/food/drinks/beer/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/temperature_pack, pain_heal_rate = 0.3, pain_modifier_on_limb = 0.9, temperature_change = -2)
-
-// Frozen items become usable temperature packs.
-/obj/item/make_frozen_visual()
-	. = ..()
-	if(obj_flags & FROZEN)
-		AddElement(/datum/element/temperature_pack, FROZEN_ITEM_PAIN_RATE, FROZEN_ITEM_PAIN_MODIFIER, FROZEN_ITEM_TEMPERATURE_CHANGE)
-
-/obj/item/make_unfrozen()
-	. = ..()
-	if(!(obj_flags & FROZEN))
-		RemoveElement(/datum/element/temperature_pack, FROZEN_ITEM_PAIN_RATE, FROZEN_ITEM_PAIN_MODIFIER, FROZEN_ITEM_TEMPERATURE_CHANGE)
 
 /// Temperature packs (heat packs, cold packs). Apply to hurt limb to un-hurty.
 /obj/item/temperature_pack
 	name = "temperature pack"
 	desc = "A temperature pack, to soothe pain."
 	w_class = WEIGHT_CLASS_SMALL
-	icon = 'maplestation_modules/icons/obj/pain_items.dmi'
-	lefthand_file = 'maplestation_modules/icons/mob/inhands/pain_items_lhand.dmi'
-	righthand_file = 'maplestation_modules/icons/mob/inhands/pain_items_rhand.dmi'
+	icon = 'icons/obj/pain_items.dmi'
+	lefthand_file = 'icons/mob/inhands/pain_items_lhand.dmi'
+	righthand_file = 'icons/mob/inhands/pain_items_rhand.dmi'
 	icon_state = "cold_pack"
 	throwforce = 0
 	throw_speed = 2
@@ -159,25 +136,25 @@
 /obj/item/reagent_containers/pill/morphine/diluted
 	desc = "Used to treat major to severe pain. Causes moderate drowsiness. Mildly addictive."
 	icon_state = "pill11"
-	list_reagents = list(/datum/reagent/medicine/morphine = 5) // Lasts ~1 minute, heals ~10 pain per bodypart (~100 pain)
+	list_reagents = list(/datum/reagent/medicine/painkiller/morphine = 5) // Lasts ~1 minute, heals ~10 pain per bodypart (~100 pain)
 	rename_with_volume = TRUE
 
 /obj/item/reagent_containers/syringe/morphine
 	name = "syringe (morphine)"
 	desc = "Contains three injections of Morphine. Used to treat major to severe pain. Causes moderate drowsiness. Mildly addictive."
-	list_reagents = list(/datum/reagent/medicine/morphine = 15)
+	list_reagents = list(/datum/reagent/medicine/painkiller/morphine = 15)
 
 /obj/item/reagent_containers/pill/oxycodone
 	name = "oxycodone pill"
 	desc = "Used to treat severe to extreme pain. Rapid acting, may cause delirium. Very addictive."
 	icon_state = "pill12"
-	list_reagents = list(/datum/reagent/medicine/oxycodone = 5) // Lasts ~1 minute, heals ~20 pain per bodypart (~200 pain)
+	list_reagents = list(/datum/reagent/medicine/painkiller/oxycodon = 5) // Lasts ~1 minute, heals ~20 pain per bodypart (~200 pain)
 	rename_with_volume = TRUE
 
 /obj/item/reagent_containers/syringe/oxycodone
 	name = "syringe (oxycodone)"
 	desc = "Contains three injections of Oxycodone. Used to treat severe to extreme pain. Rapid acting, may cause delirium. Very addictive."
-	list_reagents = list(/datum/reagent/medicine/oxycodone = 15)
+	list_reagents = list(/datum/reagent/medicine/painkiller/oxycodon = 15)
 
 /obj/item/reagent_containers/pill/aspirin_para_coffee
 	name = "aspirin/paracetamol/caffeine pill"
@@ -209,7 +186,7 @@
 /obj/item/storage/pill_bottle/painkillers
 	name = "bottle of painkillers"
 	desc = "Contains multiple pills used to treat anywhere from mild to extreme pain. CAUTION: Do not take in conjunction with alcohol."
-	icon = 'maplestation_modules/icons/obj/chemical.dmi'
+	icon_state = "painkiller_canister"
 	custom_premium_price = PAYCHECK_HARD * 1.5
 
 /obj/item/storage/pill_bottle/painkillers/Initialize()
@@ -234,23 +211,21 @@
 /obj/item/reagent_containers/hypospray/medipen/survival/painkiller
 	name = "survival painkiller medipen"
 	desc = "A medipen that contains a dosage of painkilling chemicals. WARNING: Do not use in combination with alcohol. Can cause drowsiness."
-	icon = 'maplestation_modules/icons/obj/syringe.dmi'
 	icon_state = "painkiller_stimpen"
 	base_icon_state = "painkiller_stimpen"
 	volume = 20
 	amount_per_transfer_from_this = 20
-	list_reagents = list(/datum/reagent/medicine/painkiller/paracetamol = 7.5, /datum/reagent/medicine/painkiller/aspirin_para_coffee = 5, /datum/reagent/medicine/morphine = 5, /datum/reagent/medicine/modafinil = 2.5)
+	list_reagents = list(/datum/reagent/medicine/painkiller/paracetamol = 7.5, /datum/reagent/medicine/painkiller/aspirin_para_coffee = 5, /datum/reagent/medicine/painkiller/morphine = 5, /datum/reagent/medicine/modafinil = 2.5)
 
 /// Medkit pen. Heals about 35 pain to all limbs, causes ~450 addiction
 /obj/item/reagent_containers/hypospray/medipen/painkiller
 	name = "emergency painkiller medipen"
 	desc = "A medipen that contains a dosage of heavy painkilling chemicals. WARNING: Do not use in combination with alcohol. Can cause drowsiness and addiction."
-	icon = 'maplestation_modules/icons/obj/syringe.dmi'
 	icon_state = "painkiller"
 	base_icon_state = "painkiller"
 	volume = 15
 	amount_per_transfer_from_this = 15
-	list_reagents = list(/datum/reagent/medicine/oxycodone = 7.5, /datum/reagent/medicine/morphine = 5, /datum/reagent/medicine/modafinil = 2.5)
+	list_reagents = list(/datum/reagent/medicine/painkiller/oxycodon = 7.5, /datum/reagent/medicine/painkiller/morphine = 5, /datum/reagent/medicine/modafinil = 2.5)
 
 /*
  * Shock blanket item. Hit someone to cover them with the blanket.
@@ -259,11 +234,12 @@
 /obj/item/shock_blanket
 	name = "shock blanket"
 	desc = "A metallic looking plastic blanket specifically designed to well insulate anyone seeking comfort underneath."
-	icon = 'maplestation_modules/icons/obj/pain_items.dmi'
-	worn_icon = 'maplestation_modules/icons/mob/pain_items.dmi'
-	lefthand_file = 'maplestation_modules/icons/mob/inhands/pain_items_lhand.dmi'
-	righthand_file = 'maplestation_modules/icons/mob/inhands/pain_items_rhand.dmi'
+	icon = 'icons/obj/pain_items.dmi'
+	worn_icon = 'icons/mob/pain_items.dmi'
+	lefthand_file = 'icons/mob/inhands/pain_items_lhand.dmi'
+	righthand_file = 'icons/mob/inhands/pain_items_rhand.dmi'
 	icon_state = "shockblanket"
+	base_icon_state = "shockblanket"
 	worn_icon_state = "shockblanket"
 	drop_sound = 'sound/items/handling/cloth_drop.ogg'
 	pickup_sound =  'sound/items/handling/cloth_pickup.ogg'
@@ -293,17 +269,6 @@
 /obj/item/shock_blanket/examine(mob/user)
 	. = ..()
 	. += span_notice("To use: Apply to a patient experiencing shock or loss of body temperature. Keep patient still and lying down for maximum effect.")
-
-/obj/item/shock_blanket/pickup(mob/user)
-	. = ..()
-	icon_state = initial(icon_state)
-	layer = initial(layer)
-
-/obj/item/shock_blanket/dropped(mob/user)
-	. = ..()
-	if(locate(/obj/structure/bed) in loc)
-		icon_state = "[initial(icon_state)]_dropped"
-		layer = MOB_LAYER
 
 /obj/item/shock_blanket/attack_self(mob/user, modifiers)
 	if(!user.dropItemToGround(src))
@@ -374,6 +339,15 @@
 	disable_protection(user)
 	UnregisterSignal(user, list(COMSIG_LIVING_SET_BODY_POSITION, COMSIG_LIVING_SET_BUCKLED, COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_PRE_MOVE))
 
+	if(locate(/obj/structure/bed) in loc)
+		icon_state = "[base_icon_state]_dropped"
+		layer = MOB_LAYER
+
+/obj/item/shock_blanket/pickup(mob/user)
+	. = ..()
+	icon_state = base_icon_state
+	layer = initial(layer)
+
 /*
  * Check if we should be recieving temperature protection.
  * We only give protection if we're lying down or buckled - if we're moving, we don't get anything.
@@ -424,15 +398,15 @@
 
 	var/target_temp = wearer.get_body_temp_normal(apply_change = FALSE)
 	if(wearer.bodytemperature > target_temp)
-		wearer.adjust_bodytemperature(-12 * TEMPERATURE_DAMAGE_COEFFICIENT * REM * delta_time, target_temp)
+		wearer.adjust_bodytemperature(-8 * TEMPERATURE_DAMAGE_COEFFICIENT * delta_time, target_temp)
 	else if(wearer.bodytemperature < (target_temp + 1))
-		wearer.adjust_bodytemperature(12 * TEMPERATURE_DAMAGE_COEFFICIENT * REM * delta_time, 0, target_temp)
+		wearer.adjust_bodytemperature(8 * TEMPERATURE_DAMAGE_COEFFICIENT * delta_time, 0, target_temp)
 	if(ishuman(wearer))
 		var/mob/living/carbon/human/human_wearer = wearer
 		if(human_wearer.coretemperature > target_temp)
-			human_wearer.adjust_coretemperature(-12 * TEMPERATURE_DAMAGE_COEFFICIENT * REM * delta_time, target_temp)
+			human_wearer.adjust_coretemperature(-8 * TEMPERATURE_DAMAGE_COEFFICIENT * delta_time, target_temp)
 		else if(human_wearer.coretemperature < (target_temp + 1))
-			human_wearer.adjust_coretemperature(12 * TEMPERATURE_DAMAGE_COEFFICIENT * REM * delta_time, 0, target_temp)
+			human_wearer.adjust_coretemperature(8 * TEMPERATURE_DAMAGE_COEFFICIENT * delta_time, 0, target_temp)
 
 /obj/item/shock_blanket/emergency
 	desc = "An emergency variant shock blanket intended to be placed in medkits for field treatment. Faster to apply to patients, but more restrictive to movement."
@@ -443,51 +417,5 @@
 /obj/item/shock_blanket/emergency/Initialize()
 	. = ..()
 	name = "emergency [name]"
-
-// Change the contents of emergency first-aid kids.
-/obj/item/storage/firstaid/emergency/Initialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_w_class = WEIGHT_CLASS_SMALL
-	STR.max_items = 12
-	STR.max_combined_w_class = 12
-
-/obj/item/storage/firstaid/emergency/PopulateContents()
-	if(empty)
-		return
-	var/static/items_inside = list(
-		/obj/item/healthanalyzer/wound = 1,
-		/obj/item/stack/medical/gauze = 1,
-		/obj/item/stack/medical/suture/emergency = 1,
-		/obj/item/stack/medical/ointment = 1,
-		/obj/item/reagent_containers/hypospray/medipen/ekit = 2,
-		/obj/item/reagent_containers/hypospray/medipen/painkiller = 2,
-		/obj/item/storage/pill_bottle/iron = 1,
-		/obj/item/shock_blanket/emergency = 1,
-	)
-	generate_items_inside(items_inside, src)
-
-
-// Pain implements added to various vendors.
-/obj/machinery/vending/drugs
-	added_premium = list(/obj/item/storage/pill_bottle/painkillers = 2)
-
-/obj/machinery/vending/medical
-	added_products = list(
-		/obj/item/shock_blanket = 3,
-		/obj/item/temperature_pack/cold = 2,
-		/obj/item/temperature_pack/heat = 2,
-		)
-
-/obj/machinery/vending/wallmed
-	added_products = list(
-		/obj/item/shock_blanket/emergency = 2,
-		/obj/item/temperature_pack/cold = 1,
-		/obj/item/temperature_pack/heat = 1,
-		)
-
-#undef FROZEN_ITEM_PAIN_RATE
-#undef FROZEN_ITEM_PAIN_MODIFIER
-#undef FROZEN_ITEM_TEMPERATURE_CHANGE
 
 #undef DOAFTER_SOURCE_BLANKET

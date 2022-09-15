@@ -121,4 +121,13 @@
 // Sorted alphabetically
 #define span_tooltip(tip, main_text) ("<span data-component=\"Tooltip\" data-content=\"" + tip + "\" class=\"tooltip\">" + main_text + "</span>")
 
+// Some extra spans
+#define span_message(str) ("<span class='message'>" + str + "</span>")
 #define span_italics(str) ("<span class='italics'>" + str + "</span>")
+// This one ain't a span but it's pretending to be one
+#define span_readable_yellow(str) ("<font color = '#c5c900'>" + str + "</font>")
+
+/// The color for LOOC chat.
+#define LOOC_SPAN_COLOR "#00a8c5"
+/// The color the prefix for LOOC uses.
+#define LOOC_PREFIX_COLOR "#5f008b"

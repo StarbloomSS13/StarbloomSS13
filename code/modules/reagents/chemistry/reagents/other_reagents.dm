@@ -2620,6 +2620,7 @@
 
 /datum/reagent/gravitum/on_mob_end_metabolize(mob/living/L)
 	L.RemoveElement(/datum/element/forced_gravity, 0)
+	return ..()
 
 /datum/reagent/cellulose
 	name = "Cellulose Fibers"
@@ -2637,6 +2638,8 @@
 	color = "#D2FFFA"
 	metabolization_rate = 0.75 * REAGENTS_METABOLISM // 5u (WOUND_DETERMINATION_CRITICAL) will last for ~34 seconds
 	self_consuming = TRUE
+	pain_modifier = 0.8 // Small, but getting the determined status effect gives us a stronger one
+
 	/// Whether we've had at least WOUND_DETERMINATION_SEVERE (2.5u) of determination at any given time. No damage slowdown immunity or indication we're having a second wind if it's just a single moderate wound
 	var/significant = FALSE
 

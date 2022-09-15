@@ -161,6 +161,7 @@
 
 /datum/reagent/medicine/cryoxadone/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	if(M.IsSleeping() || M.IsUnconscious())
+		M.set_pain_mod(type, 0.5)
 		var/power = -0.00003 * (M.bodytemperature ** 2) + 3
 		if(M.bodytemperature < T0C)
 			M.adjustOxyLoss(-3 * power * REM * delta_time, 0)
@@ -168,13 +169,17 @@
 			M.adjustFireLoss(-power * REM * delta_time, 0)
 			M.adjustToxLoss(-power * REM * delta_time, 0, TRUE) //heals TOXINLOVERs
 			M.adjustCloneLoss(-power * REM * delta_time, 0)
-			for(var/i in M.all_wounds)
-				var/datum/wound/iter_wound = i
+			M.cause_pain(BODY_ZONES_ALL, -0.25 * power * REM * delta_time)
+			for(var/datum/wound/iter_wound as anything in M.all_wounds)
 				iter_wound.on_xadone(power * REAGENTS_EFFECT_MULTIPLIER * delta_time)
 			REMOVE_TRAIT(M, TRAIT_DISFIGURED, TRAIT_GENERIC) //fixes common causes for disfiguration
 			. = TRUE
 	metabolization_rate = REAGENTS_METABOLISM * (0.00001 * (M.bodytemperature ** 2) + 0.5)
 	..()
+
+/datum/reagent/medicine/cryoxadone/on_mob_end_metabolize(mob/living/carbon/user)
+	. = ..()
+	user.unset_pain_mod(type)
 
 // Healing
 /datum/reagent/medicine/cryoxadone/on_hydroponics_apply(obj/item/seeds/myseed, datum/reagents/chems, obj/machinery/hydroponics/mytray, mob/user)
@@ -351,6 +356,7 @@
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
 	ph = 2.6
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	pain_modifier = 0.75
 
 /datum/reagent/medicine/mine_salve/on_mob_life(mob/living/carbon/C, delta_time, times_fired)
 	C.hal_screwyhud = SCREWYHUD_HEALTHY
@@ -379,10 +385,8 @@
 			to_chat(exposed_carbon, span_danger("You feel your injuries fade away to nothing!") )
 
 		exposed_mob.throw_alert("numbed", /atom/movable/screen/alert/numbed)
-		ADD_TRAIT(exposed_mob, TRAIT_NUMBED, src)
 
 /datum/reagent/medicine/mine_salve/on_mob_end_metabolize(mob/living/M)
-	REMOVE_TRAIT(M, TRAIT_NUMBED, src)
 	M.clear_alert("numbed")
 	if(iscarbon(M))
 		var/mob/living/carbon/N = M
@@ -594,52 +598,9 @@
 	if(DT_PROB(5, delta_time))
 		M.adjust_drowsyness(1)
 	M.jitteriness -= 1 * REM * delta_time
+	M.adjust_disgust(-3 * REM * delta_time)
 	holder.remove_reagent(/datum/reagent/toxin/histamine, 3 * REM * delta_time)
 	..()
-
-/datum/reagent/medicine/morphine
-	name = "Morphine"
-	description = "A painkiller that allows the patient to move at full speed even when injured. Causes drowsiness and eventually unconsciousness in high doses. Overdose will cause a variety of effects, ranging from minor to lethal."
-	reagent_state = LIQUID
-	color = "#A9FBFB"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
-	overdose_threshold = 30
-	ph = 8.96
-	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	addiction_types = list(/datum/addiction/opiods = 10)
-
-/datum/reagent/medicine/morphine/on_mob_metabolize(mob/living/L)
-	..()
-	ADD_TRAIT(L, TRAIT_NUMBED, src)
-	L.throw_alert("numbed", /atom/movable/screen/alert/numbed)
-	L.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
-
-/datum/reagent/medicine/morphine/on_mob_end_metabolize(mob/living/L)
-	REMOVE_TRAIT(L, TRAIT_NUMBED, src)
-	L.clear_alert("numbed")
-	L.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
-	..()
-
-/datum/reagent/medicine/morphine/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
-	if(current_cycle >= 5)
-		SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "numb", /datum/mood_event/narcotic_medium, name)
-	switch(current_cycle)
-		if(11)
-			to_chat(M, span_warning("You start to feel tired...") )
-		if(12 to 24)
-			M.adjust_drowsyness(1 * REM * delta_time)
-		if(24 to INFINITY)
-			M.Sleeping(40 * REM * delta_time)
-			. = TRUE
-	..()
-
-/datum/reagent/medicine/morphine/overdose_process(mob/living/M, delta_time, times_fired)
-	if(DT_PROB(18, delta_time))
-		M.drop_all_held_items()
-		M.Dizzy(2)
-		M.Jitter(2)
-	..()
-
 
 /datum/reagent/medicine/oculine
 	name = "Oculine"
@@ -767,6 +728,7 @@
 	overdose_threshold = 35
 	ph = 12
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	pain_modifier = 0.8
 
 /datum/reagent/medicine/atropine/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	if(M.health <= M.crit_threshold)
@@ -797,6 +759,7 @@
 	overdose_threshold = 30
 	ph = 10.2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	pain_modifier = 0.9
 
 /datum/reagent/medicine/epinephrine/on_mob_metabolize(mob/living/carbon/M)
 	..()
@@ -1013,6 +976,7 @@
 	ph = 8.7
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_NO_RANDOM_RECIPE
 	addiction_types = list(/datum/addiction/stimulants = 4) //0.8 per 2 seconds
+	pain_modifier = 0.5
 
 /datum/reagent/medicine/stimulants/on_mob_metabolize(mob/living/L)
 	..()
@@ -1210,6 +1174,7 @@
 	color = "#C1151D"
 	overdose_threshold = 30
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_NO_RANDOM_RECIPE
+	pain_modifier = 0.5
 
 /datum/reagent/medicine/changelingadrenaline/on_mob_life(mob/living/carbon/metabolizer, delta_time, times_fired)
 	..()
@@ -1279,6 +1244,7 @@
 	color = "#000000"
 	self_consuming = TRUE
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_NO_RANDOM_RECIPE
+	pain_modifier = 0
 
 /datum/reagent/medicine/cordiolis_hepatico/on_mob_add(mob/living/M)
 	..()
@@ -1294,6 +1260,8 @@
 	name = "Muscle Stimulant"
 	description = "A potent chemical that allows someone under its influence to be at full physical ability even when under massive amounts of pain."
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_NO_RANDOM_RECIPE
+	// Morphine but harder to get, kinda
+	pain_modifier = 0.5
 
 /datum/reagent/medicine/muscle_stimulant/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -1504,10 +1472,19 @@
 
 /datum/reagent/medicine/coagulant/on_mob_metabolize(mob/living/M)
 	ADD_TRAIT(M, TRAIT_COAGULATING, /datum/reagent/medicine/coagulant)
+	if(ishuman(M))
+		var/mob/living/carbon/human/blood_boy = M
+		blood_boy.physiology?.bleed_mod *= passive_bleed_modifier
+
 	return ..()
 
 /datum/reagent/medicine/coagulant/on_mob_end_metabolize(mob/living/M)
 	REMOVE_TRAIT(M, TRAIT_COAGULATING, /datum/reagent/medicine/coagulant)
+	if(ishuman(M))
+		var/mob/living/carbon/human/blood_boy = M
+		blood_boy.physiology?.bleed_mod /= passive_bleed_modifier
+	if(was_working)
+		to_chat(M, span_warning("The medicine thickening your blood loses its effect!"))
 	return ..()
 
 /datum/reagent/medicine/coagulant/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
@@ -1552,22 +1529,6 @@
 			var/obj/item/organ/heart/our_heart = M.getorganslot(ORGAN_SLOT_HEART)
 			our_heart.applyOrganDamage(1)
 
-/datum/reagent/medicine/coagulant/on_mob_metabolize(mob/living/M)
-	if(!ishuman(M))
-		return
-
-	var/mob/living/carbon/human/blood_boy = M
-	blood_boy.physiology?.bleed_mod *= passive_bleed_modifier
-
-/datum/reagent/medicine/coagulant/on_mob_end_metabolize(mob/living/M)
-	if(was_working)
-		to_chat(M, span_warning("The medicine thickening your blood loses its effect!"))
-	if(!ishuman(M))
-		return
-
-	var/mob/living/carbon/human/blood_boy = M
-	blood_boy.physiology?.bleed_mod /= passive_bleed_modifier
-
 // i googled "natural coagulant" and a couple of results came up for banana peels, so after precisely 30 more seconds of research, i now dub grinding banana peels good for your blood
 /datum/reagent/medicine/coagulant/banana_peel
 	name = "Pulped Banana Peel"
@@ -1592,3 +1553,38 @@
 	clot_rate = 0.4 //slightly better than regular coagulant
 	passive_bleed_modifier = 0.5
 	overdose_threshold = 10 //but easier to overdose on
+
+// Diphenhydramine can be upgraded into Dimenhydrinate,
+// less good against allergens but better against nausea
+/datum/reagent/medicine/dimenhydrinate
+	name = "Dimenhydrinate"
+	description = "Helps combat nausea and motion sickness."
+	reagent_state = LIQUID
+	color = "#98ffee"
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	ph = 10.6
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/medicine/dimenhydrinate/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	. = ..()
+	M.adjust_disgust(-8 * REM * delta_time)
+	if(M.nutrition > NUTRITION_LEVEL_FULL - 25) // Boosts hunger to a bit, assuming you've been vomiting
+		M.adjust_nutrition(2 * HUNGER_FACTOR * REM * delta_time)
+
+// Good against nausea, easier to make than Dimenhydrinate
+/datum/reagent/medicine/ondansetron
+	name = "Ondansetron"
+	description = "Prevents nausea and vomiting."
+	reagent_state = LIQUID
+	color = "#74d3ff"
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	ph = 10.6
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/medicine/ondansetron/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	. = ..()
+	if(DT_PROB(8, delta_time))
+		M.drowsyness++
+	if(DT_PROB(15, delta_time) && M.get_bodypart_pain(BODY_ZONE_HEAD) <= PAIN_HEAD_MAX / 4)
+		M.cause_pain(BODY_ZONE_HEAD, 4)
+	M.adjust_disgust(-10 * REM * delta_time)

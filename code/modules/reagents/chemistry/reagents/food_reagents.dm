@@ -754,6 +754,7 @@
 	add_reagent_light(exposed_mob)
 
 /datum/reagent/consumable/tinlux/on_mob_end_metabolize(mob/living/M)
+	. = ..()
 	remove_reagent_light(M)
 
 /datum/reagent/consumable/tinlux/proc/on_living_holder_deletion(mob/living/source)

@@ -94,7 +94,10 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	var/list/addiction_types = null
 	///The amount a robot will pay for a glass of this (20 units but can be higher if you pour more, be frugal!)
 	var/glass_price
-
+	/// Modifier applied by this reagent to the mob's pain.
+	/// This is both a multiplicative modifier to their overall received pain,
+	/// and an additive modifier to their per tick pain decay rate.
+	var/pain_modifier = null
 
 /datum/reagent/New()
 	SHOULD_CALL_PARENT(TRUE)
@@ -175,11 +178,19 @@ Primarily used in reagents/reaction_agents
 
 /// Called when this reagent first starts being metabolized by a liver
 /datum/reagent/proc/on_mob_metabolize(mob/living/L)
-	return
+	SHOULD_CALL_PARENT(TRUE)
+
+	if(!isnull(pain_modifier) && iscarbon(L))
+		var/mob/living/carbon/carbon_mob = L
+		carbon_mob.set_pain_mod("[PAIN_MOD_CHEMS]-[name]", pain_modifier)
 
 /// Called when this reagent stops being metabolized by a liver
 /datum/reagent/proc/on_mob_end_metabolize(mob/living/L)
-	return
+	SHOULD_CALL_PARENT(TRUE)
+
+	if(!isnull(pain_modifier) && iscarbon(L))
+		var/mob/living/carbon/carbon_mob = L
+		carbon_mob.unset_pain_mod("[PAIN_MOD_CHEMS]-[name]")
 
 /// Called when a reagent is inside of a mob when they are dead
 /datum/reagent/proc/on_mob_dead(mob/living/carbon/C, delta_time)
@@ -252,5 +263,3 @@ Primarily used in reagents/reaction_agents
 		rs += "[R.name], [R.volume]"
 
 	return rs.Join(" | ")
-
-

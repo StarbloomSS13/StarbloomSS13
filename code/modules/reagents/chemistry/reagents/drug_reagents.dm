@@ -5,6 +5,7 @@
 	var/trippy = TRUE //Does this drug make you trip?
 
 /datum/reagent/drug/on_mob_end_metabolize(mob/living/M)
+	. = ..()
 	if(trippy)
 		SEND_SIGNAL(M, COMSIG_CLEAR_MOOD_EVENT, "[type]_high")
 
@@ -16,6 +17,7 @@
 	ph = 9
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	addiction_types = list(/datum/addiction/hallucinogens = 10) //4 per 2 seconds
+	pain_modifier = 0.8
 
 /datum/reagent/drug/space_drugs/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	M.set_drugginess(15 * REM * delta_time)

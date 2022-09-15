@@ -174,7 +174,7 @@
 	icon_state = "morphen"
 	inhand_icon_state = "morphen"
 	base_icon_state = "morphen"
-	list_reagents = list(/datum/reagent/medicine/morphine = 10)
+	list_reagents = list(/datum/reagent/medicine/painkiller/morphine = 10)
 
 /obj/item/reagent_containers/hypospray/medipen/oxandrolone
 	name = "oxandrolone medipen"

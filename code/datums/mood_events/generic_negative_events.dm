@@ -279,11 +279,6 @@
 	mood_change *= people_laughing_at_you
 	return ..()
 
-//These are unused so far but I want to remember them to use them later
-/datum/mood_event/surgery
-	description = "THEY'RE CUTTING ME OPEN!!"
-	mood_change = -8
-
 /datum/mood_event/bald
 	description = "I need something to cover my head..."
 	mood_change = -3

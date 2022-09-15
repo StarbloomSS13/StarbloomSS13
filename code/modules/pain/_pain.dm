@@ -261,7 +261,7 @@
 	if(amount > 12 && prob(25))
 		do_pain_emote("scream", 5 SECONDS)
 	else if(amount > 6 && prob(10))
-		do_pain_emote(pick(PAIN_EMOTES))
+		do_pain_emote()
 
 /**
  * Called when pain is lost, if the mob did not lose pain in the last 60 seconds.
@@ -682,6 +682,9 @@
  * returns TRUE if successful.
  */
 /datum/pain/proc/do_pain_emote(emote, cooldown = 3 SECONDS)
+	if(!emote)
+		emote = pick(PAIN_EMOTES)
+
 	if(!COOLDOWN_FINISHED(src, time_since_last_pain_message))
 		return FALSE
 

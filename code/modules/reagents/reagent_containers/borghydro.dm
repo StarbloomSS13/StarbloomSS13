@@ -192,7 +192,7 @@ Borg Hypospray
 		/datum/reagent/medicine/syndicate_nanites,
 		/datum/reagent/medicine/inacusiate,
 		/datum/reagent/medicine/potass_iodide,
-		/datum/reagent/medicine/morphine,
+		/datum/reagent/medicine/painkiller/morphine,
 	)
 	bypass_protection = TRUE
 	accepts_reagent_upgrades = FALSE

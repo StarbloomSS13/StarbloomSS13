@@ -63,6 +63,11 @@
 	timeout = 30 SECONDS
 	special_screen_obj = "mood_happiness_bad"
 
+/datum/mood_event/narcotic_light
+	description = "I feel numb."
+	mood_change = 4
+	timeout = 3 MINUTES
+
 /datum/mood_event/narcotic_medium
 	description = "I feel comfortably numb."
 	mood_change = 4
