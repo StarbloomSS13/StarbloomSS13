@@ -866,3 +866,5 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// Trait for painless surgery, used with painkillers
 #define TRAIT_NUMBED "numbed"
+/// Mob is on anesthetic
+#define TRAIT_ON_ANESTHETIC "on_anesthetic"

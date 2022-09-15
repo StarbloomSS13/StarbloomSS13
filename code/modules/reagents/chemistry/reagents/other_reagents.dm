@@ -1458,9 +1458,11 @@
 /datum/reagent/healium/on_mob_metabolize(mob/living/L)
 	. = ..()
 	L.PermaSleeping()
+	ADD_TRAIT(L, TRAIT_ON_ANESTHETIC, type)
 
 /datum/reagent/healium/on_mob_end_metabolize(mob/living/L)
 	L.SetSleeping(10)
+	REMOVE_TRAIT(L, TRAIT_ON_ANESTHETIC, type)
 	return ..()
 
 /datum/reagent/healium/on_mob_life(mob/living/L, delta_time, times_fired)

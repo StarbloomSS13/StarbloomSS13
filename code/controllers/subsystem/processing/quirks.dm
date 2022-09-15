@@ -26,6 +26,8 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 		list("Clown Enjoyer","Mime Fan"),
 		list("Bad Touch", "Friendly"),
 		list("Extrovert", "Introvert"),
+		list("Allodynia", "Hyperalgesia", "Hypoalgesia"),
+		list("Allodynia", "Bad Touch"),
 	)
 
 /datum/controller/subsystem/processing/quirks/Initialize(timeofday)
