@@ -17,6 +17,8 @@
 	name = "reinforce ligaments"
 	accept_hand = TRUE
 	time = 125
+	surgery_moodlet = /datum/mood_event/surgery/major
+	pain_overlay_severity = 2
 	pain_amount = 10
 	pain_type = BURN
 

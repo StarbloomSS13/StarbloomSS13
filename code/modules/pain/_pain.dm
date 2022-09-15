@@ -1,5 +1,3 @@
-// -- Pain for bodyparts --
-
 /**
  * The pain controller datum.
  *
@@ -25,8 +23,6 @@
 	COOLDOWN_DECLARE(time_since_last_pain_loss)
 	/// Cooldown to track last time we sent a pain message.
 	COOLDOWN_DECLARE(time_since_last_pain_message)
-	/// Debugging = TRUE will spit debugging messages out for testing purposes.
-	var/debugging = FALSE
 
 /datum/pain/New(mob/living/carbon/human/new_parent)
 	if(!iscarbon(new_parent) || istype(new_parent, /mob/living/carbon/human/dummy))
@@ -75,9 +71,6 @@
  * Unregister all of our signals from our parent when we're done, if we have signals to unregister.
  */
 /datum/pain/proc/unregister_pain_signals()
-	if(!parent)
-		return
-
 	UnregisterSignal(parent, list(
 		COMSIG_CARBON_ATTACH_LIMB,
 		COMSIG_CARBON_REMOVE_LIMB,
@@ -284,7 +277,17 @@
  * damagetype - the type of damage sustained
  * def_zone - the limb being targeted with damage (either a bodypart zone or an obj/item/bodypart)
  */
-/datum/pain/proc/add_damage_pain(mob/living/carbon/source, damage, damagetype, def_zone)
+/datum/pain/proc/add_damage_pain(
+	mob/living/carbon/source,
+	damage,
+	damagetype,
+	def_zone,
+	wound_bonus = 0,
+	bare_wound_bonus = 0,
+	sharpness = NONE,
+	attack_direction,
+)
+
 	SIGNAL_HANDLER
 
 	if(damage <= 0)
@@ -295,28 +298,35 @@
 	else
 		def_zone = check_zone(def_zone)
 
-	var/pain = damage
+	// By default pain is calculated based on damage and wounding
+	// Attacks with a wound bonus add additional pain (usually, like 2-5)
+	// (Note that if they also succeed in applying a wound, more pain comes from that)
+	// Also, sharp attacks apply a smidge extra pain
+	var/pain = (damage + 0.25 * (wound_bonus + bare_wound_bonus)) * (sharpness ? 1.2 : 1)
 	switch(damagetype)
 		// Brute pain is dealt to the target zone
-		// pain = the damage divided by a random number
+		// pain is just divided by a random number, for variance
 		if(BRUTE)
-			pain = damage / rand(1.5, 3)
+			pain /= rand(1.5, 3)
 
 		// Burn pain is dealt to the target zone
-		// pain = lower for weaker burns, but scales up for more damaging burns
+		// pain is lower for weaker burns, but scales up for more damaging burns
 		if(BURN)
 			switch(damage)
 				if(1 to 10)
-					pain = damage / 4
+					pain /= 4
 				if(10 to 15)
-					pain = damage / 3
+					pain /= 3
 				if(15 to 20)
-					pain = damage / 2
+					pain /= 2
 				if(20 to INFINITY)
-					pain = damage / 1.2
+					pain /= 1.2
 
 		// Toxins pain is dealt to the chest (stomach and liver)
-		// pain = divided by the liver's tox tolerance, liver damage, stomach damage, and more for higher total toxloss
+		// Pain is determined by the liver's tox tolerance, liver damage, and stomach damage
+		// having a high amount of toxloss also adds additional pain
+		//
+		// Note: 99% of sources of toxdamage is done through adjusttoxloss, and as such doesn't go through this
 		if(TOX)
 			def_zone = BODY_ZONE_CHEST
 			var/obj/item/organ/liver/our_liver = source.getorganslot(ORGAN_SLOT_LIVER)
@@ -344,14 +354,16 @@
 			else
 				pain += 3
 
-			switch(source.toxloss)
+			switch(source.getToxLoss())
 				if(33 to 66)
 					pain += 1
 				if(66 to INFINITY)
 					pain += 3
 
 		// Oxy pain is dealt to the head and chest
-		// pain = more for hurt lungs, more for higher total oxyloss
+		// pain is increasd based on lung damage and overall oxyloss
+		//
+		// Note: 99% of sources of oxydamage is done through adjustoxyloss, and as such doesn't go through this
 		if(OXY)
 			def_zone = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST)
 			var/obj/item/organ/lungs/our_lungs = source.getorganslot(ORGAN_SLOT_LUNGS)
@@ -366,7 +378,7 @@
 			else
 				pain += 5
 
-			switch(parent.oxyloss)
+			switch(parent.getOxyLoss())
 				if(0 to 20)
 					pain = 0
 				if(20 to 50)
@@ -375,11 +387,12 @@
 					pain += 3
 
 		// Cellular pain is dealt to all bodyparts
-		// pain = damage (very ouchy)
 		if(CLONE)
 			def_zone = BODY_ZONES_ALL
 
 		// No pain from stamina loss
+		// In the future stamina can probably cause very sharp pain and replace stamcrit,
+		// but the system will require much finer tuning before then
 		if(STAMINA)
 			return
 
@@ -458,7 +471,8 @@
 			if(70 to INFINITY)
 				high_pain_effects(delta_time)
 
-	decay_pain(delta_time)
+	if(!parent.has_status_effect(/datum/status_effect/grouped/stasis))
+		decay_pain(delta_time)
 
 /**
  * Check which additional pain modifiers should be applied.
@@ -477,24 +491,6 @@
 			set_pain_modifier(PAIN_MOD_DROWSY, 0.95)
 		else
 			unset_pain_modifier(PAIN_MOD_DROWSY)
-
-	if(parent.IsSleeping())
-		var/sleeping_turf = get_turf(parent)
-		var/sleeping_modifier = 0.8
-		if(locate(/obj/structure/bed) in sleeping_turf)
-			sleeping_modifier -= 0.2
-		if(locate(/obj/item/bedsheet) in sleeping_turf)
-			sleeping_modifier -= 0.2
-		if(locate(/obj/structure/table/optable) in sleeping_turf)
-			sleeping_modifier -= 0.1
-		var/obj/item/organ/lungs/our_lungs = parent.getorganslot(ORGAN_SLOT_LUNGS)
-		if(our_lungs?.on_anesthetic)
-			sleeping_modifier -= 0.5
-
-		sleeping_modifier = max(sleeping_modifier, 0.1)
-		set_pain_modifier(PAIN_MOD_SLEEP, sleeping_modifier)
-	else
-		unset_pain_modifier(PAIN_MOD_SLEEP)
 
 /**
  * Whenever we buckle to something or lie down, get a pain bodifier.
@@ -559,7 +555,7 @@
 		parent.stuttering += 8
 
 	else if(DT_PROB(3, delta_time))
-		to_chat(parent, span_bold(span_danger(pick("Everything hurts.", "Everything feels very sore.", "It hurts."))))
+		to_chat(parent, span_bolddanger(pick("Everything hurts.", "Everything feels very sore.", "It hurts.")))
 		do_pain_emote("scream", 5 SECONDS)
 		if(parent.staminaloss < 30)
 			parent.apply_damage(10, STAMINA)
@@ -738,14 +734,6 @@
 
 	var/datum/disease/shock/shock_disease = is_undergoing_shock()
 	shock_disease?.cure()
-
-	// Future todo: Pain mods should be datums or something, cause this is wack
-	var/static/list/unremovable_pain_mods = list(PAIN_MOD_QUIRK, PAIN_MOD_SPECIES, PAIN_MOD_GENETICS)
-
-	for(var/mod in pain_mods)
-		if(mod in unremovable_pain_mods)
-			continue
-		unset_pain_modifier(mod)
 
 /**
  * Determines if we should be processing or not.

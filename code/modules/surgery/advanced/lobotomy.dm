@@ -33,6 +33,8 @@
 	preop_sound = 'sound/surgery/scalpel1.ogg'
 	success_sound = 'sound/surgery/scalpel2.ogg'
 	failure_sound = 'sound/surgery/organ2.ogg'
+	surgery_moodlet = /datum/mood_event/surgery/major
+	pain_overlay_severity = 2
 	pain_amount = 40
 
 /datum/surgery_step/lobotomize/tool_check(mob/user, obj/item/tool)

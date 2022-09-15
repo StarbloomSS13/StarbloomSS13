@@ -1,5 +1,3 @@
-// -- Defines for the pain system. --
-
 /// Sent when a carbon gains pain. (source = mob/living/carbon/human, obj/item/bodypart/affected_bodypart, amount, type)
 #define COMSIG_CARBON_PAIN_GAINED "pain_gain"
 /// Sent when a carbon loses pain. (source = mob/living/carbon/human, obj/item/bodypart/affected_bodypart, amount, type)
@@ -56,12 +54,8 @@
 #define PAIN_MOD_DROWSY "drowsy"
 #define PAIN_MOD_NEAR_DEATH "near-death"
 #define PAIN_MOD_RECENT_SHOCK "recently-shocked"
-#define PAIN_MOD_YOUTH "youth"
-#define PAIN_MOD_TENACITY "tenacity"
 #define PAIN_MOD_QUIRK "quirk"
-#define PAIN_MOD_SPECIES "species"
 #define PAIN_MOD_OFF_STATION "off-station-pain-resistance"
-#define PAIN_MOD_GENETICS "gene"
 
 /// ID for traits and modifiers gained by pain
 #define PAIN_LIMB_PARALYSIS "pain_paralysis"

@@ -101,6 +101,9 @@
 				to_chat(owner, span_warning("You faint."))
 				owner.Unconscious(80)
 
+	if(DT_PROB(1, delta_time))
+		owner.cause_pain(BODY_ZONE_HEAD, 10)
+
 	..()
 
 /datum/brain_trauma/mild/healthy

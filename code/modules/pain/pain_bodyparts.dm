@@ -1,3 +1,5 @@
+// Bodypart extensions to handle pain
+// Yes pain is handled on a per-bodypart basis
 /obj/item/bodypart
 	/// The amount of pain this limb is experiencing (A bit for default)
 	var/pain = 15

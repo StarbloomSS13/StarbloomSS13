@@ -110,11 +110,21 @@
 	target.extinguish_mob()
 	update_use_power(ACTIVE_POWER_USE)
 
+	if(!iscarbon(target))
+		return
+	var/mob/living/carbon/carbon_target = target
+	target.set_pain_mod(PAIN_MOD_STASIS, 0.3)
+
 /obj/machinery/stasis/proc/thaw_them(mob/living/target)
 	target.remove_status_effect(/datum/status_effect/grouped/stasis, STASIS_MACHINE_EFFECT)
 	REMOVE_TRAIT(target, TRAIT_TUMOR_SUPPRESSED, TRAIT_GENERIC)
 	if(target == occupant)
 		update_use_power(IDLE_POWER_USE)
+
+	if(!iscarbon(target))
+		return
+	var/mob/living/carbon/carbon_target = target
+	target.unset_pain_mod(PAIN_MOD_STASIS)
 
 /obj/machinery/stasis/post_buckle_mob(mob/living/L)
 	if(!can_be_occupant(L))
