@@ -384,7 +384,7 @@
 				owner.stam_regen_start_time = world.time + STAMINA_REGEN_BLOCK_TIME
 				. = TRUE
 
-		owner.cause_typed_pain(body_zone, body_damage_coeff * (brute + burn), (brute > burn ? BRUTE : BURN))
+		// owner.cause_typed_pain(body_zone, body_damage_coeff * (brute + burn), (brute > burn ? BRUTE : BURN))
 
 	return update_bodypart_damage_state() || .
 

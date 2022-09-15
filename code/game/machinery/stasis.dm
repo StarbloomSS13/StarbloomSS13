@@ -113,7 +113,7 @@
 	if(!iscarbon(target))
 		return
 	var/mob/living/carbon/carbon_target = target
-	target.set_pain_mod(PAIN_MOD_STASIS, 0.3)
+	carbon_target.set_pain_mod(PAIN_MOD_STASIS, 0.3)
 
 /obj/machinery/stasis/proc/thaw_them(mob/living/target)
 	target.remove_status_effect(/datum/status_effect/grouped/stasis, STASIS_MACHINE_EFFECT)
@@ -124,7 +124,7 @@
 	if(!iscarbon(target))
 		return
 	var/mob/living/carbon/carbon_target = target
-	target.unset_pain_mod(PAIN_MOD_STASIS)
+	carbon_target.unset_pain_mod(PAIN_MOD_STASIS)
 
 /obj/machinery/stasis/post_buckle_mob(mob/living/L)
 	if(!can_be_occupant(L))

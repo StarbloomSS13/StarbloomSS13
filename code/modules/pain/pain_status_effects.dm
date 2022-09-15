@@ -337,8 +337,8 @@
 
 	var/mob/living/carbon/human/human_owner = owner
 	var/obj/item/bodypart/held_bodypart = human_owner.pain_controller.body_zones[targeted_zone]
-	examine_text = span_danger("[holder == owner ? "[owner.p_theyre(TRUE)]" : "[holder] is"] pressing a cold [pressed_item.name] against [owner.p_their()] [held_bodypart.name].")
-	to_chat(human_owner, span_green("You wince as [owner == holder ? "you press" : "[holder] presses"] [pressed_item] against your [held_bodypart.name], but eventually the chill starts to dull the pain."))
+	examine_text = span_danger("[holder == owner ? "[owner.p_theyre(TRUE)]" : "[holder] is"] pressing a cold [pressed_item.name] against [owner.p_their()] [parse_zone(held_bodypart.body_zone)].")
+	to_chat(human_owner, span_green("You wince as [owner == holder ? "you press" : "[holder] presses"] [pressed_item] against your [parse_zone(held_bodypart.body_zone)], but eventually the chill starts to dull the pain."))
 	human_owner.pain_emote("wince", 3 SECONDS)
 
 /datum/status_effect/temperature_pack/cold/tick()

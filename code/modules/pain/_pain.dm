@@ -48,9 +48,10 @@
 
 /datum/pain/Destroy()
 	body_zones = null
-	STOP_PROCESSING(SSpain, src)
-	unregister_pain_signals()
-	parent = null
+	if(parent)
+		STOP_PROCESSING(SSpain, src)
+		unregister_pain_signals()
+		parent = null
 	return ..()
 
 /**
@@ -81,7 +82,7 @@
 		COMSIG_LIVING_POST_FULLY_HEAL,
 		COMSIG_LIVING_HEALTHSCAN,
 		COMSIG_LIVING_SET_BODY_POSITION,
-		COMSIG_LIVING_SET_BUCKLED
+		COMSIG_LIVING_SET_BUCKLED,
 	))
 
 /**
@@ -124,9 +125,9 @@
 		var/limb_removed_pain = (dismembered ? PAIN_LIMB_DISMEMBERED : PAIN_LIMB_REMOVED)
 		adjust_bodypart_pain(BODY_ZONE_CHEST, limb_removed_pain)
 		adjust_bodypart_pain(BODY_ZONES_MINUS_CHEST, limb_removed_pain / 3)
-		lost_limb.pain = initial(lost_limb.pain)
-		lost_limb.max_stamina_damage = initial(lost_limb.max_stamina_damage)
 
+	lost_limb.pain = initial(lost_limb.pain)
+	lost_limb.max_stamina_damage = initial(lost_limb.max_stamina_damage)
 	body_zones -= lost_limb.body_zone
 
 /**
@@ -211,7 +212,8 @@
 		else if(adjusted_amount <= -1.5 || COOLDOWN_FINISHED(src, time_since_last_pain_loss))
 			INVOKE_ASYNC(src, .proc/on_pain_loss, adjusted_bodypart, amount, dam_type)
 
-		testing("PAIN DEBUG: [parent] recived [adjusted_amount] pain to [adjusted_bodypart]. Part pain: [adjusted_bodypart.pain]")
+		if(abs(adjusted_amount) > 1)
+			testing("PAIN DEBUG: [parent] recived [adjusted_amount] pain to [adjusted_bodypart]. Part pain: [adjusted_bodypart.pain]")
 
 	return TRUE
 
@@ -302,7 +304,7 @@
 	// Attacks with a wound bonus add additional pain (usually, like 2-5)
 	// (Note that if they also succeed in applying a wound, more pain comes from that)
 	// Also, sharp attacks apply a smidge extra pain
-	var/pain = (damage + 0.25 * (wound_bonus + bare_wound_bonus)) * (sharpness ? 1.2 : 1)
+	var/pain = (damage + 0.1 * (wound_bonus + bare_wound_bonus)) * (sharpness ? 1.2 : 1)
 	switch(damagetype)
 		// Brute pain is dealt to the target zone
 		// pain is just divided by a random number, for variance
@@ -403,6 +405,7 @@
 	if(!def_zone || !pain)
 		return
 
+	testing("[parent] is recieving [pain] of type [damagetype] to the [parse_zone(def_zone)].")
 	adjust_bodypart_pain(def_zone, pain, damagetype)
 
 /**
@@ -416,7 +419,7 @@
 	SIGNAL_HANDLER
 
 	adjust_bodypart_min_pain(wounded_limb.body_zone, applied_wound.severity * 5)
-	adjust_bodypart_pain(wounded_limb.body_zone, applied_wound.severity * 10)
+	adjust_bodypart_pain(wounded_limb.body_zone, applied_wound.severity * 7.5)
 
 /**
  * Remove pain from a healed wound.
@@ -458,7 +461,10 @@
 			continue
 		checked_bodypart.processed_pain_effects(delta_time)
 
-		if(DT_PROB(checked_bodypart.get_modified_pain() / 8, delta_time) && COOLDOWN_FINISHED(src, time_since_last_pain_message))
+		if(!COOLDOWN_FINISHED(src, time_since_last_pain_message))
+			continue
+
+		if(DT_PROB(checked_bodypart.get_modified_pain() / 8, delta_time))
 			if(checked_bodypart.pain_feedback(delta_time, COOLDOWN_FINISHED(src, time_since_last_pain_loss)))
 				COOLDOWN_START(src, time_since_last_pain_message, 4 SECONDS)
 
@@ -498,7 +504,6 @@
 /datum/pain/proc/check_lying_pain_modifier(datum/source, new_buckled)
 	SIGNAL_HANDLER
 
-	unset_pain_modifier(PAIN_MOD_LYING)
 	var/buckled_lying_modifier = 1
 	if(parent.body_position == LYING_DOWN)
 		buckled_lying_modifier -= 0.1
@@ -508,6 +513,8 @@
 
 	if(buckled_lying_modifier < 1)
 		set_pain_modifier(PAIN_MOD_LYING, buckled_lying_modifier)
+	else
+		unset_pain_modifier(PAIN_MOD_LYING)
 
 /**
  * Natural pain healing of all of our bodyparts per five process ticks / 10 seconds.

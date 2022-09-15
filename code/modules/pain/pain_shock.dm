@@ -50,7 +50,10 @@
 	return conditions_fulfilled
 
 /datum/disease/shock/has_cure(cached_cure_level)
-	return (cached_cure_level || check_cure_conditions()) >= conditions_required_to_cure
+	if(isnull(cached_cure_level))
+		cached_cure_level = check_cure_conditions()
+
+	return cached_cure_level >= conditions_required_to_cure
 
 /datum/disease/shock/after_add()
 	affected_mob.apply_status_effect(/datum/status_effect/low_blood_pressure)

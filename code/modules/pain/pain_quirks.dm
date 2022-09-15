@@ -97,7 +97,7 @@
 		return
 
 	to_chat(quirk_holder, span_danger("[patter] taps your head, causing a sensation of pain!"))
-	INVOKE_ASYNC(src, .actually_hurt, BODY_ZONE_HEAD, 7)
+	INVOKE_ASYNC(src, .proc/actually_hurt, BODY_ZONE_HEAD, 7)
 
 /*
  * Actually cause the pain to the target limb, causing a visual effect, emote, and a negative moodlet.
