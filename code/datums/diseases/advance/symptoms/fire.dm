@@ -49,39 +49,39 @@ Bonus
 	if(A.totalTransmittable() >= 8) //burning skin spreads the virus through smoke
 		infective = TRUE
 
-/datum/symptom/fire/Activate(datum/disease/advance/A)
+/datum/symptom/fire/Activate(datum/disease/advance/source_disease)
 	. = ..()
 	if(!.)
 		return
-	var/mob/living/M = A.affected_mob
+	var/mob/living/carbon/ill_mob = source_disease.affected_mob
 	switch(A.stage)
 		if(3)
 			if(prob(base_message_chance) && !suppress_warning)
-				to_chat(M, span_warning("[pick("You feel hot.", "You hear a crackling noise.", "You smell smoke.")]"))
+				to_chat(ill_mob, span_warning("[pick("You feel hot.", "You hear a crackling noise.", "You smell smoke.")]"))
+
 		if(4)
-			Firestacks_stage_4(M, A)
-			M.IgniteMob()
-			to_chat(M, span_userdanger("Your skin bursts into flames!"))
-			M.emote("scream")
+			ill_mob.adjust_fire_stacks(1 * power)
+			ill_mob.IgniteMob()
+			ill_mob.take_overall_damage(burn = 3 * power, required_status = BODYTYPE_ORGANIC)
+			if(infective)
+				source_disease.spread(2)
+
+			to_chat(ill_mob, span_userdanger("Your skin bursts into flames!"))
+			ill_mob.cause_typed_pain(BODY_ZONES_ALL, 5, BURN)
+			ill_mob.flash_pain_overlay(1)
+			ill_mob.pain_emote("scream", 5 SECONDS)
+
 		if(5)
-			Firestacks_stage_5(M, A)
-			M.IgniteMob()
-			to_chat(M, span_userdanger("Your skin erupts into an inferno!"))
-			M.emote("scream")
+			ill_mob.adjust_fire_stacks(3 * power)
+			ill_mob.IgniteMob()
+			ill_mob.take_overall_damage(burn = 5 * power, required_status = BODYTYPE_ORGANIC)
+			if(infective)
+				source_disease.spread(4)
 
-/datum/symptom/fire/proc/Firestacks_stage_4(mob/living/M, datum/disease/advance/A)
-	M.adjust_fire_stacks(1 * power)
-	M.take_overall_damage(burn = 3 * power, required_status = BODYTYPE_ORGANIC)
-	if(infective)
-		A.spread(2)
-	return 1
-
-/datum/symptom/fire/proc/Firestacks_stage_5(mob/living/M, datum/disease/advance/A)
-	M.adjust_fire_stacks(3 * power)
-	M.take_overall_damage(burn = 5 * power, required_status = BODYTYPE_ORGANIC)
-	if(infective)
-		A.spread(4)
-	return 1
+			to_chat(ill_mob, span_userdanger("Your skin erupts into an inferno!"))
+			ill_mob.cause_typed_pain(BODY_ZONES_ALL, 10, BURN)
+			ill_mob.flash_pain_overlay(2)
+			ill_mob.pain_emote("scream", 5 SECONDS)
 
 /*
 //////////////////////////////////////

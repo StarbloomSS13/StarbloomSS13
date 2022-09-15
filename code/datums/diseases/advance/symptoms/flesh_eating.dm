@@ -18,7 +18,7 @@ Bonus
 /datum/symptom/flesh_eating
 
 	name = "Necrotizing Fasciitis"
-	desc = "The virus aggressively attacks body cells, necrotizing tissues and organs."
+	desc = "The virus aggressively attacks body cells, necrotizing tissues and organs and causing pain."
 	stealth = -3
 	resistance = -4
 	stage_speed = 0
@@ -28,12 +28,15 @@ Bonus
 	base_message_chance = 50
 	symptom_delay_min = 15
 	symptom_delay_max = 60
-	var/bleed = FALSE
-	var/pain = FALSE
 	threshold_descs = list(
 		"Resistance 7" = "Host will bleed profusely during necrosis.",
-		"Transmission 8" = "Causes extreme pain to the host, weakening it.",
+		"Transmission 8" = "Causes additional pain to the host, weakening it.",
 	)
+
+	/// We cause bleeding when we trigger
+	var/bleed = FALSE
+	/// We cause stamina damage and extra pain when we trigger
+	var/pain = FALSE
 
 /datum/symptom/flesh_eating/Start(datum/disease/advance/A)
 	. = ..()
@@ -44,18 +47,35 @@ Bonus
 	if(A.totalTransmittable() >= 8) //extra stamina damage
 		pain = TRUE
 
-/datum/symptom/flesh_eating/Activate(datum/disease/advance/A)
+/datum/symptom/flesh_eating/Activate(datum/disease/advance/source_disease)
 	. = ..()
 	if(!.)
 		return
-	var/mob/living/M = A.affected_mob
-	switch(A.stage)
-		if(2,3)
+	var/mob/living/carbon/human/ill_mob = source_disease.affected_mob
+	switch(source_disease.stage)
+		if(2, 3)
 			if(prob(base_message_chance))
-				to_chat(M, span_warning("[pick("You feel a sudden pain across your body.", "Drops of blood appear suddenly on your skin.")]"))
-		if(4,5)
-			to_chat(M, span_userdanger("[pick("You cringe as a violent pain takes over your body.", "It feels like your body is eating itself inside out.", "IT HURTS.")]"))
-			Flesheat(M, A)
+				to_chat(ill_mob, span_warning("[pick("You feel a sudden pain across your body.", "Drops of blood appear suddenly on your skin.")]"))
+
+			ill_mob.cause_pain(BODY_ZONES_ALL, 3 * (pain ? 2 : 1))
+			ill_mob.flash_pain_overlay(1, 2 SECONDS)
+
+		if(4, 5)
+			to_chat(ill_mob, span_userdanger("[pick("You cringe as a violent pain takes over your body.", "It feels like your body is eating itself inside out.", "IT HURTS.")]"))
+
+			var/applied_damage = rand(15, 25) * power
+			ill_mob.take_overall_damage(
+				brute = applied_damage,
+				stamina = pain * applied_damage * 2,
+				required_status = BODYTYPE_ORGANIC,
+			)
+
+			if(bleed)
+				var/obj/item/bodypart/random_part = pick(ill_mob.bodyparts)
+				random_part?.generic_bleedstacks += (5 * power)
+
+			ill_mob.affected_mob.cause_pain(BODY_ZONES_ALL, 12 * (pain + 1))
+			ill_mob.affected_mob.flash_pain_overlay(2, 2 SECONDS)
 
 /datum/symptom/flesh_eating/proc/Flesheat(mob/living/M, datum/disease/advance/A)
 	var/get_damage = rand(15,25) * power

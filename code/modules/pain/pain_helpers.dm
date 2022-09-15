@@ -20,6 +20,8 @@
  * Sharp pain is for sudden spikes of pain that go away after [duration] deciseconds.
  */
 /mob/living/carbon/proc/sharp_pain(target_zones, amount = 0, dam_type = BRUTE, duration = 1 MINUTES)
+	if(!pain_controller)
+		return
 	if(!islist(target_zones))
 		target_zones = list(target_zones)
 	for(var/zone in target_zones)
@@ -30,6 +32,8 @@
  * unset it automatically after [time] deciseconds have elapsed.
  */
 /mob/living/carbon/proc/set_timed_pain_mod(id, amount = 0, time = 0)
+	if(!pain_controller)
+		return
 	if(time <= 0)
 		return
 	set_pain_mod(id, amount)

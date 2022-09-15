@@ -87,7 +87,7 @@
 		display_results(user, target, span_notice("You succeed in replacing [target]'s [parse_zone(target_zone)]."),
 			span_notice("[user] successfully replaces [target]'s [parse_zone(target_zone)] with [tool]!"),
 			span_notice("[user] successfully replaces [target]'s [parse_zone(target_zone)]!"))
-		display_pain(target, "You feel synthetic sensation wash from your [parse_zone(target_zone)], which you can feel again!", TRUE)
+		display_pain(target, "You feel synthetic sensation wash from your [parse_zone(target_zone)], which you can feel again!", mechanical_surgery = TRUE, target_zone = target_zone)
 		return
 	else
 		var/obj/item/bodypart/limb_to_attach = target.newBodyPart(target_zone, FALSE, FALSE)
@@ -102,7 +102,7 @@
 		display_results(user, target, span_notice("You attach [tool]."),
 			span_notice("[user] finishes attaching [tool]!"),
 			span_notice("[user] finishes the attachment procedure!"))
-		display_pain(target, "You feel a strange sensation from your new [parse_zone(target_zone)].", TRUE)
+		display_pain(target, "You feel a strange sensation from your new [parse_zone(target_zone)].", mechanical_surgery = TRUE, target_zone = target_zone)
 		qdel(tool)
 		if(istype(tool, /obj/item/chainsaw))
 			var/obj/item/mounted_chainsaw/new_arm = new(target)

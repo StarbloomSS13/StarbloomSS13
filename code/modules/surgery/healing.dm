@@ -42,6 +42,8 @@
 	time = 25
 	success_sound = 'sound/surgery/retractor2.ogg'
 	failure_sound = 'sound/surgery/organ2.ogg'
+	pain_amount = 9
+
 	var/brutehealing = 0
 	var/burnhealing = 0
 	var/brute_multiplier = 0 //multiplies the damage that the patient has. if 0 the patient wont get any additional healing from the damage he has.
@@ -59,13 +61,15 @@
 		woundtype = "bruises"
 	else //why are you trying to 0,0...?
 		woundtype = "burns"
+		pain_type = BURN
+
 	if(istype(surgery,/datum/surgery/healing))
 		var/datum/surgery/healing/the_surgery = surgery
 		if(!the_surgery.antispam)
 			display_results(user, target, span_notice("You attempt to patch some of [target]'s [woundtype]."),
 		span_notice("[user] attempts to patch some of [target]'s [woundtype]."),
 		span_notice("[user] attempts to patch some of [target]'s [woundtype]."))
-		display_pain(target, "Your [woundtype] sting like hell!")
+		display_pain(target, "Your [woundtype] sting like hell!", target_zone = target_zone)
 
 /datum/surgery_step/heal/initiate(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, try_to_fail = FALSE)
 	if(!..())

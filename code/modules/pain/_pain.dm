@@ -201,7 +201,7 @@
 
 	for(var/zone in shuffle(def_zones))
 		var/adjusted_amount = round(amount, 0.01)
-		var/obj/item/bodypart/adjusted_bodypart = body_zones[zone]
+		var/obj/item/bodypart/adjusted_bodypart = body_zones[check_zone(zone)]
 		if(QDELETED(adjusted_bodypart))
 			continue
 		if(amount < 0 && adjusted_bodypart.pain <= adjusted_bodypart.min_pain)

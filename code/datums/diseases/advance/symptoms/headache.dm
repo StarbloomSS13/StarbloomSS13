@@ -48,17 +48,24 @@ BONUS
 		symptom_delay_max = 60
 		power = 3
 
-/datum/symptom/headache/Activate(datum/disease/advance/A)
+/datum/symptom/headache/Activate(datum/disease/advance/source_disease)
 	. = ..()
 	if(!.)
 		return
-	var/mob/living/M = A.affected_mob
-	if(power < 2)
-		if(prob(base_message_chance) || A.stage >=4)
-			to_chat(M, span_warning("[pick("Your head hurts.", "Your head pounds.")]"))
-	if(power >= 2 && A.stage >= 4)
-		to_chat(M, span_warning("[pick("Your head hurts a lot.", "Your head pounds incessantly.")]"))
-		M.adjustStaminaLoss(25)
-	if(power >= 3 && A.stage >= 5)
-		to_chat(M, span_userdanger("[pick("Your head hurts!", "You feel a burning knife inside your brain!", "A wave of pain fills your head!")]"))
-		M.Stun(35)
+	var/mob/living/carbon/ill_mob = source_disease.affected_mob
+	if(power < 2 && (prob(base_message_chance) || source_disease.stage >=4))
+		to_chat(ill_mob, span_warning("[pick("Your head hurts.", "Your head pounds.")]"))
+	if(power >= 2 && source_disease.stage >= 4)
+		to_chat(ill_mob, span_warning("[pick("Your head hurts a lot.", "Your head pounds incessantly.")]"))
+		ill_mob.adjustStaminaLoss(25)
+	if(power >= 3 && source_disease.stage >= 5)
+		to_chat(ill_mob, span_userdanger("[pick("Your head hurts!", "You feel a burning knife inside your brain!", "A wave of pain fills your head!")]"))
+		ill_mob.Stun(3.5 SECONDS)
+
+	switch(source_disease.stage)
+		if(4)
+			ill_mob.sharp_pain(BODY_ZONE_HEAD, 3 * power)
+			ill_mob.flash_pain_overlay(1)
+		if(5)
+			ill_mob.sharp_pain(BODY_ZONE_HEAD, 5 * power)
+			ill_mob.flash_pain_overlay(2)

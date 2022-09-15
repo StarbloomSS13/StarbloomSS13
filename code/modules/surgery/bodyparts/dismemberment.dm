@@ -302,11 +302,11 @@
 		return
 	var/obj/item/bodypart/old_limb = limb_owner.get_bodypart(body_zone)
 	if(old_limb)
-		old_limb.drop_limb(TRUE)
+		old_limb.drop_limb(special)
 
 	. = attach_limb(limb_owner, special)
 	if(!.) //If it failed to replace, re-attach their old limb as if nothing happened.
-		old_limb.attach_limb(limb_owner, TRUE)
+		old_limb.attach_limb(limb_owner, special)
 
 /obj/item/bodypart/head/replace_limb(mob/living/carbon/head_owner, special)
 	if(!istype(head_owner))
@@ -315,7 +315,7 @@
 	if(!attach_limb(head_owner, special))
 		return
 	if(head)
-		head.drop_limb(TRUE)
+		head.drop_limb(special)
 
 /obj/item/bodypart/proc/attach_limb(mob/living/carbon/new_limb_owner, special)
 	if(SEND_SIGNAL(new_limb_owner, COMSIG_CARBON_ATTACH_LIMB, src, special) & COMPONENT_NO_ATTACH)

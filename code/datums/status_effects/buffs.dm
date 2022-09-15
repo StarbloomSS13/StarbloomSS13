@@ -190,8 +190,9 @@
 	owner.adjustOxyLoss(-10)
 	if(!iscarbon(owner))
 		return
-	var/mob/living/carbon/C = owner
-	QDEL_LIST(C.all_scars)
+	var/mob/living/carbon/carbon_owner = owner
+	carbon_owner.cause_pain(BODY_ZONES_ALL, -1.5)
+	QDEL_LIST(carbon_owner.all_scars)
 
 /atom/movable/screen/alert/status_effect/fleshmend
 	name = "Fleshmend"
@@ -338,9 +339,13 @@
 	owner.adjustFireLoss(-25)
 	owner.remove_CC()
 	owner.bodytemperature = owner.get_body_temp_normal()
-	if(istype(owner, /mob/living/carbon/human))
+	if(ishuman(owner))
 		var/mob/living/carbon/human/humi = owner
 		humi.set_coretemperature(humi.get_body_temp_normal())
+		humi.cause_pain(BODY_ZONES_LIMBS, -15)
+		humi.cause_pain(BODY_ZONE_CHEST, -20)
+		humi.cause_pain(BODY_ZONE_HEAD, -10) // heals 90 pain total
+
 	return TRUE
 
 /datum/status_effect/regenerative_core/on_remove()

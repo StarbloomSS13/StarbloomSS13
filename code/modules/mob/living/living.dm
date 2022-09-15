@@ -45,17 +45,24 @@
 
 /mob/living/onZImpact(turf/T, levels, message = TRUE)
 	if(!isgroundlessturf(T))
-		ZImpactDamage(T, levels)
+		ZImpactDamage(T, levels, message)
 		message = FALSE
 	return ..()
 
-/mob/living/proc/ZImpactDamage(turf/T, levels)
-	if(SEND_SIGNAL(src, COMSIG_LIVING_Z_IMPACT, levels, T) & NO_Z_IMPACT_DAMAGE)
+/mob/living/proc/ZImpactDamage(turf/landing, levels, message = TRUE)
+	if(SEND_SIGNAL(src, COMSIG_LIVING_Z_IMPACT, levels, landing) & NO_Z_IMPACT_DAMAGE)
 		return
-	visible_message(span_danger("[src] crashes into [T] with a sickening noise!"), \
-					span_userdanger("You crash into [T] with a sickening noise!"))
-	adjustBruteLoss((levels * 5) ** 1.5)
-	Knockdown(levels * 50)
+
+	if(message)
+		visible_message(
+			span_danger("[src] crashes into [landing] with a sickening noise!"),
+			span_userdanger("You crash into [landing] with a sickening noise!"),
+		)
+
+	var/brute_to_deal = (levels * 5) ** 1.5
+	adjustBruteLoss(brute_to_deal)
+	Knockdown(levels * 5 SECONDS)
+	return brute_to_deal
 
 //Generic Bump(). Override MobBump() and ObjBump() instead of this.
 /mob/living/Bump(atom/A)

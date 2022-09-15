@@ -515,6 +515,11 @@
 	//Don't go further if the shock was blocked/too weak.
 	if(!.)
 		return
+
+	// Cause pain from being shocked, apply a modifier for numbness
+	sharp_pain(BODY_ZONES_ALL, min((. / 2), 25), BURN)
+	set_timed_pain_mod(PAIN_MOD_RECENT_SHOCK, 0.5, 30 SECONDS)
+
 	//Note we both check that the user is in cardiac arrest and can actually heartattack
 	//If they can't, they're missing their heart and this would runtime
 	if(undergoing_cardiac_arrest() && can_heartattack() && !(flags & SHOCK_ILLUSION))
@@ -522,7 +527,8 @@
 			var/obj/item/organ/heart/heart = getorganslot(ORGAN_SLOT_HEART)
 			if(heart.Restart() && stat == CONSCIOUS)
 				to_chat(src, span_notice("You feel your heart beating again!"))
-	electrocution_animation(40)
+
+	electrocution_animation(4 SECONDS)
 
 /mob/living/carbon/human/emp_act(severity)
 	. = ..()
