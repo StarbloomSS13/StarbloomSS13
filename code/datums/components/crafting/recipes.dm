@@ -661,6 +661,15 @@
 	blacklist |= typesof(/obj/item/radio/headset)
 	blacklist |= typesof(/obj/item/radio/intercom)
 
+/datum/crafting_recipe/improvisedarmor
+	name = "improvised ballistic firesuit"
+	result = /obj/item/clothing/suit/armor/vest/improvised
+	time = 15
+	reqs = list(/obj/item/clothing/suit/fire = 1,
+				/obj/item/stack/tile/iron = 2)
+	tool_behaviors = list(TOOL_WIRECUTTER, TOOL_WELDER)
+	category = CAT_CLOTHING
+
 /datum/crafting_recipe/mixedbouquet
 	name = "Mixed bouquet"
 	result = /obj/item/bouquet
