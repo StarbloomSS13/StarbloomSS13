@@ -224,7 +224,7 @@
  */
 /datum/surgery_step/proc/give_surgery_pain(mob/living/carbon/target, pain_message, mechanical_surgery = FALSE, target_zone, target_zone = target_zone)
 	// Only feels pain if we feels pain
-	if(!target.pain_controller || target.pain_controller.pain_modifier <= 0.75 || pain_amount <= 0)
+	if(!target.pain_controller || target.pain_controller.pain_modifier <= 0.5 || pain_amount <= 0)
 		return FALSE
 
 	// No pain from mechanics but still show the message (usually)
@@ -235,7 +235,7 @@
 
 	target.cause_typed_pain(target_zone, pain_amount, pain_type)
 
-	if(target.IsSleeping() && HAS_TRAIT(target, TRAIT_ON_ANESTHETIC))
+	if((target.IsSleeping() || target.IsUnconscious()) && HAS_TRAIT(target, TRAIT_ON_ANESTHETIC))
 		SEND_SIGNAL(target, COMSIG_ADD_MOOD_EVENT, "surgery", /datum/mood_event/anesthetic)
 		return FALSE
 

@@ -56,7 +56,7 @@
 /atom/movable/screen/alert/status_effect/low_blood_pressure
 	name = "Low blood pressure"
 	desc = "Your blood pressure is low right now. Your organs aren't getting enough blood."
-	icon_state = "highbloodpressure"
+	icon_state = "lowbloodpressure"
 
 /datum/status_effect/low_blood_pressure
 	id = "low_blood_pressure"

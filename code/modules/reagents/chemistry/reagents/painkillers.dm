@@ -44,11 +44,9 @@
 
 /datum/reagent/medicine/painkiller/morphine/on_mob_metabolize(mob/living/L)
 	. = ..()
-	L.throw_alert("numbed", /atom/movable/screen/alert/numbed)
 	L.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 
 /datum/reagent/medicine/painkiller/morphine/on_mob_end_metabolize(mob/living/L)
-	L.clear_alert("numbed")
 	L.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 	return ..()
 

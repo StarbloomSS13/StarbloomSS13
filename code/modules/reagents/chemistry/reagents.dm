@@ -97,7 +97,7 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	/// Modifier applied by this reagent to the mob's pain.
 	/// This is both a multiplicative modifier to their overall received pain,
 	/// and an additive modifier to their per tick pain decay rate.
-	var/pain_modifier = null
+	var/pain_modifier
 
 /datum/reagent/New()
 	SHOULD_CALL_PARENT(TRUE)
@@ -182,7 +182,9 @@ Primarily used in reagents/reaction_agents
 
 	if(!isnull(pain_modifier) && iscarbon(L))
 		var/mob/living/carbon/carbon_mob = L
-		carbon_mob.set_pain_mod("[PAIN_MOD_CHEMS]-[name]", pain_modifier)
+		if(carbon_mob.set_pain_mod("[PAIN_MOD_CHEMS]-[name]", pain_modifier) && pain_modifier <= 0.5)
+			// If the painkiller's strong enough give them an alert
+			carbon_mob.throw_alert("numbed", /atom/movable/screen/alert/numbed)
 
 /// Called when this reagent stops being metabolized by a liver
 /datum/reagent/proc/on_mob_end_metabolize(mob/living/L)
@@ -190,7 +192,8 @@ Primarily used in reagents/reaction_agents
 
 	if(!isnull(pain_modifier) && iscarbon(L))
 		var/mob/living/carbon/carbon_mob = L
-		carbon_mob.unset_pain_mod("[PAIN_MOD_CHEMS]-[name]")
+		if(carbon_mob.unset_pain_mod("[PAIN_MOD_CHEMS]-[name]"))
+			carbon_mob.clear_alert("numbed")
 
 /// Called when a reagent is inside of a mob when they are dead
 /datum/reagent/proc/on_mob_dead(mob/living/carbon/C, delta_time)

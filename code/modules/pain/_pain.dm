@@ -695,7 +695,7 @@
  * Get the average pain of all bodyparts as a percent of the total pain.
  */
 /datum/pain/proc/get_average_pain()
-	. = 0
+	. = 0 // Runtime protection (wink)
 
 	var/max_total_pain = 0
 	var/total_pain = 0
@@ -748,19 +748,22 @@
 		START_PROCESSING(SSpain, src)
 
 /**
- * Sends text to health analyzers via signal. Reports how much pain [source] is sustaining to [user].
- * Only sends a vague description of how much pain, instead of a detailed report -
- * it's up to the patient to elaborate on which limbs hurt and how much they hurt.
+ * Signal proc for [COMSIG_LIVING_HEALTHSCAN]
+ * Reports how much pain [parent] is sustaining to [user].
  *
- * adds text to [render_list] list in place
+ * Note, this report is relatively vague intentionally -
+ * rather than sending a detailed report of which bodyparts are in pain and how much,
+ * the patient is encouraged to elaborate on which bodyparts hurt the most, and how much they hurt.
+ * (To encourage a bit more interaction between the doctors.)
  */
-/datum/pain/proc/on_analyzed(datum/source, list/render_list, advanced)
+/datum/pain/proc/on_analyzed(datum/source, list/render_list, advanced, mob/user, mode)
 	SIGNAL_HANDLER
 
 	var/amount = ""
 	var/tip = ""
-	if(is_undergoing_shock())
-		tip += "Neurogenic shock has begun and should be treated urgently. "
+	var/in_shock = !!is_undergoing_shock()
+	if(in_shock)
+		tip += span_bold("Neurogenic shock has begun and should be treated urgently. ")
 
 	switch(get_average_pain())
 		if(5 to 15)
@@ -768,20 +771,20 @@
 			tip += "Pain should subside in time."
 		if(15 to 30)
 			amount = "moderate"
-			tip += "Pain should subside in time and can be quickened with rest or cryogenics, or painkilling medication."
+			tip += "Pain should subside in time and can be quickened with rest or painkilling medication."
 		if(30 to 50)
 			amount = "major"
-			tip += "Treat wounds and abate pain with rest, cryogenics, or stasis and painkilling medication."
+			tip += "Treat wounds and abate pain with rest, cryogenics, and painkilling medication."
 		if(50 to 80)
 			amount = "severe"
-			if(!tip)
+			if(!in_shock)
 				tip += span_bold("Alert: Potential of neurogenic shock. ")
-			tip += "Treat wounds and abate pain with rest, anesthetic, cryogenics, or stasis, and painkilling medication."
+			tip += "Treat wounds and abate pain with long rest, cryogenics, and moderate painkilling medication."
 		if(80 to 100)
 			amount = "extreme"
-			if(!tip)
+			if(!in_shock)
 				tip += span_bold("Alert: High potential of neurogenic shock. ")
-			tip += "Treat wounds and abate pain with long rest, anesthetic, cryogenics, or stasis, and heavy painkilling medication."
+			tip += "Treat wounds and abate pain with long rest, cryogenics, and heavy painkilling medication."
 
 	if(amount && tip)
 		render_list += "<span class='alert ml-1'>"
