@@ -4,8 +4,8 @@
 	skill_name = "Off Station Pain Resistance"
 	skill_description = "For the adventurous in life, this skillchip provides a reduction in pain received when off the station."
 	skill_icon = "fist-raised"
-	activate_message = "<span class='notice'>You feel like you can safely take on the unknown.</span>"
-	deactivate_message = "<span class='notice'>You feel more vulnerable to the unknown.</span>"
+	activate_message = span_notice("You feel like you can safely take on the unknown.")
+	deactivate_message = span_danger("You feel more vulnerable to the unknown.")
 
 /obj/item/skillchip/job/off_z_pain_resistance/on_activate(mob/living/carbon/user, silent = FALSE)
 	. = ..()
@@ -35,20 +35,3 @@
 	else
 		if(carbon_source.set_pain_mod(PAIN_MOD_OFF_STATION, 0.6))
 			to_chat(carbon_source, span_green("As you depart from the station, you feel more resilient to incoming pain."))
-
-/obj/item/storage/box/skillchips/cargo
-	name = "box of cargo skillchips"
-	desc = "Contains spares of every cargo job skillchip."
-
-/obj/item/storage/box/skillchips/cargo/PopulateContents()
-	new /obj/item/skillchip/job/off_z_pain_resistance(src)
-	new /obj/item/skillchip/job/off_z_pain_resistance(src)
-
-// Miners get the chip
-/datum/outfit/job/miner
-	skillchips = list(/obj/item/skillchip/job/off_z_pain_resistance)
-
-// And the QM's office gets a box of them
-/obj/structure/closet/secure_closet/quartermaster/PopulateContents()
-	. = ..()
-	new /obj/item/storage/box/skillchips/cargo(src)

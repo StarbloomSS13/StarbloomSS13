@@ -75,6 +75,11 @@
 		var/mob/living/carbon/human/human_owner = owner
 		human_owner.physiology.bleed_mod /= 0.75
 
+/atom/movable/screen/alert/status_effect/high_blood_pressure
+	name = "High blood pressure"
+	desc = "Your blood pressure is real high right now ... You'd probably bleed like a stuck pig."
+	icon_state = "highbloodpressure"
+
 /datum/status_effect/high_blood_pressure
 	id = "high_blood_pressure"
 	tick_interval = -1
@@ -91,11 +96,6 @@
 	if(ishuman(owner))
 		var/mob/living/carbon/human/human_owner = owner
 		human_owner.physiology.bleed_mod /= 1.25
-
-/atom/movable/screen/alert/status_effect/high_blood_pressure
-	name = "High blood pressure"
-	desc = "Your blood pressure is real high right now ... You'd probably bleed like a stuck pig."
-	icon_state = "highbloodpressure"
 
 /// Sharp pain. Used for a lot of pain at once, as a little of it is healed after the effect runs out.
 /datum/status_effect/sharp_pain
@@ -169,11 +169,11 @@
 	var/targeted_zone = BODY_ZONE_CHEST
 
 /datum/status_effect/minimum_bodypart_pain/on_creation(
-		mob/living/carbon/human/new_owner,
-		targeted_zone,
-		min_amount = 0,
-		duration = 0
-	)
+	mob/living/carbon/human/new_owner,
+	targeted_zone,
+	min_amount = 0,
+	duration = 0
+)
 
 	src.duration = duration
 	src.targeted_zone = targeted_zone
@@ -229,14 +229,14 @@
 	var/temperature_change = 0
 
 /datum/status_effect/temperature_pack/on_creation(
-		mob/living/new_owner,
-		mob/living/holder,
-		obj/item/pressed_item,
-		targeted_zone = BODY_ZONE_CHEST,
-		pain_heal_amount = 0,
-		pain_modifier = 1,
-		temperature_change = 0
-	)
+	mob/living/new_owner,
+	mob/living/holder,
+	obj/item/pressed_item,
+	targeted_zone = BODY_ZONE_CHEST,
+	pain_heal_amount = 0,
+	pain_modifier = 1,
+	temperature_change = 0
+)
 
 	src.holder = holder
 	src.pressed_item = pressed_item
@@ -346,7 +346,7 @@
 		stop_effects(silent = TRUE)
 		return
 
-	. = ..()
+	return ..()
 
 // And warm stuff needs to stay warm.
 /datum/status_effect/temperature_pack/heat
@@ -369,4 +369,4 @@
 		stop_effects(silent = TRUE)
 		return
 
-	. = ..()
+	return ..()

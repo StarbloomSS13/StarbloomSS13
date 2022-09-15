@@ -24,3 +24,12 @@
 	new /obj/item/circuitboard/machine/ore_silo(src)
 	new /obj/item/card/id/departmental_budget/car(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/qm(src)
+	new /obj/item/storage/box/skillchips/cargo(src)
+
+/obj/item/storage/box/skillchips/cargo
+	name = "box of cargo skillchips"
+	desc = "Contains spares of every cargo job skillchip."
+
+/obj/item/storage/box/skillchips/cargo/PopulateContents()
+	new /obj/item/skillchip/job/off_z_pain_resistance(src)
+	new /obj/item/skillchip/job/off_z_pain_resistance(src)

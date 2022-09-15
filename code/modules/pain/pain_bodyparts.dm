@@ -12,23 +12,6 @@
 	/// The last type of pain we received. Used for feedback messages.
 	var/last_received_pain_type = BRUTE
 
-/obj/item/bodypart/receive_damage(brute = 0, burn = 0, stamina = 0, blocked = 0, updating_health = TRUE, required_status = null, wound_bonus = 0, bare_wound_bonus = 0, sharpness = NONE, attack_direction = null)
-	. = ..()
-	if(!.)
-		return
-	if(!owner?.pain_controller)
-		return
-
-	var/dominant_type = (brute > burn ? BRUTE : BURN)
-	var/can_inflict = max_damage - get_damage()
-	var/total_damage = brute + burn
-	if(total_damage > can_inflict && total_damage > 0)
-		brute = round(brute * (can_inflict / total_damage), DAMAGE_PRECISION)
-		burn = round(burn * (can_inflict / total_damage), DAMAGE_PRECISION)
-
-	if(can_inflict > 0)
-		owner.cause_typed_pain(body_zone, body_damage_coeff * (brute + burn), dominant_type)
-
 /**
  * Gets our bodypart's effective pain (pain * pain modifiers).
  *
@@ -94,10 +77,7 @@
  * Effects on this bodypart when pain is processed (every 2 seconds)
  */
 /obj/item/bodypart/proc/processed_pain_effects(delta_time)
-	if(!owner || !pain)
-		return FALSE
-
-	return TRUE
+	return
 
 /**
  * Feedback messages from this limb when it is sustaining pain.
@@ -112,7 +92,12 @@
 		return FALSE
 
 	var/list/feedback_phrases = list()
-	var/static/list/healing_phrases = list("but is improving", "but is starting to dull", "but the stinging is stopping", "but feels faint")
+	var/static/list/healing_phrases = list(
+		"but is improving",
+		"but is starting to dull",
+		"but the stinging is stopping",
+		"but feels faint",
+	)
 
 	var/picked_emote = pick(PAIN_EMOTES)
 	switch(pain)
@@ -191,7 +176,14 @@
 
 	var/list/feedback_phrases = list()
 	var/list/side_feedback = list()
-	var/static/list/healing_phrases = list("but is improving", "but is starting to dull", "but the stinging is stopping", "but feels faint", "but is settling", "but it subsides")
+	var/static/list/healing_phrases = list(
+		"but is improving",
+		"but is starting to dull",
+		"but the stinging is stopping",
+		"but feels faint",
+		"but is settling",
+		"but it subsides",
+	)
 
 	var/picked_emote = pick(PAIN_EMOTES)
 	switch(pain)
@@ -245,7 +237,15 @@
 
 	var/list/feedback_phrases = list()
 	var/list/side_feedback = list()
-	var/static/list/healing_phrases = list("but is improving", "but is starting to dull", "but the stinging is stopping", "but the tension is stopping", "but is settling", "but it subsides", "but the pressure fades")
+	var/static/list/healing_phrases = list(
+		"but is improving",
+		"but is starting to dull",
+		"but the stinging is stopping",
+		"but the tension is stopping",
+		"but is settling",
+		"but it subsides",
+		"but the pressure fades",
+	)
 
 	switch(pain)
 		if(10 to 30)
@@ -283,8 +283,7 @@
 	bodypart_pain_modifier = 0.8
 
 /obj/item/bodypart/r_leg/processed_pain_effects(delta_time)
-	. = ..()
-	if(!.)
+	if(!owner || !pain)
 		return FALSE
 
 	if(get_modified_pain() >= 40 && DT_PROB(5, delta_time))
@@ -303,8 +302,7 @@
 	bodypart_pain_modifier = 0.8
 
 /obj/item/bodypart/l_leg/processed_pain_effects(delta_time)
-	. = ..()
-	if(!.)
+	if(!owner || !pain)
 		return FALSE
 
 	if(get_modified_pain() >= 40 && DT_PROB(5, delta_time))
