@@ -12,40 +12,52 @@
 	desc = "Occurs when a subject enters a state of shock due to high pain, blood loss, heart difficulties, and other injuries. \
 		If left untreated the subject may experience cardiac arrest."
 	severity = DISEASE_SEVERITY_DANGEROUS
-	disease_flags = CAN_CARRY
+	disease_flags = NONE
 	spread_flags = DISEASE_SPREAD_NON_CONTAGIOUS
 	visibility_flags = HIDDEN_PANDEMIC
 	bypasses_immunity = TRUE
+	/// How many conditions do we require to get cured?
+	var/conditions_required_to_cure = 3
 
-/*
+/**
  * Checks which cure conditions we fulfill.
  *
  * returns the total number of conditions we fulfill.
  */
 /datum/disease/shock/proc/check_cure_conditions()
-	. = 0
+	var/conditions_fulfilled = 0
 	var/our_average_pain = affected_mob.pain_controller.get_average_pain()
-	. += affected_mob.bodytemperature > affected_mob.get_body_temp_cold_damage_limit()
-	. += affected_mob.IsSleeping() ? 1 : 0
-	. += our_average_pain < 40
-	. += our_average_pain < 50
-	. += our_average_pain < 60
-	. -= affected_mob.body_position == STANDING_UP
-	. -= affected_mob.is_bleeding()
 
-/datum/disease/shock/has_cure()
-	return check_cure_conditions() >= 3 && !affected_mob.undergoing_cardiac_arrest()
+	// We require [conditions_required_to_cure] of these to be fulfilled to be cured
 
-/datum/disease/shock/cure()
-	affected_mob.diseases -= src
-	affected_mob = null
-	qdel(src)
+	// Good: Body temperature is stable
+	conditions_fulfilled += (affected_mob.bodytemperature > affected_mob.get_body_temp_cold_damage_limit())
+	// Good: Sleeping (or unconscious I guess)
+	conditions_fulfilled += (!!affected_mob.IsSleeping() || !!affected_mob.IsUnconscious())
+	// Good: Less than 40% pain
+	conditions_fulfilled += (our_average_pain < 40)
+	// Good: Less than 50% pain
+	conditions_fulfilled += (our_average_pain < 50)
+	// Good: Less than 60% pain
+	conditions_fulfilled += (our_average_pain < 60)
+	// Bad: Bleeding
+	conditions_fulfilled -= affected_mob.is_bleeding()
+	// Somewhat bad: Standing up
+	conditions_fulfilled -= 2 * (affected_mob.body_position == STANDING_UP)
+	// VERY bad: Undergoing a heart attack
+	conditions_fulfilled -= 5 * affected_mob.undergoing_cardiac_arrest()
+
+	return conditions_fulfilled
+
+/datum/disease/shock/has_cure(cached_cure_level)
+	return (cached_cure_level || check_cure_conditions()) >= conditions_required_to_cure
 
 /datum/disease/shock/after_add()
 	affected_mob.apply_status_effect(/datum/status_effect/low_blood_pressure)
 
 /datum/disease/shock/remove_disease()
 	affected_mob.remove_status_effect(/datum/status_effect/low_blood_pressure)
+	return ..()
 
 /datum/disease/shock/stage_act(delta_time, times_fired)
 	. = ..()
@@ -60,12 +72,13 @@
 		cure()
 		return FALSE
 
+	var/cure_level = check_cure_conditions()
 	// Having any 2 cure conditions present will keep us below stage 3
-	if(check_cure_conditions() >= 2 && stage > 2)
+	if(cure_level >= 2 && stage > 2)
 		update_stage(2)
 
 	// If we have enough conditions present to cure us, roll for a cure
-	if(has_cure() && DT_PROB(check_cure_conditions() / 2, delta_time) && stage <= 2)
+	if(has_cure(cure_level) && stage <= 2 && DT_PROB(cure_level, delta_time))
 		to_chat(affected_mob, span_bold(span_green("Your body feels awake and active again!")))
 		cure()
 		return FALSE

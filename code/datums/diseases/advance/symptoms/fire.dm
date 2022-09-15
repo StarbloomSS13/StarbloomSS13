@@ -54,7 +54,7 @@ Bonus
 	if(!.)
 		return
 	var/mob/living/carbon/ill_mob = source_disease.affected_mob
-	switch(A.stage)
+	switch(source_disease.stage)
 		if(3)
 			if(prob(base_message_chance) && !suppress_warning)
 				to_chat(ill_mob, span_warning("[pick("You feel hot.", "You hear a crackling noise.", "You smell smoke.")]"))

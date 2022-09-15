@@ -69,6 +69,17 @@
 			span_notice("[user] successfully augments [target]'s [parse_zone(target_zone)]!"))
 		give_surgery_pain(target, "Your [parse_zone(target_zone)] comes awash with synthetic sensation!", mechanical_surgery = TRUE, target_zone = target_zone)
 		log_combat(user, target, "augmented", addition="by giving him new [parse_zone(target_zone)] COMBAT MODE: [uppertext(user.combat_mode)]")
+		target.apply_min_pain(target_zone, 15, 2 MINUTES)
 	else
 		to_chat(user, span_warning("[target] has no organic [parse_zone(target_zone)] there!"))
 	return ..()
+// melbert todo: check
+/*
+/datum/surgery_step/replace_limb/success(mob/living/user, mob/living/carbon/target, target_zone, obj/item/bodypart/tool, datum/surgery/surgery, default_display_results = FALSE)
+	. = ..()
+	if(target.pain_controller && (tool in target.bodyparts))
+		// We have to snowflake this because replace_limb uses SPECIAL = TRUE when replacing limbs (which doesn't cause pain because I hate limb code)
+		target.cause_pain(target_zone, initial(tool.pain))
+		target.cause_pain(BODY_ZONE_CHEST, PAIN_LIMB_REMOVED)
+		target.apply_min_pain(target_zone, 15, 2 MINUTES)
+*/

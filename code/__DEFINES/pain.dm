@@ -67,7 +67,6 @@
 #define PAIN_LIMB_PARALYSIS "pain_paralysis"
 #define MOVESPEED_ID_PAIN "pain_movespeed"
 #define ACTIONSPEED_ID_PAIN "pain_actionspeed"
-#define TRAIT_EXTRA_PAIN "extra_pain"
 
 //Originally in pain_helpers.dm, moved here for superseding issues
 /// Cause [amount] pain of default (BRUTE) damage type to [target_zone]

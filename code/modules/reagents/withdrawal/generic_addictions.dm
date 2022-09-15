@@ -13,11 +13,18 @@
 /datum/addiction/opioids/withdrawal_enters_stage_2(mob/living/carbon/affected_carbon)
 	. = ..()
 	affected_carbon.apply_status_effect(/datum/status_effect/high_blood_pressure)
+
+/datum/addiction/opioids/withdrawal_stage_2_process(mob/living/carbon/affected_carbon, delta_time)
+	. = ..()
+	if(DT_PROB(10, delta_time))
+		affected_carbon.emote(pick("yawn", "shiver", "twitch_s"))
 	if(affected_carbon.pain_controller?.get_average_pain() <= 35 && DT_PROB(8, delta_time))
 		affected_carbon.cause_pain(BODY_ZONES_ALL, 1 * delta_time)
 
 /datum/addiction/opioids/withdrawal_stage_3_process(mob/living/carbon/affected_carbon, delta_time)
 	. = ..()
+	if(DT_PROB(10, delta_time))
+		affected_carbon.emote(pick("yawn", "shiver", "wince", "twitch_s"))
 	if(affected_carbon.disgust < DISGUST_LEVEL_DISGUSTED && DT_PROB(7.5, delta_time))
 		affected_carbon.adjust_disgust(12.5 * delta_time)
 	if(affected_carbon.pain_controller?.get_average_pain() <= 50 && DT_PROB(8, delta_time))

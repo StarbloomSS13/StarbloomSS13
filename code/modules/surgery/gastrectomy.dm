@@ -48,7 +48,7 @@
 		span_notice("[user] successfully removes the damaged part of [target]'s stomach."))
 	give_surgery_pain(target, "The pain in your gut ebbs and fades somewhat.", target_zone = target_zone)
 	// Heal some pain on success
-	target.cause_pain(-15, target_zone)
+	target.cause_pain(target_zone, -15)
 	return ..()
 
 /datum/surgery_step/gastrectomy/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery)

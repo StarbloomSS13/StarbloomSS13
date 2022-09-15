@@ -227,10 +227,11 @@
 	if(!target.pain_controller || target.pain_controller.pain_modifier <= 0.75 || pain_amount <= 0)
 		return FALSE
 
-	// No pain from mechanics but still show the message
-	if(mechanical_surgery && prob(70))
-		to_chat(target, span_userdanger(pain_message))
-		return
+	// No pain from mechanics but still show the message (usually)
+	if(mechanical_surgery)
+		if(prob(70))
+			to_chat(target, span_userdanger(pain_message))
+		return FALSE
 
 	target.cause_typed_pain(target_zone, pain_amount, pain_type)
 

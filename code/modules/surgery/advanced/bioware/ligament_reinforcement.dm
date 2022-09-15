@@ -25,7 +25,7 @@
 		span_notice("[user] starts reinforce [target]'s ligaments."),
 		span_notice("[user] starts manipulating [target]'s ligaments."))
 	give_surgery_pain(target, "Your limbs burn with severe pain!", target_zone = target_zone)
-	cause_typed_pain(BODY_ZONES_LIMBS, 20, BURN)
+	target.cause_typed_pain(BODY_ZONES_LIMBS, 20, BURN)
 
 /datum/surgery_step/reinforce_ligaments/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	display_results(user, target, span_notice("You reinforce [target]'s ligaments!"),

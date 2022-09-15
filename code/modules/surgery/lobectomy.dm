@@ -48,7 +48,7 @@
 			span_notice("Successfully removes a piece of [human_target]'s lungs."),
 			"")
 		give_surgery_pain(target, "Your chest hurts like hell, but breathng becomes slightly easier.", target_zone = target_zone)
-		target.cause_pain(-15, target_zone)
+		target.cause_pain(target_zone, -15)
 	return ..()
 
 /datum/surgery_step/lobectomy/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -58,7 +58,7 @@
 			span_warning("[user] screws up!"),
 			span_warning("[user] screws up!"))
 		give_surgery_pain(target, "You feel a sharp stab in your chest; the wind is knocked out of you and it hurts to catch your breath!", target_zone = target_zone)
-		target.cause_pain(15, target_zone)
+		target.cause_pain(target_zone, 15)
 		human_target.losebreath += 4
 		human_target.adjustOrganLoss(ORGAN_SLOT_LUNGS, 10)
 	return FALSE

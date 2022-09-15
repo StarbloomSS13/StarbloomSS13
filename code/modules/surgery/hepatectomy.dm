@@ -46,7 +46,7 @@
 		span_notice("[user] successfully removes the damaged part of [target]'s liver."),
 		span_notice("[user] successfully removes the damaged part of [target]'s liver."))
 	give_surgery_pain(target, "The pain receeds slightly.", target_zone = target_zone)
-	target.cause_pain(-15, target_zone)
+	target.cause_pain(target_zone, -15)
 	return ..()
 
 /datum/surgery_step/hepatectomy/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery)

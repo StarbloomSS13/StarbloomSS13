@@ -24,7 +24,7 @@
 		span_notice("[user] starts splicing together [target]'s nerves."),
 		span_notice("[user] starts manipulating [target]'s nervous system."))
 	give_surgery_pain(target, "Your entire body goes numb!", target_zone = target_zone)
-	cause_typed_pain(BODY_ZONES_ALL, 15, BURN)
+	target.cause_typed_pain(BODY_ZONES_ALL, 15, BURN)
 
 /datum/surgery_step/splice_nerves/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	display_results(user, target, span_notice("You successfully splice [target]'s nervous system!"),

@@ -31,7 +31,7 @@
 			span_notice("[user] successfully restores [target]'s appearance!"),
 			span_notice("[user] finishes the operation on [target]'s face."))
 		give_surgery_pain(target, "The pain fades, your face feels normal again!", target_zone = target_zone)
-		cause_pain(target_zone, -pain_amount)
+		target.cause_pain(target_zone, -pain_amount)
 	else
 		var/list/names = list()
 		if(!isabductor(user))

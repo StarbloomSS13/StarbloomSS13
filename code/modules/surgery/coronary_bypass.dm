@@ -31,7 +31,7 @@
 	preop_sound = 'sound/surgery/scalpel1.ogg'
 	success_sound = 'sound/surgery/scalpel2.ogg'
 	failure_sound = 'sound/surgery/organ2.ogg'
-	paint_amount = 60
+	pain_amount = 60
 
 /datum/surgery_step/incise_heart/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	display_results(user, target, span_notice("You begin to make an incision in [target]'s heart..."),
@@ -92,7 +92,7 @@
 			span_notice("[user] finishes grafting something onto [target]'s heart."))
 	give_surgery_pain(target, "The pain in your chest throbs, but your heart feels better than ever!", target_zone = target_zone)
 	// Reduce pain for succeeding
-	target.cause_pain(-10, target_zone)
+	target.cause_pain(target_zone, -10)
 	return ..()
 
 /datum/surgery_step/coronary_bypass/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)

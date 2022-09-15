@@ -235,7 +235,7 @@
 	name = "shock blanket"
 	desc = "A metallic looking plastic blanket specifically designed to well insulate anyone seeking comfort underneath."
 	icon = 'icons/obj/pain_items.dmi'
-	worn_icon = 'icons/mob/pain_items.dmi'
+	//worn_icon = 'icons/mob/pain_items.dmi'
 	lefthand_file = 'icons/mob/inhands/pain_items_lhand.dmi'
 	righthand_file = 'icons/mob/inhands/pain_items_rhand.dmi'
 	icon_state = "shockblanket"

@@ -1,15 +1,3 @@
-// -- Bodypart and Organ pain definitions. --
-
-/obj/item/organ/lungs
-	/// Whether we are currently breathing enough N2O to be considered asleep.
-	var/on_anesthetic = FALSE
-
-/*
- * Returns TRUE if we are breathing enough [partial_pressure] of N2O to be asleep.
- */
-/obj/item/organ/lungs/proc/check_anesthetic(partial_pressure, min_sleep)
-	return partial_pressure > min_sleep
-
 /obj/item/bodypart
 	/// The amount of pain this limb is experiencing (A bit for default)
 	var/pain = 15
@@ -19,7 +7,7 @@
 	var/max_pain = PAIN_LIMB_MAX
 	/// Modifier applied to pain that this part receives
 	var/bodypart_pain_modifier = 1
-	/// The last type of pain we received.
+	/// The last type of pain we received. Used for feedback messages.
 	var/last_received_pain_type = BRUTE
 
 /obj/item/bodypart/receive_damage(brute = 0, burn = 0, stamina = 0, blocked = 0, updating_health = TRUE, required_status = null, wound_bonus = 0, bare_wound_bonus = 0, sharpness = NONE, attack_direction = null)
@@ -39,7 +27,7 @@
 	if(can_inflict > 0)
 		owner.cause_typed_pain(body_zone, body_damage_coeff * (brute + burn), dominant_type)
 
-/*
+/**
  * Gets our bodypart's effective pain (pain * pain modifiers).
  *
  * Returns our effective pain.
@@ -50,7 +38,7 @@
 	else
 		return pain * bodypart_pain_modifier
 
-/*
+/**
  * Effects on this bodypart has when pain is gained.
  *
  * amount - amount of pain gained
@@ -76,7 +64,7 @@
 
 	return TRUE
 
-/*
+/**
  * Effects on this bodypart has when pain is lost and some time passes without any pain gain.
  *
  * amount - amount of pain lost
@@ -100,7 +88,7 @@
 
 	return TRUE
 
-/*
+/**
  * Effects on this bodypart when pain is processed (every 2 seconds)
  */
 /obj/item/bodypart/proc/processed_pain_effects(delta_time)
@@ -109,7 +97,7 @@
 
 	return TRUE
 
-/*
+/**
  * Feedback messages from this limb when it is sustaining pain.
  *
  * healing_pain - if TRUE, the bodypart has gone some time without recieving pain, and is healing.

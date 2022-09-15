@@ -74,8 +74,8 @@ Bonus
 				var/obj/item/bodypart/random_part = pick(ill_mob.bodyparts)
 				random_part?.generic_bleedstacks += (5 * power)
 
-			ill_mob.affected_mob.cause_pain(BODY_ZONES_ALL, 12 * (pain + 1))
-			ill_mob.affected_mob.flash_pain_overlay(2, 2 SECONDS)
+			ill_mob.cause_pain(BODY_ZONES_ALL, 12 * (pain + 1))
+			ill_mob.flash_pain_overlay(2, 2 SECONDS)
 
 /datum/symptom/flesh_eating/proc/Flesheat(mob/living/M, datum/disease/advance/A)
 	var/get_damage = rand(15,25) * power
