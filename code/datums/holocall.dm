@@ -483,7 +483,7 @@
 	NAME Ed Greenebold
 	SAY Welcome to the upper decks.
 	DELAY 100
-	SAY Please be wary of your muscles that may be slightly atrophied from prolonged cryo.
+	SAY Please be wary of your muscles that may be slightly atrophied from prolonged cryostasis.
 	DELAY 100
 	SAY Be sure to enjoy a drink or change into some fresh clothes in the next room.
 	DELAY 100"}
