@@ -2833,6 +2833,7 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/table,
 /obj/structure/disposalpipe/segment,
+/obj/item/stamp/hos,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/hos)
 "aKC" = (
@@ -25565,6 +25566,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/delivery,
 /obj/structure/table,
+/obj/item/storage/toolbox/electrical{
+	pixel_y = 10
+	},
 /turf/open/floor/iron/dark,
 /area/commons/storage/tools)
 "hmk" = (
@@ -26658,10 +26662,6 @@
 /area/medical/storage)
 "hCs" = (
 /obj/item/storage/toolbox/mechanical,
-/obj/item/storage/toolbox/electrical{
-	pixel_y = 10
-	},
-/obj/item/storage/belt,
 /obj/item/clothing/head/welding,
 /obj/effect/turf_decal/delivery,
 /obj/structure/cable,
@@ -52700,6 +52700,7 @@
 /obj/effect/turf_decal/delivery,
 /obj/structure/cable,
 /obj/structure/table,
+/obj/item/storage/belt/utility,
 /turf/open/floor/iron/dark,
 /area/commons/storage/tools)
 "oLt" = (
@@ -63424,7 +63425,6 @@
 /turf/open/floor/catwalk_floor,
 /area/maintenance/floor2/port)
 "rTV" = (
-/obj/machinery/light/directional/east,
 /obj/structure/table/wood,
 /obj/item/paper_bin{
 	pixel_x = -3;
