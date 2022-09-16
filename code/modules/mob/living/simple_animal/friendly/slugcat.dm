@@ -5,11 +5,13 @@
 	icon_state = "catslug"
 	icon_living = "catslug"
 	icon_dead = "catslug_dead"
+	held_state = "slugcat"
 	speak_emote = list("purrs", "meows", "blorbles")
 	emote_hear = list("meows.", "mews.", "blorbles")
 	emote_see = list("shakes its head.", "shivers.", "squishes")
 	speak_chance = 1
 	turns_per_move = 5
+	can_be_held = TRUE
 	see_in_dark = 6
 	pass_flags = PASSTABLE
 	mob_size = MOB_SIZE_SMALL
