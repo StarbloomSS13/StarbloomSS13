@@ -233,5 +233,11 @@
 	papertype = /obj/item/paper/carbon
 	bin_overlay_string = "paper_bin_carbon_overlay"
 
+/obj/item/paper_bin/construction/large
+	name = "large construction paper bin"
+	desc = "Contains all the paper you'll never need, IN COLOR!"
+	papertype = /obj/item/paper/construction
+	total_paper = 120
+
 #undef PAPERS_PER_OVERLAY
 #undef PAPER_OVERLAY_PIXEL_SHIFT
