@@ -3191,6 +3191,7 @@
 /obj/item/clothing/head/helmet/homeguard,
 /obj/item/gun/ballistic/rifle/boltaction/brand_new,
 /obj/structure/sign/poster/official/random/directional/north,
+/obj/item/ammo_box/a762,
 /turf/open/floor/iron/dark,
 /area/faction/homeguard)
 "aPq" = (
@@ -5281,6 +5282,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
+/obj/effect/decal/cleanable/oil,
 /turf/open/floor/iron/dark,
 /area/hallway/floor1/fore)
 "bpA" = (
@@ -10034,7 +10036,13 @@
 	},
 /obj/item/paper/crumpled/fluff{
 	info = "Hey, who took the donut?<br> That was supposed to be my post-revolution snack!<br> - Greg";
-	name = "Missing Donut Memo"
+	name = "Missing Donut Memo";
+	pixel_x = -8;
+	pixel_y = 6
+	},
+/obj/item/wrench{
+	pixel_x = 3;
+	pixel_y = -2
 	},
 /turf/open/floor/iron/dark/green,
 /area/faction/homeguard)
@@ -17221,6 +17229,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/paper/fluff{
+	info = "I DONT BELIEVE THEM GOD DAMNED BLUE HATS<br> THEY SENT THE DOCTORS TO MY DORM AGAIN TRYING TO GET ME TO<br> QUOTE UNQUOTE DRINK WATER<br> LIKE SOME KIND OF SHEEPLE. FUCK EM, I DONT NEED HYDRATION, COME AND GET ME!!!";
+	name = "Hastily Scribbled Manifesto"
+	},
 /turf/open/floor/iron/dark/side,
 /area/faction/unity)
 "eKd" = (
@@ -21943,6 +21955,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
+/obj/machinery/vending/mre,
+/obj/effect/decal/cleanable/wrapping,
 /turf/open/floor/iron/dark,
 /area/hallway/floor1/fore)
 "ghi" = (
@@ -24312,6 +24326,12 @@
 	pixel_y = 4
 	},
 /obj/item/flashlight/seclite,
+/obj/item/paper/crumpled{
+	info = "Replaced and new equipment courtesy of captain doom. <BR> Stand strong, comrades, the fight is not yet over for us." -M;
+	name = "A note about the new crate";
+	pixel_x = -8;
+	pixel_y = 11
+	},
 /turf/open/floor/iron/dark/green/side{
 	dir = 9
 	},
@@ -44581,6 +44601,18 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/iron/dark,
 /area/security/brig)
+"mCY" = (
+/obj/effect/turf_decal/tile/blue/half{
+	dir = 4
+	},
+/obj/item/paper/fluff{
+	info = "I DONT BELIEVE THEM GOD DAMNED BLUE HATS<br> THEY SENT THE DOCTORS TO MY DORM AGAIN TRYING TO GET ME TO<br> QUOTE UNQUOTE DRINK WATER<br> LIKE SOME KIND OF SHEEPLE. FUCK EM, I DONT NEED HYDRATION, COME AND GET ME!!!";
+	name = "Hastily Scribbled Manifesto"
+	},
+/turf/open/floor/iron/dark/side{
+	dir = 4
+	},
+/area/faction/unity)
 "mDe" = (
 /obj/structure/lattice,
 /turf/open/openspace,
@@ -47078,8 +47110,12 @@
 /area/maintenance/floor1/starboard/fore)
 "nkr" = (
 /obj/machinery/light/directional/east,
-/obj/item/storage/toolbox/ammo,
-/obj/structure/closet/secure_closet/armory2,
+/obj/structure/closet/secure_closet/contraband/armory{
+	desc = "An imposingly large and ID locked storage closet. The words 'reservata della subitis' have been stenciled on the front";
+	name = "Heavy Armor Storage"
+	},
+/obj/item/clothing/suit/armor/heavy,
+/obj/item/clothing/head/helmet/marine/tyrant,
 /turf/open/floor/iron/dark/red,
 /area/ai_monitored/security/armory)
 "nkw" = (
@@ -54038,6 +54074,7 @@
 /obj/item/clothing/suit/armor/vest/homeguard,
 /obj/item/clothing/head/helmet/homeguard,
 /obj/item/gun/ballistic/rifle/boltaction/brand_new,
+/obj/item/ammo_box/a762,
 /turf/open/floor/iron/dark,
 /area/faction/homeguard)
 "piI" = (
@@ -55511,6 +55548,7 @@
 	dir = 1
 	},
 /obj/machinery/firealarm/directional/west,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/dark,
 /area/hallway/floor1/fore)
 "pEx" = (
@@ -64095,6 +64133,14 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/parquet,
 /area/service/lawoffice)
+"sfS" = (
+/obj/effect/turf_decal/trimline/green/line{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/dark,
+/area/hallway/floor3/fore)
 "sgJ" = (
 /obj/structure/sign/deck2/right{
 	pixel_y = 30
@@ -69494,9 +69540,17 @@
 /turf/open/floor/carpet/neon/simple/pink/nodots,
 /area/maintenance/club)
 "tJX" = (
-/obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/newscaster/directional/west,
+/obj/structure/closet/crate/secure/weapon{
+	desc = "A sturdy green crate from the lower decks with an ID lock. 'death to edict' has been spray painted on the lid";
+	name = "Materiel Crate";
+	req_access = list("armory")
+	},
+/obj/item/clothing/suit/armor/bulletproof,
+/obj/item/gun/energy/laser,
+/obj/item/clothing/head/helmet/alt,
+/obj/item/shield/riot,
 /turf/open/floor/iron/dark/green/side{
 	dir = 10
 	},
@@ -75924,6 +75978,13 @@
 	},
 /turf/open/floor/iron/dark,
 /area/security/courtroom)
+"vEp" = (
+/obj/item/paper/fluff{
+	info = "I DONT BELIEVE THEM GOD DAMNED BLUE HATS<br> THEY SENT THE DOCTORS TO MY DORM AGAIN TRYING TO GET ME TO<br> QUOTE UNQUOTE DRINK WATER<br> LIKE SOME KIND OF SHEEPLE. FUCK EM, I DONT NEED HYDRATION, COME AND GET ME!!!";
+	name = "Hastily Scribbled Manifesto"
+	},
+/turf/open/floor/pod/light,
+/area/maintenance/floor4/port/fore)
 "vEr" = (
 /obj/effect/turf_decal/trimline/green/warning{
 	dir = 10
@@ -76427,6 +76488,7 @@
 /obj/item/storage/bag/ore,
 /obj/item/shovel,
 /obj/item/shovel,
+/obj/item/pushbroom,
 /turf/open/floor/plating,
 /area/cargo/scrapbeacon)
 "vMB" = (
@@ -77368,6 +77430,7 @@
 /obj/item/clothing/suit/armor/vest/homeguard,
 /obj/item/clothing/head/helmet/homeguard,
 /obj/item/gun/ballistic/rifle/boltaction/brand_new,
+/obj/item/ammo_box/a762,
 /turf/open/floor/iron/dark,
 /area/faction/homeguard)
 "waV" = (
@@ -234713,7 +234776,7 @@ iQp
 oZx
 oZx
 oZx
-reW
+sfS
 ivu
 oon
 oon
@@ -303601,7 +303664,7 @@ nIk
 rao
 mel
 okt
-wAH
+vEp
 ndo
 trV
 ndo
@@ -305140,7 +305203,7 @@ bGC
 gMG
 bGB
 fOj
-fKr
+mCY
 khK
 vrJ
 fKr
