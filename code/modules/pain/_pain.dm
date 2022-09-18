@@ -25,8 +25,10 @@
 	COOLDOWN_DECLARE(time_since_last_pain_message)
 
 	#ifdef TESTING
+	/// For testing. Does this pain datum print testing messages when it happens?
 	var/print_debug_messages = TRUE
-	var/print_debug_all_messages = FALSE
+	/// For testing. Does this pain datum include ALL test messages, including very small and constant ones (like pain decay)?
+	var/print_debug_decay = FALSE
 	#endif
 
 /datum/pain/New(mob/living/carbon/human/new_parent)
@@ -431,7 +433,7 @@
 
 	#ifdef TESTING
 	if(print_debug_messages)
-		testing("PAIN DEBUG: [parent] is recieving a wound of level [applied_wound.severity] to the [parse_zone(wounded_limb.body_zones)].")
+		testing("PAIN DEBUG: [parent] is recieving a wound of level [applied_wound.severity] to the [parse_zone(wounded_limb.body_zone)].")
 	#endif
 
 	adjust_bodypart_min_pain(wounded_limb.body_zone, applied_wound.severity * 5)
