@@ -8,7 +8,7 @@
  */
 SUBSYSTEM_DEF(crewtransfer)
 	name = "Crew Transfer Vote"
-	wait = 60 SECONDS
+	wait = 60 SECONDS // Upped in init
 	runlevels = RUNLEVEL_GAME
 
 	/// Number of votes attempted total, including auto and manual votes
@@ -65,19 +65,19 @@ SUBSYSTEM_DEF(crewtransfer)
 /datum/controller/subsystem/crewtransfer/proc/autocall_crew_transfer_vote()
 	//we won't call a vote if we shouldn't be able to leave
 	if(SSshuttle.emergency_no_escape)
-		log_shuttle("Automatic crew transfer vote prevented due to hostile situation.")
-		message_admins("Automatic crew transfer vote prevented due to hostile situation.")
+		log_shuttle("Automatic crew transfer vote delayed due to a hostile situation.")
+		message_admins("Automatic crew transfer vote delayed due to a hostile situation.")
 		return FALSE
 
 	//we won't call a vote if a vote is running
-	if(SSvote.mode)
-		log_shuttle("Automatic crew transfer vote prevented due to ongoing vote.")
-		message_admins("Automatic crew transfer vote prevented due to ongoing vote.")
+	if(SSvote.current_vote)
+		log_shuttle("Automatic crew transfer vote delayed due to ongoing vote.")
+		message_admins("Automatic crew transfer vote delayed due to ongoing vote.")
 		return FALSE
 
 	log_shuttle("Automatic crew transfer vote initiated.")
 	message_admins("Automatic crew transfer vote initiated.")
-	SSvote.initiate_vote(/datum/vote/autotransfer, "automatic crew transfer vote", forced = TRUE)
+	SSvote.initiate_vote(/datum/vote/autotransfer, "the server", forced = TRUE)
 	return TRUE
 
 /// initiates the shuttle call and logs it.
