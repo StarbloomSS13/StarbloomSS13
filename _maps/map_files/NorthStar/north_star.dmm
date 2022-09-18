@@ -2111,7 +2111,7 @@
 /area/maintenance/floor3/port/fore)
 "aBh" = (
 /obj/machinery/computer/atmos_control/nocontrol/incinerator{
-	dir = 8
+	dir = 1
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -2356,9 +2356,7 @@
 /turf/open/floor/pod/light,
 /area/maintenance/floor3/starboard/fore)
 "aEE" = (
-/obj/machinery/door/airlock/science{
-	name = "Cytology"
-	},
+/obj/machinery/door/airlock/science,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4377,11 +4375,13 @@
 /obj/effect/turf_decal/siding/green{
 	dir = 4
 	},
-/obj/machinery/door/airlock/hatch,
 /obj/effect/mapping_helpers/airlock/access/any/supply/general,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/airlock/hatch{
+	name = "Maintenance Access"
+	},
 /turf/open/floor/pod/light,
 /area/maintenance/floor1/starboard/fore)
 "bfh" = (
@@ -14841,7 +14841,7 @@
 "dYr" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/darkpurple/line,
-/obj/machinery/newscaster/directional/north,
+/obj/machinery/atmospherics/components/tank/plasma,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/maintenance/disposal/incinerator)
@@ -15327,9 +15327,7 @@
 /turf/open/floor/engine/beacon,
 /area/cargo/scrapbeacon)
 "egK" = (
-/obj/machinery/door/airlock/bathroom{
-	name = "Washroom"
-	},
+/obj/machinery/door/airlock/bathroom,
 /turf/open/floor/iron/showroomfloor,
 /area/service/theater)
 "egT" = (
@@ -16507,14 +16505,14 @@
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "eyV" = (
-/obj/machinery/door/airlock/public{
-	name = "Arcade"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock{
+	name = "Arcade"
+	},
 /turf/open/floor/eighties,
 /area/commons/fitness/recreation/entertainment)
 "eyY" = (
@@ -16563,9 +16561,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/machinery/electrolyzer,
 /obj/effect/turf_decal/stripes/darkpurple/line{
 	dir = 8
+	},
+/obj/machinery/computer/turbine_computer{
+	mapping_id = "main_turbine"
 	},
 /turf/open/floor/iron/dark,
 /area/maintenance/disposal/incinerator)
@@ -17203,7 +17203,8 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/darkpurple/line,
 /obj/structure/cable,
-/obj/machinery/atmospherics/components/tank/plasma,
+/obj/machinery/newscaster/directional/north,
+/obj/machinery/electrolyzer,
 /turf/open/floor/iron/dark,
 /area/maintenance/disposal/incinerator)
 "eJO" = (
@@ -19320,9 +19321,7 @@
 /turf/open/floor/pod/light,
 /area/maintenance/floor4/starboard/aft)
 "fuJ" = (
-/obj/machinery/door/airlock/mining/glass{
-	name = "ExoDrone Launch Bay"
-	},
+/obj/machinery/door/airlock/mining/glass,
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -25261,10 +25260,6 @@
 /turf/open/floor/pod/light,
 /area/maintenance/floor1/starboard/fore)
 "hhz" = (
-/obj/machinery/computer/turbine_computer{
-	dir = 8;
-	mapping_id = "main_turbine"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -25594,11 +25589,13 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance,
 /obj/effect/mapping_helpers/airlock/access/any/supply/mail_sorting,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
+/obj/machinery/door/airlock/hatch{
+	name = "Maintenance Access"
+	},
 /turf/open/floor/pod/dark,
 /area/maintenance/floor1/starboard/fore)
 "hmu" = (
@@ -26608,9 +26605,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/door/airlock/silver{
-	name = "Captain's Bathroom"
-	},
+/obj/machinery/door/airlock/silver,
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/captain/private)
 "hBR" = (
@@ -28463,8 +28458,13 @@
 /area/service/library/lounge)
 "idM" = (
 /obj/structure/table,
-/obj/item/storage/box/pdas,
+/obj/item/storage/box/pdas{
+	pixel_x = 10
+	},
 /obj/machinery/status_display/evac/directional/north,
+/obj/item/paper_bin/construction/large{
+	pixel_x = -6
+	},
 /turf/open/floor/iron/dark/blue/side,
 /area/command/heads_quarters/hop)
 "idO" = (
@@ -44010,10 +44010,6 @@
 	pixel_y = 7
 	},
 /obj/item/pen,
-/obj/item/stamp/ce{
-	pixel_x = -8;
-	pixel_y = 12
-	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/command/heads_quarters/ce)
 "muI" = (
@@ -47119,11 +47115,13 @@
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 4
 	},
-/obj/machinery/door/airlock/hatch,
 /obj/effect/mapping_helpers/airlock/access/any/supply/general,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/airlock/hatch{
+	name = "Maintenance Access"
+	},
 /turf/open/floor/pod/dark,
 /area/maintenance/floor1/starboard/fore)
 "nkY" = (
@@ -52568,7 +52566,7 @@
 /area/engineering/lobby)
 "oIN" = (
 /obj/machinery/door/airlock/mining/glass{
-	name = "Mail Sorting"
+	name = "Mail Room"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -54614,9 +54612,7 @@
 	},
 /area/cargo/miningdock)
 "prt" = (
-/obj/machinery/door/airlock/mining{
-	name = "Warehouse"
-	},
+/obj/machinery/door/airlock/mining,
 /obj/effect/mapping_helpers/airlock/access/any/supply/general,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable,

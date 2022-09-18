@@ -3,7 +3,7 @@
 	desc = "Standard Security gear. Protects the head from impacts."
 	icon_state = "helmet"
 	inhand_icon_state = "helmet"
-	armor = list(MELEE = 35, BULLET = 30, LASER = 30,ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50, WOUND = 10)
+	armor = list(MELEE = 35, BULLET = 55, LASER = 30,ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50, WOUND = 10)
 	cold_protection = HEAD
 	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -126,6 +126,12 @@
 /obj/item/clothing/head/helmet/marine/medic
 	name = "marine medic helmet"
 	icon_state = "marine_medic"
+
+/obj/item/clothing/head/helmet/marine/tyrant
+	name = "TYRANT helmet"
+	desc = "An extremely heavily armored helmet that protects against moderate damage. It's Class IV armor, offering near total protection against projectiles."
+	w_class = WEIGHT_CLASS_BULKY
+	armor = list(MELEE = 90, BULLET = 95, LASER = 80, ENERGY = 80, BOMB = 100, BIO = 100, FIRE = 90, ACID = 90)
 
 /obj/item/clothing/head/helmet/old
 	name = "degrading helmet"

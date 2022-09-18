@@ -51,8 +51,9 @@
 	ears = /obj/item/radio/headset/headset_med
 	head = /obj/item/clothing/head/surgerycap
 	shoes = /obj/item/clothing/shoes/sneakers/white
-	l_hand = /obj/item/storage/medkit/surgery
-
+	backpack_contents = list(
+		/obj/item/storage/medkit/surgery = 1,
+		)
 	backpack = /obj/item/storage/backpack/medic
 	satchel = /obj/item/storage/backpack/satchel/med
 	duffelbag = /obj/item/storage/backpack/duffelbag/med
