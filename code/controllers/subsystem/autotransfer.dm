@@ -37,7 +37,7 @@ SUBSYSTEM_DEF(crewtransfer)
 	//we can't vote if we don't have a functioning democracy
 	if(!SSvote || !SSvote.initialized)
 		disable_vote()
-		CRASH("Voting subsystem not found, but the crew transfer vote subsystem is!")
+		CRASH("The crew transfer vote system tried to fire, but no vote subsystem / no initialized vote subsystem was found!")
 
 	//if it fires before it's supposed to be allowed, cut it out
 	if(world.time - SSticker.round_start_time < minimum_transfer_time)
