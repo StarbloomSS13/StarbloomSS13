@@ -441,8 +441,17 @@
 		if(SHUTTLE_CALL)
 			if(time_left <= 0)
 				//move emergency shuttle to station
-				if(initiate_docking(SSshuttle.getDock("emergency_home")) != DOCKING_SUCCESS)
+				var/obj/docking_port/stationary/dock_to = SSshuttle.getDock("emergency_home")
+				if(initiate_docking(dock_to) != DOCKING_SUCCESS)
 					setTimer(20)
+					// Important to note edit from /tg/ code here.
+					// When the shuttle reaches this point, and it fails to dock, it'll
+					// go back up to 20 seconds, then repeat ad nauseum. Not ideal if you design around having no shuttle.
+					// So I put forceending here. Instead of looping it'll jus straight up end the round.
+					// Instead of going eta -> etd -> esc -> end, it'll just go eta -> end.
+					// If you think this is too abrupt, you will need to tear this up and improve it slightly.
+					if(!dock_to)
+						SSticker.force_ending = TRUE
 					return
 				mode = SHUTTLE_DOCKED
 				setTimer(SSshuttle.emergency_dock_time)
