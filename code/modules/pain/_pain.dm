@@ -24,6 +24,11 @@
 	/// Cooldown to track last time we sent a pain message.
 	COOLDOWN_DECLARE(time_since_last_pain_message)
 
+	#ifdef TESTING
+	var/print_debug_messages = TRUE
+	var/print_debug_all_messages = FALSE
+	#endif
+
 /datum/pain/New(mob/living/carbon/human/new_parent)
 	if(!iscarbon(new_parent) || istype(new_parent, /mob/living/carbon/human/dummy))
 		qdel(src) // If we're not a carbon, or a dummy, delete us
@@ -212,8 +217,10 @@
 		else if(adjusted_amount <= -1.5 || COOLDOWN_FINISHED(src, time_since_last_pain_loss))
 			INVOKE_ASYNC(src, .proc/on_pain_loss, adjusted_bodypart, amount, dam_type)
 
-		if(abs(adjusted_amount) > 1)
+		#ifdef TESTING
+		if(print_debug_messages && (print_debug_decay || abs(adjusted_amount) > 1))
 			testing("PAIN DEBUG: [parent] recived [adjusted_amount] pain to [adjusted_bodypart]. Part pain: [adjusted_bodypart.pain]")
+		#endif
 
 	return TRUE
 
@@ -405,7 +412,11 @@
 	if(!def_zone || !pain)
 		return
 
-	testing("[parent] is recieving [pain] of type [damagetype] to the [parse_zone(def_zone)].")
+	#ifdef TESTING
+	if(print_debug_messages)
+		testing("PAIN DEBUG: [parent] is recieving [pain] of type [damagetype] to the [parse_zone(def_zone)].")
+	#endif
+
 	adjust_bodypart_pain(def_zone, pain, damagetype)
 
 /**
@@ -417,6 +428,11 @@
  */
 /datum/pain/proc/add_wound_pain(mob/living/carbon/source, datum/wound/applied_wound, obj/item/bodypart/wounded_limb)
 	SIGNAL_HANDLER
+
+	#ifdef TESTING
+	if(print_debug_messages)
+		testing("PAIN DEBUG: [parent] is recieving a wound of level [applied_wound.severity] to the [parse_zone(wounded_limb.body_zones)].")
+	#endif
 
 	adjust_bodypart_min_pain(wounded_limb.body_zone, applied_wound.severity * 5)
 	adjust_bodypart_pain(wounded_limb.body_zone, applied_wound.severity * 7.5)
@@ -823,16 +839,18 @@
 	final_print += "[parent] has an average pain of [get_average_pain()]."
 	final_print += "[parent] has a pain modifier of [pain_modifier]."
 	final_print += " - - - - "
+	final_print += "[parent] bodypart printout: (min / current / max)"
 	for(var/part in body_zones)
 		var/obj/item/bodypart/checked_bodypart = body_zones[part]
 		if(QDELETED(checked_bodypart))
 			final_print += "[parent] has a qdeleted / null bodyart in their zones list - [part]."
 		else
-			final_print += "[parent]'s [checked_bodypart.name]: [checked_bodypart.pain] / [checked_bodypart.max_pain]."
+			final_print += "[checked_bodypart.name]: [checked_bodypart.min_pain] / [checked_bodypart.pain] / [checked_bodypart.max_pain]"
 
 	final_print += " - - - - "
+	final_print += "[parent] pain modifier printout:"
 	for(var/mod in pain_mods)
-		final_print += "[parent] has pain mod [mod], value [pain_mods[mod]]."
+		final_print += "[mod]: [pain_mods[mod]]"
 
 	final_print += "</span></div>"
 	to_chat(usr, final_print.Join("\n"))
