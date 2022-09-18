@@ -190,7 +190,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/smgm45
-	name = "Magazine (.45 FMJ - SMG)"
+	name = "Magazine (.45 HP - SMG)"
 	desc = "Designed to quickly reload the Helios PDW."
 	id = "smgm45"
 	build_type = PROTOLATHE | AWAY_LATHE
@@ -209,13 +209,13 @@
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
-/datum/design/smgm45hp
-	name = "Magazine (.45 HP - SMG)"
+/datum/design/smgm45fmj
+	name = "Magazine (.45 FMJ - SMG)"
 	desc = "Designed to quickly reload the Helios PDW. Hollowpoints expand on impact, but are stopped easily by armour."
-	id = "smgm45hp"
+	id = "smgm45fmj"
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/iron = 40000, /datum/material/gold = 5000)
-	build_path = /obj/item/ammo_box/magazine/smgm45/hp
+	build_path = /obj/item/ammo_box/magazine/smgm45/fmj
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 

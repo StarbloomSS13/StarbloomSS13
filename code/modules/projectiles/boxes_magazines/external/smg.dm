@@ -75,12 +75,13 @@
 	ammo_type = /obj/item/ammo_casing/c9mm/fire
 
 /obj/item/ammo_box/magazine/smgm45
-	name = "SMG magazine (.45 FMJ)"
+	name = "SMG magazine (.45 HP)"
 	icon_state = "c20r45-24"
 	base_icon_state = "c20r45"
-	ammo_type = /obj/item/ammo_casing/c45/fmj
+	ammo_type = /obj/item/ammo_casing/c45/hp
 	caliber = CALIBER_45
 	max_ammo = 24
+
 
 /obj/item/ammo_box/magazine/smgm45/update_icon_state()
 	. = ..()
@@ -98,11 +99,11 @@
 	. = ..()
 	icon_state = "[base_icon_state]-[round(ammo_count(), 2)]"
 
-/obj/item/ammo_box/magazine/smgm45/hp
-	name = "SMG magazine (.45 HP)"
+/obj/item/ammo_box/magazine/smgm45/fmj
+	name = "SMG magazine (.45 FMJ)"
 	icon_state = "c20r45-24"
 	base_icon_state = "c20r45"
-	ammo_type = /obj/item/ammo_casing/c45/hp
+	ammo_type = /obj/item/ammo_casing/c45/fmj
 	caliber = CALIBER_45
 	max_ammo = 24
 
