@@ -2356,7 +2356,9 @@
 /turf/open/floor/pod/light,
 /area/maintenance/floor3/starboard/fore)
 "aEE" = (
-/obj/machinery/door/airlock/science,
+/obj/machinery/door/airlock/science{
+	name = "Cytology"
+	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -15325,7 +15327,9 @@
 /turf/open/floor/engine/beacon,
 /area/cargo/scrapbeacon)
 "egK" = (
-/obj/machinery/door/airlock/bathroom,
+/obj/machinery/door/airlock/bathroom{
+	name = "Washroom"
+	},
 /turf/open/floor/iron/showroomfloor,
 /area/service/theater)
 "egT" = (
@@ -19316,7 +19320,9 @@
 /turf/open/floor/pod/light,
 /area/maintenance/floor4/starboard/aft)
 "fuJ" = (
-/obj/machinery/door/airlock/mining/glass,
+/obj/machinery/door/airlock/mining/glass{
+	name = "ExoDrone Launch Bay"
+	},
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -26602,7 +26608,9 @@
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/door/airlock/silver,
+/obj/machinery/door/airlock/silver{
+	name = "Captain's Bathroom"
+	},
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/captain/private)
 "hBR" = (
@@ -52555,7 +52563,9 @@
 /turf/open/floor/iron,
 /area/engineering/lobby)
 "oIN" = (
-/obj/machinery/door/airlock/mining/glass,
+/obj/machinery/door/airlock/mining/glass{
+	name = "Mail Sorting"
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -54600,7 +54610,9 @@
 	},
 /area/cargo/miningdock)
 "prt" = (
-/obj/machinery/door/airlock/mining,
+/obj/machinery/door/airlock/mining{
+	name = "Warehouse"
+	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/general,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable,
