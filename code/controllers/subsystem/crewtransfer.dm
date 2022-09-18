@@ -26,6 +26,16 @@ SUBSYSTEM_DEF(crewtransfer)
 	if(!CONFIG_GET(flag/transfer_auto_vote_enabled))
 		can_fire = FALSE
 
+	// Disable if we're in testing mode, it'd get annoying
+	#ifdef TESTING
+	can_fire = FALSE
+	#endif
+
+	// Disable if we're unit testing, it doesn't make sense
+	#ifdef UNIT_TESTS
+	can_fire = FALSE
+	#endif
+
 	minimum_transfer_time = CONFIG_GET(number/transfer_time_min_allowed)
 	minimum_time_between_votes = CONFIG_GET(number/transfer_time_between_auto_votes)
 	shuttle_call_reason = CONFIG_GET(string/transfer_call_reason)

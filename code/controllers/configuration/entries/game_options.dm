@@ -410,13 +410,13 @@
 
 /// Minimum shift length before transfer votes can begin
 /datum/config_entry/number/transfer_time_min_allowed
-	config_entry_value = 1.5 HOURS
+	default = 1.5 HOURS
 	integer = FALSE
 	min_val = 5 MINUTES
 
 /// Time between auto transfer votes
 /datum/config_entry/number/transfer_time_between_auto_votes
-	config_entry_value = 30 MINUTES
+	default = 30 MINUTES
 	integer = FALSE
 	min_val = 2 MINUTES
 
