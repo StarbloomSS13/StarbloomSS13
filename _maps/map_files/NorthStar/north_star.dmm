@@ -4378,7 +4378,9 @@
 /obj/effect/turf_decal/siding/green{
 	dir = 4
 	},
-/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/airlock/hatch{
+	name = "Maintenance Access"
+	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/general,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -12061,7 +12063,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/qm{
-	name = "Quartermaster"
+	name = "Quartermaster's Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/supply/qm,
 /turf/open/floor/wood,
@@ -19329,7 +19331,7 @@
 /area/maintenance/floor4/starboard/aft)
 "fuJ" = (
 /obj/machinery/door/airlock/mining/glass{
-	name = "ExoDrone Launch Bay"
+	name = "ExoDrone Launchbay"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /obj/structure/cable,
@@ -28479,8 +28481,13 @@
 /area/service/library/lounge)
 "idM" = (
 /obj/structure/table,
-/obj/item/storage/box/pdas,
+/obj/item/storage/box/pdas{
+	pixel_x = 10
+	},
 /obj/machinery/status_display/evac/directional/north,
+/obj/item/paper_bin/construction/large{
+	pixel_x = -6
+	},
 /turf/open/floor/iron/dark/blue/side,
 /area/command/heads_quarters/hop)
 "idO" = (
@@ -38315,7 +38322,7 @@
 /area/service/chapel)
 "kSF" = (
 /obj/machinery/door/airlock/ce/glass{
-	name = "Chief Engineer"
+	name = "Chief Engineer's Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/engineering/ce,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -44027,8 +44034,7 @@
 	},
 /obj/item/pen,
 /obj/item/stamp/ce{
-	pixel_x = -8;
-	pixel_y = 12
+	pixel_x = -8
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/command/heads_quarters/ce)
@@ -46491,7 +46497,7 @@
 /area/maintenance/floor2/starboard)
 "ndR" = (
 /obj/machinery/door/airlock/ce{
-	name = "Chief Engineer"
+	name = "Chief Engineer's Quarters"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/engineering/ce,
 /obj/effect/turf_decal/siding/wood{
@@ -47139,7 +47145,9 @@
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 4
 	},
-/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/airlock/hatch{
+	name = "Maintenance Access"
+	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/general,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -56862,7 +56870,9 @@
 	},
 /area/command/bridge)
 "pZr" = (
-/obj/machinery/door/airlock/freezer,
+/obj/machinery/door/airlock/freezer{
+	name = "Cold Room"
+	},
 /obj/effect/mapping_helpers/airlock/access/any/service/kitchen,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -63583,7 +63593,7 @@
 /area/faction/survey_wings)
 "rVO" = (
 /obj/machinery/door/airlock/qm{
-	name = "Quartermaster"
+	name = "Quartermaster's Quarters"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/supply/qm,
 /obj/effect/turf_decal/siding/wood{
@@ -64266,7 +64276,7 @@
 "sjs" = (
 /obj/effect/mapping_helpers/airlock/access/any/engineering/ce,
 /obj/machinery/door/airlock/ce{
-	name = "Chief Engineer"
+	name = "Chief Engineer's Desk"
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/command/heads_quarters/ce)
