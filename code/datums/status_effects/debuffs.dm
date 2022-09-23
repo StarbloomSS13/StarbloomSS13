@@ -159,7 +159,14 @@
 	update_modifiers(owner)
 
 /datum/status_effect/incapacitating/sleeping/on_remove()
-	UnregisterSignal(owner, list(SIGNAL_ADDTRAIT(TRAIT_SLEEPIMMUNE), SIGNAL_REMOVETRAIT(TRAIT_SLEEPIMMUNE), COMSIG_MOVABLE_MOVED))
+	UnregisterSignal(owner, list(
+		SIGNAL_ADDTRAIT(TRAIT_SLEEPIMMUNE),
+		SIGNAL_REMOVETRAIT(TRAIT_SLEEPIMMUNE),
+		SIGNAL_ADDTRAIT(TRAIT_ON_ANESTHETIC),
+		SIGNAL_REMOVETRAIT(TRAIT_ON_ANESTHETIC),
+		COMSIG_MOVABLE_MOVED,
+	))
+
 	if(!HAS_TRAIT(owner, TRAIT_SLEEPIMMUNE))
 		REMOVE_TRAIT(owner, TRAIT_KNOCKEDOUT, TRAIT_STATUS_EFFECT(id))
 		tick_interval = initial(tick_interval)
