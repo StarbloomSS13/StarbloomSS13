@@ -210,8 +210,18 @@
 		if(amount > 0 && adjusted_bodypart.pain >= adjusted_bodypart.max_pain)
 			continue
 		if(adjusted_amount > 0)
+			#ifdef TESTING
+			var/pre_adjusted = adjusted_amount
+			#endif
+
 			adjusted_bodypart.last_received_pain_type = dam_type
 			adjusted_amount = round(adjusted_amount * pain_modifier * adjusted_bodypart.bodypart_pain_modifier, 0.01)
+
+			#ifdef TESTING
+			if(print_debug_messages)
+				testing("[pre_adjusted] was adjusted down to [adjusted_amount]. (Modifiers: [pain_modifier], [adjusted_bodypart.bodypart_pain_modifier])")
+			#endif
+
 		adjusted_bodypart.pain = clamp(adjusted_bodypart.pain + adjusted_amount, adjusted_bodypart.min_pain, adjusted_bodypart.max_pain)
 
 		if(adjusted_amount > 0)
