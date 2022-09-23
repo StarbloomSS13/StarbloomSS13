@@ -313,7 +313,7 @@
 	// Attacks with a wound bonus add additional pain (usually, like 2-5)
 	// (Note that if they also succeed in applying a wound, more pain comes from that)
 	// Also, sharp attacks apply a smidge extra pain
-	var/pain = (damage + 0.1 * (wound_bonus + bare_wound_bonus)) * (sharpness ? 1.2 : 1)
+	var/pain = (damage + 0.1 * (max(wound_bonus + bare_wound_bonus, 0))) * (sharpness ? 1.2 : 1)
 	switch(damagetype)
 		// Brute pain is dealt to the target zone
 		// pain is just divided by a random number, for variance
