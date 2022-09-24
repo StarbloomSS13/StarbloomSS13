@@ -156,6 +156,7 @@
 			return FALSE
 
 	LAZYSET(pain_mods, key, amount)
+	apply_pain_attributes()
 	return update_pain_modifier()
 
 /**
@@ -677,12 +678,13 @@
  * Apply or remove pain various modifiers from pain (mood, action speed, movement speed) based on the [average_pain].
  */
 /datum/pain/proc/apply_pain_attributes()
+	if(pain_modifier <= 0.5)
+		clear_pain_attributes()
+		return
+
 	switch(get_average_pain())
 		if(0 to 20)
-			parent.mob_surgery_speed_mod = initial(parent.mob_surgery_speed_mod)
-			parent.remove_movespeed_modifier(MOVESPEED_ID_PAIN)
-			parent.remove_actionspeed_modifier(ACTIONSPEED_ID_PAIN)
-			SEND_SIGNAL(parent, COMSIG_CLEAR_MOOD_EVENT, "pain")
+			clear_pain_attributes()
 		if(20 to 40)
 			parent.mob_surgery_speed_mod = 0.9
 			parent.add_movespeed_modifier(/datum/movespeed_modifier/pain/light)
@@ -703,6 +705,15 @@
 			parent.add_movespeed_modifier(/datum/movespeed_modifier/pain/crippling)
 			parent.add_actionspeed_modifier(/datum/actionspeed_modifier/pain/crippling)
 			SEND_SIGNAL(parent, COMSIG_ADD_MOOD_EVENT, "pain", /datum/mood_event/crippling_pain)
+
+/**
+ * Clears all pain related attributes
+ */
+/datum/pain/proc/clear_pain_attributes()
+	parent.mob_surgery_speed_mod = initial(parent.mob_surgery_speed_mod)
+	parent.remove_movespeed_modifier(MOVESPEED_ID_PAIN)
+	parent.remove_actionspeed_modifier(ACTIONSPEED_ID_PAIN)
+	SEND_SIGNAL(parent, COMSIG_CLEAR_MOOD_EVENT, "pain")
 
 /**
  * Run a pain related emote, if a few checks are successful.
@@ -769,6 +780,8 @@
 
 	var/datum/disease/shock/shock_disease = is_undergoing_shock()
 	shock_disease?.cure()
+
+	clear_pain_attributes()
 
 /**
  * Determines if we should be processing or not.
