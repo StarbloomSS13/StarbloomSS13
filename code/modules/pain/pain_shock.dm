@@ -47,8 +47,8 @@
 		if(50 to 60)
 			conditions_fulfilled += 1
 
-	// Good: Painkillers (while conscious)
-	if(affected_mob.stat == CONSCIOUS)
+	// Good: Painkillers (while conscious / in soft crit)
+	if(affected_mob.stat <= SOFT_CRIT)
 		conditions_fulfilled += (affected_mob.pain_controller.pain_modifier <= 0.4)
 		conditions_fulfilled += (affected_mob.pain_controller.pain_modifier <= 0.75)
 
