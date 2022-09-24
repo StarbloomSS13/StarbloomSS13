@@ -40,7 +40,12 @@
 	conditions_fulfilled += (!!affected_mob.IsSleeping() || !!affected_mob.IsUnconscious())
 	// Good: Having lower pain
 	switch(affected_mob.pain_controller.get_average_pain())
-		if(0 to 40)
+		if(0 to 15)
+			// Guarantees you fulfill enough conditions if you get this low, assuming you have no detractors
+			// Why? It might confuse some people if the person's like, not experiencing any pain at all
+			// but for some reason is still in shock, because they haven't done one of the other conditions arbitrarily
+			conditions_fulfilled += conditions_required_to_cure
+		if(15 to 40)
 			conditions_fulfilled += 3
 		if(40 to 50)
 			conditions_fulfilled += 2
