@@ -161,7 +161,8 @@
 
 /datum/reagent/medicine/cryoxadone/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	if(M.IsSleeping() || M.IsUnconscious())
-		M.set_pain_mod(type, 0.5)
+		M.set_pain_mod(type, 0.5) // Heal pain faster
+		ADD_TRAIT(M, TRAIT_ABATES_SHOCK, type) // To negate the fact that being cold is bad for shock
 		var/power = -0.00003 * (M.bodytemperature ** 2) + 3
 		if(M.bodytemperature < T0C)
 			M.adjustOxyLoss(-3 * power * REM * delta_time, 0)
@@ -169,7 +170,7 @@
 			M.adjustFireLoss(-power * REM * delta_time, 0)
 			M.adjustToxLoss(-power * REM * delta_time, 0, TRUE) //heals TOXINLOVERs
 			M.adjustCloneLoss(-power * REM * delta_time, 0)
-			M.cause_pain(BODY_ZONES_ALL, -0.25 * power * REM * delta_time)
+			M.cause_pain(BODY_ZONES_ALL, -0.25 * power * REM * delta_time) // Heal all pain
 			for(var/datum/wound/iter_wound as anything in M.all_wounds)
 				iter_wound.on_xadone(power * REAGENTS_EFFECT_MULTIPLIER * delta_time)
 			REMOVE_TRAIT(M, TRAIT_DISFIGURED, TRAIT_GENERIC) //fixes common causes for disfiguration
@@ -180,6 +181,7 @@
 /datum/reagent/medicine/cryoxadone/on_mob_end_metabolize(mob/living/carbon/user)
 	. = ..()
 	user.unset_pain_mod(type)
+	REMOVE_TRAIT(user, TRAIT_ABATES_SHOCK, type)
 
 // Healing
 /datum/reagent/medicine/cryoxadone/on_hydroponics_apply(obj/item/seeds/myseed, datum/reagents/chems, obj/machinery/hydroponics/mytray, mob/user)
@@ -317,6 +319,14 @@
 	var/extra_regen = 0.25 // in addition to acting as temporary blood, also add about half this much to their actual blood per second
 	ph = 5.5
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/medicine/salglu_solution/on_mob_metabolize(mob/living/carbon/M)
+	. = ..()
+	ADD_TRAIT(M, TRAIT_ABATES_SHOCK, type)
+
+/datum/reagent/medicine/salglu_solution/on_mob_end_metabolize(mob/living/carbon/M)
+	REMOVE_TRAIT(M, TRAIT_ABATES_SHOCK, type)
+	return ..()
 
 /datum/reagent/medicine/salglu_solution/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	if(last_added)
@@ -760,9 +770,11 @@
 /datum/reagent/medicine/epinephrine/on_mob_metabolize(mob/living/carbon/M)
 	..()
 	ADD_TRAIT(M, TRAIT_NOCRITDAMAGE, type)
+	ADD_TRAIT(M, TRAIT_ABATES_SHOCK, type)
 
 /datum/reagent/medicine/epinephrine/on_mob_end_metabolize(mob/living/carbon/M)
 	REMOVE_TRAIT(M, TRAIT_NOCRITDAMAGE, type)
+	REMOVE_TRAIT(M, TRAIT_ABATES_SHOCK, type)
 	..()
 
 /datum/reagent/medicine/epinephrine/on_mob_life(mob/living/carbon/M, delta_time, times_fired)

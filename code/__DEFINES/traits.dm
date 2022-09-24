@@ -866,3 +866,5 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// Mob is on anesthetic
 #define TRAIT_ON_ANESTHETIC "on_anesthetic"
+/// If the mob enters shock, they will have +1 cure condition (helps cure it faster)
+#define TRAIT_ABATES_SHOCK "shock_abated"
