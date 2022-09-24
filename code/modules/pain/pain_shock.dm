@@ -19,6 +19,8 @@
 	bypasses_immunity = TRUE
 	/// How many conditions do we require to get cured?
 	var/conditions_required_to_cure = 4
+	/// How many conditions do we need to not get a heart attack?
+	var/conditions_required_to_maintain = 3
 
 /**
  * Checks which cure conditions we fulfill.
@@ -38,6 +40,8 @@
 	conditions_fulfilled += (affected_mob.bodytemperature > affected_mob.get_body_temp_cold_damage_limit())
 	// Good: Sleeping (or unconscious I guess)
 	conditions_fulfilled += (!!affected_mob.IsSleeping() || !!affected_mob.IsUnconscious())
+	// Good: Having this trait (from salgu or epinephrine)
+	conditions_fulfilled += HAS_TRAIT(affected_mob, TRAIT_ABATES_SHOCK)
 	// Good: Having lower pain
 	switch(affected_mob.pain_controller.get_average_pain())
 		if(0 to 15)
@@ -56,9 +60,6 @@
 	if(affected_mob.stat <= SOFT_CRIT)
 		conditions_fulfilled += (affected_mob.pain_controller.pain_modifier <= 0.4)
 		conditions_fulfilled += (affected_mob.pain_controller.pain_modifier <= 0.75)
-
-	// Good: Having this trait (from salgu or epinephrine)
-	conditions_fulfilled += HAS_TRAIT(affected_mob, TRAIT_ABATES_SHOCK)
 
 	// Bad: Bleeding
 	conditions_fulfilled -= affected_mob.is_bleeding()
@@ -100,12 +101,12 @@
 	var/cure_level = check_cure_conditions()
 	testing("[affected_mob] undergoing shock: [cure_level] cure conditions achieved.")
 
-	// Having any 2 cure conditions present will keep us below stage 3
-	if(cure_level >= 2 && stage > 2)
+	// Having a few cure conditions present ([conditions_required_to_maintain]) will keep us below stage 3
+	if(stage > 2 && cure_level >= conditions_required_to_maintain)
 		update_stage(2)
 
 	// If we have enough conditions present to cure us, roll for a cure
-	if(has_cure(cure_level) && stage <= 2 && DT_PROB(cure_level, delta_time))
+	if(stage <= 2 && has_cure(cure_level) && DT_PROB(cure_level, delta_time))
 		to_chat(affected_mob, span_bold(span_green("Your body feels awake and active again!")))
 		cure()
 		return FALSE
@@ -162,6 +163,8 @@
 				to_chat(affected_mob, span_danger("You skip a breath!"))
 				affected_mob.pain_emote("gasp", 3 SECONDS)
 				affected_mob.apply_damage(rand(5, 15), OXY)
+			if(DT_PROB(1, delta_time))
+				affected_mob.emote("faint")
 			if(DT_PROB(8, delta_time))
 				to_chat(affected_mob, span_danger("You feel freezing!"))
 				affected_mob.pain_emote("shiver", 3 SECONDS)
@@ -176,6 +179,8 @@
 				affected_mob.stuttering = max(60, affected_mob.stuttering + 5)
 			if(DT_PROB(8, delta_time))
 				affected_mob.slurring = max(18, affected_mob.slurring + 5)
+			if(DT_PROB(2, delta_time))
+				affected_mob.emote("faint")
 			if(DT_PROB(33, delta_time))
 				if(affected_mob.can_heartattack())
 					to_chat(affected_mob, span_userdanger("Your heart stops!"))
