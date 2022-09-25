@@ -1122,6 +1122,7 @@
 		"nvgmesons",
 		"nv_scigoggles",
 		"security_hud_night",
+		"mech_light_amplification",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 
@@ -1875,14 +1876,16 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
-/datum/techweb_node/mech_lmg
-	id = "mech_lmg"
-	display_name = "Exosuit Weapon (\"Ultra AC 2\" LMG)"
-	description = "An advanced piece of mech weaponry"
+/datum/techweb_node/mech_ac
+	id = "mech_ac"
+	display_name = "Exosuit Weapons (Autocannon Machineguns)"
+	description = "Multiple types of autocannons for mechs varying in caliber."
 	prereq_ids = list("exotic_ammo")
 	design_ids = list(
-		"mech_lmg",
-		"mech_lmg_ammo",
+		"mech_uac2",
+		"mech_ac2_ammo",
+		"mech_ac5",
+		"mech_ac5_ammo",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 

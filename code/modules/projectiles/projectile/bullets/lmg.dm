@@ -3,10 +3,17 @@
 /obj/projectile/bullet/c3d
 	damage = 20
 
-// Mech LMG
+// Mech AC-2 LMG
 
-/obj/projectile/bullet/lmg
+/obj/projectile/bullet/mech_ac2
 	damage = 20
+	armour_penetration = 10
+
+// Mech AC-5 MG
+
+/obj/projectile/bullet/mech_ac5 //No wound malus. These are pretty much miniature tank shells at this caliber.
+	damage = 45
+	armour_penetration = 50
 
 // Mech FNX-99
 
