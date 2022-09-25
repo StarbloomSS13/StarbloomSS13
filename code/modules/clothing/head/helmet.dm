@@ -127,11 +127,26 @@
 	name = "marine medic helmet"
 	icon_state = "marine_medic"
 
-/obj/item/clothing/head/helmet/marine/tyrant
+/obj/item/clothing/head/helmet/tyrant
 	name = "TYRANT helmet"
 	desc = "An extremely heavily armored helmet that protects against moderate damage. It's Class IV armor, offering near total protection against projectiles."
 	w_class = WEIGHT_CLASS_BULKY
+	icon_state = "marine_command"
+	inhand_icon_state = "helmetalt"
+	slowdown = 1
+	equip_delay_self = 50
+	equip_delay_other = 75
+	strip_delay = 100
+	resistance_flags = FIRE_PROOF | ACID_PROOF
 	armor = list(MELEE = 90, BULLET = 95, LASER = 80, ENERGY = 80, BOMB = 100, BIO = 100, FIRE = 90, ACID = 90)
+	can_flashlight = TRUE
+	dog_fashion = null //would probably break a corgi's neck
+
+/obj/item/clothing/head/helmet/tyrant/Initialize(mapload)
+	set_attached_light(new /obj/item/flashlight/seclite)
+	update_helmlight()
+	update_appearance()
+	. = ..()
 
 /obj/item/clothing/head/helmet/old
 	name = "degrading helmet"

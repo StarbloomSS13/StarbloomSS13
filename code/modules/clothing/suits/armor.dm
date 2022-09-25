@@ -257,10 +257,10 @@
 	w_class = WEIGHT_CLASS_BULKY
 	clothing_flags = THICKMATERIAL
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	equip_delay_self = 200
-	equip_delay_other = 200
-	strip_delay = 200
-	slowdown = 4
+	equip_delay_self = 50
+	equip_delay_other = 75
+	strip_delay = 100 //10 seconds, you'll have to wait a while.
+	slowdown = 2.5
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	armor = list(MELEE = 90, BULLET = 95, LASER = 80, ENERGY = 80, BOMB = 100, BIO = 100, FIRE = 90, ACID = 90)
 
