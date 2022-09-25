@@ -15,6 +15,7 @@
 	material_flags = MATERIAL_EFFECTS
 	var/list/icons
 	tiled_dirt = FALSE
+	footstep = FOOTSTEP_PLATING
 
 
 /turf/open/floor/mineral/Initialize(mapload)

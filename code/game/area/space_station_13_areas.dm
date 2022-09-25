@@ -175,7 +175,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	sound_environment = SOUND_AREA_TUNNEL_ENCLOSED
 	forced_ambience = TRUE
 	ambient_buzz = 'sound/ambience/maintambience.ogg'
-	ambient_buzz_vol = 60
+	ambient_buzz_vol = 80
 	min_ambience_cooldown = 480 SECONDS
 	max_ambience_cooldown = 720 SECONDS
 
