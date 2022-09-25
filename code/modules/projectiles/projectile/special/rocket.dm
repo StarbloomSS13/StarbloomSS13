@@ -76,6 +76,7 @@
 	desc = "Boom."
 	icon_state = "missile"
 	damage = 30
+	armour_penetration = 80 //this is a BREACHING missile
 	ricochets_max = 0 //it's a MISSILE
 	embedding = null
 	shrapnel_type = null

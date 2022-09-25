@@ -53,12 +53,19 @@
 	rounds = 40
 	ammo_type = MECHA_AMMO_BUCKSHOT
 
-/obj/item/mecha_ammo/lmg
-	name = "machine gun ammo box"
+/obj/item/mecha_ammo/ac2
+	name = "AC2 ammo box"
 	desc = "A box of linked ammunition, designed for the Ultra AC 2 exosuit weapon."
-	icon_state = "lmg"
+	icon_state = "ac2"
 	rounds = 300
-	ammo_type = MECHA_AMMO_LMG
+	ammo_type = MECHA_AMMO_AC2
+
+/obj/item/mecha_ammo/ac5
+	name = "AC5 ammo box"
+	desc = "A box of linked ammunition, designed for the Autocannon/5 exosuit weapon."
+	icon_state = "ac5"
+	rounds = 100
+	ammo_type = MECHA_AMMO_AC5
 
 /obj/item/mecha_ammo/missiles_br
 	name = "breaching missiles"

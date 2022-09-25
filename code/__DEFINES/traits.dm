@@ -789,6 +789,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define ORBITING_TRAIT "orbiting"
 /// From the item_scaling element
 #define ITEM_SCALING_TRAIT "item_scaling"
+#define MECH_TRAIT "mech_trait"
 
 /**
 * Trait granted by [/mob/living/carbon/Initialize] and

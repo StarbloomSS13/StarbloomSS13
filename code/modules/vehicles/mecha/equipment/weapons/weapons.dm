@@ -296,12 +296,12 @@
 	harmful = TRUE
 	ammo_type = MECHA_AMMO_BUCKSHOT
 
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/uac2
 	name = "\improper Ultra AC 2"
 	desc = "A weapon for combat exosuits. Shoots a rapid, three shot burst."
 	icon_state = "mecha_uac2"
 	equip_cooldown = 10
-	projectile = /obj/projectile/bullet/lmg
+	projectile = /obj/projectile/bullet/mech_ac2
 	projectiles = 300
 	projectiles_cache = 300
 	projectiles_cache_max = 1200
@@ -310,7 +310,20 @@
 	randomspread = 1
 	projectile_delay = 2
 	harmful = TRUE
-	ammo_type = MECHA_AMMO_LMG
+	ammo_type = MECHA_AMMO_AC2
+
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/ac5
+	name = "\improper Autocannon/5"
+	desc = "A weapon for combat exosuits. Fires a singular armor-piercing round."
+	icon_state = "mecha_ac5"
+	equip_cooldown = 10
+	projectile = /obj/projectile/bullet/mech_ac5
+	projectiles = 100
+	projectiles_cache = 100
+	projectiles_cache_max = 400
+	fire_sound = 'sound/weapons/gun/revolver/starbloom_revolver.ogg'
+	harmful = TRUE
+	ammo_type = MECHA_AMMO_AC5
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack
 	name = "\improper SRM-8 missile rack"

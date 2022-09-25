@@ -135,3 +135,32 @@
 		chassis.remove_control_flags(owner, VEHICLE_CONTROL_MELEE|VEHICLE_CONTROL_EQUIPMENT)
 		chassis.add_control_flags(owner, VEHICLE_CONTROL_DRIVE|VEHICLE_CONTROL_SETTINGS)
 	chassis.update_icon_state()
+
+//Night vision mode
+/datum/action/vehicle/sealed/mecha/light_amplification
+	name = "Light Amplification"
+	button_icon_state = "mech_nightvision_off"
+	//What traits do we use?
+	var/amplification_traits = list(TRAIT_TRUE_NIGHT_VISION, TRAIT_MESON_VISION, TRAIT_SUPERMATTER_MADNESS_IMMUNE)
+
+/datum/action/vehicle/sealed/mecha/light_amplification/Trigger(trigger_flags)
+	if(!owner || !chassis || !(owner in chassis.occupants))
+		return
+	chassis.light_amplification = !chassis.light_amplification
+	button_icon_state = "mech_nightvision_[chassis.light_amplification ? "on" : "off"]"
+	chassis.log_message("Toggled light amplification.", LOG_MECHA)
+	to_chat(owner, "[icon2html(chassis, owner)]<font color='[chassis.light_amplification?"blue":"red"]'>Light amplification [chassis.light_amplification?"en":"dis"]abled.</font>")
+	if(ismob(owner))
+		var/mob/user = owner
+		if(chassis.light_amplification)
+			for(var/trait in amplification_traits)
+				ADD_TRAIT(user, trait, MECH_TRAIT)
+			SEND_SOUND(owner, sound('sound/mecha/light_amp.ogg', volume=50))
+			user.update_sight()
+		else
+			for(var/trait in amplification_traits)
+				REMOVE_TRAIT(user, trait, MECH_TRAIT)
+			user.update_sight()
+	else
+		to_chat(owner, "The [src] activates, but you appear to be a mere object!") //oh fuck WHAT
+	UpdateButtons()
