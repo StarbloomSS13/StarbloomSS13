@@ -99,7 +99,7 @@ GLOBAL_LIST_INIT(footstep, list(
 		'sound/effects/footstep/ms13catwalk1.ogg',
 		'sound/effects/footstep/ms13catwalk2.ogg',
 		'sound/effects/footstep/ms13catwalk3.ogg',
-		'sound/effects/footstep/ms13catwalk4.ogg'), 24, 1),
+		'sound/effects/footstep/ms13catwalk4.ogg'), 15, 1),
 ))
 //bare footsteps lists
 GLOBAL_LIST_INIT(barefootstep, list(
