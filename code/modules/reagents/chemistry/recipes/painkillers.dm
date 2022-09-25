@@ -39,3 +39,15 @@
 	optimal_ph_max = 12
 	reaction_tags = REACTION_TAG_MODERATE | REACTION_TAG_HEALING | REACTION_TAG_OTHER | REACTION_TAG_DRUG
 	reaction_flags = REACTION_INSTANT
+
+/datum/chemical_reaction/medicine/ibaltifen
+	results = list(/datum/reagent/medicine/painkiller/specialized/ibaltifen = 3)
+	required_reagents = list(/datum/reagent/propionic_acid = 1, /datum/reagent/chlorine = 1, /datum/reagent/copper = 1)
+	required_catalysts = list(/datum/reagent/medicine/c2/libital = 1)
+	reaction_tags = REACTION_TAG_MODERATE | REACTION_TAG_HEALING | REACTION_TAG_OTHER | REACTION_TAG_DRUG
+
+/datum/chemical_reaction/medicine/anurifen
+	results = list(/datum/reagent/medicine/painkiller/specialized/anurifen = 3)
+	required_reagents = list(/datum/reagent/propionic_acid= 1, /datum/reagent/fluorine = 1, /datum/reagent/phosphorus = 1)
+	required_catalysts = list(/datum/reagent/medicine/c2/aiuri = 1)
+	reaction_tags = REACTION_TAG_MODERATE | REACTION_TAG_HEALING | REACTION_TAG_OTHER | REACTION_TAG_DRUG

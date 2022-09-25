@@ -42,7 +42,9 @@
 		/obj/item/stack/medical/gauze = 1,
 		/obj/item/stack/medical/suture = 2,
 		/obj/item/stack/medical/mesh = 2,
-		/obj/item/reagent_containers/hypospray/medipen = 1)
+		/obj/item/reagent_containers/hypospray/medipen = 1,
+		/obj/item/reagent_containers/hypospray/medipen/morphine = 1,
+	)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/emergency
@@ -59,7 +61,7 @@
 		/obj/item/stack/medical/suture/emergency = 1,
 		/obj/item/stack/medical/ointment = 1,
 		/obj/item/reagent_containers/hypospray/medipen/ekit = 2,
-		/obj/item/reagent_containers/hypospray/medipen/painkiller = 2,
+		/obj/item/reagent_containers/hypospray/medipen/emergency_painkiller = 2,
 		/obj/item/storage/pill_bottle/iron = 1,
 		/obj/item/shock_blanket/emergency = 1,
 	)
@@ -178,8 +180,10 @@
 	var/static/items_inside = list(
 		/obj/item/reagent_containers/pill/patch/aiuri = 3,
 		/obj/item/reagent_containers/spray/hercuri = 1,
+		/obj/item/stack/medical/ointment = 1,
 		/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 1,
-		/obj/item/reagent_containers/hypospray/medipen = 1)
+		/obj/item/reagent_containers/hypospray/medipen/burn_painkiller = 1,
+	)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/toxin
@@ -243,7 +247,9 @@
 		/obj/item/reagent_containers/pill/patch/libital = 3,
 		/obj/item/stack/medical/gauze = 1,
 		/obj/item/storage/pill_bottle/probital = 1,
-		/obj/item/reagent_containers/hypospray/medipen/salacid = 1)
+		/obj/item/reagent_containers/hypospray/medipen/salacid = 1,
+		/obj/item/reagent_containers/hypospray/medipen/brute_painkiller = 1,
+	)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/advanced
@@ -259,9 +265,11 @@
 		return
 	var/static/items_inside = list(
 		/obj/item/reagent_containers/pill/patch/synthflesh = 3,
+		/obj/item/storage/pill_bottle/prescription/aspirin_para_coffee = 1,
 		/obj/item/reagent_containers/hypospray/medipen/atropine = 2,
 		/obj/item/stack/medical/gauze = 1,
-		/obj/item/storage/pill_bottle/penacid = 1)
+		/obj/item/storage/pill_bottle/penacid = 1,
+	)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/tactical

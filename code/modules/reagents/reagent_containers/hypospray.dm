@@ -170,7 +170,8 @@
 
 /obj/item/reagent_containers/hypospray/medipen/morphine
 	name = "morphine medipen"
-	desc = "A rapid way to get you out of a tight situation and fast! You'll feel rather drowsy, though."
+	desc = "A medipen that contains a dosage of painkilling morphine. \
+		WARNING: Do not use in combination with alcohol. Can cause drowsiness and addiction."
 	icon_state = "morphen"
 	inhand_icon_state = "morphen"
 	base_icon_state = "morphen"

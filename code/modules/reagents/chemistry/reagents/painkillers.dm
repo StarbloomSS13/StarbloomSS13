@@ -25,16 +25,16 @@
 		M.apply_damage(round(highest_boozepwr / 33, 0.5) * REM * delta_time, TOX)
 		. = TRUE
 
-// Morphine is the well knowne existing painkiller.
+// Morphine is the well known existing painkiller.
 // It's very strong but makes you sleepy. Also addictive.
 /datum/reagent/medicine/painkiller/morphine
 	name = "Morphine"
 	description = "A painkiller that allows the patient to move at full speed even when injured. \
 		Causes drowsiness and eventually unconsciousness in high doses. \
-		Overdose will cause a variety of effects, ranging from minor to lethal."
+		Overdose causes minor dizziness and jitteriness."
 	reagent_state = LIQUID
 	color = "#A9FBFB"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM // 0.1 units per second
 	overdose_threshold = 30
 	ph = 8.96
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
@@ -62,13 +62,25 @@
 		M.adjust_disgust(1.5 * REM * delta_time)
 
 	// The longer we're metabolzing it, the more we get sleepy
+	// for refernece:
+	// with 0.1 metabolism rate
+	// ~2.5 units = 12 cycles = ~30 seconds
 	switch(current_cycle)
-		if(11)
-			to_chat(M, span_warning("You start to feel tired...") )
-		if(12 to 24)
-			M.adjust_drowsyness(1 * REM * delta_time)
-		if(24 to INFINITY)
-			M.Sleeping(40 * REM * delta_time)
+		if(11) //2.5u
+			to_chat(M, span_warning("You start to feel tired..."))
+
+		if(12 to 36) // 2.5u to 7.5u
+			if(M.drowsyness <= 3 && DT_PROB(33, delta_time))
+				M.adjust_drowsyness(1 * REM * delta_time)
+
+		if(36 to 48) // 7.5u to 10u
+			if(M.drowsyness <= 6 && DT_PROB(66, delta_time))
+				M.adjust_drowsyness(1 * REM * delta_time)
+
+		if(49 to INFINITY) //10u onward
+			if(M.drowsyness <= 9)
+				M.adjust_drowsyness(1 * REM * delta_time)
+			M.Sleeping(4 SECONDS * REM * delta_time)
 
 	..()
 	return TRUE
@@ -97,6 +109,7 @@
 	// Not good at headaches, but very good at treating everything else.
 	M.adjustBruteLoss(-0.1 * REM * delta_time, FALSE)
 	M.adjustFireLoss(-0.05 * REM * delta_time, FALSE)
+	// Numbers seem low, but our metabolism is very slow
 	M.cause_pain(BODY_ZONE_HEAD, -0.02 * REM * delta_time)
 	M.cause_pain(BODY_ZONES_LIMBS, -0.04 * REM * delta_time)
 	M.cause_pain(BODY_ZONE_CHEST, -0.08 * REM * delta_time)
@@ -133,7 +146,7 @@
 
 // Paracetamol. Okay at headaches, okay at everything else, bad at fevers, less disgust.
 // Use for general healing every type of pain.
-/datum/reagent/medicine/painkiller/paracetamol
+/datum/reagent/medicine/painkiller/paracetamol // Also known as Acetaminophen, or Tylenol
 	name = "Paracetamol"
 	description = "A painkiller that combats mind to moderate pain, headaches, and low fever. Causes mild nausea. Overdosing causes liver damage, sickness, and can be lethal."
 	reagent_state = LIQUID
@@ -146,6 +159,7 @@
 
 /datum/reagent/medicine/painkiller/paracetamol/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	// Good general painkiller.
+	// Numbers seem lowish, but our metabolism is very slow
 	M.adjustBruteLoss(-0.05 * REM * delta_time, FALSE)
 	M.adjustFireLoss(-0.05 * REM * delta_time, FALSE)
 	M.adjustToxLoss(-0.05 * REM * delta_time, FALSE)
@@ -173,7 +187,7 @@
 
 // Ibuprofen. Best at headaches, best at fevers, less good at everything else.
 // Use for treating head pain primarily.
-/datum/reagent/medicine/painkiller/ibuprofen
+/datum/reagent/medicine/painkiller/ibuprofen // Also known as Advil
 	name = "Ibuprofen"
 	description = "A medication that combats mild pain, headaches, and fever. Causes mild nausea and dizziness in higher dosages. Overdosing causes sickness, drowsiness, dizziness, and mild pain."
 	reagent_state = LIQUID
@@ -188,6 +202,7 @@
 	// Really good at treating headaches.
 	M.adjustBruteLoss(-0.05 * REM * delta_time, FALSE)
 	M.adjustToxLoss(-0.1 * REM * delta_time, FALSE)
+	// Heals pain, numbers seem low but our metabolism is very slow
 	M.cause_pain(BODY_ZONE_HEAD, -0.08 * REM * delta_time)
 	M.cause_pain(BODY_ZONE_CHEST, -0.04 * REM * delta_time)
 	M.cause_pain(BODY_ZONES_LIMBS, -0.02 * REM * delta_time)
@@ -246,9 +261,11 @@
 	harmful = TRUE
 
 /datum/reagent/medicine/painkiller/aspirin_para_coffee/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
-	// Heals all pain a bit if in low dosage. High metabolism, so it must make it count.
+	// Heals all pain a bit if in low dosage.
 	if(volume <= 10)
-		M.cause_pain(BODY_ZONES_ALL, -1 * REM * delta_time)
+		// Number looks high, compared to other painkillers,
+		// but we have a comparatively much higher metabolism than them.
+		M.cause_pain(BODY_ZONES_ALL, -0.8 * REM * delta_time)
 	// Mildly toxic in higher dosages.
 	else if(DT_PROB(volume * 3, delta_time))
 		M.apply_damage(3 * REM * delta_time, TOX)
@@ -275,9 +292,9 @@
 	M.adjustFireLoss(-0.2 * REM * delta_time, FALSE)
 	M.cause_pain(BODY_ZONES_ALL, -0.6 * REM * delta_time)
 	M.set_drugginess(10 * REM * delta_time)
-	if(M.disgust < DISGUST_LEVEL_VERYGROSS && DT_PROB(75 * max(1 - creation_purity, 0.5), delta_time))
+	if(M.disgust < DISGUST_LEVEL_VERYGROSS && DT_PROB(40, delta_time))
 		M.adjust_disgust(2 * REM * delta_time)
-	if(DT_PROB(33 * max(1 - creation_purity, 0.5), delta_time))
+	if(DT_PROB(33, delta_time))
 		M.dizziness = clamp(M.dizziness + (1 * REM * delta_time), 0, 5)
 
 	..()
@@ -289,13 +306,13 @@
 		return
 
 	var/mob/living/carbon/human/human_mob = M
-	if(DT_PROB(15 - (5 * normalise_creation_purity()), delta_time))
+	if(DT_PROB(12, delta_time))
 		var/can_heart_fail = (!human_mob.undergoing_cardiac_arrest() && human_mob.can_heartattack())
 		var/picked_option = rand(1, (can_heart_fail ? 6 : 3))
 		switch(picked_option)
 			if(1)
 				to_chat(human_mob, span_danger("Your legs don't want to move."))
-				human_mob.Paralyze(60 * REM * delta_time)
+				human_mob.Paralyze(6 SECONDS * REM * delta_time)
 			if(2)
 				to_chat(human_mob, span_danger("Your breathing starts to shallow."))
 				human_mob.losebreath = clamp(human_mob.losebreath + 3 * REM * delta_time, 0, 12)
@@ -316,3 +333,79 @@
 				human_mob.set_heartattack(TRUE)
 				metabolization_rate *= 4
 		return TRUE
+
+// Future painkiller ideas:
+// - Real world stuff
+// Tramadol
+// Fentanyl (Rework) (Also a potential anesthetic)
+// Hydrocodone (And its combination drugs)
+// Dihydromorphine
+// Pethidine
+// - Space stuff (Suffix: -fen)
+
+// A subtype of painkillers that will heal pain better
+// depending on what type of pain the part's feeling
+/datum/reagent/medicine/painkiller/specialized
+	/// What type of pain are we looking for? If we aren't experiencing this type, it will be 10x less effective
+	var/pain_type_to_look_for
+	/// What type of wound are we looking for? If our bodypart has this wound, it will be 1.5x more effective
+	var/wound_type_to_look_for
+
+/datum/reagent/medicine/painkiller/specialized/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	. = ..()
+	if(!M.pain_controller)
+		return
+
+	for(var/obj/item/bodypart/part as anything in M.bodyparts)
+		if(!IS_ORGANIC_LIMB(part))
+			continue
+
+		var/pain_restore_amount = -0.8 * REM * delta_time
+		if(pain_type_to_look_for && (part.last_received_pain_type != pain_type_to_look_for))
+			pain_restore_amount *= 0.1
+		if(wound_type_to_look_for && (locate(wound_type_to_look_for) in part.wounds))
+			pain_restore_amount *= 1.5
+
+		M.cause_pain(part.body_zone, pain_restore_amount)
+
+// Libital, but helps pain: ib-alti-fen
+// Heals lots of pain for bruise pain, otherwise lower
+/datum/reagent/medicine/painkiller/specialized/ibaltifen
+	name = "Ibaltifen"
+	description = "A painkiller designed to combat pain caused by broken limbs and bruises."
+	reagent_state = LIQUID
+	color = "#feffae"
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	ph = 7.9
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	pain_modifier = 0.75
+	pain_type_to_look_for = BRUTE
+	wound_type_to_look_for = /datum/wound/blunt
+
+/datum/reagent/medicine/painkiller/specialized/ibaltifen/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	// a bit of libital influence
+	M.adjustOrganLoss(ORGAN_SLOT_LIVER, 0.5 * REM * delta_time)
+	M.adjustBruteLoss(-0.5 * REM * normalise_creation_purity() * delta_time)
+	..()
+	return TRUE
+
+// Aiuri, but helps pain: an-uri-fen
+// Heals lots of pain for burn pain, otherwise lower
+/datum/reagent/medicine/painkiller/specialized/anurifen
+	name = "Anurifen"
+	description = "A painkiller designed to combat pain caused by burns."
+	reagent_state = LIQUID
+	color = "#c4aeff"
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	ph = 3.6
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	pain_modifier = 0.75
+	pain_type_to_look_for = BURN
+	wound_type_to_look_for = /datum/wound/burn
+
+/datum/reagent/medicine/painkiller/specialized/anurifen/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	// a bit of aiuri influence
+	M.adjustOrganLoss(ORGAN_SLOT_EYES, 0.4 * REM * delta_time)
+	M.adjustFireLoss(-0.5 * REM * normalise_creation_purity() * delta_time)
+	..()
+	return TRUE
