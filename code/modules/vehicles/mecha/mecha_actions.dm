@@ -141,7 +141,7 @@
 	name = "Light Amplification"
 	button_icon_state = "mech_nightvision_off"
 	//What traits do we use?
-	var/amplification_traits = list(TRAIT_TRUE_NIGHT_VISION, TRAIT_MESON_VISION, TRAIT_SUPERMATTER_MADNESS_IMMUNE)
+	var/list/amplification_traits = list(TRAIT_TRUE_NIGHT_VISION, TRAIT_MESON_VISION, TRAIT_SUPERMATTER_MADNESS_IMMUNE)
 
 /datum/action/vehicle/sealed/mecha/light_amplification/Trigger(trigger_flags)
 	if(!owner || !chassis || !(owner in chassis.occupants))
@@ -164,3 +164,14 @@
 	else
 		to_chat(owner, "The [src] activates, but you appear to be a mere object!") //oh fuck WHAT
 	UpdateButtons()
+
+/datum/action/vehicle/sealed/mecha/light_amplification/Destroy()
+	if(!owner || !chassis || !(owner in chassis.occupants))
+		return
+	if(ismob(owner))
+		var/mob/user = owner
+		for(var/trait in amplification_traits)
+			REMOVE_TRAIT(user, trait, MECH_TRAIT)
+		user.update_sight()
+		chassis.light_amplification = FALSE
+	return ..()
