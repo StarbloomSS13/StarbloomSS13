@@ -346,6 +346,8 @@
 // A subtype of painkillers that will heal pain better
 // depending on what type of pain the part's feeling
 /datum/reagent/medicine/painkiller/specialized
+	/// How much pain we restore on life ticks, modified by modifiers (yeah?)
+	var/pain_heal_amount = 0.8
 	/// What type of pain are we looking for? If we aren't experiencing this type, it will be 10x less effective
 	var/pain_type_to_look_for
 	/// What type of wound are we looking for? If our bodypart has this wound, it will be 1.5x more effective
@@ -360,13 +362,13 @@
 		if(!IS_ORGANIC_LIMB(part))
 			continue
 
-		var/pain_restore_amount = -0.8 * REM * delta_time
+		var/final_pain_heal_amount = -1 * pain_heal_amount * REM * delta_time
 		if(pain_type_to_look_for && (part.last_received_pain_type != pain_type_to_look_for))
-			pain_restore_amount *= 0.1
+			final_pain_heal_amount *= 0.1
 		if(wound_type_to_look_for && (locate(wound_type_to_look_for) in part.wounds))
-			pain_restore_amount *= 1.5
+			final_pain_heal_amount *= 1.5
 
-		M.cause_pain(part.body_zone, pain_restore_amount)
+		M.cause_pain(part.body_zone, final_pain_heal_amount)
 
 // Libital, but helps pain: ib-alti-fen
 // Heals lots of pain for bruise pain, otherwise lower

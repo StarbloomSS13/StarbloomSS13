@@ -9,7 +9,7 @@
 	var/max_pain = PAIN_LIMB_MAX
 	/// Modifier applied to pain that this part receives
 	var/bodypart_pain_modifier = 1
-	/// The last type of pain we received. Used for feedback messages.
+	/// The last type of pain we received. Determines what type of pain we're recieving.
 	var/last_received_pain_type = BRUTE
 
 /**
@@ -131,8 +131,14 @@
 	max_pain = PAIN_CHEST_MAX
 
 /obj/item/bodypart/chest/robot
+	// Augmented limbs start with maximum pain as a trade-off for becoming almost immune to it
+	// The idea being that the roboticist installing augments should take care of their patient
+	// following the period after they're augmented - anesthetic, rest, painkillers (from medbay)
 	pain = PAIN_CHEST_MAX
-	bodypart_pain_modifier = 0.5
+	// As a trade off for starting with maximum pain,
+	// augmented limbs lose pain very rapidly and take very little in the way of pain.
+	// Why not a 0 modifier? I feel like it'll be unfun if they can just completely ignore the system.
+	bodypart_pain_modifier = 0.2
 
 // Chests can't go below 100 max_stamina_damage for stam crit reasons
 // So this override is here until stamina damage is improved a bit
@@ -219,7 +225,7 @@
 
 /obj/item/bodypart/head/robot
 	pain = PAIN_HEAD_MAX
-	bodypart_pain_modifier = 0.5
+	bodypart_pain_modifier = 0.2
 
 /obj/item/bodypart/head/on_gain_pain_effects(amount)
 	. = ..()
@@ -227,6 +233,7 @@
 		return FALSE
 
 	if(amount > 5)
+		// Large amounts of head pain causes minor brain damage
 		owner.apply_damage(pain / 5, BRAIN)
 
 	return TRUE
@@ -276,7 +283,7 @@
 // --- Right Leg ---
 /obj/item/bodypart/r_leg/robot
 	pain = PAIN_LIMB_MAX
-	bodypart_pain_modifier = 0.5
+	bodypart_pain_modifier = 0.2
 
 /obj/item/bodypart/r_leg/robot/surplus
 	pain = 40
@@ -295,7 +302,7 @@
 // --- Left Leg ---
 /obj/item/bodypart/l_leg/robot
 	pain = PAIN_LIMB_MAX
-	bodypart_pain_modifier = 0.5
+	bodypart_pain_modifier = 0.2
 
 /obj/item/bodypart/l_leg/robot/surplus
 	pain = 40
@@ -314,7 +321,7 @@
 // --- Right Arm ---
 /obj/item/bodypart/r_arm/robot
 	pain = PAIN_LIMB_MAX
-	bodypart_pain_modifier = 0.5
+	bodypart_pain_modifier = 0.2
 
 /obj/item/bodypart/r_arm/robot/surplus
 	pain = 40
@@ -323,7 +330,7 @@
 // --- Left Arm ---
 /obj/item/bodypart/l_arm/robot
 	pain = PAIN_LIMB_MAX
-	bodypart_pain_modifier = 0.5
+	bodypart_pain_modifier = 0.2
 
 /obj/item/bodypart/l_arm/robot/surplus
 	pain = 40

@@ -249,6 +249,9 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	///Was the species changed from its original type at the start of the round?
 	var/roundstart_changed = FALSE
 
+	///Pain modifier applied by this species
+	var/species_pain_modifier = 1
+
 ///////////
 // PROCS //
 ///////////
@@ -500,6 +503,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		fly.Grant(C)
 
 	C.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/species, multiplicative_slowdown=speedmod)
+	if(isnum(species_pain_modifier) && species_pain_modifier != 1)
+		C.set_pain_mod(id, species_pain_modifier)
 
 	SEND_SIGNAL(C, COMSIG_SPECIES_GAIN, src, old_species)
 
@@ -541,7 +546,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	clear_tail_moodlets(C)
 
 	C.remove_movespeed_modifier(/datum/movespeed_modifier/species)
-
+	C.unset_pain_mod(id)
 	SEND_SIGNAL(C, COMSIG_SPECIES_LOSS, src)
 
 /**
