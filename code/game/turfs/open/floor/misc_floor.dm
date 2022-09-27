@@ -5,6 +5,7 @@
 	light_color = LIGHT_COLOR_CYAN
 	floor_tile = /obj/item/stack/tile/circuit
 	var/on = TRUE
+	footstep = FOOTSTEP_PLATING
 
 /turf/open/floor/circuit/Initialize(mapload)
 	SSmapping.nuke_tiles += src
@@ -109,6 +110,7 @@
 	name = "pod floor"
 	icon_state = "podfloor"
 	floor_tile = /obj/item/stack/tile/pod
+	footstep = FOOTSTEP_PLATING
 
 /turf/open/floor/pod/light
 	icon_state = "podfloor_light"
@@ -138,12 +140,14 @@
 	icon = 'icons/turf/shuttleold.dmi'
 	icon_state = "floor"
 	floor_tile = /obj/item/stack/tile/iron/base
+	footstep = FOOTSTEP_PLATING
 
 /turf/open/floor/bluespace
 	slowdown = -1
 	icon_state = "bluespace"
 	desc = "Through a series of micro-teleports these tiles let people move at incredible speeds."
 	floor_tile = /obj/item/stack/tile/bluespace
+	footstep = FOOTSTEP_PLATING
 
 
 /turf/open/floor/sepia
@@ -151,6 +155,7 @@
 	icon_state = "sepia"
 	desc = "Time seems to flow very slowly around these tiles."
 	floor_tile = /obj/item/stack/tile/sepia
+	footstep = FOOTSTEP_PLATING
 
 
 /turf/open/floor/bronze
@@ -158,6 +163,7 @@
 	desc = "Some heavy bronze tiles."
 	icon_state = "clockwork_floor"
 	floor_tile = /obj/item/stack/tile/bronze
+	footstep = FOOTSTEP_PLATING
 
 /turf/open/floor/bronze/flat
 	icon_state = "reebe"
@@ -179,10 +185,12 @@
 	name = "white floor"
 	desc = "A tile in a pure white color."
 	icon_state = "pure_white"
+	footstep = FOOTSTEP_PLATING
 
 /turf/open/floor/black
 	name = "black floor"
 	icon_state = "black"
+	footstep = FOOTSTEP_PLATING
 
 /turf/open/floor/plastic
 	name = "plastic floor"
@@ -201,6 +209,7 @@
 	desc = "This one takes you back."
 	icon_state = "eighties"
 	floor_tile = /obj/item/stack/tile/eighties
+	footstep = FOOTSTEP_CARPET
 
 /turf/open/floor/eighties/setup_broken_states()
 	return list("eighties_damaged")

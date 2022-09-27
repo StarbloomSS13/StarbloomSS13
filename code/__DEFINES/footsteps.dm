@@ -38,25 +38,36 @@ extra range addition
 
 */
 
+#define FOOTSTEP_ROOF "roof"
+#define FOOTSTEP_SNOW "crunchy snow"
+
 GLOBAL_LIST_INIT(footstep, list(
 	FOOTSTEP_WOOD = list(list(
-		'sound/effects/footstep/wood1.ogg',
-		'sound/effects/footstep/wood2.ogg',
-		'sound/effects/footstep/wood3.ogg',
-		'sound/effects/footstep/wood4.ogg',
-		'sound/effects/footstep/wood5.ogg'), 100, 0),
+		'sound/effects/footstep/ms13wood1.ogg',
+		'sound/effects/footstep/ms13wood2.ogg',
+		'sound/effects/footstep/ms13wood3.ogg',
+		'sound/effects/footstep/ms13wood4.ogg'), 100, 0),
 	FOOTSTEP_FLOOR = list(list(
-		'sound/effects/footstep/floor1.ogg',
-		'sound/effects/footstep/floor2.ogg',
-		'sound/effects/footstep/floor3.ogg',
-		'sound/effects/footstep/floor4.ogg',
-		'sound/effects/footstep/floor5.ogg'), 75, -1),
+		'sound/effects/footstep/ms13general1.ogg',
+		'sound/effects/footstep/ms13general2.ogg',
+		'sound/effects/footstep/ms13general3.ogg',
+		'sound/effects/footstep/ms13general4.ogg'), 75, -1),
 	FOOTSTEP_PLATING = list(list(
 		'sound/effects/footstep/plating1.ogg',
 		'sound/effects/footstep/plating2.ogg',
 		'sound/effects/footstep/plating3.ogg',
 		'sound/effects/footstep/plating4.ogg',
 		'sound/effects/footstep/plating5.ogg'), 100, 1),
+	FOOTSTEP_ROOF = list(list(
+		'sound/effects/footstep/ms13roof1.ogg',
+		'sound/effects/footstep/ms13roof2.ogg',
+		'sound/effects/footstep/ms13roof3.ogg',
+		'sound/effects/footstep/ms13roof4.ogg'), 100, 0),
+	FOOTSTEP_SNOW = list(list(
+		'sound/effects/footstep/ms13snow1.ogg',
+		'sound/effects/footstep/ms13snow2.ogg',
+		'sound/effects/footstep/ms13snow3.ogg',
+		'sound/effects/footstep/ms13snow4.ogg'), 90, -1),
 	FOOTSTEP_CARPET = list(list(
 		'sound/effects/footstep/carpet1.ogg',
 		'sound/effects/footstep/carpet2.ogg',
@@ -64,11 +75,10 @@ GLOBAL_LIST_INIT(footstep, list(
 		'sound/effects/footstep/carpet4.ogg',
 		'sound/effects/footstep/carpet5.ogg'), 75, -1),
 	FOOTSTEP_SAND = list(list(
-		'sound/effects/footstep/asteroid1.ogg',
-		'sound/effects/footstep/asteroid2.ogg',
-		'sound/effects/footstep/asteroid3.ogg',
-		'sound/effects/footstep/asteroid4.ogg',
-		'sound/effects/footstep/asteroid5.ogg'), 75, 0),
+		'sound/effects/footstep/ms13concrete1.ogg',
+		'sound/effects/footstep/ms13concrete2.ogg',
+		'sound/effects/footstep/ms13concrete3.ogg',
+		'sound/effects/footstep/ms13concrete4.ogg'), 75, 0),
 	FOOTSTEP_GRASS = list(list(
 		'sound/effects/footstep/grass1.ogg',
 		'sound/effects/footstep/grass2.ogg',
@@ -86,11 +96,10 @@ GLOBAL_LIST_INIT(footstep, list(
 	FOOTSTEP_MEAT = list(list(
 		'sound/effects/meatslap.ogg'), 100, 0),
 	FOOTSTEP_CATWALK = list(list(
-		'sound/effects/footstep/catwalk1.ogg',
-		'sound/effects/footstep/catwalk2.ogg',
-		'sound/effects/footstep/catwalk3.ogg',
-		'sound/effects/footstep/catwalk4.ogg',
-		'sound/effects/footstep/catwalk5.ogg'), 100, 1),
+		'sound/effects/footstep/ms13catwalk1.ogg',
+		'sound/effects/footstep/ms13catwalk2.ogg',
+		'sound/effects/footstep/ms13catwalk3.ogg',
+		'sound/effects/footstep/ms13catwalk4.ogg'), 15, 1),
 ))
 //bare footsteps lists
 GLOBAL_LIST_INIT(barefootstep, list(
@@ -197,4 +206,3 @@ GLOBAL_LIST_INIT(heavyfootstep, list(
 	FOOTSTEP_MEAT = list(list(
 		'sound/effects/meatslap.ogg'), 100, 0),
 ))
-
