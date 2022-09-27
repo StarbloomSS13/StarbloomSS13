@@ -18,10 +18,10 @@
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	minbodytemp = 200
 	maxbodytemp = 400
+	butcher_results = list(/obj/item/food/meat/slab/slugcat = 2)
 	unsuitable_atmos_damage = 0.5
 	animal_species = /mob/living/simple_animal/pet/slugcat
 	childtype = list(/mob/living/simple_animal/pet/slugcat = 1)
-	butcher_results = list(/obj/item/food/meat/slab = 1, /obj/item/organ/ears/cat = 1, /obj/item/organ/tail/cat = 1, /obj/item/stack/sheet/animalhide/cat = 1)
 	response_help_continuous = "pets"
 	response_help_simple = "pet"
 	response_disarm_continuous = "gently pushes aside"

@@ -84,3 +84,24 @@
 	name = "halon warning sign"
 	desc = "A sign warning of the presence of suffocating halon gas in the area."
 	icon_state = "sign_halon"
+
+/obj/structure/sign/flag
+	name = "faded flag"
+	desc = "A faded flag of the old world. You feel like you should probably tell the coders that you're seeing this."
+	icon = 'icons/obj/contraband.dmi'
+
+/obj/structure/sign/flag/us
+	desc = "A faded flag with stars and stripes on it. How old could this thing be?"
+	icon_state = "flag_us"
+
+/obj/structure/sign/flag/china
+	desc = "A faded red flag with stars on it. How old could this thing be?"
+	icon_state = "flag_china"
+
+/obj/structure/sign/flag/eu
+	desc = "A faded blue flag with stars on it. How old could this thing be?"
+	icon_state = "flag_eu"
+
+/obj/structure/sign/flag/ru
+	desc = "A faded flag with stripes on it. How old could this thing be?"
+	icon_state = "flag_ru"
