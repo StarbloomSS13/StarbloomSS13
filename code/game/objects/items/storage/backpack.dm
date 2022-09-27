@@ -193,6 +193,12 @@
 	icon_state = "viropack"
 	inhand_icon_state = "viropack"
 
+/obj/item/storage/backpack/homeguard
+	name = "home guard backpack"
+	desc = "A tough green backpack used by the Home Guard."
+	icon_state = "homeguard_pack"
+	inhand_icon_state = "homeguard_pack"
+
 /obj/item/storage/backpack/ert
 	name = "emergency response team commander backpack"
 	desc = "A spacious backpack with lots of pockets, worn by the Commander of an Emergency Response Team."
