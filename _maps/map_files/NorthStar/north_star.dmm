@@ -1737,11 +1737,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/pod/light,
 /area/maintenance/floor4/starboard/fore)
-"awN" = (
-/obj/structure/grille,
-/obj/structure/closet/emcloset,
-/turf/open/floor/pod/light,
-/area/maintenance/floor2/port/fore)
 "awT" = (
 /obj/structure/window/spawner/west,
 /obj/effect/turf_decal/siding/wood{
@@ -7061,12 +7056,12 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/left/directional/north{
 	name = "Pharmacy Desk";
-	req_access = list("medical,pharmacy")
+	req_access = null
 	},
 /obj/machinery/door/window/left/directional/north{
 	dir = 2;
 	name = "Pharmacy Desk";
-	req_access = list("medical,pharmacy")
+	req_access = list("pharmacy")
 	},
 /obj/structure/window/reinforced/spawner/east,
 /obj/machinery/door/firedoor,
@@ -20245,7 +20240,9 @@
 /turf/open/floor/pod/dark,
 /area/maintenance/floor3/port/aft)
 "fHG" = (
-/obj/machinery/atmospherics/components/binary/pump/layer4,
+/obj/machinery/atmospherics/components/binary/pump/layer4{
+	name = "Distro to External Ports"
+	},
 /obj/machinery/light/directional/east,
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -20405,7 +20402,10 @@
 "fKd" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/structure/window/reinforced,
-/obj/structure/statue/silver/secborg,
+/obj/effect/spawner/random/structure/table_fancy,
+/obj/structure/sign/painting/library{
+	pixel_y = 32
+	},
 /turf/open/floor/carpet/royalblack,
 /area/service/library/upper)
 "fKi" = (
@@ -21288,9 +21288,12 @@
 /area/engineering/atmos/office)
 "fXM" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/left/directional/south,
+/obj/machinery/door/window/left/directional/south{
+	name = "Atmospherics Desk"
+	},
 /obj/machinery/door/window/brigdoor/left/directional/north{
-	req_access_txt = list("atmospherics")
+	name = "Atmospherics Desk";
+	req_access = list("atmospherics")
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plating,
@@ -45685,6 +45688,7 @@
 /area/maintenance/floor1/starboard)
 "mSZ" = (
 /obj/effect/turf_decal/trimline/green/line,
+/obj/structure/closet/emcloset,
 /turf/open/floor/pod/light,
 /area/maintenance/floor2/port/fore)
 "mTb" = (
@@ -47799,12 +47803,12 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/left/directional/north{
 	name = "Pharmacy Desk";
-	req_access = list("medical,pharmacy")
+	req_access = null
 	},
 /obj/machinery/door/window/left/directional/north{
 	dir = 2;
 	name = "Pharmacy Desk";
-	req_access = list("medical,pharmacy")
+	req_access = list("pharmacy")
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/white,
@@ -69930,9 +69934,6 @@
 "tQC" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/turf_decal/tile/red/half/contrasted{
-	dir = 4
-	},
 /turf/open/floor/plating,
 /area/maintenance/floor4/port/aft)
 "tQF" = (
@@ -81492,6 +81493,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/hallway/floor3/aft)
+"xfv" = (
+/obj/machinery/atmospherics/components/binary/pump/layer2{
+	dir = 1;
+	name = "External Ports to Waste"
+	},
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/engineering/atmos)
 "xfE" = (
 /obj/structure/cable,
 /obj/machinery/power/tracker,
@@ -85111,7 +85120,6 @@
 "yiK" = (
 /obj/effect/spawner/random/structure/table_fancy,
 /obj/structure/window/reinforced/spawner/north,
-/obj/effect/spawner/random/decoration/statue,
 /obj/structure/sign/painting/library_secure{
 	pixel_y = -32
 	},
@@ -126543,7 +126551,7 @@ dtO
 dtO
 umT
 ezX
-uXL
+xfv
 wMH
 mbS
 qef
@@ -177716,7 +177724,7 @@ hLz
 hLz
 hLz
 hLz
-awN
+xvz
 uXA
 hLz
 hZP
