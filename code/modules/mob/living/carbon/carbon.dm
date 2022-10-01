@@ -817,6 +817,7 @@
 	else if(health > hardcrit_threshold)
 		REMOVE_TRAIT(src, TRAIT_KNOCKEDOUT, CRIT_HEALTH_TRAIT)
 		unset_pain_mod(PAIN_MOD_NEAR_DEATH)
+		SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "near-death")
 
 	if(CONFIG_GET(flag/near_death_experience))
 		if(. > HEALTH_THRESHOLD_NEARDEATH)
