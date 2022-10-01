@@ -346,6 +346,8 @@
 // A subtype of painkillers that will heal pain better
 // depending on what type of pain the part's feeling
 /datum/reagent/medicine/painkiller/specialized
+	name = "specialized painkiller"
+
 	/// How much pain we restore on life ticks, modified by modifiers (yeah?)
 	var/pain_heal_amount = 0.8
 	/// What type of pain are we looking for? If we aren't experiencing this type, it will be 10x less effective

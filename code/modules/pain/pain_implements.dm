@@ -238,13 +238,13 @@
 		WARNING: Do not use in combination with alcohol. Can cause drowsiness."
 	icon_state = "painkiller_stimpen"
 	base_icon_state = "painkiller_stimpen"
-	volume = 20
-	amount_per_transfer_from_this = 20
+	volume = 25
+	amount_per_transfer_from_this = 25
 	list_reagents = list(
 		/datum/reagent/medicine/painkiller/paracetamol = 7.5,
 		/datum/reagent/medicine/synaptizine = 7.5, // Cures drowsyness from morphine
 		/datum/reagent/medicine/painkiller/aspirin_para_coffee = 5,
-		/datum/reagent/medicine/painkiller/morphine = 5,
+		/datum/reagent/medicine/painkiller/morphine = 5, // Heals ~10 pain (per limb)
 	)
 
 /// Medkit pen. Heals about 35 pain to all limbs, causes ~450 addiction
@@ -254,12 +254,12 @@
 		WARNING: Do not use in combination with alcohol. Can cause drowsiness and addiction."
 	icon_state = "painkiller"
 	base_icon_state = "painkiller"
-	volume = 15
-	amount_per_transfer_from_this = 15
+	volume = 20
+	amount_per_transfer_from_this = 20
 	list_reagents = list(
-		/datum/reagent/medicine/painkiller/oxycodon = 7.5,
+		/datum/reagent/medicine/painkiller/oxycodon = 7.5, // Heals ~20 pain (per limb)
 		/datum/reagent/medicine/synaptizine = 7.5, // Cures drowsyness from morphine
-		/datum/reagent/medicine/painkiller/morphine = 5,
+		/datum/reagent/medicine/painkiller/morphine = 5, // Heals ~10 pain (per limb)
 	)
 
 /obj/item/reagent_containers/hypospray/medipen/brute_painkiller
@@ -268,7 +268,7 @@
 	icon_state = "painkiller"
 	inhand_icon_state = "salacid"
 	base_icon_state = "painkiller"
-	list_reagents = list(/datum/reagent/medicine/painkiller/specialized/ibaltifen = 10)
+	list_reagents = list(/datum/reagent/medicine/painkiller/specialized/ibaltifen = 10) // ~20-25 pain healing (if brute pain, per limb)
 
 /obj/item/reagent_containers/hypospray/medipen/burn_painkiller
 	name = "anurifen painkiller medipen"
@@ -276,7 +276,7 @@
 	icon_state = "painkiller"
 	inhand_icon_state = "oxapen"
 	base_icon_state = "painkiller"
-	list_reagents = list(/datum/reagent/medicine/painkiller/specialized/anurifen = 10)
+	list_reagents = list(/datum/reagent/medicine/painkiller/specialized/anurifen = 10) // ~20-25 pain healing (if burn pain, per limb)
 
 /*
  * Shock blanket item. Hit someone to cover them with the blanket.
