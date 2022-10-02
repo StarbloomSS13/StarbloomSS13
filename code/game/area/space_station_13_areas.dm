@@ -26,8 +26,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	requires_power = TRUE
 	always_unpowered = TRUE
 	static_lighting = FALSE
+	area_has_base_lighting = FALSE
 
-	base_lighting_alpha = 255
 	power_light = FALSE
 	power_equip = FALSE
 	power_environ = FALSE
@@ -37,6 +37,11 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	flags_1 = CAN_BE_DIRTY_1
 	sound_environment = SOUND_AREA_SPACE
 	ambient_buzz = null //Space is deafeningly quiet
+
+/area/space/Initialize(mapload)
+	. = ..()
+
+	add_overlay(GLOB.fullbright_overlay)
 
 /area/space/nearstation
 	icon_state = "space_near"
