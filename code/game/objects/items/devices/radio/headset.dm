@@ -27,6 +27,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	slot_flags = ITEM_SLOT_EARS
 	dog_fashion = null
 	var/obj/item/encryptionkey/keyslot2 = null
+	var/radiosound = 'sound/effects/common.ogg'
 
 /obj/item/radio/headset/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] begins putting \the [src]'s antenna up [user.p_their()] nose! It looks like [user.p_theyre()] trying to give [user.p_them()]self cancer!"))
@@ -83,7 +84,13 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 		return attack_self(headset_user)
 	return ..()
 
+/obj/item/radio/headset/talk_into(mob/living/M, message, channel, list/spans, datum/language/language, list/message_mods, direct = TRUE)
+	if(radiosound && listening)
+		playsound(M, radiosound, rand(20, 30), 0, 0, SOUND_FALLOFF_EXPONENT)
+	. = ..()
+
 /obj/item/radio/headset/edict //disguised to look like a normal headset for stealth ops
+	radiosound = 'sound/effects/syndie.ogg'
 
 /obj/item/radio/headset/edict/alt //undisguised bowman with flash protection
 	name = "last edict headset"
@@ -115,6 +122,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	desc = "This is used by your elite security force."
 	icon_state = "sec_headset"
 	keyslot = new /obj/item/encryptionkey/headset_sec
+	radiosound = 'sound/effects/security.ogg'
 
 /obj/item/radio/headset/headset_sec/alt
 	name = "security bowman headset"
