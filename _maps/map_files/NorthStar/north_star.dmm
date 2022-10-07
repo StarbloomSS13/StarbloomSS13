@@ -2111,7 +2111,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/machinery/camera/autoname/directional/south,
+/obj/machinery/camera{
+	c_tag = "Incinerator Camera North";
+	network = list("ss13","engine")
+	},
 /turf/open/floor/iron/dark,
 /area/maintenance/disposal/incinerator)
 "aBx" = (
@@ -5220,7 +5223,11 @@
 	},
 /area/hallway/secondary/exit/departure_lounge)
 "bos" = (
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera{
+	c_tag = "Atmos Tank #5 - Plasma";
+	dir = 1;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/engine/plasma,
 /area/engineering/atmos)
 "bou" = (
@@ -7397,7 +7404,11 @@
 /turf/open/floor/catwalk_floor/iron,
 /area/maintenance/solars/starboard/fore)
 "bQz" = (
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera{
+	c_tag = "Supermatter Foyer Cam #1";
+	dir = 1;
+	network = list("ss13","engine")
+	},
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/engine,
 /area/engineering/supermatter/room)
@@ -7680,7 +7691,11 @@
 /area/cargo/warehouse)
 "bUO" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
-/obj/machinery/camera/autoname/directional/west,
+/obj/machinery/camera{
+	c_tag = "Supermatter Foyer Cam #3";
+	dir = 8;
+	network = list("ss13","engine")
+	},
 /obj/structure/cable,
 /turf/open/floor/engine,
 /area/engineering/supermatter/room)
@@ -7757,7 +7772,9 @@
 /obj/structure/window/reinforced/spawner/west,
 /obj/structure/cable,
 /mob/living/simple_animal/parrot/poly,
-/obj/machinery/computer/security/telescreen/engine,
+/obj/machinery/computer/security/telescreen/engine{
+	name = "Engineering and atmospherics monitor"
+	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/command/heads_quarters/ce)
 "bVT" = (
@@ -13594,7 +13611,11 @@
 /area/maintenance/radshelter/sci)
 "dFR" = (
 /obj/machinery/power/emitter,
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera{
+	c_tag = "Secure Storage";
+	dir = 1;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/iron/textured_large,
 /area/engineering/lobby)
 "dFT" = (
@@ -15746,7 +15767,11 @@
 /turf/open/floor/plating,
 /area/maintenance/floor3/starboard)
 "emv" = (
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera{
+	c_tag = "Atmos Tank #3 - Mixed Air";
+	dir = 1;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/engine/air,
 /area/engineering/atmos)
 "emx" = (
@@ -16177,7 +16202,11 @@
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible/layer2,
-/obj/machinery/camera/autoname/directional/west,
+/obj/machinery/camera{
+	c_tag = "Supermatter Engine Camera";
+	dir = 8;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/plating,
 /area/engineering/supermatter)
 "etj" = (
@@ -17346,8 +17375,10 @@
 /obj/machinery/firealarm/directional/south,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
-/obj/machinery/camera/autoname/directional/east{
-	dir = 5
+/obj/machinery/camera{
+	c_tag = "Engineering Foyer #2";
+	dir = 4;
+	network = list("ss13","engine")
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/engineering/lobby)
@@ -18324,7 +18355,11 @@
 /turf/open/floor/pod/light,
 /area/maintenance/floor2/port/fore)
 "fcS" = (
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera{
+	c_tag = "Atmos Tank #6 - N2O";
+	dir = 1;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/engine/n2o,
 /area/engineering/atmos)
 "fdk" = (
@@ -18402,7 +18437,11 @@
 "feZ" = (
 /obj/machinery/firealarm/directional/west,
 /obj/machinery/light/directional/north,
-/obj/machinery/camera/autoname/directional/west,
+/obj/machinery/camera{
+	c_tag = "Atmospherics Cam #4";
+	dir = 8;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "ffd" = (
@@ -21825,7 +21864,11 @@
 	},
 /area/hallway/floor1/fore)
 "geZ" = (
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera{
+	c_tag = "Atmos Tank #7 - Mixing Chamber";
+	dir = 1;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/engine/vacuum,
 /area/engineering/atmos)
 "gfb" = (
@@ -21871,7 +21914,8 @@
 	dir = 5
 	},
 /obj/machinery/camera/directional/east{
-	c_tag = "Secure Tech Storage"
+	c_tag = "Secure Tech Storage";
+	network = list("ss13","engine")
 	},
 /turf/open/floor/iron/dark/smooth_corner{
 	dir = 8
@@ -24322,18 +24366,37 @@
 	},
 /area/maintenance/floor2/starboard/aft)
 "gTk" = (
-/obj/structure/table,
 /obj/machinery/vending/wallmed/directional/west,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/flashlight/seclite{
-	pixel_y = 4
+/obj/structure/closet/crate/secure/weapon{
+	anchored = 1;
+	desc = "A sturdy green crate from the lower decks with an ID lock. 'death to edict' has been spray painted on the lid";
+	name = "Materiel Crate";
+	req_access = list("armory")
 	},
-/obj/item/flashlight/seclite,
-/obj/item/paper/crumpled{
-	info = "Replaced and new equipment courtesy of captain doom. <BR> Stand strong, comrades, the fight is not over for us yet. -M";
-	name = "A note about the new crate";
-	pixel_x = -8;
-	pixel_y = 11
+/obj/item/ammo_box/magazine/m9mm/fmj,
+/obj/item/ammo_box/magazine/m9mm/fmj,
+/obj/item/ammo_box/magazine/m45/fmj,
+/obj/item/ammo_box/magazine/m45/fmj,
+/obj/item/gun/ballistic/automatic/pistol/liberator{
+	mag_type = /obj/item/ammo_box/magazine/m45/fmj
+	},
+/obj/item/gun/ballistic/automatic/pistol/equalizer{
+	mag_type = /obj/item/ammo_box/magazine/m9mm/fmj
+	},
+/obj/item/gun/energy/laser,
+/obj/item/storage/belt/holster/detective{
+	desc = "A well-used holster for holding a hand gun and some extra clips.";
+	name = "handgun holster"
+	},
+/obj/item/storage/belt/holster/detective{
+	desc = "A well-used holster for holding a hand gun and some extra clips.";
+	name = "handgun holster"
+	},
+/obj/structure/window/reinforced/spawner/north,
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	name = "Home Guard Materiel Storage";
+	req_access = list("home_guard")
 	},
 /turf/open/floor/iron/dark/green/side{
 	dir = 9
@@ -25930,7 +25993,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera{
+	c_tag = "Atmospherics Cam #7";
+	dir = 1;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/iron/dark,
 /area/engineering/atmospherics_engine)
 "hqR" = (
@@ -26214,7 +26281,11 @@
 /turf/open/floor/iron/dark,
 /area/security/office)
 "hvD" = (
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera{
+	c_tag = "Atmos Tank #2 - O2";
+	dir = 1;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/engine/o2,
 /area/engineering/atmos)
 "hvE" = (
@@ -29489,8 +29560,10 @@
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 1
 	},
-/obj/machinery/camera/autoname/directional/west{
-	dir = 9
+/obj/machinery/camera{
+	c_tag = "Shared Engineering Storage #2";
+	dir = 9;
+	network = list("ss13","engine")
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -30119,7 +30192,9 @@
 /turf/open/floor/iron/dark/side,
 /area/security/courtroom)
 "iAS" = (
-/obj/machinery/power/smes/engineering,
+/obj/machinery/power/smes/engineering{
+	charge = 1.35e+006
+	},
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/engineering/engine_smes)
@@ -33849,7 +33924,11 @@
 	},
 /area/security/brig)
 "jGe" = (
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera{
+	c_tag = "Technical Storage";
+	dir = 1;
+	network = list("ss13","engine")
+	},
 /obj/effect/turf_decal/stripes/white/line,
 /turf/open/floor/iron/dark/side,
 /area/engineering/storage/tech)
@@ -34116,6 +34195,10 @@
 /obj/structure/cable,
 /turf/open/floor/engine,
 /area/maintenance/floor1/port/aft)
+"jKf" = (
+/obj/item/storage/pill_bottle/mining,
+/turf/closed/wall/r_wall,
+/area/maintenance/floor4/starboard)
 "jKh" = (
 /obj/item/clothing/suit/jacket/miljacket{
 	desc = "Battle-worn and old, though it's previous owner loved it dearly. Smells faintly of dust and failure.";
@@ -37264,7 +37347,11 @@
 /turf/open/floor/catwalk_floor,
 /area/maintenance/floor2/starboard/fore)
 "kEN" = (
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera{
+	c_tag = "Atmos Tank #1 - N2";
+	dir = 1;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/engine/n2,
 /area/engineering/atmos)
 "kER" = (
@@ -38430,7 +38517,9 @@
 /area/hallway/floor3/aft)
 "kTS" = (
 /obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/east,
+/obj/machinery/power/apc/auto_name/directional/east{
+	light_on = 0
+	},
 /turf/open/floor/iron,
 /area/cargo/storage)
 "kTZ" = (
@@ -38536,7 +38625,11 @@
 /turf/open/floor/iron/white,
 /area/cargo/miningdock)
 "kVB" = (
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera{
+	c_tag = "Construction Camera #1, North";
+	dir = 1;
+	network = list("ss13","engine")
+	},
 /obj/structure/table,
 /turf/open/floor/iron/smooth,
 /area/maintenance/disposal/incinerator)
@@ -42451,7 +42544,11 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
-/obj/machinery/camera/autoname/directional/east,
+/obj/machinery/camera{
+	c_tag = "Atmospherics Cam #5";
+	dir = 5;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "lYu" = (
@@ -44111,7 +44208,10 @@
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister,
-/obj/machinery/camera/autoname/directional/south,
+/obj/machinery/camera{
+	c_tag = "Supermatter Foyer Cam #4";
+	network = list("ss13","engine")
+	},
 /turf/open/floor/engine,
 /area/engineering/supermatter/room)
 "mvp" = (
@@ -44328,7 +44428,11 @@
 	dir = 8
 	},
 /obj/structure/closet/radiation,
-/obj/machinery/camera/autoname/directional/east,
+/obj/machinery/camera{
+	c_tag = "Atmospherics Cam #8";
+	dir = 4;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/iron/dark,
 /area/engineering/atmospherics_engine)
 "myS" = (
@@ -47219,8 +47323,10 @@
 /area/science/research)
 "nln" = (
 /obj/effect/turf_decal/trimline/red/line,
-/obj/machinery/camera/autoname/directional/east{
-	dir = 5
+/obj/machinery/camera{
+	c_tag = "Engineering Foyer #1";
+	dir = 5;
+	network = list("ss13","engine")
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
@@ -47375,7 +47481,10 @@
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer{
 	dir = 1
 	},
-/obj/machinery/camera/autoname/directional/south,
+/obj/machinery/camera{
+	c_tag = "Atmospherics Cam #2";
+	network = list("ss13","engine")
+	},
 /turf/open/floor/iron/textured_large,
 /area/engineering/atmos)
 "nnw" = (
@@ -49452,8 +49561,8 @@
 	dir = 4
 	},
 /obj/machinery/camera/directional/west{
-	c_tag = null;
-	name = "Telecomms - Control"
+	name = "Telecomms - Control";
+	network = list("ss13","engine")
 	},
 /obj/machinery/requests_console/directional/west{
 	announcementConsole = 1;
@@ -50214,7 +50323,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/camera/autoname/directional/south,
+/obj/machinery/camera{
+	c_tag = "Shared Engineering Storage #4";
+	network = list("ss13","engine")
+	},
 /turf/open/floor/iron,
 /area/engineering/storage_shared)
 "nZq" = (
@@ -51419,8 +51531,10 @@
 /area/maintenance/floor4/port/fore)
 "oqA" = (
 /obj/machinery/atmospherics/pipe/smart/simple/orange/visible,
-/obj/machinery/camera/autoname/directional/west{
-	dir = 9
+/obj/machinery/camera{
+	c_tag = "Supermatter Foyer Cam #2";
+	dir = 8;
+	network = list("ss13","engine")
 	},
 /obj/structure/cable,
 /turf/open/floor/engine,
@@ -53362,12 +53476,23 @@
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/radio/off{
-	pixel_x = 4;
-	pixel_y = 3
+	pixel_y = 13
 	},
 /obj/item/radio/off{
-	pixel_x = -6;
-	pixel_y = 7
+	pixel_x = -10;
+	pixel_y = 13
+	},
+/obj/item/flashlight/seclite{
+	pixel_y = -5
+	},
+/obj/item/flashlight/seclite{
+	pixel_y = -1
+	},
+/obj/item/paper/crumpled{
+	info = "The first few lines have now been scribbled out, but a new addition concerns a pair of handguns, magazines and holsters from 'M' and a reminder to not wave them around.";
+	name = "Materiel Crate notes.";
+	pixel_x = 10;
+	pixel_y = 9
 	},
 /turf/open/floor/iron/dark/green/side{
 	dir = 8
@@ -53393,6 +53518,14 @@
 	},
 /turf/open/floor/iron/dark/side,
 /area/hallway/floor2/aft)
+"oUH" = (
+/obj/effect/turf_decal/tile/yellow,
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+	},
+/obj/machinery/light_switch/directional/east,
+/turf/open/floor/iron,
+/area/cargo/storage)
 "oUN" = (
 /obj/machinery/door/airlock/science{
 	name = "Genetics"
@@ -54608,9 +54741,14 @@
 /turf/open/openspace,
 /area/maintenance/floor2/port)
 "pqy" = (
-/obj/machinery/power/smes/engineering,
-/obj/structure/cable,
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/power/smes/engineering{
+	charge = 1.35e+006
+	},
+/obj/machinery/camera{
+	c_tag = "Power Storage";
+	dir = 1;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/iron,
 /area/engineering/engine_smes)
 "pqH" = (
@@ -54643,6 +54781,7 @@
 "prm" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light_switch/directional/west,
 /turf/open/floor/iron,
 /area/cargo/storage)
 "prn" = (
@@ -55605,7 +55744,11 @@
 "pEZ" = (
 /obj/structure/closet/radiation,
 /obj/effect/turf_decal/box,
-/obj/machinery/camera/autoname/directional/west,
+/obj/machinery/camera{
+	c_tag = "Atmospherics Office Cam #2";
+	dir = 8;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/iron/dark/textured_large,
 /area/engineering/atmos/office)
 "pFa" = (
@@ -58863,7 +59006,11 @@
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 1
 	},
-/obj/machinery/camera/autoname/directional/east,
+/obj/machinery/camera{
+	c_tag = "Atmospherics Cam #9";
+	dir = 4;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/iron,
 /area/engineering/atmospherics_engine)
 "qCr" = (
@@ -60565,7 +60712,11 @@
 /area/space/nearstation)
 "rag" = (
 /obj/machinery/atmospherics/pipe/layer_manifold/purple/visible,
-/obj/machinery/camera/autoname/directional/east,
+/obj/machinery/camera{
+	c_tag = "Atmospherics Cam #6";
+	dir = 5;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "rao" = (
@@ -61287,7 +61438,11 @@
 	dir = 8;
 	name = "emergency shower"
 	},
-/obj/machinery/camera/autoname/directional/east,
+/obj/machinery/camera{
+	c_tag = "Shared Engineering Storage #3";
+	dir = 4;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/engineering/storage_shared)
 "rkg" = (
@@ -62555,7 +62710,11 @@
 /turf/open/floor/iron/dark/side,
 /area/security/brig)
 "rGe" = (
-/obj/machinery/camera/autoname/directional/west,
+/obj/machinery/camera{
+	c_tag = "Engineering Foyer #3";
+	dir = 8;
+	network = list("ss13","engine")
+	},
 /obj/structure/chair/sofa/bench/right,
 /obj/effect/turf_decal/trimline/yellow/line{
 	dir = 4
@@ -64750,7 +64909,8 @@
 /area/faction/conserve_recycling)
 "sqs" = (
 /obj/machinery/door/window/brigdoor/left/directional/north{
-	name = "Home Guard Post"
+	name = "Home Guard Post";
+	req_access = list("home_guard")
 	},
 /turf/open/floor/iron/dark/green,
 /area/faction/homeguard)
@@ -66308,6 +66468,17 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/pod/dark,
 /area/maintenance/floor4/port/aft)
+"sMS" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/yellow,
+/obj/effect/turf_decal/tile/brown{
+	dir = 8
+	},
+/obj/machinery/light_switch/directional/south,
+/turf/open/floor/iron,
+/area/cargo/storage)
 "sMY" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -68867,8 +69038,10 @@
 /obj/machinery/computer/station_alert{
 	dir = 4
 	},
-/obj/machinery/camera/autoname/directional/south{
-	dir = 6
+/obj/machinery/camera{
+	c_tag = "Atmospherics Office Cam #1";
+	dir = 6;
+	network = list("ss13","engine")
 	},
 /obj/machinery/newscaster/directional/west,
 /turf/open/floor/iron/dark/yellow/side{
@@ -69564,14 +69737,24 @@
 "tJX" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/newscaster/directional/west,
+/obj/machinery/door/window/brigdoor/right/directional/east{
+	name = "Home Guard Materiel Storage";
+	req_access = list("home_guard")
+	},
 /obj/structure/closet/crate/secure/weapon{
+	anchored = 1;
 	desc = "A sturdy green crate from the lower decks with an ID lock. 'death to edict' has been spray painted on the lid";
-	name = "Materiel Crate";
+	name = "Assorted armor Crate";
 	req_access = list("armory")
 	},
 /obj/item/clothing/suit/armor/bulletproof,
-/obj/item/gun/energy/laser,
 /obj/item/clothing/head/helmet/alt,
+/obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/head/helmet/homeguard,
+/obj/item/clothing/head/helmet/homeguard,
+/obj/item/shield/riot,
+/obj/item/shield/riot,
 /obj/item/shield/riot,
 /turf/open/floor/iron/dark/green/side{
 	dir = 10
@@ -71238,8 +71421,10 @@
 	dir = 10
 	},
 /obj/machinery/airalarm/directional/north,
-/obj/machinery/camera/autoname/directional/east{
-	dir = 5
+/obj/machinery/camera{
+	c_tag = "Incinerator Camera South";
+	dir = 5;
+	network = list("ss13","engine")
 	},
 /turf/open/floor/iron,
 /area/maintenance/disposal/incinerator)
@@ -75641,7 +75826,11 @@
 /obj/effect/turf_decal/siding/wideplating_new/dark/corner{
 	dir = 8
 	},
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera{
+	c_tag = "Atmos Tank #4 - CO2";
+	dir = 1;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/engine/co2,
 /area/engineering/atmos)
 "vyW" = (
@@ -77879,7 +78068,11 @@
 	dir = 4;
 	name = "emergency shower"
 	},
-/obj/machinery/camera/autoname/directional/west,
+/obj/machinery/camera{
+	c_tag = "Shared Engineering Storage #1";
+	dir = 8;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/engineering/storage_shared)
 "whL" = (
@@ -79387,7 +79580,7 @@
 	},
 /obj/machinery/camera/preset/ordnance{
 	c_tag = "Supermatter Waste";
-	network = list("waste")
+	network = list("waste","engine")
 	},
 /obj/machinery/atmospherics/pipe/heat_exchanging/manifold/layer2,
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple/layer4{
@@ -80877,8 +81070,8 @@
 /obj/structure/table,
 /obj/item/storage/toolbox/electrical,
 /obj/machinery/camera/directional/east{
-	c_tag = null;
-	name = "Telecomms - Server"
+	name = "Telecomms - Server";
+	network = list("ss13","engine")
 	},
 /turf/open/floor/circuit/green/telecomms,
 /area/tcommsat/server)
@@ -83065,7 +83258,11 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
-/obj/machinery/camera/autoname/directional/west,
+/obj/machinery/camera{
+	c_tag = "Atmospherics Cam #1";
+	dir = 8;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "xCy" = (
@@ -84250,7 +84447,11 @@
 /area/science/breakroom)
 "xVa" = (
 /obj/machinery/light/directional/north,
-/obj/machinery/camera/autoname/directional/east,
+/obj/machinery/camera{
+	c_tag = "Atmospherics Cam #3";
+	dir = 4;
+	network = list("ss13","engine")
+	},
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "xVo" = (
@@ -109884,7 +110085,7 @@ ifJ
 vOs
 eaa
 idf
-kKZ
+oUH
 kKZ
 lyw
 hAJ
@@ -114757,7 +114958,7 @@ fOb
 fOb
 fOb
 fOb
-uAk
+sMS
 qcG
 qcG
 wsl
@@ -305205,7 +305406,7 @@ hWu
 hWu
 hWu
 hWu
-nPE
+jKf
 qtH
 neu
 cLn
