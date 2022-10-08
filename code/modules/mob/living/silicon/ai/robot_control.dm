@@ -33,7 +33,6 @@
 		return
 	var/list/data = list()
 	var/turf/ai_current_turf = get_turf(owner)
-	var/ai_zlevel = ai_current_turf.z
 
 	data["robots"] = list()
 	for(var/mob/living/simple_animal/bot/simple_bot as anything in GLOB.bots_list)
