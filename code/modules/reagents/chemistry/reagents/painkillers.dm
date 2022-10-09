@@ -59,17 +59,19 @@
 	M.cause_pain(BODY_ZONES_ALL, -0.3)
 	// Morphine causes a bit of disgust
 	if(M.disgust < DISGUST_LEVEL_VERYGROSS && DT_PROB(50 * max(1 - creation_purity, 0.5), delta_time))
-		M.adjust_disgust(1.5 * REM * delta_time)
+		M.adjust_disgust(2 * REM * delta_time)
 
 	// The longer we're metabolzing it, the more we get sleepy
-	// for refernece:
-	// with 0.1 metabolism rate
+	// for reference: (with 0.1 metabolism rate)
 	// ~2.5 units = 12 cycles = ~30 seconds
 	switch(current_cycle)
-		if(11) //2.5u
+		if(16) //~3u
 			to_chat(M, span_warning("You start to feel tired..."))
+			M.blur_eyes(1) // just a hint teehee
+			if(prob(50))
+				M.emote("yawn")
 
-		if(12 to 36) // 2.5u to 7.5u
+		if(24 to 36) // 5u to 7.5u
 			if(M.drowsyness <= 3 && DT_PROB(33, delta_time))
 				M.adjust_drowsyness(1 * REM * delta_time)
 
@@ -77,7 +79,7 @@
 			if(M.drowsyness <= 6 && DT_PROB(66, delta_time))
 				M.adjust_drowsyness(1 * REM * delta_time)
 
-		if(49 to INFINITY) //10u onward
+		if(48 to INFINITY) //10u onward
 			if(M.drowsyness <= 9)
 				M.adjust_drowsyness(1 * REM * delta_time)
 			M.Sleeping(4 SECONDS * REM * delta_time)
@@ -347,6 +349,7 @@
 // depending on what type of pain the part's feeling
 /datum/reagent/medicine/painkiller/specialized
 	name = "specialized painkiller"
+	addiction_types = list(/datum/addiction/opioids = 15) //5u = 50 progress, 60u = addiction
 
 	/// How much pain we restore on life ticks, modified by modifiers (yeah?)
 	var/pain_heal_amount = 0.8

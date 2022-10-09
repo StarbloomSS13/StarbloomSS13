@@ -53,6 +53,11 @@
 	if(new_parent.stat != DEAD)
 		START_PROCESSING(SSpain, src)
 
+	#ifdef TESTING
+	if(!is_station_level(parent.z))
+		print_debug_messages = FALSE
+	#endif
+
 /datum/pain/Destroy()
 	body_zones = null
 	if(parent)
@@ -75,6 +80,9 @@
 	RegisterSignal(parent, COMSIG_LIVING_HEALTHSCAN, .proc/on_analyzed)
 	RegisterSignal(parent, list(COMSIG_LIVING_SET_BODY_POSITION, COMSIG_LIVING_SET_BUCKLED), .proc/check_lying_pain_modifier)
 
+	if(ishuman(parent))
+		RegisterSignal(parent, COMSIG_HUMAN_BURNING, .proc/on_burn_tick)
+
 /**
  * Unregister all of our signals from our parent when we're done, if we have signals to unregister.
  */
@@ -89,6 +97,7 @@
 		COMSIG_LIVING_POST_FULLY_HEAL,
 		COMSIG_LIVING_HEALTHSCAN,
 		COMSIG_LIVING_SET_BODY_POSITION,
+		COMSIG_HUMAN_BURNING,
 		COMSIG_LIVING_SET_BUCKLED,
 	))
 
@@ -546,6 +555,20 @@
 		unset_pain_modifier(PAIN_MOD_LYING)
 
 /**
+ * While actively burning, cause pain
+ */
+/datum/pain/proc/on_burn_tick(datum/source)
+	SIGNAL_HANDLER
+
+	var/mob/living/carbon/human/human_parent = parent
+	if(human_parent.get_thermal_protection() >= FIRE_SUIT_MAX_TEMP_PROTECT)
+		return
+
+	// The more firestacks, the more pain we apply per burn tick, up to 2 per tick per bodypart.
+	// We can be liberal with this because when they're extinguished most of it will go away.
+	parent.apply_status_effect(/datum/status_effect/pain_from_fire, clamp(parent.fire_stacks * 0.2, 0, 2))
+
+/**
  * Natural pain healing of all of our bodyparts per five process ticks / 10 seconds.
  *
  * Slowly increases overtime if the [parent] has not experienced pain in a minute.
@@ -568,13 +591,13 @@
  * Effects caused by low pain. (~100-250 pain)
  */
 /datum/pain/proc/low_pain_effects(delta_time)
-	if(DT_PROB(3, delta_time))
+	if(parent.stuttering <= 12 && DT_PROB(4, delta_time))
+		parent.stuttering += 4
+
+	else if(DT_PROB(3, delta_time))
 		to_chat(parent, span_danger(pick("Everything aches.", "Everything feels sore.")))
 		if(parent.staminaloss < 5)
 			parent.apply_damage(10, STAMINA)
-
-	else if(parent.stuttering <= 12 && DT_PROB(6, delta_time))
-		parent.stuttering += 5
 
 	else if(parent.jitteriness <= 20 && DT_PROB(2, delta_time))
 		parent.Jitter(5)
@@ -586,9 +609,8 @@
  * Effects caused by medium pain. (~250-400 pain)
  */
 /datum/pain/proc/med_pain_effects(delta_time)
-
-	if(parent.stuttering <= 25 && DT_PROB(8, delta_time))
-		parent.stuttering += 8
+	if(parent.stuttering <= 18 && DT_PROB(4, delta_time))
+		parent.stuttering += 6
 
 	else if(DT_PROB(3, delta_time))
 		to_chat(parent, span_bolddanger(pick("Everything hurts.", "Everything feels very sore.", "It hurts.")))
@@ -596,7 +618,7 @@
 		if(parent.staminaloss < 30)
 			parent.apply_damage(10, STAMINA)
 
-	else if(DT_PROB(6, delta_time) && parent.staminaloss <= 60)
+	else if(parent.staminaloss <= 60 && DT_PROB(6, delta_time))
 		parent.apply_damage(20 * pain_modifier, STAMINA)
 		if(do_pain_emote("gasp"))
 			parent.visible_message(span_warning("[parent] doubles over in pain!"))
@@ -630,8 +652,7 @@
  * Effects caused by extremely high pain. (~400-500 pain)
  */
 /datum/pain/proc/high_pain_effects(delta_time)
-
-	if(parent.stuttering <= 40 && DT_PROB(12, delta_time))
+	if(parent.stuttering <= 24 && DT_PROB(4, delta_time))
 		parent.stuttering += 8
 
 	else if(DT_PROB(3, delta_time))
@@ -766,6 +787,15 @@
 /datum/pain/proc/remove_all_pain(datum/source, adminheal)
 	SIGNAL_HANDLER
 
+	// These should be handled by signal later but they're ok now
+	parent.remove_status_effect(/datum/status_effect/limp/pain)
+	parent.remove_status_effect(/datum/status_effect/sharp_pain)
+	parent.remove_status_effect(/datum/status_effect/pain_from_fire)
+	parent.remove_status_effect(/datum/status_effect/minimum_bodypart_pain)
+
+	var/datum/disease/shock/shock_disease = is_undergoing_shock()
+	shock_disease?.cure()
+
 	for(var/zone in body_zones)
 		var/obj/item/bodypart/healed_bodypart = body_zones[zone]
 		if(QDELETED(healed_bodypart))
@@ -773,13 +803,6 @@
 		adjust_bodypart_min_pain(zone, -healed_bodypart.max_pain)
 		adjust_bodypart_pain(zone, -healed_bodypart.max_pain)
 		REMOVE_TRAIT(healed_bodypart, TRAIT_PARALYSIS, PAIN_LIMB_PARALYSIS)
-
-	parent.remove_status_effect(/datum/status_effect/limp/pain)
-	parent.remove_status_effect(/datum/status_effect/sharp_pain)
-	parent.remove_status_effect(/datum/status_effect/minimum_bodypart_pain)
-
-	var/datum/disease/shock/shock_disease = is_undergoing_shock()
-	shock_disease?.cure()
 
 	clear_pain_attributes()
 

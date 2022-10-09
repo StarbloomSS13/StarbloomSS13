@@ -73,13 +73,3 @@
 	else
 		to_chat(user, span_warning("[target] has no organic [parse_zone(target_zone)] there!"))
 	return ..()
-// melbert todo: check
-/*
-/datum/surgery_step/replace_limb/success(mob/living/user, mob/living/carbon/target, target_zone, obj/item/bodypart/tool, datum/surgery/surgery, default_display_results = FALSE)
-	. = ..()
-	if(target.pain_controller && (tool in target.bodyparts))
-		// We have to snowflake this because replace_limb uses SPECIAL = TRUE when replacing limbs (which doesn't cause pain because I hate limb code)
-		target.cause_pain(target_zone, initial(tool.pain))
-		target.cause_pain(BODY_ZONE_CHEST, PAIN_LIMB_REMOVED)
-		target.apply_min_pain(target_zone, 15, 2 MINUTES)
-*/

@@ -231,35 +231,44 @@
 	pill_type = /obj/item/reagent_containers/pill/psicodine
 	num_pills = 3
 
-/// Miner pen. Heals about 30 pain to all limbs, causes ~150 addiction
+/obj/item/reagent_containers/hypospray/medipen/morphine
+	name = "morphine medipen"
+	desc = "A medipen that contains a dosage of painkilling morphine. \
+		WARNING: Do not use in combination with alcohol. Can cause drowsiness and addiction."
+	icon_state = "morphen"
+	inhand_icon_state = "morphen"
+	base_icon_state = "morphen"
+	list_reagents = list(/datum/reagent/medicine/painkiller/morphine = 10) // Heals ~20 pain (per limb)
+
+/// Miner pen. Heals about 30 pain to all limbs, causes ~150 addiction points
 /obj/item/reagent_containers/hypospray/medipen/survival/painkiller
 	name = "survival painkiller medipen"
 	desc = "A medipen that contains a dosage of painkilling chemicals. \
 		WARNING: Do not use in combination with alcohol. Can cause drowsiness."
 	icon_state = "painkiller_stimpen"
 	base_icon_state = "painkiller_stimpen"
-	volume = 25
-	amount_per_transfer_from_this = 25
+	volume = 30
+	amount_per_transfer_from_this = 30
 	list_reagents = list(
-		/datum/reagent/medicine/painkiller/paracetamol = 7.5,
-		/datum/reagent/medicine/synaptizine = 7.5, // Cures drowsyness from morphine
-		/datum/reagent/medicine/painkiller/aspirin_para_coffee = 5,
-		/datum/reagent/medicine/painkiller/morphine = 5, // Heals ~10 pain (per limb)
+		/datum/reagent/medicine/painkiller/paracetamol = 10, // Heals ~10 pain (per limb)
+		/datum/reagent/medicine/painkiller/aspirin_para_coffee = 5, // Heals ~7.5 pain (per limb)
+		/datum/reagent/medicine/painkiller/morphine = 5, // Heals ~10 pain (per limb), causes drowsy
+		/datum/reagent/medicine/synaptizine = 10, // Cures drowsy from morphine
 	)
 
-/// Medkit pen. Heals about 35 pain to all limbs, causes ~450 addiction
+/// Medkit pen. Heals about 35 pain to all limbs, causes ~450 addiction points
 /obj/item/reagent_containers/hypospray/medipen/emergency_painkiller
 	name = "emergency painkiller medipen"
 	desc = "A medipen that contains a dosage of heavy painkilling chemicals. \
 		WARNING: Do not use in combination with alcohol. Can cause drowsiness and addiction."
 	icon_state = "painkiller"
 	base_icon_state = "painkiller"
-	volume = 20
-	amount_per_transfer_from_this = 20
+	volume = 25
+	amount_per_transfer_from_this = 25
 	list_reagents = list(
-		/datum/reagent/medicine/painkiller/oxycodon = 7.5, // Heals ~20 pain (per limb)
-		/datum/reagent/medicine/synaptizine = 7.5, // Cures drowsyness from morphine
-		/datum/reagent/medicine/painkiller/morphine = 5, // Heals ~10 pain (per limb)
+		/datum/reagent/medicine/painkiller/oxycodon = 7.5, // Heals ~25 pain (per limb)
+		/datum/reagent/medicine/painkiller/morphine = 5, // Heals ~10 pain (per limb), causes drowsy
+		/datum/reagent/medicine/synaptizine = 10, // Cures drowsyness from morphine
 	)
 
 /obj/item/reagent_containers/hypospray/medipen/brute_painkiller

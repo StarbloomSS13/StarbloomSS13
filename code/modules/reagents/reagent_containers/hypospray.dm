@@ -168,15 +168,6 @@
 	amount_per_transfer_from_this = 50
 	list_reagents = list(/datum/reagent/medicine/stimulants = 50)
 
-/obj/item/reagent_containers/hypospray/medipen/morphine
-	name = "morphine medipen"
-	desc = "A medipen that contains a dosage of painkilling morphine. \
-		WARNING: Do not use in combination with alcohol. Can cause drowsiness and addiction."
-	icon_state = "morphen"
-	inhand_icon_state = "morphen"
-	base_icon_state = "morphen"
-	list_reagents = list(/datum/reagent/medicine/painkiller/morphine = 10) // Heals ~20 pain (per limb)
-
 /obj/item/reagent_containers/hypospray/medipen/oxandrolone
 	name = "oxandrolone medipen"
 	desc = "An autoinjector containing oxandrolone, used to treat severe burns."

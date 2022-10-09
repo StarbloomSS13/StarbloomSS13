@@ -90,7 +90,7 @@
 
 /datum/supply_pack/medical/painkiller_pens
 	name = "Painkiller Medipen Shipment"
-	desc = "Contains three emergency painkiller medipens. Contains Morphine, Oxycodone, and Modafinil."
+	desc = "Contains three emergency painkiller medipens. Contains Synaptizine, Oxycodone, and Modafinil."
 	cost = CARGO_CRATE_VALUE * 4
 	crate_name = "medipen shipment"
 	contains = list(
