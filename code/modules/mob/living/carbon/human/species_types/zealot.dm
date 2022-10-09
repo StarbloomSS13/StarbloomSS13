@@ -33,6 +33,8 @@
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/zealot,
 	)
 
+	species_pain_modifier = 0.8
+
 /datum/species/zealot/prepare_human_for_preview(mob/living/carbon/human/zealot)
 	zealot.hairstyle = "Shaved"
 	zealot.hair_color = "#e6e6e6" // white

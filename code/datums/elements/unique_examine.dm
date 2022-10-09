@@ -1,6 +1,3 @@
-/// Helper fake-span define to produce a more readable yellow than span_yellow.
-#define span_readable_yellow(str) ("<font color = '#c5c900'>" + str + "</font>")
-
 /// An element to add a unique examine to something based on some conditions.
 /datum/element/unique_examine
 	element_flags = ELEMENT_BESPOKE|ELEMENT_DETACH
@@ -310,5 +307,3 @@
 		department_text = "as a silicon unit"
 
 	return span_bold(department_text)
-
-#undef span_readable_yellow

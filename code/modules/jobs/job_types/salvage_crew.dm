@@ -53,6 +53,7 @@
 
 	box = /obj/item/storage/box/survival/mining
 	chameleon_extras = /obj/item/gun/energy/plasmacutter
+	skillchips = list(/obj/item/skillchip/job/off_z_pain_resistance)
 
 /datum/outfit/job/salvage_crew/equipped
 	name = "Salvage Crew (Equipment)"

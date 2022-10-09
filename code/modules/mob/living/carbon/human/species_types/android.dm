@@ -39,6 +39,7 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/r_leg/robot,
 	)
 	examine_limb_id = SPECIES_HUMAN
+	species_pain_modifier = 0
 
 /datum/species/android/on_species_gain(mob/living/carbon/C)
 	. = ..()

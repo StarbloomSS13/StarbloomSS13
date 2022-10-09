@@ -4,24 +4,25 @@
 	///Hardcoded styles that can be chosen from and apply to limb, if it's true
 	var/uses_robotic_styles = TRUE
 
-/datum/augment_item/limb/apply(mob/living/carbon/human/H, character_setup = FALSE, datum/preferences/prefs)
+/datum/augment_item/limb/apply(mob/living/carbon/human/apply_to, character_setup = FALSE, datum/preferences/prefs)
 	if(character_setup)
 		//Cheaply "faking" the appearance of the prosthetic. Species code sets this back if it doesnt exist anymore
-		var/obj/item/bodypart/BP = path
-		var/obj/item/bodypart/oldBP = H.get_bodypart(initial(BP.body_zone))
+		var/obj/item/bodypart/bodypart_path = path
+		var/obj/item/bodypart/old_bodypart = apply_to.get_bodypart(initial(bodypart_path.body_zone))
 		if(uses_robotic_styles && prefs.augment_limb_styles[slot])
-			oldBP.icon = GLOB.robotic_styles_list[prefs.augment_limb_styles[slot]]
+			old_bodypart.icon = GLOB.robotic_styles_list[prefs.augment_limb_styles[slot]]
 		else
-			oldBP.icon = initial(BP.icon)
-		oldBP.icon_state = initial(BP.icon_state)
-		oldBP.should_draw_greyscale = FALSE
+			old_bodypart.icon = initial(bodypart_path.icon)
+		old_bodypart.icon_state = initial(bodypart_path.icon_state)
+		old_bodypart.should_draw_greyscale = FALSE
+
 	else
-		var/obj/item/bodypart/BP = new path(H)
-		var/obj/item/bodypart/oldBP = H.get_bodypart(BP.body_zone)
+		var/obj/item/bodypart/new_bodypart = new path(apply_to)
+		var/obj/item/bodypart/old_bodypart = apply_to.get_bodypart(new_bodypart.body_zone)
 		if(uses_robotic_styles && prefs.augment_limb_styles[slot])
-			BP.set_icon_static(GLOB.robotic_styles_list[prefs.augment_limb_styles[slot]])
-		BP.replace_limb(H)
-		qdel(oldBP)
+			new_bodypart.set_icon_static(GLOB.robotic_styles_list[prefs.augment_limb_styles[slot]])
+		new_bodypart.replace_limb(apply_to, TRUE)
+		qdel(old_bodypart)
 
 //HEADS
 /datum/augment_item/limb/head

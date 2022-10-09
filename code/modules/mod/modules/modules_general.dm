@@ -351,6 +351,8 @@
 	UnregisterSignal(mod.wearer, COMSIG_LIVING_Z_IMPACT)
 
 /obj/item/mod/module/longfall/proc/z_impact_react(datum/source, levels, turf/fell_on)
+	SIGNAL_HANDLER
+
 	if(!drain_power(use_power_cost*levels))
 		return
 	new /obj/effect/temp_visual/mook_dust(fell_on)

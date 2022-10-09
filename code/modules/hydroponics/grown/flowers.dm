@@ -32,6 +32,7 @@
 	greyscale_config = /datum/greyscale_config/flower_simple
 	greyscale_config_worn = /datum/greyscale_config/flower_simple_worn
 	greyscale_colors = "#d23838"
+	juice_results = list(/datum/reagent/medicine/painkiller/oxycodon = 0)
 
 // Lily
 /obj/item/seeds/poppy/lily
@@ -48,6 +49,7 @@
 	name = "lily"
 	desc = "A beautiful orange flower."
 	greyscale_colors = "#fe881f"
+	juice_results = null
 
 	//Spacemans's Trumpet
 /obj/item/seeds/poppy/lily/trumpet
@@ -92,6 +94,7 @@
 	plantname = "Geranium Plants"
 	product = /obj/item/food/grown/poppy/geranium
 	mutatelist = list(/obj/item/seeds/poppy/geranium/fraxinella)
+	juice_results = null
 
 /obj/item/food/grown/poppy/geranium
 	seed = /obj/item/seeds/poppy/geranium

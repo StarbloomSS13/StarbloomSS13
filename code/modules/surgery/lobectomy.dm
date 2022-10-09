@@ -30,12 +30,15 @@
 	preop_sound = 'sound/surgery/scalpel1.ogg'
 	success_sound = 'sound/surgery/organ1.ogg'
 	failure_sound = 'sound/surgery/organ2.ogg'
+	surgery_moodlet = /datum/mood_event/surgery/major
+	pain_overlay_severity = 2
+	pain_amount = 20
 
 /datum/surgery_step/lobectomy/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	display_results(user, target, span_notice("You begin to make an incision in [target]'s lungs..."),
 		span_notice("[user] begins to make an incision in [target]."),
 		span_notice("[user] begins to make an incision in [target]."))
-	display_pain(target, "You feel a stabbing pain in your chest!")
+	give_surgery_pain(target, "You feel a stabbing pain in your chest!", target_zone = target_zone)
 
 /datum/surgery_step/lobectomy/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	if(ishuman(target))
@@ -46,7 +49,8 @@
 		display_results(user, target, span_notice("You successfully excise [human_target]'s most damaged lobe."),
 			span_notice("Successfully removes a piece of [human_target]'s lungs."),
 			"")
-		display_pain(target, "Your chest hurts like hell, but breathng becomes slightly easier.")
+		give_surgery_pain(target, "Your chest hurts like hell, but breathng becomes slightly easier.", target_zone = target_zone)
+		target.cause_pain(target_zone, -15)
 	return ..()
 
 /datum/surgery_step/lobectomy/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -55,7 +59,8 @@
 		display_results(user, target, span_warning("You screw up, failing to excise [human_target]'s damaged lobe!"),
 			span_warning("[user] screws up!"),
 			span_warning("[user] screws up!"))
-		display_pain(target, "You feel a sharp stab in your chest; the wind is knocked out of you and it hurts to catch your breath!")
+		give_surgery_pain(target, "You feel a sharp stab in your chest; the wind is knocked out of you and it hurts to catch your breath!", target_zone = target_zone)
+		target.cause_pain(target_zone, 15)
 		human_target.losebreath += 4
 		human_target.adjustOrganLoss(ORGAN_SLOT_LUNGS, 10)
 	return FALSE

@@ -15,7 +15,10 @@
 		/obj/item/healthanalyzer/wound = 4,
 		/obj/item/stack/medical/ointment = 2,
 		/obj/item/stack/medical/suture = 2,
-		/obj/item/stack/medical/bone_gel/four = 4
+		/obj/item/stack/medical/bone_gel/four = 4,
+		/obj/item/shock_blanket = 3,
+		/obj/item/temperature_pack/cold = 2,
+		/obj/item/temperature_pack/heat = 2,
 	)
 	contraband = list(
 		/obj/item/storage/box/gum/happiness = 3,
@@ -52,27 +55,34 @@
 	icon_deny = "drug-deny"
 	panel_type = "panel11"
 	req_access = list(ACCESS_MEDICAL)
-	products = list(/obj/item/reagent_containers/pill/patch/libital = 5,
-					/obj/item/reagent_containers/pill/patch/aiuri = 5,
-					/obj/item/reagent_containers/syringe/convermol = 2,
-					/obj/item/reagent_containers/pill/insulin = 5,
-					/obj/item/reagent_containers/glass/bottle/multiver = 2,
-					/obj/item/reagent_containers/glass/bottle/syriniver = 2,
-					/obj/item/reagent_containers/glass/bottle/epinephrine = 3,
-					/obj/item/reagent_containers/glass/bottle/morphine = 4,
-					/obj/item/reagent_containers/glass/bottle/potass_iodide = 1,
-					/obj/item/reagent_containers/glass/bottle/salglu_solution = 3,
-					/obj/item/reagent_containers/glass/bottle/toxin = 3,
-					/obj/item/reagent_containers/syringe/antiviral = 6,
-					/obj/item/reagent_containers/medigel/libital = 2,
-					/obj/item/reagent_containers/medigel/aiuri = 2,
-					/obj/item/reagent_containers/medigel/sterilizine = 1,
-					/obj/item/storage/hypospraykit/empty = 5)
-	contraband = list(/obj/item/reagent_containers/pill/tox = 3,
-					/obj/item/reagent_containers/pill/morphine = 4,
-					/obj/item/reagent_containers/pill/multiver = 6)
-	premium = list(/obj/item/reagent_containers/medigel/synthflesh = 2,
-					/obj/item/storage/pill_bottle/psicodine = 2)
+	products = list(
+		/obj/item/reagent_containers/pill/patch/libital = 5,
+		/obj/item/reagent_containers/pill/patch/aiuri = 5,
+		/obj/item/reagent_containers/syringe/convermol = 2,
+		/obj/item/reagent_containers/pill/insulin = 5,
+		/obj/item/reagent_containers/glass/bottle/multiver = 2,
+		/obj/item/reagent_containers/glass/bottle/syriniver = 2,
+		/obj/item/reagent_containers/glass/bottle/epinephrine = 3,
+		/obj/item/reagent_containers/glass/bottle/morphine = 4,
+		/obj/item/reagent_containers/glass/bottle/potass_iodide = 1,
+		/obj/item/reagent_containers/glass/bottle/salglu_solution = 3,
+		/obj/item/reagent_containers/glass/bottle/toxin = 3,
+		/obj/item/reagent_containers/syringe/antiviral = 6,
+		/obj/item/reagent_containers/medigel/libital = 2,
+		/obj/item/reagent_containers/medigel/aiuri = 2,
+		/obj/item/reagent_containers/medigel/sterilizine = 1,
+		/obj/item/storage/hypospraykit/empty = 5,
+	)
+	contraband = list(
+		/obj/item/reagent_containers/pill/tox = 3,
+		/obj/item/reagent_containers/pill/morphine = 4,
+		/obj/item/reagent_containers/pill/multiver = 6,
+	)
+	premium = list(
+		/obj/item/reagent_containers/medigel/synthflesh = 2,
+		/obj/item/storage/pill_bottle/psicodine = 2,
+		/obj/item/storage/pill_bottle/painkillers = 2,
+	)
 	default_price = 50
 	extra_price = 100
 	payment_department = ACCOUNT_MED
