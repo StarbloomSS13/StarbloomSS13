@@ -464,10 +464,6 @@
 	results = list(/datum/reagent/consumable/coffee = 5)
 	required_reagents = list(/datum/reagent/toxin/coffeepowder = 1, /datum/reagent/water = 5)
 
-/datum/chemical_reaction/drink/tea
-	results = list(/datum/reagent/consumable/tea = 5)
-	required_reagents = list(/datum/reagent/toxin/teapowder = 1, /datum/reagent/water = 5)
-
 /datum/chemical_reaction/drink/eggnog
 	results = list(/datum/reagent/consumable/ethanol/eggnog = 15)
 	required_reagents = list(/datum/reagent/consumable/ethanol/rum = 5, /datum/reagent/consumable/cream = 5, /datum/reagent/consumable/eggyolk = 2)
@@ -746,7 +742,7 @@
 
 /datum/chemical_reaction/drink/shirley_temple
 	results = list(/datum/reagent/consumable/shirley_temple = 3)
-	required_reagents = list(/datum/reagent/consumable/sol_dry = 2, /datum/reagent/consumable/grenadine = 1)
+	required_reagents = list(/datum/reagent/consumable/lemon_lime = 2, /datum/reagent/consumable/grenadine = 1)
 
 /datum/chemical_reaction/drink/agua_fresca
 	results = list(/datum/reagent/consumable/agua_fresca = 10)
@@ -768,3 +764,15 @@
 /datum/chemical_reaction/drink/pile_driver
 	results = list(/datum/reagent/consumable/ethanol/pile_driver = 2)
 	required_reagents = list(/datum/reagent/consumable/ethanol/rum_coke = 1, /datum/reagent/consumable/ethanol/screwdrivercocktail = 1)
+
+/datum/chemical_reaction/drink/green_tea
+	results = list(/datum/reagent/consumable/green_tea = 5)
+	required_reagents = list(/datum/reagent/toxin/teapowder = 1, /datum/reagent/water = 5)
+
+/datum/chemical_reaction/drink/ice_greentea
+	results = list(/datum/reagent/consumable/ice_greentea = 4)
+	required_reagents = list(/datum/reagent/consumable/ice = 1, /datum/reagent/consumable/green_tea = 3)
+
+/datum/chemical_reaction/drink/green_hill_tea
+	results = list(/datum/reagent/consumable/green_hill_tea = 1)
+	required_reagents = list(/datum/reagent/consumable/ethanol/sugar_rush = 4, /datum/reagent/consumable/ice_greentea = 4) //despite containing alcohol, the resulting beverage is non-alcoholic, alcoholic sonic is funny but no.
