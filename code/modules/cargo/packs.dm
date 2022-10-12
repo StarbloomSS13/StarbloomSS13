@@ -313,7 +313,7 @@
 /datum/supply_pack/security/detrubberammo
 	name = ".38 rubber Ammo Crate"
 	desc = "Contains less than lethal .38 speedloaders. Requires Security access to open."
-	cost = CARGO_CRATE_VALUE *
+	cost = CARGO_CRATE_VALUE * 3
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/ammo_box/c38/match/bouncy,
 					/obj/item/ammo_box/c38/match/bouncy,
