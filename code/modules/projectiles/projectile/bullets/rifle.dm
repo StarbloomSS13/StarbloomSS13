@@ -29,6 +29,14 @@
 		M.adjust_fire_stacks(6)
 		M.IgniteMob()
 
+/obj/projectile/bullet/a556/rad
+	name = "5.56mm radioactive bullet"
+	damage = 10
+	weak_against_armour = TRUE
+
+/obj/projectile/bullet/a556/rad/on_hit(atom/target, blocked = FALSE)
+	radiation_pulse(target, max_range = 0, threshold = 0, chance = 100)
+
 /obj/projectile/bullet/a556/phasic
 	name = "5.56mm phasic bullet"
 	icon_state = "gaussphase"
@@ -66,6 +74,14 @@
 		var/mob/living/carbon/M = target
 		M.adjust_fire_stacks(6)
 		M.IgniteMob()
+
+/obj/projectile/bullet/a762/rad
+	name = "7.62 radioactive bullet"
+	damage = 40
+	weak_against_armour = TRUE
+
+/obj/projectile/bullet/a762/rad/on_hit(atom/target, blocked = FALSE)
+	radiation_pulse(target, max_range = 0, threshold = 0, chance = 100)
 
 /obj/projectile/bullet/a762/enchanted
 	name = "enchanted 7.62 bullet"

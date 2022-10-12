@@ -149,6 +149,16 @@
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/m556rad
+	name = "Magazine (5.56 Radioactive)"
+	desc = "Designed to quickly reload the Valiant assault rifle. Radioactive rounds cause minimal damage, but irradiate the target."
+	id = "m556rad"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 40000, /datum/material/uranium = 10000)
+	build_path = /obj/item/ammo_box/magazine/m556/rad
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
 /datum/design/a762
 	name = "Stripper Clip (7.62 FMJ)"
 	desc = "Designed to quickly reload the Memoria bolt-action rifle."
@@ -189,6 +199,16 @@
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/a762rad
+	name = "Stripper Clip (7.62 Radioactive)"
+	desc = "Designed to quickly reload the Memoria bolt-action rifle. Radioactive rounds cause minimal damage, but irradiate the target."
+	id = "a762rad"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 40000, /datum/material/uranium = 10000)
+	build_path = /obj/item/ammo_box/a762/rad
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
 /datum/design/smgm45
 	name = "Magazine (.45 HP - SMG)"
 	desc = "Designed to quickly reload the Helios PDW."
@@ -226,6 +246,16 @@
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/iron = 40000, /datum/material/plasma = 5000)
 	build_path = /obj/item/ammo_box/magazine/smgm45/i
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/smgm45rad
+	name = "Magazine (.45 Radioactive - SMG)"
+	desc = "Designed to quickly reload the Helios PDW. Radioactive rounds cause minimal damage, but irradiate the target."
+	id = "smgm45rad"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 40000, /datum/material/uranium = 10000)
+	build_path = /obj/item/ammo_box/magazine/smgm45/rad
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 

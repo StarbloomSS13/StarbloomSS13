@@ -94,6 +94,7 @@
 	max_ammo = 4
 	multiple_sprites = AMMO_BOX_PER_BULLET
 
+//Memoria ammo begin
 /obj/item/ammo_box/a762
 	name = "stripper clip (7.62mm FMJ)"
 	desc = "A stripper clip."
@@ -104,27 +105,28 @@
 
 /obj/item/ammo_box/a762/ap
 	name = "stripper clip (7.62mm AP)"
+	icon_state = "762ap"
 	desc = "A stripper clip. Contains armour-piercing rounds."
-	icon_state = "762"
 	ammo_type = /obj/item/ammo_casing/a762/ap
-	max_ammo = 5
-	multiple_sprites = AMMO_BOX_PER_BULLET
 
 /obj/item/ammo_box/a762/hp
 	name = "stripper clip (7.62mm HP)"
+	icon_state = "762hp"
 	desc = "A stripper clip. Contains hollowpoint rounds."
-	icon_state = "762"
 	ammo_type = /obj/item/ammo_casing/a762/hp
-	max_ammo = 5
-	multiple_sprites = AMMO_BOX_PER_BULLET
 
 /obj/item/ammo_box/a762/i
 	name = "stripper clip (7.62mm Incendiary)"
+	icon_state = "762i"
 	desc = "A stripper clip. Contains incendiary rounds."
-	icon_state = "762"
 	ammo_type = /obj/item/ammo_casing/a762/i
-	max_ammo = 5
-	multiple_sprites = AMMO_BOX_PER_BULLET
+
+/obj/item/ammo_box/a762/rad
+	name = "stripper clip (7.62mm Radioactive)"
+	icon_state = "762rad"
+	desc = "A stripper clip. Contains radioactive rounds."
+	ammo_type = /obj/item/ammo_casing/a762/rad
+//Memoria ammo end
 
 /obj/item/ammo_box/n762
 	name = "ammo box (7.62x38mmR)"
