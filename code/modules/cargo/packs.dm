@@ -336,7 +336,7 @@
 	crate_type = /obj/structure/closet/crate/secure/plasma
 
 
-	/datum/supply_pack/security/forensics
+/datum/supply_pack/security/forensics
 	name = "Forensics Crate"
 	desc = "Stay hot on the criminal's heels with Nanotrasen's Detective Essentials(tm). Contains a forensics scanner, six evidence bags, camera, tape recorder, white crayon, and of course, a fedora. Requires Security access to open."
 	cost = CARGO_CRATE_VALUE * 2.5
@@ -418,7 +418,7 @@
 					/obj/item/storage/box/handcuffs)
 	crate_name = "security supply crate"
 
-	/datum/supply_pack/security/wall_flash
+/datum/supply_pack/security/wall_flash
 	name = "Wall-Mounted Flash Crate"
 	desc = "Contains four wall-mounted flashes. Requires Security access to open."
 	cost = CARGO_CRATE_VALUE * 2
@@ -434,7 +434,7 @@
 /datum/supply_pack/security/armory
 	group = "Armory Materiel and Supplies"
 	access = ACCESS_ARMORY
-	acces_view = ACCESS_ARMORY
+	access_view = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
 
 /datum/supply_pack/security/armory/bulletarmor
@@ -455,7 +455,7 @@
 					/obj/item/clothing/head/helmet/alt)
 	crate_name = "bulletproof helmets crate"
 
-	/datum/supply_pack/security/armory/ballistic
+/datum/supply_pack/security/armory/ballistic
 	name = "Combat Shotguns Crate"
 	desc = "For when the enemy absolutely needs to be replaced with lead. Contains three Aussec-designed Combat Shotguns, and three Shotgun Bandoliers. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 17.5
@@ -536,7 +536,8 @@
 					/obj/item/shield/riot)
 	crate_name = "riot shields crate"
 
-	/datum/supply_pack/security/armory/russian
+
+/datum/supply_pack/security/armory/russian
 	name = "Russian Surplus Crate"
 	desc = "Hello Comrade, we have the most modern russian military equipment the black market can offer, for the right price of course. Sadly we couldnt remove the lock so it requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 12
