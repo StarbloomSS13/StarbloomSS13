@@ -522,7 +522,21 @@
 					/obj/item/ammo_box/c38/iceblox)
 	crate_name = "Live .38 ammo crate"
 
-
+/datum/supply_pack/security/handgunammo
+	name = "FMJhandgun Ammo Crate"
+	desc = "Contains FMJ ammo for the 9mm, .44 and .45. Requires Security access to open."
+	cost = CARGO_CRATE_VALUE * 4
+	access_view = ACCESS_SECURITY
+	contains = list(/obj/item/ammo_box/a44/fmj,
+					/obj/item/ammo_box/a44/fmj,
+					/obj/item/ammo_box/a44/fmj,
+					/obj/item/ammo_box/magazine/m45/fmj,
+					/obj/item/ammo_box/magazine/m45/fmj,
+					/obj/item/ammo_box/magazine/m45/fmj,
+					/obj/item/ammo_box/magazine/m9mm/fmj,
+					/obj/item/ammo_box/magazine/m9mm/fmj,
+					/obj/item/ammo_box/magazine/m9mm/fmj)
+	crate_name = "FMJ handgun ammo crate"
 /datum/supply_pack/security/armory/lethalshotgunammo
 	name = "buckshot shells cache"
 	desc = "Contains boxes of buckshot shells. Requires Armory access to open."
