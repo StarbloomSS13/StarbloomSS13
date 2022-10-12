@@ -300,7 +300,7 @@
 	cost = CARGO_CRATE_VALUE * 4
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/ammo_box/a44,
-					/obj/item/ammo_box/a44 ,
+					/obj/item/ammo_box/a44,
 					/obj/item/ammo_box/a44,
 					/obj/item/ammo_box/magazine/m45,
 					/obj/item/ammo_box/magazine/m45,
@@ -313,7 +313,7 @@
 /datum/supply_pack/security/detrubberammo
 	name = ".38 rubber Ammo Crate"
 	desc = "Contains less than lethal .38 speedloaders. Requires Security access to open."
-	cost = CARGO_CRATE_VALUE * 3
+	cost = CARGO_CRATE_VALUE *
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/ammo_box/c38/match/bouncy,
 					/obj/item/ammo_box/c38/match/bouncy,
@@ -364,7 +364,7 @@
 /datum/supply_pack/security/handguns
 	name = "Assorted handguns Crate"
 	desc = "Contains two 9mm pistols, two .44 revolvers and two .45 hand guns. Requires Security access to open."
-	cost = CARGO_CRATE_VALUE * 8
+	cost = CARGO_CRATE_VALUE * 12
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/gun/ballistic/revolver/revolution,
 					/obj/item/gun/ballistic/revolver/revolution,
