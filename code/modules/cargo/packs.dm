@@ -525,7 +525,7 @@
 /datum/supply_pack/security/handgunammo
 	name = "FMJhandgun Ammo Crate"
 	desc = "Contains FMJ ammo for the 9mm, .44 and .45. Requires Security access to open."
-	cost = CARGO_CRATE_VALUE * 4
+	cost = CARGO_CRATE_VALUE * 8
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/ammo_box/a44/fmj,
 					/obj/item/ammo_box/a44/fmj,
