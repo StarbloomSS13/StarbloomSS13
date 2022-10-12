@@ -272,40 +272,66 @@
 	crate_type = /obj/structure/closet/crate/cardboard/mothic
 
 //////////////////////////////////////////////////////////////////////////////
-//////////////////////////// Security Materiel and Supplies ////////////////////////////////////////
+//////////////////////////// Blue Alert Materiel and Supplies ////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
 /datum/supply_pack/security
-	group = "Security Materiel and supplies"
+	group = "Blue Alert Materiel and supplies"
 	access = ACCESS_SECURITY
 	access_view = ACCESS_SECURITY
 	crate_type = /obj/structure/closet/crate/secure/gear
 
-/datum/supply_pack/security/ammo
-	name = "Ammo Crate"
-	desc = "Contains three boxes of beanbag shotgun shells, three boxes of rubbershot shotgun shells and one of each special .38 speedloarders. Requires Security access to open."
-	cost = CARGO_CRATE_VALUE * 8
-	access_view = ACCESS_ARMORY
+/datum/supply_pack/security/LTLshotgunammo
+	name = "LTL Shotgun Ammo Crate"
+	desc = "Contains three boxes of beanbag shotgun shells and three boxes of rubbershot shotgun shells. Requires Security access to open."
+	cost = CARGO_CRATE_VALUE * 4
+	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/storage/box/beanbag,
 					/obj/item/storage/box/beanbag,
 					/obj/item/storage/box/beanbag,
 					/obj/item/storage/box/rubbershot,
 					/obj/item/storage/box/rubbershot,
-					/obj/item/storage/box/rubbershot,
+					/obj/item/storage/box/rubbershot)
+	crate_name = "LTL shotgun ammo crate"
+
+/datum/supply_pack/security/LTLhandgunammo
+	name = "LTL handgun Ammo Crate"
+	desc = "Contains less than lethal ammo for the 9mm, .44 and .45. Requires Security access to open."
+	cost = CARGO_CRATE_VALUE * 4
+	access_view = ACCESS_SECURITY
+	contains = list(/obj/item/ammo_box/a44,
+					/obj/item/ammo_box/a44 ,
+					/obj/item/ammo_box/a44,
+					/obj/item/ammo_box/magazine/m45,
+					/obj/item/ammo_box/magazine/m45,
+					/obj/item/ammo_box/magazine/m45,
+					/obj/item/ammo_box/magazine/m9mm,
+					/obj/item/ammo_box/magazine/m9mm,
+					/obj/item/ammo_box/magazine/m9mm)
+	crate_name = "less than lethal handgun ammo crate"
+
+/datum/supply_pack/security/detrubberammo
+	name = ".38 rubber Ammo Crate"
+	desc = "Contains less than lethal .38 speedloaders. Requires Security access to open."
+	cost = CARGO_CRATE_VALUE *
+	access_view = ACCESS_SECURITY
+	contains = list(/obj/item/ammo_box/c38/match/bouncy,
+					/obj/item/ammo_box/c38/match/bouncy,
+					/obj/item/ammo_box/c38/match/bouncy,
+					/obj/item/ammo_box/c38/match/bouncy,
 					/obj/item/ammo_box/c38/trac,
-					/obj/item/ammo_box/c38/hotshot,
-					/obj/item/ammo_box/c38/iceblox)
+					/obj/item/ammo_box/c38/trac)
 	crate_name = "ammo crate"
 
 /datum/supply_pack/security/armor
-	name = "Armor Crate"
+	name = "light Armor Crate"
 	desc = "Three vests of well-rounded, decently-protective armor. Requires Security access to open."
 	cost = CARGO_CRATE_VALUE * 2
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/clothing/suit/armor/vest,
 					/obj/item/clothing/suit/armor/vest,
 					/obj/item/clothing/suit/armor/vest)
-	crate_name = "armor crate"
+	crate_name = "Light Armor Crate"
 
 /datum/supply_pack/security/disabler
 	name = "Disabler Crate"
@@ -335,6 +361,19 @@
 	crate_name = "energy gun crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma
 
+/datum/supply_pack/security/handguns
+	name = "Assorted handguns Crate"
+	desc = "Contains two 9mm pistols, two .44 revolvers and two .45 hand guns. Requires Security access to open."
+	cost = CARGO_CRATE_VALUE * 8
+	access_view = ACCESS_SECURITY
+	contains = list(/obj/item/gun/ballistic/revolver/revolution,
+					/obj/item/gun/ballistic/revolver/revolution,
+					/obj/item/gun/ballistic/automatic/pistol/equalizer,
+					/obj/item/gun/ballistic/automatic/pistol/equalizer,
+					/obj/item/gun/ballistic/automatic/pistol/liberator,
+					/obj/item/gun/ballistic/automatic/pistol/liberator)
+	crate_name = "Assorted handguns crate"
+	crate_type = /obj/structure/closet/crate/secure/plasma
 
 /datum/supply_pack/security/forensics
 	name = "Forensics Crate"
@@ -411,7 +450,7 @@
 	name = "Security Supplies Crate"
 	desc = "Contains seven flashbangs, seven teargas grenades, six flashes, and seven handcuffs. Requires Security access to open."
 	cost = CARGO_CRATE_VALUE * 3.5
-	access_view = ACCESS_ARMORY
+	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/storage/box/flashbangs,
 					/obj/item/storage/box/teargas,
 					/obj/item/storage/box/flashes,
@@ -429,10 +468,10 @@
 	crate_name = "wall-mounted flash crate"
 
 //////////////////////////////////////////////////////////////////////////////
-//////////////////////////// Armory Materiel and Supplies //////////////////////////////////////////
+//////////////////////////// Red Alert Materiel and Supplies //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 /datum/supply_pack/security/armory
-	group = "Armory Materiel and Supplies"
+	group = "Red Alert Materiel and Supplies"
 	access = ACCESS_ARMORY
 	access_view = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
@@ -467,7 +506,33 @@
 					/obj/item/storage/belt/bandolier)
 	crate_name = "combat shotguns crate"
 
-/datum/supply_pack/security/armory/fire
+/datum/supply_pack/security/armory/lethaldetammo
+	name = ".38 ammo cache"
+	desc = "Contains Lethal and specialized .38 rounds. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 9
+	contains = list(/obj/item/ammo_box/c38/,
+					/obj/item/ammo_box/c38/,
+					/obj/item/ammo_box/c38/dumdum,
+					/obj/item/ammo_box/c38/dumdum,
+					/obj/item/ammo_box/c38/match,
+					/obj/item/ammo_box/c38/match,
+					/obj/item/ammo_box/c38/hotshot,
+					/obj/item/ammo_box/c38/hotshot,
+					/obj/item/ammo_box/c38/iceblox,
+					/obj/item/ammo_box/c38/iceblox)
+	crate_name = "Live .38 ammo crate"
+
+
+/datum/supply_pack/security/armory/lethalshotgunammo
+	name = "buckshot shells cache"
+	desc = "Contains boxes of buckshot shells. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 10
+	contains = list(/obj/item/storage/box/lethalshot,
+					/obj/item/storage/box/lethalshot,
+					/obj/item/storage/box/lethalshot)
+	crate_name = "buckshot shells crate"
+
+/datum/supply_pack/security/armory/flammenwerfer
 	name = "Incendiary Weapons Crate"
 	desc = "Burn, baby burn. Contains three incendiary grenades, three plasma canisters, and a flamethrower. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 7
@@ -482,6 +547,7 @@
 	crate_name = "incendiary weapons crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma
 	dangerous = TRUE
+
 /datum/supply_pack/security/laser
 	name = "Lasers Crate"
 	desc = "Contains three lethal, high-energy laser guns. Requires Security access to open."
@@ -614,20 +680,6 @@
 	contains = list(/obj/item/storage/belt/holster/thermal,
 					/obj/item/storage/belt/holster/thermal)
 	crate_name = "thermal pistol crate"
-
-
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////// Brig Control Supplies ////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-
-/////// Almost everything in here is just depreciated content to be honest
-////// hence why it is sorted into it's own tab
-/datum/supply_pack/security/armory
-	group = "Brig Control Supplies"
-	access = ACCESS_ARMORY
-	access_view = ACCESS_ARMORY
-	crate_type = /obj/structure/closet/crate/secure/weapon
-
 /datum/supply_pack/security/armory/chemimp
 	name = "Chemical Implants Crate"
 	desc = "Contains five Remote Chemical implants. Requires Armory access to open."
