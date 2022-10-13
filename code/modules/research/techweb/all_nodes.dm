@@ -1382,11 +1382,11 @@
 		"a762ap",
 		"a762hp",
 		"a762i",
-		"m762rad",
+		"a762rad",
 		"smgm45ap",
 		"smgm45fmj",
 		"smgm45i",
-		"smgm45rad"
+		"smgm45rad",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 
