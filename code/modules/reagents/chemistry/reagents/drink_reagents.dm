@@ -1277,7 +1277,7 @@
 	. = TRUE
 
 /datum/reagent/consumable/green_hill_tea/overdose_start(mob/living/M)
-	to_chat(M, span_userdanger("You feel like you took too many chili dogs!"))
+	to_chat(M, span_userdanger("You feel like you've been going too fast for too long!"))
 	..()
 
 /datum/reagent/consumable/green_hill_tea/overdose_process(mob/living/M, delta_time, times_fired)
@@ -1285,8 +1285,5 @@
 		return
 
 	var/mob/living/carbon/human/overdosed_human = M
-	overdosed_human.adjustOrganLoss(ORGAN_SLOT_HEART, 1 * REM * delta_time) //oof ouch that hurts
-	overdosed_human.hair_color = "15F" //blue hair, oh no
-	overdosed_human.facial_hair_color = "15F"
-	overdosed_human.update_hair()
+	overdosed_human.adjustOrganLoss(ORGAN_SLOT_HEART, 1 * REM * delta_time)
 	..()
