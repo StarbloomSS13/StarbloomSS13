@@ -45,3 +45,19 @@
 /obj/item/ammo_box/magazine/m556/phasic
 	name = "toploader magazine (5.56mm Phasic)"
 	ammo_type = /obj/item/ammo_casing/a556/phasic
+
+
+/obj/item/ammo_box/magazine/lr_22
+	name = "22. LR magazine"
+	desc = "a small magazine for light carbines"
+	icon_state = "levermag_10"
+	base_icon_state = "levermag_0"
+	caliber = CALIBER_22
+	ammo_type = /obj/item/ammo_casing/lr_22
+	max_ammo = 10
+	start_empty = FALSE
+	multiload = TRUE
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+
+
+

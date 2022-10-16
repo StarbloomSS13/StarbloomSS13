@@ -70,3 +70,12 @@
 	caliber = CALIBER_40MM
 	icon_state = "40mmHE"
 	projectile_type = /obj/projectile/bullet/a40mm
+
+
+
+/obj/item/ammo_casing/lr_22
+	name = "22. LR casing"
+	desc = "A small FMJ round intended for small game hunting and sport. Or to deter assailants."
+	caliber = CALIBER_22
+	icon_state = "22lr_live"
+	projectile_type = /obj/projectile/bullet/lr_22

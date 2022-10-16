@@ -60,3 +60,4 @@
 #define CALIBER_MAG "mag"
 /// The caliber used by the Crystal Harpoon.
 #define CALIBER_CRYSTAL "crystal"
+#define CALIBER_22 "22lr"

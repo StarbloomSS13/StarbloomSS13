@@ -100,3 +100,11 @@
 	damage = 25
 	armour_penetration = 50
 	wound_bonus = -30
+
+
+/obj/projectile/bullet/lr_22
+	name = "22. long rifle"
+	damage = 12
+	armour_penetration = 20
+
+// Currently only used for the light carbine

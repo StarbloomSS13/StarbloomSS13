@@ -402,3 +402,22 @@
 	actions_types = list()
 	fire_sound = 'sound/weapons/laser.ogg'
 	casing_ejector = FALSE
+
+
+
+
+/obj/item/gun/ballistic/lever_action_rifle
+	name = "light carbine"
+	desc = "A light rifle chambered in 22. long rifle ammunition. for home defense and sport."
+	icon_state = "leveraction"
+	w_class = WEIGHT_CLASS_BULKY
+	inhand_icon_state = "leverrifle"
+	mag_type = /obj/item/ammo_box/magazine/lr_22
+	fire_delay = 2
+	burst_size = 1
+	mag_display = TRUE
+	fire_sound = 'sound/weapons/gun/pistol/starbloom_9mm.ogg'
+	casing_ejector = TRUE
+	slot_flags = ITEM_SLOT_BACK
+	can_suppress = FALSE
+
