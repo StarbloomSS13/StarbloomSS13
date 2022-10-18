@@ -45,8 +45,8 @@
 	external = TRUE
 
 /obj/effect/overlay/vis_airlock
-	layer = 0
-	plane = 200
+	layer = DOOR_HELPER_LAYER
+	plane = GAME_PLANE_UPPER
 	vis_flags = VIS_INHERIT_ID
 
 /obj/machinery/door/airlock/Destroy()
