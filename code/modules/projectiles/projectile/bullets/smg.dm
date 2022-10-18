@@ -43,6 +43,14 @@
 	damage = 15
 	fire_stacks = 2
 
+/obj/projectile/bullet/c45/rad
+	name = ".45 radioactive bullet"
+	damage = 25
+	armour_penetration = -50
+
+/obj/projectile/bullet/c45/rad/on_hit(atom/target, blocked = FALSE)
+	radiation_pulse(target, max_range = 0, threshold = 0, chance = 100)
+
 // 4.6x30mm (Autorifles)
 
 /obj/projectile/bullet/c46x30mm

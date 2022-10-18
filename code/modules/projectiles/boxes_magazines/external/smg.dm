@@ -74,14 +74,14 @@
 	name = "SMG Magazine (Incendiary 9mm)"
 	ammo_type = /obj/item/ammo_casing/c9mm/fire
 
+//Helios ammo begin
 /obj/item/ammo_box/magazine/smgm45
 	name = "SMG magazine (.45 HP)"
-	icon_state = "c20r45-24"
-	base_icon_state = "c20r45"
+	icon_state = "c20r45hp-24"
+	base_icon_state = "c20r45hp"
 	ammo_type = /obj/item/ammo_casing/c45/hp
 	caliber = CALIBER_45
 	max_ammo = 24
-
 
 /obj/item/ammo_box/magazine/smgm45/update_icon_state()
 	. = ..()
@@ -89,11 +89,9 @@
 
 /obj/item/ammo_box/magazine/smgm45/ap
 	name = "SMG magazine (.45 AP)"
-	icon_state = "c20r45-24"
-	base_icon_state = "c20r45"
+	icon_state = "c20r45ap-24"
+	base_icon_state = "c20r45ap"
 	ammo_type = /obj/item/ammo_casing/c45/ap
-	caliber = CALIBER_45
-	max_ammo = 24
 
 /obj/item/ammo_box/magazine/smgm45/ap/update_icon_state()
 	. = ..()
@@ -104,8 +102,6 @@
 	icon_state = "c20r45-24"
 	base_icon_state = "c20r45"
 	ammo_type = /obj/item/ammo_casing/c45/fmj
-	caliber = CALIBER_45
-	max_ammo = 24
 
 /obj/item/ammo_box/magazine/smgm45/hp/update_icon_state()
 	. = ..()
@@ -113,15 +109,24 @@
 
 /obj/item/ammo_box/magazine/smgm45/i
 	name = "SMG magazine (.45 Incendiary)"
-	icon_state = "c20r45-24"
-	base_icon_state = "c20r45"
+	icon_state = "c20r45i-24"
+	base_icon_state = "c20r45i"
 	ammo_type = /obj/item/ammo_casing/c45/i
-	caliber = CALIBER_45
-	max_ammo = 24
 
 /obj/item/ammo_box/magazine/smgm45/i/update_icon_state()
 	. = ..()
 	icon_state = "[base_icon_state]-[round(ammo_count(), 2)]"
+
+/obj/item/ammo_box/magazine/smgm45/rad
+	name = "SMG magazine (.45 Radioactive)"
+	icon_state = "c20r45rad-24"
+	base_icon_state = "c20r45rad"
+	ammo_type = /obj/item/ammo_casing/c45/rad
+
+/obj/item/ammo_box/magazine/smgm45/rad/update_icon_state()
+	. = ..()
+	icon_state = "[base_icon_state]-[round(ammo_count(), 2)]"
+//Helios ammo end
 
 /obj/item/ammo_box/magazine/smgm45/incen
 	name = "SMG magazine (Incendiary .45)"

@@ -402,3 +402,25 @@
 	actions_types = list()
 	fire_sound = 'sound/weapons/laser.ogg'
 	casing_ejector = FALSE
+
+//Starbloom - Helios
+/obj/item/gun/ballistic/automatic/c20r/unrestricted/helios
+	name = ".45 Helios"
+	desc = "A bullpup two-round burst .45 PDW. It has a foldable stock and a dot sight."
+	icon_state = "cmg1"
+	fire_sound = 'sound/weapons/gun/pistol/starbloom_45.ogg'
+	burst_size = 2
+	icon = 'starbloom_modules/aesthetics/guns/icons/guns.dmi'
+	mag_type = /obj/item/ammo_box/magazine/smgm45
+
+//Starbloom - Valiant
+/obj/item/gun/ballistic/automatic/ar/valiant
+	name = "5.56 Valiant"
+	desc = "A modern, advanced Security-issue rifle fitted with a light polymer frame and other tactical furniture."
+	icon = 'starbloom_modules/aesthetics/guns/icons/guns_gubman2.dmi'
+	fire_sound = 'sound/weapons/gun/pistol/starbloom_9mm.ogg'
+	icon_state = "arg"
+	inhand_icon_state = "arg"
+	burst_size = 3
+	can_suppress = FALSE
+	w_class = WEIGHT_CLASS_BULKY
