@@ -256,4 +256,19 @@
 	name = "7.62 Memoria"
 	desc = "A classic variant of an old Earth rifle. Dated, but powerful."
 	fire_sound = 'sound/weapons/gun/revolver/starbloom_revolver.ogg'
+
+/obj/item/gun/ballistic/gravitas
+	name = ".303-M Gravitas"
 	icon = 'starbloom_modules/aesthetics/guns/icons/guns.dmi'
+	desc = "A classic old Earth rifle used by the Royal Guard. To balance tradition with the demands of advancing technology, this one is retrofitted with bleeding-edge railgun tech."
+	fire_sound = 'sound/weapons/magrifle.ogg'
+	icon_state = "gravitas"
+	inhand_icon_state = "moistnugget"
+	worn_icon_state = "gravitas"
+	can_suppress = FALSE
+	w_class = WEIGHT_CLASS_BULKY
+	mag_type = /obj/item/ammo_box/magazine/mmag
+	fire_delay = 12
+	semi_auto = TRUE
+	mag_display = FALSE
+	vary_fire_sound = FALSE

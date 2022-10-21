@@ -155,7 +155,7 @@
 	inhand_icon_state = "helmet_royalguard"
 	armor = list(MELEE = 50, BULLET = 50, LASER = 30, ENERGY = 25, BOMB = 50, BIO = 100, FIRE = 40, ACID = 50, WOUND = 20)
 	can_flashlight = FALSE
-	worn_y_offset = 16
+	worn_y_offset = 12
 
 /obj/item/clothing/head/helmet/old
 	name = "degrading helmet"

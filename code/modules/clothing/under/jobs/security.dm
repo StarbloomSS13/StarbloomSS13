@@ -179,8 +179,8 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/security/head_of_security/parade
-	name = "justiciar's parade uniform"
-	desc = "A male justiciar's luxury-wear, for special occasions."
+	name = "Royal Guard's parade uniform"
+	desc = "A Royal Guard's uniform. Refined, tasteful, and kept in perfect shape."
 	icon_state = "hos_parade_male"
 	inhand_icon_state = "r_suit"
 	can_adjust = FALSE

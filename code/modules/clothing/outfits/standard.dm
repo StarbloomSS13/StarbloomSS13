@@ -482,3 +482,16 @@
 	W.registered_name = H.real_name
 	W.update_label()
 	W.update_icon()
+
+/datum/outfit/royalguard
+	name = "Royal Guard"
+
+	uniform = /obj/item/clothing/under/rank/security/head_of_security/parade
+	suit = /obj/item/clothing/suit/armor/vest/royalguard
+	head = /obj/item/clothing/head/helmet/royalguard
+	shoes = /obj/item/clothing/shoes/jackboots
+	gloves = /obj/item/clothing/gloves/color/white
+	suit_store = /obj/item/gun/ballistic/gravitas
+	back = /obj/item/storage/backpack/satchel/leather
+	l_pocket = /obj/item/ammo_box/magazine/mmag
+	r_pocket = /obj/item/grenade/frag
