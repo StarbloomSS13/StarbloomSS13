@@ -193,7 +193,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/item/storage/secure/safe, 32)
 	return attack_self(user)
 
 /obj/item/storage/secure/safe/hos
-	name = "head of security's safe"
+	name = "justiciar's safe"
 
 /**
  * This safe is meant to be damn robust. To break in, you're supposed to get creative, or use acid or an explosion.

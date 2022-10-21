@@ -126,7 +126,7 @@
 	default_cartridge = /obj/item/cartridge/hop
 
 /obj/item/pda/heads/hos
-	name = "head of security PDA"
+	name = "justiciar PDA"
 	default_cartridge = /obj/item/cartridge/hos
 	greyscale_config = /datum/greyscale_config/pda/head
 	greyscale_colors = "#cc4242#0000cc"

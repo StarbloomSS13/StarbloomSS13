@@ -8,7 +8,7 @@
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of security"
+	supervisors = "the Justiciar"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
 	exp_requirements = 300
@@ -51,22 +51,22 @@
 	id_trim = /datum/id_trim/job/warden
 	uniform = /obj/item/clothing/under/rank/security/warden
 	suit = /obj/item/clothing/suit/armor/vest/warden/alt
-	suit_store = /obj/item/gun/energy/disabler
+	suit_store = /obj/item/gun/ballistic/revolver/revolution
 	backpack_contents = list(
 		/obj/item/evidencebag = 1,
 		/obj/item/modular_computer/tablet/preset/advanced/security = 1,
 		)
 	belt = /obj/item/pda/warden
 	ears = /obj/item/radio/headset/headset_sec/alt
+	head = 	/obj/item/clothing/head/warden/drill
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
 	gloves = /obj/item/clothing/gloves/color/black
-	head = /obj/item/clothing/head/warden/red
 	shoes = /obj/item/clothing/shoes/jackboots
 	l_pocket = /obj/item/restraints/handcuffs
 	r_pocket = /obj/item/assembly/flash/handheld
 
-	backpack = /obj/item/storage/backpack/security
-	satchel = /obj/item/storage/backpack/satchel/sec
+	backpack = /obj/item/storage/backpack/homeguard
+	satchel = /obj/item/storage/backpack/satchel/leather
 	duffelbag = /obj/item/storage/backpack/duffelbag/sec
 
 	box = /obj/item/storage/box/survival/security

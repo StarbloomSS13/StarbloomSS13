@@ -1,7 +1,8 @@
 /datum/job/head_of_personnel
 	title = JOB_HEAD_OF_PERSONNEL
-	description = "Alter access on ID cards, manage civil and supply departments, \
-		protect Ian, run the station when the captain dies."
+	description = "The Seneschal is the Exarch's second in command, who handles the day to day operations and bureaucracy of the Upper Decks. \
+		Alter access on ID cards, manage civil and supply departments, \
+		protect Ian, run the station when the Exarch dies. See to the grievances of the crew. This is an extremely challenging position with high expectations, not recommended for new players."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	department_head = list(JOB_CAPTAIN)
 	head_announce = list(RADIO_CHANNEL_SUPPLY, RADIO_CHANNEL_SERVICE)
@@ -45,7 +46,7 @@
 
 
 /datum/job/head_of_personnel/get_captaincy_announcement(mob/living/captain)
-	return "Due to staffing shortages, newly promoted Acting Captain [captain.real_name] on deck!"
+	return "Due to staffing shortages, newly promoted Acting Exarch [captain.real_name] on deck!"
 
 
 /datum/outfit/job/hop

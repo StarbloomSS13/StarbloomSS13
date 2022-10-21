@@ -135,8 +135,8 @@
 //Security
 
 /obj/item/clothing/head/hos
-	name = "head of security cap"
-	desc = "The robust standard-issue cap of the Head of Security. For showing the officers who's in charge."
+	name = "justiciar cap"
+	desc = "The robust standard-issue cap of the Justiciar. For showing the officers who's in charge."
 	armor = list(MELEE = 40, BULLET = 30, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 10, FIRE = 50, ACID = 60, WOUND = 10)
 	icon_state = "hoscap"
 	strip_delay = 80
@@ -147,16 +147,16 @@
 	desc = "A black cap fit for a high ranking Last Edict Zealot."
 
 /obj/item/clothing/head/hos/beret
-	name = "head of security's beret"
-	desc = "A robust beret for the Head of Security, for looking stylish while not sacrificing protection."
+	name = "justiciar's beret"
+	desc = "A robust beret for the Justiciar, for looking stylish while not sacrificing protection."
 	icon_state = "beret_badge"
 	greyscale_config = /datum/greyscale_config/beret_badge
 	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn
 	greyscale_colors = "#3F3C40#FFCE5B"
 
 /obj/item/clothing/head/hos/beret/navyhos
-	name = "head of security's formal beret"
-	desc = "A special beret with the Head of Security's insignia emblazoned on it. A symbol of excellence, a badge of courage, a mark of distinction."
+	name = "justiciar's formal beret"
+	desc = "A special beret with the Justiciar's insignia emblazoned on it. A symbol of excellence, a badge of courage, a mark of distinction."
 	greyscale_colors = "#3C485A#FFCE5B"
 
 /obj/item/clothing/head/hos/beret/syndicate
@@ -173,12 +173,11 @@
 	dog_fashion = /datum/dog_fashion/head/warden
 
 /obj/item/clothing/head/warden/red
-	name = "warden's hat"
-	desc = "A warden's red hat. Looking at it gives you the feeling of wanting to keep people in cells for as long as possible."
-	icon_state = "wardenhat"
+	name = "justiciar's hat"
+	desc = "A justiciar's hat. Looking at it gives you the feeling of wanting to keep people in cells for as long as possible."
+	icon_state = "centcom_cap"
 	armor = list(MELEE = 40, BULLET = 30, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 30, ACID = 60, WOUND = 6)
 	strip_delay = 60
-	dog_fashion = /datum/dog_fashion/head/warden_red
 
 /obj/item/clothing/head/warden/drill
 	name = "warden's campaign hat"

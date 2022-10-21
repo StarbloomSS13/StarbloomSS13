@@ -124,7 +124,7 @@
 	job = /datum/job/bartender
 
 /datum/id_trim/job/botanist
-	assignment = "Botanist"
+	assignment = "Hydroponicist"
 	trim_state = "trim_botanist"
 	department_color = COLOR_SERVICE_LIME
 	subdepartment_color = COLOR_SERVICE_LIME
@@ -136,7 +136,7 @@
 	job = /datum/job/botanist
 
 /datum/id_trim/job/captain
-	assignment = "Captain"
+	assignment = "Exarch"
 	intern_alt_name = "Captain-in-Training"
 	trim_state = "trim_captain"
 	department_color = COLOR_COMMAND_BLUE
@@ -202,7 +202,7 @@
 	job = /datum/job/chemist
 
 /datum/id_trim/job/chief_engineer
-	assignment = "Chief Engineer"
+	assignment = "Mekhane Grand Engineer"
 	intern_alt_name = "Chief Engineer-in-Training"
 	trim_state = "trim_stationengineer"
 	department_color = COLOR_COMMAND_BLUE
@@ -220,7 +220,7 @@
 	job = /datum/job/chief_engineer
 
 /datum/id_trim/job/chief_medical_officer
-	assignment = "Chief Medical Officer"
+	assignment = "Chiron Biolab Overseer"
 	intern_alt_name = "Chief Medical Officer-in-Training"
 	trim_state = "trim_medicaldoctor"
 	department_color = COLOR_COMMAND_BLUE
@@ -313,7 +313,7 @@
 	job = /datum/job/geneticist
 
 /datum/id_trim/job/head_of_personnel
-	assignment = "Head of Personnel"
+	assignment = "Seneschal"
 	intern_alt_name = "Head of Personnel-in-Training"
 	trim_state = "trim_headofpersonnel"
 	department_color = COLOR_COMMAND_BLUE
@@ -334,7 +334,7 @@
 	job = /datum/job/head_of_personnel
 
 /datum/id_trim/job/head_of_security
-	assignment = "Head of Security"
+	assignment = "Justiciar"
 	intern_alt_name = "Head of Security-in-Training"
 	trim_state = "trim_securityofficer"
 	department_color = COLOR_COMMAND_BLUE
@@ -488,7 +488,7 @@
 	job = /datum/job/quartermaster
 
 /datum/id_trim/job/research_director
-	assignment = "Research Director"
+	assignment = "Chiron Research Overseer"
 	intern_alt_name = "Research Director-in-Training"
 	trim_state = "trim_scientist"
 	department_color = COLOR_COMMAND_BLUE
