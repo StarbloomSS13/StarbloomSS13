@@ -510,3 +510,9 @@
 	inhand_icon_state = "pg_suit"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+
+/obj/item/clothing/suit/longcoat
+	name = "stylish longcoat"
+	desc = "A longcoat worn only by people of excellent taste."
+	icon_state = "longcoat"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
