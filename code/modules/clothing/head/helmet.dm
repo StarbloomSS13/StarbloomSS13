@@ -148,6 +148,15 @@
 	update_appearance()
 	. = ..()
 
+/obj/item/clothing/head/helmet/royalguard
+	name = "royal guard bearskin hat"
+	desc = "A tall bearskin hat designed to make the wearer more imposing. Used exclusively by the Unity's Royal Guards."
+	icon_state = "helmet_royalguard"
+	inhand_icon_state = "helmet_royalguard"
+	armor = list(MELEE = 50, BULLET = 50, LASER = 30, ENERGY = 25, BOMB = 50, BIO = 100, FIRE = 40, ACID = 50, WOUND = 20)
+	can_flashlight = FALSE
+	worn_y_offset = 12
+
 /obj/item/clothing/head/helmet/old
 	name = "degrading helmet"
 	desc = "Standard issue security helmet. Due to degradation the helmet's visor obstructs the users ability to see long distances."
@@ -631,6 +640,5 @@
 
 /obj/item/clothing/head/helmet/homeguard
 	name = "home guard helmet"
-	desc = "A Home Guardsman's helmet. Cheaply made, but enough to stop a few bullets."
+	desc = "A Home Guardsman's helmet. Cheaply made, but enough to stop a few bullets. It's Class II armor, offering good protection against projectiles."
 	icon_state = "helmet_homeguard"
-	armor = list(MELEE = 35, BULLET = 30, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50, WOUND = 10)

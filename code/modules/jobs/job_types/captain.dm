@@ -1,14 +1,12 @@
 /datum/job/captain
 	title = JOB_CAPTAIN
-	description = "Be responsible for the station, manage your Heads of Staff, \
-		keep the crew alive, be prepared to do anything and everything or die \
-		horribly trying."
+	description = "The Exarch is the one who rules the Upper Decks in the name of the Lord Admiral. This is an extremely challenging position with high expectations, not recommended for new players."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
 	department_head = list("CentCom")
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Nanotrasen officials and Space law"
+	supervisors = "the Lord Admiral"
 	selection_color = "#ccccff"
 	req_admin_notify = 1
 	minimal_player_age = 14

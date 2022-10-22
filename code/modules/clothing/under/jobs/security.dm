@@ -134,19 +134,19 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /*
- * Head of Security
+ * Justiciar
  */
 /obj/item/clothing/under/rank/security/head_of_security
-	name = "head of security's jumpsuit"
-	desc = "A security jumpsuit decorated for those few with the dedication to achieve the position of Head of Security."
+	name = "justiciar's jumpsuit"
+	desc = "A security jumpsuit decorated for those few with the dedication to achieve the position of Justiciar."
 	icon_state = "rhos"
 	inhand_icon_state = "r_suit"
 	armor = list(MELEE = 10, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 50, ACID = 50, WOUND = 10)
 	strip_delay = 60
 
 /obj/item/clothing/under/rank/security/head_of_security/skirt
-	name = "head of security's jumpskirt"
-	desc = "A security jumpskirt decorated for those few with the dedication to achieve the position of Head of Security."
+	name = "justiciar's jumpskirt"
+	desc = "A security jumpskirt decorated for those few with the dedication to achieve the position of Justiciar."
 	icon_state = "rhos_skirt"
 	inhand_icon_state = "r_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -155,21 +155,21 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/security/head_of_security/grey
-	name = "head of security's grey jumpsuit"
+	name = "justiciar's grey jumpsuit"
 	desc = "There are old men, and there are bold men, but there are very few old, bold men."
 	icon_state = "hos"
 	inhand_icon_state = "gy_suit"
 
 /obj/item/clothing/under/rank/security/head_of_security/alt
-	name = "head of security's turtleneck"
-	desc = "A stylish alternative to the normal head of security jumpsuit, complete with tactical pants."
+	name = "justiciar's turtleneck"
+	desc = "A stylish alternative to the normal justiciar jumpsuit, complete with tactical pants."
 	icon_state = "hosalt"
 	inhand_icon_state = "bl_suit"
 	alt_covers_chest = TRUE
 
 /obj/item/clothing/under/rank/security/head_of_security/alt/skirt
-	name = "head of security's turtleneck skirt"
-	desc = "A stylish alternative to the normal head of security jumpsuit, complete with a tactical skirt."
+	name = "justiciar's turtleneck skirt"
+	desc = "A stylish alternative to the normal justiciar jumpsuit, complete with a tactical skirt."
 	icon_state = "hosalt_skirt"
 	inhand_icon_state = "bl_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -179,23 +179,23 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/security/head_of_security/parade
-	name = "head of security's parade uniform"
-	desc = "A male head of security's luxury-wear, for special occasions."
+	name = "Royal Guard's parade uniform"
+	desc = "A Royal Guard's uniform. Refined, tasteful, and kept in perfect shape."
 	icon_state = "hos_parade_male"
 	inhand_icon_state = "r_suit"
 	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/security/head_of_security/parade/female
-	name = "head of security's parade uniform"
-	desc = "A female head of security's luxury-wear, for special occasions."
+	name = "justiciar's parade uniform"
+	desc = "A female justiciar's luxury-wear, for special occasions."
 	icon_state = "hos_parade_fem"
 	inhand_icon_state = "r_suit"
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/security/head_of_security/formal
-	desc = "The insignia on this uniform tells you that this uniform belongs to the Head of Security."
-	name = "head of security's formal uniform"
+	desc = "The insignia on this uniform tells you that this uniform belongs to the Justiciar."
+	name = "justiciar's formal uniform"
 	icon_state = "hosblueclothes"
 	inhand_icon_state = "hosblueclothes"
 	alt_covers_chest = TRUE

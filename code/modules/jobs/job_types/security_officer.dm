@@ -1,13 +1,12 @@
 /datum/job/security_officer
 	title = JOB_SECURITY_OFFICER
-	description = "Protect company assets, follow the Standard Operating \
-		Procedure, eat donuts."
+	description = "A member of the Home Guard militia. Attempt to defend the crew against internal and external threats. Die."
 	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
 	department_head = list(JOB_HEAD_OF_SECURITY)
 	faction = FACTION_STATION
 	total_positions = 5 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
 	spawn_positions = 5 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
-	supervisors = "the head of security, and the head of your assigned department (if applicable)"
+	supervisors = "the Justiciar"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
 	exp_requirements = 300
@@ -193,13 +192,13 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	)
 
 /datum/outfit/job/security
-	name = "Security Officer"
+	name = "Home Guard Officer"
 	jobtype = /datum/job/security_officer
 
 	id_trim = /datum/id_trim/job/security_officer
 	uniform = /obj/item/clothing/under/rank/security/officer
-	suit = /obj/item/clothing/suit/armor/vest/alt
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/equalizer
+	suit = /obj/item/clothing/suit/armor/vest/homeguard
+	suit_store = /obj/item/gun/ballistic/revolver/revolution
 	backpack_contents = list(
 		/obj/item/evidencebag = 1,
 		/obj/item/modular_computer/tablet/preset/advanced/security = 1,
@@ -207,13 +206,14 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	belt = /obj/item/pda/security
 	ears = /obj/item/radio/headset/headset_sec/alt
 	gloves = /obj/item/clothing/gloves/color/black
-	head = /obj/item/clothing/head/helmet/sec
+	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
+	head = /obj/item/clothing/head/helmet/homeguard
 	shoes = /obj/item/clothing/shoes/jackboots
 	l_pocket = /obj/item/restraints/handcuffs
 	r_pocket = /obj/item/assembly/flash/handheld
 
-	backpack = /obj/item/storage/backpack/security
-	satchel = /obj/item/storage/backpack/satchel/sec
+	backpack = /obj/item/storage/backpack/homeguard
+	satchel = /obj/item/storage/backpack/satchel/leather
 	duffelbag = /obj/item/storage/backpack/duffelbag/sec
 
 	box = /obj/item/storage/box/survival/security

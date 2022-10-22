@@ -31,14 +31,14 @@
 #define JOB_ASSISTANT "Assistant"
 #define JOB_PRISONER "Prisoner"
 //Command
-#define JOB_CAPTAIN "Captain"
-#define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
+#define JOB_CAPTAIN "Exarch"
+#define JOB_HEAD_OF_PERSONNEL "Seneschal"
 //Temporarily Unity
-#define JOB_HEAD_OF_SECURITY "Head of Security"
+#define JOB_HEAD_OF_SECURITY "Justiciar"
 //Temporarily Unity
-#define JOB_RESEARCH_DIRECTOR "Research Director"
-#define JOB_CHIEF_ENGINEER "Chief Engineer"
-#define JOB_CHIEF_MEDICAL_OFFICER "Chief Medical Officer"
+#define JOB_RESEARCH_DIRECTOR "Chiron Research Overseer"
+#define JOB_CHIEF_ENGINEER "Mekhane Grand Engineer"
+#define JOB_CHIEF_MEDICAL_OFFICER "Chiron Biolab Overseer"
 //Silicon
 #define JOB_AI "AI"
 #define JOB_CYBORG "Cyborg"
@@ -47,12 +47,12 @@
 #define JOB_WARDEN "Warden"
 #define JOB_DETECTIVE "Detective"
 //Temporarily Unity
-#define JOB_SECURITY_OFFICER "Security Officer"
+#define JOB_SECURITY_OFFICER "Home Guard Officer"
 //Temporarily Unity
-#define JOB_SECURITY_OFFICER_MEDICAL "Security Officer (Medical)"
-#define JOB_SECURITY_OFFICER_ENGINEERING "Security Officer (Engineering)"
-#define JOB_SECURITY_OFFICER_SCIENCE "Security Officer (Science)"
-#define JOB_SECURITY_OFFICER_SUPPLY "Security Officer (Cargo)"
+#define JOB_SECURITY_OFFICER_MEDICAL "Home Guard Officer (Medical)"
+#define JOB_SECURITY_OFFICER_ENGINEERING "Home Guard Officer (Engineering)"
+#define JOB_SECURITY_OFFICER_SCIENCE "Home Guard Officer (Science)"
+#define JOB_SECURITY_OFFICER_SUPPLY "Home Guard Officer (Cargo)"
 //Engineering
 #define JOB_STATION_ENGINEER "Station Engineer"
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
@@ -71,7 +71,7 @@
 #define JOB_SALVAGE_CREW "Salvage Crew"
 //Service
 #define JOB_BARTENDER "Bartender"
-#define JOB_BOTANIST "Botanist"
+#define JOB_BOTANIST "Hydroponicist"
 #define JOB_COOK "Cook"
 #define JOB_JANITOR "Janitor"
 #define JOB_CLOWN "Clown"
@@ -81,11 +81,11 @@
 #define JOB_CHAPLAIN "Chaplain"
 #define JOB_PSYCHOLOGIST "Psychologist"
 //ERTs
-#define JOB_ERT_DEATHSQUAD "Death Commando"
-#define JOB_ERT_COMMANDER "Emergency Response Team Commander"
-#define JOB_ERT_OFFICER "Security Response Officer"
-#define JOB_ERT_ENGINEER "Engineering Response Officer"
-#define JOB_ERT_MEDICAL_DOCTOR "Medical Response Officer"
+#define JOB_ERT_DEATHSQUAD "Oculus Erasure Agent"
+#define JOB_ERT_COMMANDER "Royal Guard Commander"
+#define JOB_ERT_OFFICER "Royal Guard Officer"
+#define JOB_ERT_ENGINEER "Royal Guard Engineer"
+#define JOB_ERT_MEDICAL_DOCTOR "Royal Guard Medic"
 #define JOB_ERT_CHAPLAIN "Religious Response Officer"
 #define JOB_ERT_JANITOR "Janitorial Response Officer"
 #define JOB_ERT_CLOWN "Entertainment Response Officer"

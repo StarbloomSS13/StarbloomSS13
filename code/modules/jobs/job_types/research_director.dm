@@ -1,15 +1,15 @@
 /datum/job/research_director
 	title = JOB_RESEARCH_DIRECTOR
-	description = "Supervise research efforts, ensure Robotics is in working \
+	description = "The director of Chiron's research efforts on the Upper Decks. Supervise research efforts, ensure Robotics is in working \
 		order, make sure the AI and its Cyborgs aren't rogue, replacing them if \
-		they are"
+		they are. This is an extremely challenging position with high expectations, not recommended for new players."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	department_head = list(JOB_CAPTAIN)
 	head_announce = list("Science")
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the captain"
+	supervisors = "the Exarch"
 	selection_color = "#ffddff"
 	req_admin_notify = 1
 	minimal_player_age = 7

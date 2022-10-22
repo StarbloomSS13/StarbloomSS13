@@ -14,7 +14,7 @@
 	inhand_icon_state = "hop_envirosuit"
 
 /obj/item/clothing/under/plasmaman/security/head_of_security
-	name = "head of security's envirosuit"
+	name = "justiciar's envirosuit"
 	desc = "A plasmaman containment suit decorated for those few with the dedication to achieve the position of Head of Security."
 	icon_state = "hos_envirosuit"
 	inhand_icon_state = "hos_envirosuit"

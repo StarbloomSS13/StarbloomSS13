@@ -145,7 +145,7 @@
 	ADD_STEAL_ITEM(src, /obj/item/gun/energy/laser/captain)
 
 /datum/objective_item/steal/hoslaser
-	name = "the head of security's personal laser gun"
+	name = "the justiciar's personal laser gun"
 	targetitem = /obj/item/gun/energy/e_gun/hos
 	difficulty = 10
 	excludefromjob = list(JOB_HEAD_OF_SECURITY)

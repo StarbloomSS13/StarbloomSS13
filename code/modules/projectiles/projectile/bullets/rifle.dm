@@ -113,6 +113,6 @@
 /obj/projectile/bullet/magnetic
 	name = "magnetic slug"
 	icon_state = "mag"
-	damage = 25
+	damage = 30
 	armour_penetration = 50
 	wound_bonus = -30

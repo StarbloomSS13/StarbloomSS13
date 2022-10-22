@@ -380,9 +380,15 @@
 
 /obj/item/clothing/suit/armor/vest/homeguard
 	name = "home guard jacket"
-	desc = "A military jacket of shaky construction used by the Home Guard. Steel plates have been attached to it, offering a small measure of protection."
+	desc = "A military jacket used by the Home Guard. Steel plates have been attached to it, It's Class II armor, offering good protection against projectiles."
 	icon_state = "suit_homeguard"
-	armor = list(MELEE = 15, BULLET = 20, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, FIRE = 20, ACID = 50, WOUND = 10)
+
+/obj/item/clothing/suit/armor/vest/royalguard
+	name = "royal guard jacket"
+	desc = "A fancy jacket used by the Unity's Royal Guard. It's Class III armor, offering very robust protection against projectiles."
+	icon = 'icons/mob/clothing/suit.dmi'
+	icon_state = "royalguard"
+	armor = list(MELEE = 15, BULLET = 70, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, FIRE = 50, ACID = 50, WOUND = 20)
 
 /obj/item/clothing/suit/armor/vest/improvised
 	name = "improvised ballistic firesuit"
