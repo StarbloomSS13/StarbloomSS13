@@ -49,10 +49,10 @@
 //Temporarily Unity
 #define JOB_SECURITY_OFFICER "Home Guard Officer"
 //Temporarily Unity
-#define JOB_SECURITY_OFFICER_MEDICAL "Security Officer (Medical)"
-#define JOB_SECURITY_OFFICER_ENGINEERING "Security Officer (Engineering)"
-#define JOB_SECURITY_OFFICER_SCIENCE "Security Officer (Science)"
-#define JOB_SECURITY_OFFICER_SUPPLY "Security Officer (Cargo)"
+#define JOB_SECURITY_OFFICER_MEDICAL "Home Guard Officer (Medical)"
+#define JOB_SECURITY_OFFICER_ENGINEERING "Home Guard Officer (Engineering)"
+#define JOB_SECURITY_OFFICER_SCIENCE "Home Guard Officer (Science)"
+#define JOB_SECURITY_OFFICER_SUPPLY "Home Guard Officer (Cargo)"
 //Engineering
 #define JOB_STATION_ENGINEER "Station Engineer"
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
