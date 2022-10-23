@@ -247,7 +247,7 @@
 
 /obj/item/clothing/accessory/medal/gold/captain
 	name = "Exarch's Right medal"
-	desc = "A golden medal awarded exclusively to those promoted to the rank of Exarch. It signifies the codified responsibilities of a Exarch to the Unity, and their undisputable authority over their crew."
+	desc = "A golden medal awarded exclusively to those promoted to the rank of Exarch. It signifies the codified responsibilities of an Exarch to the Unity, and their undisputable authority over their crew."
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
 /obj/item/clothing/accessory/medal/gold/heroism
