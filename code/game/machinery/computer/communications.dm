@@ -415,7 +415,7 @@
 		// Request codes for the Captain's Spare ID safe.
 		if("requestSafeCodes")
 			if(SSjob.assigned_captain)
-				to_chat(usr, span_warning("There is already an assigned Captain or Acting Captain on deck!"))
+				to_chat(usr, span_warning("There is already an assigned Exarch or Acting Exarch on deck!"))
 				return
 
 			if(SSjob.safe_code_timer_id)

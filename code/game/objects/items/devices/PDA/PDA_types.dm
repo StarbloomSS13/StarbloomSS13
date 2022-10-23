@@ -122,7 +122,7 @@
 	greyscale_colors = "#789876#a92323"
 
 /obj/item/pda/heads/hop
-	name = "head of personnel PDA"
+	name = "seneschal PDA"
 	default_cartridge = /obj/item/cartridge/hop
 
 /obj/item/pda/heads/hos

@@ -58,7 +58,7 @@
 
 // Captain
 /obj/item/clothing/suit/hooded/wintercoat/captain
-	name = "captain's winter coat"
+	name = "exarch's winter coat"
 	desc = "A luxurious winter coat, stuffed with the down of the endangered Uka bird and trimmed with genuine sable. The fabric is an indulgently soft micro-fiber, \
 			and the deep ultramarine colour is only one that could be achieved with minute amounts of crystalline bluespace dust woven into the thread between the plectrums. \
 			Extremely lavish, and extremely durable."
@@ -77,7 +77,7 @@
 
 // Head of Personnel
 /obj/item/clothing/suit/hooded/wintercoat/hop
-	name = "head of personnel's winter coat"
+	name = "seneschal's winter coat"
 	desc = "A cozy winter coat, covered in thick fur. The breast features a proud yellow chevron, reminding everyone that you're the second banana."
 	icon_state = "coathop"
 	inhand_icon_state = "coathop"

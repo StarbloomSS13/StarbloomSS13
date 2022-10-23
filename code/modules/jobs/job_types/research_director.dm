@@ -47,7 +47,7 @@
 
 
 /datum/job/research_director/get_captaincy_announcement(mob/living/captain)
-	return "Due to staffing shortages, newly promoted Acting Captain [captain.real_name] on deck!"
+	return "Due to staffing shortages, newly promoted Acting Exarch [captain.real_name] on deck!"
 
 
 /datum/outfit/job/rd
