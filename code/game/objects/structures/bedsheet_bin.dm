@@ -139,11 +139,11 @@ LINEN BINS
 	dream_messages = list("authority", "a golden ID", "sunglasses", "a green disc", "an antique gun", "the captain")
 
 /obj/item/bedsheet/rd
-	name = "research director's bedsheet"
+	name = "chiron research overseer's bedsheet"
 	desc = "It appears to have a beaker emblem, and is made out of fire-resistant material, although it probably won't protect you in the event of fires you're familiar with every day."
 	icon_state = "sheetrd"
 	inhand_icon_state = "sheetrd"
-	dream_messages = list("authority", "a silvery ID", "a bomb", "a mech", "a facehugger", "maniacal laughter", "the research director")
+	dream_messages = list("authority", "a silvery ID", "a bomb", "a mech", "a facehugger", "maniacal laughter", "the chiron research overseer")
 
 /obj/item/bedsheet/medical
 	name = "medical blanket"

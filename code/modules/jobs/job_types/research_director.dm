@@ -76,7 +76,7 @@
 	skillchips = list(/obj/item/skillchip/job/research_director)
 
 /datum/outfit/job/rd/mod
-	name = "Research Director (MODsuit)"
+	name = "Chiron Research Overseer (MODsuit)"
 
 	suit_store = /obj/item/tank/internals/oxygen
 	back = /obj/item/mod/control/pre_equipped/research

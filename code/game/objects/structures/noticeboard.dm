@@ -139,8 +139,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/noticeboard, 32)
 	req_access = list(ACCESS_CMO)
 
 /obj/structure/noticeboard/rd
-	name = "Research Director's Notice Board"
-	desc = "Important notices from the Research Director."
+	name = "Chiron Research Overseer's Notice Board"
+	desc = "Important notices from the Chiron Research Overseer."
 	req_access = list(ACCESS_RD)
 
 /obj/structure/noticeboard/qm

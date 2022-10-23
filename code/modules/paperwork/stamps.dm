@@ -48,7 +48,7 @@
 	dye_color = DYE_CE
 
 /obj/item/stamp/rd
-	name = "research director's rubber stamp"
+	name = "chiron research overseer's rubber stamp"
 	icon_state = "stamp-rd"
 	dye_color = DYE_RD
 

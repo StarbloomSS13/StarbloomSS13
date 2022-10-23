@@ -35,7 +35,7 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/neck/cloak/rd
-	name = "research director's cloak"
+	name = "chiron research overseer's cloak"
 	desc = "Worn by Sciencia, thaumaturges and researchers of the universe."
 	icon_state = "rdcloak"
 
