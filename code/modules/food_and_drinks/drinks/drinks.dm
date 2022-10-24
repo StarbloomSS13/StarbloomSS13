@@ -602,8 +602,8 @@
 	isGlass = FALSE
 
 /obj/item/reagent_containers/food/drinks/flask/gold
-	name = "captain's flask"
-	desc = "A gold flask belonging to the captain."
+	name = "exarch's flask"
+	desc = "A gold flask belonging to the Exarch."
 	icon_state = "flask_gold"
 	custom_materials = list(/datum/material/gold=500)
 

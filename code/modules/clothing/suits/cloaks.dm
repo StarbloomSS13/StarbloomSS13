@@ -41,7 +41,7 @@
 
 /obj/item/clothing/neck/cloak/cap
 	name = "exarch's cloak"
-	desc = "Worn by the commander of Space Station 13."
+	desc = "Worn by the leader of the Upper Decks."
 	icon_state = "capcloak"
 
 /obj/item/clothing/neck/cloak/hop

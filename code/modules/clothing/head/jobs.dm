@@ -53,7 +53,7 @@
 //Captain: This is no longer space-worthy
 /obj/item/clothing/head/caphat/parade
 	name = "exarch's parade cap"
-	desc = "Worn only by Captains with an abundance of class."
+	desc = "Worn only by Exarchs with an abundance of class."
 	icon_state = "capcap"
 
 	dog_fashion = null
