@@ -71,7 +71,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 /obj/machinery/atmospherics/components/trinary/nuclear_reactor
 	name = "Advanced Gas-Cooled Nuclear Reactor"
 	desc = "A tried and tested design which can output stable power at an acceptably low risk. The moderator can be changed to provide different effects."
-	icon = 'austation/icons/obj/machinery/rbmk.dmi'
+	icon = 'icons/obj/machines/rbmk.dmi'
 	icon_state = "reactor_map"
 	pixel_x = -32
 	pixel_y = -32
@@ -164,7 +164,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 			playsound(src, 'sound/effects/spray2.ogg', 50, 1, -6)
 			user.visible_message("<span class='warning'>[user] applies sealant to some of [src]'s worn out seals.</span>", "<span class='notice'>You apply sealant to some of [src]'s worn out seals.</span>")
 			vessel_integrity += 10
-			vessel_integrity = CLAMP(vessel_integrity, 0, initial(vessel_integrity))
+			vessel_integrity = clamp(vessel_integrity, 0, initial(vessel_integrity))
 		return TRUE
 
 /obj/machinery/atmospherics/components/trinary/nuclear_reactor/welder_act(mob/living/user, obj/item/I)
@@ -198,12 +198,13 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	gas_absorption_effectiveness = rand(5, 6)/10 //All reactors are slightly different. This will result in you having to figure out what the balance is for K.
 	gas_absorption_constant = gas_absorption_effectiveness //And set this up for the rest of the round.
 	STOP_PROCESSING(SSmachines, src) //We'll handle this one ourselves.
-
+/*
 /obj/machinery/atmospherics/components/trinary/nuclear_reactor/Crossed(atom/movable/AM, oldloc)
 	. = ..()
 	if(isliving(AM) && temperature > 0)
 		var/mob/living/L = AM
-		L.adjust_bodytemperature(CLAMP(temperature, BODYTEMP_COOLING_MAX, BODYTEMP_HEATING_MAX)) //If you're on fire, you heat up!
+		L.adjust_bodytemperature(clamp(temperature, BODYTEMP_COOLING_MAX, BODYTEMP_HEATING_MAX)) //If you're on fire, you heat up!
+*/ //fix this -VivI
 
 /obj/machinery/atmospherics/components/trinary/nuclear_reactor/process()
 	update_parents() //Update the pipenet to register new gas mixes
@@ -229,7 +230,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 		last_heat_delta = heat_delta
 		temperature += heat_delta
 		coolant_output.merge(coolant_input) //And now, shove the input into the output.
-		coolant_input.clear() //Clear out anything left in the input gate.
+		coolant_input.remove() //Clear out anything left in the input gate.
 		color = null
 	else
 		if(has_fuel())
@@ -238,7 +239,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 			take_damage(10) //Just for the sound effect, to let you know you've fucked up.
 			color = "[COLOR_RED]"
 	//Now, heat up the output and set our pressure.
-	coolant_output.set_temperature(CELSIUS_TO_KELVIN(temperature)) //Heat the coolant output gas that we just had pass through us.
+	coolant_output.temperature = CELSIUS_TO_KELVIN(temperature) //Heat the coolant output gas that we just had pass through us.
 	last_output_temperature = KELVIN_TO_CELSIUS(coolant_output.return_temperature())
 	pressure = KPA_TO_PSI(coolant_output.return_pressure())
 	power = (temperature / RBMK_TEMPERATURE_CRITICAL) * 100
@@ -247,38 +248,38 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	gas_absorption_effectiveness = gas_absorption_constant
 	//Next up, handle moderators!
 	if(moderator_input.total_moles() >= minimum_coolant_level)
-		var/total_fuel_moles = moderator_input.get_moles(/datum/gas/plasma) + (moderator_input.get_moles(/datum/gas/tritium)*10) //Constricted plasma is 50% more efficient as fuel than plasma, but is harder to produce
-		var/power_modifier = max((moderator_input.get_moles(/datum/gas/oxygen) / moderator_input.total_moles() * 10), 1) //You can never have negative IPM. For now.
+		var/total_fuel_moles = moderator_input.total_moles(/datum/gas/plasma) + (moderator_input.total_moles(/datum/gas/tritium)*10) //Constricted plasma is 50% more efficient as fuel than plasma, but is harder to produce
+		var/power_modifier = max((moderator_input.total_moles(/datum/gas/oxygen) / moderator_input.total_moles() * 10), 1) //You can never have negative IPM. For now.
 		if(total_fuel_moles >= minimum_coolant_level) //You at least need SOME fuel.
 			var/power_produced = max((total_fuel_moles / moderator_input.total_moles() * 10), 1)
 			last_power_produced = max(0,((power_produced*power_modifier)*moderator_input.total_moles()))
 			last_power_produced *= (power/100) //Aaaand here comes the cap. Hotter reactor => more power.
 			last_power_produced *= base_power_modifier //Finally, we turn it into actual usable numbers.
-			radioactivity_spice_multiplier += moderator_input.get_moles(/datum/gas/tritium) / 5 //Chernobyl 2.
+			radioactivity_spice_multiplier += moderator_input.total_moles(/datum/gas/tritium) / 5 //Chernobyl 2.
 			var/turf/T = get_turf(src)
 			if(power >= 20)
-				coolant_output.adjust_moles(/datum/gas/nitryl, total_fuel_moles/50) //Shove out nitryl into the air when it's fuelled. You need to filter this off, or you're gonna have a bad time.
+				coolant_output.gases[/datum/gas/helium] += total_fuel_moles/50 //Shove out helium into the air when it's fuelled. You need to filter this off, or you're gonna have a bad time.
 			var/obj/structure/cable/C = T.get_cable_node()
 			if(!C || !C.powernet)
 				return
 			else
 				C.powernet.newavail += last_power_produced
-		var/total_control_moles = moderator_input.get_moles(/datum/gas/nitrogen) + (moderator_input.get_moles(/datum/gas/carbon_dioxide)*2) + (moderator_input.get_moles(/datum/gas/pluoxium)*3) //N2 helps you control the reaction at the cost of making it absolutely blast you with rads. Pluoxium has the same effect but without the rads!
+		var/total_control_moles = moderator_input.total_moles(/datum/gas/nitrogen) + (moderator_input.total_moles(/datum/gas/carbon_dioxide)*2) + (moderator_input.total_moles(/datum/gas/pluoxium)*3) //N2 helps you control the reaction at the cost of making it absolutely blast you with rads. Pluoxium has the same effect but without the rads!
 		if(total_control_moles >= minimum_coolant_level)
 			var/control_bonus = total_control_moles / 250 //1 mol of n2 -> 0.002 bonus control rod effectiveness, if you want a super controlled reaction, you'll have to sacrifice some power.
 			control_rod_effectiveness = initial(control_rod_effectiveness) + control_bonus
-			radioactivity_spice_multiplier += moderator_input.get_moles(/datum/gas/nitrogen) / 25 //An example setup of 50 moles of n2 (for dealing with spent fuel) leaves us with a radioactivity spice multiplier of 3.
-			radioactivity_spice_multiplier += moderator_input.get_moles(/datum/gas/carbon_dioxide) / 12.5
-		var/total_permeability_moles = moderator_input.get_moles(/datum/gas/bz) + (moderator_input.get_moles(/datum/gas/water_vapor)*2) + (moderator_input.get_moles(/datum/gas/hypernoblium)*10)
+			radioactivity_spice_multiplier += moderator_input.total_moles(/datum/gas/nitrogen) / 25 //An example setup of 50 moles of n2 (for dealing with spent fuel) leaves us with a radioactivity spice multiplier of 3.
+			radioactivity_spice_multiplier += moderator_input.total_moles(/datum/gas/carbon_dioxide) / 12.5
+		var/total_permeability_moles = moderator_input.total_moles(/datum/gas/bz) + (moderator_input.total_moles(/datum/gas/water_vapor)*2) + (moderator_input.total_moles(/datum/gas/hypernoblium)*10)
 		if(total_permeability_moles >= minimum_coolant_level)
 			var/permeability_bonus = total_permeability_moles / 500
 			gas_absorption_effectiveness = gas_absorption_constant + permeability_bonus
-		var/total_degradation_moles = moderator_input.get_moles(/datum/gas/nitryl) //Because it's quite hard to get.
+		var/total_degradation_moles = moderator_input.total_moles(/datum/gas/helium) //Because it's quite hard to get.
 		if(total_degradation_moles >= minimum_coolant_level*0.5) //I'll be nice.
 			depletion_modifier += total_degradation_moles / 15 //Oops! All depletion. This causes your fuel rods to get SPICY.
 			playsound(src, pick('sound/machines/sm/accent/normal/1.ogg','sound/machines/sm/accent/normal/2.ogg','sound/machines/sm/accent/normal/3.ogg','sound/machines/sm/accent/normal/4.ogg','sound/machines/sm/accent/normal/5.ogg'), 100, TRUE)
 		//From this point onwards, we clear out the remaining gasses.
-		moderator_input.clear() //Woosh. And the soul is gone.
+		moderator_input.remove() //Woosh. And the soul is gone.
 		K += total_fuel_moles / 1000
 	var/fuel_power = 0 //So that you can't magically generate K with your control rods.
 	if(!has_fuel())  //Reactor must be fuelled and ready to go before we can heat it up boys.
@@ -291,7 +292,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	//Firstly, find the difference between the two numbers.
 	var/difference = abs(K - desired_k)
 	//Then, hit as much of that goal with our cooling per tick as we possibly can.
-	difference = CLAMP(difference, 0, control_rod_effectiveness) //And we can't instantly zap the K to what we want, so let's zap as much of it as we can manage....
+	difference = clamp(difference, 0, control_rod_effectiveness) //And we can't instantly zap the K to what we want, so let's zap as much of it as we can manage....
 	if(difference > fuel_power && desired_k > K)
 		message_admins("Not enough fuel to get [difference]. We have fuel [fuel_power]")
 		difference = fuel_power //Again, to stop you being able to run off of 1 fuel rod.
@@ -301,7 +302,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 		else if(desired_k < K)
 			K -= difference
 
-	K = CLAMP(K, 0, RBMK_MAX_CRITICALITY)
+	K = clamp(K, 0, RBMK_MAX_CRITICALITY)
 	if(has_fuel())
 		temperature += K
 	else
@@ -318,7 +319,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 		if(isliving(I))
 			var/mob/living/L = I
 			if(temperature > 0)
-				L.adjust_bodytemperature(CLAMP(temperature, BODYTEMP_COOLING_MAX, BODYTEMP_HEATING_MAX)) //If you're on fire, you heat up!
+				L.adjust_bodytemperature(clamp(temperature, BODYTEMP_COOLING_MAX, BODYTEMP_HEATING_MAX)) //If you're on fire, you heat up!
 		if(istype(I, /obj/item/reagent_containers/food) && !istype(I, /obj/item/reagent_containers/food/drinks))
 			playsound(src, pick('sound/machines/fryer/deep_fryer_1.ogg', 'sound/machines/fryer/deep_fryer_2.ogg'), 100, TRUE)
 			var/obj/item/reagent_containers/food/grilled_item = I
@@ -409,9 +410,9 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 			return
 		next_warning = world.time + 30 SECONDS //To avoid engis pissing people off when reaaaally trying to stop the meltdown or whatever.
 		warning = TRUE //Start warning the crew of the imminent danger.
-		relay('austation/sound/effects/rbmk/alarm.ogg', null, loop=TRUE, channel = CHANNEL_REACTOR_ALERT)
+		relay('sound/effects/rbmk/alarm.ogg', null, loop=TRUE, channel = CHANNEL_REACTOR_ALERT)
 		set_light(0)
-		light_color = LIGHT_COLOR_RED
+		light_color = "#cc1717"
 		set_light(10)
 
 //Failure condition 1: Meltdown. Achieved by having heat go over tolerances. This is less devastating because it's easier to achieve.
@@ -423,9 +424,9 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	update_icon()
 	STOP_PROCESSING(SSmachines, src)
 	icon_state = "reactor_slagged"
-	AddComponent(/datum/component/radioactive, 15000 , src)
+	AddComponent(/datum/component/irradiated, 15000 , src)
 	var/obj/effect/landmark/nuclear_waste_spawner/NSW = new /obj/effect/landmark/nuclear_waste_spawner/strong(get_turf(src))
-	relay('austation/sound/effects/rbmk/meltdown.ogg', "<span class='userdanger'>You hear a horrible metallic hissing.</span>")
+	relay('sound/effects/rbmk/meltdown.ogg', "<span class='userdanger'>You hear a horrible metallic hissing.</span>")
 	stop_relay(CHANNEL_REACTOR_ALERT)
 	NSW.fire() //This will take out engineering for a decent amount of time as they have to clean up the sludge.
 	for(var/obj/machinery/power/apc/apc in GLOB.apcs_list)
@@ -435,9 +436,9 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	var/datum/gas_mixture/moderator_input = MODERATOR_INPUT_GATE
 	var/datum/gas_mixture/coolant_output = COOLANT_OUTPUT_GATE
 	var/turf/T = get_turf(src)
-	coolant_input.set_temperature(CELSIUS_TO_KELVIN(temperature)*2)
-	moderator_input.set_temperature(CELSIUS_TO_KELVIN(temperature)*2)
-	coolant_output.set_temperature(CELSIUS_TO_KELVIN(temperature)*2)
+	coolant_input.temperature = CELSIUS_TO_KELVIN(temperature)*2
+	moderator_input.temperature = CELSIUS_TO_KELVIN(temperature)*2
+	coolant_output.temperature = CELSIUS_TO_KELVIN(temperature)*2
 	T.assume_air(coolant_input)
 	T.assume_air(moderator_input)
 	T.assume_air(coolant_output)
@@ -480,7 +481,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	START_PROCESSING(SSmachines, src)
 	desired_k = 1
 	set_light(10)
-	var/startup_sound = pick('austation/sound/effects/ship/reactor/startup.ogg', 'austation/sound/effects/ship/reactor/startup2.ogg')
+	var/startup_sound = pick('sound/effects/ship/reactor/startup.ogg', 'sound/effects/ship/reactor/startup2.ogg')
 	playsound(loc, startup_sound, 100)
 
 //Shuts off the fuel rods, ambience, etc. Keep in mind that your temperature may still go up!
@@ -495,7 +496,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 /obj/item/twohanded/required/fuel_rod
 	name = "Uranium-238 Fuel Rod"
 	desc = "A titanium sheathed rod containing a measure of enriched uranium-dioxide powder, used to kick off a fission reaction."
-	icon = 'austation/icons/obj/control_rod.dmi'
+	icon = 'icons/obj/control_rod.dmi'
 	icon_state = "irradiated"
 	w_class = WEIGHT_CLASS_BULKY
 	var/depletion = 0 //Each fuel rod will deplete in around 30 minutes.
@@ -508,20 +509,20 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 		name = "Plutonium-239 Fuel Rod"
 		desc = "A highly energetic titanium sheathed rod containing a sizeable measure of weapons grade uranium, it's highly efficient as nuclear fuel, but will cause the reaction to get out of control if not properly utilised."
 		icon_state = "inferior"
-		AddComponent(/datum/component/radioactive, 1500 , src)
+		AddComponent(/datum/component/irradiated, 1500 , src)
 	else
 		fuel_power = 0.10
 
 /obj/item/twohanded/required/fuel_rod/Initialize()
 	.=..()
-	AddComponent(/datum/component/radioactive, 350 , src)
+	AddComponent(/datum/component/irradiated, 350 , src)
 
 //Controlling the reactor.
 
 /obj/machinery/computer/reactor
 	name = "Reactor control console"
 	desc = "Scream"
-	icon = 'austation/icons/obj/computer.dmi'
+	icon = 'icons/obj/computerau.dmi'
 	icon_state = "oldcomp"
 	icon_screen = "library"
 	icon_keyboard = null
@@ -563,7 +564,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 		return
 	if(action == "input")
 		var/input = text2num(params["target"])
-		reactor.desired_k = CLAMP(input, 0, 3)
+		reactor.desired_k = clamp(input, 0, 3)
 
 /obj/machinery/computer/reactor/control_rods/ui_data(mob/user)
 	var/list/data = list()
@@ -642,8 +643,8 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	var/atom/movable/fuel_rod = input(usr, "Select a fuel rod to remove", "[src]", null) as null|anything in reactor.fuel_rods
 	if(!fuel_rod)
 		return
-	playsound(src, pick('austation/sound/effects/rbmk/switch.ogg','austation/sound/effects/rbmk/switch2.ogg','austation/sound/effects/rbmk/switch3.ogg'), 100, FALSE)
-	playsound(reactor, 'austation/sound/effects/ship/freespace2/crane_1.wav', 100, FALSE)
+	playsound(src, pick('sound/effects/rbmk/switch.ogg','sound/effects/rbmk/switch2.ogg','sound/effects/rbmk/switch3.ogg'), 100, FALSE)
+	playsound(reactor, 'sound/effects/ship/freespace2/crane_1.wav', 100, FALSE)
 	fuel_rod.forceMove(get_turf(reactor))
 	reactor.fuel_rods -= fuel_rod
 
@@ -685,9 +686,9 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 
 /obj/machinery/computer/reactor/pump/attack_hand(mob/living/user)
 	. = ..()
-	if(!is_operational())
-		return FALSE
-	playsound(loc, pick('austation/sound/effects/rbmk/switch.ogg','austation/sound/effects/rbmk/switch2.ogg','austation/sound/effects/rbmk/switch3.ogg'), 100, FALSE)
+	//if(!is_operational())
+	//	return FALSE
+	playsound(loc, pick('sound/effects/rbmk/switch.ogg','sound/effects/rbmk/switch2.ogg','sound/effects/rbmk/switch3.ogg'), 100, FALSE)
 	visible_message("<span class='notice'>[src]'s switch flips [on ? "off" : "on"].</span>")
 	on = !on
 	signal(on)
@@ -742,11 +743,11 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	extended_desc = "This program connects to specially calibrated sensors to provide information on the status of nuclear reactors."
 	requires_ntnet = TRUE
 	transfer_access = ACCESS_CONSTRUCTION
-	network_destination = "rbmk monitoring system"
+	//network_destination = "rbmk monitoring system"
 	size = 2
 	tgui_id = "NtosRbmkStats"
-	ui_x = 350
-	ui_y = 550
+	var/ui_x = 350
+	var/ui_y = 550
 	var/active = TRUE //Easy process throttle
 	var/next_stat_interval = 0
 	var/list/psiData = list()
@@ -839,7 +840,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 /obj/effect/decal/nuclear_waste
 	name = "Plutonium sludge"
 	desc = "A writhing pool of heavily irradiated, spent reactor fuel. You probably shouldn't step through this..."
-	icon = 'austation/icons/obj/machinery/reactor_parts.dmi'
+	icon = 'icons/obj/machines/reactor_parts.dmi'
 	icon_state = "nuclearwaste"
 	alpha = 150
 	light_color = LIGHT_COLOR_CYAN
@@ -869,14 +870,15 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 
 /obj/effect/decal/nuclear_waste/epicenter/Initialize()
 	. = ..()
-	AddComponent(/datum/component/radioactive, 1500, src, 0)
-
+	AddComponent(/datum/component/irradiated, 1500, src, 0)
+/*
 /obj/effect/decal/nuclear_waste/Crossed(atom/movable/AM)
 	. = ..()
 	if(isliving(AM))
 		var/mob/living/L = AM
 		playsound(loc, 'sound/effects/gib_step.ogg', HAS_TRAIT(L, TRAIT_LIGHT_STEP) ? 20 : 50, 1)
 	radiation_pulse(src, 500, 5) //MORE RADS
+*/  //decals arent movable atoms
 
 /obj/effect/decal/nuclear_waste/attackby(obj/item/tool, mob/user)
 	if(tool.tool_behaviour == TOOL_SHOVEL)
@@ -900,17 +902,17 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	weather_duration_upper = 1500
 	weather_color = "green"
 	telegraph_sound = null
-	weather_sound = 'austation/sound/effects/ship/reactor/falloutwind.ogg'
+	weather_sound = 'sound/effects/ship/reactor/falloutwind.ogg'
 	end_duration = 100
 	area_type = /area
 	protected_areas = list(/area/maintenance, /area/ai_monitored/turret_protected/ai_upload, /area/ai_monitored/turret_protected/ai_upload_foyer,
-	/area/ai_monitored/turret_protected/ai, /area/storage/emergency/starboard, /area/storage/emergency/port, /area/shuttle)
+	/area/ai_monitored/turret_protected/ai, /area/shuttle) //add shelter areas to this -VivI
 	target_trait = ZTRAIT_STATION
 	end_message = "<span class='notice'>The ash stops falling.</span>"
 	immunity_type = "rad"
 
 /datum/weather/nuclear_fallout/weather_act(mob/living/L)
-	L.rad_act(100)
+	//L.rad_act(100)
 
 /datum/weather/nuclear_fallout/telegraph()
 	..()
@@ -939,7 +941,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 /obj/item/sealant
 	name = "Flexi seal"
 	desc = "A neat spray can that can repair torn inflatable segments, and more!"
-	icon = 'austation/icons/obj/inflatable.dmi'
+	icon = 'icons/obj/inflatable.dmi'
 	icon_state = "sealant"
 	w_class = 1
 
