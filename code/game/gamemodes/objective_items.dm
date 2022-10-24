@@ -135,7 +135,7 @@
 
 // High risk steal objectives
 /datum/objective_item/steal/caplaser
-	name = "the captain's antique laser gun"
+	name = "the exarch's antique laser gun"
 	targetitem = /obj/item/gun/energy/laser/captain
 	difficulty = 5
 	excludefromjob = list(JOB_CAPTAIN)
@@ -368,7 +368,7 @@
 
 //Old ninja objectives.
 /datum/objective_item/special/pinpointer
-	name = "the captain's pinpointer"
+	name = "the exarch's pinpointer"
 	targetitem = /obj/item/pinpointer/nuke
 	difficulty = 10
 	exists_on_map = TRUE

@@ -679,16 +679,7 @@
 
 /datum/mod_theme/magnate
 	name = "magnate"
-	desc = "A fancy, very protective suit for Nanotrasen's captains. Shock, fire and acid-proof while also having a large capacity and high speed."
-	extended_desc = "They say it costs four hundred thousand credits to run this MODsuit... for twelve seconds. \
-		The Magnate suit is designed for protection, comfort, and luxury for Nanotrasen Captains. \
-		The onboard air filters have been preprogrammed with an additional five hundred different fragrances that can \
-		be pumped into the helmet, all of highly-endangered flowers. A bespoke Tralex mechanical clock has been placed \
-		in the wrist, and the Magnate package comes with carbon-fibre cufflinks to wear underneath. \
-		My God, it even has a granite trim. The double-classified paint that's been painstakingly applied to the hull \
-		provides protection against shock, fire, and the strongest acids. Onboard systems employ meta-positronic learning \
-		and bluespace processing to allow for a wide array of onboard modules to be supported, and only the best actuators \
-		have been employed for speed. The resemblance to a Gorlex Marauder helmet is purely coincidental."
+	desc = "A fancy, very protective suit for the Exarch. Shock, fire and acid-proof while also having a large capacity and high speed."
 	default_skin = "magnate"
 	armor = list(MELEE = 20, BULLET = 15, LASER = 15, ENERGY = 15, BOMB = 50, BIO = 100, FIRE = 100, ACID = 100, WOUND = 15)
 	resistance_flags = FIRE_PROOF|ACID_PROOF

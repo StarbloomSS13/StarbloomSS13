@@ -8,7 +8,7 @@
 
 /obj/item/storage/bag/garment/captain
 	name = "exarch's garment bag"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the captain."
+	desc = "A bag for storing extra clothes and shoes. This one belongs to the exarch."
 
 /obj/item/storage/bag/garment/hos
 	name = "justiciar's garment bag"

@@ -28,7 +28,7 @@
 	dye_color = DYE_LAW
 
 /obj/item/stamp/captain
-	name = "captain's rubber stamp"
+	name = "exarch's rubber stamp"
 	icon_state = "stamp-cap"
 	dye_color = DYE_CAPTAIN
 

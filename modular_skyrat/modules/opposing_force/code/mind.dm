@@ -22,3 +22,4 @@
 		mind.opposing_force = opposing_force
 		SSopposing_force.new_opfor(opposing_force)
 	mind.opposing_force.ui_interact(usr)
+
