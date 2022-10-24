@@ -47,7 +47,7 @@
 
 
 /datum/job/research_director/get_captaincy_announcement(mob/living/captain)
-	return "Due to staffing shortages, newly promoted Acting Captain [captain.real_name] on deck!"
+	return "Due to staffing shortages, newly promoted Acting Exarch [captain.real_name] on deck!"
 
 
 /datum/outfit/job/rd
@@ -76,7 +76,7 @@
 	skillchips = list(/obj/item/skillchip/job/research_director)
 
 /datum/outfit/job/rd/mod
-	name = "Research Director (MODsuit)"
+	name = "Chiron Research Overseer (MODsuit)"
 
 	suit_store = /obj/item/tank/internals/oxygen
 	back = /obj/item/mod/control/pre_equipped/research

@@ -309,7 +309,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/security/telescreen/entertai
 		icon_state = icon_state_off
 
 /obj/machinery/computer/security/telescreen/rd
-	name = "\improper Research Director's telescreen"
+	name = "\improper Chiron Research Overseer's telescreen"
 	desc = "Used for watching the AI and the RD's goons from the safety of his office."
 	network = list("rd", "aicore", "aiupload", "minisat", "xeno", "test", "toxins")
 

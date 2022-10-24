@@ -264,6 +264,7 @@
 	fire_sound = 'sound/weapons/magrifle.ogg'
 	icon_state = "gravitas"
 	inhand_icon_state = "moistnugget"
+	worn_icon = 'icons/mob/clothing/back.dmi'
 	worn_icon_state = "gravitas"
 	can_suppress = FALSE
 	w_class = WEIGHT_CLASS_BULKY

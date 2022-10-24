@@ -240,7 +240,7 @@ Transponder Codes:<UL>"}
 	location = "Bridge"
 
 /obj/machinery/navbeacon/wayfinding/hop
-	location = "Head of Personnel's Office"
+	location = "Seneschal's Office"
 
 /obj/machinery/navbeacon/wayfinding/vault
 	location = "Vault"

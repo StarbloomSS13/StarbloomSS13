@@ -165,7 +165,7 @@
 	ADD_STEAL_ITEM(src, /obj/item/hand_tele)
 
 /datum/objective_item/steal/jetpack
-	name = "the Captain's jetpack"
+	name = "the Exarch's jetpack"
 	targetitem = /obj/item/tank/jetpack/oxygen/captain
 	difficulty = 5
 	excludefromjob = list(JOB_CAPTAIN)

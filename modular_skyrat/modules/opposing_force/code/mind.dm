@@ -7,7 +7,7 @@
 
 /mob/verb/opposing_force()
 	set name = "Opposing Force"
-	set category = "OOC"
+	set category = "Admin"
 	set desc = "View your opposing force panel, or request one."
 	// Mind checks
 	if(!mind)

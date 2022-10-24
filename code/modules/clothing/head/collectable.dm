@@ -43,7 +43,7 @@
 	inhand_icon_state = "that"
 
 /obj/item/clothing/head/collectable/captain
-	name = "collectable captain's hat"
+	name = "collectable exarch's hat"
 	desc = "A collectable hat that'll make you look just like a real comdom!"
 	icon_state = "captain"
 	inhand_icon_state = "caphat"
