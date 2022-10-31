@@ -276,7 +276,7 @@
 //////////////////////////////////////////////////////////////////////////////
 
 /datum/supply_pack/security
-	group = "Blue Alert Materiel and supplies"
+	group = CARGO_PACK_BLUEALERT
 	access = ACCESS_SECURITY
 	access_view = ACCESS_SECURITY
 	crate_type = /obj/structure/closet/crate/secure/gear
@@ -471,7 +471,7 @@
 //////////////////////////// Red Alert Materiel and Supplies //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 /datum/supply_pack/security/armory
-	group = "Red Alert Materiel and Supplies"
+	group = CARGO_PACK_REDALERT
 	access = ACCESS_ARMORY
 	access_view = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
