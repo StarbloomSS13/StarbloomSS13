@@ -72,7 +72,7 @@
 	metabolization_rate = 0.125 * REAGENTS_METABOLISM
 	ph = 8
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	addiction_types = list(/datum/addiction/nicotine = 18) // 7.2 per 2 seconds
+	addiction_types = list(/datum/addiction/nicotine = 14) // 5.6 per 2 seconds | This was previously set to 18. Math seemed to be Rating/2.5 = Points per 2 seconds. I've updated that number but honestly I could be wrong this shit is wild - Soal
 
 	//Nicotine is used as a pesticide IRL.
 /datum/reagent/drug/nicotine/on_hydroponics_apply(obj/item/seeds/myseed, datum/reagents/chems, obj/machinery/hydroponics/mytray, mob/user)
