@@ -134,16 +134,8 @@
 	return ..()
 
 /datum/antagonist/traitor/proc/pick_employer()
-	var/faction = prob(75) ? FACTION_SYNDICATE : FACTION_NANOTRASEN
 	var/list/possible_employers = list()
-
-	possible_employers.Add(GLOB.syndicate_employers, GLOB.nanotrasen_employers)
-
-	switch(faction)
-		if(FACTION_SYNDICATE)
-			possible_employers -= GLOB.nanotrasen_employers
-		if(FACTION_NANOTRASEN)
-			possible_employers -= GLOB.syndicate_employers
+	possible_employers = GLOB.edict_employers
 	employer = pick(possible_employers)
 	traitor_flavor = strings(TRAITOR_FLAVOR_FILE, employer)
 
