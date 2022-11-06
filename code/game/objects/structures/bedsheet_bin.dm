@@ -153,11 +153,11 @@ LINEN BINS
 	dream_messages = list("healing", "life", "surgery", "a doctor")
 
 /obj/item/bedsheet/cmo
-	name = "chief medical officer's bedsheet"
+	name = "biolab overseer's bedsheet"
 	desc = "It's a sterilized blanket that has a cross emblem. There's some cat fur on it, likely from Runtime."
 	icon_state = "sheetcmo"
 	inhand_icon_state = "sheetcmo"
-	dream_messages = list("authority", "a silvery ID", "healing", "life", "surgery", "a cat", "the chief medical officer")
+	dream_messages = list("authority", "a silvery ID", "healing", "life", "surgery", "a cat", "the biolab overseer")
 
 /obj/item/bedsheet/hos
 	name = "justiciar's bedsheet"

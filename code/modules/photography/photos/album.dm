@@ -77,7 +77,7 @@
 	persistence_id = "Captain"
 
 /obj/item/storage/photo_album/cmo
-	name = "photo album (Chief Medical Officer)"
+	name = "photo album (Biolab Overseer)"
 	icon_state = "album_blue"
 	persistence_id = "CMO"
 

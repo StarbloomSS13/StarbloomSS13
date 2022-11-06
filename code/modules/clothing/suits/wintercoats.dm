@@ -190,9 +190,9 @@
 	icon_state = "hood_medical"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 40, FIRE = 10, ACID = 20)
 
-// Chief Medical Officer
+// Biolab Overseer
 /obj/item/clothing/suit/hooded/wintercoat/medical/cmo
-	name = "chief medical officer's winter coat"
+	name = "biolab overseer's winter coat"
 	desc = "A winter coat in a vibrant shade of blue with a small silver caduceus instead of a plastic zipper tab. The normal liner is replaced with an exceptionally thick, soft layer of fur."
 	icon_state = "coatcmo"
 	inhand_icon_state = "coatcmo"

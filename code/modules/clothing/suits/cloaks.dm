@@ -24,7 +24,7 @@
 	desc = "Worn by Cargonia, supplying the station with the necessary tools for survival."
 
 /obj/item/clothing/neck/cloak/cmo
-	name = "chief medical officer's cloak"
+	name = "biolab overseer's cloak"
 	desc = "Worn by Meditopia, the valiant men and women keeping pestilence at bay."
 	icon_state = "cmocloak"
 

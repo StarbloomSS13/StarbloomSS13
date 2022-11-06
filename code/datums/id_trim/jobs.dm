@@ -221,7 +221,7 @@
 
 /datum/id_trim/job/chief_medical_officer
 	assignment = "Chiron Biolab Overseer"
-	intern_alt_name = "Chief Medical Officer-in-Training"
+	intern_alt_name = "Biolab Overseer-in-Training"
 	trim_state = "trim_medicaldoctor"
 	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_MEDICAL_BLUE

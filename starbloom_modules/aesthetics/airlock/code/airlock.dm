@@ -499,7 +499,7 @@
 	airlock_type = /obj/machinery/door/airlock/hos
 
 /obj/structure/door_assembly/door_assembly_cmo
-	name = "chief medical officer airlock assembly"
+	name = "biolab overseer airlock assembly"
 	icon = 'starbloom_modules/aesthetics/airlock/icons/airlocks/cmo.dmi'
 	glass_type = /obj/machinery/door/airlock/cmo/glass
 	airlock_type = /obj/machinery/door/airlock/cmo
