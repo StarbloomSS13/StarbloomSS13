@@ -187,7 +187,7 @@ const CodewordsSection = (props, context) => {
       <Stack fill>
         {!has_codewords && (
           <BlockQuote>
-            You have not been supplied the Syndicate codewords.
+            You have not been supplied the Edict codewords.
             You will have to use alternative methods to find potential allies.
             Proceed with caution, however, as everyone is a potential foe.
           </BlockQuote>
@@ -195,7 +195,7 @@ const CodewordsSection = (props, context) => {
           <>
             <Stack.Item grow basis={0}>
               <BlockQuote>
-                The Syndicate have provided you with the following
+                The Edict have provided you with the following
                 codewords to identify fellow agents. Use the codewords
                 during regular conversation to identify other agents.
                 Proceed with caution, however, as everyone is a

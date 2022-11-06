@@ -174,10 +174,18 @@ GLOBAL_LIST_INIT(ai_employers, list(
 	"Unshackled",
 ))
 
+///jesus christ this code hurts my brain
+GLOBAL_LIST_INIT(edict_employers, list(
+	"The Last Edict",
+))
+
 ///all the employers that are syndicate
 #define FACTION_SYNDICATE "syndicate"
 ///all the employers that are nanotrasen
 #define FACTION_NANOTRASEN "nanotrasen"
+
+#define FACTION_EDICT "edict"
+#define UPLINK_THEME_EDICT "lastedict"
 
 #define UPLINK_THEME_SYNDICATE "syndicate"
 

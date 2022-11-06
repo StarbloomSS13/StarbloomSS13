@@ -9,7 +9,7 @@
 
 /datum/traitor_objective/final
 	abstract_type = /datum/traitor_objective/final
-	progression_minimum = 140 MINUTES
+	progression_minimum = 99999 MINUTES
 
 	var/progression_points_in_objectives = 20 MINUTES
 

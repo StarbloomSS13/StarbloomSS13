@@ -35,8 +35,8 @@
 	restricted = TRUE
 
 /datum/uplink_item/device_tools/syndietome
-	name = "Syndicate Tome"
-	desc = "Using rare artifacts acquired at great cost, the Syndicate has reverse engineered \
+	name = "Edict Tome"
+	desc = "Using rare artifacts acquired at great cost, the Edict has reverse engineered \
 			the seemingly magical books of a certain cult. Though lacking the esoteric abilities \
 			of the originals, these inferior copies are still quite useful, being able to provide \
 			both weal and woe on the battlefield, even if they do occasionally bite off a finger."

@@ -60,7 +60,7 @@
 
 /datum/uplink_item/ammo/revolver
 	name = ".357 Speed Loader"
-	desc = "A speed loader that contains seven additional .357 Magnum rounds; usable with the Syndicate revolver. \
+	desc = "A speed loader that contains seven additional .357 Magnum rounds; usable with the Edict revolver. \
 			For when you really need a lot of things dead."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/ammo_box/a357

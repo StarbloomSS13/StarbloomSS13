@@ -63,49 +63,6 @@
 	surplus = 30
 	purchasable_from = UPLINK_NUKE_OPS
 
-/datum/uplink_item/dangerous/pie_cannon
-	name = "Banana Cream Pie Cannon"
-	desc = "A special pie cannon for a special clown, this gadget can hold up to 20 pies and automatically fabricates one every two seconds!"
-	cost = 10
-	item = /obj/item/pneumatic_cannon/pie/selfcharge
-	surplus = 0
-	purchasable_from = UPLINK_CLOWN_OPS
-
-/datum/uplink_item/dangerous/bananashield
-	name = "Bananium Energy Shield"
-	desc = "A clown's most powerful defensive weapon, this personal shield provides near immunity to ranged energy attacks \
-		by bouncing them back at the ones who fired them. It can also be thrown to bounce off of people, slipping them, \
-		and returning to you even if you miss. WARNING: DO NOT ATTEMPT TO STAND ON SHIELD WHILE DEPLOYED, EVEN IF WEARING ANTI-SLIP SHOES."
-	item = /obj/item/shield/energy/bananium
-	cost = 16
-	surplus = 0
-	purchasable_from = UPLINK_CLOWN_OPS
-
-/datum/uplink_item/dangerous/clownsword
-	name = "Bananium Energy Sword"
-	desc = "An energy sword that deals no damage, but will slip anyone it contacts, be it by melee attack, thrown \
-	impact, or just stepping on it. Beware friendly fire, as even anti-slip shoes will not protect against it."
-	item = /obj/item/melee/energy/sword/bananium
-	cost = 3
-	surplus = 0
-	purchasable_from = UPLINK_CLOWN_OPS
-
-/datum/uplink_item/dangerous/clownoppin
-	name = "Ultra Hilarious Firing Pin"
-	desc = "A firing pin that, when inserted into a gun, makes that gun only useable by clowns and clumsy people and makes that gun honk whenever anyone tries to fire it."
-	cost = 1 //much cheaper for clown ops than for clowns
-	item = /obj/item/firing_pin/clown/ultra
-	purchasable_from = UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
-
-/datum/uplink_item/dangerous/clownopsuperpin
-	name = "Super Ultra Hilarious Firing Pin"
-	desc = "Like the ultra hilarious firing pin, except the gun you insert this pin into explodes when someone who isn't clumsy or a clown tries to fire it."
-	cost = 4 //much cheaper for clown ops than for clowns
-	item = /obj/item/firing_pin/clown/ultra/selfdestruct
-	purchasable_from = UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
-
 /datum/uplink_item/dangerous/bioterror
 	name = "Biohazardous Chemical Sprayer"
 	desc = "A handheld chemical sprayer that allows a wide dispersal of selected chemicals. Especially tailored by the Tiger \
@@ -441,27 +398,6 @@
 	surplus = 35
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
-/datum/uplink_item/explosives/bombanana
-	name = "Bombanana"
-	desc = "A banana with an explosive taste! discard the peel quickly, as it will explode with the force of a Syndicate minibomb \
-		a few seconds after the banana is eaten."
-	item = /obj/item/food/grown/banana/bombanana
-	cost = 4 //it is a bit cheaper than a minibomb because you have to take off your helmet to eat it, which is how you arm it
-	surplus = 0
-	purchasable_from = UPLINK_CLOWN_OPS
-
-/datum/uplink_item/explosives/clown_bomb_clownops
-	name = "Clown Bomb"
-	desc = "The Clown bomb is a hilarious device capable of massive pranks. It has an adjustable timer, \
-			with a minimum of 60 seconds, and can be bolted to the floor with a wrench to prevent \
-			movement. The bomb is bulky and cannot be moved; upon ordering this item, a smaller beacon will be \
-			transported to you that will teleport the actual bomb to it upon activation. Note that this bomb can \
-			be defused, and some crew may attempt to do so."
-	item = /obj/item/sbeacondrop/clownbomb
-	cost = 15
-	surplus = 0
-	purchasable_from = UPLINK_CLOWN_OPS
-
 /datum/uplink_item/explosives/buzzkill
 	name = "Buzzkill Grenade Box"
 	desc = "A box with three grenades that release a swarm of angry bees upon activation. These bees indiscriminately attack friend or foe \
@@ -582,29 +518,12 @@
 	item = /obj/vehicle/sealed/mecha/combat/gygax/dark/loaded
 	cost = 80
 
-/datum/uplink_item/support/honker
-	name = "Dark H.O.N.K."
-	desc = "A clown combat mech equipped with bombanana peel and tearstache grenade launchers, as well as the ubiquitous HoNkER BlAsT 5000."
-	item = /obj/vehicle/sealed/mecha/combat/honker/dark/loaded
-	cost = 80
-	purchasable_from = UPLINK_CLOWN_OPS
-
 /datum/uplink_item/support/mauler
 	name = "Mauler Exosuit"
 	desc = "A massive and incredibly deadly military-grade exosuit. Features long-range targeting, thrust vectoring \
 			and deployable smoke. Comes equipped with an LMG, scattershot carbine, missile rack, an antiprojectile armor booster and a Tesla energy array."
 	item = /obj/vehicle/sealed/mecha/combat/marauder/mauler/loaded
 	cost = 140
-
-/datum/uplink_item/stealthy_tools/combatbananashoes
-	name = "Combat Banana Shoes"
-	desc = "While making the wearer immune to most slipping attacks like regular combat clown shoes, these shoes \
-		can generate a large number of synthetic banana peels as the wearer walks, slipping up would-be pursuers. They also \
-		squeak significantly louder."
-	item = /obj/item/clothing/shoes/clown_shoes/banana_shoes/combat
-	cost = 6
-	surplus = 0
-	purchasable_from = UPLINK_CLOWN_OPS
 
 /datum/uplink_item/stealthy_tools/syndigaloshes/nuke
 	item = /obj/item/clothing/shoes/chameleon/noslip

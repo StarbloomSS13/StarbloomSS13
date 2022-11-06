@@ -105,8 +105,8 @@
 	restricted = TRUE
 
 /datum/uplink_item/dangerous/revolver
-	name = "Syndicate Revolver"
-	desc = "A brutally simple Syndicate revolver that fires .357 Magnum rounds and has 7 chambers."
+	name = ".357 Revolver"
+	desc = "A brutally simple revolver that fires .357 Magnum rounds and has 7 chambers."
 	item = /obj/item/gun/ballistic/revolver
 	progression_minimum = 30 MINUTES
 	cost = 13
