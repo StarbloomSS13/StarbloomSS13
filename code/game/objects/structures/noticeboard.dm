@@ -124,8 +124,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/noticeboard, 32)
 	req_access = list(ACCESS_HOP)
 
 /obj/structure/noticeboard/ce
-	name = "Chief Engineer's Notice Board"
-	desc = "Important notices from the Chief Engineer."
+	name = "Grand Artificer's Notice Board"
+	desc = "Important notices from the Grand Artificer."
 	req_access = list(ACCESS_CE)
 
 /obj/structure/noticeboard/hos

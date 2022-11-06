@@ -6,7 +6,7 @@ import { Window } from "../layouts";
 const commandJobs = [
   "Head of Personnel",
   "Head of Security",
-  "Chief Engineer",
+  "Grand Artificer",
   "Research Director",
   "Chief Medical Officer",
 ];

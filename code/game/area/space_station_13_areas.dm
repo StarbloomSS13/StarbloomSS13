@@ -569,7 +569,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	sound_environment = SOUND_AREA_WOODFLOOR
 
 /area/command/heads_quarters/ce
-	name = "\improper Chief Engineer's Office"
+	name = "\improper Grand Artificer's Office"
 	icon_state = "ce_office"
 
 /area/command/heads_quarters/cmo

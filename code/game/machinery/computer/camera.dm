@@ -319,7 +319,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/security/telescreen/entertai
 	network = list("rd")
 
 /obj/machinery/computer/security/telescreen/ce
-	name = "\improper Chief Engineer's telescreen"
+	name = "\improper Grand Artificer's telescreen"
 	desc = "Used for watching the engine, telecommunications and the minisat."
 	network = list("engine", "singularity", "tcomms", "minisat")
 

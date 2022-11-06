@@ -199,7 +199,7 @@
 	head = /obj/item/clothing/head/helmet/space/plasmaman/security/head_of_security
 
 /datum/outfit/plasmaman/chief_engineer
-	name = "Chief Engineer Plasmaman"
+	name = "Grand Artificer Plasmaman"
 
 	uniform = /obj/item/clothing/under/plasmaman/chief_engineer
 	gloves = /obj/item/clothing/gloves/color/plasmaman/chief_engineer

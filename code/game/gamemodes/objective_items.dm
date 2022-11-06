@@ -175,7 +175,7 @@
 	ADD_STEAL_ITEM(src, /obj/item/tank/jetpack/oxygen/captain)
 
 /datum/objective_item/steal/magboots
-	name = "the chief engineer's advanced magnetic boots"
+	name = "the Grand Artificer's advanced magnetic boots"
 	targetitem = /obj/item/clothing/shoes/magboots/advance
 	difficulty = 5
 	excludefromjob = list(JOB_CHIEF_ENGINEER)

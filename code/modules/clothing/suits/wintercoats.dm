@@ -356,9 +356,9 @@
 	if(!isinhands)
 		. += emissive_appearance(icon_file, "[icon_state]-emissive", alpha = src.alpha)
 
-// Chief Engineer
+// Grand Artificer
 /obj/item/clothing/suit/hooded/wintercoat/engineering/ce
-	name = "chief engineer's winter coat"
+	name = "grand artificer's winter coat"
 	desc = "A white winter coat with reflective green and yellow stripes. Stuffed with asbestos, treated with fire retardant PBDE, lined with a micro thin sheet of lead foil and snugly fitted to your body's measurements. This baby's ready to save you from anything except the thyroid cancer and systemic fibrosis you'll get from wearing it. The zipper tab is a tiny golden wrench."
 	icon_state = "coatce"
 	inhand_icon_state = "coatce"

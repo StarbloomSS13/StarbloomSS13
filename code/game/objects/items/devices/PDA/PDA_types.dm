@@ -132,7 +132,7 @@
 	greyscale_colors = "#cc4242#0000cc"
 
 /obj/item/pda/heads/ce
-	name = "chief engineer PDA"
+	name = "Grand Artificer PDA"
 	default_cartridge = /obj/item/cartridge/ce
 	greyscale_config = /datum/greyscale_config/pda/stripe_thick/head
 	greyscale_colors = "#C4A56D#69DBF3#e2e2e2"

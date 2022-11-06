@@ -29,7 +29,7 @@
 	icon_state = "cmocloak"
 
 /obj/item/clothing/neck/cloak/ce
-	name = "chief engineer's cloak"
+	name = "grand artificer's cloak"
 	desc = "Worn by Engitopia, wielders of an unlimited power."
 	icon_state = "cecloak"
 	resistance_flags = FIRE_PROOF

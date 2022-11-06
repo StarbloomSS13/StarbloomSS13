@@ -23,8 +23,8 @@
 	random_sensor = FALSE
 
 /obj/item/clothing/under/plasmaman/chief_engineer
-	name = "chief engineer's plasma envirosuit"
-	desc = "An air-tight suit designed to be used by plasmamen insane enough to achieve the rank of \"Chief Engineer\"."
+	name = "grand artificer's plasma envirosuit"
+	desc = "An air-tight suit designed to be used by plasmamen insane enough to achieve the rank of \"Grand Artificer\"."
 	icon_state = "ce_envirosuit"
 	inhand_icon_state = "ce_envirosuit"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 100, FIRE = 95, ACID = 95)

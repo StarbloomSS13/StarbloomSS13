@@ -202,8 +202,8 @@
 	job = /datum/job/chemist
 
 /datum/id_trim/job/chief_engineer
-	assignment = "Mekhane Grand Engineer"
-	intern_alt_name = "Chief Engineer-in-Training"
+	assignment = "Mekhane Grand Artificer"
+	intern_alt_name = "Grand Artificer-in-Training"
 	trim_state = "trim_stationengineer"
 	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_ENGINEERING_ORANGE

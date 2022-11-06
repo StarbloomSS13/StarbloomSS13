@@ -505,7 +505,7 @@
 	airlock_type = /obj/machinery/door/airlock/cmo
 
 /obj/structure/door_assembly/door_assembly_ce
-	name = "chief engineer airlock assembly"
+	name = "grand artificer airlock assembly"
 	icon = 'starbloom_modules/aesthetics/airlock/icons/airlocks/ce.dmi'
 	glass_type = /obj/machinery/door/airlock/ce/glass
 	airlock_type = /obj/machinery/door/airlock/ce

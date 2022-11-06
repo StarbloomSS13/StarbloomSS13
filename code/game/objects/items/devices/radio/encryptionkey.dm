@@ -98,7 +98,7 @@
 	channels = list(RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_COMMAND = 1)
 
 /obj/item/encryptionkey/heads/ce
-	name = "\proper the chief engineer's encryption key"
+	name = "\proper the Grand Artificer's encryption key"
 	icon_state = "ce_cypherkey"
 	channels = list(RADIO_CHANNEL_ENGINEERING = 1, RADIO_CHANNEL_COMMAND = 1)
 
