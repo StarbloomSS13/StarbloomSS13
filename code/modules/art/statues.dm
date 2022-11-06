@@ -122,7 +122,7 @@
 	icon_state = "ce"
 
 /obj/structure/statue/gold/rd
-	name = "statue of the research director"
+	name = "statue of the research overseer"
 	icon_state = "rd"
 
 //////////////////////////silver///////////////////////////////////////

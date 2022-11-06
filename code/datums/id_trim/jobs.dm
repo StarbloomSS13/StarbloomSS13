@@ -489,7 +489,7 @@
 
 /datum/id_trim/job/research_director
 	assignment = "Chiron Research Overseer"
-	intern_alt_name = "Research Director-in-Training"
+	intern_alt_name = "Research Overseer-in-Training"
 	trim_state = "trim_scientist"
 	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_SCIENCE_PINK

@@ -3,7 +3,7 @@
 	worn_icon = 'icons/mob/clothing/under/rnd.dmi'
 
 /obj/item/clothing/under/rank/rnd/research_director
-	desc = "It's a suit worn by those with the know-how to achieve the position of \"Research Director\". Its fabric provides minor protection from biological contaminants."
+	desc = "It's a suit worn by those with the know-how to achieve the position of \"Research Overseer\". Its fabric provides minor protection from biological contaminants."
 	name = "chiron research overseer's vest suit"
 	icon_state = "director"
 	inhand_icon_state = "lb_suit"
@@ -17,7 +17,7 @@
 
 /obj/item/clothing/under/rank/rnd/research_director/skirt
 	name = "chiron research overseer's vest suitskirt"
-	desc = "It's a suitskirt worn by those with the know-how to achieve the position of \"Research Director\". Its fabric provides minor protection from biological contaminants."
+	desc = "It's a suitskirt worn by those with the know-how to achieve the position of \"Research Overseer\". Its fabric provides minor protection from biological contaminants."
 	icon_state = "director_skirt"
 	inhand_icon_state = "lb_suit"
 	body_parts_covered = CHEST|GROIN|ARMS

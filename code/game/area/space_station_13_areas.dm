@@ -589,7 +589,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "hos_office"
 
 /area/command/heads_quarters/rd
-	name = "\improper Research Director's Office"
+	name = "\improper Research Overseer's Office"
 	icon_state = "rd_office"
 
 //Command - Teleporters

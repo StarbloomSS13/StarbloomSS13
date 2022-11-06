@@ -511,7 +511,7 @@
 	airlock_type = /obj/machinery/door/airlock/ce
 
 /obj/structure/door_assembly/door_assembly_rd
-	name = "research director airlock assembly"
+	name = "research overseer airlock assembly"
 	icon = 'starbloom_modules/aesthetics/airlock/icons/airlocks/rd.dmi'
 	glass_type = /obj/machinery/door/airlock/rd/glass
 	airlock_type = /obj/machinery/door/airlock/rd

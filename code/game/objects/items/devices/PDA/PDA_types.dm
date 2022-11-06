@@ -144,7 +144,7 @@
 	greyscale_colors = "#e2e2e2#000099#5d99be"
 
 /obj/item/pda/heads/rd
-	name = "research director PDA"
+	name = "research overseer PDA"
 	default_cartridge = /obj/item/cartridge/rd
 	insert_type = /obj/item/pen/fountain
 	greyscale_config = /datum/greyscale_config/pda/stripe_thick/head

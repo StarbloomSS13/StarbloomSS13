@@ -202,7 +202,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 
 /obj/item/radio/headset/heads/rd
-	name = "\proper the research director's headset"
+	name = "\proper the research overseer's headset"
 	desc = "Headset of the fellow who keeps society marching towards technological singularity."
 	icon_state = "com_headset"
 	keyslot = new /obj/item/encryptionkey/heads/rd

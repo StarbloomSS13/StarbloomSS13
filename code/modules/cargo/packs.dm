@@ -1496,7 +1496,7 @@
 
 /datum/supply_pack/science/transfer_valves
 	name = "Tank Transfer Valves Crate"
-	desc = "The key ingredient for making a lot of people very angry very fast. Contains two tank transfer valves. Requires RD access to open."
+	desc = "The key ingredient for making a lot of people very angry very fast. Contains two tank transfer valves. Requires Research Overseer access to open."
 	cost = CARGO_CRATE_VALUE * 12
 	access = ACCESS_RD
 	contains = list(/obj/item/transfer_valve,
@@ -2466,7 +2466,7 @@
 
 /datum/supply_pack/costumes_toys/randomised/toys
 	name = "Toy Crate"
-	desc = "Who cares about pride and accomplishment? Skip the gaming and get straight to the sweet rewards with this product! Contains five random toys. Warranty void if used to prank research directors."
+	desc = "Who cares about pride and accomplishment? Skip the gaming and get straight to the sweet rewards with this product! Contains five random toys. Warranty void if used to prank research overseers."
 	cost = CARGO_CRATE_VALUE * 8 // or play the arcade machines ya lazy bum
 	num_contained = 5
 	contains = list()

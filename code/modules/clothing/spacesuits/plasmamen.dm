@@ -241,8 +241,8 @@
 	inhand_icon_state = "geneticist_envirohelm"
 
 /obj/item/clothing/head/helmet/space/plasmaman/research_director
-	name = "research director's plasma envirosuit helmet"
-	desc = "A special containment helmet designed for the Research Director. A light brown design is applied to differentiate them from other scientists."
+	name = "research overseer's plasma envirosuit helmet"
+	desc = "A special containment helmet designed for the Research Overseer. A light brown design is applied to differentiate them from other scientists."
 	icon_state = "rd_envirohelm"
 	inhand_icon_state = "rd_envirohelm"
 

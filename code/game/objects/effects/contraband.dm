@@ -299,7 +299,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 
 /obj/structure/sign/poster/contraband/lamarr
 	name = "Lamarr"
-	desc = "This poster depicts Lamarr. Probably made by a traitorous Research Director."
+	desc = "This poster depicts Lamarr. Probably made by a traitorous Research Overseer."
 	icon_state = "lamarr"
 
 /obj/structure/sign/poster/contraband/borg_fancy_1

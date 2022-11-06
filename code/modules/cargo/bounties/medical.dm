@@ -52,7 +52,7 @@
 
 /datum/bounty/item/medical/eye
 	name = "Organic Eyes"
-	description = "Station 5's Research Director Willem is requesting a few pairs of non-robotic eyes. Don't ask questions, just ship them."
+	description = "Unity is requesting a few pairs of non-robotic eyes. Don't ask questions, just ship them."
 	reward = CARGO_CRATE_VALUE * 20
 	required_count = 3
 	wanted_types = list(

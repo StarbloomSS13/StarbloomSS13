@@ -213,7 +213,7 @@
 	head = /obj/item/clothing/head/helmet/space/plasmaman/chief_medical_officer
 
 /datum/outfit/plasmaman/research_director
-	name = "Research Director Plasmaman"
+	name = "Research Overseer Plasmaman"
 
 	uniform = /obj/item/clothing/under/plasmaman/research_director
 	gloves = /obj/item/clothing/gloves/color/plasmaman/research_director
