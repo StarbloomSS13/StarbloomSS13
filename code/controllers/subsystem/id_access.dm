@@ -302,7 +302,7 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_XENOBIOLOGY]"] = "Xenobiology Lab"
 	desc_by_access["[ACCESS_HOP]"] = "HoP Office"
 	desc_by_access["[ACCESS_HOS]"] = "HoS Office"
-	desc_by_access["[ACCESS_CE]"] = "CE Office"
+	desc_by_access["[ACCESS_CE]"] = "Grand Artificer Office"
 	desc_by_access["[ACCESS_PHARMACY]"] = "Pharmacy"
 	desc_by_access["[ACCESS_RC_ANNOUNCE]"] = "RC Announcements"
 	desc_by_access["[ACCESS_KEYCARD_AUTH]"] = "Keycode Auth."
