@@ -72,6 +72,11 @@
 
 	pick_employer()
 
+	var/mob/living/carbon/human/H = owner.current
+
+	var/obj/item/organ/cyberimp/brain/edict_organ/implant_organ = new /obj/item/organ/cyberimp/brain/edict_organ
+	implant_organ.Insert(H)
+
 	owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/tatoralert.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 
 	return ..()

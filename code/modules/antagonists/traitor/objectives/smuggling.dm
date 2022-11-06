@@ -7,7 +7,7 @@
 ///smuggle! bring a traitor item from its arrival area to the cargo shuttle, where the objective completes on selling the item
 /datum/traitor_objective/smuggle
 	name = "Smuggle %CONTRABAND% from %AREA% off the station via cargo shuttle"
-	description = "Go to a designated area, pick up syndicate contraband, and get it off the station via the cargo shuttle. \
+	description = "Go to a designated area, pick up contraband, and get it off the station via the cargo shuttle. \
 	You will instantly fail this objective if anyone else picks up your contraband. If you fail, you are liable for the costs \
 	of the smuggling item."
 
@@ -107,9 +107,7 @@
 //smuggling container
 /obj/item/reagent_containers/glass/bottle/ritual_wine
 	name = "ritual wine bottle"
-	desc = "Contains an incredibly potent mix of various hallucinogenics, herbal extracts, and hard drugs. \
-	the Tiger Cooperative praises it as a link to higher powers, but for all intents and purposes this should \
-	not be consumed."
+	desc = "Contains an incredibly potent mix of various hallucinogenics, herbal extracts, and hard drugs."
 	list_reagents = list(
 		//changeling adrenals part
 		/datum/reagent/drug/methamphetamine = 5,
