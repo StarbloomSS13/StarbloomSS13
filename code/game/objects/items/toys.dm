@@ -1422,7 +1422,7 @@
 		playsound(user, toysound, 20, TRUE)
 
 /obj/item/toy/figure/cmo
-	name = "\improper Chief Medical Officer action figure"
+	name = "\improper Chiron Biolab Overseer action figure"
 	icon_state = "cmo"
 	toysay = "Suit sensors!"
 
@@ -1464,7 +1464,7 @@
 	toysay = "For Cargonia!"
 
 /obj/item/toy/figure/ce
-	name = "\improper Chief Engineer action figure"
+	name = "\improper Grand Artificer action figure"
 	icon_state = "ce"
 	toysay = "Wire the solars!"
 
@@ -1515,7 +1515,7 @@
 	toysay = "Smash!"
 
 /obj/item/toy/figure/hop
-	name = "\improper Head of Personnel action figure"
+	name = "\improper Seneschal action figure"
 	icon_state = "hop"
 	toysay = "Giving out all access!"
 
@@ -1587,7 +1587,7 @@
 	toysound = 'sound/magic/disintegrate.ogg'
 
 /obj/item/toy/figure/rd
-	name = "\improper Research Director action figure"
+	name = "\improper Chiron Research Overseer action figure"
 	icon_state = "rd"
 	toysay = "Blowing all of the borgs!"
 

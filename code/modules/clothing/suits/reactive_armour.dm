@@ -115,7 +115,7 @@
 //When the wearer gets hit, this armor will teleport the user a short distance away (to safety or to more danger, no one knows. That's the fun of it!)
 /obj/item/clothing/suit/armor/reactive/teleport
 	name = "reactive teleport armor"
-	desc = "Someone separated our Research Director from his own head!"
+	desc = "Someone separated our Chiron Research Overseer from his own head!"
 	emp_message = span_warning("The reactive armor's teleportation calculations begin spewing errors!")
 	cooldown_message = span_danger("The reactive teleport system is still recharging! It fails to activate!")
 	reactivearmor_cooldown_duration = 10 SECONDS

@@ -52,7 +52,7 @@
 
 /datum/bounty/item/medical/eye
 	name = "Organic Eyes"
-	description = "Station 5's Research Director Willem is requesting a few pairs of non-robotic eyes. Don't ask questions, just ship them."
+	description = "Unity is requesting a few pairs of non-robotic eyes. Don't ask questions, just ship them."
 	reward = CARGO_CRATE_VALUE * 20
 	required_count = 3
 	wanted_types = list(
@@ -81,7 +81,7 @@
 
 /datum/bounty/item/medical/chainsaw
 	name = "Chainsaw"
-	description = "A CMO at CentCom is having trouble operating on demonic hellspawn. She requests one chainsaw, please."
+	description = "A Biolab Overseer at CentCom is having trouble operating on demonic hellspawn. She requests one chainsaw, please."
 	reward = CARGO_CRATE_VALUE * 5
 	wanted_types = list(/obj/item/chainsaw = TRUE)
 

@@ -41,7 +41,7 @@
 
 //Captain
 /obj/item/clothing/head/caphat
-	name = "captain's hat"
+	name = "exarch's hat"
 	desc = "It's good being the king."
 	icon_state = "captain"
 	inhand_icon_state = "that"
@@ -52,14 +52,14 @@
 
 //Captain: This is no longer space-worthy
 /obj/item/clothing/head/caphat/parade
-	name = "captain's parade cap"
-	desc = "Worn only by Captains with an abundance of class."
+	name = "exarch's parade cap"
+	desc = "Worn only by Exarchs with an abundance of class."
 	icon_state = "capcap"
 
 	dog_fashion = null
 
 /obj/item/clothing/head/caphat/beret
-	name = "captain's beret"
+	name = "exarch's beret"
 	desc = "For the Captains known for their sense of fashion."
 	icon_state = "beret_badge"
 	greyscale_config = /datum/greyscale_config/beret_badge
@@ -68,7 +68,7 @@
 
 //Head of Personnel
 /obj/item/clothing/head/hopcap
-	name = "head of personnel's cap"
+	name = "seneschal's cap"
 	icon_state = "hopcap"
 	desc = "The symbol of true bureaucratic micromanagement."
 	armor = list(MELEE = 25, BULLET = 15, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50)
@@ -302,7 +302,7 @@
 	greyscale_colors = "#16313D"
 
 /obj/item/clothing/head/beret/medical/cmo
-	name = "chief medical officer beret"
+	name = "biolab overseer beret"
 	desc = "A beret in a distinct surgical turquoise!"
 	greyscale_colors = "#5EB8B8"
 
@@ -324,7 +324,7 @@
 /obj/item/clothing/head/surgerycap/cmo
 	name = "turquoise surgery cap"
 	icon_state = "surgicalcapcmo"
-	desc = "The CMO's medical surgery cap to prevent their hair from entering the insides of the patient!"
+	desc = "The Biolab Overseer's medical surgery cap to prevent their hair from entering the insides of the patient!"
 
 
 

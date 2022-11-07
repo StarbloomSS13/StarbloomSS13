@@ -10,7 +10,7 @@
 
 /datum/traitor_objective/kill_pet
 	name = "Kill the %DEPARTMENT HEAD%'s beloved %PET%"
-	description = "The %DEPARTMENT HEAD% has particularly annoyed us by sending us spam emails and we want their %PET% dead to show them what happens when they cross us. "
+	description = "The %DEPARTMENT HEAD% has particularly annoyed us with their actions against us and we want their %PET% dead to show them what happens when they cross us. "
 	telecrystal_reward = list(1, 2)
 
 	progression_reward = list(3 MINUTES, 6 MINUTES)
@@ -22,7 +22,7 @@
 			/mob/living/simple_animal/pet/dog/corgi/puppy/ian
 		),
 		JOB_CAPTAIN = /mob/living/simple_animal/pet/fox/renault,
-		JOB_CHIEF_MEDICAL_OFFICER = /mob/living/simple_animal/pet/cat/runtime,
+		JOB_CHIEF_MEDICAL_OFFICER = /mob/living/simple_animal/pet/slugcat,
 		JOB_CHIEF_ENGINEER = /mob/living/simple_animal/parrot/poly,
 	)
 	/// The head that we are targetting

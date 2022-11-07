@@ -202,8 +202,8 @@
 	job = /datum/job/chemist
 
 /datum/id_trim/job/chief_engineer
-	assignment = "Mekhane Grand Engineer"
-	intern_alt_name = "Chief Engineer-in-Training"
+	assignment = "Mekhane Grand Artificer"
+	intern_alt_name = "Grand Artificer-in-Training"
 	trim_state = "trim_stationengineer"
 	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_ENGINEERING_ORANGE
@@ -221,7 +221,7 @@
 
 /datum/id_trim/job/chief_medical_officer
 	assignment = "Chiron Biolab Overseer"
-	intern_alt_name = "Chief Medical Officer-in-Training"
+	intern_alt_name = "Biolab Overseer-in-Training"
 	trim_state = "trim_medicaldoctor"
 	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_MEDICAL_BLUE
@@ -489,7 +489,7 @@
 
 /datum/id_trim/job/research_director
 	assignment = "Chiron Research Overseer"
-	intern_alt_name = "Research Director-in-Training"
+	intern_alt_name = "Research Overseer-in-Training"
 	trim_state = "trim_scientist"
 	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_SCIENCE_PINK

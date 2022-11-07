@@ -192,7 +192,7 @@ GLOBAL_LIST_INIT(department_order_cooldowns, list(
 	department_delivery_areas = list(/area/security/brig)
 	override_access = ACCESS_HOS
 	req_one_access = REGION_ACCESS_SECURITY
-	dep_groups = list("Security", "Armory")
+	dep_groups = list(CARGO_PACK_BLUEALERT, CARGO_PACK_REDALERT)
 
 /obj/machinery/computer/department_orders/medical
 	name = "medical order console"

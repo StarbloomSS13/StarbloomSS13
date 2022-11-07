@@ -50,7 +50,7 @@
 
 
 /datum/outfit/job/cmo
-	name = "Chief Medical Officer"
+	name = "Chiron Biolab Overseer"
 	jobtype = /datum/job/chief_medical_officer
 
 	id = /obj/item/card/id/advanced/silver
@@ -81,7 +81,7 @@
 	skillchips = list(/obj/item/skillchip/entrails_reader)
 
 /datum/outfit/job/cmo/mod
-	name = "Chief Medical Officer (MODsuit)"
+	name = "Chiron Biolab Overseer (MODsuit)"
 
 	suit_store = /obj/item/tank/internals/oxygen
 	back = /obj/item/mod/control/pre_equipped/rescue

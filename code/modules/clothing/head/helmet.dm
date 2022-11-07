@@ -469,7 +469,7 @@
 	. += span_warning("BRAIN DEATH")
 	. += span_warning("PRIMAL GENE ACTIVATION")
 	. += span_warning("GENETIC MAKEUP MASS SUSCEPTIBILITY")
-	. += span_boldnotice("Ask your CMO if mind magnification is right for you.")
+	. += span_boldnotice("Ask your Biolab Overseer if mind magnification is right for you.")
 
 /obj/item/clothing/head/helmet/monkey_sentience/update_icon_state()
 	. = ..()

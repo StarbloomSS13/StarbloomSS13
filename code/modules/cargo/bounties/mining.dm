@@ -38,7 +38,7 @@
 
 /datum/bounty/item/mining/bone_talisman
 	name = "Bone Talismans"
-	description = "Station 14's Research Director claims that pagan bone talismans protect their wearer. Ship them a few so they can start testing."
+	description = "Mekhane Grand Artificers claim that pagan bone talismans protect their wearer. Ship them a few so they can start testing."
 	reward = CARGO_CRATE_VALUE * 15
 	required_count = 3
 	wanted_types = list(/obj/item/clothing/accessory/talisman = TRUE)

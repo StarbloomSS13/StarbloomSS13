@@ -7,8 +7,8 @@
 	surplus = 0
 
 /datum/uplink_item/badass/balloon
-	name = "Syndicate Balloon"
-	desc = "For showing that you are THE BOSS: A useless red balloon with the Syndicate logo on it. \
+	name = "Edict Balloon"
+	desc = "For showing that you are THE BOSS: A useless red balloon with an Edict logo on it. \
 			Can blow the deepest of covers."
 	item = /obj/item/toy/balloon/syndicate
 	cost = 20
@@ -16,7 +16,7 @@
 	illegal_tech = FALSE
 
 /datum/uplink_item/badass/syndiecards
-	name = "Syndicate Playing Cards"
+	name = "Edict Playing Cards"
 	desc = "A special deck of space-grade playing cards with a mono-molecular edge and metal reinforcement, \
 			making them slightly more robust than a normal deck of cards. \
 			You can also play card games with them or leave them on your victims."
@@ -26,7 +26,7 @@
 	illegal_tech = FALSE
 
 /datum/uplink_item/badass/syndiecigs
-	name = "Syndicate Smokes"
+	name = "Edict Smokes"
 	desc = "Strong flavor, dense smoke, infused with omnizine."
 	item = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
 	cost = 2
@@ -35,7 +35,7 @@
 // Low progression
 
 /datum/uplink_item/badass/syndiecash
-	name = "Syndicate Briefcase Full of Cash"
+	name = "Edict Briefcase Full of Cash"
 	desc = "A secure briefcase containing 5000 space credits. Useful for bribing personnel, or purchasing goods \
 			and services at lucrative prices. The briefcase also feels a little heavier to hold; it has been \
 			manufactured to pack a little bit more of a punch if your client needs some convincing."

@@ -19,10 +19,9 @@
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/suits/space_suit
-	name = "Syndicate Space Suit"
-	desc = "This red and black Syndicate space suit is less encumbering than Nanotrasen variants, \
-			fits inside bags, and has a weapon slot. Nanotrasen crew members are trained to report red space suit \
-			sightings, however."
+	name = "Edict Space Suit"
+	desc = "This Edict space suit is less encumbering than Unity variants, \
+			fits inside bags, and has a weapon slot."
 	item = /obj/item/storage/box/edict_kit/space
 	cost = 4
 
@@ -54,9 +53,9 @@
 // Very high progression cost
 
 /datum/uplink_item/suits/modsuit/elite_traitor
-	name = "Elite Syndicate MODsuit"
-	desc = "An upgraded, elite version of the Syndicate MODsuit. It features fireproofing, and also \
-			provides the user with superior armor and mobility compared to the standard Syndicate MODsuit."
+	name = "Elite MODsuit"
+	desc = "An upgraded, elite version of the Edict MODsuit. It features fireproofing, and also \
+			provides the user with superior armor and mobility compared to the standard Edict MODsuit."
 	item = /obj/item/mod/control/pre_equipped/elite
 	// This one costs more than the nuke op counterpart
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
