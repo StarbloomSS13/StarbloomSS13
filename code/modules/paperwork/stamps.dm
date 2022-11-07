@@ -43,7 +43,7 @@
 	dye_color = DYE_HOS
 
 /obj/item/stamp/ce
-	name = "chief engineer's rubber stamp"
+	name = "grand artificer's rubber stamp"
 	icon_state = "stamp-ce"
 	dye_color = DYE_CE
 
@@ -53,7 +53,7 @@
 	dye_color = DYE_RD
 
 /obj/item/stamp/cmo
-	name = "chief medical officer's rubber stamp"
+	name = "biolab overseer's rubber stamp"
 	icon_state = "stamp-cmo"
 	dye_color = DYE_CMO
 

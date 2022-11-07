@@ -62,7 +62,7 @@
 	persistence_id = "HoS"
 
 /obj/item/storage/photo_album/rd
-	name = "photo album (Research Director)"
+	name = "photo album (Research Overseer)"
 	icon_state = "album_blue"
 	persistence_id = "RD"
 
@@ -77,7 +77,7 @@
 	persistence_id = "Captain"
 
 /obj/item/storage/photo_album/cmo
-	name = "photo album (Chief Medical Officer)"
+	name = "photo album (Biolab Overseer)"
 	icon_state = "album_blue"
 	persistence_id = "CMO"
 
@@ -87,7 +87,7 @@
 	persistence_id = "QM"
 
 /obj/item/storage/photo_album/ce
-	name = "photo album (Chief Engineer)"
+	name = "photo album (Grand Artificer)"
 	icon_state = "album_blue"
 	persistence_id = "CE"
 

@@ -310,7 +310,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/security/telescreen/entertai
 
 /obj/machinery/computer/security/telescreen/rd
 	name = "\improper Chiron Research Overseer's telescreen"
-	desc = "Used for watching the AI and the RD's goons from the safety of his office."
+	desc = "Used for watching the AI and the Research Overseer's goons from the safety of his office."
 	network = list("rd", "aicore", "aiupload", "minisat", "xeno", "test", "toxins")
 
 /obj/machinery/computer/security/telescreen/research
@@ -319,12 +319,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/security/telescreen/entertai
 	network = list("rd")
 
 /obj/machinery/computer/security/telescreen/ce
-	name = "\improper Chief Engineer's telescreen"
+	name = "\improper Grand Artificer's telescreen"
 	desc = "Used for watching the engine, telecommunications and the minisat."
 	network = list("engine", "singularity", "tcomms", "minisat")
 
 /obj/machinery/computer/security/telescreen/cmo
-	name = "\improper Chief Medical Officer's telescreen"
+	name = "\improper Biolab Overseer's telescreen"
 	desc = "A telescreen with access to the medbay's camera network."
 	network = list("medbay")
 

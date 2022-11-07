@@ -299,7 +299,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 
 /obj/structure/sign/poster/contraband/lamarr
 	name = "Lamarr"
-	desc = "This poster depicts Lamarr. Probably made by a traitorous Research Director."
+	desc = "This poster depicts Lamarr. Probably made by a traitorous Research Overseer."
 	icon_state = "lamarr"
 
 /obj/structure/sign/poster/contraband/borg_fancy_1
@@ -767,7 +767,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/random, 32)
 
 /obj/structure/sign/poster/official/moth_meth
 	name = "Safety Moth - Methamphetamine"
-	desc = "This informational poster uses Safety Moth™ to tell the viewer to seek CMO approval before cooking methamphetamine. \"Stay close to the target temperature, and never go over!\" ...You shouldn't ever be making this."
+	desc = "This informational poster uses Safety Moth™ to tell the viewer to seek Biolab Overseer approval before cooking methamphetamine. \"Stay close to the target temperature, and never go over!\" ...You shouldn't ever be making this."
 	icon_state = "aspev_meth"
 
 /obj/structure/sign/poster/official/moth_epi

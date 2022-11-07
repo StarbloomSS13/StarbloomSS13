@@ -202,7 +202,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 
 /obj/item/radio/headset/heads/rd
-	name = "\proper the research director's headset"
+	name = "\proper the research overseer's headset"
 	desc = "Headset of the fellow who keeps society marching towards technological singularity."
 	icon_state = "com_headset"
 	keyslot = new /obj/item/encryptionkey/heads/rd
@@ -224,13 +224,13 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 
 /obj/item/radio/headset/heads/ce
-	name = "\proper the chief engineer's headset"
+	name = "\proper the grand artificer's headset"
 	desc = "The headset of the guy in charge of keeping the station powered and undamaged."
 	icon_state = "com_headset"
 	keyslot = new /obj/item/encryptionkey/heads/ce
 
 /obj/item/radio/headset/heads/cmo
-	name = "\proper the chief medical officer's headset"
+	name = "\proper the biolab overseer's headset"
 	desc = "The headset of the highly trained medical chief."
 	icon_state = "com_headset"
 	keyslot = new /obj/item/encryptionkey/heads/cmo

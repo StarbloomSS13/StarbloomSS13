@@ -138,7 +138,7 @@
 	name = "festivus pole"
 	icon = 'icons/obj/flora/pinetrees.dmi'
 	icon_state = "festivus_pole"
-	desc = "During last year's Feats of Strength the Research Director was able to suplex this passing immobile rod into a planter."
+	desc = "During last year's Feats of Strength the Research Overseer was able to suplex this passing immobile rod into a planter."
 
 /obj/structure/festivus/anchored
 	name = "suplexed rod"
@@ -397,8 +397,8 @@
 
 
 /obj/item/kirbyplants/dead
-	name = "RD's potted plant"
-	desc = "A gift from the botanical staff, presented after the RD's reassignment. There's a tag on it that says \"Y'all come back now, y'hear?\"\nIt doesn't look very healthy..."
+	name = "Research Overseer's potted plant"
+	desc = "A gift from the botanical staff, presented after the Research Overseer's reassignment. There's a tag on it that says \"Y'all come back now, y'hear?\"\nIt doesn't look very healthy..."
 	icon_state = "plant-25"
 	trimmable = FALSE
 

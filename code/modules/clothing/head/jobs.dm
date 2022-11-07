@@ -302,7 +302,7 @@
 	greyscale_colors = "#16313D"
 
 /obj/item/clothing/head/beret/medical/cmo
-	name = "chief medical officer beret"
+	name = "biolab overseer beret"
 	desc = "A beret in a distinct surgical turquoise!"
 	greyscale_colors = "#5EB8B8"
 
@@ -324,7 +324,7 @@
 /obj/item/clothing/head/surgerycap/cmo
 	name = "turquoise surgery cap"
 	icon_state = "surgicalcapcmo"
-	desc = "The CMO's medical surgery cap to prevent their hair from entering the insides of the patient!"
+	desc = "The Biolab Overseer's medical surgery cap to prevent their hair from entering the insides of the patient!"
 
 
 

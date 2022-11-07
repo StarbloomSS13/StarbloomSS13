@@ -66,7 +66,7 @@
 
 		/datum/antagonist/gang/henchmen = "HENCHMEN! It is me, your boss, THE MONARCH! I have sent you to this pitiful station with one goal, and one goal only! \
 		MENACE THE RESEARCH DEPARTMENT!!! \
-		The Research Director who is supposedly assigned to this station used to be friends with Doctor Venture back in college, and therefore HE MUST PAY!!! \
+		The Research Overseer who is supposedly assigned to this station used to be friends with Doctor Venture back in college, and therefore HE MUST PAY!!! \
 		Keep those damned eggheads in the R&D department on their toes, and MENACE THEM!!! Commit dastardly villainous acts! GO FORTH, HENCHMEN!",
 
 		/datum/antagonist/gang/osi = "Greetings, agent. Your mission today is simple; \

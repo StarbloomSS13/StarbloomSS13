@@ -27,7 +27,7 @@
 
 /obj/effect/proc_holder/alien/royal/praetorian/evolve/fire(mob/living/carbon/alien/humanoid/user)
 	var/obj/item/organ/alien/hivenode/node = user.getorgan(/obj/item/organ/alien/hivenode)
-	if(!node) //Just in case this particular Praetorian gets violated and kept by the RD as a replacement for Lamarr.
+	if(!node) //Just in case this particular Praetorian gets violated and kept by the Research Overseer as a replacement for Lamarr.
 		to_chat(user, span_warning("Without the hivemind, you would be unfit to rule as queen!"))
 		return FALSE
 	if(node.recent_queen_death)

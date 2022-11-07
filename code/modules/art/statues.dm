@@ -114,15 +114,15 @@
 	icon_state = "hop"
 
 /obj/structure/statue/gold/cmo
-	name = "statue of the chief medical officer"
+	name = "statue of the biolab overseer"
 	icon_state = "cmo"
 
 /obj/structure/statue/gold/ce
-	name = "statue of the chief engineer"
+	name = "statue of the grand artificer"
 	icon_state = "ce"
 
 /obj/structure/statue/gold/rd
-	name = "statue of the research director"
+	name = "statue of the research overseer"
 	icon_state = "rd"
 
 //////////////////////////silver///////////////////////////////////////
