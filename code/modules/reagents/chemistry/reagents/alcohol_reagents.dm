@@ -2859,7 +2859,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/samogon_sonata
 	name = "Samogon Sonata"
 	description = "Unholy mixture of unholy beverages. Should be illegal."
-	boozepwr = 60
+	boozepwr = 80
 	color = "#1a0942"
 	quality = DRINK_NICE
 	taste_description = "an overwhelming and undescribable taste"
