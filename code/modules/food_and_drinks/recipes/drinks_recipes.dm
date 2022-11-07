@@ -776,3 +776,7 @@
 /datum/chemical_reaction/drink/green_hill_tea
 	results = list(/datum/reagent/consumable/green_hill_tea = 1)
 	required_reagents = list(/datum/reagent/consumable/ethanol/sugar_rush = 4, /datum/reagent/consumable/ice_greentea = 4) //despite containing alcohol, the resulting beverage is non-alcoholic, alcoholic sonic is funny but no.
+
+/datum/chemical_reaction/drink/samogon_sonata
+	results = list(/datum/reagent/consumable/ethanol/samogon_sonata = 2)
+	required_reagents = list(/datum/reagent/consumable/ethanol = 1, /datum/reagent/consumable/ethanol/black_russian = 1, /datum/reagent/consumable/ethanol/moonshine = 1)
