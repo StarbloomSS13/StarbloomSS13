@@ -2855,3 +2855,25 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_name = "Pile Driver"
 	glass_desc = "A drink said to be bitter and somewhat spicy. You better not have a sore throat when drinking it." //Va-11 Hall-A reference moment flushed
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/consumable/ethanol/samogon_sonata
+	name = "Samogon Sonata"
+	description = "Unholy mixture of unholy beverages. Should be illegal."
+	boozepwr = 80
+	color = "#1a0942"
+	quality = DRINK_NICE
+	taste_description = "an overwhelming and undescribable taste"
+	glass_icon_state = "samogon_sonata"
+	glass_name = "Samogon Sonata"
+	glass_desc = "A special, about unknown family recipe that's prone to make you see stars in your sleep. Likely illegal." 
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/consumable/ethanol/samogon_sonata/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	switch(current_cycle)
+		if(1 to 20)
+			M.add_confusion(1 * REM * normalise_creation_purity() * delta_time)
+			M.adjust_drowsyness(1 * REM * normalise_creation_purity() * delta_time)
+		if(20 to 50)
+			M.Sleeping(40 * REM * normalise_creation_purity() * delta_time)
+			. = TRUE
+	..()
