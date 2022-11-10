@@ -146,3 +146,10 @@
 	icon_state = "foambox_riot"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/riot
 	custom_materials = list(/datum/material/iron = 50000)
+
+/obj/item/ammo_box/railgun
+	name = "ammo box (railgun slugs)"
+	desc = "An ammo box. Contains ferromagnetic slugs."
+	icon_state = "railslugbox"
+	ammo_type = /obj/item/ammo_casing/caseless/railgun
+	max_ammo = 4
