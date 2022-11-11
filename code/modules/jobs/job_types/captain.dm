@@ -54,8 +54,9 @@
 
 	id = /obj/item/card/id/advanced/gold
 	id_trim = /datum/id_trim/job/captain
-	uniform = /obj/item/clothing/under/rank/captain
-	suit = /obj/item/clothing/suit/armor/vest/capcarapace
+	uniform = /obj/item/clothing/under/rank/captain/parade
+	suit = /obj/item/clothing/suit/armor/vest/capcarapace/captains_formal
+	neck = /obj/item/clothing/neck/cloak/cap
 	backpack_contents = list(
 		/obj/item/melee/baton/telescopic = 1,
 		/obj/item/station_charter = 1,
@@ -64,7 +65,7 @@
 	ears = /obj/item/radio/headset/heads/captain/alt
 	glasses = /obj/item/clothing/glasses/sunglasses
 	gloves = /obj/item/clothing/gloves/color/captain
-	head = /obj/item/clothing/head/caphat
+	head = /obj/item/clothing/head/crown/fancy
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 
 

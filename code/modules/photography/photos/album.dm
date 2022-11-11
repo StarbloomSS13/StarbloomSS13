@@ -57,7 +57,7 @@
 				qdel(P)
 
 /obj/item/storage/photo_album/hos
-	name = "photo album (Head of Security)"
+	name = "photo album (Justiciar)"
 	icon_state = "album_blue"
 	persistence_id = "HoS"
 
@@ -67,12 +67,12 @@
 	persistence_id = "RD"
 
 /obj/item/storage/photo_album/hop
-	name = "photo album (Head of Personnel)"
+	name = "photo album (Seneschal)"
 	icon_state = "album_blue"
 	persistence_id = "HoP"
 
 /obj/item/storage/photo_album/captain
-	name = "photo album (Captain)"
+	name = "photo album (Exarch)"
 	icon_state = "album_blue"
 	persistence_id = "Captain"
 
