@@ -721,6 +721,15 @@
 	anchored = FALSE
 	state = WINDOW_OUT_OF_FRAME
 
+/obj/structure/window/reinforced/plasma/plastitanium/coated
+	name = "rad-proof plastitanium window"
+	desc = "A durable looking window made of an alloy of of plasma, titanium, and lead."
+	glass_type = /obj/item/stack/sheet/plastitaniumglass/coated
+
+/obj/structure/window/reinforced/plasma/plastitanium/coated/unahchored
+	anchored = FALSE
+	state = WINDOW_OUT_OF_FRAME
+
 /obj/structure/window/paperframe
 	name = "paper frame"
 	desc = "A fragile separator made of thin wood and paper."

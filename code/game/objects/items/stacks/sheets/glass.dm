@@ -255,6 +255,12 @@ GLOBAL_LIST_INIT(plastitaniumglass_recipes, list(
 	. = ..()
 	. += GLOB.plastitaniumglass_recipes
 
+/obj/item/stack/sheet/plastitaniumglass/coated
+
+/obj/item/stack/sheet/plastitaniumglass/coated/get_main_recipes()
+	. = ..()
+	. += GLOB.plastitaniumglass_recipes
+
 /obj/item/shard
 	name = "shard"
 	desc = "A nasty looking shard of glass."

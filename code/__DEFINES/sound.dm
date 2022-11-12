@@ -17,10 +17,10 @@
 #define SILENCED_SOUND_EXTRARANGE -11
 ///Percentage of sound's range where no falloff is applied
 #define SOUND_DEFAULT_FALLOFF_DISTANCE 1 //For a normal sound this would be 1 tile of no falloff
+
 ///The default exponent of sound falloff
 #define SOUND_FALLOFF_EXPONENT 6
 #define CHANNEL_JUSTICAR_ARK 1020
-#define CHANNEL_HEARTBEAT 1019 //sound channel for heartbeats
 #define CHANNEL_AMBIENT_EFFECTS 1018
 #define CHANNEL_AMBIENT_MUSIC 1017
 #define CHANNEL_AMBIENT_BUZZ 1016

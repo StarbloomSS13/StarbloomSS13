@@ -134,7 +134,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 
 /obj/machinery/atmospherics/components/trinary/nuclear_reactor/attackby(obj/item/W, mob/user, params)
 	..()
-	if(istype(W, /obj/item/twohanded/required/fuel_rod))
+	if(istype(W, /obj/item/fuel_rod))
 		if(power >= 20)
 			to_chat(user, "<span class='notice'>You cannot insert fuel into [src] when it has been raised above 20% power.</span>")
 			return FALSE
@@ -183,12 +183,12 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 
 /obj/machinery/atmospherics/components/trinary/nuclear_reactor/proc/lazy_startup()
 	for(var/I=0;I<5;I++){
-		fuel_rods += new /obj/item/twohanded/required/fuel_rod(src)
+		fuel_rods += new /obj/item/fuel_rod(src)
 	}
 	start_up()
 
 /obj/machinery/atmospherics/components/trinary/nuclear_reactor/proc/deplete()
-	for(var/obj/item/twohanded/required/fuel_rod/FR in fuel_rods){
+	for(var/obj/item/fuel_rod/FR in fuel_rods){
 		FR.depletion = 100
 	}
 
@@ -285,7 +285,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	if(!has_fuel())  //Reactor must be fuelled and ready to go before we can heat it up boys.
 		K = 0
 	else
-		for(var/obj/item/twohanded/required/fuel_rod/FR in fuel_rods)
+		for(var/obj/item/fuel_rod/FR in fuel_rods)
 			K += FR.fuel_power
 			fuel_power += FR.fuel_power
 			FR.deplete(depletion_modifier)
@@ -493,7 +493,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	temperature = 0
 	update_icon()
 
-/obj/item/twohanded/required/fuel_rod
+/obj/item/fuel_rod
 	name = "Uranium-238 Fuel Rod"
 	desc = "A titanium sheathed rod containing a measure of enriched uranium-dioxide powder, used to kick off a fission reaction."
 	icon = 'icons/obj/control_rod.dmi'
@@ -501,20 +501,23 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	w_class = WEIGHT_CLASS_BULKY
 	var/depletion = 0 //Each fuel rod will deplete in around 30 minutes.
 	var/fuel_power = 0.10
+	var/identifier
 
-/obj/item/twohanded/required/fuel_rod/proc/deplete(amount=0.035)
+/obj/item/fuel_rod/proc/deplete(amount=0.035)
 	depletion += amount
 	if(depletion >= 100)
 		fuel_power = 0.20
-		name = "Plutonium-239 Fuel Rod"
+		name = "Plutonium-239 Fuel Rod (#[identifier])"
 		desc = "A highly energetic titanium sheathed rod containing a sizeable measure of weapons grade uranium, it's highly efficient as nuclear fuel, but will cause the reaction to get out of control if not properly utilised."
 		icon_state = "inferior"
 		AddComponent(/datum/component/irradiated, 1500 , src)
 	else
 		fuel_power = 0.10
 
-/obj/item/twohanded/required/fuel_rod/Initialize()
+/obj/item/fuel_rod/Initialize()
 	.=..()
+	identifier = rand(0-999)
+	name = "Uranium-238 Fuel Fuel Rod (#[identifier])"
 	AddComponent(/datum/component/irradiated, 350 , src)
 
 //Controlling the reactor.
@@ -551,11 +554,11 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	. = ..()
 	ui_interact(user)
 
-/obj/machinery/computer/reactor/control_rods/ui_interact(mob/user, ui_key, datum/tgui/ui, force_open, datum/tgui/master_ui, datum/ui_state/state)
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+/obj/machinery/computer/reactor/control_rods/ui_interact(mob/user, datum/tgui/ui, datum/ui_state/state)
+	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, ui_key, "RbmkControlRods", name, 300, 300, master_ui, state)
-		ui.open()
+		ui = new(user, src, "RbmkControlRods")
+		ui.open()                                                                          //uiopen
 
 /obj/machinery/computer/reactor/control_rods/ui_act(action, params)
 	if(..())
@@ -591,10 +594,10 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	. = ..()
 	ui_interact(user)
 
-/obj/machinery/computer/reactor/stats/ui_interact(mob/user, ui_key, datum/tgui/ui, force_open, datum/tgui/master_ui, datum/ui_state/state)
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+/obj/machinery/computer/reactor/stats/ui_interact(mob/user, ui_key, datum/tgui/ui, datum/ui_state/state)
+	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, ui_key, "RbmkStats", name, 350, 500, master_ui, state)
+		ui = new(user, src, "RbmkStats")
 		ui.open()
 
 /obj/machinery/computer/reactor/stats/process()
@@ -912,7 +915,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	immunity_type = "rad"
 
 /datum/weather/nuclear_fallout/weather_act(mob/living/L)
-	//L.rad_act(100)
+	//L.Irradiated(100)
 
 /datum/weather/nuclear_fallout/telegraph()
 	..()

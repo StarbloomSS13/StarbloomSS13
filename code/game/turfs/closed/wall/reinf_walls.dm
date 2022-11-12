@@ -266,3 +266,18 @@
 	icon_state = "map-overspace"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_DIAGONAL_CORNERS
 	fixed_underlay = list("space" = TRUE)
+
+
+
+/turf/closed/wall/r_wall
+	name = "lead-lined reinforced wall"
+	desc = "A reinforced wall capable of keeping heavy radiation contained."
+	icon = 'icons/turf/walls/reinforced_wall.dmi'
+	icon_state = "reinforced_wall-0"
+	base_icon_state = "reinforced_wall"
+	hardness = 20
+	sheet_type = /obj/item/stack/sheet/plasteel/coated
+	sheet_amount = 1
+	girder_type = /obj/structure/girder/reinforced
+	explosion_block = 2
+	rad_insulation = RAD_FULL_INSULATION
