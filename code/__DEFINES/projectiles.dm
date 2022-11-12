@@ -60,3 +60,5 @@
 #define CALIBER_MAG "mag"
 /// The caliber used by the Crystal Harpoon.
 #define CALIBER_CRYSTAL "crystal"
+/// The caliber used by Royal Railguns.
+#define CALIBER_RAILGUN "railgun"

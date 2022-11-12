@@ -491,7 +491,7 @@
 	head = /obj/item/clothing/head/helmet/royalguard
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/white
-	suit_store = /obj/item/gun/ballistic/gravitas
 	back = /obj/item/storage/backpack/satchel/leather
-	l_pocket = /obj/item/ammo_box/magazine/mmag
+	suit_store = /obj/item/gun/ballistic/rifle/railgun/royal_mosin
+	l_pocket = /obj/item/ammo_box/railgun
 	r_pocket = /obj/item/grenade/frag
