@@ -2945,9 +2945,6 @@
 /obj/effect/turf_decal/trimline/green/filled/corner{
 	dir = 4
 	},
-/obj/effect/turf_decal/trimline/green/filled/mid_joiner{
-	dir = 8
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
@@ -61349,17 +61346,14 @@
 /turf/open/floor/iron/white,
 /area/hallway/floor2/aft)
 "rgL" = (
-/obj/machinery/door/airlock/service{
-	name = "Minikitchen Access"
-	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/any/service/general,
 /obj/machinery/door/airlock/service{
 	name = "Bar"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/service/general,
 /turf/open/floor/iron/green,
 /area)
 "rgS" = (
