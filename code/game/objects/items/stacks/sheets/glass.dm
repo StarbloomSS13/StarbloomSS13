@@ -256,6 +256,10 @@ GLOBAL_LIST_INIT(plastitaniumglass_recipes, list(
 	. += GLOB.plastitaniumglass_recipes
 
 /obj/item/stack/sheet/plastitaniumglass/coated
+	name = "coated plastitanium glass"
+	desc = "A sheet of a plasma-titanium-silicate alloy. This one is radiation resistant!"
+	singular_name = "coated plastitanium glass sheet"
+	merge_type = /obj/item/stack/sheet/plastitaniumglass/coated
 
 /obj/item/stack/sheet/plastitaniumglass/coated/get_main_recipes()
 	. = ..()

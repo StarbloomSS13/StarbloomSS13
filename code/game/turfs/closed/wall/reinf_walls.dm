@@ -268,8 +268,7 @@
 	fixed_underlay = list("space" = TRUE)
 
 
-
-/turf/closed/wall/r_wall
+/turf/closed/wall/r_wall/coated
 	name = "lead-lined reinforced wall"
 	desc = "A reinforced wall capable of keeping heavy radiation contained."
 	icon = 'icons/turf/walls/reinforced_wall.dmi'
