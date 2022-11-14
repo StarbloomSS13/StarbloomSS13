@@ -250,7 +250,7 @@ round(cos_inv_third+sqrt3_sin, 0.001), round(cos_inv_third-sqrt3_sin, 0.001), ro
 #undef LUMA_G
 #undef LUMA_B
 
-/atom/proc/shake_animation(var/intensity = 8) //Makes the object visibly shake
+/atom/proc/shake_animation(intensity = 8) //Makes the object visibly shake
 	var/initial_transform = new/matrix(transform)
 	var/init_px = pixel_x
 	var/shake_dir = pick(-1, 1)
@@ -265,7 +265,7 @@ round(cos_inv_third+sqrt3_sin, 0.001), round(cos_inv_third-sqrt3_sin, 0.001), ro
 	Chunks of the input value above cap, are reduced more and more with each successive one and added to the output
 	A higher input value always makes a higher output value. but the rate of growth slows
 */
-/proc/soft_cap(var/input, var/cap = 0, var/groupsize = 1, var/groupmult = 0.9)
+/proc/soft_cap(input, cap = 0, groupsize = 1, groupmult = 0.9)
 
 	//The cap is a ringfenced amount. If we're below that, just return the input
 	if (input <= cap)

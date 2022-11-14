@@ -347,7 +347,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 					if(!grilled_item.foodtype & FRIED)
 						grilled_item.foodtype |= FRIED
 
-/obj/machinery/atmospherics/components/trinary/nuclear_reactor/proc/relay(var/sound, var/message=null, loop = FALSE, channel = null) //Sends a sound + text message to the crew of a ship
+/obj/machinery/atmospherics/components/trinary/nuclear_reactor/proc/relay(sound, message=null, loop = FALSE, channel = null) //Sends a sound + text message to the crew of a ship
 	for(var/mob/M in GLOB.player_list)
 		if(M.z == z)
 			var/area/A = get_area(M)
