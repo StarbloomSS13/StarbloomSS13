@@ -873,7 +873,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 
 /obj/effect/decal/nuclear_waste/epicenter/Initialize()
 	. = ..()
-	AddComponent(/datum/component/irradiated, 1500, src, 0)
+	//AddComponent(/datum/component/irradiated, 1500, src, 0) causes an error and honestly is griff
 /*
 /obj/effect/decal/nuclear_waste/Crossed(atom/movable/AM)
 	. = ..()
