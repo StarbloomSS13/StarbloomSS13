@@ -725,6 +725,7 @@
 	name = "rad-proof plastitanium window"
 	desc = "A durable looking window made of an alloy of of plasma, titanium, and lead."
 	glass_type = /obj/item/stack/sheet/plastitaniumglass/coated
+	rad_insulation = RAD_FULL_INSULATION
 
 /obj/structure/window/reinforced/plasma/plastitanium/coated/unahchored
 	anchored = FALSE
