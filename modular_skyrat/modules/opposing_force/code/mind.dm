@@ -7,7 +7,7 @@
 
 /mob/verb/opposing_force()
 	set name = "Opposing Force"
-	set category = "OOC"
+	set category = "Admin"
 	set desc = "View your opposing force panel, or request one."
 	// Mind checks
 	if(!mind)
@@ -22,3 +22,4 @@
 		mind.opposing_force = opposing_force
 		SSopposing_force.new_opfor(opposing_force)
 	mind.opposing_force.ui_interact(usr)
+

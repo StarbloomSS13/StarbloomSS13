@@ -146,6 +146,12 @@
 /obj/item/organ/cyberimp/brain/anti_stun/proc/reboot()
 	organ_flags &= ~ORGAN_FAILING
 
+/obj/item/organ/cyberimp/brain/edict_organ
+	name = "Last Edict control implant"
+	desc = "This implant sends strange grey filaments into the depths of its owner's brain, offering the Last Edict full control over their actions. While installed, a victim can feel nothing but loyalty to the Edict."
+	implant_color = "#ac81bd"
+	slot = ORGAN_SLOT_BRAIN_EDICT
+
 //[[[[MOUTH]]]]
 /obj/item/organ/cyberimp/mouth
 	zone = BODY_ZONE_PRECISE_MOUTH

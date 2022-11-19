@@ -276,7 +276,7 @@
 //////////////////////////////////////////////////////////////////////////////
 
 /datum/supply_pack/security
-	group = "Blue Alert Materiel and supplies"
+	group = CARGO_PACK_BLUEALERT
 	access = ACCESS_SECURITY
 	access_view = ACCESS_SECURITY
 	crate_type = /obj/structure/closet/crate/secure/gear
@@ -471,7 +471,7 @@
 //////////////////////////// Red Alert Materiel and Supplies //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 /datum/supply_pack/security/armory
-	group = "Red Alert Materiel and Supplies"
+	group = CARGO_PACK_REDALERT
 	access = ACCESS_ARMORY
 	access_view = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
@@ -833,7 +833,7 @@
 
 /datum/supply_pack/engineering/shuttle_engine
 	name = "Shuttle Engine Crate"
-	desc = "Through advanced bluespace-shenanigans, our engineers have managed to fit an entire shuttle engine into one tiny little crate. Requires CE access to open."
+	desc = "Through advanced bluespace-shenanigans, our engineers have managed to fit an entire shuttle engine into one tiny little crate. Requires Grand Artificer access to open."
 	cost = CARGO_CRATE_VALUE * 6
 	access = ACCESS_CE
 	access_view = ACCESS_CE
@@ -969,7 +969,7 @@
 
 /datum/supply_pack/engine/emitter
 	name = "Emitter Crate"
-	desc = "Useful for powering forcefield generators while destroying locked crates and intruders alike. Contains two high-powered energy emitters. Requires CE access to open."
+	desc = "Useful for powering forcefield generators while destroying locked crates and intruders alike. Contains two high-powered energy emitters. Requires Grand Artificer access to open."
 	cost = CARGO_CRATE_VALUE * 7
 	access = ACCESS_CE
 	contains = list(/obj/machinery/power/emitter,
@@ -1030,7 +1030,7 @@
 
 /datum/supply_pack/engine/supermatter_shard
 	name = "Supermatter Shard Crate"
-	desc = "The power of the heavens condensed into a single crystal. Requires CE access to open."
+	desc = "The power of the heavens condensed into a single crystal. Requires Grand Artificer access to open."
 	cost = CARGO_CRATE_VALUE * 20
 	access = ACCESS_CE
 	contains = list(/obj/machinery/power/supermatter_crystal/shard)
@@ -1051,7 +1051,7 @@
 
 /datum/supply_pack/engine/hypertorus_fusion_reactor
 	name = "HFR Crate"
-	desc = "The new and improved fusion reactor. Requires CE access to open."
+	desc = "The new and improved fusion reactor. Requires Grand Artificer access to open."
 	cost = CARGO_CRATE_VALUE * 23
 	access = ACCESS_CE
 	contains = list(/obj/item/hfr_box/corner,
@@ -1348,7 +1348,7 @@
 
 /datum/supply_pack/medical/virus
 	name = "Virus Crate"
-	desc = "Contains twelve different bottles, containing several viral samples for virology research. Also includes seven beakers and syringes. Balled-up jeans not included. Requires CMO access to open."
+	desc = "Contains twelve different bottles, containing several viral samples for virology research. Also includes seven beakers and syringes. Balled-up jeans not included. Requires Biolab Overseer access to open."
 	cost = CARGO_CRATE_VALUE * 5
 	access = ACCESS_CMO
 	access_view = ACCESS_VIROLOGY
@@ -1496,7 +1496,7 @@
 
 /datum/supply_pack/science/transfer_valves
 	name = "Tank Transfer Valves Crate"
-	desc = "The key ingredient for making a lot of people very angry very fast. Contains two tank transfer valves. Requires RD access to open."
+	desc = "The key ingredient for making a lot of people very angry very fast. Contains two tank transfer valves. Requires Research Overseer access to open."
 	cost = CARGO_CRATE_VALUE * 12
 	access = ACCESS_RD
 	contains = list(/obj/item/transfer_valve,
@@ -2466,7 +2466,7 @@
 
 /datum/supply_pack/costumes_toys/randomised/toys
 	name = "Toy Crate"
-	desc = "Who cares about pride and accomplishment? Skip the gaming and get straight to the sweet rewards with this product! Contains five random toys. Warranty void if used to prank research directors."
+	desc = "Who cares about pride and accomplishment? Skip the gaming and get straight to the sweet rewards with this product! Contains five random toys. Warranty void if used to prank research overseers."
 	cost = CARGO_CRATE_VALUE * 8 // or play the arcade machines ya lazy bum
 	num_contained = 5
 	contains = list()

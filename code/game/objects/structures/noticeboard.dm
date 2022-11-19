@@ -119,13 +119,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/noticeboard, 32)
 	req_access = list(ACCESS_CAPTAIN)
 
 /obj/structure/noticeboard/hop
-	name = "Head of Personnel's Notice Board"
-	desc = "Important notices from the Head of Personnel."
+	name = "Seneschal's Notice Board"
+	desc = "Important notices from the Seneschal."
 	req_access = list(ACCESS_HOP)
 
 /obj/structure/noticeboard/ce
-	name = "Chief Engineer's Notice Board"
-	desc = "Important notices from the Chief Engineer."
+	name = "Grand Artificer's Notice Board"
+	desc = "Important notices from the Grand Artificer."
 	req_access = list(ACCESS_CE)
 
 /obj/structure/noticeboard/hos
@@ -134,13 +134,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/noticeboard, 32)
 	req_access = list(ACCESS_HOS)
 
 /obj/structure/noticeboard/cmo
-	name = "Chief Medical Officer's Notice Board"
-	desc = "Important notices from the Chief Medical Officer."
+	name = "Biolab Overseer's Notice Board"
+	desc = "Important notices from the Biolab Overseer."
 	req_access = list(ACCESS_CMO)
 
 /obj/structure/noticeboard/rd
-	name = "Research Director's Notice Board"
-	desc = "Important notices from the Research Director."
+	name = "Chiron Research Overseer's Notice Board"
+	desc = "Important notices from the Chiron Research Overseer."
 	req_access = list(ACCESS_RD)
 
 /obj/structure/noticeboard/qm

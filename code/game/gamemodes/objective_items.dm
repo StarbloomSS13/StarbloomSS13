@@ -135,7 +135,7 @@
 
 // High risk steal objectives
 /datum/objective_item/steal/caplaser
-	name = "the captain's antique laser gun"
+	name = "the exarch's antique laser gun"
 	targetitem = /obj/item/gun/energy/laser/captain
 	difficulty = 5
 	excludefromjob = list(JOB_CAPTAIN)
@@ -165,7 +165,7 @@
 	ADD_STEAL_ITEM(src, /obj/item/hand_tele)
 
 /datum/objective_item/steal/jetpack
-	name = "the Captain's jetpack"
+	name = "the Exarch's jetpack"
 	targetitem = /obj/item/tank/jetpack/oxygen/captain
 	difficulty = 5
 	excludefromjob = list(JOB_CAPTAIN)
@@ -175,7 +175,7 @@
 	ADD_STEAL_ITEM(src, /obj/item/tank/jetpack/oxygen/captain)
 
 /datum/objective_item/steal/magboots
-	name = "the chief engineer's advanced magnetic boots"
+	name = "the Grand Artificer's advanced magnetic boots"
 	targetitem = /obj/item/clothing/shoes/magboots/advance
 	difficulty = 5
 	excludefromjob = list(JOB_CHIEF_ENGINEER)
@@ -368,7 +368,7 @@
 
 //Old ninja objectives.
 /datum/objective_item/special/pinpointer
-	name = "the captain's pinpointer"
+	name = "the exarch's pinpointer"
 	targetitem = /obj/item/pinpointer/nuke
 	difficulty = 10
 	exists_on_map = TRUE

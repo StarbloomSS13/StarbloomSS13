@@ -5,7 +5,7 @@
 	faction = FACTION_STATION
 	total_positions = 3
 	spawn_positions = 2
-	supervisors = "the head of personnel"
+	supervisors = "the seneschal"
 	selection_color = "#bbe291"
 	exp_granted_type = EXP_TYPE_CREW
 

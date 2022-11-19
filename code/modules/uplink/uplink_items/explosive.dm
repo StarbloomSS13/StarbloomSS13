@@ -72,7 +72,7 @@
 	surplus = 8
 
 /datum/uplink_item/explosives/syndicate_minibomb
-	name = "Syndicate Minibomb"
+	name = "Minibomb"
 	desc = "The minibomb is a grenade with a five-second fuse. Upon detonation, it will create a small hull breach \
 			in addition to dealing high amounts of damage to nearby personnel."
 	progression_minimum = 30 MINUTES
@@ -82,8 +82,8 @@
 
 
 /datum/uplink_item/explosives/syndicate_bomb/emp
-	name = "Syndicate EMP Bomb"
-	desc = "A variation of the syndicate bomb designed to produce a large EMP effect."
+	name = "EMP Bomb"
+	desc = "A bomb designed to produce a large EMP effect."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/sbeacondrop/emp
 	cost = 7
@@ -91,8 +91,8 @@
 // High progression cost
 
 /datum/uplink_item/explosives/syndicate_bomb
-	name = "Syndicate Bomb"
-	desc = "The Syndicate bomb is a fearsome device capable of massive destruction. It has an adjustable timer, \
+	name = "High-yield Bomb"
+	desc = "This bomb is a fearsome device capable of massive destruction. It has an adjustable timer, \
 			with a minimum of 60 seconds, and can be bolted to the floor with a wrench to prevent \
 			movement. The bomb is bulky and cannot be moved; upon ordering this item, a smaller beacon will be \
 			transported to you that will teleport the actual bomb to it upon activation. Note that this bomb can \

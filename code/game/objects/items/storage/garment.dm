@@ -7,28 +7,28 @@
 	resistance_flags = FLAMMABLE
 
 /obj/item/storage/bag/garment/captain
-	name = "captain's garment bag"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the captain."
+	name = "exarch's garment bag"
+	desc = "A bag for storing extra clothes and shoes. This one belongs to the exarch."
 
 /obj/item/storage/bag/garment/hos
 	name = "justiciar's garment bag"
 	desc = "A bag for storing extra clothes and shoes. This one belongs to the justiciar."
 
 /obj/item/storage/bag/garment/hop
-	name = "head of personnel's garment bag"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the head of personnel."
+	name = "seneschal's garment bag"
+	desc = "A bag for storing extra clothes and shoes. This one belongs to the seneschal."
 
 /obj/item/storage/bag/garment/research_director
-	name = "research director's garment bag"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the research director."
+	name = "chiron research overseer's garment bag"
+	desc = "A bag for storing extra clothes and shoes. This one belongs to the chiron research overseer."
 
 /obj/item/storage/bag/garment/chief_medical
-	name = "chief medical officer's garment bag"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the chief medical officer."
+	name = "chiron biolab overseer's garment bag"
+	desc = "A bag for storing extra clothes and shoes. This one belongs to the biolab overseer."
 
 /obj/item/storage/bag/garment/engineering_chief
-	name = "chief engineer's garment bag"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the chief engineer."
+	name = "mekhane grand artificer's garment bag"
+	desc = "A bag for storing extra clothes and shoes. This one belongs to the grand artificer."
 
 /obj/item/storage/bag/garment/ComponentInitialize()
 	. = ..()
@@ -70,21 +70,21 @@
 	new /obj/item/clothing/suit/hooded/wintercoat/hop(src)
 
 /obj/item/storage/bag/garment/hos/PopulateContents()
-//	new /obj/item/clothing/under/rank/security/head_of_security/grey(src)
+	new /obj/item/clothing/under/rank/security/head_of_security/grey(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/skirt(src)
-//	new /obj/item/clothing/under/rank/security/head_of_security/alt(src)
-//	new /obj/item/clothing/under/rank/security/head_of_security/alt/skirt(src)
-//	new /obj/item/clothing/under/rank/security/head_of_security/parade/female(src)
-//	new /obj/item/clothing/under/rank/security/head_of_security/parade(src)
+	new /obj/item/clothing/under/rank/security/head_of_security/alt(src)
+	new /obj/item/clothing/under/rank/security/head_of_security/alt/skirt(src)
+	new /obj/item/clothing/under/rank/security/head_of_security/parade/female(src)
+	new /obj/item/clothing/under/rank/security/head_of_security/parade(src)
 	new /obj/item/clothing/suit/armor/hos(src)
 	new /obj/item/clothing/suit/armor/hos/hos_formal(src)
-//	new /obj/item/clothing/suit/armor/vest/leather(src)
-//	new /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch(src)
-//	new /obj/item/clothing/glasses/hud/security/sunglasses/gars/giga(src)
-//	new /obj/item/clothing/head/hos(src)
-//	new /obj/item/clothing/mask/gas/sechailer/swat(src)
-//	new /obj/item/clothing/neck/cloak/hos(src)
-//	new /obj/item/clothing/suit/hooded/wintercoat/security/hos(src)
+	new /obj/item/clothing/suit/armor/vest/leather(src)
+	new /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch(src)
+	new /obj/item/clothing/glasses/hud/security/sunglasses/gars/giga(src)
+	new /obj/item/clothing/head/hos(src)
+	new /obj/item/clothing/mask/gas/sechailer/swat(src)
+	new /obj/item/clothing/neck/cloak/hos(src)
+	new /obj/item/clothing/suit/hooded/wintercoat/security/hos(src)
 
 /obj/item/storage/bag/garment/research_director/PopulateContents()
 	new /obj/item/clothing/under/rank/rnd/research_director(src)

@@ -188,7 +188,7 @@
 
 /obj/item/clothing/gloves/color/captain
 	desc = "Regal blue gloves, with a nice gold trim, a diamond anti-shock coating, and an integrated thermal barrier. Swanky."
-	name = "captain's gloves"
+	name = "exarch's gloves"
 	icon_state = "captain"
 	inhand_icon_state = "egloves"
 	siemens_coefficient = 0

@@ -299,7 +299,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 
 /obj/structure/sign/poster/contraband/lamarr
 	name = "Lamarr"
-	desc = "This poster depicts Lamarr. Probably made by a traitorous Research Director."
+	desc = "This poster depicts Lamarr. Probably made by a traitorous Research Overseer."
 	icon_state = "lamarr"
 
 /obj/structure/sign/poster/contraband/borg_fancy_1
@@ -767,7 +767,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/random, 32)
 
 /obj/structure/sign/poster/official/moth_meth
 	name = "Safety Moth - Methamphetamine"
-	desc = "This informational poster uses Safety Moth™ to tell the viewer to seek CMO approval before cooking methamphetamine. \"Stay close to the target temperature, and never go over!\" ...You shouldn't ever be making this."
+	desc = "This informational poster uses Safety Moth™ to tell the viewer to seek Biolab Overseer approval before cooking methamphetamine. \"Stay close to the target temperature, and never go over!\" ...You shouldn't ever be making this."
 	icon_state = "aspev_meth"
 
 /obj/structure/sign/poster/official/moth_epi
@@ -782,13 +782,6 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/random, 32)
 //End of AspEv posters
 
 //Unity Propaganda
-
-/obj/structure/sign/poster/official/homeguard_xeno
-	name = "Unity Propaganda - Edict Guard"
-	desc = "This entirely unbiased piece of Unity propaganda informs the reader that the Home Guard are Edict supporting terrorists, and to report Home Guard members to Unity officers at once."
-	icon_state = "xeno_en"
-/obj/structure/sign/poster/official/homeguard_xeno/cn
-	icon_state = "xeno_cn"
 
 /obj/structure/sign/poster/official/unity_hero
 	name = "Unity Propaganda - Unity Hero"
@@ -806,10 +799,5 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/random, 32)
 	name = "Unity Propaganda - Enlist"
 	desc = "This entirely unbiased piece of Unity propaganda reminds the reader that the Unity is offering doubled corn syrup rations to those willing to fight in their name. Huh."
 	icon_state = "unity_enlist"
-
-/obj/structure/sign/poster/official/allseeing
-	name = "Unity Propaganda - Panopticon"
-	desc = "This entirely unbiased piece of Unity propaganda reminds the reader that resistance is pointless, and that the Unity has full access to the ship's surveillance systems. Nothing will escape their gaze."
-	icon_state = "allseeing"
 
 #undef PLACE_SPEED

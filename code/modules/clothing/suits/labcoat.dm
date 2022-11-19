@@ -29,7 +29,7 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 50, FIRE = 50, ACID = 50)
 
 /obj/item/clothing/suit/toggle/labcoat/cmo
-	name = "chief medical officer's labcoat"
+	name = "biolab overseer's labcoat"
 	desc = "Bluer than the standard model."
 	icon_state = "labcoat_cmo"
 	inhand_icon_state = "labcoat_cmo"
