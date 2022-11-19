@@ -8,7 +8,7 @@
 #define TURF_FIRE_ENERGY_PER_BURNED_OXY_MOL 12000
 #define TURF_FIRE_BURN_RATE_BASE 0.12
 #define TURF_FIRE_BURN_RATE_PER_POWER 0.02
-#define TURF_FIRE_BURN_CARBON_DIOXIDE_MULTIPLIER 0.75
+#define TURF_FIRE_BURN_CARBON_DIOXIDE_MULTIPLIER 1.2
 #define TURF_FIRE_BURN_MINIMUM_OXYGEN_REQUIRED 0.5
 #define TURF_FIRE_BURN_PLAY_SOUND_EFFECT_CHANCE 6
 
@@ -99,26 +99,26 @@
 	var/turf/open/open_turf = loc
 	if(open_turf.planetary_atmos)
 		return TRUE
-	var/datum/gas_mixture/cached_air = open_turf.air
-	var/oxy = cached_air.get_moles(GAS_O2)
-	if (oxy < TURF_FIRE_BURN_MINIMUM_OXYGEN_REQUIRED)
+	var/list/air_gases = open_turf.air?.gases
+	if(!air_gases)
 		return FALSE
-	var/temperature = cached_air.return_temperature()
+	var/oxy = air_gases[/datum/gas/oxygen] ? air_gases[/datum/gas/oxygen][MOLES] : 0
+	if (oxy < 0.5)
+		return FALSE
+	var/datum/gas_mixture/cached_air = open_turf.air
+	var/temperature = cached_air.temperature
 	var/old_heat_capacity = cached_air.heat_capacity()
 	var/burn_rate = TURF_FIRE_BURN_RATE_BASE + fire_power * TURF_FIRE_BURN_RATE_PER_POWER
 	if(burn_rate > oxy)
 		burn_rate = oxy
 
-	var/new_o2 = (cached_air.get_moles(GAS_O2) - burn_rate)
-	cached_air.set_moles(GAS_O2, new_o2)
+	air_gases[/datum/gas/oxygen][MOLES] = air_gases[/datum/gas/oxygen][MOLES] - burn_rate
+	ASSERT_GAS(/datum/gas/carbon_dioxide,cached_air)
 
-	var/new_co2 = (cached_air.get_moles(GAS_O2) + burn_rate * TURF_FIRE_BURN_CARBON_DIOXIDE_MULTIPLIER)
-	cached_air.set_moles(GAS_CO2, new_co2)
-
+	air_gases[/datum/gas/carbon_dioxide][MOLES] += burn_rate * TURF_FIRE_BURN_CARBON_DIOXIDE_MULTIPLIER
 	var/new_heat_capacity = cached_air.heat_capacity()
 	var/energy_released = burn_rate * TURF_FIRE_ENERGY_PER_BURNED_OXY_MOL
-	cached_air.adjust_heat((temperature * old_heat_capacity + energy_released) / new_heat_capacity)
-	open_turf.air = cached_air
+	cached_air.temperature = (temperature * old_heat_capacity + energy_released) / new_heat_capacity
 	open_turf.air_update_turf(TRUE)
 	return TRUE
 

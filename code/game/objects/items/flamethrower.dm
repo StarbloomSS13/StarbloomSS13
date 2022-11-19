@@ -190,7 +190,7 @@
 
 #define REQUIRED_POWER_TO_FIRE_FLAMETHROWER 10
 #define FLAMETHROWER_POWER_MULTIPLIER 0.5
-#define FLAMETHROWER_RANGE 4
+#define FLAMETHROWER_RANGE 2 //for some reason, in this codebase 4 makes it flame 8 tiles instead of 4 tiles, so we set to 2 tiles so it only flames 4
 #define FLAMETHROWER_RELEASE_AMOUNT 8
 
 /obj/item/flamethrower/proc/flame_turf(target)
@@ -278,14 +278,7 @@
 		update_icon()
 
 /obj/item/flamethrower/full
-	icon = 'icons/obj/guns/48x32guns.dmi'
-	inhand_icon_state = "prebuilt_flamethrower_0"
 	create_full = TRUE
-
-/obj/item/flamethrower/full/update_icon_state()
-	inhand_icon_state = "prebuilt_flamethrower_[lit]"
-	return ..()
-
 /obj/item/flamethrower/full/tank
 	create_with_tank = TRUE
 
