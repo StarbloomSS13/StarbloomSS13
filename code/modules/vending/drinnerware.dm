@@ -35,3 +35,26 @@
 /obj/item/vending_refill/dinnerware
 	machine_name = "Plasteel Chef's Dinnerware Vendor"
 	icon_state = "refill_smoke"
+
+/obj/machinery/vending/dinnerware/public
+	name = "Public Dinnerware Vendor"
+	products = list(
+		/obj/item/reagent_containers/glass/bowl = 24,
+		/obj/item/kitchen/fork/plastic = 24,
+		/obj/item/kitchen/spoon/plastic = 24,
+		/obj/item/knife/plastic = 24,
+		/obj/item/reagent_containers/food/drinks/drinkingglass = 24,
+		/obj/item/reagent_containers/food/condiment/pack/ketchup = 12,
+		/obj/item/reagent_containers/food/condiment/pack/hotsauce = 12,
+		/obj/item/reagent_containers/food/condiment/pack/astrotame = 12,
+		/obj/item/reagent_containers/food/condiment/saltshaker = 12,
+		/obj/item/reagent_containers/food/condiment/peppermill = 12,
+		/obj/item/plate/small = 12,
+		/obj/item/plate = 24,
+		/obj/item/plate/large = 12,
+		/obj/item/storage/lunchbox/unity = 6,
+		/obj/item/storage/lunchbox/homeguard = 6,
+		/obj/item/storage/lunchbox/slugcat = 6,
+		/obj/item/storage/lunchbox/corgi = 6,
+		/obj/item/storage/lunchbox/amongus = 6
+	)

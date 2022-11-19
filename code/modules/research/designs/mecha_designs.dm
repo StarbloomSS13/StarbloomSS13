@@ -412,6 +412,16 @@
 	construction_time = 100
 	category = list("Exosuit Equipment")
 
+/datum/design/mech_light_amplification
+	name = "Exosuit Module (Light Amplification Module)"
+	desc = "Exosuit vision enhancement module for night vision and meson capabilities."
+	id = "mech_light_amplification"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/mecha_equipment/light_amplification
+	materials = list(/datum/material/iron=4000,/datum/material/glass = 2000,/datum/material/uranium = 2000,/datum/material/silver=2000)
+	construction_time = 100
+	category = list("Exosuit Equipment")
+
 /datum/design/mech_diamond_drill
 	name = "Exosuit Mining (Diamond Mining Drill)"
 	desc = "An upgraded version of the standard drill."
@@ -442,22 +452,43 @@
 	construction_time = 100
 	category = list("Exosuit Equipment")
 
-/datum/design/mech_lmg
+/datum/design/mech_uac2
 	name = "Exosuit Weapon (\"Ultra AC 2\" LMG)"
 	desc = "A weapon for combat exosuits. Shoots a rapid, three shot burst."
-	id = "mech_lmg"
+	id = "mech_uac2"
 	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg
+	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/uac2
 	materials = list(/datum/material/iron=10000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
 
-/datum/design/mech_lmg_ammo
+/datum/design/mech_ac2_ammo
 	name = "Ultra AC 2 Ammunition"
-	desc = "Ammunition for the Ultra AC 2 LMG"
-	id = "mech_lmg_ammo"
+	desc = "Ammunition for the Ultra AC 2 LMG."
+	id = "mech_ac2_ammo"
 	build_type = PROTOLATHE | AWAY_LATHE | MECHFAB
-	build_path = /obj/item/mecha_ammo/lmg
+	build_path = /obj/item/mecha_ammo/ac2
+	materials = list(/datum/material/iron=4000)
+	construction_time = 20
+	category = list("Exosuit Ammunition", "Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/mech_ac5
+	name = "Exosuit Weapon (Autocannon/5 MG)"
+	desc = "A weapon for combat exosuits. Fires a singular armor-piercing round."
+	id = "mech_ac5"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/ac5
+	materials = list(/datum/material/iron=10000)
+	construction_time = 100
+	category = list("Exosuit Equipment")
+
+/datum/design/mech_ac5_ammo
+	name = "Autocannon/5 Ammunition"
+	desc = "Ammunition for the Autocannon/5 MG."
+	id = "mech_ac5_ammo"
+	build_type = PROTOLATHE | AWAY_LATHE | MECHFAB
+	build_path = /obj/item/mecha_ammo/ac5
 	materials = list(/datum/material/iron=4000)
 	construction_time = 20
 	category = list("Exosuit Ammunition", "Ammo")

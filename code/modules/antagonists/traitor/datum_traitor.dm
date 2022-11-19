@@ -72,6 +72,11 @@
 
 	pick_employer()
 
+	var/mob/living/carbon/human/H = owner.current
+
+	var/obj/item/organ/cyberimp/brain/edict_organ/implant_organ = new /obj/item/organ/cyberimp/brain/edict_organ
+	implant_organ.Insert(H)
+
 	owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/tatoralert.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 
 	return ..()
@@ -134,16 +139,8 @@
 	return ..()
 
 /datum/antagonist/traitor/proc/pick_employer()
-	var/faction = prob(75) ? FACTION_SYNDICATE : FACTION_NANOTRASEN
 	var/list/possible_employers = list()
-
-	possible_employers.Add(GLOB.syndicate_employers, GLOB.nanotrasen_employers)
-
-	switch(faction)
-		if(FACTION_SYNDICATE)
-			possible_employers -= GLOB.nanotrasen_employers
-		if(FACTION_NANOTRASEN)
-			possible_employers -= GLOB.syndicate_employers
+	possible_employers = GLOB.edict_employers
 	employer = pick(possible_employers)
 	traitor_flavor = strings(TRAITOR_FLAVOR_FILE, employer)
 

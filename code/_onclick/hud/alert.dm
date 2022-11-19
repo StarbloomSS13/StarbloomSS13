@@ -683,7 +683,7 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 
 /atom/movable/screen/alert/locked
 	name = "Locked Down"
-	desc = "Unit has been remotely locked down. Usage of a Robotics Control Console like the one in the Research Director's \
+	desc = "Unit has been remotely locked down. Usage of a Robotics Control Console like the one in the Chiron Research Overseer's \
 		office by your AI master or any qualified human may resolve this matter. Robotics may provide further assistance if necessary."
 	icon_state = ALERT_LOCKED
 
@@ -829,11 +829,6 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 
 	carbon_owner.changeNext_move(CLICK_CD_RESIST)
 	carbon_owner.shoes.handle_tying(carbon_owner)
-
-/atom/movable/screen/alert/numbed
-	name = "Numbed"
-	desc = "Your body is numb, painless. You're under the effect of some kind of painkiller."
-	icon_state = "stasis"
 
 // PRIVATE = only edit, use, or override these if you're editing the system as a whole
 

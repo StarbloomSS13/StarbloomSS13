@@ -250,3 +250,9 @@
 	fire_sound = 'sound/weapons/gun/sniper/shot.ogg'
 	can_be_sawn_off = FALSE
 	can_jam = FALSE
+
+//Starbloom - Memoria
+/obj/item/gun/ballistic/rifle/boltaction/memoria
+	name = "7.62 Memoria"
+	desc = "A classic variant of an old Earth rifle. Dated, but powerful."
+	fire_sound = 'sound/weapons/gun/revolver/starbloom_revolver.ogg'

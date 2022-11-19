@@ -12,8 +12,9 @@
 
 /obj/projectile/bullet/a556/hp
 	name = "5.56mm hollowpoint bullet"
-	damage = 30
-	weak_against_armour = TRUE
+	damage = 20
+	weak_against_armour = FALSE
+	armour_penetration = -30
 	wound_bonus = 30
 
 /obj/projectile/bullet/a556/i
@@ -27,6 +28,14 @@
 		var/mob/living/carbon/M = target
 		M.adjust_fire_stacks(6)
 		M.IgniteMob()
+
+/obj/projectile/bullet/a556/rad
+	name = "5.56mm radioactive bullet"
+	damage = 10
+	weak_against_armour = TRUE
+
+/obj/projectile/bullet/a556/rad/on_hit(atom/target, blocked = FALSE)
+	radiation_pulse(target, max_range = 0, threshold = 0, chance = 100)
 
 /obj/projectile/bullet/a556/phasic
 	name = "5.56mm phasic bullet"
@@ -43,14 +52,15 @@
 
 /obj/projectile/bullet/a762/ap
 	name = "7.62 armour-piercing bullet"
-	damage = 40
+	damage = 50
 	armour_penetration = 50
 	wound_bonus = -30
 
 /obj/projectile/bullet/a762/hp
 	name = "7.62 hollowpoint bullet"
 	damage = 60
-	weak_against_armour = TRUE
+	weak_against_armour = FALSE
+	armour_penetration = -50
 	wound_bonus = 30
 
 /obj/projectile/bullet/a762/i
@@ -64,6 +74,14 @@
 		var/mob/living/carbon/M = target
 		M.adjust_fire_stacks(6)
 		M.IgniteMob()
+
+/obj/projectile/bullet/a762/rad
+	name = "7.62 radioactive bullet"
+	damage = 40
+	weak_against_armour = TRUE
+
+/obj/projectile/bullet/a762/rad/on_hit(atom/target, blocked = FALSE)
+	radiation_pulse(target, max_range = 0, threshold = 0, chance = 100)
 
 /obj/projectile/bullet/a762/enchanted
 	name = "enchanted 7.62 bullet"
@@ -95,6 +113,6 @@
 /obj/projectile/bullet/magnetic
 	name = "magnetic slug"
 	icon_state = "mag"
-	damage = 25
+	damage = 30
 	armour_penetration = 50
 	wound_bonus = -30

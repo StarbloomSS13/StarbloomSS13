@@ -7,7 +7,7 @@
 	faction = FACTION_STATION
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "the quartermaster and the head of personnel"
+	supervisors = "the quartermaster and the seneschal"
 	selection_color = "#dcba97"
 	exp_granted_type = EXP_TYPE_CREW
 
@@ -53,6 +53,7 @@
 
 	box = /obj/item/storage/box/survival/mining
 	chameleon_extras = /obj/item/gun/energy/plasmacutter
+	skillchips = list(/obj/item/skillchip/job/off_z_pain_resistance)
 
 /datum/outfit/job/salvage_crew/equipped
 	name = "Salvage Crew (Equipment)"

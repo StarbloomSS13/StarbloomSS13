@@ -1,6 +1,7 @@
 /obj/machinery/vending/wallmed
 	name = "\improper NanoMed"
 	desc = "Wall-mounted Medical Equipment dispenser."
+	icon = 'starbloom_modules/aesthetics/wallmed/icons/wallmed.dmi'
 	icon_state = "wallmed"
 	icon_deny = "wallmed-deny"
 	panel_type = "panel-wall"
@@ -14,7 +15,10 @@
 		/obj/item/reagent_containers/medigel/aiuri = 2,
 		/obj/item/reagent_containers/medigel/sterilizine = 1,
 		/obj/item/healthanalyzer/wound = 2,
-		/obj/item/stack/medical/bone_gel/four = 2
+		/obj/item/stack/medical/bone_gel/four = 2,
+		/obj/item/shock_blanket/emergency = 2,
+		/obj/item/temperature_pack/cold = 1,
+		/obj/item/temperature_pack/heat = 1,
 	)
 	contraband = list(
 		/obj/item/reagent_containers/pill/tox = 2,

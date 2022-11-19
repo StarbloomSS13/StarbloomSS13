@@ -310,18 +310,20 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/requests_console, 30)
 
 		var/radio_freq
 		switch(ckey(to_department))
-			if("bridge")
+			if("bridge", "command")
 				radio_freq = FREQ_COMMAND
-			if("medbay")
+			if("medbay", "medical")
 				radio_freq = FREQ_MEDICAL
-			if("science")
+			if("science", "circuitlab", "robotics", "genetics", "xenobiology")
 				radio_freq = FREQ_SCIENCE
-			if("engineering")
+			if("engineering", "atmospherics")
 				radio_freq = FREQ_ENGINEERING
 			if("security")
 				radio_freq = FREQ_SECURITY
-			if("cargobay", "mining")
+			if("cargobay", "cargo", "mining", "salvage", "salvagebay")
 				radio_freq = FREQ_SUPPLY
+			if("service", "servicehall")
+				radio_freq = FREQ_SERVICE
 
 		var/datum/signal/subspace/messaging/rc/signal = new(src, list(
 			"sender" = department,

@@ -119,7 +119,7 @@
 
 /obj/vehicle/sealed/mecha/combat/marauder/mauler/loaded
 	equip_by_category = list(
-		MECHA_L_ARM = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg,
+		MECHA_L_ARM = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/uac2,
 		MECHA_R_ARM = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack,
 		MECHA_UTILITY = list(/obj/item/mecha_parts/mecha_equipment/thrusters/ion),
 		MECHA_POWER = list(),

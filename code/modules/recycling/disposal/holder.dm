@@ -82,6 +82,10 @@
 /obj/structure/disposalholder/proc/try_expel(datum/move_loop/source, succeed, visual_delay)
 	SIGNAL_HANDLER
 	if(current_pipe || !active)
+		if(prob(20))
+			for(var/mob/living/H in(src))
+				H.apply_damage(5, BRUTE)
+				playsound(src.loc, 'sound/effects/wounds/crack1.ogg', 50, FALSE, FALSE)
 		return
 	last_pipe.expel(src, get_turf(src), dir)
 

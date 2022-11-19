@@ -122,29 +122,29 @@
 	greyscale_colors = "#789876#a92323"
 
 /obj/item/pda/heads/hop
-	name = "head of personnel PDA"
+	name = "seneschal PDA"
 	default_cartridge = /obj/item/cartridge/hop
 
 /obj/item/pda/heads/hos
-	name = "head of security PDA"
+	name = "justiciar PDA"
 	default_cartridge = /obj/item/cartridge/hos
 	greyscale_config = /datum/greyscale_config/pda/head
 	greyscale_colors = "#cc4242#0000cc"
 
 /obj/item/pda/heads/ce
-	name = "chief engineer PDA"
+	name = "grand artificer PDA"
 	default_cartridge = /obj/item/cartridge/ce
 	greyscale_config = /datum/greyscale_config/pda/stripe_thick/head
 	greyscale_colors = "#C4A56D#69DBF3#e2e2e2"
 
 /obj/item/pda/heads/cmo
-	name = "chief medical officer PDA"
+	name = "biolab overseer PDA"
 	default_cartridge = /obj/item/cartridge/cmo
 	greyscale_config = /datum/greyscale_config/pda/stripe_thick/head
 	greyscale_colors = "#e2e2e2#000099#5d99be"
 
 /obj/item/pda/heads/rd
-	name = "research director PDA"
+	name = "research overseer PDA"
 	default_cartridge = /obj/item/cartridge/rd
 	insert_type = /obj/item/pen/fountain
 	greyscale_config = /datum/greyscale_config/pda/stripe_thick/head

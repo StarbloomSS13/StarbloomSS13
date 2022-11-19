@@ -31,12 +31,15 @@
 	preop_sound = 'sound/surgery/scalpel1.ogg'
 	success_sound = 'sound/surgery/organ1.ogg'
 	failure_sound = 'sound/surgery/organ2.ogg'
+	surgery_moodlet = /datum/mood_event/surgery/major
+	pain_overlay_severity = 2
+	pain_amount = 20
 
 /datum/surgery_step/hepatectomy/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	display_results(user, target, span_notice("You begin to cut out a damaged piece of [target]'s liver..."),
 		span_notice("[user] begins to make an incision in [target]."),
 		span_notice("[user] begins to make an incision in [target]."))
-	display_pain(target, "Your abdomen burns in horrific stabbing pain!")
+	give_surgery_pain(target, "Your abdomen burns in horrific stabbing pain!", target_zone = target_zone)
 
 /datum/surgery_step/hepatectomy/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	var/mob/living/carbon/human/human_target = target
@@ -44,7 +47,8 @@
 	display_results(user, target, span_notice("You successfully remove the damaged part of [target]'s liver."),
 		span_notice("[user] successfully removes the damaged part of [target]'s liver."),
 		span_notice("[user] successfully removes the damaged part of [target]'s liver."))
-	display_pain(target, "The pain receeds slightly.")
+	give_surgery_pain(target, "The pain receeds slightly.", target_zone = target_zone)
+	target.cause_pain(target_zone, -15)
 	return ..()
 
 /datum/surgery_step/hepatectomy/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery)
@@ -53,4 +57,4 @@
 	display_results(user, target, span_warning("You cut the wrong part of [target]'s liver!"),
 		span_warning("[user] cuts the wrong part of [target]'s liver!"),
 		span_warning("[user] cuts the wrong part of [target]'s liver!"))
-	display_pain(target, "You feel a sharp stab inside your abdomen!")
+	give_surgery_pain(target, "You feel a sharp stab inside your abdomen!", target_zone = target_zone)

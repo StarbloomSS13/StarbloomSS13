@@ -167,6 +167,14 @@
 	foodtype = GRAIN | ALCOHOL
 	custom_price = PAYCHECK_EASY
 
+/obj/item/reagent_containers/food/drinks/bottle/beer/Initialize(mapload)
+	. = ..()
+	if(reagents.get_reagent_amount(/datum/reagent/consumable/ethanol/beer) > 1)
+		AddElement(/datum/element/temperature_pack, \
+			pain_heal_rate = 0.3, \
+			pain_modifier_on_limb = 0.9, \
+			temperature_change = -2)
+
 /obj/item/reagent_containers/food/drinks/bottle/beer/almost_empty
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer = 1)
 

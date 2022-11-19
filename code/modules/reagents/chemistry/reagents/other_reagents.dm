@@ -1198,7 +1198,7 @@
 	taste_description = "numbness"
 	ph = 9.1
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	addiction_types = list(/datum/addiction/opiods = 10)
+	addiction_types = list(/datum/addiction/opioids = 10)
 
 /datum/reagent/impedrezene/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	M.jitteriness = max(M.jitteriness - (2.5*delta_time),0)
@@ -1460,9 +1460,11 @@
 /datum/reagent/healium/on_mob_metabolize(mob/living/L)
 	. = ..()
 	L.PermaSleeping()
+	L.apply_status_effect(/datum/status_effect/grouped/anesthetic, name)
 
 /datum/reagent/healium/on_mob_end_metabolize(mob/living/L)
 	L.SetSleeping(10)
+	L.remove_status_effect(/datum/status_effect/grouped/anesthetic, name)
 	return ..()
 
 /datum/reagent/healium/on_mob_life(mob/living/L, delta_time, times_fired)
@@ -2620,6 +2622,7 @@
 
 /datum/reagent/gravitum/on_mob_end_metabolize(mob/living/L)
 	L.RemoveElement(/datum/element/forced_gravity, 0)
+	return ..()
 
 /datum/reagent/cellulose
 	name = "Cellulose Fibers"
@@ -2637,6 +2640,8 @@
 	color = "#D2FFFA"
 	metabolization_rate = 0.75 * REAGENTS_METABOLISM // 5u (WOUND_DETERMINATION_CRITICAL) will last for ~34 seconds
 	self_consuming = TRUE
+	pain_modifier = 0.8 // Small, but getting the determined status effect gives us a stronger one
+
 	/// Whether we've had at least WOUND_DETERMINATION_SEVERE (2.5u) of determination at any given time. No damage slowdown immunity or indication we're having a second wind if it's just a single moderate wound
 	var/significant = FALSE
 

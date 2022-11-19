@@ -68,3 +68,15 @@
 /obj/vehicle/ridden/zap_act(power, zap_flags)
 	zap_buckle_check(power)
 	return ..()
+
+/obj/vehicle/ridden/relaymove(mob/living/user, direction)
+	if(ishuman(user))
+		var/mob/living/carbon/human/target = user
+		if(target.wear_suit)
+			var/obj/item/clothing/target_suit = target.wear_suit
+			if(target_suit.slowdown >= 2.5) //If our clothing's too thicc, we can't ride.
+				to_chat(user, span_warning("You are too heavy for the [src] to move!"))
+				canmove = FALSE
+				addtimer(VARSET_CALLBACK(src, canmove, TRUE), 2 SECONDS)
+				return FALSE
+	return ..()

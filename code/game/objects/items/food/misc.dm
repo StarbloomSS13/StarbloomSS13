@@ -502,7 +502,7 @@
 	name = "cotton candy lollipop"
 	desc = "A sweet cotton candy lollipop containing a low dose of a painkiller."
 	icon_state = "morphine"
-	food_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/sugar = 5, /datum/reagent/medicine/morphine = 5)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/consumable/sugar = 5, /datum/reagent/medicine/painkiller/morphine = 5)
 	tastes = list("cotton candy" = 1)
 
 /obj/item/food/bubblegum

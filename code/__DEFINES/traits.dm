@@ -423,7 +423,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 // If present on a mob or mobmind, allows them to "suplex" an immovable rod
 // turning it into a glorified potted plant, and giving them an
 // achievement. Can also be used on rod-form wizards.
-// Normally only present in the mind of a Research Director.
+// Normally only present in the mind of a Research Overseer.
 #define TRAIT_ROD_SUPLEX "rod_suplex"
 
 /// This mob is currently in rod form.
@@ -789,6 +789,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define ORBITING_TRAIT "orbiting"
 /// From the item_scaling element
 #define ITEM_SCALING_TRAIT "item_scaling"
+#define MECH_TRAIT "mech_trait"
 
 /**
 * Trait granted by [/mob/living/carbon/Initialize] and
@@ -864,5 +865,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Ignores body_parts_covered during the add_fingerprint() proc. Works both on the person and the item in the glove slot.
 #define TRAIT_FINGERPRINT_PASSTHROUGH "fingerprint_passthrough"
 
-/// Trait for painless surgery, used with painkillers
-#define TRAIT_NUMBED "numbed"
+/// Mob is on anesthetic
+#define TRAIT_ON_ANESTHETIC "on_anesthetic"
+/// If the mob enters shock, they will have +1 cure condition (helps cure it faster)
+#define TRAIT_ABATES_SHOCK "shock_abated"

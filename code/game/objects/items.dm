@@ -1394,3 +1394,15 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 
 /obj/item/proc/set_painting_tool_color(chosen_color)
 	SEND_SIGNAL(src, COMSIG_PAINTING_TOOL_SET_COLOR, chosen_color)
+
+// Frozen items become usable temperature packs.
+/obj/item/make_frozen_visual()
+	. = ..()
+	if(obj_flags & FROZEN)
+		AddElement(/datum/element/temperature_pack, FROZEN_ITEM_PAIN_RATE, FROZEN_ITEM_PAIN_MODIFIER, FROZEN_ITEM_TEMPERATURE_CHANGE)
+
+// And stop being usable when unfrozen, duh
+/obj/item/make_unfrozen()
+	. = ..()
+	if(!(obj_flags & FROZEN))
+		RemoveElement(/datum/element/temperature_pack, FROZEN_ITEM_PAIN_RATE, FROZEN_ITEM_PAIN_MODIFIER, FROZEN_ITEM_TEMPERATURE_CHANGE)

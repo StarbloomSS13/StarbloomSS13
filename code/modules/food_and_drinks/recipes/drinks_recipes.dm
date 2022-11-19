@@ -315,7 +315,7 @@
 
 /datum/chemical_reaction/drink/neurotoxin
 	results = list(/datum/reagent/consumable/ethanol/neurotoxin = 2)
-	required_reagents = list(/datum/reagent/consumable/ethanol/gargle_blaster = 1, /datum/reagent/medicine/morphine = 1)
+	required_reagents = list(/datum/reagent/consumable/ethanol/gargle_blaster = 1, /datum/reagent/medicine/painkiller/morphine = 1)
 	reaction_tags = REACTION_TAG_DRINK | REACTION_TAG_EASY | REACTION_TAG_OTHER
 
 /datum/chemical_reaction/drink/snowwhite
@@ -463,10 +463,6 @@
 /datum/chemical_reaction/drink/coffee
 	results = list(/datum/reagent/consumable/coffee = 5)
 	required_reagents = list(/datum/reagent/toxin/coffeepowder = 1, /datum/reagent/water = 5)
-
-/datum/chemical_reaction/drink/tea
-	results = list(/datum/reagent/consumable/tea = 5)
-	required_reagents = list(/datum/reagent/toxin/teapowder = 1, /datum/reagent/water = 5)
 
 /datum/chemical_reaction/drink/eggnog
 	results = list(/datum/reagent/consumable/ethanol/eggnog = 15)
@@ -700,7 +696,7 @@
 
 /datum/chemical_reaction/drink/the_juice
 	results = list(/datum/reagent/consumable/ethanol/the_juice = 5)
-	required_reagents = list(/datum/reagent/consumable/mushroom_tea = 1, /datum/reagent/bluespace = 1, /datum/reagent/toxin/mindbreaker = 1, /datum/reagent/consumable/ethanol/neurotoxin = 1, /datum/reagent/medicine/morphine = 1)
+	required_reagents = list(/datum/reagent/consumable/mushroom_tea = 1, /datum/reagent/bluespace = 1, /datum/reagent/toxin/mindbreaker = 1, /datum/reagent/consumable/ethanol/neurotoxin = 1, /datum/reagent/medicine/painkiller/morphine = 1)
 	mix_message = "The liquids all swirl together into a deep purple."
 
 /datum/chemical_reaction/drink/admiralty
@@ -746,7 +742,7 @@
 
 /datum/chemical_reaction/drink/shirley_temple
 	results = list(/datum/reagent/consumable/shirley_temple = 3)
-	required_reagents = list(/datum/reagent/consumable/sol_dry = 2, /datum/reagent/consumable/grenadine = 1)
+	required_reagents = list(/datum/reagent/consumable/lemon_lime = 2, /datum/reagent/consumable/grenadine = 1)
 
 /datum/chemical_reaction/drink/agua_fresca
 	results = list(/datum/reagent/consumable/agua_fresca = 10)
@@ -768,3 +764,19 @@
 /datum/chemical_reaction/drink/pile_driver
 	results = list(/datum/reagent/consumable/ethanol/pile_driver = 2)
 	required_reagents = list(/datum/reagent/consumable/ethanol/rum_coke = 1, /datum/reagent/consumable/ethanol/screwdrivercocktail = 1)
+
+/datum/chemical_reaction/drink/green_tea
+	results = list(/datum/reagent/consumable/green_tea = 5)
+	required_reagents = list(/datum/reagent/toxin/teapowder = 1, /datum/reagent/water = 5)
+
+/datum/chemical_reaction/drink/ice_greentea
+	results = list(/datum/reagent/consumable/ice_greentea = 4)
+	required_reagents = list(/datum/reagent/consumable/ice = 1, /datum/reagent/consumable/green_tea = 3)
+
+/datum/chemical_reaction/drink/green_hill_tea
+	results = list(/datum/reagent/consumable/green_hill_tea = 1)
+	required_reagents = list(/datum/reagent/consumable/ethanol/sugar_rush = 4, /datum/reagent/consumable/ice_greentea = 4) //despite containing alcohol, the resulting beverage is non-alcoholic, alcoholic sonic is funny but no.
+
+/datum/chemical_reaction/drink/samogon_sonata
+	results = list(/datum/reagent/consumable/ethanol/samogon_sonata = 2)
+	required_reagents = list(/datum/reagent/consumable/ethanol = 1, /datum/reagent/consumable/ethanol/black_russian = 1, /datum/reagent/consumable/ethanol/moonshine = 1)

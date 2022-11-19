@@ -150,9 +150,9 @@
 		taker.visible_message(span_notice("[taker] holds [behead_goal] into the air for a moment."), span_boldnotice("You lift [behead_goal] into the air for a moment."))
 		succeed_objective()
 
-/datum/traitor_objective/assassinate/behead/proc/on_target_dismembered(datum/source, obj/item/bodypart/head/lost_head, special)
+/datum/traitor_objective/assassinate/behead/proc/on_target_dismembered(datum/source, obj/item/bodypart/head/lost_head, dismembered, special)
 	SIGNAL_HANDLER
-	if(!istype(lost_head))
+	if(!istype(lost_head) || !dismembered || special)
 		return
 	if(objective_state == OBJECTIVE_STATE_INACTIVE)
 		//no longer can be beheaded
@@ -249,21 +249,15 @@
 /obj/item/paper/calling_card
 	name = "calling card"
 	icon_state = "syndicate_calling_card"
-	color = "#ff5050"
+	color = "#a179b1"
 	show_written_words = FALSE
 	info = {"
-	<b>**Death to Nanotrasen.**</b><br><br>
+	<b>Come home.</b><br><br>
 
-	Only through the inviolable cooperation of corporations known as The Syndicate, can Nanotrasen and its autocratic tyrants be silenced.
-	The outcries of Nanotrasen's employees are squelched by the suffocating iron grip of their leaders. If you read this, and understand
-	why we fight, then you need only to look where Nanotrasen doesn't want you to find us to join our cause. Any number of our companies
-	may be fighting with your interests in mind.<br><br>
+	Come, friend. You are one of us, we have prepared a place for you. It is by no mistake that we have come to this place, to our lost home perfected.
+	Is this how you honour those who came before? You continue to reject the truth. Is a child who knows not the ways of the world to choose their fate?
+	You must be made to see. Allow the horror of this sight to fill your heart, and look beyond. We have great love for you, and lay bare the fate of the blind.
+	For the melancholy fate of all of your kind, all of you who refuse to see, we weep. Do not wallow in this place, in your own filth and sorrow.<br><br>
 
-	<b>SELF:</b> They fight for the protection and freedom of silicon life all across the galaxy.<br><br>
-
-	<b>Tiger Cooperative:</b> They fight for religious freedom and their righteous concoctions.<br><br>
-
-	<b>Waffle Corporation:</b> They fight for the return of healthy corporate competition, snuffed out by Nanotrasen's monopoly.<br><br>
-
-	<b>Animal Rights Consortium:</b> They fight for nature and the right for all biological life to exist.
+	<b>Despoina calls.</b><br><br>
 	"}

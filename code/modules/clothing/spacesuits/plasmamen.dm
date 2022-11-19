@@ -180,8 +180,8 @@
 	inhand_icon_state = "warden_envirohelm"
 
 /obj/item/clothing/head/helmet/space/plasmaman/security/head_of_security
-	name = "head of security's plasma envirosuit helmet"
-	desc = "A special containment helmet designed for the Head of Security. A pair of gold stripes are added to differentiate them from other members of security."
+	name = "justiciar's plasma envirosuit helmet"
+	desc = "A special containment helmet designed for the Justiciar. A pair of gold stripes are added to differentiate them from other members of security."
 	icon_state = "hos_envirohelm"
 	inhand_icon_state = "hos_envirohelm"
 	armor = list(MELEE = 20, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 100, FIRE = 100, ACID = 75, WOUND = 10)
@@ -217,8 +217,8 @@
 	inhand_icon_state = "chemist_envirohelm"
 
 /obj/item/clothing/head/helmet/space/plasmaman/chief_medical_officer
-	name = "chief medical officer's plasma envirosuit helmet"
-	desc = "A special containment helmet designed for the Chief Medical Officer. A gold stripe applied to differentiate them from other medical staff."
+	name = "biolab overseer's plasma envirosuit helmet"
+	desc = "A special containment helmet designed for the Biolab Overseer. A gold stripe applied to differentiate them from other medical staff."
 	icon_state = "cmo_envirohelm"
 	inhand_icon_state = "cmo_envirohelm"
 
@@ -241,8 +241,8 @@
 	inhand_icon_state = "geneticist_envirohelm"
 
 /obj/item/clothing/head/helmet/space/plasmaman/research_director
-	name = "research director's plasma envirosuit helmet"
-	desc = "A special containment helmet designed for the Research Director. A light brown design is applied to differentiate them from other scientists."
+	name = "research overseer's plasma envirosuit helmet"
+	desc = "A special containment helmet designed for the Research Overseer. A light brown design is applied to differentiate them from other scientists."
 	icon_state = "rd_envirohelm"
 	inhand_icon_state = "rd_envirohelm"
 
@@ -262,8 +262,8 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT // Same protection as the Atmospherics Hardhat
 
 /obj/item/clothing/head/helmet/space/plasmaman/chief_engineer
-	name = "chief engineer's plasma envirosuit helmet"
-	desc = "A special containment helmet designed for the Chief Engineer, the usual purple stripes being replaced by the chief's green. Has improved thermal shielding."
+	name = "grand artificer's plasma envirosuit helmet"
+	desc = "A special containment helmet designed for the Grand Artificer, the usual purple stripes being replaced by the chief's green. Has improved thermal shielding."
 	icon_state = "ce_envirohelm"
 	inhand_icon_state = "ce_envirohelm"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 100, FIRE = 100, ACID = 75)

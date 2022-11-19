@@ -151,8 +151,8 @@
 	inhand_icon_state = "securitypack"
 
 /obj/item/storage/backpack/captain
-	name = "captain's backpack"
-	desc = "It's a special backpack made exclusively for Nanotrasen officers."
+	name = "exarch's backpack"
+	desc = "It's a special backpack made exclusively for the Exarch."
 	icon_state = "captainpack"
 	inhand_icon_state = "captainpack"
 
@@ -192,6 +192,12 @@
 	desc = "A backpack made of hypo-allergenic fibers. It's designed to help prevent the spread of disease. Smells like monkey."
 	icon_state = "viropack"
 	inhand_icon_state = "viropack"
+
+/obj/item/storage/backpack/homeguard
+	name = "home guard backpack"
+	desc = "A tough green backpack used by the Home Guard."
+	icon_state = "homeguard_pack"
+	inhand_icon_state = "homeguard_pack"
 
 /obj/item/storage/backpack/ert
 	name = "emergency response team commander backpack"
@@ -302,8 +308,8 @@
 	inhand_icon_state = "satchel-explorer"
 
 /obj/item/storage/backpack/satchel/cap
-	name = "captain's satchel"
-	desc = "An exclusive satchel for Nanotrasen officers."
+	name = "exarch's satchel"
+	desc = "An exclusive satchel for the Exarch."
 	icon_state = "satchel-cap"
 	inhand_icon_state = "satchel-cap"
 
@@ -370,8 +376,8 @@
 	AddComponent(/datum/component/curse_of_hunger, add_dropdel)
 
 /obj/item/storage/backpack/duffelbag/captain
-	name = "captain's duffel bag"
-	desc = "A large duffel bag for holding extra captainly goods."
+	name = "exarch's duffel bag"
+	desc = "A large duffel bag for holding extra exarchy goods."
 	icon_state = "duffel-captain"
 	inhand_icon_state = "duffel-captain"
 
@@ -602,9 +608,9 @@
 	desc = "A large duffel bag, packed to the brim with various exosuit ammo."
 
 /obj/item/storage/backpack/duffelbag/edict/ammo/mauler/PopulateContents()
-	new /obj/item/mecha_ammo/lmg(src)
-	new /obj/item/mecha_ammo/lmg(src)
-	new /obj/item/mecha_ammo/lmg(src)
+	new /obj/item/mecha_ammo/ac2(src)
+	new /obj/item/mecha_ammo/ac2(src)
+	new /obj/item/mecha_ammo/ac2(src)
 	new /obj/item/mecha_ammo/scattershot(src)
 	new /obj/item/mecha_ammo/scattershot(src)
 	new /obj/item/mecha_ammo/scattershot(src)

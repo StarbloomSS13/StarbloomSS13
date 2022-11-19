@@ -1,14 +1,14 @@
 /datum/job/chief_medical_officer
 	title = JOB_CHIEF_MEDICAL_OFFICER
-	description = "Coordinate doctors and other medbay employees, ensure they \
-		know how to save lives, check for injuries on the crew monitor."
+	description = "The head of the Medical division of Chiron on the Upper Decks. Coordinate doctors and other medbay employees, ensure they \
+		know how to save lives, check for injuries on the crew monitor. This is an extremely challenging position with high expectations, not recommended for new players."
 	department_head = list(JOB_CAPTAIN)
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	head_announce = list(RADIO_CHANNEL_MEDICAL)
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the captain"
+	supervisors = "the Exarch"
 	selection_color = "#ffddf0"
 	req_admin_notify = 1
 	minimal_player_age = 7
@@ -46,11 +46,11 @@
 
 
 /datum/job/chief_medical_officer/get_captaincy_announcement(mob/living/captain)
-	return "Due to staffing shortages, newly promoted Acting Captain [captain.real_name] on deck!"
+	return "Due to staffing shortages, newly promoted Acting Exarch [captain.real_name] on deck!"
 
 
 /datum/outfit/job/cmo
-	name = "Chief Medical Officer"
+	name = "Chiron Biolab Overseer"
 	jobtype = /datum/job/chief_medical_officer
 
 	id = /obj/item/card/id/advanced/silver
@@ -59,6 +59,7 @@
 	suit = /obj/item/clothing/suit/toggle/labcoat/cmo
 	suit_store = /obj/item/flashlight/pen/paramedic
 	backpack_contents = list(
+		/obj/item/storage/medkit/surgery = 1,
 		/obj/item/melee/baton/telescopic = 1,
 		/obj/item/modular_computer/tablet/preset/advanced/command = 1,
 		)
@@ -67,7 +68,6 @@
 	head = /obj/item/clothing/head/surgerycap/cmo
 	shoes = /obj/item/clothing/shoes/sneakers/blue
 	l_pocket = /obj/item/pinpointer/crew
-	l_hand = /obj/item/storage/medkit/surgery
 
 	backpack = /obj/item/storage/backpack/medic
 	satchel = /obj/item/storage/backpack/satchel/med
@@ -81,7 +81,7 @@
 	skillchips = list(/obj/item/skillchip/entrails_reader)
 
 /datum/outfit/job/cmo/mod
-	name = "Chief Medical Officer (MODsuit)"
+	name = "Chiron Biolab Overseer (MODsuit)"
 
 	suit_store = /obj/item/tank/internals/oxygen
 	back = /obj/item/mod/control/pre_equipped/rescue

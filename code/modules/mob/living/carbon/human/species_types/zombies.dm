@@ -45,6 +45,8 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/r_leg/zombie
 	)
 
+	species_pain_modifier = 0.2
+
 /// Zombies do not stabilize body temperature they are the walking dead and are cold blooded
 /datum/species/zombie/body_temperature_core(mob/living/carbon/human/humi, delta_time, times_fired)
 	return

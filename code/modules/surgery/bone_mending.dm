@@ -55,13 +55,14 @@
 		/obj/item/stack/sticky_tape/super = 50,
 		/obj/item/stack/sticky_tape = 30)
 	time = 40
+	pain_amount = 16
 
 /datum/surgery_step/repair_bone_hairline/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	if(surgery.operated_wound)
 		display_results(user, target, span_notice("You begin to repair the fracture in [target]'s [parse_zone(user.zone_selected)]..."),
 			span_notice("[user] begins to repair the fracture in [target]'s [parse_zone(user.zone_selected)] with [tool]."),
 			span_notice("[user] begins to repair the fracture in [target]'s [parse_zone(user.zone_selected)]."))
-		display_pain(target, "Your [parse_zone(user.zone_selected)] aches with pain!")
+		give_surgery_pain(target, "Your [parse_zone(user.zone_selected)] aches with pain!", target_zone = target_zone)
 	else
 		user.visible_message(span_notice("[user] looks for [target]'s [parse_zone(user.zone_selected)]."), span_notice("You look for [target]'s [parse_zone(user.zone_selected)]..."))
 
@@ -85,8 +86,6 @@
 		var/obj/item/stack/used_stack = tool
 		used_stack.use(1)
 
-
-
 ///// Reset Compound Fracture (Crticial)
 /datum/surgery_step/reset_compound_fracture
 	name = "reset bone"
@@ -96,13 +95,14 @@
 		/obj/item/stack/sticky_tape/super = 40,
 		/obj/item/stack/sticky_tape = 20)
 	time = 40
+	pain_amount = 24
 
 /datum/surgery_step/reset_compound_fracture/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	if(surgery.operated_wound)
 		display_results(user, target, span_notice("You begin to reset the bone in [target]'s [parse_zone(user.zone_selected)]..."),
 			span_notice("[user] begins to reset the bone in [target]'s [parse_zone(user.zone_selected)] with [tool]."),
 			span_notice("[user] begins to reset the bone in [target]'s [parse_zone(user.zone_selected)]."))
-		display_pain(target, "The aching pain in your [parse_zone(user.zone_selected)] is overwhelming!")
+		give_surgery_pain(target, "The aching pain in your [parse_zone(user.zone_selected)] is overwhelming!", target_zone = target_zone)
 	else
 		user.visible_message(span_notice("[user] looks for [target]'s [parse_zone(user.zone_selected)]."), span_notice("You look for [target]'s [parse_zone(user.zone_selected)]..."))
 
@@ -125,7 +125,6 @@
 		var/obj/item/stack/used_stack = tool
 		used_stack.use(1)
 
-
 ///// Repair Compound Fracture (Crticial)
 /datum/surgery_step/repair_bone_compound
 	name = "repair compound fracture (bone gel/tape)"
@@ -141,7 +140,7 @@
 		display_results(user, target, span_notice("You begin to repair the fracture in [target]'s [parse_zone(user.zone_selected)]..."),
 			span_notice("[user] begins to repair the fracture in [target]'s [parse_zone(user.zone_selected)] with [tool]."),
 			span_notice("[user] begins to repair the fracture in [target]'s [parse_zone(user.zone_selected)]."))
-		display_pain(target, "The aching pain in your [parse_zone(user.zone_selected)] is overwhelming!")
+		give_surgery_pain(target, "The aching pain in your [parse_zone(user.zone_selected)] is overwhelming!", target_zone = target_zone)
 	else
 		user.visible_message(span_notice("[user] looks for [target]'s [parse_zone(user.zone_selected)]."), span_notice("You look for [target]'s [parse_zone(user.zone_selected)]..."))
 

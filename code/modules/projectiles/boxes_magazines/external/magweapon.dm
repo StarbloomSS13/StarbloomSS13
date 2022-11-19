@@ -8,10 +8,9 @@
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/mmag/small
-	name = "magpistol magazine"
+	name = "small magnetic magazine"
 	desc = "A magazine containing 7 ferromagnetic slugs. Compatible with the magrifle, in a pinch."
-	icon_state = "smallmagmag"
+	icon_state = "gravitas"
 	ammo_type = /obj/item/ammo_casing/caseless/magnetic
 	caliber = "mag"
 	max_ammo = 7
-	multiple_sprites = 2

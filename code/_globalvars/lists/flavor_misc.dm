@@ -162,6 +162,7 @@ GLOBAL_LIST_INIT(ai_core_display_screens, sort_list(list(
 	"Red October",
 	"Red",
 	"Static",
+	"Smiling",
 	"Syndicat Meow",
 	"Text",
 	"Too Deep",
@@ -295,9 +296,9 @@ GLOBAL_LIST_INIT(scarySounds, list(
 //If you insist on changing the order, you'll have to change every sort junction to reflect the new order. --Pete
 
 GLOBAL_LIST_INIT(TAGGERLOCATIONS, list("Disposals",
-	"Cargo Bay", "QM Office", "Engineering", "CE Office",
+	"Cargo Bay", "QM Office", "Engineering", "Grand Artificer Office",
 	"Atmospherics", "Security", "HoS Office", "Medbay",
-	"CMO Office", "Chemistry", "Research", "RD Office",
+	"Biolab Overseer Office", "Chemistry", "Research", "Research Overseer Office",
 	"Robotics", "HoP Office", "Library", "Chapel", "Theatre",
 	"Bar", "Kitchen", "Hydroponics", "Janitor Closet","Genetics",
 	"Experimentor Lab", "Ordnance", "Dormitories", "Virology",

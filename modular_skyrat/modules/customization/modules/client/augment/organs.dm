@@ -1,11 +1,11 @@
 /datum/augment_item/organ
 	category = AUGMENT_CATEGORY_ORGANS
 
-/datum/augment_item/organ/apply(mob/living/carbon/human/H, character_setup = FALSE, datum/preferences/prefs)
+/datum/augment_item/organ/apply(mob/living/carbon/human/apply_to, character_setup = FALSE, datum/preferences/prefs)
 	if(character_setup)
 		return
 	var/obj/item/organ/new_organ = new path()
-	new_organ.Insert(H,FALSE,FALSE)
+	new_organ.Insert(apply_to, TRUE, FALSE)
 
 //HEARTS
 /datum/augment_item/organ/heart

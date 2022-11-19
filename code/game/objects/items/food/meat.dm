@@ -669,6 +669,14 @@
 	foodtypes = MEAT | RAW
 	venue_value = FOOD_MEAT_MUTANT
 
+/obj/item/food/meat/slab/slugcat
+	name = "slugcat meat"
+	icon_state = "slugcat_meat"
+	desc = "Oh no. You monster."
+	tastes = list("meat" = 4, "crimes against nature" = 1)
+	foodtypes = MEAT | RAW
+	venue_value = FOOD_MEAT_MUTANT
+
 /obj/item/food/meat/slab/human/mutant/lizard/MakeGrillable()
 	AddComponent(/datum/component/grillable, /obj/item/food/meat/steak/plain/human/lizard, rand(30 SECONDS, 90 SECONDS), TRUE, TRUE)
 
@@ -800,7 +808,7 @@
 	name = "bear meat"
 	desc = "A very manly slab of meat."
 	icon_state = "bearmeat"
-	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 16, /datum/reagent/medicine/morphine = 5, /datum/reagent/consumable/nutriment/vitamin = 2, /datum/reagent/consumable/cooking_oil = 6)
+	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 16, /datum/reagent/medicine/painkiller/morphine = 5, /datum/reagent/consumable/nutriment/vitamin = 2, /datum/reagent/consumable/cooking_oil = 6)
 	tastes = list("meat" = 1, "salmon" = 1)
 	foodtypes = RAW | MEAT
 
@@ -1040,6 +1048,13 @@
 	name = "lizard steak"
 	icon_state = "birdsteak"
 	tastes = list("juicy chicken" = 3, "scales" = 1)
+	foodtypes = MEAT
+
+/obj/item/food/meat/steak/plain/slugcat
+	name = "slugcat steak"
+	desc = "You absolute monster."
+	icon_state = "birdsteak"
+	tastes = list("slugcat" = 3, "crimes against nature" = 1)
 	foodtypes = MEAT
 
 /obj/item/food/meat/steak/meatproduct

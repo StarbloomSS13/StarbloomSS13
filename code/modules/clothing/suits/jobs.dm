@@ -22,8 +22,8 @@
 
 //Captain
 /obj/item/clothing/suit/capjacket
-	name = "captain's parade jacket"
-	desc = "Worn by a Captain to show their class."
+	name = "exarch's parade jacket"
+	desc = "Worn by the Exarch to show their class."
 	icon_state = "capjacket"
 	inhand_icon_state = "bio_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -126,20 +126,8 @@
 	toggle_noun = "straps"
 	greyscale_config = /datum/greyscale_config/suspenders
 	greyscale_config_worn = /datum/greyscale_config/suspenders/worn
-	greyscale_colors = "#ff0000"
+	greyscale_colors = "#972A2A"
 	flags_1 = IS_PLAYER_COLORABLE_1
-
-/obj/item/clothing/suit/toggle/suspenders/blue
-	name = "blue suspenders"
-	desc = "The symbol of hard labor and dirty jobs."
-	icon = 'icons/obj/clothing/belts.dmi'
-	greyscale_colors = "#0000ff"
-
-/obj/item/clothing/suit/toggle/suspenders/gray
-	name = "gray suspenders"
-	desc = "The symbol of hard labor and dirty jobs."
-	icon = 'icons/obj/clothing/belts.dmi'
-	greyscale_colors = "#888888"
 
 //Security
 /obj/item/clothing/suit/security/officer
@@ -157,7 +145,7 @@
 	body_parts_covered = CHEST|ARMS
 
 /obj/item/clothing/suit/security/hos
-	name = "head of security's jacket"
+	name = "justiciar's jacket"
 	desc = "This piece of clothing was specifically designed for asserting superior authority."
 	icon_state = "hosbluejacket"
 	inhand_icon_state = "hosbluejacket"

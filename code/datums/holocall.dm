@@ -383,6 +383,9 @@
 /datum/preset_holoimage/clown
 	outfit_type = /datum/outfit/job/clown
 
+/datum/preset_holoimage/doctor
+	outfit_type = /datum/outfit/job/doctor
+
 /obj/item/disk/holodisk/donutstation/whiteship
 	name = "Blackbox Print-out #DS024"
 	desc = "A holodisk containing the last viable recording of DS024's blackbox."
@@ -471,3 +474,16 @@
 	NAME Blackbox Automated Message
 	SAY Connection lost. Dumping audio logs to disk.
 	DELAY 50"}
+
+/obj/item/disk/holodisk/northstar/cryowelcome
+	name = "Cryopod welcome message"
+	desc = "A holodisk containing a simple welcome message to those fresh out of the cryo."
+	preset_image_type = /datum/preset_holoimage/doctor
+	preset_record_text = {"
+	NAME Ed Greenebold
+	SAY Welcome to the upper decks.
+	DELAY 100
+	SAY Please be wary of your muscles that may be slightly atrophied from prolonged cryostasis.
+	DELAY 100
+	SAY Be sure to enjoy a drink or change into some fresh clothes in the next room.
+	DELAY 100"}

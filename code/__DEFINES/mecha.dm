@@ -49,7 +49,8 @@
 
 #define MECHA_AMMO_INCENDIARY "Incendiary bullet"
 #define MECHA_AMMO_BUCKSHOT "Buckshot shell"
-#define MECHA_AMMO_LMG "LMG bullet"
+#define MECHA_AMMO_AC2 "AC2 bullet"
+#define MECHA_AMMO_AC5 "AC5 bullet"
 #define MECHA_AMMO_MISSILE_HE "HE missile"
 #define MECHA_AMMO_MISSILE_AP "AP missile"
 #define MECHA_AMMO_FLASHBANG "Flashbang"

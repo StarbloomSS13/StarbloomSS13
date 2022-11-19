@@ -1,6 +1,6 @@
 /obj/item/clothing/under/rank/captain
-	desc = "It's a blue jumpsuit with some gold markings denoting the rank of \"Captain\"."
-	name = "captain's jumpsuit"
+	desc = "It's a blue jumpsuit with some gold markings denoting the rank of \"Exarch\"."
+	name = "exarch's jumpsuit"
 	icon_state = "captain"
 	inhand_icon_state = "b_suit"
 	sensor_mode = SENSOR_COORDS
@@ -10,8 +10,8 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0, WOUND = 15)
 
 /obj/item/clothing/under/rank/captain/skirt
-	name = "captain's jumpskirt"
-	desc = "It's a blue jumpskirt with some gold markings denoting the rank of \"Captain\"."
+	name = "exarch's jumpskirt"
+	desc = "It's a blue jumpskirt with some gold markings denoting the rank of \"Exarch\"."
 	icon_state = "captain_skirt"
 	inhand_icon_state = "b_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -19,7 +19,7 @@
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 
 /obj/item/clothing/under/rank/captain/suit
-	name = "captain's suit"
+	name = "exarch's suit"
 	desc = "A green suit and yellow necktie. Exemplifies authority."
 	icon_state = "green_suit"
 	inhand_icon_state = "dg_suit"
@@ -36,8 +36,8 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/captain/parade
-	name = "captain's parade uniform"
-	desc = "A captain's luxury-wear, for special occasions."
+	name = "exarch's parade uniform"
+	desc = "An Exarch's luxury-wear, for special occasions."
 	icon_state = "captain_parade"
 	inhand_icon_state = "by_suit"
 	can_adjust = FALSE

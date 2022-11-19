@@ -7,28 +7,28 @@
 	resistance_flags = FLAMMABLE
 
 /obj/item/storage/bag/garment/captain
-	name = "captain's garment bag"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the captain."
+	name = "exarch's garment bag"
+	desc = "A bag for storing extra clothes and shoes. This one belongs to the exarch."
 
 /obj/item/storage/bag/garment/hos
-	name = "head of security's garment bag"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the head of security."
+	name = "justiciar's garment bag"
+	desc = "A bag for storing extra clothes and shoes. This one belongs to the justiciar."
 
 /obj/item/storage/bag/garment/hop
-	name = "head of personnel's garment bag"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the head of personnel."
+	name = "seneschal's garment bag"
+	desc = "A bag for storing extra clothes and shoes. This one belongs to the seneschal."
 
 /obj/item/storage/bag/garment/research_director
-	name = "research director's garment bag"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the research director."
+	name = "chiron research overseer's garment bag"
+	desc = "A bag for storing extra clothes and shoes. This one belongs to the chiron research overseer."
 
 /obj/item/storage/bag/garment/chief_medical
-	name = "chief medical officer's garment bag"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the chief medical officer."
+	name = "chiron biolab overseer's garment bag"
+	desc = "A bag for storing extra clothes and shoes. This one belongs to the biolab overseer."
 
 /obj/item/storage/bag/garment/engineering_chief
-	name = "chief engineer's garment bag"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the chief engineer."
+	name = "mekhane grand artificer's garment bag"
+	desc = "A bag for storing extra clothes and shoes. This one belongs to the grand artificer."
 
 /obj/item/storage/bag/garment/ComponentInitialize()
 	. = ..()
@@ -110,6 +110,8 @@
 	new /obj/item/clothing/neck/cloak/cmo(src)
 	new /obj/item/clothing/shoes/sneakers/blue (src)
 	new /obj/item/clothing/suit/hooded/wintercoat/medical/cmo(src)
+	new /obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck(src)
+	new /obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck/skirt(src)
 
 /obj/item/storage/bag/garment/engineering_chief/PopulateContents()
 	new /obj/item/clothing/under/rank/engineering/chief_engineer(src)

@@ -1070,14 +1070,14 @@
 	description = "Here you go little girl, now you can drink like the adults."
 	color = "#F43724"
 	quality = DRINK_GOOD
-	taste_description = "sweet cherry syrup and ginger spice"
+	taste_description = "sweet cherry syrup and lemon lime"
 	glass_icon_state = "shirleytemple"
 	glass_name = "Shirley Temple"
-	glass_desc = "Ginger ale with processed grenadine. "
+	glass_desc = "Lemon lime with processed grenadine. "
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/consumable/shirley_temple/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
-	M.adjust_disgust(-3 * REM * delta_time)
+	M.adjust_bodytemperature(-8 * REM * TEMPERATURE_DAMAGE_COEFFICIENT * delta_time, M.get_body_temp_normal())
 	return ..()
 
 /datum/reagent/consumable/red_queen
@@ -1203,3 +1203,87 @@
 	glass_name = "glass of töchtaüse syrup"
 	glass_desc = "Not for drinking on its own."
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/consumable/green_tea //seperate from regular tea because its different in almost every way
+	name = "Green Tea"
+	description = "Some nice green tea. A very popular drink with feline-type humans."
+	color = "#9E8400" // rgb: 158, 132, 0
+	quality = DRINK_GOOD
+	taste_description = "tart green tea"
+	glass_icon_state = "green_teaglass"
+	glass_name = "glass of green tea"
+	glass_desc = "Some nice green tea. It has an artisinal quality to it."
+	glass_price = DRINK_PRICE_MEDIUM
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/consumable/green_tea/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	M.dizziness = max(M.dizziness - (2 * REM * delta_time), 0)
+	M.drowsyness = max(M.drowsyness - (1 * REM * delta_time), 0)
+	M.jitteriness = max(M.jitteriness - (3 * REM * delta_time), 0)
+	M.AdjustSleeping(-20 * REM * delta_time)
+	M.adjustToxLoss(-0.5, 0) //the major difference between base tea and green tea, this one's a great anti-tox.
+	M.adjust_bodytemperature(20 * REM * TEMPERATURE_DAMAGE_COEFFICIENT * delta_time, 0, M.get_body_temp_normal())
+	..()
+	. = TRUE
+
+/datum/reagent/consumable/ice_greentea
+	name = "Iced Green Tea"
+	description = "A delicious beverage, a classic when mixed with honey." //doesnt actually do anything special with honey
+	color = "#AD8500" // rgb: 173, 133, 0
+	nutriment_factor = 0
+	quality = DRINK_VERYGOOD
+	taste_description = "tart cold green tea" //iced green tea has a weird but amazing taste IRL, hard to describe it
+	glass_icon_state = "icedgreen_teaglass"
+	glass_name = "iced green tea"
+	glass_desc = "A delicious beverage for any time of the year. Much better with a lot of sugar." //Now THIS is actually a hint, as sugar rush turns it into Green Hill Tea.
+	glass_price = DRINK_PRICE_MEDIUM
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/consumable/icetea/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	M.dizziness = max(M.dizziness - (2 * REM * delta_time), 0)
+	M.drowsyness = max(M.drowsyness - (1 * REM * delta_time), 0)
+	M.AdjustSleeping(-40 * REM * delta_time)
+	M.adjustToxLoss(-0.5, 0)
+	M.adjust_bodytemperature(-5 * REM * TEMPERATURE_DAMAGE_COEFFICIENT * delta_time, M.get_body_temp_normal())
+	..()
+	. = TRUE
+
+/datum/reagent/consumable/green_hill_tea
+	name = "Green Hill Tea"
+	description = "A beverage that is a strong stimulant, making people run at sonic speed."
+	color = "#1FB800" // rgb: 31, 184, 0
+	nutriment_factor = 0
+	overdose_threshold = 55
+	quality = DRINK_FANTASTIC
+	glass_price = DRINK_PRICE_HIGH
+	taste_description = "being able to do anything"
+	glass_icon_state = "greenhill_tea"
+	glass_name = "Green Hill Tea"
+	glass_desc = "A strong stimulant, though for some it doesnt matter, as the taste opens your heart."
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/consumable/green_hill_tea/on_mob_metabolize(mob/living/L)
+	..()
+	L.add_movespeed_modifier(/datum/movespeed_modifier/reagent/green_hill_tea)
+
+/datum/reagent/consumable/green_hill_tea/on_mob_end_metabolize(mob/living/L)
+	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/green_hill_tea)
+	..()
+
+/datum/reagent/consumable/green_hill_tea/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	M.AdjustSleeping(-40 * REM * delta_time)
+	M.adjust_bodytemperature(-5 * REM * TEMPERATURE_DAMAGE_COEFFICIENT * delta_time, M.get_body_temp_normal())
+	..()
+	. = TRUE
+
+/datum/reagent/consumable/green_hill_tea/overdose_start(mob/living/M)
+	to_chat(M, span_userdanger("You feel like you've been going too fast for too long!"))
+	..()
+
+/datum/reagent/consumable/green_hill_tea/overdose_process(mob/living/M, delta_time, times_fired)
+	if(!ishuman(M))
+		return
+
+	var/mob/living/carbon/human/overdosed_human = M
+	overdosed_human.adjustOrganLoss(ORGAN_SLOT_HEART, 1 * REM * delta_time)
+	..()

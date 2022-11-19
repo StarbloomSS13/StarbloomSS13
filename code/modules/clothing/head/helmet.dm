@@ -3,7 +3,7 @@
 	desc = "Standard Security gear. Protects the head from impacts."
 	icon_state = "helmet"
 	inhand_icon_state = "helmet"
-	armor = list(MELEE = 35, BULLET = 30, LASER = 30,ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50, WOUND = 10)
+	armor = list(MELEE = 35, BULLET = 55, LASER = 30,ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50, WOUND = 10)
 	cold_protection = HEAD
 	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -126,6 +126,36 @@
 /obj/item/clothing/head/helmet/marine/medic
 	name = "marine medic helmet"
 	icon_state = "marine_medic"
+
+/obj/item/clothing/head/helmet/tyrant
+	name = "TYRANT helmet"
+	desc = "An extremely heavily armored helmet that protects against moderate damage. It's Class IV armor, offering near total protection against projectiles."
+	w_class = WEIGHT_CLASS_BULKY
+	icon_state = "marine_command"
+	inhand_icon_state = "helmetalt"
+	slowdown = 1
+	equip_delay_self = 50
+	equip_delay_other = 75
+	strip_delay = 100
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+	armor = list(MELEE = 90, BULLET = 95, LASER = 80, ENERGY = 80, BOMB = 100, BIO = 100, FIRE = 90, ACID = 90)
+	can_flashlight = TRUE
+	dog_fashion = null //would probably break a corgi's neck
+
+/obj/item/clothing/head/helmet/tyrant/Initialize(mapload)
+	set_attached_light(new /obj/item/flashlight/seclite)
+	update_helmlight()
+	update_appearance()
+	. = ..()
+
+/obj/item/clothing/head/helmet/royalguard
+	name = "royal guard bearskin hat"
+	desc = "A tall bearskin hat designed to make the wearer more imposing. Used exclusively by the Unity's Royal Guards."
+	icon_state = "helmet_royalguard"
+	inhand_icon_state = "helmet_royalguard"
+	armor = list(MELEE = 50, BULLET = 50, LASER = 30, ENERGY = 25, BOMB = 50, BIO = 100, FIRE = 40, ACID = 50, WOUND = 20)
+	can_flashlight = FALSE
+	worn_y_offset = 12
 
 /obj/item/clothing/head/helmet/old
 	name = "degrading helmet"
@@ -439,7 +469,7 @@
 	. += span_warning("BRAIN DEATH")
 	. += span_warning("PRIMAL GENE ACTIVATION")
 	. += span_warning("GENETIC MAKEUP MASS SUSCEPTIBILITY")
-	. += span_boldnotice("Ask your CMO if mind magnification is right for you.")
+	. += span_boldnotice("Ask your Biolab Overseer if mind magnification is right for you.")
 
 /obj/item/clothing/head/helmet/monkey_sentience/update_icon_state()
 	. = ..()
@@ -610,6 +640,5 @@
 
 /obj/item/clothing/head/helmet/homeguard
 	name = "home guard helmet"
-	desc = "A Home Guardsman's helmet. Cheaply made, but enough to stop a few bullets."
+	desc = "A Home Guardsman's helmet. Cheaply made, but enough to stop a few bullets. It's Class II armor, offering good protection against projectiles."
 	icon_state = "helmet_homeguard"
-	armor = list(MELEE = 35, BULLET = 30, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50, WOUND = 10)

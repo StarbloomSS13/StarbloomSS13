@@ -39,3 +39,6 @@
 
 /datum/movespeed_modifier/reagent/nooartrium
 	multiplicative_slowdown = 2
+
+/datum/movespeed_modifier/reagent/green_hill_tea
+	multiplicative_slowdown = -0.35 //SONIC SPEED

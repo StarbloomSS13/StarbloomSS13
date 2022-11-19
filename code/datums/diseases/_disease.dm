@@ -167,6 +167,8 @@
 	return "[type]"
 
 /datum/disease/proc/remove_disease()
+	SHOULD_CALL_PARENT(TRUE)
+
 	LAZYREMOVE(affected_mob.diseases, src) //remove the datum from the list
 	affected_mob.med_hud_set_status()
 	affected_mob = null

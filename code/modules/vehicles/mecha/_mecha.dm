@@ -163,6 +163,9 @@
 	//Bool for zoom on/off
 	var/zoom_mode = FALSE
 
+	//Bool for night vision on/off
+	var/light_amplification = FALSE
+
 	///Remaining smoke charges
 	var/smoke_charges = 5
 	///Cooldown between using smoke
@@ -938,7 +941,7 @@
 				to_chat(AI, span_warning("Occupants detected! Forced ejection initiated!"))
 				to_chat(occupants, span_danger("You have been forcibly ejected!"))
 				for(var/ejectee in occupants)
-					mob_exit(ejectee, TRUE, TRUE) //IT IS MINE, NOW. SUCK IT, RD!
+					mob_exit(ejectee, TRUE, TRUE) //IT IS MINE, NOW. SUCK IT, Research Overseer!
 				AI.can_shunt = FALSE //ONE AI ENTERS. NO AI LEAVES.
 
 		if(AI_TRANS_FROM_CARD) //Using an AI card to upload to a mech.

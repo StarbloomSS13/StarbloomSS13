@@ -261,12 +261,14 @@
 /datum/brain_trauma/special/tenacity/on_gain()
 	ADD_TRAIT(owner, TRAIT_NOSOFTCRIT, TRAUMA_TRAIT)
 	ADD_TRAIT(owner, TRAIT_NOHARDCRIT, TRAUMA_TRAIT)
-	..()
+	owner.set_pain_mod(name, 0)
+	return ..()
 
 /datum/brain_trauma/special/tenacity/on_lose()
 	REMOVE_TRAIT(owner, TRAIT_NOSOFTCRIT, TRAUMA_TRAIT)
 	REMOVE_TRAIT(owner, TRAIT_NOHARDCRIT, TRAUMA_TRAIT)
-	..()
+	owner.unset_pain_mod(name)
+	return ..()
 
 /datum/brain_trauma/special/death_whispers
 	name = "Functional Cerebral Necrosis"

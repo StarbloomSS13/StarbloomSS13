@@ -41,7 +41,7 @@
 
 //Captain
 /obj/item/clothing/head/caphat
-	name = "captain's hat"
+	name = "exarch's hat"
 	desc = "It's good being the king."
 	icon_state = "captain"
 	inhand_icon_state = "that"
@@ -52,14 +52,14 @@
 
 //Captain: This is no longer space-worthy
 /obj/item/clothing/head/caphat/parade
-	name = "captain's parade cap"
-	desc = "Worn only by Captains with an abundance of class."
+	name = "exarch's parade cap"
+	desc = "Worn only by Exarchs with an abundance of class."
 	icon_state = "capcap"
 
 	dog_fashion = null
 
 /obj/item/clothing/head/caphat/beret
-	name = "captain's beret"
+	name = "exarch's beret"
 	desc = "For the Captains known for their sense of fashion."
 	icon_state = "beret_badge"
 	greyscale_config = /datum/greyscale_config/beret_badge
@@ -68,7 +68,7 @@
 
 //Head of Personnel
 /obj/item/clothing/head/hopcap
-	name = "head of personnel's cap"
+	name = "seneschal's cap"
 	icon_state = "hopcap"
 	desc = "The symbol of true bureaucratic micromanagement."
 	armor = list(MELEE = 25, BULLET = 15, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50)
@@ -135,8 +135,8 @@
 //Security
 
 /obj/item/clothing/head/hos
-	name = "head of security cap"
-	desc = "The robust standard-issue cap of the Head of Security. For showing the officers who's in charge."
+	name = "justiciar cap"
+	desc = "The robust standard-issue cap of the Justiciar. For showing the officers who's in charge."
 	armor = list(MELEE = 40, BULLET = 30, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 10, FIRE = 50, ACID = 60, WOUND = 10)
 	icon_state = "hoscap"
 	strip_delay = 80
@@ -147,16 +147,16 @@
 	desc = "A black cap fit for a high ranking Last Edict Zealot."
 
 /obj/item/clothing/head/hos/beret
-	name = "head of security's beret"
-	desc = "A robust beret for the Head of Security, for looking stylish while not sacrificing protection."
+	name = "justiciar's beret"
+	desc = "A robust beret for the Justiciar, for looking stylish while not sacrificing protection."
 	icon_state = "beret_badge"
 	greyscale_config = /datum/greyscale_config/beret_badge
 	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn
 	greyscale_colors = "#3F3C40#FFCE5B"
 
 /obj/item/clothing/head/hos/beret/navyhos
-	name = "head of security's formal beret"
-	desc = "A special beret with the Head of Security's insignia emblazoned on it. A symbol of excellence, a badge of courage, a mark of distinction."
+	name = "justiciar's formal beret"
+	desc = "A special beret with the Justiciar's insignia emblazoned on it. A symbol of excellence, a badge of courage, a mark of distinction."
 	greyscale_colors = "#3C485A#FFCE5B"
 
 /obj/item/clothing/head/hos/beret/syndicate
@@ -173,12 +173,11 @@
 	dog_fashion = /datum/dog_fashion/head/warden
 
 /obj/item/clothing/head/warden/red
-	name = "warden's hat"
-	desc = "A warden's red hat. Looking at it gives you the feeling of wanting to keep people in cells for as long as possible."
-	icon_state = "wardenhat"
+	name = "justiciar's hat"
+	desc = "A justiciar's hat. Looking at it gives you the feeling of wanting to keep people in cells for as long as possible."
+	icon_state = "centcom_cap"
 	armor = list(MELEE = 40, BULLET = 30, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 30, ACID = 60, WOUND = 6)
 	strip_delay = 60
-	dog_fashion = /datum/dog_fashion/head/warden_red
 
 /obj/item/clothing/head/warden/drill
 	name = "warden's campaign hat"
@@ -303,7 +302,7 @@
 	greyscale_colors = "#16313D"
 
 /obj/item/clothing/head/beret/medical/cmo
-	name = "chief medical officer beret"
+	name = "biolab overseer beret"
 	desc = "A beret in a distinct surgical turquoise!"
 	greyscale_colors = "#5EB8B8"
 
@@ -325,7 +324,7 @@
 /obj/item/clothing/head/surgerycap/cmo
 	name = "turquoise surgery cap"
 	icon_state = "surgicalcapcmo"
-	desc = "The CMO's medical surgery cap to prevent their hair from entering the insides of the patient!"
+	desc = "The Biolab Overseer's medical surgery cap to prevent their hair from entering the insides of the patient!"
 
 
 

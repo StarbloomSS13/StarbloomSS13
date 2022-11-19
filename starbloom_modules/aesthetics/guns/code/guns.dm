@@ -114,7 +114,7 @@
 	worn_icon_state = "gun"
 	worn_icon = null
 
-/obj/item/gun/energy/laser/thermal 
+/obj/item/gun/energy/laser/thermal
 	icon = 'icons/obj/guns/energy.dmi'
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
@@ -247,8 +247,9 @@
 	fire_sound = 'sound/weapons/gun/pistol/starbloom_9mm.ogg'
 	icon_state = "arg"
 	inhand_icon_state = "arg"
-	burst_size = 2
+	burst_size = 3
 	can_suppress = FALSE
+	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/gun/ballistic/automatic/ar/modular/solrifle
 	name = "MCRS-5B ICWS"
@@ -311,6 +312,7 @@
 	fire_sound = 'sound/weapons/gun/pistol/starbloom_45.ogg'
 	burst_size = 2
 	icon = 'starbloom_modules/aesthetics/guns/icons/guns.dmi'
+	mag_type = /obj/item/ammo_box/magazine/smgm45
 
 /obj/item/gun/ballistic/automatic/ar/modular/model75
 	name = "\improper NT ARG-75"

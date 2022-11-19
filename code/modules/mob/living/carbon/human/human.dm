@@ -48,16 +48,56 @@
 	GLOB.human_list -= src
 	return ..()
 
-/mob/living/carbon/human/ZImpactDamage(turf/T, levels)
-	if(stat != CONSCIOUS || levels > 1) // you're not The One
-		return ..()
+/mob/living/carbon/human/ZImpactDamage(turf/landing, levels, message = TRUE)
 	var/obj/item/organ/external/wings/gliders = getorgan(/obj/item/organ/external/wings)
-	if(HAS_TRAIT(src, TRAIT_FREERUNNING) || gliders?.can_soften_fall()) // the power of parkour or wings allows falling short distances unscathed
-		visible_message(span_danger("[src] makes a hard landing on [T] but remains unharmed from the fall."), \
-						span_userdanger("You brace for the fall. You make a hard landing on [T] but remain unharmed."))
-		Knockdown(levels * 40)
+	var/has_wings = gliders?.can_soften_fall()
+	var/is_freerunner = HAS_TRAIT(src, TRAIT_FREERUNNING)
+	// the power of parkour or wings allows falling short distances unscathed
+	if(stat == CONSCIOUS && levels <= 1 && (is_freerunner || has_wings))
+		if(message)
+			visible_message(
+				span_danger("[src] makes a hard landing on [landing] but remains unharmed from the fall."),
+				span_userdanger("You brace for the fall. You make a hard landing on [landing] but remain unharmed.")
+			)
+		Knockdown(levels * 4 SECONDS)
 		return
-	return ..()
+
+	. = ..(landing, levels, message = FALSE) // call parent with no messages whatsoever
+	if(!.)
+		return
+
+	var/limb_pain_amount = . // 1:1 ratio of brute to pain, baby
+	if(is_freerunner || has_wings)
+		limb_pain_amount /= 2
+
+	if(usable_legs >= 2 && prob(80))
+		if(message)
+			visible_message(
+				span_danger("[src] crashes into [landing] with a sickening noise, landing on [p_their()] legs [is_freerunner ? "shakily" : "hard"][has_wings ? ", [p_their()] wings slowing them down":""]!"),
+				span_userdanger("You crash into [landing] with a sickening noise, landing [is_freerunner ? "shakily" : "hard"] on your legs[has_wings ? ", your wings slowing you down":"! Ouch"]!"),
+				span_hear("You hear a sickening crunch."),
+			)
+		sharp_pain(list(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG), limb_pain_amount)
+
+	else if(usable_hands >= 2)
+		if(message)
+			visible_message(
+				span_danger("[src] attempts to stop [p_their()] fall with their arms, crashing into [landing] with a sickening noise!"),
+				span_userdanger("You attempt to stop your fall with your arms, and crash into [landing] with a sickening noise! Ouch!"),
+				span_hear("You hear a sickening crunch."),
+			)
+		sharp_pain(list(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM), limb_pain_amount)
+
+	else
+		if(message)
+			visible_message(
+				span_danger("[src] crash into [landing] with a sickening noise!"),
+				span_userdanger("You crash into [landing] with a sickening noise! Ouch!"),
+				span_hear("You hear a sickening thud."),
+			)
+		sharp_pain(BODY_ZONE_HEAD, (levels * 10)) // bonk
+
+	cause_pain(BODY_ZONE_CHEST, (levels * 8)) // always less pain than what the legs receive
 
 /mob/living/carbon/human/prepare_data_huds()
 	//Update med hud images...

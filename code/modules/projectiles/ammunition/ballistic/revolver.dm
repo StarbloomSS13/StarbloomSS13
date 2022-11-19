@@ -1,5 +1,24 @@
-// .357 (Syndie Revolver)
+//Starbloom ammo types begin
+//TG ammo is below
 
+//Revolution ammo begin
+/obj/item/ammo_casing/a44
+	name = ".44 rubber bullet casing"
+	desc = "A .44 rubber bullet casing."
+	caliber = CALIBER_44
+	projectile_type = /obj/projectile/bullet/a44/rubber
+
+/obj/item/ammo_casing/a44/fmj
+	name = ".44 FMJ bullet casing"
+	desc = "A .44 bullet casing."
+	projectile_type = /obj/projectile/bullet/a44
+//Revolution ammo end
+//Starbloom ammo end
+
+//Begin TG ammo
+//Unused in Starbloom, except detective gun
+
+// .357 (Syndie Revolver)
 /obj/item/ammo_casing/a357
 	name = ".357 bullet casing"
 	desc = "A .357 bullet casing."
@@ -12,7 +31,6 @@
 	projectile_type = /obj/projectile/bullet/a357/match
 
 // 7.62x38mmR (Nagant Revolver)
-
 /obj/item/ammo_casing/n762
 	name = "7.62x38mmR bullet casing"
 	desc = "A 7.62x38mmR bullet casing."
@@ -20,7 +38,6 @@
 	projectile_type = /obj/projectile/bullet/n762
 
 // .38 (Detective's Gun)
-
 /obj/item/ammo_casing/c38
 	name = ".38 bullet casing"
 	desc = "A .38 bullet casing."
@@ -56,16 +73,3 @@
 	name = ".38 Iceblox bullet casing"
 	desc = "A .38 Iceblox bullet casing."
 	projectile_type = /obj/projectile/bullet/c38/iceblox
-
-// .44 (Revolution)
-
-/obj/item/ammo_casing/a44
-	name = ".44 rubber bullet casing"
-	desc = "A .44 rubber bullet casing."
-	caliber = CALIBER_44
-	projectile_type = /obj/projectile/bullet/a44/rubber
-
-/obj/item/ammo_casing/a44/fmj
-	name = ".44 FMJ bullet casing"
-	desc = "A .44 bullet casing."
-	projectile_type = /obj/projectile/bullet/a44

@@ -124,7 +124,7 @@
 	job = /datum/job/bartender
 
 /datum/id_trim/job/botanist
-	assignment = "Botanist"
+	assignment = "Hydroponicist"
 	trim_state = "trim_botanist"
 	department_color = COLOR_SERVICE_LIME
 	subdepartment_color = COLOR_SERVICE_LIME
@@ -136,7 +136,7 @@
 	job = /datum/job/botanist
 
 /datum/id_trim/job/captain
-	assignment = "Captain"
+	assignment = "Exarch"
 	intern_alt_name = "Captain-in-Training"
 	trim_state = "trim_captain"
 	department_color = COLOR_COMMAND_BLUE
@@ -149,10 +149,19 @@
 
 /// Captain gets all station accesses hardcoded in because it's the Captain.
 /datum/id_trim/job/captain/New()
-	extra_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_COMMON) + SSid_access.get_flag_access_list(ACCESS_FLAG_COMMAND))
-	extra_wildcard_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_PRV_COMMAND) + SSid_access.get_flag_access_list(ACCESS_FLAG_CAPTAIN))
-	minimal_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_COMMON) + SSid_access.get_flag_access_list(ACCESS_FLAG_COMMAND))
-	minimal_wildcard_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_PRV_COMMAND) + SSid_access.get_flag_access_list(ACCESS_FLAG_CAPTAIN))
+	var/list/common_access = (\
+		SSid_access.get_flag_access_list(ACCESS_FLAG_COMMON) + \
+		SSid_access.get_flag_access_list(ACCESS_FLAG_COMMAND) + \
+		SSid_access.get_flag_access_list(ACCESS_FLAG_FACTIONAL))
+
+	var/list/private_access = (\
+		SSid_access.get_flag_access_list(ACCESS_FLAG_PRV_COMMAND) + \
+		SSid_access.get_flag_access_list(ACCESS_FLAG_CAPTAIN))
+
+	extra_access |= common_access
+	extra_wildcard_access |= private_access
+	minimal_access |= common_access
+	minimal_wildcard_access |= private_access
 
 	return ..()
 
@@ -193,8 +202,8 @@
 	job = /datum/job/chemist
 
 /datum/id_trim/job/chief_engineer
-	assignment = "Chief Engineer"
-	intern_alt_name = "Chief Engineer-in-Training"
+	assignment = "Mekhane Grand Artificer"
+	intern_alt_name = "Grand Artificer-in-Training"
 	trim_state = "trim_stationengineer"
 	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_ENGINEERING_ORANGE
@@ -211,8 +220,8 @@
 	job = /datum/job/chief_engineer
 
 /datum/id_trim/job/chief_medical_officer
-	assignment = "Chief Medical Officer"
-	intern_alt_name = "Chief Medical Officer-in-Training"
+	assignment = "Chiron Biolab Overseer"
+	intern_alt_name = "Biolab Overseer-in-Training"
 	trim_state = "trim_medicaldoctor"
 	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_MEDICAL_BLUE
@@ -304,7 +313,7 @@
 	job = /datum/job/geneticist
 
 /datum/id_trim/job/head_of_personnel
-	assignment = "Head of Personnel"
+	assignment = "Seneschal"
 	intern_alt_name = "Head of Personnel-in-Training"
 	trim_state = "trim_headofpersonnel"
 	department_color = COLOR_COMMAND_BLUE
@@ -325,7 +334,7 @@
 	job = /datum/job/head_of_personnel
 
 /datum/id_trim/job/head_of_security
-	assignment = "Head of Security"
+	assignment = "Justiciar"
 	intern_alt_name = "Head of Security-in-Training"
 	trim_state = "trim_securityofficer"
 	department_color = COLOR_COMMAND_BLUE
@@ -479,8 +488,8 @@
 	job = /datum/job/quartermaster
 
 /datum/id_trim/job/research_director
-	assignment = "Research Director"
-	intern_alt_name = "Research Director-in-Training"
+	assignment = "Chiron Research Overseer"
+	intern_alt_name = "Research Overseer-in-Training"
 	trim_state = "trim_scientist"
 	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_SCIENCE_PINK

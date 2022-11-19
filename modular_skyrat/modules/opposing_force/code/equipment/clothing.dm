@@ -71,7 +71,7 @@
 	name = "Advanced MODsuit"
 	item_type = /obj/item/mod/control/pre_equipped/advanced
 	description = "An advanced version of Nakamura Engineering's classic suit, shining with a white, acid and fire resistant polish."
-	admin_note = "This is cut for cut the CE's modsuit. Don't hand this out like candy unless you want to incentivize plasmafires, in \
+	admin_note = "This is cut for cut the Grand Artificer's modsuit. Don't hand this out like candy unless you want to incentivize plasmafires, in \
 	which case, go off king / queen / non-assuming but still radical royalty."
 
 /datum/opposing_force_equipment/clothing/nukiemod

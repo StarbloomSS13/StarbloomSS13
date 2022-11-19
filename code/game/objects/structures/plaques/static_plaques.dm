@@ -19,6 +19,10 @@
 /obj/structure/plaque/static_plaque/golden/captain
 	name = "The Most Robust Captain Award for Robustness"
 
+/obj/structure/plaque/static_plaque/golden/civil_war
+	name = "The Fourth Deck Massacre"
+	desc = "On this day, we are reminded of our true enemy, our true friends, the bonds that tie us together, and the future we travel towards evermore."
+
 // Commission plaques, to give a little backstory to the stations. Commission dates are date of merge (or best approximation, in the case of Meta) + 540 years to convert to SS13 dates.
 // Where PRs are available, I've linked them. Where they are unavailable, a git hash is provided instead for the direct commit that added/removed the map.
 // Please enjoy this trip through SS13's history.
@@ -31,6 +35,11 @@
 	layer = BELOW_OPEN_DOOR_LAYER
 
 //Current stations
+
+// North Star: added June 16, 2022
+/obj/structure/plaque/static_plaque/golden/commission/northstar
+	name = "Departure Plaque"
+	desc = "The North Star\n Galactic Class Generational Ship\nDeparted 16/07/2100\n'Our Last Hope'"
 
 // Icebox Station: added May 13, 2020 (#51090)
 /obj/structure/plaque/static_plaque/golden/commission/icebox
