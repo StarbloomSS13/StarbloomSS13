@@ -150,7 +150,7 @@
 	if(beaker && isliving(user) && user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, TRUE))
 		user.put_in_hands(beaker)
 		beaker = null
-		to_chat(user, "<span class='notice'>You remove the fuel container from [src]!</span>")
+		to_chat(user, span_notice("You remove the fuel container from [src]!"))
 		update_appearance()
 
 /obj/item/flamethrower/examine(mob/user)
