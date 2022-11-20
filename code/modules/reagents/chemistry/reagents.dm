@@ -98,6 +98,8 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	/// This is both a multiplicative modifier to their overall received pain,
 	/// and an additive modifier to their per tick pain decay rate.
 	var/pain_modifier
+	///How good of an accelerant is this reagent
+	var/accelerant_quality = 0
 
 /datum/reagent/New()
 	SHOULD_CALL_PARENT(TRUE)

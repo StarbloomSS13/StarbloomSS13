@@ -160,6 +160,13 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 		if (!.) // changeturf failed or didn't do anything
 			return
 		var/turf/open/newTurf = .
+		var/turf_fire_ref
+		if(turf_fire)
+			if(isgroundlessturf(newTurf))
+				qdel(turf_fire)
+			else
+				turf_fire_ref = turf_fire
+		newTurf.turf_fire = turf_fire_ref
 		newTurf.air.copy_from(stashed_air)
 		newTurf.excited = stashed_state
 		newTurf.excited_group = stashed_group
@@ -172,6 +179,8 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 				stashed_group.display_turf(newTurf)
 	else
 		SSair.remove_from_active(src) //Clean up wall excitement, and refresh excited groups
+		if(turf_fire)
+			qdel(turf_fire)
 		if(ispath(path,/turf/closed) || ispath(path,/turf/cordon))
 			flags |= CHANGETURF_RECALC_ADJACENT
 		return ..()

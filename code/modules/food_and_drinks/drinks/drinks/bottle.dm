@@ -682,12 +682,11 @@
 	return
 
 /obj/item/reagent_containers/food/drinks/bottle/molotov/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
-	var/firestarter = 0
-	for(var/datum/reagent/R in reagents.reagent_list)
-		for(var/A in accelerants)
-			if(istype(R,A))
-				firestarter = 1
-				break
+	var/firestarter = FALSE
+	for(var/datum/reagent/reagent as anything in reagents.reagent_list)
+		if(reagent.accelerant_quality)
+			firestarter = TRUE
+			break
 	if(firestarter && active)
 		hit_atom.fire_act()
 		new /obj/effect/hotspot(get_turf(hit_atom))

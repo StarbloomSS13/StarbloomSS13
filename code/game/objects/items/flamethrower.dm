@@ -6,6 +6,7 @@
 	inhand_icon_state = "flamethrower_0"
 	lefthand_file = 'icons/mob/inhands/weapons/flamethrower_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/flamethrower_righthand.dmi'
+	pickup_sound =  'sound/items/handling/gun_pickup.ogg'
 	flags_1 = CONDUCT_1
 	force = 3
 	throwforce = 10
@@ -22,7 +23,7 @@
 	var/operating = FALSE//cooldown
 	var/obj/item/weldingtool/weldtool = null
 	var/obj/item/assembly/igniter/igniter = null
-	var/obj/item/tank/internals/plasma/ptank = null
+	var/obj/item/reagent_containers/beaker = null
 	var/warned_admins = FALSE //for the message_admins() when lit
 	//variables for prebuilt flamethrowers
 	var/create_full = FALSE
@@ -40,8 +41,8 @@
 		QDEL_NULL(weldtool)
 	if(igniter)
 		QDEL_NULL(igniter)
-	if(ptank)
-		QDEL_NULL(ptank)
+	if(beaker)
+		QDEL_NULL(beaker)
 	return ..()
 
 /obj/item/flamethrower/process()
@@ -54,7 +55,7 @@
 		if(M.is_holding(src))
 			location = M.loc
 	if(isturf(location)) //start a fire if possible
-		igniter.flamethrower_process(location)
+		location.hotspot_expose(heat,2)
 
 
 /obj/item/flamethrower/update_icon_state()
@@ -64,11 +65,11 @@
 /obj/item/flamethrower/update_overlays()
 	. = ..()
 	if(igniter)
-		. += "+igniter[status]"
-	if(ptank)
-		. += "+ptank"
+		. += "igniter[status]"
+	if(beaker)
+		. += "ptank"
 	if(lit)
-		. += "+lit"
+		. += "lit"
 
 /obj/item/flamethrower/afterattack(atom/target, mob/user, flag)
 	. = ..()
@@ -77,33 +78,32 @@
 	if(ishuman(user))
 		if(!can_trigger_gun(user))
 			return
+		if(!lit || operating)
+			return
 	if(HAS_TRAIT(user, TRAIT_PACIFISM))
 		to_chat(user, span_warning("You can't bring yourself to fire \the [src]! You don't want to risk harming anyone..."))
 		return
 	if(user && user.get_active_held_item() == src) // Make sure our user is still holding us
 		var/turf/target_turf = get_turf(target)
 		if(target_turf)
-			var/turflist = get_line(user, target_turf)
 			log_combat(user, target, "flamethrowered", src)
-			flame_turf(turflist)
+			flame_turf(target)
 
-/obj/item/flamethrower/wrench_act(mob/living/user, obj/item/tool)
-	. = TRUE
-	if(status)
-		return FALSE
-	tool.play_tool_sound(src)
-	var/turf/T = get_turf(src)
-	if(weldtool)
-		weldtool.forceMove(T)
-		weldtool = null
-	if(igniter)
-		igniter.forceMove(T)
-		igniter = null
-	if(ptank)
-		ptank.forceMove(T)
-		ptank = null
-	new /obj/item/stack/rods(T)
-	qdel(src)
+/obj/item/flamethrower/attackby(obj/item/W, mob/user, params)
+	if(W.tool_behaviour == TOOL_WRENCH && !status)//Taking this apart
+		var/turf/T = get_turf(src)
+		if(weldtool)
+			weldtool.forceMove(T)
+			weldtool = null
+		if(igniter)
+			igniter.forceMove(T)
+			igniter = null
+		if(beaker)
+			beaker.forceMove(T)
+			beaker = null
+		new /obj/item/stack/rods(T)
+		qdel(src)
+		return
 
 /obj/item/flamethrower/screwdriver_act(mob/living/user, obj/item/tool)
 	if(igniter && !lit)
@@ -126,46 +126,41 @@
 		update_appearance()
 		return
 
-	else if(istype(W, /obj/item/tank/internals/plasma))
-		if(ptank)
+	else if(istype(W, /obj/item/reagent_containers) && !(W.item_flags & ABSTRACT) && W.is_open_container())
+		if(beaker)
 			if(user.transferItemToLoc(W,src))
-				ptank.forceMove(get_turf(src))
-				ptank = W
-				to_chat(user, span_notice("You swap the plasma tank in [src]!"))
+				beaker.forceMove(get_turf(src))
+				beaker = W
+				to_chat(user, span_notice("You swap the fuel container in [src]!"))
 			return
 		if(!user.transferItemToLoc(W, src))
 			return
-		ptank = W
-		update_appearance()
+		beaker = W
+		update_icon()
 		return
 
 	else
 		return ..()
 
-/obj/item/flamethrower/return_analyzable_air()
-	if(ptank)
-		return ptank.return_analyzable_air()
-	else
-		return null
 
 /obj/item/flamethrower/attack_self(mob/user)
 	toggle_igniter(user)
 
 /obj/item/flamethrower/AltClick(mob/user)
-	if(ptank && isliving(user) && user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, TRUE))
-		user.put_in_hands(ptank)
-		ptank = null
-		to_chat(user, span_notice("You remove the plasma tank from [src]!"))
+	if(beaker && isliving(user) && user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, TRUE))
+		user.put_in_hands(beaker)
+		beaker = null
+		to_chat(user, span_notice("You remove the fuel container from [src]!"))
 		update_appearance()
 
 /obj/item/flamethrower/examine(mob/user)
 	. = ..()
-	if(ptank)
-		. += span_notice("\The [src] has \a [ptank] attached. Alt-click to remove it.")
+	if(beaker)
+		. += span_notice("\The [src] has \a [beaker] attached. Alt-click to remove it.")
 
 /obj/item/flamethrower/proc/toggle_igniter(mob/user)
-	if(!ptank)
-		to_chat(user, span_notice("Attach a plasma tank first!"))
+	if(!beaker)
+		to_chat(user, span_notice("Attach a fuel container first!"))
 		return
 	if(!status)
 		to_chat(user, span_notice("Secure the igniter first!"))
@@ -193,42 +188,79 @@
 	status = TRUE
 	update_appearance()
 
-//Called from turf.dm turf/dblclick
-/obj/item/flamethrower/proc/flame_turf(turflist)
-	if(!lit || operating)
+#define REQUIRED_POWER_TO_FIRE_FLAMETHROWER 10
+#define FLAMETHROWER_POWER_MULTIPLIER 0.5
+#define FLAMETHROWER_RANGE 2 //for some reason, in this codebase 4 makes it flame 8 tiles instead of 4 tiles, so we set to 2 tiles so it only flames 4
+#define FLAMETHROWER_RELEASE_AMOUNT 8
+
+/obj/item/flamethrower/proc/flame_turf(target)
+	if(!beaker)
 		return
-	operating = TRUE
-	var/turf/previousturf = get_turf(src)
-	for(var/turf/T in turflist)
-		if(T == previousturf)
-			continue //so we don't burn the tile we be standin on
-		var/list/turfs_sharing_with_prev = previousturf.get_atmos_adjacent_turfs(alldir=1)
-		if(!(T in turfs_sharing_with_prev))
-			break
-		if(igniter)
-			igniter.ignite_turf(src,T)
-		else
-			default_ignite(T)
-		sleep(1)
-		previousturf = T
+	var/power = 0
+	var/datum/reagents/beaker_reagents = beaker.reagents
+	var/datum/reagents/my_fraction = new()
+	beaker_reagents.trans_to(my_fraction, FLAMETHROWER_RELEASE_AMOUNT, no_react = TRUE)
+	power = my_fraction.get_total_accelerant_quality() * FLAMETHROWER_POWER_MULTIPLIER
+
+	if(power < REQUIRED_POWER_TO_FIRE_FLAMETHROWER)
+		audible_message(span_danger("The [src] sputters."))
+		playsound(src, 'sound/weapons/gun/flamethrower/flamethrower_empty.ogg', 50, TRUE, -3)
+		return
+	playsound(src, pick('sound/weapons/gun/flamethrower/flamethrower1.ogg','sound/weapons/gun/flamethrower/flamethrower2.ogg','sound/weapons/gun/flamethrower/flamethrower3.ogg' ), 50, TRUE, -3)
+
+	operating = TRUE //anti-spam tool, is unset when the flame projectile goes away
+
+	//let us prepare the projectile
+	var/obj/projectile/flamethrower/flamer_proj = new /obj/projectile/flamethrower(get_turf(src))
+	var/turf/turf_target = get_turf(target)
+	flamer_proj.preparePixelProjectile(target, get_turf(src))
+	flamer_proj.firer = usr
+	flamer_proj.range = get_dist(src, turf_target)
+	if(get_dist(src, turf_target) > FLAMETHROWER_RANGE) //thiss shit doesnt work aaaaa
+		flamer_proj.range = FLAMETHROWER_RANGE
+
+	RegisterSignal(flamer_proj, COMSIG_MOVABLE_MOVED, .proc/handle_flaming)
+	RegisterSignal(flamer_proj, COMSIG_PARENT_QDELETING, .proc/stop_operating)
+
+	flamer_proj.fire() //off it goes
+
+
+/obj/item/flamethrower/proc/handle_flaming(projectille)
+	if(!beaker)
+		return
+	var/turf/location = get_turf(projectille)
+
+	var/power = 0
+	var/datum/reagents/beaker_reagents = beaker.reagents
+	var/datum/reagents/my_fraction = new()
+
+	beaker_reagents.trans_to(my_fraction, FLAMETHROWER_RELEASE_AMOUNT, no_react = TRUE)
+	power = my_fraction.get_total_accelerant_quality() * FLAMETHROWER_POWER_MULTIPLIER
+
+
+	if(location)
+		if(location == get_turf(src))
+			return
+		location.IgniteTurf(power)
+		new /obj/effect/hotspot(location)
+		location.hotspot_expose((power*3) + 380,500)
+
+	if(beaker)
+		my_fraction.trans_to(beaker_reagents, FLAMETHROWER_RELEASE_AMOUNT, no_react = TRUE)
+	qdel(my_fraction)
+
+/obj/projectile/flamethrower/can_hit_target(atom/target, list/passthrough, direct_target, ignore_loc)
+	if(ismob(target))
+		return FALSE
+	return ..()
+
+/obj/item/flamethrower/proc/stop_operating()
 	operating = FALSE
-	for(var/mob/M in viewers(1, loc))
-		if((M.client && M.machine == src))
-			attack_self(M)
 
-
-/obj/item/flamethrower/proc/default_ignite(turf/target, release_amount = 0.05)
-	//TODO: DEFERRED Consider checking to make sure tank pressure is high enough before doing this...
-	//Transfer 5% of current tank air contents to turf
-	var/datum/gas_mixture/tank_mix = ptank.return_air()
-	var/datum/gas_mixture/air_transfer = tank_mix.remove_ratio(release_amount)
-
-	if(air_transfer.gases[/datum/gas/plasma])
-		air_transfer.gases[/datum/gas/plasma][MOLES] *= 5 //Suffering
-	target.assume_air(air_transfer)
-	//Burn it based on transfered gas
-	target.hotspot_expose((tank_mix.temperature*2) + 380,500)
-	//location.hotspot_expose(1000,500,1)
+/obj/item/flamethrower/proc/default_ignite(turf/target, power)
+	target.IgniteTurf(power, "red")
+	new /obj/effect/hotspot(target)
+	target.hotspot_expose((power*3) + 380,500)
 
 /obj/item/flamethrower/Initialize(mapload)
 	. = ..()
@@ -241,39 +273,58 @@
 		igniter.secured = FALSE
 		status = TRUE
 		if(create_with_tank)
-			ptank = new /obj/item/tank/internals/plasma/full(src)
-		update_appearance()
-	RegisterSignal(src, COMSIG_ITEM_RECHARGED, .proc/instant_refill)
+			beaker = new /obj/item/reagent_containers/glass/beaker/large(src)
+			beaker.reagents.add_reagent(/datum/reagent/fuel, beaker.reagents.maximum_volume)
+		update_icon()
 
 /obj/item/flamethrower/full
 	create_full = TRUE
-
 /obj/item/flamethrower/full/tank
 	create_with_tank = TRUE
 
 /obj/item/flamethrower/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	var/obj/projectile/P = hitby
-	if(damage && attack_type == PROJECTILE_ATTACK && P.damage_type != STAMINA && prob(15))
-		owner.visible_message(span_danger("\The [attack_text] hits the fuel tank on [owner]'s [name], rupturing it! What a shot!"))
+	if(beaker && damage && attack_type == PROJECTILE_ATTACK && P.damage_type != STAMINA && prob(15))
+		owner.visible_message(span_danger("\The [attack_text] hits the fuel tank on [owner]'s [name], shattering it! What a shot!"))
 		var/turf/target_turf = get_turf(owner)
 		log_game("A projectile ([hitby]) detonated a flamethrower tank held by [key_name(owner)] at [COORD(target_turf)]")
-		igniter.ignite_turf(src,target_turf, release_amount = 100)
-		qdel(ptank)
+		var/turf/flamer_turf = get_turf(owner)
+		flamer_turf.IgniteTurf(30)
+		QDEL_NULL(beaker)
 		return 1 //It hit the flamethrower, not them
 
+///FLAMETHROWER PROJECTILE
+/obj/projectile/flamethrower
+	name = "\the flames"
+	damage = 0
+	speed = 1
+	hitsound = ""
+	icon_state = null
+	icon = null
+	range = FLAMETHROWER_RANGE
 
-/obj/item/assembly/igniter/proc/flamethrower_process(turf/open/location)
-	location.hotspot_expose(heat,2)
+	///the color the turf fire will be when igniting a turf
+	var/flame_color = "red"
+	///the flamethrower this was shot from
+	var/obj/item/flamethrower/linked_flamethrower
+	///how much power do we give the turf fire once it ignites?
+	var/power = 4
 
-/obj/item/assembly/igniter/proc/ignite_turf(obj/item/flamethrower/F,turf/open/location,release_amount = 0.05)
-	F.default_ignite(location,release_amount)
+/obj/projectile/flamethrower/on_hit(atom/target, blocked = FALSE)
+	. = ..()
+	var/turf/hit_turf = get_turf(target)
+	if(!isopenturf(hit_turf))
+		return
+	hit_turf.IgniteTurf(power, flame_color)
+	new /obj/effect/hotspot(hit_turf)
+	hit_turf.hotspot_expose((power*3) + 380,500)
 
-/obj/item/flamethrower/proc/instant_refill()
-	SIGNAL_HANDLER
-	if(ptank)
-		var/datum/gas_mixture/tank_mix = ptank.return_air()
-		tank_mix.assert_gas(/datum/gas/plasma)
-		tank_mix.gases[/datum/gas/plasma][MOLES] = (10*ONE_ATMOSPHERE)*ptank.volume/(R_IDEAL_GAS_EQUATION*T20C)
-	else
-		ptank = new /obj/item/tank/internals/plasma/full(src)
-	update_appearance()
+
+/obj/projectile/flamethrower/Destroy()
+	. = ..()
+	if(linked_flamethrower)
+		linked_flamethrower.operating = FALSE
+
+#undef REQUIRED_POWER_TO_FIRE_FLAMETHROWER
+#undef FLAMETHROWER_POWER_MULTIPLIER
+#undef FLAMETHROWER_RANGE
