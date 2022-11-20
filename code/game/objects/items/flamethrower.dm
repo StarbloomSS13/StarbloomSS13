@@ -131,7 +131,7 @@
 			if(user.transferItemToLoc(W,src))
 				beaker.forceMove(get_turf(src))
 				beaker = W
-				to_chat(user, "<span class='notice'>You swap the fuel container in [src]!</span>")
+				to_chat(user, span_notice("You swap the fuel container in [src]!"))
 			return
 		if(!user.transferItemToLoc(W, src))
 			return
