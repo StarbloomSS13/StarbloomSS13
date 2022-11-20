@@ -203,7 +203,7 @@
 	power = my_fraction.get_total_accelerant_quality() * FLAMETHROWER_POWER_MULTIPLIER
 
 	if(power < REQUIRED_POWER_TO_FIRE_FLAMETHROWER)
-		audible_message("<span class='danger'>The [src] sputters.</span>")
+		audible_message(span_danger("The [src] sputters."))
 		playsound(src, 'sound/weapons/gun/flamethrower/flamethrower_empty.ogg', 50, TRUE, -3)
 		return
 	playsound(src, pick('sound/weapons/gun/flamethrower/flamethrower1.ogg','sound/weapons/gun/flamethrower/flamethrower2.ogg','sound/weapons/gun/flamethrower/flamethrower3.ogg' ), 50, TRUE, -3)
