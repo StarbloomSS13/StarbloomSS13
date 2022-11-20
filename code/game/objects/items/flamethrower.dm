@@ -160,7 +160,7 @@
 
 /obj/item/flamethrower/proc/toggle_igniter(mob/user)
 	if(!beaker)
-		to_chat(user, "<span class='notice'>Attach a fuel container first!</span>")
+		to_chat(user, span_notice("Attach a fuel container first!"))
 		return
 	if(!status)
 		to_chat(user, span_notice("Secure the igniter first!"))
