@@ -233,6 +233,12 @@ GLOBAL_LIST_INIT(plasteel_recipes, list ( \
 	material_flags = NONE
 	matter_amount = 12
 
+/obj/item/stack/sheet/plasteel/coated //only here so the radiation wall doesnt spit out errors.
+	name = "coated plasteel"
+	singular_name = "coated plasteel sheet"
+	desc = "A plasteel sheet. This one is coated in lead."
+	merge_type = /obj/item/stack/sheet/plasteel/coated
+
 /obj/item/stack/sheet/plasteel/get_main_recipes()
 	. = ..()
 	. += GLOB.plasteel_recipes

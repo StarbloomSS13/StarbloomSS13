@@ -21,6 +21,16 @@
 	departmental_flags = DEPARTMENTAL_FLAG_CARGO | DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
 	maxstack = 50
 
+/datum/design/plastitanium_alloy/coated
+	name = "Plasma + Titanium + Lead alloy"
+	id = "plastiumlead"
+	build_type = SMELTER | PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/titanium = MINERAL_MATERIAL_AMOUNT * 1.5, /datum/material/plasma = MINERAL_MATERIAL_AMOUNT)
+	build_path = /obj/item/stack/sheet/plasteel/coated
+	category = list("initial", "Stock Parts")
+	departmental_flags = DEPARTMENTAL_FLAG_CARGO | DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+	maxstack = 50
+
 /datum/design/plaglass_alloy
 	name = "Plasma + Glass alloy"
 	id = "plasmaglass"
@@ -57,6 +67,16 @@
 	build_type = SMELTER | PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/plasma = MINERAL_MATERIAL_AMOUNT * 0.5, /datum/material/titanium = MINERAL_MATERIAL_AMOUNT * 0.5, /datum/material/glass = MINERAL_MATERIAL_AMOUNT)
 	build_path = /obj/item/stack/sheet/plastitaniumglass
+	category = list("initial", "Stock Parts")
+	departmental_flags = DEPARTMENTAL_FLAG_CARGO | DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+	maxstack = 50
+
+/datum/design/plastitaniumglass_alloy/coated
+	name = "Plasma + Titanium + Glass + Lead alloy"
+	id = "plastitaniumleadglass"
+	build_type = SMELTER | PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/plasma = MINERAL_MATERIAL_AMOUNT, /datum/material/titanium = MINERAL_MATERIAL_AMOUNT, /datum/material/glass = MINERAL_MATERIAL_AMOUNT)
+	build_path = /obj/item/stack/sheet/plastitaniumglass/coated
 	category = list("initial", "Stock Parts")
 	departmental_flags = DEPARTMENTAL_FLAG_CARGO | DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
 	maxstack = 50
