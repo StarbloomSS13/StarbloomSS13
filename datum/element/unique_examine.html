@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;element&#x2F;unique_examine - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/element/unique_examine.html#var">Var Details</a> - <a href="datum/element/unique_examine.html#proc">Proc Details</a></header>
+<main>
+<h1>unique_examine <aside>/<a href="datum.html">datum</a>/<a href="datum/element.html">element</a>/<a href="datum/element/unique_examine.html">unique_examine</a></aside>
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/datums/elements/unique_examine.dm#L2">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 2"/></a></h1>
+
+<p>An element to add a unique examine to something based on some conditions.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#var/desc">desc</a></th><td>The special description that is triggered when desc_requirements are met. Make sure you set the correct EXAMINE_CHECK!</td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#var/desc_requirement">desc_requirement</a></th><td>The requirement setting for special descriptions. See examine_defines.dm for more info.</td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#var/detective_sees_all">detective_sees_all</a></th><td>If TRUE, those with the detective's skillchip (TRAIT_SEE_ALL_DESCRIPTIONS) will be able to see the description regardless.</td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#var/requirements">requirements</a></th><td>Everything we may want to check based on an examine check.
+This can be a list of JOBS, FACTIONS, SKILL CHIPS, or TRAITS, or a bitflag</td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#var/special_affiliation">special_affiliation</a></th><td>Optional replacement for antagonist names. Ex: Noting something due to your &quot;Donk Co&quot; affiliation, instead of &quot;Syndicate&quot; affiliation</td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#var/what_are_we">what_are_we</a></th><td>A generic title for what we are, generated for things which hint.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#proc/get_department">get_department</a></th><td>Format a department bitflag into a string.</td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#proc/get_formatted_faction">get_formatted_faction</a></th><td>Formats some of the more common faction names into a more accurate string.</td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#proc/get_identifier">get_identifier</a></th><td>Gets an &quot;identifier&quot; for items which get a hint.</td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#proc/get_note_message">get_note_message</a></th><td>Gets what message is displayed to the examiner.
+Returns a string, or null if they aren't able to see the special description.</td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#proc/on_examine">on_examine</a></th><td>Signal proc for <a href="code/__DEFINES/dcs/signals/signals_atom/signals_atom_main.html#define/COMSIG_PARENT_EXAMINE" title="COMSIG_PARENT_EXAMINE">COMSIG_PARENT_EXAMINE</a> to hint this thing may have more info.
+Does not guarantee the examiner is someone who can actually access said info.</td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#proc/on_examine_more">on_examine_more</a></th><td>Signal proc for <a href="code/__DEFINES/dcs/signals/signals_atom/signals_atom_main.html#define/COMSIG_PARENT_EXAMINE_MORE" title="COMSIG_PARENT_EXAMINE_MORE">COMSIG_PARENT_EXAMINE_MORE</a>, shows the unique description of the examiner fits the bill.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/desc"><aside class="declaration">var </aside>desc
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/datums/elements/unique_examine.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 6"/></a></h3>
+        <p>The special description that is triggered when desc_requirements are met. Make sure you set the correct EXAMINE_CHECK!</p><h3 id="var/desc_requirement"><aside class="declaration">var </aside>desc_requirement
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/datums/elements/unique_examine.dm#L8">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 8"/></a></h3>
+        <p>The requirement setting for special descriptions. See examine_defines.dm for more info.</p><h3 id="var/detective_sees_all"><aside class="declaration">var </aside>detective_sees_all
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/datums/elements/unique_examine.dm#L15">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 15"/></a></h3>
+        <p>If TRUE, those with the detective's skillchip (TRAIT_SEE_ALL_DESCRIPTIONS) will be able to see the description regardless.</p><h3 id="var/requirements"><aside class="declaration">var </aside>requirements
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/datums/elements/unique_examine.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 13"/></a></h3>
+        <p>Everything we may want to check based on an examine check.
+This can be a list of JOBS, FACTIONS, SKILL CHIPS, or TRAITS, or a bitflag</p><h3 id="var/special_affiliation"><aside class="declaration">var </aside>special_affiliation
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/datums/elements/unique_examine.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 10"/></a></h3>
+        <p>Optional replacement for antagonist names. Ex: Noting something due to your &quot;Donk Co&quot; affiliation, instead of &quot;Syndicate&quot; affiliation</p><h3 id="var/what_are_we"><aside class="declaration">var </aside>what_are_we
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/datums/elements/unique_examine.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 17"/></a></h3>
+        <p>A generic title for what we are, generated for things which hint.</p><h2 id="proc">Proc Details</h2><h3 id="proc/get_department"><aside class="declaration">proc </aside>get_department<aside>(department_bitflag) 
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/datums/elements/unique_examine.dm#L289">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 289"/></a></aside>
+        </h3>
+        <p>Format a department bitflag into a string.</p><h3 id="proc/get_formatted_faction"><aside class="declaration">proc </aside>get_formatted_faction<aside>(faction) 
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/datums/elements/unique_examine.dm#L259">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 259"/></a></aside>
+        </h3>
+        <p>Formats some of the more common faction names into a more accurate string.</p><h3 id="proc/get_identifier"><aside class="declaration">proc </aside>get_identifier<aside>(/<a href="atom.html">atom</a>/thing) 
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/datums/elements/unique_examine.dm#L213">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 213"/></a></aside>
+        </h3>
+        <p>Gets an &quot;identifier&quot; for items which get a hint.</p><h3 id="proc/get_note_message"><aside class="declaration">proc </aside>get_note_message<aside>(/<a href="mob.html">mob</a>/examiner) 
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/datums/elements/unique_examine.dm#L111">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 111"/></a></aside>
+        </h3>
+        <p>Gets what message is displayed to the examiner.
+Returns a string, or null if they aren't able to see the special description.</p><h3 id="proc/on_examine"><aside class="declaration">proc </aside>on_examine<aside>(/<a href="datum.html">datum</a>/source, /<a href="mob.html">mob</a>/examiner, /list/examine_list) 
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/datums/elements/unique_examine.dm#L83">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 83"/></a></aside>
+        </h3>
+        <p>Signal proc for <a href="code/__DEFINES/dcs/signals/signals_atom/signals_atom_main.html#define/COMSIG_PARENT_EXAMINE" title="COMSIG_PARENT_EXAMINE">COMSIG_PARENT_EXAMINE</a> to hint this thing may have more info.
+Does not guarantee the examiner is someone who can actually access said info.</p><h3 id="proc/on_examine_more"><aside class="declaration">proc </aside>on_examine_more<aside>(/<a href="datum.html">datum</a>/source, /<a href="mob.html">mob</a>/examiner, /list/examine_list) 
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/datums/elements/unique_examine.dm#L89">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 89"/></a></aside>
+        </h3>
+        <p>Signal proc for <a href="code/__DEFINES/dcs/signals/signals_atom/signals_atom_main.html#define/COMSIG_PARENT_EXAMINE_MORE" title="COMSIG_PARENT_EXAMINE_MORE">COMSIG_PARENT_EXAMINE_MORE</a>, shows the unique description of the examiner fits the bill.</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/StarbloomSS13/StarbloomSS13/tree/735106d004478010a90a789c6f92a32fa3f4a2bf">735106d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

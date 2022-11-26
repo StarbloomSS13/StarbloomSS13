@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;preference&#x2F;choiced&#x2F;access - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/preference/choiced/access.html#var">Var Details</a></header>
+<main>
+<h1>access <aside>/<a href="datum.html">datum</a>/<a href="datum/preference.html">preference</a>/<a href="datum/preference/choiced.html">choiced</a>/<a href="datum/preference/choiced/access.html">access</a></aside>
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/modules/client/preferences/access_preference.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;client&#x2F;preferences&#x2F;access_preference.dm 6"/></a></h1>
+
+<p>Allowss you to make a preference for starting with additional roundstart access
+Contains a smidge of hackery to function before SSid_access is instantiated</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/preference/choiced/access.html#var/keys_to_access">keys_to_access</a></th><td>We display access in the form of keys to the end user, so they can actually understand what they're selecting
+However we need to map the keys to what access they're actually awarded with via a list</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/keys_to_access"><aside class="declaration">var </aside>keys_to_access
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/modules/client/preferences/access_preference.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;client&#x2F;preferences&#x2F;access_preference.dm 23"/></a></h3>
+        <p>We display access in the form of keys to the end user, so they can actually understand what they're selecting
+However we need to map the keys to what access they're actually awarded with via a list</p>
+<p>NOTE: IF (FOR SOME REASON) YOU'RE ADDING A PREFERENCE FOR ACCESS NOT FOUND IN REGION_ACCESS_ALL_GLOBAL
+YOU WILL NEED TO OVERRIDE DESERIALIZE(). We validate our access against that list.</p>
+<p>Example: list(&quot;Real Captain&quot; = ACCESS_CAPTAIN, &quot;Bridge Access&quot; = ACCESS_HEADS, &quot;Secretly a Cultist&quot; = ACCESS_BLOODCULT)</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/StarbloomSS13/StarbloomSS13/tree/735106d004478010a90a789c6f92a32fa3f4a2bf">735106d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

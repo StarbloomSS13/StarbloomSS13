@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>code&#x2F;__DEFINES&#x2F;examine.dm - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="code/__DEFINES/examine.html#define">Define Details</a></header>
+<main>
+<h1>code/__DEFINES/examine.dm 
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/__DEFINES/examine.dm">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;examine.dm"/></a></h1>
+
+<table class="summary" cellspacing="0">
+        <tr><th><a href="code/__DEFINES/examine.html#define/EXAMINE_CHECK_NONE">EXAMINE_CHECK_NONE</a></th><td>-- Defines for the unique-examine element. --
+Displays the description regardless. Pass no requirements.</td></tr>
+        <tr><th><a href="code/__DEFINES/examine.html#define/EXAMINE_CHECK_MINDSHIELD">EXAMINE_CHECK_MINDSHIELD</a></th><td>For displaying info to those with a mindshield implant. Pass no requirements.</td></tr>
+        <tr><th><a href="code/__DEFINES/examine.html#define/EXAMINE_CHECK_ANTAG">EXAMINE_CHECK_ANTAG</a></th><td>For displaying info to those with a certain antag datum, e.g. &quot;traitors&quot;. Pass a list of /datum/antagonist typepaths.
+You can optionally pass a special_affiliation with your element to overide the displayed antagonist name
+(Such as passing &quot;Special agent&quot; so it shows that instead of &quot;Traitor&quot;)</td></tr>
+        <tr><th><a href="code/__DEFINES/examine.html#define/EXAMINE_CHECK_JOB">EXAMINE_CHECK_JOB</a></th><td>For displaying info to specific jobs, e.g. &quot;scientists&quot;. Pass a list of /datum/job typepaths.</td></tr>
+        <tr><th><a href="code/__DEFINES/examine.html#define/EXAMINE_CHECK_DEPARTMENT">EXAMINE_CHECK_DEPARTMENT</a></th><td>For displaying info to people a part of specific departments, e.g. &quot;all jobs in service&quot;. Pass a bitflag of departments.</td></tr>
+        <tr><th><a href="code/__DEFINES/examine.html#define/EXAMINE_CHECK_FACTION">EXAMINE_CHECK_FACTION</a></th><td>For displaying info to mob factions, e.g. &quot;syndicate&quot;. Pass a string &quot;faction&quot;
+Note: factions aren't set very consistently, and often are just set by antag datums,
+so you should probably try to use other checks if possible (like antag datums).</td></tr>
+        <tr><th><a href="code/__DEFINES/examine.html#define/EXAMINE_CHECK_SKILLCHIP">EXAMINE_CHECK_SKILLCHIP</a></th><td>For displaying info to people with certain skill-chips. Pass a list of /obj/item/skillchip typepaths.</td></tr>
+        <tr><th><a href="code/__DEFINES/examine.html#define/EXAMINE_CHECK_TRAIT">EXAMINE_CHECK_TRAIT</a></th><td>For displayind info to people with certain traits. Pass a list of trait keys / strings.</td></tr>
+        <tr><th><a href="code/__DEFINES/examine.html#define/EXAMINE_CHECK_SPECIES">EXAMINE_CHECK_SPECIES</a></th><td>For displayind info to people of certain species. Pass a list of /datum/species typepaths.</td></tr></table><h2 id="define">Define Details</h2>
+<h3 id="define/EXAMINE_CHECK_ANTAG"><aside class="declaration">#define </aside>EXAMINE_CHECK_ANTAG
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/__DEFINES/examine.dm#L9">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;examine.dm 9"/></a>
+    </h3>
+    <p>For displaying info to those with a certain antag datum, e.g. &quot;traitors&quot;. Pass a list of /datum/antagonist typepaths.
+You can optionally pass a special_affiliation with your element to overide the displayed antagonist name
+(Such as passing &quot;Special agent&quot; so it shows that instead of &quot;Traitor&quot;)</p><h3 id="define/EXAMINE_CHECK_DEPARTMENT"><aside class="declaration">#define </aside>EXAMINE_CHECK_DEPARTMENT
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/__DEFINES/examine.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;examine.dm 13"/></a>
+    </h3>
+    <p>For displaying info to people a part of specific departments, e.g. &quot;all jobs in service&quot;. Pass a bitflag of departments.</p><h3 id="define/EXAMINE_CHECK_FACTION"><aside class="declaration">#define </aside>EXAMINE_CHECK_FACTION
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/__DEFINES/examine.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;examine.dm 17"/></a>
+    </h3>
+    <p>For displaying info to mob factions, e.g. &quot;syndicate&quot;. Pass a string &quot;faction&quot;
+Note: factions aren't set very consistently, and often are just set by antag datums,
+so you should probably try to use other checks if possible (like antag datums).</p><h3 id="define/EXAMINE_CHECK_JOB"><aside class="declaration">#define </aside>EXAMINE_CHECK_JOB
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/__DEFINES/examine.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;examine.dm 11"/></a>
+    </h3>
+    <p>For displaying info to specific jobs, e.g. &quot;scientists&quot;. Pass a list of /datum/job typepaths.</p><h3 id="define/EXAMINE_CHECK_MINDSHIELD"><aside class="declaration">#define </aside>EXAMINE_CHECK_MINDSHIELD
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/__DEFINES/examine.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;examine.dm 5"/></a>
+    </h3>
+    <p>For displaying info to those with a mindshield implant. Pass no requirements.</p><h3 id="define/EXAMINE_CHECK_NONE"><aside class="declaration">#define </aside>EXAMINE_CHECK_NONE
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/__DEFINES/examine.dm#L3">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;examine.dm 3"/></a>
+    </h3>
+    <p>-- Defines for the unique-examine element. --
+Displays the description regardless. Pass no requirements.</p><h3 id="define/EXAMINE_CHECK_SKILLCHIP"><aside class="declaration">#define </aside>EXAMINE_CHECK_SKILLCHIP
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/__DEFINES/examine.dm#L19">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;examine.dm 19"/></a>
+    </h3>
+    <p>For displaying info to people with certain skill-chips. Pass a list of /obj/item/skillchip typepaths.</p><h3 id="define/EXAMINE_CHECK_SPECIES"><aside class="declaration">#define </aside>EXAMINE_CHECK_SPECIES
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/__DEFINES/examine.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;examine.dm 23"/></a>
+    </h3>
+    <p>For displayind info to people of certain species. Pass a list of /datum/species typepaths.</p><h3 id="define/EXAMINE_CHECK_TRAIT"><aside class="declaration">#define </aside>EXAMINE_CHECK_TRAIT
+            <a href="https://github.com/StarbloomSS13/StarbloomSS13/blob/735106d004478010a90a789c6f92a32fa3f4a2bf/code/__DEFINES/examine.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;examine.dm 21"/></a>
+    </h3>
+    <p>For displayind info to people with certain traits. Pass a list of trait keys / strings.</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/StarbloomSS13/StarbloomSS13/tree/735106d004478010a90a789c6f92a32fa3f4a2bf">735106d</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>
